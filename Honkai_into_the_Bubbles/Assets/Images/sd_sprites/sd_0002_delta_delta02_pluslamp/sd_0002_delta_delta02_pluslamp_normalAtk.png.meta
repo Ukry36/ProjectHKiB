@@ -1,0 +1,3823 @@
+fileFormatVersion: 2
+guid: c33046d75be8d9e4c90c520a9387894d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34a2f04bc393f0e42ab73339ba488071
+      internalID: -473320910
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7402f6e5b1ffe2e43bf6b14fe27b37cf
+      internalID: -564524871
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edb686d88ccd08940a43519e01339e28
+      internalID: -1739843442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70781c69bdcd7b84db1f7f46ae78b886
+      internalID: -643846413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcc189ac82630643b07c7187fe11409
+      internalID: 1484158994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1cb925818f5674d9a570e1c8fe64ac
+      internalID: 1907322783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0b581cfcf179974cb9fc0f787f325aa
+      internalID: -1530959660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcb9fb3e520202f4fb74f3c74e78cea8
+      internalID: -18525831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_8
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d2e6d5fdc1b1b14fbc9d67e942153c3
+      internalID: -1854072693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c3a2d4e9d37d634b85244fbeb199485
+      internalID: 1855742082
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 51e13b814400fd246aab73a76d5c983a
+      internalID: 335699165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_11
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d01d5e8ee21e2054aa240d9d86bb340c
+      internalID: -1017439147
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1557eba41e70cf44893329fa05719817
+      internalID: -1999756908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_13
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee9e66f073c71f04fac10ce23f5755fa
+      internalID: -2063213719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_14
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e0d300b21401cb43aa2c4d1f04bb66c
+      internalID: 1783447302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc0686668980c6f4dadc480e4374dd16
+      internalID: -1780232348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_16
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bace316170438c3499644e4da84cee72
+      internalID: -1531019945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_17
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 754dfa92c3a6d6641a795f17c433d238
+      internalID: 1055741966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_18
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16f7c93763aeaea4586d3b8ee7b2a223
+      internalID: 243655596
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_19
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b502eb0a0ef92a4d8e5dd1c045832b6
+      internalID: 1985071071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_20
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 494ef1bcc72bd13458f514b67c389477
+      internalID: -590315714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_21
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed4a23c4d2bbe784b8b076d56818b6da
+      internalID: -379700334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_22
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 953e50bb3e78cf34b930c381f167b060
+      internalID: 1931684142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_23
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84cd68494a3faae4fbdcae4efc3b0e26
+      internalID: -178859384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_24
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62df29ea4570eb544b7fe783dbe5071b
+      internalID: -411192141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_25
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0aa3a2364e803049a1f27b7c56ddd7b
+      internalID: -152792738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_26
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514420e0044931d46bf0924fc48aa2d0
+      internalID: -2002259869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_27
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b152ace1888524b80c2cc218c4a80a
+      internalID: 2100915855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_28
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7672838f8e35008439287ccc05b6edfa
+      internalID: 1846077828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_29
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe77b3df7ff948545b901655291ffd8d
+      internalID: 543692591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_30
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86697412aa7174544a768d90b83148bf
+      internalID: -429066547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_31
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b2478ef3ac244a43a3ed6aa181dbdfa
+      internalID: 35027333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_32
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41bd06fbb29bca64f885c0cb88e9b7fd
+      internalID: 2069035252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_33
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee5bb802859fe784b8479c14b5c8b8a7
+      internalID: 1343472770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_34
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b916676cad6de4438882ea125b08609
+      internalID: -30466678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_35
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e79015edc8d6ac408c7e9da0260e470
+      internalID: -387052651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_36
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d5bfb520b041a3478fa7b46ea050f69
+      internalID: 2077011967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_37
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b72ba5dfb82345e4b8ea842787a915d8
+      internalID: -1400332645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_38
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f72e675b0668e1e4daf13e09e2325db3
+      internalID: 1932754108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_39
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34774f6a3dccc6b4fa7d6d224c4b4fd9
+      internalID: -336393525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_40
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f53b46c606f6c64aba41653f42e5167
+      internalID: -782288543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_41
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 540b3f40c591d5841a615a722145eeb8
+      internalID: -2055216214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17659454fb4e22046aa5d85affe6313d
+      internalID: 1026605043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_43
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e077607381339f4f8b018dff07fa7c0
+      internalID: -1866708546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_44
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a810669f2d4a7144b8dab316b086d02e
+      internalID: 523350484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_45
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c61e4c8aa5e11a34484921f3c331dfb4
+      internalID: 334774110
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_46
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9074a57374337624a8c9b649a1e71c15
+      internalID: -517761126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_47
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe304ca913796947a654dc0c8b22840
+      internalID: 1348014180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_48
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4b740a2d5f6dde4992a910a7313175d
+      internalID: 210199136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_49
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7248a7af31249ab4187cb2d73178d926
+      internalID: 1441871014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_50
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 138d6b7c62444df4c8c3b0d637cca49b
+      internalID: -1155216636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_51
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419f3a8e543ef124d9aed901a1caaf27
+      internalID: -618692342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_52
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2bacda947bfa51241a58a7bccb92f76d
+      internalID: 1830685156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_53
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646b9ae8232c74d4db43ab0e36dfb9c3
+      internalID: -986160226
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_54
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7fd9d3db9efec45a026272aca825e7
+      internalID: 1925383516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_55
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e485b03cc529c48a73ffcae41ce24d
+      internalID: -1634157790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_56
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45301ae6b1b2ba74f8f98ddf963dff89
+      internalID: 685837381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_57
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 819f368d8731bae4ca6f73f7648c6150
+      internalID: 1306246074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_58
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 774ba1d6d2eccc74bb7f63270bbe98ea
+      internalID: -93168159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_59
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c90321b81d34fd478366753bf8a4ccf
+      internalID: 473835297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_60
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65272f11f1705d145b2cecb4c23c2569
+      internalID: 318436148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_61
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d0026e73a2cbf84e9fcb70a8665b4f8
+      internalID: 223511069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_62
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84c862197d7d784e87fc494fe09d25a
+      internalID: 65574668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_63
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d897fea5584b534ca248409638d11b1
+      internalID: -843908350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_64
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0e212d40bd96de48ad37a4d6e1d6287
+      internalID: -1672700830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_65
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 413db198c70654c47baa2bf79003f758
+      internalID: 56920426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_66
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab8e192539b3964dba718315ab1db49
+      internalID: 1085040799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_67
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41f5c38ae458324bba776db8a56a0bd
+      internalID: 1978136634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_68
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81c7a39c7ac87704a9d79a7f1a2adab2
+      internalID: -507955884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_69
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 543e5ed47f09e52478ebf181c4693f44
+      internalID: -792190615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_70
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2be38cf83b5cadd40a58358e5ad02c86
+      internalID: 1714250404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_71
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ae08a9e4caa9ea46a0474433a44d8c4
+      internalID: 67608412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_72
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd1c37b600596a448942cc532259dc3d
+      internalID: -1141786506
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_73
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3bec9d19208211c41aab19cf4c6e241c
+      internalID: 1853026868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_74
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 399e6c870350f7c44a77b036de048038
+      internalID: 370512734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_75
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79de98270a45a544da433812668673f0
+      internalID: 675416796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_76
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a3222d2de382b44bb25bdcb79138658
+      internalID: -50677524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_77
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdc6d90f306f81542b47c444d38d6dd0
+      internalID: -1985375237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_78
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54793f57d273a834b9a0003be951b9ae
+      internalID: 1018516581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_79
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4909883dce66d8488673ef25e73c0d7
+      internalID: 1474974958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_80
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7172e698ef8fd8a458a1d3f0b4347bc8
+      internalID: -1596788209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_81
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e40a7cb4d60cbe1499a7ee19d36e743a
+      internalID: -1075315917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_82
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc51329ec761607419e3accd207925b5
+      internalID: -381750536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_83
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d01d5ed83c32854c8e34c97c0e80fd1
+      internalID: 1577427152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 758ded74f317f7444b34116c80483d5e
+      internalID: 1014387128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_85
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1fbf2cc54cca345a38982b98ca8dca
+      internalID: -515226258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_86
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f577a87c40a7ee74190dc7781a944c08
+      internalID: 445068947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_87
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43811afcd0d944d41bfea995579d7044
+      internalID: 35376929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_88
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80408155a0261d24eb74dfbeb1a29c3a
+      internalID: -1320506001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_89
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 560d72e12d8e0a142a161190809d197b
+      internalID: 1939918841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_90
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22cba51defd43924ea254a145dd638d4
+      internalID: 1441726407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_91
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c88d45ab3dee67a43a8957460a4a4395
+      internalID: -1861037952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_92
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57b5881a2bcde9044a997e553c44fd65
+      internalID: -1012386396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_93
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f1d7fa2993830f42bad7b8ffdafbfb7
+      internalID: 598597156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_94
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e6ab6233babc17488e341f40b96489e
+      internalID: -1325186565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_95
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da21988f1f98abd4abe85be9357e7aff
+      internalID: -1089371351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_96
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fcc5e36f6f29ad4ab6ec71236c5f635
+      internalID: 549817369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_97
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49334fa4e0dc244408aa8c851061868d
+      internalID: -765364069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_98
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3efe270043a3744d943be6e337e8de5
+      internalID: -258296066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_99
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b2dce8a4ea6454cb4d7eacb0b08cdd
+      internalID: -188869975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_100
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8399531289ac05c40a015ab9fb9ae47f
+      internalID: -847674657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_101
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48ed0961164055743bc46ced1b0082af
+      internalID: 182858443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_102
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c81120ce6602ab4088cb343a63cefe6
+      internalID: 617972977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_103
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ab8be8047239ab4f9f1d71607af7ae4
+      internalID: 597224601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_104
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c477125ad8a72d648a7a44234fec95fc
+      internalID: -1590397755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_105
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d3a9bc355021e34593f512aca06b719
+      internalID: -1716041471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_106
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faef64354a8b94945b372b756114242a
+      internalID: -282190784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_107
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22d17eeee54090547adea3812acaeb5e
+      internalID: 350978741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_108
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 452515e79d546dc4eba6fb8ee709579d
+      internalID: -421953819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_109
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b2122974a50064f985f0675d4c16a3
+      internalID: 736994277
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_110
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a567b2cab988cc844aa698c29d163129
+      internalID: -1165636540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_111
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebc5e179dc4ba942be624c30e2243a6
+      internalID: -728640124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_112
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f972f308280ed41855cb51e6e0fad1
+      internalID: -1803015841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_113
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 959b1623abf01244f9c083ef88db3bb1
+      internalID: 116491060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_114
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a90036172dc1fa469502d96b701a5cb
+      internalID: -1737224705
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_115
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcd07df067f8f76418d98607e27c841f
+      internalID: -1699463484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_116
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6bf9bdac3333b4db9cef4cc3dc28e1
+      internalID: -890941911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_117
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f995709b0f2ec8b40b0b3132374c2e64
+      internalID: -1166627016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_118
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 009eb7093f77b3e4c9e7d3e5425b55af
+      internalID: 43246955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_119
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d8a6586a2845534ebea5d21987e8e73
+      internalID: 35819896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_120
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1bcca1e310e78b49b6df1fe5d8f7be2
+      internalID: -533342006
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_121
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65527ea633b199e45b22d0db916c0172
+      internalID: -313195115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_122
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01336fd810f51cd42a33c39b7e9a3313
+      internalID: -2046793004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_123
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 217b5cec233e3f14788b887992d46c8f
+      internalID: 1706476250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_124
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58884ca8e01433a4486c8d28bdee44a1
+      internalID: -1566433536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_125
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f761f8411a772f7439e322faa86f90bc
+      internalID: 1643577967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f679290711c3b45a9c6f03fa8de233
+      internalID: 420429755
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_127
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b518bc695ca8c8f4f8af29920495e33e
+      internalID: 1577103929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_128
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10c6344527270f04a8085a9805dfdcb7
+      internalID: 1775535477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_129
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34ab83bedf36c534ead918b5d6f1d466
+      internalID: 1018199713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_130
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25f1a8eac71e0e41bec536bbea834c1
+      internalID: -1263984651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_131
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24f996b0ce4ec18449671edf69f41402
+      internalID: -185276620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_132
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8806273815c15ed46a873460835ce52b
+      internalID: 1629374175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_133
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f8b067d6d55f644fa6e38f54e41d0d8
+      internalID: 2133823593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_134
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7810edc80bd284e4698d18489ff70c5f
+      internalID: -1099620644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_135
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d9481fd883b4db4e9388007da527a06
+      internalID: -930958876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_136
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b50e528b4c841f641a362c1ee2b4562b
+      internalID: 208273416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_137
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fa69565dadc5564892e153612a1803c
+      internalID: -1294678395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_138
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5373ae8644d43ac4493dcba601d2ca8f
+      internalID: 772090929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_139
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34480bfde611fda4e82571dd3dc63324
+      internalID: -2043423252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_140
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14cf517e29e720847a24c05e4344568a
+      internalID: 1236405584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_141
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f5407be0d7495458d09a961cee66b1
+      internalID: 191392459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_142
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25891037e8a78294ebdedb1a2af11fa3
+      internalID: -1834060992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_143
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba1b465489dcf24eba6d00d09b3b383
+      internalID: 97892354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_144
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 448b3cd932f642d449c8fa7e50d5966f
+      internalID: -734459402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_145
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b062058d60cd02b4c9c9e7ee10532db8
+      internalID: -1053360172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_146
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45cf963d5061f5b438242ee1c8771f54
+      internalID: -936441478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_147
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc16552dc6300644293939cd1dcdee4a
+      internalID: -2065093658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_148
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a539117b9dcfa4048956cfe36f1fb994
+      internalID: 1558475165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_149
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c22f414b40277a4d91dbcad9f8335ec
+      internalID: -1629892144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_150
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96932edc72c0ed54489751790ac4bd25
+      internalID: 2134507222
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_151
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a867da39324fb724cabd2a0988859a78
+      internalID: 748578949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_152
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c934cfedd788a64e9e12706d4462d84
+      internalID: 1046698695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_153
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0fa26f93e696d1409d0e53f3957bc7a
+      internalID: 1994815178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_154
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afa80a40a33905f4c83c8df48fe6aca0
+      internalID: -1206199060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_155
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 472d2a861fe14584f91084e778156622
+      internalID: -663014863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_156
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca39a01422b610e4d91ac0fa7c40dede
+      internalID: -1598264680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_157
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5018b7a58febc4846a05fe4c1be62d30
+      internalID: 1321189078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_158
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7452641a654c25147ad64055fa5711d9
+      internalID: 592108505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_159
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8717efff82c71f749806497e4b2448cf
+      internalID: 1419191697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_160
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c79ff65e9a25d74abbb8523cea35b66
+      internalID: -111162753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_161
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f44ee565adec443b4217f83002cdb4
+      internalID: -1121042259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_162
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898c03f5c9971d646981a4477186b3ad
+      internalID: -575988915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_163
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39171cfa6dab1314fb36b97838b91772
+      internalID: -111244311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_164
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd8331d4dfb7a546baacd33fc794b44
+      internalID: 1410016107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_165
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce141bf749fbd448950a60bf732c706
+      internalID: 1707235388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_166
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d5b76be10a623e45a1447b50b01f24b
+      internalID: -2060773077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta02_pluslamp_normalAtk_167
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7dbedd3c2f520943b916f76affa7cc5
+      internalID: 1541570759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sd_0002_delta_delta02_pluslamp_normalAtk_0: -473320910
+      sd_0002_delta_delta02_pluslamp_normalAtk_1: -564524871
+      sd_0002_delta_delta02_pluslamp_normalAtk_10: 335699165
+      sd_0002_delta_delta02_pluslamp_normalAtk_100: -847674657
+      sd_0002_delta_delta02_pluslamp_normalAtk_101: 182858443
+      sd_0002_delta_delta02_pluslamp_normalAtk_102: 617972977
+      sd_0002_delta_delta02_pluslamp_normalAtk_103: 597224601
+      sd_0002_delta_delta02_pluslamp_normalAtk_104: -1590397755
+      sd_0002_delta_delta02_pluslamp_normalAtk_105: -1716041471
+      sd_0002_delta_delta02_pluslamp_normalAtk_106: -282190784
+      sd_0002_delta_delta02_pluslamp_normalAtk_107: 350978741
+      sd_0002_delta_delta02_pluslamp_normalAtk_108: -421953819
+      sd_0002_delta_delta02_pluslamp_normalAtk_109: 736994277
+      sd_0002_delta_delta02_pluslamp_normalAtk_11: -1017439147
+      sd_0002_delta_delta02_pluslamp_normalAtk_110: -1165636540
+      sd_0002_delta_delta02_pluslamp_normalAtk_111: -728640124
+      sd_0002_delta_delta02_pluslamp_normalAtk_112: -1803015841
+      sd_0002_delta_delta02_pluslamp_normalAtk_113: 116491060
+      sd_0002_delta_delta02_pluslamp_normalAtk_114: -1737224705
+      sd_0002_delta_delta02_pluslamp_normalAtk_115: -1699463484
+      sd_0002_delta_delta02_pluslamp_normalAtk_116: -890941911
+      sd_0002_delta_delta02_pluslamp_normalAtk_117: -1166627016
+      sd_0002_delta_delta02_pluslamp_normalAtk_118: 43246955
+      sd_0002_delta_delta02_pluslamp_normalAtk_119: 35819896
+      sd_0002_delta_delta02_pluslamp_normalAtk_12: -1999756908
+      sd_0002_delta_delta02_pluslamp_normalAtk_120: -533342006
+      sd_0002_delta_delta02_pluslamp_normalAtk_121: -313195115
+      sd_0002_delta_delta02_pluslamp_normalAtk_122: -2046793004
+      sd_0002_delta_delta02_pluslamp_normalAtk_123: 1706476250
+      sd_0002_delta_delta02_pluslamp_normalAtk_124: -1566433536
+      sd_0002_delta_delta02_pluslamp_normalAtk_125: 1643577967
+      sd_0002_delta_delta02_pluslamp_normalAtk_126: 420429755
+      sd_0002_delta_delta02_pluslamp_normalAtk_127: 1577103929
+      sd_0002_delta_delta02_pluslamp_normalAtk_128: 1775535477
+      sd_0002_delta_delta02_pluslamp_normalAtk_129: 1018199713
+      sd_0002_delta_delta02_pluslamp_normalAtk_13: -2063213719
+      sd_0002_delta_delta02_pluslamp_normalAtk_130: -1263984651
+      sd_0002_delta_delta02_pluslamp_normalAtk_131: -185276620
+      sd_0002_delta_delta02_pluslamp_normalAtk_132: 1629374175
+      sd_0002_delta_delta02_pluslamp_normalAtk_133: 2133823593
+      sd_0002_delta_delta02_pluslamp_normalAtk_134: -1099620644
+      sd_0002_delta_delta02_pluslamp_normalAtk_135: -930958876
+      sd_0002_delta_delta02_pluslamp_normalAtk_136: 208273416
+      sd_0002_delta_delta02_pluslamp_normalAtk_137: -1294678395
+      sd_0002_delta_delta02_pluslamp_normalAtk_138: 772090929
+      sd_0002_delta_delta02_pluslamp_normalAtk_139: -2043423252
+      sd_0002_delta_delta02_pluslamp_normalAtk_14: 1783447302
+      sd_0002_delta_delta02_pluslamp_normalAtk_140: 1236405584
+      sd_0002_delta_delta02_pluslamp_normalAtk_141: 191392459
+      sd_0002_delta_delta02_pluslamp_normalAtk_142: -1834060992
+      sd_0002_delta_delta02_pluslamp_normalAtk_143: 97892354
+      sd_0002_delta_delta02_pluslamp_normalAtk_144: -734459402
+      sd_0002_delta_delta02_pluslamp_normalAtk_145: -1053360172
+      sd_0002_delta_delta02_pluslamp_normalAtk_146: -936441478
+      sd_0002_delta_delta02_pluslamp_normalAtk_147: -2065093658
+      sd_0002_delta_delta02_pluslamp_normalAtk_148: 1558475165
+      sd_0002_delta_delta02_pluslamp_normalAtk_149: -1629892144
+      sd_0002_delta_delta02_pluslamp_normalAtk_15: -1780232348
+      sd_0002_delta_delta02_pluslamp_normalAtk_150: 2134507222
+      sd_0002_delta_delta02_pluslamp_normalAtk_151: 748578949
+      sd_0002_delta_delta02_pluslamp_normalAtk_152: 1046698695
+      sd_0002_delta_delta02_pluslamp_normalAtk_153: 1994815178
+      sd_0002_delta_delta02_pluslamp_normalAtk_154: -1206199060
+      sd_0002_delta_delta02_pluslamp_normalAtk_155: -663014863
+      sd_0002_delta_delta02_pluslamp_normalAtk_156: -1598264680
+      sd_0002_delta_delta02_pluslamp_normalAtk_157: 1321189078
+      sd_0002_delta_delta02_pluslamp_normalAtk_158: 592108505
+      sd_0002_delta_delta02_pluslamp_normalAtk_159: 1419191697
+      sd_0002_delta_delta02_pluslamp_normalAtk_16: -1531019945
+      sd_0002_delta_delta02_pluslamp_normalAtk_160: -111162753
+      sd_0002_delta_delta02_pluslamp_normalAtk_161: -1121042259
+      sd_0002_delta_delta02_pluslamp_normalAtk_162: -575988915
+      sd_0002_delta_delta02_pluslamp_normalAtk_163: -111244311
+      sd_0002_delta_delta02_pluslamp_normalAtk_164: 1410016107
+      sd_0002_delta_delta02_pluslamp_normalAtk_165: 1707235388
+      sd_0002_delta_delta02_pluslamp_normalAtk_166: -2060773077
+      sd_0002_delta_delta02_pluslamp_normalAtk_167: 1541570759
+      sd_0002_delta_delta02_pluslamp_normalAtk_17: 1055741966
+      sd_0002_delta_delta02_pluslamp_normalAtk_18: 243655596
+      sd_0002_delta_delta02_pluslamp_normalAtk_19: 1985071071
+      sd_0002_delta_delta02_pluslamp_normalAtk_2: -1739843442
+      sd_0002_delta_delta02_pluslamp_normalAtk_20: -590315714
+      sd_0002_delta_delta02_pluslamp_normalAtk_21: -379700334
+      sd_0002_delta_delta02_pluslamp_normalAtk_22: 1931684142
+      sd_0002_delta_delta02_pluslamp_normalAtk_23: -178859384
+      sd_0002_delta_delta02_pluslamp_normalAtk_24: -411192141
+      sd_0002_delta_delta02_pluslamp_normalAtk_25: -152792738
+      sd_0002_delta_delta02_pluslamp_normalAtk_26: -2002259869
+      sd_0002_delta_delta02_pluslamp_normalAtk_27: 2100915855
+      sd_0002_delta_delta02_pluslamp_normalAtk_28: 1846077828
+      sd_0002_delta_delta02_pluslamp_normalAtk_29: 543692591
+      sd_0002_delta_delta02_pluslamp_normalAtk_3: -643846413
+      sd_0002_delta_delta02_pluslamp_normalAtk_30: -429066547
+      sd_0002_delta_delta02_pluslamp_normalAtk_31: 35027333
+      sd_0002_delta_delta02_pluslamp_normalAtk_32: 2069035252
+      sd_0002_delta_delta02_pluslamp_normalAtk_33: 1343472770
+      sd_0002_delta_delta02_pluslamp_normalAtk_34: -30466678
+      sd_0002_delta_delta02_pluslamp_normalAtk_35: -387052651
+      sd_0002_delta_delta02_pluslamp_normalAtk_36: 2077011967
+      sd_0002_delta_delta02_pluslamp_normalAtk_37: -1400332645
+      sd_0002_delta_delta02_pluslamp_normalAtk_38: 1932754108
+      sd_0002_delta_delta02_pluslamp_normalAtk_39: -336393525
+      sd_0002_delta_delta02_pluslamp_normalAtk_4: 1484158994
+      sd_0002_delta_delta02_pluslamp_normalAtk_40: -782288543
+      sd_0002_delta_delta02_pluslamp_normalAtk_41: -2055216214
+      sd_0002_delta_delta02_pluslamp_normalAtk_42: 1026605043
+      sd_0002_delta_delta02_pluslamp_normalAtk_43: -1866708546
+      sd_0002_delta_delta02_pluslamp_normalAtk_44: 523350484
+      sd_0002_delta_delta02_pluslamp_normalAtk_45: 334774110
+      sd_0002_delta_delta02_pluslamp_normalAtk_46: -517761126
+      sd_0002_delta_delta02_pluslamp_normalAtk_47: 1348014180
+      sd_0002_delta_delta02_pluslamp_normalAtk_48: 210199136
+      sd_0002_delta_delta02_pluslamp_normalAtk_49: 1441871014
+      sd_0002_delta_delta02_pluslamp_normalAtk_5: 1907322783
+      sd_0002_delta_delta02_pluslamp_normalAtk_50: -1155216636
+      sd_0002_delta_delta02_pluslamp_normalAtk_51: -618692342
+      sd_0002_delta_delta02_pluslamp_normalAtk_52: 1830685156
+      sd_0002_delta_delta02_pluslamp_normalAtk_53: -986160226
+      sd_0002_delta_delta02_pluslamp_normalAtk_54: 1925383516
+      sd_0002_delta_delta02_pluslamp_normalAtk_55: -1634157790
+      sd_0002_delta_delta02_pluslamp_normalAtk_56: 685837381
+      sd_0002_delta_delta02_pluslamp_normalAtk_57: 1306246074
+      sd_0002_delta_delta02_pluslamp_normalAtk_58: -93168159
+      sd_0002_delta_delta02_pluslamp_normalAtk_59: 473835297
+      sd_0002_delta_delta02_pluslamp_normalAtk_6: -1530959660
+      sd_0002_delta_delta02_pluslamp_normalAtk_60: 318436148
+      sd_0002_delta_delta02_pluslamp_normalAtk_61: 223511069
+      sd_0002_delta_delta02_pluslamp_normalAtk_62: 65574668
+      sd_0002_delta_delta02_pluslamp_normalAtk_63: -843908350
+      sd_0002_delta_delta02_pluslamp_normalAtk_64: -1672700830
+      sd_0002_delta_delta02_pluslamp_normalAtk_65: 56920426
+      sd_0002_delta_delta02_pluslamp_normalAtk_66: 1085040799
+      sd_0002_delta_delta02_pluslamp_normalAtk_67: 1978136634
+      sd_0002_delta_delta02_pluslamp_normalAtk_68: -507955884
+      sd_0002_delta_delta02_pluslamp_normalAtk_69: -792190615
+      sd_0002_delta_delta02_pluslamp_normalAtk_7: -18525831
+      sd_0002_delta_delta02_pluslamp_normalAtk_70: 1714250404
+      sd_0002_delta_delta02_pluslamp_normalAtk_71: 67608412
+      sd_0002_delta_delta02_pluslamp_normalAtk_72: -1141786506
+      sd_0002_delta_delta02_pluslamp_normalAtk_73: 1853026868
+      sd_0002_delta_delta02_pluslamp_normalAtk_74: 370512734
+      sd_0002_delta_delta02_pluslamp_normalAtk_75: 675416796
+      sd_0002_delta_delta02_pluslamp_normalAtk_76: -50677524
+      sd_0002_delta_delta02_pluslamp_normalAtk_77: -1985375237
+      sd_0002_delta_delta02_pluslamp_normalAtk_78: 1018516581
+      sd_0002_delta_delta02_pluslamp_normalAtk_79: 1474974958
+      sd_0002_delta_delta02_pluslamp_normalAtk_8: -1854072693
+      sd_0002_delta_delta02_pluslamp_normalAtk_80: -1596788209
+      sd_0002_delta_delta02_pluslamp_normalAtk_81: -1075315917
+      sd_0002_delta_delta02_pluslamp_normalAtk_82: -381750536
+      sd_0002_delta_delta02_pluslamp_normalAtk_83: 1577427152
+      sd_0002_delta_delta02_pluslamp_normalAtk_84: 1014387128
+      sd_0002_delta_delta02_pluslamp_normalAtk_85: -515226258
+      sd_0002_delta_delta02_pluslamp_normalAtk_86: 445068947
+      sd_0002_delta_delta02_pluslamp_normalAtk_87: 35376929
+      sd_0002_delta_delta02_pluslamp_normalAtk_88: -1320506001
+      sd_0002_delta_delta02_pluslamp_normalAtk_89: 1939918841
+      sd_0002_delta_delta02_pluslamp_normalAtk_9: 1855742082
+      sd_0002_delta_delta02_pluslamp_normalAtk_90: 1441726407
+      sd_0002_delta_delta02_pluslamp_normalAtk_91: -1861037952
+      sd_0002_delta_delta02_pluslamp_normalAtk_92: -1012386396
+      sd_0002_delta_delta02_pluslamp_normalAtk_93: 598597156
+      sd_0002_delta_delta02_pluslamp_normalAtk_94: -1325186565
+      sd_0002_delta_delta02_pluslamp_normalAtk_95: -1089371351
+      sd_0002_delta_delta02_pluslamp_normalAtk_96: 549817369
+      sd_0002_delta_delta02_pluslamp_normalAtk_97: -765364069
+      sd_0002_delta_delta02_pluslamp_normalAtk_98: -258296066
+      sd_0002_delta_delta02_pluslamp_normalAtk_99: -188869975
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

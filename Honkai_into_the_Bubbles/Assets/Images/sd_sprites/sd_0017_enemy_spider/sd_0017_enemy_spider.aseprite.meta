@@ -1,0 +1,1035 @@
+fileFormatVersion: 2
+guid: f63700faecb8fb64baeb8e38e3c74185
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: sd_0017_enemy_spider_Frame_0
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.8095238}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 168
+      width: 16
+      height: 21
+    spriteID: cd52113f6fa73644daba3611cd362405
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 168}
+  - name: sd_0017_enemy_spider_Frame_1
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 4
+      width: 16
+      height: 20
+    spriteID: cc1537c9bebd0794287e640b37140d70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 4}
+  - name: sd_0017_enemy_spider_Frame_2
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.8095238}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 197
+      width: 16
+      height: 21
+    spriteID: 0c3ea96acc4d6994d8ba78fdb4197050
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 197}
+  - name: sd_0017_enemy_spider_Frame_3
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.8095238}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 226
+      width: 16
+      height: 21
+    spriteID: 869da3f41a75c0b4f8afafce815885f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 226}
+  - name: sd_0017_enemy_spider_Frame_4
+    originalName: 
+    pivot: {x: 0.43750003, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 204
+      width: 16
+      height: 19
+    spriteID: 98b48908585d4a74e83e8ca5e53f8919
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 204}
+  - name: sd_0017_enemy_spider_Frame_5
+    originalName: 
+    pivot: {x: 0.44444442, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 60
+      width: 18
+      height: 19
+    spriteID: 78592c94e1f8a1b4cb13274a27c0c282
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 60}
+  - name: sd_0017_enemy_spider_Frame_6
+    originalName: 
+    pivot: {x: 0.44444442, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 18
+      height: 20
+    spriteID: cc3b0f27e38821d4d9cbd6ecaad3135c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: sd_0017_enemy_spider_Frame_7
+    originalName: 
+    pivot: {x: 0.44444442, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 87
+      width: 18
+      height: 19
+    spriteID: a999ef2bed5fec8439c5847a2a9dbb1a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 87}
+  - name: sd_0017_enemy_spider_Frame_24
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 32
+      width: 16
+      height: 20
+    spriteID: df8eaad1b21a80244ba8451f5a898e80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 32}
+  - name: sd_0017_enemy_spider_Frame_25
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 144
+      width: 14
+      height: 22
+    spriteID: 42043e28402b7eb49a46908c88c136d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 144}
+  - name: sd_0017_enemy_spider_Frame_26
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.6956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 4
+      width: 14
+      height: 23
+    spriteID: 63ab2fafd8737ad428e0e7e7fb3afa09
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 4}
+  - name: sd_0017_enemy_spider_Frame_27
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 174
+      width: 14
+      height: 22
+    spriteID: f8a5a882f9ab6924eb6dd3dcecafc5ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 174}
+  - name: sd_0017_enemy_spider_Frame_28
+    originalName: 
+    pivot: {x: 0.5625, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 231
+      width: 16
+      height: 19
+    spriteID: ac5a726f3d9790f4f82c1d44fc31cd9c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 231}
+  - name: sd_0017_enemy_spider_Frame_29
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 114
+      width: 18
+      height: 19
+    spriteID: 65e517e9b66f5f94d84a70efa0a581ff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 114}
+  - name: sd_0017_enemy_spider_Frame_30
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 32
+      width: 18
+      height: 20
+    spriteID: 308f01c3e70f4cc4e8eeb4589d0fd760
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 32}
+  - name: sd_0017_enemy_spider_Frame_31
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 141
+      width: 18
+      height: 19
+    spriteID: cdc1d7fa3886d1449ba74ecab7052109
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 141}
+  - name: sd_0017_enemy_spider_Frame_0
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 60
+      width: 16
+      height: 20
+    spriteID: 2f2bcef18864ecc4ab8fbe305a130f1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 60}
+  - name: sd_0017_enemy_spider_Frame_1
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 4
+      width: 16
+      height: 19
+    spriteID: c14f37396f659ad4786cd2c86ca58635
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 4}
+  - name: sd_0017_enemy_spider_Frame_2
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 31
+      width: 15
+      height: 20
+    spriteID: 68312c4fc5d26a9468972a5c1a88721c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 31}
+  - name: sd_0017_enemy_spider_Frame_3
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 199
+      width: 15
+      height: 19
+    spriteID: 39e5efe4046cea744905b1dd4d4c7b13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 199}
+  - name: sd_0017_enemy_spider_Frame_6
+    originalName: 
+    pivot: {x: 0.5333333, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 59
+      width: 15
+      height: 20
+    spriteID: 0b28835f98d38544b9ad36b563a348c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 59}
+  - name: sd_0017_enemy_spider_Frame_7
+    originalName: 
+    pivot: {x: 0.5333333, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 226
+      width: 15
+      height: 19
+    spriteID: e1edd46707ad82b4cbe490ffb6a1732b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 226}
+  - name: sd_0017_enemy_spider_Frame_8
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 88
+      width: 16
+      height: 20
+    spriteID: e516f0bf083b86647b1a8504a967edc3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 88}
+  - name: sd_0017_enemy_spider_Frame_9
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 52
+      y: 116
+      width: 16
+      height: 20
+    spriteID: fe25f01f0977aad4b964442269d45d30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 52, y: 116}
+  - name: sd_0017_enemy_spider_Frame_10
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 87
+      width: 15
+      height: 20
+    spriteID: e3a7db21530a6d042bf8cb1a83f131f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 87}
+  - name: sd_0017_enemy_spider_Frame_11
+    originalName: 
+    pivot: {x: 0.4666667, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 115
+      width: 15
+      height: 20
+    spriteID: 1be564d9af30810419237ebb10bf326c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 115}
+  - name: sd_0017_enemy_spider_Frame_14
+    originalName: 
+    pivot: {x: 0.5333333, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 143
+      width: 15
+      height: 20
+    spriteID: 2a2a8496a86924748af34484eaa6e847
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 143}
+  - name: sd_0017_enemy_spider_Frame_15
+    originalName: 
+    pivot: {x: 0.5333333, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 76
+      y: 171
+      width: 15
+      height: 20
+    spriteID: 445166e3239f90a4989e0e02e361d14d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 76, y: 171}
+  - name: sd_0017_enemy_spider_Frame_16
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.89473677}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 63
+      width: 14
+      height: 19
+    spriteID: d022ece1f9e1cc640b3ce2c0181e3d78
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 63}
+  - name: sd_0017_enemy_spider_Frame_17
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.84210527}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 90
+      width: 14
+      height: 19
+    spriteID: 394a48ca19bbc3f4bba784e849cd7077
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 90}
+  - name: sd_0017_enemy_spider_Frame_18
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.8000001}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 35
+      width: 14
+      height: 20
+    spriteID: 18b7904e882615644b9635911cf63bd9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 35}
+  - name: sd_0017_enemy_spider_Frame_19
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.84210527}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 30
+      y: 117
+      width: 14
+      height: 19
+    spriteID: 6231fbd8336f5614282bea704b238306
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 30, y: 117}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1427644179
+    name: sd_0017_enemy_spider
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: sd_0017_enemy_spider_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 16
+        y: 17
+        width: 16
+        height: 21
+      spriteId: cd52113f6fa73644daba3611cd362405
+    - name: sd_0017_enemy_spider_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 16
+        y: 17
+        width: 16
+        height: 20
+      spriteId: cc1537c9bebd0794287e640b37140d70
+    - name: sd_0017_enemy_spider_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 16
+        y: 17
+        width: 16
+        height: 21
+      spriteId: 0c3ea96acc4d6994d8ba78fdb4197050
+    - name: sd_0017_enemy_spider_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 16
+        y: 17
+        width: 16
+        height: 21
+      spriteId: 869da3f41a75c0b4f8afafce815885f9
+    - name: sd_0017_enemy_spider_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 17
+        y: 17
+        width: 16
+        height: 19
+      spriteId: 98b48908585d4a74e83e8ca5e53f8919
+    - name: sd_0017_enemy_spider_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 16
+        y: 17
+        width: 18
+        height: 19
+      spriteId: 78592c94e1f8a1b4cb13274a27c0c282
+    - name: sd_0017_enemy_spider_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 16
+        y: 17
+        width: 18
+        height: 20
+      spriteId: cc3b0f27e38821d4d9cbd6ecaad3135c
+    - name: sd_0017_enemy_spider_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 16
+        y: 17
+        width: 18
+        height: 19
+      spriteId: a999ef2bed5fec8439c5847a2a9dbb1a
+    - name: sd_0017_enemy_spider_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 16
+        y: 17
+        width: 16
+        height: 20
+      spriteId: df8eaad1b21a80244ba8451f5a898e80
+    - name: sd_0017_enemy_spider_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 17
+        y: 16
+        width: 14
+        height: 22
+      spriteId: 42043e28402b7eb49a46908c88c136d5
+    - name: sd_0017_enemy_spider_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 17
+        y: 16
+        width: 14
+        height: 23
+      spriteId: 63ab2fafd8737ad428e0e7e7fb3afa09
+    - name: sd_0017_enemy_spider_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 17
+        y: 16
+        width: 14
+        height: 22
+      spriteId: f8a5a882f9ab6924eb6dd3dcecafc5ea
+    - name: sd_0017_enemy_spider_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 15
+        y: 17
+        width: 16
+        height: 19
+      spriteId: ac5a726f3d9790f4f82c1d44fc31cd9c
+    - name: sd_0017_enemy_spider_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 14
+        y: 17
+        width: 18
+        height: 19
+      spriteId: 65e517e9b66f5f94d84a70efa0a581ff
+    - name: sd_0017_enemy_spider_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 14
+        y: 17
+        width: 18
+        height: 20
+      spriteId: 308f01c3e70f4cc4e8eeb4589d0fd760
+    - name: sd_0017_enemy_spider_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 14
+        y: 17
+        width: 18
+        height: 19
+      spriteId: cdc1d7fa3886d1449ba74ecab7052109
+    - name: sd_0017_enemy_spider_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 16
+        y: 17
+        width: 16
+        height: 20
+      spriteId: 2f2bcef18864ecc4ab8fbe305a130f1d
+    - name: sd_0017_enemy_spider_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 16
+        y: 17
+        width: 16
+        height: 19
+      spriteId: c14f37396f659ad4786cd2c86ca58635
+    - name: sd_0017_enemy_spider_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 17
+        y: 17
+        width: 15
+        height: 20
+      spriteId: 68312c4fc5d26a9468972a5c1a88721c
+    - name: sd_0017_enemy_spider_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 17
+        y: 17
+        width: 15
+        height: 19
+      spriteId: 39e5efe4046cea744905b1dd4d4c7b13
+    - name: sd_0017_enemy_spider_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 16
+        y: 17
+        width: 15
+        height: 20
+      spriteId: 0b28835f98d38544b9ad36b563a348c1
+    - name: sd_0017_enemy_spider_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 16
+        y: 17
+        width: 15
+        height: 19
+      spriteId: e1edd46707ad82b4cbe490ffb6a1732b
+    - name: sd_0017_enemy_spider_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 16
+        y: 17
+        width: 16
+        height: 20
+      spriteId: e516f0bf083b86647b1a8504a967edc3
+    - name: sd_0017_enemy_spider_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 16
+        y: 17
+        width: 16
+        height: 20
+      spriteId: fe25f01f0977aad4b964442269d45d30
+    - name: sd_0017_enemy_spider_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 17
+        y: 17
+        width: 15
+        height: 20
+      spriteId: e3a7db21530a6d042bf8cb1a83f131f2
+    - name: sd_0017_enemy_spider_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 17
+        y: 17
+        width: 15
+        height: 20
+      spriteId: 1be564d9af30810419237ebb10bf326c
+    - name: sd_0017_enemy_spider_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 16
+        y: 17
+        width: 15
+        height: 20
+      spriteId: 2a2a8496a86924748af34484eaa6e847
+    - name: sd_0017_enemy_spider_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 16
+        y: 17
+        width: 15
+        height: 20
+      spriteId: 445166e3239f90a4989e0e02e361d14d
+    - name: sd_0017_enemy_spider_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 17
+        y: 17
+        width: 14
+        height: 19
+      spriteId: d022ece1f9e1cc640b3ce2c0181e3d78
+    - name: sd_0017_enemy_spider_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 17
+        y: 16
+        width: 14
+        height: 19
+      spriteId: 394a48ca19bbc3f4bba784e849cd7077
+    - name: sd_0017_enemy_spider_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 17
+        y: 16
+        width: 14
+        height: 20
+      spriteId: 18b7904e882615644b9635911cf63bd9
+    - name: sd_0017_enemy_spider_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 17
+        y: 16
+        width: 14
+        height: 19
+      spriteId: 6231fbd8336f5614282bea704b238306
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 48, y: 48}

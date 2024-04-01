@@ -1,0 +1,5291 @@
+fileFormatVersion: 2
+guid: 2c664f75cdd58524db72e83f9c219e47
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: sd_0005_delta_L03_plusmech_Frame_0
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1060
+      width: 80
+      height: 80
+    spriteID: 1fce80f48870a1948aea9db6eb27debe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1060}
+  - name: sd_0005_delta_L03_plusmech_Frame_1
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1148
+      width: 80
+      height: 80
+    spriteID: 6fa271b86adbd714fb88741dada74249
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1148}
+  - name: sd_0005_delta_L03_plusmech_Frame_2
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1236
+      width: 80
+      height: 80
+    spriteID: 4a1d614ffd28bd648b54d2290dadfe0a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1236}
+  - name: sd_0005_delta_L03_plusmech_Frame_3
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1324
+      width: 80
+      height: 80
+    spriteID: e67184c07cadf2d4889ce9a3ba8d1258
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1324}
+  - name: sd_0005_delta_L03_plusmech_Frame_4
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1412
+      width: 80
+      height: 80
+    spriteID: 619d97e13a1fdf643b0b9a26ba34c4b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1412}
+  - name: sd_0005_delta_L03_plusmech_Frame_5
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1500
+      width: 80
+      height: 80
+    spriteID: 0584c50ccbc4acf4498b901d052e023d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1500}
+  - name: sd_0005_delta_L03_plusmech_Frame_6
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1588
+      width: 80
+      height: 80
+    spriteID: 1e5fb184964b7494cb3cc12033d7bba8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1588}
+  - name: sd_0005_delta_L03_plusmech_Frame_7
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1676
+      width: 80
+      height: 80
+    spriteID: c61faae7507f2d341825460a7b304c13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1676}
+  - name: sd_0005_delta_L03_plusmech_Frame_8
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1764
+      width: 80
+      height: 80
+    spriteID: ce39e94d2c49fb54da9d27923d5ad337
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1764}
+  - name: sd_0005_delta_L03_plusmech_Frame_9
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1852
+      width: 80
+      height: 80
+    spriteID: 3e308cdc8dfad3e47bcd43c4b65ab290
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1852}
+  - name: sd_0005_delta_L03_plusmech_Frame_10
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1940
+      width: 80
+      height: 80
+    spriteID: 46f95b420c2e5c147bd9d81fe8c244a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 1940}
+  - name: sd_0005_delta_L03_plusmech_Frame_11
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 4
+      width: 80
+      height: 80
+    spriteID: 70a41b6d0f1e9f14eae1c108c21a4db4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 4}
+  - name: sd_0005_delta_L03_plusmech_Frame_12
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 92
+      width: 80
+      height: 80
+    spriteID: 8eca71f1de114664fb7c9c5c6069829e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 92}
+  - name: sd_0005_delta_L03_plusmech_Frame_13
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 180
+      width: 80
+      height: 80
+    spriteID: c40ebe65f0ae07d439b344499eccce97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 180}
+  - name: sd_0005_delta_L03_plusmech_Frame_14
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 268
+      width: 80
+      height: 80
+    spriteID: baeec5e2c52acad418152c0c3dc9ec00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 268}
+  - name: sd_0005_delta_L03_plusmech_Frame_15
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 356
+      width: 80
+      height: 80
+    spriteID: 444bd77cf632ac44b91a2762efeba955
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 356}
+  - name: sd_0005_delta_L03_plusmech_Frame_16
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 444
+      width: 80
+      height: 80
+    spriteID: 6f7889c0838f57243b56b2817401c334
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 444}
+  - name: sd_0005_delta_L03_plusmech_Frame_17
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 532
+      width: 80
+      height: 80
+    spriteID: aabc5a82615f1214c97ea7e71a3d0a12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 532}
+  - name: sd_0005_delta_L03_plusmech_Frame_18
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 620
+      width: 80
+      height: 80
+    spriteID: 0b0e8c37d3c62a84ab7fbb72609467dd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 620}
+  - name: sd_0005_delta_L03_plusmech_Frame_19
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 708
+      width: 80
+      height: 80
+    spriteID: c0aeb0a1dcb3f44429f06184f844abbc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 708}
+  - name: sd_0005_delta_L03_plusmech_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 796
+      width: 80
+      height: 80
+    spriteID: 87b8cb2176045104f94cab35629926b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 796}
+  - name: sd_0005_delta_L03_plusmech_Frame_21
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 884
+      width: 80
+      height: 80
+    spriteID: 979e4e14bbb49c647a485ba9385df825
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 884}
+  - name: sd_0005_delta_L03_plusmech_Frame_22
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 972
+      width: 80
+      height: 80
+    spriteID: 5c072861d2079544daddccc0e0b706fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 972}
+  - name: sd_0005_delta_L03_plusmech_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1060
+      width: 80
+      height: 80
+    spriteID: 3cf191a9ec752484e952cbf16807a27e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1060}
+  - name: sd_0005_delta_L03_plusmech_Frame_24
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1148
+      width: 80
+      height: 80
+    spriteID: ce9ef79cba55f394dbc70c1f7d3ab608
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1148}
+  - name: sd_0005_delta_L03_plusmech_Frame_25
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1236
+      width: 80
+      height: 80
+    spriteID: 6d52c04eb3f81674e962623cb2baf3f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1236}
+  - name: sd_0005_delta_L03_plusmech_Frame_26
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1324
+      width: 80
+      height: 80
+    spriteID: ae06960bebbfbea498b312c9f216015c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1324}
+  - name: sd_0005_delta_L03_plusmech_Frame_27
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1412
+      width: 80
+      height: 80
+    spriteID: 0ab386b812e8ec64da6bb9a1fcca46fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1412}
+  - name: sd_0005_delta_L03_plusmech_Frame_28
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1500
+      width: 80
+      height: 80
+    spriteID: 8bbe3211f7a0ce641908e613b8d0db63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1500}
+  - name: sd_0005_delta_L03_plusmech_Frame_29
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1588
+      width: 80
+      height: 80
+    spriteID: e4d305136fcca2b49b6dece50c687917
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1588}
+  - name: sd_0005_delta_L03_plusmech_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1676
+      width: 80
+      height: 80
+    spriteID: 14dca7c1ca6645548803fabd3e91281a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1676}
+  - name: sd_0005_delta_L03_plusmech_Frame_31
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1764
+      width: 80
+      height: 80
+    spriteID: 827686651e2e653449533d122e70c929
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1764}
+  - name: sd_0005_delta_L03_plusmech_Frame_32
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1852
+      width: 80
+      height: 80
+    spriteID: fcbcde58156e964449cac51341ebd063
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1852}
+  - name: sd_0005_delta_L03_plusmech_Frame_33
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 93
+      y: 1940
+      width: 80
+      height: 80
+    spriteID: 71f232e66fd933445ac6c895c32868ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 93, y: 1940}
+  - name: sd_0005_delta_L03_plusmech_Frame_34
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 4
+      width: 80
+      height: 80
+    spriteID: 33642320b660e164f9ed8f189451bc3d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 4}
+  - name: sd_0005_delta_L03_plusmech_Frame_35
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 92
+      width: 80
+      height: 80
+    spriteID: 838c9fe540682b24ba440443bb2e782b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 92}
+  - name: sd_0005_delta_L03_plusmech_Frame_36
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 180
+      width: 80
+      height: 80
+    spriteID: 4faf98222d76074478e6f40155b9f4a7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 180}
+  - name: sd_0005_delta_L03_plusmech_Frame_37
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 268
+      width: 80
+      height: 80
+    spriteID: 1c175079168b6cf448154ecf70739c00
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 268}
+  - name: sd_0005_delta_L03_plusmech_Frame_38
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 356
+      width: 80
+      height: 80
+    spriteID: 3c4651a2896f2544392cbbb4496414f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 356}
+  - name: sd_0005_delta_L03_plusmech_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 444
+      width: 80
+      height: 80
+    spriteID: 464c76ff0a4a926479c0333fcb7629f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 444}
+  - name: sd_0005_delta_L03_plusmech_Frame_40
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 532
+      width: 80
+      height: 80
+    spriteID: d3a26d625ffdf094ea92efe894a5499a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 532}
+  - name: sd_0005_delta_L03_plusmech_Frame_41
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 620
+      width: 80
+      height: 80
+    spriteID: 7da9553e2b73065469127b0ff7586487
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 620}
+  - name: sd_0005_delta_L03_plusmech_Frame_42
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 708
+      width: 80
+      height: 80
+    spriteID: 169b56d5212b46b41be593316fbe3b9d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 708}
+  - name: sd_0005_delta_L03_plusmech_Frame_43
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 796
+      width: 80
+      height: 80
+    spriteID: 7312c9794f5f70440a78c966ca3aa89f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 796}
+  - name: sd_0005_delta_L03_plusmech_Frame_44
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 884
+      width: 80
+      height: 80
+    spriteID: 6dc71cba0b4c7294f85ac37f1bb54f76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 884}
+  - name: sd_0005_delta_L03_plusmech_Frame_45
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 972
+      width: 80
+      height: 80
+    spriteID: 15a2756286a12054a914f7aa9eb866ea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 972}
+  - name: sd_0005_delta_L03_plusmech_Frame_46
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1060
+      width: 80
+      height: 80
+    spriteID: f0d78f3624a82484a87d963f9d0fbcb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1060}
+  - name: sd_0005_delta_L03_plusmech_Frame_47
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1148
+      width: 80
+      height: 80
+    spriteID: 108542a50d4298b48aa6e10c14fa0a32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1148}
+  - name: sd_0005_delta_L03_plusmech_Frame_48
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1236
+      width: 80
+      height: 80
+    spriteID: 3f636747e6a60e248b6e16f65dae81f6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1236}
+  - name: sd_0005_delta_L03_plusmech_Frame_49
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1324
+      width: 80
+      height: 80
+    spriteID: 70975e821218d714f8ec58bece25ba03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1324}
+  - name: sd_0005_delta_L03_plusmech_Frame_50
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1412
+      width: 80
+      height: 80
+    spriteID: 627a98493f6532f43a5ef38727e00a1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1412}
+  - name: sd_0005_delta_L03_plusmech_Frame_51
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1500
+      width: 80
+      height: 80
+    spriteID: 583d22f643bff9849ae4c32fee394fc8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1500}
+  - name: sd_0005_delta_L03_plusmech_Frame_52
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1588
+      width: 80
+      height: 80
+    spriteID: b1553d832aae16840b8f608eb94cc121
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1588}
+  - name: sd_0005_delta_L03_plusmech_Frame_53
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1676
+      width: 80
+      height: 80
+    spriteID: 354f940804b06824198cc17473e976ed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1676}
+  - name: sd_0005_delta_L03_plusmech_Frame_54
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 81
+      height: 80
+    spriteID: eb73a56fdffe5ab4bb9cae8b320fff12
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: sd_0005_delta_L03_plusmech_Frame_55
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 92
+      width: 81
+      height: 80
+    spriteID: 0c3e5f95d3ded5a43ae87724157df131
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 92}
+  - name: sd_0005_delta_L03_plusmech_Frame_56
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 180
+      width: 81
+      height: 80
+    spriteID: 9cda816a56dae55438f7c02c3451b6d3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 180}
+  - name: sd_0005_delta_L03_plusmech_Frame_57
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1764
+      width: 80
+      height: 80
+    spriteID: 2a01f6efaa16c2545ab2581c42e2550e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1764}
+  - name: sd_0005_delta_L03_plusmech_Frame_58
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1852
+      width: 80
+      height: 80
+    spriteID: 282873dfcc27e89458f04f35d7e68722
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1852}
+  - name: sd_0005_delta_L03_plusmech_Frame_59
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 1940
+      width: 80
+      height: 80
+    spriteID: 702e705b90111b04381538b2ded991ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 1940}
+  - name: sd_0005_delta_L03_plusmech_Frame_60
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 4
+      width: 80
+      height: 80
+    spriteID: 630f05aa18337ce4982f529315a301e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 4}
+  - name: sd_0005_delta_L03_plusmech_Frame_61
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 92
+      width: 80
+      height: 80
+    spriteID: 803bd3385a075c744bf47c6770490539
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 92}
+  - name: sd_0005_delta_L03_plusmech_Frame_62
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 180
+      width: 80
+      height: 80
+    spriteID: 157a0a1560f5b6544a294708a5db5edf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 180}
+  - name: sd_0005_delta_L03_plusmech_Frame_63
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 268
+      width: 80
+      height: 80
+    spriteID: 4f250adb1dc8ca74ead3c311e956d6a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 268}
+  - name: sd_0005_delta_L03_plusmech_Frame_64
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 356
+      width: 80
+      height: 80
+    spriteID: a787ca5a4290ba0498f8e70453c6a8cc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 356}
+  - name: sd_0005_delta_L03_plusmech_Frame_65
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 444
+      width: 80
+      height: 80
+    spriteID: 735f2455d407c55438ca0668479edf17
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 444}
+  - name: sd_0005_delta_L03_plusmech_Frame_66
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 532
+      width: 80
+      height: 80
+    spriteID: 2f181949301989e4fbb9b09bdd17a38d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 532}
+  - name: sd_0005_delta_L03_plusmech_Frame_67
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 620
+      width: 80
+      height: 80
+    spriteID: 6d18d797f0ee11f4588958031d00eafc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 620}
+  - name: sd_0005_delta_L03_plusmech_Frame_68
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 708
+      width: 80
+      height: 80
+    spriteID: e7832c7c0fd501747a3870184cbd96f3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 708}
+  - name: sd_0005_delta_L03_plusmech_Frame_69
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 796
+      width: 80
+      height: 80
+    spriteID: 8973ff0460a0c9947a39e98b1c6e717f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 796}
+  - name: sd_0005_delta_L03_plusmech_Frame_70
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 884
+      width: 80
+      height: 80
+    spriteID: 445f0d48385ef284fbb33cef4e1c142d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 884}
+  - name: sd_0005_delta_L03_plusmech_Frame_71
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 972
+      width: 80
+      height: 80
+    spriteID: 4f80cf5b6753b8c41a47ce124a3ce653
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 972}
+  - name: sd_0005_delta_L03_plusmech_Frame_72
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1060
+      width: 80
+      height: 80
+    spriteID: 9f3500a35693ca3488dac15fcae45d32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1060}
+  - name: sd_0005_delta_L03_plusmech_Frame_73
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1148
+      width: 80
+      height: 80
+    spriteID: 7c5ce87c0f8e16442af6178a280daf8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1148}
+  - name: sd_0005_delta_L03_plusmech_Frame_74
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1236
+      width: 80
+      height: 80
+    spriteID: e12a6594d2df3cd4cbe833466ea51f7b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1236}
+  - name: sd_0005_delta_L03_plusmech_Frame_75
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1324
+      width: 80
+      height: 80
+    spriteID: a0673b6a45c29404ea82d4cb75c1ee32
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1324}
+  - name: sd_0005_delta_L03_plusmech_Frame_76
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1412
+      width: 80
+      height: 80
+    spriteID: 00b367f8d85eced45a534456a227f64f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1412}
+  - name: sd_0005_delta_L03_plusmech_Frame_77
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1500
+      width: 80
+      height: 80
+    spriteID: 96c0fd1c80e94fc4d9d6d83e432fd5fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1500}
+  - name: sd_0005_delta_L03_plusmech_Frame_78
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1588
+      width: 80
+      height: 80
+    spriteID: e7e9b31c93b3d64488530bffd4eca59f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1588}
+  - name: sd_0005_delta_L03_plusmech_Frame_79
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1676
+      width: 80
+      height: 80
+    spriteID: 54ac45e437f306b4e8d4bea4eab9cf73
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1676}
+  - name: sd_0005_delta_L03_plusmech_Frame_80
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1764
+      width: 80
+      height: 80
+    spriteID: cd77b1d42506e7a418e1950a21635a66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1764}
+  - name: sd_0005_delta_L03_plusmech_Frame_81
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1852
+      width: 80
+      height: 80
+    spriteID: b10240d0daad68940bc74292758caef7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1852}
+  - name: sd_0005_delta_L03_plusmech_Frame_82
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 269
+      y: 1940
+      width: 80
+      height: 80
+    spriteID: cf5efeea147704243acd5bb610b49f66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 269, y: 1940}
+  - name: sd_0005_delta_L03_plusmech_Frame_83
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 4
+      width: 80
+      height: 80
+    spriteID: ffb7f50eec6829f43975b566cea8fa91
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 4}
+  - name: sd_0005_delta_L03_plusmech_Frame_84
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 268
+      width: 81
+      height: 80
+    spriteID: 23efd6ea88fac104bbfa903cf2a327ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 268}
+  - name: sd_0005_delta_L03_plusmech_Frame_85
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 356
+      width: 81
+      height: 80
+    spriteID: 18a08ac937c70fd4b8697ca5ce46915c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 356}
+  - name: sd_0005_delta_L03_plusmech_Frame_86
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 444
+      width: 81
+      height: 80
+    spriteID: 09345d78246d5164bb5c4046b141f9d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 444}
+  - name: sd_0005_delta_L03_plusmech_Frame_87
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 92
+      width: 80
+      height: 80
+    spriteID: 898a7c96278009b4db53e964d0868f8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 92}
+  - name: sd_0005_delta_L03_plusmech_Frame_88
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 180
+      width: 80
+      height: 80
+    spriteID: 97193f53b1f3bbf4d9c898680cd30835
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 180}
+  - name: sd_0005_delta_L03_plusmech_Frame_89
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 268
+      width: 80
+      height: 80
+    spriteID: 11ed345036d3bea4381480e27443f1d0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 268}
+  - name: sd_0005_delta_L03_plusmech_Frame_90
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 356
+      width: 80
+      height: 80
+    spriteID: f08da18e0fb934443821e82008f4f8fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 356}
+  - name: sd_0005_delta_L03_plusmech_Frame_91
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 444
+      width: 80
+      height: 80
+    spriteID: 414b2d46c89ecc047a5f2f15ba06a780
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 444}
+  - name: sd_0005_delta_L03_plusmech_Frame_92
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 532
+      width: 80
+      height: 80
+    spriteID: 675b860c2a9fb32479d993faa2954546
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 532}
+  - name: sd_0005_delta_L03_plusmech_Frame_93
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 620
+      width: 80
+      height: 80
+    spriteID: 77b05de982a2bdf48ab870f2c70260fa
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 620}
+  - name: sd_0005_delta_L03_plusmech_Frame_94
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 708
+      width: 80
+      height: 80
+    spriteID: be7f2b366741004498383effbb05d8f2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 708}
+  - name: sd_0005_delta_L03_plusmech_Frame_95
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 796
+      width: 80
+      height: 80
+    spriteID: 309da70777b925b45ba647c3f73dc10a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 796}
+  - name: sd_0005_delta_L03_plusmech_Frame_96
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 884
+      width: 80
+      height: 80
+    spriteID: 98814b8510e228e4bb07f2af432ea5c6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 884}
+  - name: sd_0005_delta_L03_plusmech_Frame_97
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 972
+      width: 80
+      height: 80
+    spriteID: 193c131227056b641bb70a8973b0a12e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 972}
+  - name: sd_0005_delta_L03_plusmech_Frame_98
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1060
+      width: 80
+      height: 80
+    spriteID: 6fe65dfaf649eee4f9a83004f1f134be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1060}
+  - name: sd_0005_delta_L03_plusmech_Frame_99
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1148
+      width: 80
+      height: 80
+    spriteID: 6ef68534077263640b7e54a0db802510
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1148}
+  - name: sd_0005_delta_L03_plusmech_Frame_100
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1236
+      width: 80
+      height: 80
+    spriteID: 1e4013edc7be34a4790036c880239214
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1236}
+  - name: sd_0005_delta_L03_plusmech_Frame_101
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1324
+      width: 80
+      height: 80
+    spriteID: 2d730d2e90da46a42aa6e719906b0553
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1324}
+  - name: sd_0005_delta_L03_plusmech_Frame_102
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1412
+      width: 80
+      height: 80
+    spriteID: b6bfbacbe3dcfe54f89e7934f21907e1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1412}
+  - name: sd_0005_delta_L03_plusmech_Frame_103
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1500
+      width: 80
+      height: 80
+    spriteID: fcf4ce6da6bc78641a4e7ed8634ddb82
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1500}
+  - name: sd_0005_delta_L03_plusmech_Frame_104
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1588
+      width: 80
+      height: 80
+    spriteID: b065aa1b7cd3d5649b7bd086605dbde8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1588}
+  - name: sd_0005_delta_L03_plusmech_Frame_105
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1676
+      width: 80
+      height: 80
+    spriteID: 4c44d000f475b4848afb288a571952fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1676}
+  - name: sd_0005_delta_L03_plusmech_Frame_106
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1764
+      width: 80
+      height: 80
+    spriteID: e73d6ce29e789754c9ad53d96bd3e738
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1764}
+  - name: sd_0005_delta_L03_plusmech_Frame_107
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1852
+      width: 80
+      height: 80
+    spriteID: 9ba50fb5b78e7b04daab8903ac8c4a48
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1852}
+  - name: sd_0005_delta_L03_plusmech_Frame_108
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 357
+      y: 1940
+      width: 80
+      height: 80
+    spriteID: c761eb5e7609af344b64f4016bdbd681
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 357, y: 1940}
+  - name: sd_0005_delta_L03_plusmech_Frame_109
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 4
+      width: 80
+      height: 80
+    spriteID: 756ecbe534130054d9976b7fe5ec4170
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 4}
+  - name: sd_0005_delta_L03_plusmech_Frame_110
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 92
+      width: 80
+      height: 80
+    spriteID: 9e67e725031b318429d21758a08bc90a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 92}
+  - name: sd_0005_delta_L03_plusmech_Frame_111
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 180
+      width: 80
+      height: 80
+    spriteID: ed998cd15c2013546bdb737bd68e9a75
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 180}
+  - name: sd_0005_delta_L03_plusmech_Frame_112
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 268
+      width: 80
+      height: 80
+    spriteID: 23dbf2d878f439446a6da7d6c063817a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 268}
+  - name: sd_0005_delta_L03_plusmech_Frame_113
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 356
+      width: 80
+      height: 80
+    spriteID: 2ef755da819d2ac45b50c61508d79876
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 356}
+  - name: sd_0005_delta_L03_plusmech_Frame_114
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 532
+      width: 81
+      height: 80
+    spriteID: 2f1ef70bc9934ab45badeae9cc3ee933
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 532}
+  - name: sd_0005_delta_L03_plusmech_Frame_115
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 620
+      width: 81
+      height: 80
+    spriteID: 6a86833cff9174249b0fff9cbe6de92b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 620}
+  - name: sd_0005_delta_L03_plusmech_Frame_116
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 708
+      width: 81
+      height: 80
+    spriteID: 902c1379e74b1f746ba8535095cf3402
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 708}
+  - name: sd_0005_delta_L03_plusmech_Frame_117
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 444
+      width: 80
+      height: 80
+    spriteID: 63273e1f9360ce946ad9f5f8bde45b4a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 444}
+  - name: sd_0005_delta_L03_plusmech_Frame_118
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 532
+      width: 80
+      height: 80
+    spriteID: 2469bff0aeaa9674fbacae779f7fc40a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 532}
+  - name: sd_0005_delta_L03_plusmech_Frame_119
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 620
+      width: 80
+      height: 80
+    spriteID: a33a390cae4767e4b987e64693310c5a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 620}
+  - name: sd_0005_delta_L03_plusmech_Frame_120
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 708
+      width: 80
+      height: 80
+    spriteID: 47f14cd082cdfe24c8644e2c2ee5a145
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 708}
+  - name: sd_0005_delta_L03_plusmech_Frame_121
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 796
+      width: 80
+      height: 80
+    spriteID: 4efe346c6568418458f6bd5c67203589
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 796}
+  - name: sd_0005_delta_L03_plusmech_Frame_122
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 884
+      width: 80
+      height: 80
+    spriteID: af8e5798710f03543b4833cc3fb4be70
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 884}
+  - name: sd_0005_delta_L03_plusmech_Frame_123
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 972
+      width: 80
+      height: 80
+    spriteID: 9321af96f4f922d42b12b1a56173bfbd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 972}
+  - name: sd_0005_delta_L03_plusmech_Frame_124
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1060
+      width: 80
+      height: 80
+    spriteID: 8ff2ffbc6fb7c0a4db04d28341d24a8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1060}
+  - name: sd_0005_delta_L03_plusmech_Frame_125
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1148
+      width: 80
+      height: 80
+    spriteID: 096a06af507cbb1408bf6450a93f08c4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1148}
+  - name: sd_0005_delta_L03_plusmech_Frame_126
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1236
+      width: 80
+      height: 80
+    spriteID: 8a2f285ab8bab0249acc301bceaedfb8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1236}
+  - name: sd_0005_delta_L03_plusmech_Frame_127
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1324
+      width: 80
+      height: 80
+    spriteID: c4e414ae070a9be448249e3e1d8721e4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1324}
+  - name: sd_0005_delta_L03_plusmech_Frame_128
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1412
+      width: 80
+      height: 80
+    spriteID: 8da49c9359a2edc4d98f11a6041f4355
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1412}
+  - name: sd_0005_delta_L03_plusmech_Frame_129
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1500
+      width: 80
+      height: 80
+    spriteID: e6b23ba794c2bae4ca7af21a78b77868
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1500}
+  - name: sd_0005_delta_L03_plusmech_Frame_130
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1588
+      width: 80
+      height: 80
+    spriteID: 69c4a5bd4990cd9438e98e3ed5025aba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1588}
+  - name: sd_0005_delta_L03_plusmech_Frame_131
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1676
+      width: 80
+      height: 80
+    spriteID: 77a8eb04810a5ee4596503f3c1e75ca6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1676}
+  - name: sd_0005_delta_L03_plusmech_Frame_132
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1764
+      width: 80
+      height: 80
+    spriteID: 58c633ba5cf09704abe4bf7bcc4abcd9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1764}
+  - name: sd_0005_delta_L03_plusmech_Frame_133
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1852
+      width: 80
+      height: 80
+    spriteID: 6b3968e816886ae44b5d965038be5702
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1852}
+  - name: sd_0005_delta_L03_plusmech_Frame_134
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 445
+      y: 1940
+      width: 80
+      height: 80
+    spriteID: 96e47c1db9084c54dbd6bfce469bb18a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 445, y: 1940}
+  - name: sd_0005_delta_L03_plusmech_Frame_135
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 4
+      width: 80
+      height: 80
+    spriteID: 4bc5892c85ee9da499a37c6b470aad16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 4}
+  - name: sd_0005_delta_L03_plusmech_Frame_136
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 92
+      width: 80
+      height: 80
+    spriteID: 1399ab351f9c76949ac4fd3cd70b9afe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 92}
+  - name: sd_0005_delta_L03_plusmech_Frame_137
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 180
+      width: 80
+      height: 80
+    spriteID: d33ffbc55455fdd4d87431b910b8e0ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 180}
+  - name: sd_0005_delta_L03_plusmech_Frame_138
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 268
+      width: 80
+      height: 80
+    spriteID: 2adcc7cec3cef4146a946535a587cc47
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 268}
+  - name: sd_0005_delta_L03_plusmech_Frame_139
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 356
+      width: 80
+      height: 80
+    spriteID: cd7e239ab7da38d4c88177f5e7ecee66
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 356}
+  - name: sd_0005_delta_L03_plusmech_Frame_140
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 444
+      width: 80
+      height: 80
+    spriteID: 72340675d6d7ae2459213eb433f8c250
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 444}
+  - name: sd_0005_delta_L03_plusmech_Frame_141
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 532
+      width: 80
+      height: 80
+    spriteID: 6d78b6e321b43e14b895271e6439d925
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 532}
+  - name: sd_0005_delta_L03_plusmech_Frame_142
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 620
+      width: 80
+      height: 80
+    spriteID: faff97ead69cc194c8c630d088bddb42
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 620}
+  - name: sd_0005_delta_L03_plusmech_Frame_143
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 708
+      width: 80
+      height: 80
+    spriteID: 8b9a043033c59f04988eb1fa99f3ba96
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 708}
+  - name: sd_0005_delta_L03_plusmech_Frame_144
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 796
+      width: 81
+      height: 80
+    spriteID: 00689bebc050bf74c9261f2937003644
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 796}
+  - name: sd_0005_delta_L03_plusmech_Frame_145
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 884
+      width: 81
+      height: 80
+    spriteID: ad1dd44cfc465994985afd38a8441274
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 884}
+  - name: sd_0005_delta_L03_plusmech_Frame_146
+    originalName: 
+    pivot: {x: 0.50617284, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 972
+      width: 81
+      height: 80
+    spriteID: c5197913e2f015f4b9ffb0a708217730
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 972}
+  - name: sd_0005_delta_L03_plusmech_Frame_147
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 796
+      width: 80
+      height: 80
+    spriteID: 4585b8d4cb504ea449e3870ed5946501
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 796}
+  - name: sd_0005_delta_L03_plusmech_Frame_148
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 884
+      width: 80
+      height: 80
+    spriteID: c9c112099d0e5d347862de79b0a52f8a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 884}
+  - name: sd_0005_delta_L03_plusmech_Frame_149
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 972
+      width: 80
+      height: 80
+    spriteID: 13dfd4768bc499f489868b12a2f33a30
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 972}
+  - name: sd_0005_delta_L03_plusmech_Frame_150
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1060
+      width: 80
+      height: 80
+    spriteID: d1e873b58f2e9f64aaf102d523a89bac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1060}
+  - name: sd_0005_delta_L03_plusmech_Frame_151
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1148
+      width: 80
+      height: 80
+    spriteID: 8c0befca1fcc78347be97a42a30c1f88
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1148}
+  - name: sd_0005_delta_L03_plusmech_Frame_152
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1236
+      width: 80
+      height: 80
+    spriteID: 477bf6ad256928344b0e7bb6a60afb81
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1236}
+  - name: sd_0005_delta_L03_plusmech_Frame_153
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1324
+      width: 80
+      height: 80
+    spriteID: df742b0868fb7f244836869b81c583d9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1324}
+  - name: sd_0005_delta_L03_plusmech_Frame_154
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1412
+      width: 80
+      height: 80
+    spriteID: 02b59680a7c5ef24db3544c5b7b0a27d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1412}
+  - name: sd_0005_delta_L03_plusmech_Frame_155
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1500
+      width: 80
+      height: 80
+    spriteID: 51834a1570298a243acfcc26bffdf501
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1500}
+  - name: sd_0005_delta_L03_plusmech_Frame_156
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1588
+      width: 80
+      height: 80
+    spriteID: 3cfbaa5c96787854a8ec4d3b7d05378d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1588}
+  - name: sd_0005_delta_L03_plusmech_Frame_157
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1676
+      width: 80
+      height: 80
+    spriteID: 2e9bbff029fd7f24a91381a0486a13bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1676}
+  - name: sd_0005_delta_L03_plusmech_Frame_158
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1764
+      width: 80
+      height: 80
+    spriteID: 8d1ca398cab7a1849b6a56d9f8edd8bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1764}
+  - name: sd_0005_delta_L03_plusmech_Frame_159
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1852
+      width: 80
+      height: 80
+    spriteID: 4bbc082668df2af4a9ef395f827fe1b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1852}
+  - name: sd_0005_delta_L03_plusmech_Frame_160
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 533
+      y: 1940
+      width: 80
+      height: 80
+    spriteID: 77a64b677e313344b8325ef95b2c8cf5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 533, y: 1940}
+  - name: sd_0005_delta_L03_plusmech_Frame_161
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 4
+      width: 80
+      height: 80
+    spriteID: 5d9af03666b87fc4b981755b6b871d65
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 4}
+  - name: sd_0005_delta_L03_plusmech_Frame_162
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 92
+      width: 80
+      height: 80
+    spriteID: 4262a26dec2908540ab609ccbd11de0d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 92}
+  - name: sd_0005_delta_L03_plusmech_Frame_163
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 180
+      width: 80
+      height: 80
+    spriteID: 8564e92fbcad96e418f4b157ebee05d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 180}
+  - name: sd_0005_delta_L03_plusmech_Frame_164
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 268
+      width: 80
+      height: 80
+    spriteID: d8734ba7a62bad046ace2c410c8c8a3e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 268}
+  - name: sd_0005_delta_L03_plusmech_Frame_165
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 356
+      width: 80
+      height: 80
+    spriteID: 264fc5656b4bb214c892fd77e725c6eb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 356}
+  - name: sd_0005_delta_L03_plusmech_Frame_155
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 444
+      width: 80
+      height: 80
+    spriteID: 9d012f1f236c9d84a88e9e294bdf3573
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 444}
+  - name: sd_0005_delta_L03_plusmech_Frame_156
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 532
+      width: 80
+      height: 80
+    spriteID: d6667b17522a5d745860d2b8f71b0546
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 532}
+  - name: sd_0005_delta_L03_plusmech_Frame_157
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 620
+      width: 80
+      height: 80
+    spriteID: 7922256d169f62442bd98a15a7294914
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 620}
+  - name: sd_0005_delta_L03_plusmech_Frame_158
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 708
+      width: 80
+      height: 80
+    spriteID: 16e2cec246e33204d9b6c95eeb1b089c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 708}
+  - name: sd_0005_delta_L03_plusmech_Frame_35
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 796
+      width: 80
+      height: 80
+    spriteID: 5b9fb29664258dd40b66d9a5eba99df2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 796}
+  - name: sd_0005_delta_L03_plusmech_Frame_40
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 884
+      width: 80
+      height: 80
+    spriteID: 290e65cedf488d246bfed1fd75c2a1a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 884}
+  - name: sd_0005_delta_L03_plusmech_Frame_57
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 972
+      width: 80
+      height: 80
+    spriteID: c3613ddddf828e0428d27e94d05bb135
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 972}
+  - name: sd_0005_delta_L03_plusmech_Frame_65
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1060
+      width: 80
+      height: 80
+    spriteID: d8f9d3db78904d44386f5fdfc4caf959
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1060}
+  - name: sd_0005_delta_L03_plusmech_Frame_70
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1148
+      width: 80
+      height: 80
+    spriteID: f18454d78c7fd5d4d952ca139ae06b24
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1148}
+  - name: sd_0005_delta_L03_plusmech_Frame_87
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1236
+      width: 80
+      height: 80
+    spriteID: c8123cfad9254364e8fe909ef4708b25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1236}
+  - name: sd_0005_delta_L03_plusmech_Frame_95
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1324
+      width: 80
+      height: 80
+    spriteID: 6711ffc2420f19b4d9a05fa842851ed5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1324}
+  - name: sd_0005_delta_L03_plusmech_Frame_100
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1412
+      width: 80
+      height: 80
+    spriteID: 418d5588052f23e4b8f83cccb3140964
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1412}
+  - name: sd_0005_delta_L03_plusmech_Frame_117
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1500
+      width: 80
+      height: 80
+    spriteID: 774f71ab25154e14dbb080636b75e998
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1500}
+  - name: sd_0005_delta_L03_plusmech_Frame_125
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1588
+      width: 80
+      height: 80
+    spriteID: 2a5ccb4792d53884f8b6069cba2e683b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1588}
+  - name: sd_0005_delta_L03_plusmech_Frame_130
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1676
+      width: 80
+      height: 80
+    spriteID: ff0740d6f6adb0f4488a010a42db4b1b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1676}
+  - name: sd_0005_delta_L03_plusmech_Frame_147
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1764
+      width: 80
+      height: 80
+    spriteID: d7b3d7f3cecafb740b4f5ade690b3873
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1764}
+  - name: sd_0005_delta_L03_plusmech_Frame_153
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1852
+      width: 80
+      height: 80
+    spriteID: 80d46fbff044dfb4c944c469f8570c33
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1852}
+  - name: sd_0005_delta_L03_plusmech_Frame_154
+    originalName: 
+    pivot: {x: 0.5, y: 0}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 621
+      y: 1940
+      width: 80
+      height: 80
+    spriteID: 900836c9ca894094091a6e6e6165cd4f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 621, y: 1940}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1838135370
+    name: sd_0005_delta_L03_plusmech
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: sd_0005_delta_L03_plusmech_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 1fce80f48870a1948aea9db6eb27debe
+    - name: sd_0005_delta_L03_plusmech_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6fa271b86adbd714fb88741dada74249
+    - name: sd_0005_delta_L03_plusmech_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4a1d614ffd28bd648b54d2290dadfe0a
+    - name: sd_0005_delta_L03_plusmech_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: e67184c07cadf2d4889ce9a3ba8d1258
+    - name: sd_0005_delta_L03_plusmech_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 619d97e13a1fdf643b0b9a26ba34c4b4
+    - name: sd_0005_delta_L03_plusmech_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 0584c50ccbc4acf4498b901d052e023d
+    - name: sd_0005_delta_L03_plusmech_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 1e5fb184964b7494cb3cc12033d7bba8
+    - name: sd_0005_delta_L03_plusmech_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: c61faae7507f2d341825460a7b304c13
+    - name: sd_0005_delta_L03_plusmech_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: ce39e94d2c49fb54da9d27923d5ad337
+    - name: sd_0005_delta_L03_plusmech_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 3e308cdc8dfad3e47bcd43c4b65ab290
+    - name: sd_0005_delta_L03_plusmech_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 46f95b420c2e5c147bd9d81fe8c244a0
+    - name: sd_0005_delta_L03_plusmech_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 70a41b6d0f1e9f14eae1c108c21a4db4
+    - name: sd_0005_delta_L03_plusmech_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8eca71f1de114664fb7c9c5c6069829e
+    - name: sd_0005_delta_L03_plusmech_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: c40ebe65f0ae07d439b344499eccce97
+    - name: sd_0005_delta_L03_plusmech_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: baeec5e2c52acad418152c0c3dc9ec00
+    - name: sd_0005_delta_L03_plusmech_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 444bd77cf632ac44b91a2762efeba955
+    - name: sd_0005_delta_L03_plusmech_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6f7889c0838f57243b56b2817401c334
+    - name: sd_0005_delta_L03_plusmech_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: aabc5a82615f1214c97ea7e71a3d0a12
+    - name: sd_0005_delta_L03_plusmech_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 0b0e8c37d3c62a84ab7fbb72609467dd
+    - name: sd_0005_delta_L03_plusmech_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: c0aeb0a1dcb3f44429f06184f844abbc
+    - name: sd_0005_delta_L03_plusmech_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 87b8cb2176045104f94cab35629926b7
+    - name: sd_0005_delta_L03_plusmech_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 979e4e14bbb49c647a485ba9385df825
+    - name: sd_0005_delta_L03_plusmech_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 5c072861d2079544daddccc0e0b706fd
+    - name: sd_0005_delta_L03_plusmech_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 3cf191a9ec752484e952cbf16807a27e
+    - name: sd_0005_delta_L03_plusmech_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: ce9ef79cba55f394dbc70c1f7d3ab608
+    - name: sd_0005_delta_L03_plusmech_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6d52c04eb3f81674e962623cb2baf3f2
+    - name: sd_0005_delta_L03_plusmech_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: ae06960bebbfbea498b312c9f216015c
+    - name: sd_0005_delta_L03_plusmech_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 0ab386b812e8ec64da6bb9a1fcca46fe
+    - name: sd_0005_delta_L03_plusmech_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8bbe3211f7a0ce641908e613b8d0db63
+    - name: sd_0005_delta_L03_plusmech_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: e4d305136fcca2b49b6dece50c687917
+    - name: sd_0005_delta_L03_plusmech_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 14dca7c1ca6645548803fabd3e91281a
+    - name: sd_0005_delta_L03_plusmech_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 827686651e2e653449533d122e70c929
+    - name: sd_0005_delta_L03_plusmech_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: fcbcde58156e964449cac51341ebd063
+    - name: sd_0005_delta_L03_plusmech_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 71f232e66fd933445ac6c895c32868ba
+    - name: sd_0005_delta_L03_plusmech_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 33642320b660e164f9ed8f189451bc3d
+    - name: sd_0005_delta_L03_plusmech_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 838c9fe540682b24ba440443bb2e782b
+    - name: sd_0005_delta_L03_plusmech_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4faf98222d76074478e6f40155b9f4a7
+    - name: sd_0005_delta_L03_plusmech_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 1c175079168b6cf448154ecf70739c00
+    - name: sd_0005_delta_L03_plusmech_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 3c4651a2896f2544392cbbb4496414f9
+    - name: sd_0005_delta_L03_plusmech_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 464c76ff0a4a926479c0333fcb7629f7
+    - name: sd_0005_delta_L03_plusmech_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: d3a26d625ffdf094ea92efe894a5499a
+    - name: sd_0005_delta_L03_plusmech_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 7da9553e2b73065469127b0ff7586487
+    - name: sd_0005_delta_L03_plusmech_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 169b56d5212b46b41be593316fbe3b9d
+    - name: sd_0005_delta_L03_plusmech_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 7312c9794f5f70440a78c966ca3aa89f
+    - name: sd_0005_delta_L03_plusmech_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6dc71cba0b4c7294f85ac37f1bb54f76
+    - name: sd_0005_delta_L03_plusmech_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 15a2756286a12054a914f7aa9eb866ea
+    - name: sd_0005_delta_L03_plusmech_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: f0d78f3624a82484a87d963f9d0fbcb4
+    - name: sd_0005_delta_L03_plusmech_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 108542a50d4298b48aa6e10c14fa0a32
+    - name: sd_0005_delta_L03_plusmech_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 3f636747e6a60e248b6e16f65dae81f6
+    - name: sd_0005_delta_L03_plusmech_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 70975e821218d714f8ec58bece25ba03
+    - name: sd_0005_delta_L03_plusmech_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 627a98493f6532f43a5ef38727e00a1b
+    - name: sd_0005_delta_L03_plusmech_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 583d22f643bff9849ae4c32fee394fc8
+    - name: sd_0005_delta_L03_plusmech_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: b1553d832aae16840b8f608eb94cc121
+    - name: sd_0005_delta_L03_plusmech_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 354f940804b06824198cc17473e976ed
+    - name: sd_0005_delta_L03_plusmech_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: eb73a56fdffe5ab4bb9cae8b320fff12
+    - name: sd_0005_delta_L03_plusmech_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: 0c3e5f95d3ded5a43ae87724157df131
+    - name: sd_0005_delta_L03_plusmech_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: 9cda816a56dae55438f7c02c3451b6d3
+    - name: sd_0005_delta_L03_plusmech_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 2a01f6efaa16c2545ab2581c42e2550e
+    - name: sd_0005_delta_L03_plusmech_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 282873dfcc27e89458f04f35d7e68722
+    - name: sd_0005_delta_L03_plusmech_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 702e705b90111b04381538b2ded991ef
+    - name: sd_0005_delta_L03_plusmech_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 630f05aa18337ce4982f529315a301e6
+    - name: sd_0005_delta_L03_plusmech_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 803bd3385a075c744bf47c6770490539
+    - name: sd_0005_delta_L03_plusmech_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 157a0a1560f5b6544a294708a5db5edf
+    - name: sd_0005_delta_L03_plusmech_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4f250adb1dc8ca74ead3c311e956d6a1
+    - name: sd_0005_delta_L03_plusmech_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: a787ca5a4290ba0498f8e70453c6a8cc
+    - name: sd_0005_delta_L03_plusmech_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 735f2455d407c55438ca0668479edf17
+    - name: sd_0005_delta_L03_plusmech_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 2f181949301989e4fbb9b09bdd17a38d
+    - name: sd_0005_delta_L03_plusmech_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6d18d797f0ee11f4588958031d00eafc
+    - name: sd_0005_delta_L03_plusmech_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: e7832c7c0fd501747a3870184cbd96f3
+    - name: sd_0005_delta_L03_plusmech_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8973ff0460a0c9947a39e98b1c6e717f
+    - name: sd_0005_delta_L03_plusmech_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 445f0d48385ef284fbb33cef4e1c142d
+    - name: sd_0005_delta_L03_plusmech_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4f80cf5b6753b8c41a47ce124a3ce653
+    - name: sd_0005_delta_L03_plusmech_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 9f3500a35693ca3488dac15fcae45d32
+    - name: sd_0005_delta_L03_plusmech_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 7c5ce87c0f8e16442af6178a280daf8d
+    - name: sd_0005_delta_L03_plusmech_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: e12a6594d2df3cd4cbe833466ea51f7b
+    - name: sd_0005_delta_L03_plusmech_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: a0673b6a45c29404ea82d4cb75c1ee32
+    - name: sd_0005_delta_L03_plusmech_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 00b367f8d85eced45a534456a227f64f
+    - name: sd_0005_delta_L03_plusmech_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 96c0fd1c80e94fc4d9d6d83e432fd5fa
+    - name: sd_0005_delta_L03_plusmech_Frame_78
+      frameIndex: 78
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: e7e9b31c93b3d64488530bffd4eca59f
+    - name: sd_0005_delta_L03_plusmech_Frame_79
+      frameIndex: 79
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 54ac45e437f306b4e8d4bea4eab9cf73
+    - name: sd_0005_delta_L03_plusmech_Frame_80
+      frameIndex: 80
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: cd77b1d42506e7a418e1950a21635a66
+    - name: sd_0005_delta_L03_plusmech_Frame_81
+      frameIndex: 81
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: b10240d0daad68940bc74292758caef7
+    - name: sd_0005_delta_L03_plusmech_Frame_82
+      frameIndex: 82
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: cf5efeea147704243acd5bb610b49f66
+    - name: sd_0005_delta_L03_plusmech_Frame_83
+      frameIndex: 83
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: ffb7f50eec6829f43975b566cea8fa91
+    - name: sd_0005_delta_L03_plusmech_Frame_84
+      frameIndex: 84
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: 23efd6ea88fac104bbfa903cf2a327ba
+    - name: sd_0005_delta_L03_plusmech_Frame_85
+      frameIndex: 85
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: 18a08ac937c70fd4b8697ca5ce46915c
+    - name: sd_0005_delta_L03_plusmech_Frame_86
+      frameIndex: 86
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: 09345d78246d5164bb5c4046b141f9d8
+    - name: sd_0005_delta_L03_plusmech_Frame_87
+      frameIndex: 87
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 898a7c96278009b4db53e964d0868f8c
+    - name: sd_0005_delta_L03_plusmech_Frame_88
+      frameIndex: 88
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 97193f53b1f3bbf4d9c898680cd30835
+    - name: sd_0005_delta_L03_plusmech_Frame_89
+      frameIndex: 89
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 11ed345036d3bea4381480e27443f1d0
+    - name: sd_0005_delta_L03_plusmech_Frame_90
+      frameIndex: 90
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: f08da18e0fb934443821e82008f4f8fb
+    - name: sd_0005_delta_L03_plusmech_Frame_91
+      frameIndex: 91
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 414b2d46c89ecc047a5f2f15ba06a780
+    - name: sd_0005_delta_L03_plusmech_Frame_92
+      frameIndex: 92
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 675b860c2a9fb32479d993faa2954546
+    - name: sd_0005_delta_L03_plusmech_Frame_93
+      frameIndex: 93
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 77b05de982a2bdf48ab870f2c70260fa
+    - name: sd_0005_delta_L03_plusmech_Frame_94
+      frameIndex: 94
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: be7f2b366741004498383effbb05d8f2
+    - name: sd_0005_delta_L03_plusmech_Frame_95
+      frameIndex: 95
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 309da70777b925b45ba647c3f73dc10a
+    - name: sd_0005_delta_L03_plusmech_Frame_96
+      frameIndex: 96
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 98814b8510e228e4bb07f2af432ea5c6
+    - name: sd_0005_delta_L03_plusmech_Frame_97
+      frameIndex: 97
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 193c131227056b641bb70a8973b0a12e
+    - name: sd_0005_delta_L03_plusmech_Frame_98
+      frameIndex: 98
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6fe65dfaf649eee4f9a83004f1f134be
+    - name: sd_0005_delta_L03_plusmech_Frame_99
+      frameIndex: 99
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6ef68534077263640b7e54a0db802510
+    - name: sd_0005_delta_L03_plusmech_Frame_100
+      frameIndex: 100
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 1e4013edc7be34a4790036c880239214
+    - name: sd_0005_delta_L03_plusmech_Frame_101
+      frameIndex: 101
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 2d730d2e90da46a42aa6e719906b0553
+    - name: sd_0005_delta_L03_plusmech_Frame_102
+      frameIndex: 102
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: b6bfbacbe3dcfe54f89e7934f21907e1
+    - name: sd_0005_delta_L03_plusmech_Frame_103
+      frameIndex: 103
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: fcf4ce6da6bc78641a4e7ed8634ddb82
+    - name: sd_0005_delta_L03_plusmech_Frame_104
+      frameIndex: 104
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: b065aa1b7cd3d5649b7bd086605dbde8
+    - name: sd_0005_delta_L03_plusmech_Frame_105
+      frameIndex: 105
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4c44d000f475b4848afb288a571952fb
+    - name: sd_0005_delta_L03_plusmech_Frame_106
+      frameIndex: 106
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: e73d6ce29e789754c9ad53d96bd3e738
+    - name: sd_0005_delta_L03_plusmech_Frame_107
+      frameIndex: 107
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 9ba50fb5b78e7b04daab8903ac8c4a48
+    - name: sd_0005_delta_L03_plusmech_Frame_108
+      frameIndex: 108
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: c761eb5e7609af344b64f4016bdbd681
+    - name: sd_0005_delta_L03_plusmech_Frame_109
+      frameIndex: 109
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 756ecbe534130054d9976b7fe5ec4170
+    - name: sd_0005_delta_L03_plusmech_Frame_110
+      frameIndex: 110
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 9e67e725031b318429d21758a08bc90a
+    - name: sd_0005_delta_L03_plusmech_Frame_111
+      frameIndex: 111
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: ed998cd15c2013546bdb737bd68e9a75
+    - name: sd_0005_delta_L03_plusmech_Frame_112
+      frameIndex: 112
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 23dbf2d878f439446a6da7d6c063817a
+    - name: sd_0005_delta_L03_plusmech_Frame_113
+      frameIndex: 113
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 2ef755da819d2ac45b50c61508d79876
+    - name: sd_0005_delta_L03_plusmech_Frame_114
+      frameIndex: 114
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: 2f1ef70bc9934ab45badeae9cc3ee933
+    - name: sd_0005_delta_L03_plusmech_Frame_115
+      frameIndex: 115
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: 6a86833cff9174249b0fff9cbe6de92b
+    - name: sd_0005_delta_L03_plusmech_Frame_116
+      frameIndex: 116
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: 902c1379e74b1f746ba8535095cf3402
+    - name: sd_0005_delta_L03_plusmech_Frame_117
+      frameIndex: 117
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 63273e1f9360ce946ad9f5f8bde45b4a
+    - name: sd_0005_delta_L03_plusmech_Frame_118
+      frameIndex: 118
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 2469bff0aeaa9674fbacae779f7fc40a
+    - name: sd_0005_delta_L03_plusmech_Frame_119
+      frameIndex: 119
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: a33a390cae4767e4b987e64693310c5a
+    - name: sd_0005_delta_L03_plusmech_Frame_120
+      frameIndex: 120
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 47f14cd082cdfe24c8644e2c2ee5a145
+    - name: sd_0005_delta_L03_plusmech_Frame_121
+      frameIndex: 121
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4efe346c6568418458f6bd5c67203589
+    - name: sd_0005_delta_L03_plusmech_Frame_122
+      frameIndex: 122
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: af8e5798710f03543b4833cc3fb4be70
+    - name: sd_0005_delta_L03_plusmech_Frame_123
+      frameIndex: 123
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 9321af96f4f922d42b12b1a56173bfbd
+    - name: sd_0005_delta_L03_plusmech_Frame_124
+      frameIndex: 124
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8ff2ffbc6fb7c0a4db04d28341d24a8a
+    - name: sd_0005_delta_L03_plusmech_Frame_125
+      frameIndex: 125
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 096a06af507cbb1408bf6450a93f08c4
+    - name: sd_0005_delta_L03_plusmech_Frame_126
+      frameIndex: 126
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8a2f285ab8bab0249acc301bceaedfb8
+    - name: sd_0005_delta_L03_plusmech_Frame_127
+      frameIndex: 127
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: c4e414ae070a9be448249e3e1d8721e4
+    - name: sd_0005_delta_L03_plusmech_Frame_128
+      frameIndex: 128
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8da49c9359a2edc4d98f11a6041f4355
+    - name: sd_0005_delta_L03_plusmech_Frame_129
+      frameIndex: 129
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: e6b23ba794c2bae4ca7af21a78b77868
+    - name: sd_0005_delta_L03_plusmech_Frame_130
+      frameIndex: 130
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 69c4a5bd4990cd9438e98e3ed5025aba
+    - name: sd_0005_delta_L03_plusmech_Frame_131
+      frameIndex: 131
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 77a8eb04810a5ee4596503f3c1e75ca6
+    - name: sd_0005_delta_L03_plusmech_Frame_132
+      frameIndex: 132
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 58c633ba5cf09704abe4bf7bcc4abcd9
+    - name: sd_0005_delta_L03_plusmech_Frame_133
+      frameIndex: 133
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6b3968e816886ae44b5d965038be5702
+    - name: sd_0005_delta_L03_plusmech_Frame_134
+      frameIndex: 134
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 96e47c1db9084c54dbd6bfce469bb18a
+    - name: sd_0005_delta_L03_plusmech_Frame_135
+      frameIndex: 135
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4bc5892c85ee9da499a37c6b470aad16
+    - name: sd_0005_delta_L03_plusmech_Frame_136
+      frameIndex: 136
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 1399ab351f9c76949ac4fd3cd70b9afe
+    - name: sd_0005_delta_L03_plusmech_Frame_137
+      frameIndex: 137
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: d33ffbc55455fdd4d87431b910b8e0ba
+    - name: sd_0005_delta_L03_plusmech_Frame_138
+      frameIndex: 138
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 2adcc7cec3cef4146a946535a587cc47
+    - name: sd_0005_delta_L03_plusmech_Frame_139
+      frameIndex: 139
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: cd7e239ab7da38d4c88177f5e7ecee66
+    - name: sd_0005_delta_L03_plusmech_Frame_140
+      frameIndex: 140
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 72340675d6d7ae2459213eb433f8c250
+    - name: sd_0005_delta_L03_plusmech_Frame_141
+      frameIndex: 141
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6d78b6e321b43e14b895271e6439d925
+    - name: sd_0005_delta_L03_plusmech_Frame_142
+      frameIndex: 142
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: faff97ead69cc194c8c630d088bddb42
+    - name: sd_0005_delta_L03_plusmech_Frame_143
+      frameIndex: 143
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8b9a043033c59f04988eb1fa99f3ba96
+    - name: sd_0005_delta_L03_plusmech_Frame_144
+      frameIndex: 144
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: 00689bebc050bf74c9261f2937003644
+    - name: sd_0005_delta_L03_plusmech_Frame_145
+      frameIndex: 145
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: ad1dd44cfc465994985afd38a8441274
+    - name: sd_0005_delta_L03_plusmech_Frame_146
+      frameIndex: 146
+      cellRect:
+        x: -1
+        y: 0
+        width: 81
+        height: 80
+      spriteId: c5197913e2f015f4b9ffb0a708217730
+    - name: sd_0005_delta_L03_plusmech_Frame_147
+      frameIndex: 147
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4585b8d4cb504ea449e3870ed5946501
+    - name: sd_0005_delta_L03_plusmech_Frame_148
+      frameIndex: 148
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: c9c112099d0e5d347862de79b0a52f8a
+    - name: sd_0005_delta_L03_plusmech_Frame_149
+      frameIndex: 149
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 13dfd4768bc499f489868b12a2f33a30
+    - name: sd_0005_delta_L03_plusmech_Frame_150
+      frameIndex: 150
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: d1e873b58f2e9f64aaf102d523a89bac
+    - name: sd_0005_delta_L03_plusmech_Frame_151
+      frameIndex: 151
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8c0befca1fcc78347be97a42a30c1f88
+    - name: sd_0005_delta_L03_plusmech_Frame_152
+      frameIndex: 152
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 477bf6ad256928344b0e7bb6a60afb81
+    - name: sd_0005_delta_L03_plusmech_Frame_153
+      frameIndex: 153
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: df742b0868fb7f244836869b81c583d9
+    - name: sd_0005_delta_L03_plusmech_Frame_154
+      frameIndex: 154
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 02b59680a7c5ef24db3544c5b7b0a27d
+    - name: sd_0005_delta_L03_plusmech_Frame_155
+      frameIndex: 155
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 51834a1570298a243acfcc26bffdf501
+    - name: sd_0005_delta_L03_plusmech_Frame_156
+      frameIndex: 156
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 3cfbaa5c96787854a8ec4d3b7d05378d
+    - name: sd_0005_delta_L03_plusmech_Frame_157
+      frameIndex: 157
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 2e9bbff029fd7f24a91381a0486a13bd
+    - name: sd_0005_delta_L03_plusmech_Frame_158
+      frameIndex: 158
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8d1ca398cab7a1849b6a56d9f8edd8bc
+    - name: sd_0005_delta_L03_plusmech_Frame_159
+      frameIndex: 159
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4bbc082668df2af4a9ef395f827fe1b1
+    - name: sd_0005_delta_L03_plusmech_Frame_160
+      frameIndex: 160
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 77a64b677e313344b8325ef95b2c8cf5
+    - name: sd_0005_delta_L03_plusmech_Frame_161
+      frameIndex: 161
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 5d9af03666b87fc4b981755b6b871d65
+    - name: sd_0005_delta_L03_plusmech_Frame_162
+      frameIndex: 162
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 4262a26dec2908540ab609ccbd11de0d
+    - name: sd_0005_delta_L03_plusmech_Frame_163
+      frameIndex: 163
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 8564e92fbcad96e418f4b157ebee05d4
+    - name: sd_0005_delta_L03_plusmech_Frame_164
+      frameIndex: 164
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: d8734ba7a62bad046ace2c410c8c8a3e
+    - name: sd_0005_delta_L03_plusmech_Frame_165
+      frameIndex: 165
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 264fc5656b4bb214c892fd77e725c6eb
+    - name: sd_0005_delta_L03_plusmech_Frame_166
+      frameIndex: 166
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 9d012f1f236c9d84a88e9e294bdf3573
+    - name: sd_0005_delta_L03_plusmech_Frame_167
+      frameIndex: 167
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: d6667b17522a5d745860d2b8f71b0546
+    - name: sd_0005_delta_L03_plusmech_Frame_168
+      frameIndex: 168
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 7922256d169f62442bd98a15a7294914
+    - name: sd_0005_delta_L03_plusmech_Frame_169
+      frameIndex: 169
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 16e2cec246e33204d9b6c95eeb1b089c
+    - name: sd_0005_delta_L03_plusmech_Frame_170
+      frameIndex: 170
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 5b9fb29664258dd40b66d9a5eba99df2
+    - name: sd_0005_delta_L03_plusmech_Frame_171
+      frameIndex: 171
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 290e65cedf488d246bfed1fd75c2a1a5
+    - name: sd_0005_delta_L03_plusmech_Frame_172
+      frameIndex: 172
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: c3613ddddf828e0428d27e94d05bb135
+    - name: sd_0005_delta_L03_plusmech_Frame_173
+      frameIndex: 173
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: d8f9d3db78904d44386f5fdfc4caf959
+    - name: sd_0005_delta_L03_plusmech_Frame_174
+      frameIndex: 174
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: f18454d78c7fd5d4d952ca139ae06b24
+    - name: sd_0005_delta_L03_plusmech_Frame_175
+      frameIndex: 175
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: c8123cfad9254364e8fe909ef4708b25
+    - name: sd_0005_delta_L03_plusmech_Frame_176
+      frameIndex: 176
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 6711ffc2420f19b4d9a05fa842851ed5
+    - name: sd_0005_delta_L03_plusmech_Frame_177
+      frameIndex: 177
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 418d5588052f23e4b8f83cccb3140964
+    - name: sd_0005_delta_L03_plusmech_Frame_178
+      frameIndex: 178
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 774f71ab25154e14dbb080636b75e998
+    - name: sd_0005_delta_L03_plusmech_Frame_179
+      frameIndex: 179
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 2a5ccb4792d53884f8b6069cba2e683b
+    - name: sd_0005_delta_L03_plusmech_Frame_180
+      frameIndex: 180
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: ff0740d6f6adb0f4488a010a42db4b1b
+    - name: sd_0005_delta_L03_plusmech_Frame_181
+      frameIndex: 181
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: d7b3d7f3cecafb740b4f5ade690b3873
+    - name: sd_0005_delta_L03_plusmech_Frame_182
+      frameIndex: 182
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 80d46fbff044dfb4c944c469f8570c33
+    - name: sd_0005_delta_L03_plusmech_Frame_183
+      frameIndex: 183
+      cellRect:
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      spriteId: 900836c9ca894094091a6e6e6165cd4f
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 80, y: 80}

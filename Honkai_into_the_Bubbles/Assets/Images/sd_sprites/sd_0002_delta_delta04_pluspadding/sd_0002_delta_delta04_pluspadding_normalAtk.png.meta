@@ -1,0 +1,3823 @@
+fileFormatVersion: 2
+guid: 3e565e58a84cd844890263fe36926728
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37bdbc82b7ef50f44935a1e296fea9f1
+      internalID: 1680639969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_1
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09659e02ab6953a42aa7567b76e8d6a7
+      internalID: -133372889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_2
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3d814b9b3b139a458428da52ba65142
+      internalID: -1409186033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abde936685b6d6344a454ce456279aec
+      internalID: -538894165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_4
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f180eae26fbf6ff409c64ceb6f1b95e2
+      internalID: -2093264501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_5
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 266953431483a3542b677182ef4b606f
+      internalID: -2070857833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_6
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e5d9ad4878daf49b8a97fdf6a5cfdf
+      internalID: -1808858327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_7
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a95894c076983a443be484ec883baaa3
+      internalID: 307075218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_8
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98dadf5a970ca6a4b8bf78e4d2e80bd5
+      internalID: 1393237382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_9
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666bd12427537f842b4e93d1b838e3f2
+      internalID: -842954227
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_10
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca950bb2d1f94fb4ab329d9176fa0654
+      internalID: -457823540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_11
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93d152e13bd5e3438c9306349d3849e
+      internalID: 1700216581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_12
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ea1a9645695754fbcbd3d707121998
+      internalID: 1839612824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_13
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b691e4c064f7d49b5c62ccf77dc8b9
+      internalID: -1009606656
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_14
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c636404437b4f24d9b24d329a78b725
+      internalID: 134588556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_15
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b4584636161ca4aae96e93abc28cf8
+      internalID: 1668744602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_16
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97edcfc6e1e2ec1439c69b7acce64949
+      internalID: -701136464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_17
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e833aea0a137ea42bc39ef91a028855
+      internalID: -1467219819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_18
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43091e233fe9d554d858c3c7aaad3e67
+      internalID: -902895228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_19
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb6ea687206d0a9418749ae6e939c7ac
+      internalID: -293482542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_20
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a3765f81b545de44977e95e1653ceab
+      internalID: 1331083728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_21
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aab1ad6e7c340874488e1f4619f61b83
+      internalID: -646896144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_22
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7207f279ce84574a80e3f395766f513
+      internalID: 1237528864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_23
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3776143f012f7c46b47ef251bd8b510
+      internalID: 808954614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_24
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ecc7e3bb5f7f88418807e21bc2889f0
+      internalID: 441850882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_25
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bce4416db9afdbb4b950bf921203e44a
+      internalID: -1509583118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_26
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2756b86d32000774fbc554ea9a2666b2
+      internalID: 239377995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_27
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 057da2900098dc74bb92f80388f3e446
+      internalID: 1636777831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_28
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44a57c85932d06f458f9533b99cfd412
+      internalID: 1986631781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_29
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fc83b64845666148a931f4a84f0f007
+      internalID: -848735689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_30
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ea9f77474bef549bbfb0bb8ab4af07
+      internalID: 1159237869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_31
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5e63b842305b4458edd69e38157cab
+      internalID: 1813274468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_32
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abdc439b48475f34aa9e1fd9bdb5731e
+      internalID: 785260575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_33
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbd0777c8890dbe45a60085e75c180c3
+      internalID: -190942838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_34
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e03d31122f964504d87129d9d55f61b8
+      internalID: -1680093576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_35
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbde6c5b685424a44ba6e79a7dba4db3
+      internalID: 1913197962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_36
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb1b9f1d39b8aa49825c8bd0a7d79b5
+      internalID: 1584983169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_37
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea2e39a4dfc3f0e4389d86fb610ebc26
+      internalID: -1398465494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_38
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec31c8e8103712748a733bcb72be4600
+      internalID: 506136416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_39
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a31140057cc867341910ef3015812ce0
+      internalID: -452599439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_40
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ba39cf7a4d6c054f9fed6eb541108e8
+      internalID: -2108476245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_41
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 240
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6127e0b65f06a145b26c04029b1a1a7
+      internalID: -225679921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_42
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6ec0faffcf229f4e980ab97c434438a
+      internalID: 746617785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_43
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89ebd678a2220684eb1422944078872c
+      internalID: -1410029632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_44
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcd5982aec249594383305374852218d
+      internalID: 2003351526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_45
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7640e313eee1aa4789ca11128a66ded
+      internalID: -717429399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_46
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7733e835b24bf2f49bbe363ca982dd9c
+      internalID: -948653601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_47
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 013e141a3516f174888c2f37c222b250
+      internalID: 388240975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_48
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20d1018cf474c014c987eb253c1a1790
+      internalID: 1995540650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_49
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dda401930ff2ea469f7c50c37694216
+      internalID: -1514099568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_50
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2759ba4dbd1d5541828c3651173917a
+      internalID: -1864933875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_51
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b074d80a428c14a8aa5e9777fbe3d2
+      internalID: 1152740870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_52
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea79aa88f6e34ec4da6210f64be0dfa3
+      internalID: 524566300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_53
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf0812a944b92464fa869ee9e8a53c4a
+      internalID: 492605022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_54
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bdd3a6d18dd4e004398774cd471b248f
+      internalID: -145823588
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_55
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06b8dfe7c38c98740925001deeff36e9
+      internalID: 587808354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_56
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52771d7d4ac294f44941de6330dca953
+      internalID: -187800430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_57
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c106abe1f8850f47b85c347ae5fd728
+      internalID: -1312366699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_58
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b20976e37353a34ea09ed240192e39b
+      internalID: 1722033821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_59
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8afc605c9aa7a5440ab79539fa4297b5
+      internalID: 1032536326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_60
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b5ca5199a3de9a458713fb0ad0ff00d
+      internalID: 1216360320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_61
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26804e804a9a33546be6ac17415324ee
+      internalID: -1237020764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_62
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d90417365f07ca42b6a8d2147c474ed
+      internalID: 1383367329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_63
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ee58220b6b4894bb63d8da40401295
+      internalID: 1946390639
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_64
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33824c0389d8bf2498d5573d0b85b836
+      internalID: -229301134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_65
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9d30121c4850b2439ab2ecc3fc338cb
+      internalID: 1955029870
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_66
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6109d21488f6b574ab2797357e9bc812
+      internalID: -114190541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_67
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15e571cbfc688e24e91a88b761dbc477
+      internalID: 1598388530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_68
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06af0084dceceb4e8dbc090a379c058
+      internalID: 1274053290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_69
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0719866ad51e30f47a396932f3d08c38
+      internalID: -598131351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_70
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f14caf151cc6c4ea0f0d67d394fee3
+      internalID: -910007790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_71
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb57a8cf1e9d1347a23988c9b4f5cfe
+      internalID: -195371433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_72
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8150be7063d273345a702de88c03d81e
+      internalID: -1371794241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_73
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46954ec281b6f2e45b1bc6233892e505
+      internalID: 1623549462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_74
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30815d92727e3034fb25335cc0653a10
+      internalID: 963705535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_75
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a00c4fb9d3f3ac9499e95dfa8699770f
+      internalID: -784167734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_76
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb1d6c054ad022849a904a81ab7a2311
+      internalID: -416824188
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_77
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1aa088a5116f13943a0b67e3b99a0401
+      internalID: 137248120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_78
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7082be5744351a41acf6b16f3d00165
+      internalID: 1367085033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_79
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2d8b01181f88b4d90887408b242133
+      internalID: -1623478520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_80
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bec3ab3248caa0e46866f3c5c7004f87
+      internalID: -956709079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_81
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24dfa4e8451f4984f873f50b0229cf7f
+      internalID: -1572735419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_82
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e34d36f03fcaeb41be46976638de809
+      internalID: -374235248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_83
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 160
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516dc4093c53dbf458dd8d163f97e5d2
+      internalID: 493387664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_84
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69205b7e4bd668f4eb79d4972400bf46
+      internalID: -749418322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_85
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a671fd077bdf3e4d90ed73b91d858a5
+      internalID: 2122710746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_86
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 60d28b17fa3f0c64393b6ac572eb0734
+      internalID: 408488769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_87
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 054c56bf750a39c4a859f199b7014800
+      internalID: 558489510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_88
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33dc8b26739533449b4c3d264ea9ce1c
+      internalID: -1254940127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_89
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 037bce797c5a6e34e8857f6074944d3d
+      internalID: -552572090
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_90
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c340f1fe20af773428acb681cbad88d5
+      internalID: -761127912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_91
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f689f0f6a570045bd9f17965a49ff5
+      internalID: -1892982531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_92
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72081c6e50f60d34f975f970942eb997
+      internalID: -577689236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_93
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8a0eff05cd50884b885c86b2b354741
+      internalID: -1835831292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_94
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66b9448e87b663e46bb3d430abe0d66a
+      internalID: 847352178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_95
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d8e57f260d0a5945adc9ebb8c3f8c76
+      internalID: -1639885486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_96
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 267f49c9977675a429c4174a6ee0fa95
+      internalID: -546105769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_97
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 186bec2e4632f8a47a4d82b0dd45638a
+      internalID: -1843376361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_98
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 792f74f92706709448b3939ec9510477
+      internalID: -126899055
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_99
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dbb8a01aee8d3814d8ed9077a4a6f540
+      internalID: -1638835580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_100
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72182474fa36e664fb107309b8f8a9a7
+      internalID: -2002705868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_101
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36077cb258186f4499fc43be0e0eb692
+      internalID: -487538745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_102
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d43bb384932334ba3cec78a7b1789f
+      internalID: -325196010
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_103
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641b180070ec859499db0437d65417f0
+      internalID: -1866337647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_104
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19b111ae513096e47a650f3ab753b398
+      internalID: -2079107912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_105
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2594499de4ab5194b9fffcde436b04e6
+      internalID: -860682761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_106
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13bd3378f32e06e4e810e1814eb52b76
+      internalID: -1904818016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_107
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9841190ce856df43b762c2bc71bd39f
+      internalID: 831825212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_108
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35adcdd3aaf71394fa0357321c779d06
+      internalID: 1961931167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_109
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830c9c188ceeada48a0e9a5e6cd091eb
+      internalID: -1017264162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_110
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67a6ce156cd014e448eb791557a1d60b
+      internalID: -44529191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_111
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8bcf9487fd5f3d489f6f3f7d86f2dde
+      internalID: 1921357131
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_112
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3380f125b94f8574cb48c0e82cb20909
+      internalID: -1547876382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_113
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ea2f2b2ba180dc4b892dc1d7d441f96
+      internalID: 587728149
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_114
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a424de7f717992640a35da2503a12410
+      internalID: 1411022221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_115
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf44d61dd08b1e4ca729e00a0ce02e7
+      internalID: 1841260720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_116
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a2c50d2935be1f45b1d3dbb02373663
+      internalID: 1341806301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_117
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47d82e9c3df79094388263cf20562a2c
+      internalID: 176045866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_118
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81866beaa8577ea489f21e865dff0685
+      internalID: 147691199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_119
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510d1df23cebccc4a9d917fec1110d8f
+      internalID: -1803449876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_120
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb67650e7632e6469a89dfa1ec816dd
+      internalID: -998972317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_121
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c96767e47024974cb8ecfe5ec20dab2
+      internalID: 259950247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_122
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1a56c4c250ad844198b90307398a8e2
+      internalID: -346268954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_123
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7557717f34d1d43b4b99f39be64601
+      internalID: 1445434758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_124
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b069a965c77f69742b591db366a73c73
+      internalID: 1324280903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_125
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 80
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eac5911a7488c1042b9742b176fa5388
+      internalID: -2084917436
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_126
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7175619bf7f6ede4d80882286999325d
+      internalID: 345717667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_127
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaf6203c6b806f4184ea7300153e691
+      internalID: 1130867671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_128
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a2381f7d56e97418524692f1b62c3c
+      internalID: 222964174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_129
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4aab7e5ee290584081d489e71c43665
+      internalID: -420805297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_130
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4468994070c11f14d8d5084212008587
+      internalID: -1693360589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_131
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 38664357ecb216746a48c5c8e7daaa26
+      internalID: -935391575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_132
+      rect:
+        serializedVersion: 2
+        x: 480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2a5a3b8ae02ab54088900d5d5bd5cca
+      internalID: 685598800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_133
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1b079b6e6a626d4887423785093b58c
+      internalID: 1509884916
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_134
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507d24b9e7e3b35409f3457e775e216b
+      internalID: -1917477200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_135
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0adb71be96891478feba9b93722d32
+      internalID: 467282689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_136
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 642719b1c0bb032439ffc5a6975d3d13
+      internalID: -1220516980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_137
+      rect:
+        serializedVersion: 2
+        x: 880
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 419897bdeae59574ca5bf86b5f92f95c
+      internalID: 1221118019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_138
+      rect:
+        serializedVersion: 2
+        x: 960
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dce79d45b2279d94b9e0243f77143655
+      internalID: -1782956358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_139
+      rect:
+        serializedVersion: 2
+        x: 1040
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f08ca4b754372f438daff41a991f44d
+      internalID: 1461796484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_140
+      rect:
+        serializedVersion: 2
+        x: 1120
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17a3515b4d7a4af40b9402dd57650eae
+      internalID: -1405870252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_141
+      rect:
+        serializedVersion: 2
+        x: 1200
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7392a4fde1dacca4c913b5cbc249856a
+      internalID: -403485115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_142
+      rect:
+        serializedVersion: 2
+        x: 1280
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5277f1919e566864e91ca81f5d55f3e7
+      internalID: 776145195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_143
+      rect:
+        serializedVersion: 2
+        x: 1360
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c66a4763b2e90e94ca7fff6d34ff6671
+      internalID: -1283123368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_144
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37d33d3c94e74a745a23f6723da6f985
+      internalID: 266294676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_145
+      rect:
+        serializedVersion: 2
+        x: 1520
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48f077a74ca15d743b8c67b9afbacd83
+      internalID: 999172445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_146
+      rect:
+        serializedVersion: 2
+        x: 1600
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cd9c1bbcf096fc4eb2cbbc9f337eeae
+      internalID: -974589230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_147
+      rect:
+        serializedVersion: 2
+        x: 1680
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ce2e3b2d95667a46b387c7cd664428a
+      internalID: -1464983093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_148
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c27dac67afe18de47a4fa54098522022
+      internalID: 700211100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_149
+      rect:
+        serializedVersion: 2
+        x: 1840
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ccbb8a8751485f46ad8abc9bf5c11e2
+      internalID: -849244100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_150
+      rect:
+        serializedVersion: 2
+        x: 1920
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d710ff0cec33c40b850a847ea1894f
+      internalID: -138283176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_151
+      rect:
+        serializedVersion: 2
+        x: 2000
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e7180d29fd9c3e45b1cfa52c6fde4db
+      internalID: -1502520047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_152
+      rect:
+        serializedVersion: 2
+        x: 2080
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18d929991a3725a4f834201a2bd35a1e
+      internalID: 1404077989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_153
+      rect:
+        serializedVersion: 2
+        x: 2160
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484fc76b29614904ba8a4eeb1ec98b41
+      internalID: 1599895520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_154
+      rect:
+        serializedVersion: 2
+        x: 2240
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02e1e27d8b7ab7c40b01206a82872398
+      internalID: -907375680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_155
+      rect:
+        serializedVersion: 2
+        x: 2320
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ac8aeb4b200c584dae5ece8bd116b1b
+      internalID: -1411837576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_156
+      rect:
+        serializedVersion: 2
+        x: 2400
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675da5ba20cc00845a3501bc7ea24015
+      internalID: -718349774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_157
+      rect:
+        serializedVersion: 2
+        x: 2480
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2de5fc65c594f48b9ce2f807ad6250
+      internalID: -145060471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_158
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5ead23c44133324aa509df7b7b61c31
+      internalID: 1339972481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_159
+      rect:
+        serializedVersion: 2
+        x: 2640
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b719ae4bac12a6145974dd77264336aa
+      internalID: 1164342774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_160
+      rect:
+        serializedVersion: 2
+        x: 2720
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a23643c887c54814bb95c73244a825a0
+      internalID: 1040324561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_161
+      rect:
+        serializedVersion: 2
+        x: 2800
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5eb84fab6d2284a43aca9ad83ddb6d0a
+      internalID: -1025739173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_162
+      rect:
+        serializedVersion: 2
+        x: 2880
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56446e2c0d60d774483f68990757936b
+      internalID: -2107952747
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_163
+      rect:
+        serializedVersion: 2
+        x: 2960
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeac184038956bf4aae46dc27196d0ff
+      internalID: 1138131084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_164
+      rect:
+        serializedVersion: 2
+        x: 3040
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d0dcd530932db8499c569dc62fea0c8
+      internalID: -698589893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_165
+      rect:
+        serializedVersion: 2
+        x: 3120
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9312f927e843c274e8430b13257be54a
+      internalID: -754474305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_166
+      rect:
+        serializedVersion: 2
+        x: 3200
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d950960c518d9a54c89a232aaddd0262
+      internalID: -161633302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0002_delta_delta04_pluspadding_normalAtk_167
+      rect:
+        serializedVersion: 2
+        x: 3280
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9adcc14e0bb7adb42a1fb74780a3008f
+      internalID: 1564085231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      sd_0002_delta_delta04_pluspadding_normalAtk_0: 1680639969
+      sd_0002_delta_delta04_pluspadding_normalAtk_1: -133372889
+      sd_0002_delta_delta04_pluspadding_normalAtk_10: -457823540
+      sd_0002_delta_delta04_pluspadding_normalAtk_100: -2002705868
+      sd_0002_delta_delta04_pluspadding_normalAtk_101: -487538745
+      sd_0002_delta_delta04_pluspadding_normalAtk_102: -325196010
+      sd_0002_delta_delta04_pluspadding_normalAtk_103: -1866337647
+      sd_0002_delta_delta04_pluspadding_normalAtk_104: -2079107912
+      sd_0002_delta_delta04_pluspadding_normalAtk_105: -860682761
+      sd_0002_delta_delta04_pluspadding_normalAtk_106: -1904818016
+      sd_0002_delta_delta04_pluspadding_normalAtk_107: 831825212
+      sd_0002_delta_delta04_pluspadding_normalAtk_108: 1961931167
+      sd_0002_delta_delta04_pluspadding_normalAtk_109: -1017264162
+      sd_0002_delta_delta04_pluspadding_normalAtk_11: 1700216581
+      sd_0002_delta_delta04_pluspadding_normalAtk_110: -44529191
+      sd_0002_delta_delta04_pluspadding_normalAtk_111: 1921357131
+      sd_0002_delta_delta04_pluspadding_normalAtk_112: -1547876382
+      sd_0002_delta_delta04_pluspadding_normalAtk_113: 587728149
+      sd_0002_delta_delta04_pluspadding_normalAtk_114: 1411022221
+      sd_0002_delta_delta04_pluspadding_normalAtk_115: 1841260720
+      sd_0002_delta_delta04_pluspadding_normalAtk_116: 1341806301
+      sd_0002_delta_delta04_pluspadding_normalAtk_117: 176045866
+      sd_0002_delta_delta04_pluspadding_normalAtk_118: 147691199
+      sd_0002_delta_delta04_pluspadding_normalAtk_119: -1803449876
+      sd_0002_delta_delta04_pluspadding_normalAtk_12: 1839612824
+      sd_0002_delta_delta04_pluspadding_normalAtk_120: -998972317
+      sd_0002_delta_delta04_pluspadding_normalAtk_121: 259950247
+      sd_0002_delta_delta04_pluspadding_normalAtk_122: -346268954
+      sd_0002_delta_delta04_pluspadding_normalAtk_123: 1445434758
+      sd_0002_delta_delta04_pluspadding_normalAtk_124: 1324280903
+      sd_0002_delta_delta04_pluspadding_normalAtk_125: -2084917436
+      sd_0002_delta_delta04_pluspadding_normalAtk_126: 345717667
+      sd_0002_delta_delta04_pluspadding_normalAtk_127: 1130867671
+      sd_0002_delta_delta04_pluspadding_normalAtk_128: 222964174
+      sd_0002_delta_delta04_pluspadding_normalAtk_129: -420805297
+      sd_0002_delta_delta04_pluspadding_normalAtk_13: -1009606656
+      sd_0002_delta_delta04_pluspadding_normalAtk_130: -1693360589
+      sd_0002_delta_delta04_pluspadding_normalAtk_131: -935391575
+      sd_0002_delta_delta04_pluspadding_normalAtk_132: 685598800
+      sd_0002_delta_delta04_pluspadding_normalAtk_133: 1509884916
+      sd_0002_delta_delta04_pluspadding_normalAtk_134: -1917477200
+      sd_0002_delta_delta04_pluspadding_normalAtk_135: 467282689
+      sd_0002_delta_delta04_pluspadding_normalAtk_136: -1220516980
+      sd_0002_delta_delta04_pluspadding_normalAtk_137: 1221118019
+      sd_0002_delta_delta04_pluspadding_normalAtk_138: -1782956358
+      sd_0002_delta_delta04_pluspadding_normalAtk_139: 1461796484
+      sd_0002_delta_delta04_pluspadding_normalAtk_14: 134588556
+      sd_0002_delta_delta04_pluspadding_normalAtk_140: -1405870252
+      sd_0002_delta_delta04_pluspadding_normalAtk_141: -403485115
+      sd_0002_delta_delta04_pluspadding_normalAtk_142: 776145195
+      sd_0002_delta_delta04_pluspadding_normalAtk_143: -1283123368
+      sd_0002_delta_delta04_pluspadding_normalAtk_144: 266294676
+      sd_0002_delta_delta04_pluspadding_normalAtk_145: 999172445
+      sd_0002_delta_delta04_pluspadding_normalAtk_146: -974589230
+      sd_0002_delta_delta04_pluspadding_normalAtk_147: -1464983093
+      sd_0002_delta_delta04_pluspadding_normalAtk_148: 700211100
+      sd_0002_delta_delta04_pluspadding_normalAtk_149: -849244100
+      sd_0002_delta_delta04_pluspadding_normalAtk_15: 1668744602
+      sd_0002_delta_delta04_pluspadding_normalAtk_150: -138283176
+      sd_0002_delta_delta04_pluspadding_normalAtk_151: -1502520047
+      sd_0002_delta_delta04_pluspadding_normalAtk_152: 1404077989
+      sd_0002_delta_delta04_pluspadding_normalAtk_153: 1599895520
+      sd_0002_delta_delta04_pluspadding_normalAtk_154: -907375680
+      sd_0002_delta_delta04_pluspadding_normalAtk_155: -1411837576
+      sd_0002_delta_delta04_pluspadding_normalAtk_156: -718349774
+      sd_0002_delta_delta04_pluspadding_normalAtk_157: -145060471
+      sd_0002_delta_delta04_pluspadding_normalAtk_158: 1339972481
+      sd_0002_delta_delta04_pluspadding_normalAtk_159: 1164342774
+      sd_0002_delta_delta04_pluspadding_normalAtk_16: -701136464
+      sd_0002_delta_delta04_pluspadding_normalAtk_160: 1040324561
+      sd_0002_delta_delta04_pluspadding_normalAtk_161: -1025739173
+      sd_0002_delta_delta04_pluspadding_normalAtk_162: -2107952747
+      sd_0002_delta_delta04_pluspadding_normalAtk_163: 1138131084
+      sd_0002_delta_delta04_pluspadding_normalAtk_164: -698589893
+      sd_0002_delta_delta04_pluspadding_normalAtk_165: -754474305
+      sd_0002_delta_delta04_pluspadding_normalAtk_166: -161633302
+      sd_0002_delta_delta04_pluspadding_normalAtk_167: 1564085231
+      sd_0002_delta_delta04_pluspadding_normalAtk_17: -1467219819
+      sd_0002_delta_delta04_pluspadding_normalAtk_18: -902895228
+      sd_0002_delta_delta04_pluspadding_normalAtk_19: -293482542
+      sd_0002_delta_delta04_pluspadding_normalAtk_2: -1409186033
+      sd_0002_delta_delta04_pluspadding_normalAtk_20: 1331083728
+      sd_0002_delta_delta04_pluspadding_normalAtk_21: -646896144
+      sd_0002_delta_delta04_pluspadding_normalAtk_22: 1237528864
+      sd_0002_delta_delta04_pluspadding_normalAtk_23: 808954614
+      sd_0002_delta_delta04_pluspadding_normalAtk_24: 441850882
+      sd_0002_delta_delta04_pluspadding_normalAtk_25: -1509583118
+      sd_0002_delta_delta04_pluspadding_normalAtk_26: 239377995
+      sd_0002_delta_delta04_pluspadding_normalAtk_27: 1636777831
+      sd_0002_delta_delta04_pluspadding_normalAtk_28: 1986631781
+      sd_0002_delta_delta04_pluspadding_normalAtk_29: -848735689
+      sd_0002_delta_delta04_pluspadding_normalAtk_3: -538894165
+      sd_0002_delta_delta04_pluspadding_normalAtk_30: 1159237869
+      sd_0002_delta_delta04_pluspadding_normalAtk_31: 1813274468
+      sd_0002_delta_delta04_pluspadding_normalAtk_32: 785260575
+      sd_0002_delta_delta04_pluspadding_normalAtk_33: -190942838
+      sd_0002_delta_delta04_pluspadding_normalAtk_34: -1680093576
+      sd_0002_delta_delta04_pluspadding_normalAtk_35: 1913197962
+      sd_0002_delta_delta04_pluspadding_normalAtk_36: 1584983169
+      sd_0002_delta_delta04_pluspadding_normalAtk_37: -1398465494
+      sd_0002_delta_delta04_pluspadding_normalAtk_38: 506136416
+      sd_0002_delta_delta04_pluspadding_normalAtk_39: -452599439
+      sd_0002_delta_delta04_pluspadding_normalAtk_4: -2093264501
+      sd_0002_delta_delta04_pluspadding_normalAtk_40: -2108476245
+      sd_0002_delta_delta04_pluspadding_normalAtk_41: -225679921
+      sd_0002_delta_delta04_pluspadding_normalAtk_42: 746617785
+      sd_0002_delta_delta04_pluspadding_normalAtk_43: -1410029632
+      sd_0002_delta_delta04_pluspadding_normalAtk_44: 2003351526
+      sd_0002_delta_delta04_pluspadding_normalAtk_45: -717429399
+      sd_0002_delta_delta04_pluspadding_normalAtk_46: -948653601
+      sd_0002_delta_delta04_pluspadding_normalAtk_47: 388240975
+      sd_0002_delta_delta04_pluspadding_normalAtk_48: 1995540650
+      sd_0002_delta_delta04_pluspadding_normalAtk_49: -1514099568
+      sd_0002_delta_delta04_pluspadding_normalAtk_5: -2070857833
+      sd_0002_delta_delta04_pluspadding_normalAtk_50: -1864933875
+      sd_0002_delta_delta04_pluspadding_normalAtk_51: 1152740870
+      sd_0002_delta_delta04_pluspadding_normalAtk_52: 524566300
+      sd_0002_delta_delta04_pluspadding_normalAtk_53: 492605022
+      sd_0002_delta_delta04_pluspadding_normalAtk_54: -145823588
+      sd_0002_delta_delta04_pluspadding_normalAtk_55: 587808354
+      sd_0002_delta_delta04_pluspadding_normalAtk_56: -187800430
+      sd_0002_delta_delta04_pluspadding_normalAtk_57: -1312366699
+      sd_0002_delta_delta04_pluspadding_normalAtk_58: 1722033821
+      sd_0002_delta_delta04_pluspadding_normalAtk_59: 1032536326
+      sd_0002_delta_delta04_pluspadding_normalAtk_6: -1808858327
+      sd_0002_delta_delta04_pluspadding_normalAtk_60: 1216360320
+      sd_0002_delta_delta04_pluspadding_normalAtk_61: -1237020764
+      sd_0002_delta_delta04_pluspadding_normalAtk_62: 1383367329
+      sd_0002_delta_delta04_pluspadding_normalAtk_63: 1946390639
+      sd_0002_delta_delta04_pluspadding_normalAtk_64: -229301134
+      sd_0002_delta_delta04_pluspadding_normalAtk_65: 1955029870
+      sd_0002_delta_delta04_pluspadding_normalAtk_66: -114190541
+      sd_0002_delta_delta04_pluspadding_normalAtk_67: 1598388530
+      sd_0002_delta_delta04_pluspadding_normalAtk_68: 1274053290
+      sd_0002_delta_delta04_pluspadding_normalAtk_69: -598131351
+      sd_0002_delta_delta04_pluspadding_normalAtk_7: 307075218
+      sd_0002_delta_delta04_pluspadding_normalAtk_70: -910007790
+      sd_0002_delta_delta04_pluspadding_normalAtk_71: -195371433
+      sd_0002_delta_delta04_pluspadding_normalAtk_72: -1371794241
+      sd_0002_delta_delta04_pluspadding_normalAtk_73: 1623549462
+      sd_0002_delta_delta04_pluspadding_normalAtk_74: 963705535
+      sd_0002_delta_delta04_pluspadding_normalAtk_75: -784167734
+      sd_0002_delta_delta04_pluspadding_normalAtk_76: -416824188
+      sd_0002_delta_delta04_pluspadding_normalAtk_77: 137248120
+      sd_0002_delta_delta04_pluspadding_normalAtk_78: 1367085033
+      sd_0002_delta_delta04_pluspadding_normalAtk_79: -1623478520
+      sd_0002_delta_delta04_pluspadding_normalAtk_8: 1393237382
+      sd_0002_delta_delta04_pluspadding_normalAtk_80: -956709079
+      sd_0002_delta_delta04_pluspadding_normalAtk_81: -1572735419
+      sd_0002_delta_delta04_pluspadding_normalAtk_82: -374235248
+      sd_0002_delta_delta04_pluspadding_normalAtk_83: 493387664
+      sd_0002_delta_delta04_pluspadding_normalAtk_84: -749418322
+      sd_0002_delta_delta04_pluspadding_normalAtk_85: 2122710746
+      sd_0002_delta_delta04_pluspadding_normalAtk_86: 408488769
+      sd_0002_delta_delta04_pluspadding_normalAtk_87: 558489510
+      sd_0002_delta_delta04_pluspadding_normalAtk_88: -1254940127
+      sd_0002_delta_delta04_pluspadding_normalAtk_89: -552572090
+      sd_0002_delta_delta04_pluspadding_normalAtk_9: -842954227
+      sd_0002_delta_delta04_pluspadding_normalAtk_90: -761127912
+      sd_0002_delta_delta04_pluspadding_normalAtk_91: -1892982531
+      sd_0002_delta_delta04_pluspadding_normalAtk_92: -577689236
+      sd_0002_delta_delta04_pluspadding_normalAtk_93: -1835831292
+      sd_0002_delta_delta04_pluspadding_normalAtk_94: 847352178
+      sd_0002_delta_delta04_pluspadding_normalAtk_95: -1639885486
+      sd_0002_delta_delta04_pluspadding_normalAtk_96: -546105769
+      sd_0002_delta_delta04_pluspadding_normalAtk_97: -1843376361
+      sd_0002_delta_delta04_pluspadding_normalAtk_98: -126899055
+      sd_0002_delta_delta04_pluspadding_normalAtk_99: -1638835580
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

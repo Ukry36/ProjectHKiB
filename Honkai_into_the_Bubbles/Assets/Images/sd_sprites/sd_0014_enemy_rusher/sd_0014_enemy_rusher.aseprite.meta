@@ -1,0 +1,2603 @@
+fileFormatVersion: 2
+guid: 9a4388f272376a044a38ee2290cbd5a2
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: sd_0014_enemy_rusher_Frame_30
+    originalName: 
+    pivot: {x: 0.5, y: -0.48}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 4
+      width: 48
+      height: 25
+    spriteID: ab1a6372fe7a42448afca7b68c13fefd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 4}
+  - name: sd_0014_enemy_rusher_Frame_66
+    originalName: 
+    pivot: {x: 0.24999999, y: -0.78947365}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 4
+      width: 32
+      height: 19
+    spriteID: aaf7397f64581bb44a16f2e738760091
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 4}
+  - name: sd_0014_enemy_rusher_Frame_0
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 456
+      width: 32
+      height: 22
+    spriteID: 0aae1e5641fb57c4eb8111cbeca2d56c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 456}
+  - name: sd_0014_enemy_rusher_Frame_1
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.77272725}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 486
+      width: 32
+      height: 22
+    spriteID: 6d3aef9d13ad5444296054eed3c1933d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 486}
+  - name: sd_0014_enemy_rusher_Frame_2
+    originalName: 
+    pivot: {x: 0.6666666, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 336
+      width: 24
+      height: 18
+    spriteID: 49c563b266c000141bea07c0e7c7e84a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 336}
+  - name: sd_0014_enemy_rusher_Frame_3
+    originalName: 
+    pivot: {x: 0.6666666, y: -0.9444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 362
+      width: 24
+      height: 18
+    spriteID: f6dbdc5daa0e3f346a3fa2138fff6480
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 362}
+  - name: sd_0014_enemy_rusher_Frame_4
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 28
+      width: 32
+      height: 16
+    spriteID: 52ce8bff95dbdc2419f6cb79c836321c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 28}
+  - name: sd_0014_enemy_rusher_Frame_5
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.2666668}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 176
+      width: 32
+      height: 15
+    spriteID: f48986ebdb3fc3448a99d7bec70eb2b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 176}
+  - name: sd_0014_enemy_rusher_Frame_6
+    originalName: 
+    pivot: {x: 0.3333333, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 388
+      width: 24
+      height: 18
+    spriteID: b686c5d9926127142a65f55260604bf2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 388}
+  - name: sd_0014_enemy_rusher_Frame_7
+    originalName: 
+    pivot: {x: 0.3333333, y: -0.9444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 414
+      width: 24
+      height: 18
+    spriteID: 76b1c3372596b894fa185005f3b9f788
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 414}
+  - name: sd_0014_enemy_rusher_Frame_8
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 262
+      width: 32
+      height: 22
+    spriteID: b769b22b373cbbc44a5505d404006aa8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 262}
+  - name: sd_0014_enemy_rusher_Frame_9
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.77272725}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 35
+      width: 28
+      height: 22
+    spriteID: 04bed22cf2cbc94459be0496fbbddaf2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 35}
+  - name: sd_0014_enemy_rusher_Frame_10
+    originalName: 
+    pivot: {x: 0.6666666, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 440
+      width: 24
+      height: 18
+    spriteID: 85c8335935879fe44ba56657715e2a0a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 440}
+  - name: sd_0014_enemy_rusher_Frame_11
+    originalName: 
+    pivot: {x: 0.6666666, y: -1.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 492
+      width: 24
+      height: 16
+    spriteID: 5422b56f7cdc9e645b32886f37447544
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 492}
+  - name: sd_0014_enemy_rusher_Frame_12
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 52
+      width: 32
+      height: 16
+    spriteID: 7c242034423d73e4e914b04270fac290
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 52}
+  - name: sd_0014_enemy_rusher_Frame_13
+    originalName: 
+    pivot: {x: 0.50000006, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 311
+      width: 28
+      height: 17
+    spriteID: b0cf941269e88f44bacd520671a8b8ef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 311}
+  - name: sd_0014_enemy_rusher_Frame_14
+    originalName: 
+    pivot: {x: 0.3333333, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 466
+      width: 24
+      height: 18
+    spriteID: b1f67fafc5733f746919bae16302528f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 466}
+  - name: sd_0014_enemy_rusher_Frame_15
+    originalName: 
+    pivot: {x: 0.3333333, y: -1.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 457
+      width: 24
+      height: 16
+    spriteID: e1f2758dac601e84090b44beec1bed45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 457}
+  - name: sd_0014_enemy_rusher_Frame_16
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 292
+      width: 32
+      height: 22
+    spriteID: f4d3e04620f247d498c625d0d7e436b2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 292}
+  - name: sd_0014_enemy_rusher_Frame_17
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.77272725}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 322
+      width: 32
+      height: 22
+    spriteID: 0e975a2b6dd789a46a4eedab0a81d1d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 322}
+  - name: sd_0014_enemy_rusher_Frame_18
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.7826087}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 364
+      width: 32
+      height: 23
+    spriteID: 485de109e2e62ee4b8d804bea359a083
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 364}
+  - name: sd_0014_enemy_rusher_Frame_19
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.826087}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 302
+      width: 34
+      height: 23
+    spriteID: 134742392b5637b45aa2266be92a8114
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 302}
+  - name: sd_0014_enemy_rusher_Frame_20
+    originalName: 
+    pivot: {x: 0.5, y: -0.8695652}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 37
+      width: 36
+      height: 23
+    spriteID: 8c23d413f41965046b2e34922024d05c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 37}
+  - name: sd_0014_enemy_rusher_Frame_22
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.11428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 49
+      width: 26
+      height: 35
+    spriteID: 211fa702105532349ad925cb41bdbb49
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 49}
+  - name: sd_0014_enemy_rusher_Frame_23
+    originalName: 
+    pivot: {x: 0.5, y: -0.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 389
+      width: 22
+      height: 24
+    spriteID: e0be916ae9679fb4baf0e6b34a809081
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 389}
+  - name: sd_0014_enemy_rusher_Frame_24
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.6956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 4
+      width: 28
+      height: 23
+    spriteID: 74e09632b2ab0884d8b8a26881ba5900
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 4}
+  - name: sd_0014_enemy_rusher_Frame_25
+    originalName: 
+    pivot: {x: 0.6666666, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 95
+      width: 24
+      height: 18
+    spriteID: 60a4cb51af7de8c45b07c88d87930925
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 95}
+  - name: sd_0014_enemy_rusher_Frame_26
+    originalName: 
+    pivot: {x: 0.7083334, y: -0.9444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 121
+      width: 24
+      height: 18
+    spriteID: dabab1b45e060bb4786f7573d6f935e6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 121}
+  - name: sd_0014_enemy_rusher_Frame_27
+    originalName: 
+    pivot: {x: 0.75, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 199
+      width: 24
+      height: 20
+    spriteID: b05d2c86ee66d9642817ca54a10a3df4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 199}
+  - name: sd_0014_enemy_rusher_Frame_28
+    originalName: 
+    pivot: {x: 0.7916667, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 421
+      width: 24
+      height: 22
+    spriteID: 4ea7252b1e2ae354a87905b3ccd5d6bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 421}
+  - name: sd_0014_enemy_rusher_Frame_29
+    originalName: 
+    pivot: {x: 0.8333333, y: -0.6956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 165
+      width: 24
+      height: 23
+    spriteID: f368ff3a6cbea2f4cbf4af7abf8d5317
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 165}
+  - name: sd_0014_enemy_rusher_Frame_31
+    originalName: 
+    pivot: {x: 0.4054054, y: -0.61904764}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 99
+      width: 37
+      height: 21
+    spriteID: 80e5ec0588f738d4392ab7cf9134a9c0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 99}
+  - name: sd_0014_enemy_rusher_Frame_32
+    originalName: 
+    pivot: {x: 0.625, y: -0.94117653}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 329
+      width: 24
+      height: 17
+    spriteID: 88d04dac2d74be44eae9b038b497623f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 329}
+  - name: sd_0014_enemy_rusher_Frame_33
+    originalName: 
+    pivot: {x: 0.6666666, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 354
+      width: 24
+      height: 17
+    spriteID: 62df2442a0e42944ea2d4405c1b26ec1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 354}
+  - name: sd_0014_enemy_rusher_Frame_34
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 76
+      width: 32
+      height: 16
+    spriteID: a1ed48ddacaeb104a88926630134b555
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 76}
+  - name: sd_0014_enemy_rusher_Frame_35
+    originalName: 
+    pivot: {x: 0.49999997, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 289
+      width: 32
+      height: 17
+    spriteID: 63b597adad2d7b84e8d7e5c9c2739759
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 289}
+  - name: sd_0014_enemy_rusher_Frame_36
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.94117653}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 314
+      width: 32
+      height: 17
+    spriteID: c07cb4d28ecccb447993842095399371
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 314}
+  - name: sd_0014_enemy_rusher_Frame_37
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.73684204}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 31
+      width: 32
+      height: 19
+    spriteID: bf36a23c45185cc419489bb9d00b47cd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 31}
+  - name: sd_0014_enemy_rusher_Frame_38
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.68421054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 58
+      width: 32
+      height: 19
+    spriteID: 37b3c6fd3f0c5fd408f37b542cd10719
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 58}
+  - name: sd_0014_enemy_rusher_Frame_40
+    originalName: 
+    pivot: {x: 0.48, y: -0.46875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 229
+      width: 25
+      height: 32
+    spriteID: cb55fdfd58b72ef4ab7a8b164e812143
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 229}
+  - name: sd_0014_enemy_rusher_Frame_41
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.75}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 429
+      width: 20
+      height: 20
+    spriteID: ef6dffc587283014d8cc101d8894b1b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 429}
+  - name: sd_0014_enemy_rusher_Frame_42
+    originalName: 
+    pivot: {x: 0.5, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 147
+      width: 24
+      height: 18
+    spriteID: 3e947c88a4e80c645ada9c29879c0013
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 147}
+  - name: sd_0014_enemy_rusher_Frame_43
+    originalName: 
+    pivot: {x: 0.3333333, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 173
+      width: 24
+      height: 18
+    spriteID: e61e1ff41ed88ec4897ef7c4050d55d1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 173}
+  - name: sd_0014_enemy_rusher_Frame_44
+    originalName: 
+    pivot: {x: 0.2916667, y: -0.9444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 199
+      width: 24
+      height: 18
+    spriteID: f1d1ad3d23a072d458b14035a82d80be
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 199}
+  - name: sd_0014_enemy_rusher_Frame_45
+    originalName: 
+    pivot: {x: 0.25, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 227
+      width: 24
+      height: 20
+    spriteID: 80d61ef62171b1b41b17e0cc26309aa4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 227}
+  - name: sd_0014_enemy_rusher_Frame_46
+    originalName: 
+    pivot: {x: 0.20833331, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 451
+      width: 24
+      height: 22
+    spriteID: 5d32720bad84d7b47871ce2ef918fc99
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 451}
+  - name: sd_0014_enemy_rusher_Frame_47
+    originalName: 
+    pivot: {x: 0.16666669, y: -0.6956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 196
+      width: 24
+      height: 23
+    spriteID: 2e01641b3a4453d4fb925829b31ab6ac
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 196}
+  - name: sd_0014_enemy_rusher_Frame_49
+    originalName: 
+    pivot: {x: 0.5945946, y: -0.61904764}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 128
+      width: 37
+      height: 21
+    spriteID: 50fbfed0174bf134fadd687fe1bfb7a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 128}
+  - name: sd_0014_enemy_rusher_Frame_50
+    originalName: 
+    pivot: {x: 0.375, y: -0.94117653}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 379
+      width: 24
+      height: 17
+    spriteID: 959f99f9162359c4e8aa29f6bd559d84
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 379}
+  - name: sd_0014_enemy_rusher_Frame_51
+    originalName: 
+    pivot: {x: 0.3333333, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 404
+      width: 24
+      height: 17
+    spriteID: 700d4e7627250d646a9b4efd437cf1b4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 404}
+  - name: sd_0014_enemy_rusher_Frame_52
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 352
+      width: 32
+      height: 22
+    spriteID: 4018f1c2f7c563b4c88df5bac5432b1c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 352}
+  - name: sd_0014_enemy_rusher_Frame_53
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.77272725}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 382
+      width: 32
+      height: 22
+    spriteID: 215e72193fc6bee419157605eb56f62f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 382}
+  - name: sd_0014_enemy_rusher_Frame_54
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.7826087}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 395
+      width: 32
+      height: 23
+    spriteID: c27223d6c221ec04aa3b543f276315bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 395}
+  - name: sd_0014_enemy_rusher_Frame_55
+    originalName: 
+    pivot: {x: 0.50000006, y: -0.826087}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 333
+      width: 34
+      height: 23
+    spriteID: 1817a8b94ada65a4dbaa4af319c758ee
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 333}
+  - name: sd_0014_enemy_rusher_Frame_56
+    originalName: 
+    pivot: {x: 0.5, y: -0.8695652}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 68
+      width: 36
+      height: 23
+    spriteID: dc6440f77f4be9542a25331a57bc0b93
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 68}
+  - name: sd_0014_enemy_rusher_Frame_57
+    originalName: 
+    pivot: {x: 0.51515156, y: -0.36363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 426
+      width: 33
+      height: 22
+    spriteID: 45d980d73bf7ed94abd4f95e0ac673b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 426}
+  - name: sd_0014_enemy_rusher_Frame_58
+    originalName: 
+    pivot: {x: 0.42500004, y: -0.36842102}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 157
+      width: 40
+      height: 19
+    spriteID: 0296eab3c7790594eb961da0d29de1d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 157}
+  - name: sd_0014_enemy_rusher_Frame_59
+    originalName: 
+    pivot: {x: 0.24999999, y: -0.25925925}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 92
+      width: 32
+      height: 27
+    spriteID: 0b80cf9c4acd0a54f9b1d5f894a12136
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 92}
+  - name: sd_0014_enemy_rusher_Frame_60
+    originalName: 
+    pivot: {x: 0.14285716, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 124
+      width: 28
+      height: 18
+    spriteID: df1f1c008f45bb64ab55394dd2a92270
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 124}
+  - name: sd_0014_enemy_rusher_Frame_61
+    originalName: 
+    pivot: {x: 0.6666666, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 225
+      width: 24
+      height: 18
+    spriteID: 66d10f8b3edc72049b26c3273e9e32a0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 225}
+  - name: sd_0014_enemy_rusher_Frame_62
+    originalName: 
+    pivot: {x: 0.7083334, y: -0.9444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 251
+      width: 24
+      height: 18
+    spriteID: 9f76cbeb9142b1e43b57d1169c221582
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 251}
+  - name: sd_0014_enemy_rusher_Frame_63
+    originalName: 
+    pivot: {x: 0.75, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 255
+      width: 24
+      height: 20
+    spriteID: b5d8eab30e436fb4192767626ce60d80
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 255}
+  - name: sd_0014_enemy_rusher_Frame_64
+    originalName: 
+    pivot: {x: 0.7916667, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 481
+      width: 24
+      height: 22
+    spriteID: 01ca6e31927294044bf24a1dab7a64bd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 481}
+  - name: sd_0014_enemy_rusher_Frame_65
+    originalName: 
+    pivot: {x: 0.8333333, y: -0.6956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 227
+      width: 24
+      height: 23
+    spriteID: 2c21f9eeaa0dea84b9fb29c6563e4661
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 227}
+  - name: sd_0014_enemy_rusher_Frame_67
+    originalName: 
+    pivot: {x: 0.24999999, y: -0.5555556}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 127
+      width: 32
+      height: 27
+    spriteID: 3521aacaf1d9bdd45924852e373660ad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 127}
+  - name: sd_0014_enemy_rusher_Frame_68
+    originalName: 
+    pivot: {x: 0.4, y: -1.3333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 210
+      width: 40
+      height: 18
+    spriteID: 183f957e33b4f764498846cee0495f20
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 210}
+  - name: sd_0014_enemy_rusher_Frame_69
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.90909094}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 412
+      width: 32
+      height: 22
+    spriteID: 0c7be80220873974880de70ac3cd1cea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 412}
+  - name: sd_0014_enemy_rusher_Frame_70
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.125}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 100
+      width: 32
+      height: 16
+    spriteID: 1ef6e005dc1d76c4caeb546ea6de9c57
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 100}
+  - name: sd_0014_enemy_rusher_Frame_71
+    originalName: 
+    pivot: {x: 0.49999997, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 339
+      width: 32
+      height: 17
+    spriteID: 9d63035c7a225114dbda00e8b3e33dfe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 339}
+  - name: sd_0014_enemy_rusher_Frame_72
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.94117653}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 364
+      width: 32
+      height: 17
+    spriteID: fa2fe6f88b5c8dd4c8860494106b7c61
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 364}
+  - name: sd_0014_enemy_rusher_Frame_73
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.73684204}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 85
+      width: 32
+      height: 19
+    spriteID: 7000d8b9a51ea394ca657b112854cd07
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 85}
+  - name: sd_0014_enemy_rusher_Frame_74
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.68421054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 112
+      width: 32
+      height: 19
+    spriteID: 2914ffc13759d514784d865791bb3925
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 112}
+  - name: sd_0014_enemy_rusher_Frame_75
+    originalName: 
+    pivot: {x: 0.48484847, y: -1.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 4
+      width: 33
+      height: 16
+    spriteID: 75a27fd457d7e6c4490f4a43504dca27
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 4}
+  - name: sd_0014_enemy_rusher_Frame_76
+    originalName: 
+    pivot: {x: 0.58536583, y: -1.3333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 184
+      width: 41
+      height: 18
+    spriteID: 1ed9d4070d95bd648983182018670959
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 184}
+  - name: sd_0014_enemy_rusher_Frame_77
+    originalName: 
+    pivot: {x: 0.75, y: -0.64}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 269
+      width: 32
+      height: 25
+    spriteID: d5d7c9fd92fb5e544b19da33afd5b62c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 269}
+  - name: sd_0014_enemy_rusher_Frame_78
+    originalName: 
+    pivot: {x: 0.85714287, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 150
+      width: 28
+      height: 18
+    spriteID: 68f0d099c1f8a634086d9577d9f2fadc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 150}
+  - name: sd_0014_enemy_rusher_Frame_79
+    originalName: 
+    pivot: {x: 0.3333333, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 277
+      width: 24
+      height: 18
+    spriteID: 156f215f462db184c8a338919cbffa01
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 277}
+  - name: sd_0014_enemy_rusher_Frame_80
+    originalName: 
+    pivot: {x: 0.2916667, y: -0.9444444}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 303
+      width: 24
+      height: 18
+    spriteID: d6dd8328ea061ba4ca11793c730030b3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 303}
+  - name: sd_0014_enemy_rusher_Frame_81
+    originalName: 
+    pivot: {x: 0.25, y: -0.85}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 283
+      width: 24
+      height: 20
+    spriteID: bcd90b9dffd58a64ea3542f9e1f2aadd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 283}
+  - name: sd_0014_enemy_rusher_Frame_82
+    originalName: 
+    pivot: {x: 0.20833331, y: -0.72727275}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 103
+      y: 65
+      width: 24
+      height: 22
+    spriteID: 1b26a4c9c1e7ad940a7f40b10c7f21bc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 103, y: 65}
+  - name: sd_0014_enemy_rusher_Frame_83
+    originalName: 
+    pivot: {x: 0.16666669, y: -0.6956522}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 258
+      width: 24
+      height: 23
+    spriteID: 47731362cdf91234fa7f6e4603ecc008
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 258}
+  - name: sd_0014_enemy_rusher_Frame_84
+    originalName: 
+    pivot: {x: 0.75, y: -0.88888896}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 139
+      y: 139
+      width: 32
+      height: 18
+    spriteID: c8294c3b1aa10e8429657f2a368ab739
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 139, y: 139}
+  - name: sd_0014_enemy_rusher_Frame_85
+    originalName: 
+    pivot: {x: 0.75, y: -0.30769232}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 195
+      width: 32
+      height: 26
+    spriteID: cef15454d864a5b44a3d223458ea3946
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 195}
+  - name: sd_0014_enemy_rusher_Frame_86
+    originalName: 
+    pivot: {x: 0.6, y: -0.44444448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 236
+      width: 40
+      height: 18
+    spriteID: 42704c7498d1f564ba9004b8fb4c7a16
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 236}
+  - name: sd_0014_enemy_rusher_Frame_87
+    originalName: 
+    pivot: {x: 0.49999997, y: -0.36363637}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 442
+      width: 32
+      height: 22
+    spriteID: 9960819b16e8c1c429ba4bc7d0c3adbe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 442}
+  - name: sd_0014_enemy_rusher_Frame_21
+    originalName: 
+    pivot: {x: 0.45714283, y: -0.18918918}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 35
+      height: 37
+    spriteID: d458c85d0a6790347b629372b3644c5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: sd_0014_enemy_rusher_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: -0.8695652}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 47
+      y: 472
+      width: 30
+      height: 23
+    spriteID: 6786ec6d597479248b085a62daff7dc6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 47, y: 472}
+  - name: sd_0014_enemy_rusher_Frame_48
+    originalName: 
+    pivot: {x: 0.5588236, y: -0.48}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 162
+      width: 34
+      height: 25
+    spriteID: df65ef4bb5ac02d42aa783284b9a05f4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 162}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: 1884020988
+    name: sd_0014_enemy_rusher
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: sd_0014_enemy_rusher_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 0
+        y: 12
+        width: 48
+        height: 25
+      spriteId: ab1a6372fe7a42448afca7b68c13fefd
+    - name: sd_0014_enemy_rusher_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 16
+        y: 15
+        width: 32
+        height: 19
+      spriteId: aaf7397f64581bb44a16f2e738760091
+    - name: sd_0014_enemy_rusher_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 8
+        y: 16
+        width: 32
+        height: 22
+      spriteId: 0aae1e5641fb57c4eb8111cbeca2d56c
+    - name: sd_0014_enemy_rusher_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 8
+        y: 17
+        width: 32
+        height: 22
+      spriteId: 6d3aef9d13ad5444296054eed3c1933d
+    - name: sd_0014_enemy_rusher_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 8
+        y: 16
+        width: 24
+        height: 18
+      spriteId: 49c563b266c000141bea07c0e7c7e84a
+    - name: sd_0014_enemy_rusher_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 8
+        y: 17
+        width: 24
+        height: 18
+      spriteId: f6dbdc5daa0e3f346a3fa2138fff6480
+    - name: sd_0014_enemy_rusher_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 8
+        y: 18
+        width: 32
+        height: 16
+      spriteId: 52ce8bff95dbdc2419f6cb79c836321c
+    - name: sd_0014_enemy_rusher_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 8
+        y: 19
+        width: 32
+        height: 15
+      spriteId: f48986ebdb3fc3448a99d7bec70eb2b5
+    - name: sd_0014_enemy_rusher_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 16
+        y: 16
+        width: 24
+        height: 18
+      spriteId: b686c5d9926127142a65f55260604bf2
+    - name: sd_0014_enemy_rusher_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 16
+        y: 17
+        width: 24
+        height: 18
+      spriteId: 76b1c3372596b894fa185005f3b9f788
+    - name: sd_0014_enemy_rusher_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 8
+        y: 16
+        width: 32
+        height: 22
+      spriteId: b769b22b373cbbc44a5505d404006aa8
+    - name: sd_0014_enemy_rusher_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 10
+        y: 17
+        width: 28
+        height: 22
+      spriteId: 04bed22cf2cbc94459be0496fbbddaf2
+    - name: sd_0014_enemy_rusher_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 8
+        y: 16
+        width: 24
+        height: 18
+      spriteId: 85c8335935879fe44ba56657715e2a0a
+    - name: sd_0014_enemy_rusher_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 8
+        y: 18
+        width: 24
+        height: 16
+      spriteId: 5422b56f7cdc9e645b32886f37447544
+    - name: sd_0014_enemy_rusher_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 8
+        y: 18
+        width: 32
+        height: 16
+      spriteId: 7c242034423d73e4e914b04270fac290
+    - name: sd_0014_enemy_rusher_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 10
+        y: 17
+        width: 28
+        height: 17
+      spriteId: b0cf941269e88f44bacd520671a8b8ef
+    - name: sd_0014_enemy_rusher_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 16
+        y: 16
+        width: 24
+        height: 18
+      spriteId: b1f67fafc5733f746919bae16302528f
+    - name: sd_0014_enemy_rusher_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 16
+        y: 18
+        width: 24
+        height: 16
+      spriteId: e1f2758dac601e84090b44beec1bed45
+    - name: sd_0014_enemy_rusher_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 8
+        y: 16
+        width: 32
+        height: 22
+      spriteId: f4d3e04620f247d498c625d0d7e436b2
+    - name: sd_0014_enemy_rusher_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 8
+        y: 17
+        width: 32
+        height: 22
+      spriteId: 0e975a2b6dd789a46a4eedab0a81d1d8
+    - name: sd_0014_enemy_rusher_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 8
+        y: 18
+        width: 32
+        height: 23
+      spriteId: 485de109e2e62ee4b8d804bea359a083
+    - name: sd_0014_enemy_rusher_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 7
+        y: 19
+        width: 34
+        height: 23
+      spriteId: 134742392b5637b45aa2266be92a8114
+    - name: sd_0014_enemy_rusher_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 6
+        y: 20
+        width: 36
+        height: 23
+      spriteId: 8c23d413f41965046b2e34922024d05c
+    - name: sd_0014_enemy_rusher_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 11
+        y: 4
+        width: 26
+        height: 35
+      spriteId: 211fa702105532349ad925cb41bdbb49
+    - name: sd_0014_enemy_rusher_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 13
+        y: 15
+        width: 22
+        height: 24
+      spriteId: e0be916ae9679fb4baf0e6b34a809081
+    - name: sd_0014_enemy_rusher_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 10
+        y: 16
+        width: 28
+        height: 23
+      spriteId: 74e09632b2ab0884d8b8a26881ba5900
+    - name: sd_0014_enemy_rusher_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 8
+        y: 16
+        width: 24
+        height: 18
+      spriteId: 60a4cb51af7de8c45b07c88d87930925
+    - name: sd_0014_enemy_rusher_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 7
+        y: 17
+        width: 24
+        height: 18
+      spriteId: dabab1b45e060bb4786f7573d6f935e6
+    - name: sd_0014_enemy_rusher_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 6
+        y: 17
+        width: 24
+        height: 20
+      spriteId: b05d2c86ee66d9642817ca54a10a3df4
+    - name: sd_0014_enemy_rusher_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 5
+        y: 16
+        width: 24
+        height: 22
+      spriteId: 4ea7252b1e2ae354a87905b3ccd5d6bc
+    - name: sd_0014_enemy_rusher_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 4
+        y: 16
+        width: 24
+        height: 23
+      spriteId: f368ff3a6cbea2f4cbf4af7abf8d5317
+    - name: sd_0014_enemy_rusher_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 9
+        y: 13
+        width: 37
+        height: 21
+      spriteId: 80e5ec0588f738d4392ab7cf9134a9c0
+    - name: sd_0014_enemy_rusher_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 9
+        y: 16
+        width: 24
+        height: 17
+      spriteId: 88d04dac2d74be44eae9b038b497623f
+    - name: sd_0014_enemy_rusher_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 8
+        y: 17
+        width: 24
+        height: 17
+      spriteId: 62df2442a0e42944ea2d4405c1b26ec1
+    - name: sd_0014_enemy_rusher_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 8
+        y: 18
+        width: 32
+        height: 16
+      spriteId: a1ed48ddacaeb104a88926630134b555
+    - name: sd_0014_enemy_rusher_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 8
+        y: 17
+        width: 32
+        height: 17
+      spriteId: 63b597adad2d7b84e8d7e5c9c2739759
+    - name: sd_0014_enemy_rusher_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 8
+        y: 16
+        width: 32
+        height: 17
+      spriteId: c07cb4d28ecccb447993842095399371
+    - name: sd_0014_enemy_rusher_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 8
+        y: 14
+        width: 32
+        height: 19
+      spriteId: bf36a23c45185cc419489bb9d00b47cd
+    - name: sd_0014_enemy_rusher_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 8
+        y: 13
+        width: 32
+        height: 19
+      spriteId: 37b3c6fd3f0c5fd408f37b542cd10719
+    - name: sd_0014_enemy_rusher_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 12
+        y: 15
+        width: 25
+        height: 32
+      spriteId: cb55fdfd58b72ef4ab7a8b164e812143
+    - name: sd_0014_enemy_rusher_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 14
+        y: 15
+        width: 20
+        height: 20
+      spriteId: ef6dffc587283014d8cc101d8894b1b4
+    - name: sd_0014_enemy_rusher_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 12
+        y: 16
+        width: 24
+        height: 18
+      spriteId: 3e947c88a4e80c645ada9c29879c0013
+    - name: sd_0014_enemy_rusher_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 16
+        y: 16
+        width: 24
+        height: 18
+      spriteId: e61e1ff41ed88ec4897ef7c4050d55d1
+    - name: sd_0014_enemy_rusher_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 17
+        y: 17
+        width: 24
+        height: 18
+      spriteId: f1d1ad3d23a072d458b14035a82d80be
+    - name: sd_0014_enemy_rusher_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 18
+        y: 17
+        width: 24
+        height: 20
+      spriteId: 80d61ef62171b1b41b17e0cc26309aa4
+    - name: sd_0014_enemy_rusher_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 19
+        y: 16
+        width: 24
+        height: 22
+      spriteId: 5d32720bad84d7b47871ce2ef918fc99
+    - name: sd_0014_enemy_rusher_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 20
+        y: 16
+        width: 24
+        height: 23
+      spriteId: 2e01641b3a4453d4fb925829b31ab6ac
+    - name: sd_0014_enemy_rusher_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 2
+        y: 13
+        width: 37
+        height: 21
+      spriteId: 50fbfed0174bf134fadd687fe1bfb7a9
+    - name: sd_0014_enemy_rusher_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 15
+        y: 16
+        width: 24
+        height: 17
+      spriteId: 959f99f9162359c4e8aa29f6bd559d84
+    - name: sd_0014_enemy_rusher_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 16
+        y: 17
+        width: 24
+        height: 17
+      spriteId: 700d4e7627250d646a9b4efd437cf1b4
+    - name: sd_0014_enemy_rusher_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 8
+        y: 16
+        width: 32
+        height: 22
+      spriteId: 4018f1c2f7c563b4c88df5bac5432b1c
+    - name: sd_0014_enemy_rusher_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 8
+        y: 17
+        width: 32
+        height: 22
+      spriteId: 215e72193fc6bee419157605eb56f62f
+    - name: sd_0014_enemy_rusher_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 8
+        y: 18
+        width: 32
+        height: 23
+      spriteId: c27223d6c221ec04aa3b543f276315bd
+    - name: sd_0014_enemy_rusher_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 7
+        y: 19
+        width: 34
+        height: 23
+      spriteId: 1817a8b94ada65a4dbaa4af319c758ee
+    - name: sd_0014_enemy_rusher_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 6
+        y: 20
+        width: 36
+        height: 23
+      spriteId: dc6440f77f4be9542a25331a57bc0b93
+    - name: sd_0014_enemy_rusher_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 7
+        y: 8
+        width: 33
+        height: 22
+      spriteId: 45d980d73bf7ed94abd4f95e0ac673b9
+    - name: sd_0014_enemy_rusher_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 7
+        y: 7
+        width: 40
+        height: 19
+      spriteId: 0296eab3c7790594eb961da0d29de1d2
+    - name: sd_0014_enemy_rusher_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 16
+        y: 7
+        width: 32
+        height: 27
+      spriteId: 0b80cf9c4acd0a54f9b1d5f894a12136
+    - name: sd_0014_enemy_rusher_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 20
+        y: 16
+        width: 28
+        height: 18
+      spriteId: df1f1c008f45bb64ab55394dd2a92270
+    - name: sd_0014_enemy_rusher_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 8
+        y: 16
+        width: 24
+        height: 18
+      spriteId: 66d10f8b3edc72049b26c3273e9e32a0
+    - name: sd_0014_enemy_rusher_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 7
+        y: 17
+        width: 24
+        height: 18
+      spriteId: 9f76cbeb9142b1e43b57d1169c221582
+    - name: sd_0014_enemy_rusher_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 6
+        y: 17
+        width: 24
+        height: 20
+      spriteId: b5d8eab30e436fb4192767626ce60d80
+    - name: sd_0014_enemy_rusher_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 5
+        y: 16
+        width: 24
+        height: 22
+      spriteId: 01ca6e31927294044bf24a1dab7a64bd
+    - name: sd_0014_enemy_rusher_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 4
+        y: 16
+        width: 24
+        height: 23
+      spriteId: 2c21f9eeaa0dea84b9fb29c6563e4661
+    - name: sd_0014_enemy_rusher_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 16
+        y: 15
+        width: 32
+        height: 27
+      spriteId: 3521aacaf1d9bdd45924852e373660ad
+    - name: sd_0014_enemy_rusher_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 8
+        y: 24
+        width: 40
+        height: 18
+      spriteId: 183f957e33b4f764498846cee0495f20
+    - name: sd_0014_enemy_rusher_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 8
+        y: 20
+        width: 32
+        height: 22
+      spriteId: 0c7be80220873974880de70ac3cd1cea
+    - name: sd_0014_enemy_rusher_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 8
+        y: 18
+        width: 32
+        height: 16
+      spriteId: 1ef6e005dc1d76c4caeb546ea6de9c57
+    - name: sd_0014_enemy_rusher_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: 8
+        y: 17
+        width: 32
+        height: 17
+      spriteId: 9d63035c7a225114dbda00e8b3e33dfe
+    - name: sd_0014_enemy_rusher_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: 8
+        y: 16
+        width: 32
+        height: 17
+      spriteId: fa2fe6f88b5c8dd4c8860494106b7c61
+    - name: sd_0014_enemy_rusher_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: 8
+        y: 14
+        width: 32
+        height: 19
+      spriteId: 7000d8b9a51ea394ca657b112854cd07
+    - name: sd_0014_enemy_rusher_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: 8
+        y: 13
+        width: 32
+        height: 19
+      spriteId: 2914ffc13759d514784d865791bb3925
+    - name: sd_0014_enemy_rusher_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: 8
+        y: 26
+        width: 33
+        height: 16
+      spriteId: 75a27fd457d7e6c4490f4a43504dca27
+    - name: sd_0014_enemy_rusher_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: 0
+        y: 24
+        width: 41
+        height: 18
+      spriteId: 1ed9d4070d95bd648983182018670959
+    - name: sd_0014_enemy_rusher_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: 0
+        y: 16
+        width: 32
+        height: 25
+      spriteId: d5d7c9fd92fb5e544b19da33afd5b62c
+    - name: sd_0014_enemy_rusher_Frame_78
+      frameIndex: 78
+      cellRect:
+        x: 0
+        y: 16
+        width: 28
+        height: 18
+      spriteId: 68f0d099c1f8a634086d9577d9f2fadc
+    - name: sd_0014_enemy_rusher_Frame_79
+      frameIndex: 79
+      cellRect:
+        x: 16
+        y: 16
+        width: 24
+        height: 18
+      spriteId: 156f215f462db184c8a338919cbffa01
+    - name: sd_0014_enemy_rusher_Frame_80
+      frameIndex: 80
+      cellRect:
+        x: 17
+        y: 17
+        width: 24
+        height: 18
+      spriteId: d6dd8328ea061ba4ca11793c730030b3
+    - name: sd_0014_enemy_rusher_Frame_81
+      frameIndex: 81
+      cellRect:
+        x: 18
+        y: 17
+        width: 24
+        height: 20
+      spriteId: bcd90b9dffd58a64ea3542f9e1f2aadd
+    - name: sd_0014_enemy_rusher_Frame_82
+      frameIndex: 82
+      cellRect:
+        x: 19
+        y: 16
+        width: 24
+        height: 22
+      spriteId: 1b26a4c9c1e7ad940a7f40b10c7f21bc
+    - name: sd_0014_enemy_rusher_Frame_83
+      frameIndex: 83
+      cellRect:
+        x: 20
+        y: 16
+        width: 24
+        height: 23
+      spriteId: 47731362cdf91234fa7f6e4603ecc008
+    - name: sd_0014_enemy_rusher_Frame_84
+      frameIndex: 84
+      cellRect:
+        x: 0
+        y: 16
+        width: 32
+        height: 18
+      spriteId: c8294c3b1aa10e8429657f2a368ab739
+    - name: sd_0014_enemy_rusher_Frame_85
+      frameIndex: 85
+      cellRect:
+        x: 0
+        y: 8
+        width: 32
+        height: 26
+      spriteId: cef15454d864a5b44a3d223458ea3946
+    - name: sd_0014_enemy_rusher_Frame_86
+      frameIndex: 86
+      cellRect:
+        x: 0
+        y: 8
+        width: 40
+        height: 18
+      spriteId: 42704c7498d1f564ba9004b8fb4c7a16
+    - name: sd_0014_enemy_rusher_Frame_87
+      frameIndex: 87
+      cellRect:
+        x: 8
+        y: 8
+        width: 32
+        height: 22
+      spriteId: 9960819b16e8c1c429ba4bc7d0c3adbe
+    - name: sd_0014_enemy_rusher_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 8
+        y: 7
+        width: 35
+        height: 37
+      spriteId: d458c85d0a6790347b629372b3644c5f
+    - name: sd_0014_enemy_rusher_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 9
+        y: 20
+        width: 30
+        height: 23
+      spriteId: 6786ec6d597479248b085a62daff7dc6
+    - name: sd_0014_enemy_rusher_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 5
+        y: 12
+        width: 34
+        height: 25
+      spriteId: df65ef4bb5ac02d42aa783284b9a05f4
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 48, y: 48}

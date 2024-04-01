@@ -1,0 +1,33 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class GT : MonoBehaviour
+{
+    [SerializeField] private Vector2 coordinate;
+    [SerializeField] private SpriteRenderer spriteRenderer;
+    private int GTPCCI = 0;
+    private void Awake() 
+    {
+        coordinate = new Vector2(this.transform.position.x, this.transform.position.y);
+    }
+
+    private void OnEnable()
+    {
+        spriteRenderer.color = new Color(1, 1, 1, 0);
+        GTPCCI = 0;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            GTPCCI++;
+            GraffitiSystem.instance.AddTile(coordinate);
+            if (GTPCCI%2==0)
+                spriteRenderer.color = other.GetComponentInChildren<MoveSprite>().themeColor1;
+            else
+                spriteRenderer.color = other.GetComponentInChildren<MoveSprite>().themeColor2;
+        }
+    }
+}

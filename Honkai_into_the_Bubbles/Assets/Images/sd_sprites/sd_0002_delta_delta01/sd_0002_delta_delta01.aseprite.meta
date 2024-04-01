@@ -1,0 +1,5767 @@
+fileFormatVersion: 2
+guid: 9f648660112075749aa628bc8f22c088
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: 62a9f0aa5b59740cfbadc7e5f9823bb0, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+    swizzle: 50462976
+    isReadable: 0
+    streamingMipmaps: 0
+    streamingMipmapsPriority: 0
+    vTOnly: 0
+    ignoreMipmapLimit: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    flipbookRows: 0
+    flipbookColumns: 0
+    ignorePngGamma: 0
+    cookieMode: 0
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  previousAsepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  asepriteImporterSettings:
+    fileImportMode: 1
+    importHiddenLayers: 0
+    layerImportMode: 1
+    defaultPivotSpace: 0
+    defaultPivotAlignment: 7
+    customPivotPosition: {x: 0.5, y: 0.5}
+    mosaicPadding: 4
+    spritePadding: 0
+    generateModelPrefab: 1
+    generateAnimationClips: 1
+    addSortingGroup: 1
+    addShadowCasters: 0
+  importFileNodeState: 1
+  platformSettingsDirtyTick: 0
+  textureAssetName: 
+  singleSpriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 0, y: 0}
+  animatedSpriteImportData:
+  - name: sd_0002_delta_delta01_Frame_5
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 844
+      width: 17
+      height: 30
+    spriteID: 581fe3c3f1d4ed44a986ae1c3ed59dad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 844}
+  - name: sd_0002_delta_delta01_Frame_6
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 580
+      width: 17
+      height: 31
+    spriteID: c4b128616f93da042b3690ba5b39fee3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 580}
+  - name: sd_0002_delta_delta01_Frame_7
+    originalName: 
+    pivot: {x: 0.6190476, y: -1.1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 749
+      width: 21
+      height: 30
+    spriteID: 0c4d8c91f49f1af4c9bb84c5aa8da3e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 749}
+  - name: sd_0002_delta_delta01_Frame_8
+    originalName: 
+    pivot: {x: 0.6190476, y: -1.0645161}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 386
+      width: 21
+      height: 31
+    spriteID: a400af60c2a74d245b8ce8d98839ec1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 386}
+  - name: sd_0002_delta_delta01_Frame_21
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 882
+      width: 17
+      height: 30
+    spriteID: 8bf6c02fe2e836f4d9461d57152f66b6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 882}
+  - name: sd_0002_delta_delta01_Frame_22
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.1034483}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 396
+      width: 17
+      height: 29
+    spriteID: a7985ccecffc3c149943919b6ae7b697
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 396}
+  - name: sd_0002_delta_delta01_Frame_23
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.1034483}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 433
+      width: 17
+      height: 29
+    spriteID: cce7a99a57fdc0643bf3d92376a97fc6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 433}
+  - name: sd_0002_delta_delta01_Frame_24
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 920
+      width: 17
+      height: 30
+    spriteID: 9b59f9431d8b48a438a5e583882186e2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 920}
+  - name: sd_0002_delta_delta01_Frame_25
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.1034483}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 470
+      width: 17
+      height: 29
+    spriteID: ec6cc6395e23b9b4198a8e7cf278976e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 470}
+  - name: sd_0002_delta_delta01_Frame_26
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.1034483}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 507
+      width: 17
+      height: 29
+    spriteID: eefc1ae5d21aa024c94c43923ddd7b0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 507}
+  - name: sd_0002_delta_delta01_Frame_27
+    originalName: 
+    pivot: {x: 0.38888893, y: -1.1724138}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 736
+      width: 18
+      height: 29
+    spriteID: 61a654aad786004429b8eb708a545ac8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 736}
+  - name: sd_0002_delta_delta01_Frame_28
+    originalName: 
+    pivot: {x: 0.42105263, y: -1.1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 291
+      y: 348
+      width: 19
+      height: 30
+    spriteID: 9a5e109dac2978c47ab818d8967931bb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 291, y: 348}
+  - name: sd_0002_delta_delta01_Frame_29
+    originalName: 
+    pivot: {x: 0.42105263, y: -1.2142857}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 472
+      width: 19
+      height: 28
+    spriteID: 6724e5d4d757a4148971bfa9f35ea1df
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 472}
+  - name: sd_0002_delta_delta01_Frame_30
+    originalName: 
+    pivot: {x: 0.38888893, y: -1.1724138}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 773
+      width: 18
+      height: 29
+    spriteID: cd7b37684ef47fc4882a6610db22cac8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 773}
+  - name: sd_0002_delta_delta01_Frame_31
+    originalName: 
+    pivot: {x: 0.42105263, y: -1.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 508
+      width: 19
+      height: 28
+    spriteID: eccf1c951d8069048829c3f9f260d3e3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 508}
+  - name: sd_0002_delta_delta01_Frame_32
+    originalName: 
+    pivot: {x: 0.42105263, y: -1.2142857}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 544
+      width: 19
+      height: 28
+    spriteID: cf8c459502e891a45bb48c50a5856f27
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 544}
+  - name: sd_0002_delta_delta01_Frame_40
+    originalName: 
+    pivot: {x: 0.70588243, y: -0.8}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 857
+      width: 34
+      height: 40
+    spriteID: 7ed655acf4e6e4a49a5f188ba9999f8d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 857}
+  - name: sd_0002_delta_delta01_Frame_42
+    originalName: 
+    pivot: {x: 0.6521739, y: -0.7837838}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 767
+      width: 23
+      height: 37
+    spriteID: 0675759f93ac7af478a56b86b8b7ea62
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 767}
+  - name: sd_0002_delta_delta01_Frame_43
+    originalName: 
+    pivot: {x: 0.4666667, y: -1.625}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 296
+      y: 564
+      width: 15
+      height: 24
+    spriteID: 062346d11ea738b4c9bce8d2225eeed4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 296, y: 564}
+  - name: sd_0002_delta_delta01_Frame_45
+    originalName: 
+    pivot: {x: 0.66666675, y: -0.39024392}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 260
+      width: 18
+      height: 41
+    spriteID: 7a7f9342d8f2ae34ba70b030046bec67
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 260}
+  - name: sd_0002_delta_delta01_Frame_46
+    originalName: 
+    pivot: {x: 0.625, y: -0.425}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 430
+      width: 16
+      height: 40
+    spriteID: ead4ecac3a3dff947a47b47383a05a98
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 430}
+  - name: sd_0002_delta_delta01_Frame_47
+    originalName: 
+    pivot: {x: 0.53846157, y: -0.75}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 402
+      width: 13
+      height: 32
+    spriteID: ba914722bb67be24da0536ddafbc6907
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 402}
+  - name: sd_0002_delta_delta01_Frame_48
+    originalName: 
+    pivot: {x: 0.6000001, y: -0.80645156}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 922
+      width: 15
+      height: 31
+    spriteID: 3bc647559ab19af4bbf94902a705b5a1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 922}
+  - name: sd_0002_delta_delta01_Frame_49
+    originalName: 
+    pivot: {x: 0.70000005, y: -1.375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 996
+      width: 20
+      height: 24
+    spriteID: a4bc1ca13cf858c478b2787a005afc1d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 996}
+  - name: sd_0002_delta_delta01_Frame_50
+    originalName: 
+    pivot: {x: 0.7692308, y: -1.32}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 4
+      width: 26
+      height: 25
+    spriteID: 59ddf267fc329644cbb2b4bcd74bcfb8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 4}
+  - name: sd_0002_delta_delta01_Frame_52
+    originalName: 
+    pivot: {x: 0.4918033, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 211
+      width: 61
+      height: 41
+    spriteID: 68e58e2741e5d134887bb4f054c243ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 211}
+  - name: sd_0002_delta_delta01_Frame_53
+    originalName: 
+    pivot: {x: 0.5, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 554
+      width: 60
+      height: 41
+    spriteID: 85057c4f688d43c4a9a68fd633a55bda
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 554}
+  - name: sd_0002_delta_delta01_Frame_55
+    originalName: 
+    pivot: {x: 0.5081967, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 260
+      width: 61
+      height: 41
+    spriteID: 404ebf5748dba254a8ef90f029e1b432
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 260}
+  - name: sd_0002_delta_delta01_Frame_56
+    originalName: 
+    pivot: {x: 0.5, y: -0.55813956}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 56
+      width: 60
+      height: 43
+    spriteID: d2fb7f26a9bf59c4e9a61386410e3ff8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 56}
+  - name: sd_0002_delta_delta01_Frame_57
+    originalName: 
+    pivot: {x: 0.5, y: -0.68421054}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 897
+      width: 60
+      height: 38
+    spriteID: 0b5c81d2919ccb149bc136a7fcdb253f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 897}
+  - name: sd_0002_delta_delta01_Frame_58
+    originalName: 
+    pivot: {x: 0.42857137, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 133
+      y: 729
+      width: 14
+      height: 30
+    spriteID: e3160209158e05f47ae4bb44f9204986
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 133, y: 729}
+  - name: sd_0002_delta_delta01_Frame_59
+    originalName: 
+    pivot: {x: 0.42857137, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 133
+      y: 649
+      width: 14
+      height: 31
+    spriteID: 1482c7d933775784b94bd705eda1ac34
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 133, y: 649}
+  - name: sd_0002_delta_delta01_Frame_60
+    originalName: 
+    pivot: {x: 0.42857137, y: -0.94117653}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 772
+      width: 14
+      height: 34
+    spriteID: 9e6c795076c67f141a7ce73d90af6959
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 772}
+  - name: sd_0002_delta_delta01_Frame_61
+    originalName: 
+    pivot: {x: 0.42857137, y: -0.8421053}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 295
+      width: 14
+      height: 38
+    spriteID: 143dda360f01a5e4b8366cece3f17a52
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 295}
+  - name: sd_0002_delta_delta01_Frame_62
+    originalName: 
+    pivot: {x: 0.42857137, y: -0.7619048}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 179
+      y: 773
+      width: 14
+      height: 42
+    spriteID: 5497d9811048ec1489df03f554f18c2a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 179, y: 773}
+  - name: sd_0002_delta_delta01_Frame_67
+    originalName: 
+    pivot: {x: 0.6470588, y: -1.1034483}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 544
+      width: 17
+      height: 29
+    spriteID: c4c7d2b9bfedba8469096c7b8f3e482f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 544}
+  - name: sd_0002_delta_delta01_Frame_68
+    originalName: 
+    pivot: {x: 0.6000001, y: -1.1851852}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 442
+      width: 15
+      height: 27
+    spriteID: 440a0527dbb200947b91d1336faae30a
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 442}
+  - name: sd_0002_delta_delta01_Frame_69
+    originalName: 
+    pivot: {x: 0.6000001, y: -1.1851852}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 477
+      width: 15
+      height: 27
+    spriteID: ce9536b4e17f2174ca11c95629d94f83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 477}
+  - name: sd_0002_delta_delta01_Frame_70
+    originalName: 
+    pivot: {x: 0.6000001, y: -1.1851852}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 512
+      width: 15
+      height: 27
+    spriteID: 9c38ac86b231512469188b3f09fe0acf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 512}
+  - name: sd_0002_delta_delta01_Frame_71
+    originalName: 
+    pivot: {x: 0.56250006, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 179
+      width: 16
+      height: 28
+    spriteID: b9a029c1042dbc44d99da9f85c516038
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 179}
+  - name: sd_0002_delta_delta01_Frame_72
+    originalName: 
+    pivot: {x: 0.6363637, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 289
+      y: 524
+      width: 22
+      height: 30
+    spriteID: 455e67fa49b66cc48956b36967fb07c1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 289, y: 524}
+  - name: sd_0002_delta_delta01_Frame_78
+    originalName: 
+    pivot: {x: 0.31372547, y: -0.96875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 689
+      width: 51
+      height: 32
+    spriteID: 5160672efd5dfe24d9356d0a293effde
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 689}
+  - name: sd_0002_delta_delta01_Frame_79
+    originalName: 
+    pivot: {x: 0.3076923, y: -0.96875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 649
+      width: 52
+      height: 32
+    spriteID: 9d0bca08105ab544490c0cd2b2efdcc3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 649}
+  - name: sd_0002_delta_delta01_Frame_80
+    originalName: 
+    pivot: {x: 0.6956521, y: -1.1724138}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 596
+      width: 23
+      height: 29
+    spriteID: b79e0223f24be204381f654495ec25fe
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 596}
+  - name: sd_0002_delta_delta01_Frame_82
+    originalName: 
+    pivot: {x: 0.6, y: -1.423077}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 102
+      width: 40
+      height: 26
+    spriteID: 05c601e0a9067d5479ddccee519b372e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 102}
+  - name: sd_0002_delta_delta01_Frame_95
+    originalName: 
+    pivot: {x: 0.5, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 603
+      width: 60
+      height: 41
+    spriteID: 718cd408ac9f7e14e92310c4054717ba
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 603}
+  - name: sd_0002_delta_delta01_Frame_97
+    originalName: 
+    pivot: {x: 0.5081967, y: -0.47727272}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 61
+      height: 44
+    spriteID: 0a3efb354593eef4c914ce131c1f9667
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 4}
+  - name: sd_0002_delta_delta01_Frame_98
+    originalName: 
+    pivot: {x: 0.5, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 652
+      width: 60
+      height: 41
+    spriteID: cfec7b3dd88f16b49bbdc21d50943132
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 652}
+  - name: sd_0002_delta_delta01_Frame_99
+    originalName: 
+    pivot: {x: 0.5, y: -0.74285716}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 943
+      width: 60
+      height: 35
+    spriteID: c098955de2eb99d478658b51ff7f5b5b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 943}
+  - name: sd_0002_delta_delta01_Frame_100
+    originalName: 
+    pivot: {x: 0.5, y: -1.375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 159
+      width: 30
+      height: 24
+    spriteID: f245250da6194f843980ab260ba33026
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 159}
+  - name: sd_0002_delta_delta01_Frame_101
+    originalName: 
+    pivot: {x: 0.53571427, y: -1.32}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 249
+      width: 28
+      height: 25
+    spriteID: 6161f1352b0871343a8d87ccb16a7e76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 249}
+  - name: sd_0002_delta_delta01_Frame_102
+    originalName: 
+    pivot: {x: 0.67857146, y: -1.2692307}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 58
+      width: 28
+      height: 26
+    spriteID: 8f76f72ddae209e4aa59608fd963611b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 58}
+  - name: sd_0002_delta_delta01_Frame_103
+    originalName: 
+    pivot: {x: 0.75, y: -1.2692307}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 987
+      width: 32
+      height: 26
+    spriteID: dc18260c9bcb0b5468f86c14537f6acb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 987}
+  - name: sd_0002_delta_delta01_Frame_104
+    originalName: 
+    pivot: {x: 0.7837838, y: -1.2692307}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 393
+      width: 37
+      height: 26
+    spriteID: a30def663da866d46bc20b6c3e04ca83
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 393}
+  - name: sd_0002_delta_delta01_Frame_117
+    originalName: 
+    pivot: {x: 0.36363634, y: -0.99999994}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 386
+      width: 22
+      height: 31
+    spriteID: f4250a7bcbcf6f643a9c9bf68df42036
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 386}
+  - name: sd_0002_delta_delta01_Frame_118
+    originalName: 
+    pivot: {x: 0.39999995, y: -0.9375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 689
+      width: 15
+      height: 32
+    spriteID: 21c51ca9296399241bc0d48d7d3a9a13
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 689}
+  - name: sd_0002_delta_delta01_Frame_124
+    originalName: 
+    pivot: {x: 0.2727273, y: -0.64102566}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 969
+      width: 33
+      height: 39
+    spriteID: 39482ce56874d2a4aa6e9739445defe6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 969}
+  - name: sd_0002_delta_delta01_Frame_129
+    originalName: 
+    pivot: {x: 0.33333328, y: -0.509434}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 461
+      width: 18
+      height: 53
+    spriteID: d246999a8ccdb2542a7deb29ad89453e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 461}
+  - name: sd_0002_delta_delta01_Frame_130
+    originalName: 
+    pivot: {x: 0.37499994, y: -0.54901963}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 773
+      width: 16
+      height: 51
+    spriteID: 461cca44959d9b54ca22a76b4daaf89f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 773}
+  - name: sd_0002_delta_delta01_Frame_131
+    originalName: 
+    pivot: {x: 0.4615384, y: -0.76315796}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 181
+      y: 461
+      width: 13
+      height: 38
+    spriteID: 2e661a1fdf619524fa55d7a74c96c628
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 181, y: 461}
+  - name: sd_0002_delta_delta01_Frame_132
+    originalName: 
+    pivot: {x: 0.4615384, y: -0.8571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 961
+      width: 13
+      height: 35
+    spriteID: 276f1a94e5d768043967b954410bd3d6
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 961}
+  - name: sd_0002_delta_delta01_Frame_133
+    originalName: 
+    pivot: {x: 0.29999995, y: -1.1538461}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 810
+      width: 20
+      height: 26
+    spriteID: 618d6b131e95fbc42bc0fa0ada6942ce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 810}
+  - name: sd_0002_delta_delta01_Frame_134
+    originalName: 
+    pivot: {x: 0.2608695, y: -1.111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 260
+      width: 23
+      height: 27
+    spriteID: 33cb8ddfd7b2cba48b549f4fec82ee03
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 260}
+  - name: sd_0002_delta_delta01_Frame_136
+    originalName: 
+    pivot: {x: 0.4918033, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 309
+      width: 61
+      height: 41
+    spriteID: 07816201448e6d6479babe0d2cef9772
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 309}
+  - name: sd_0002_delta_delta01_Frame_137
+    originalName: 
+    pivot: {x: 0.5, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 701
+      width: 60
+      height: 41
+    spriteID: 69ff5c62726a55447aecc49c2ae0ad45
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 701}
+  - name: sd_0002_delta_delta01_Frame_152
+    originalName: 
+    pivot: {x: 0.39999995, y: -1.2307693}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 296
+      y: 58
+      width: 15
+      height: 26
+    spriteID: 9b971b2f7291e294cb9df13ab95effed
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 296, y: 58}
+  - name: sd_0002_delta_delta01_Frame_153
+    originalName: 
+    pivot: {x: 0.39999995, y: -1.1481481}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 547
+      width: 15
+      height: 27
+    spriteID: 51c00b4a710f0954bbe5ec7f76c85e3e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 547}
+  - name: sd_0002_delta_delta01_Frame_154
+    originalName: 
+    pivot: {x: 0.39999995, y: -1.1481481}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 582
+      width: 15
+      height: 27
+    spriteID: 5eb01687580dce04587fd291f9473d49
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 582}
+  - name: sd_0002_delta_delta01_Frame_155
+    originalName: 
+    pivot: {x: 0.43750003, y: -1.1071428}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 215
+      width: 16
+      height: 28
+    spriteID: a607cedd802d3694896393739cead5d8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 215}
+  - name: sd_0002_delta_delta01_Frame_156
+    originalName: 
+    pivot: {x: 0.36363634, y: -1.0333333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 633
+      width: 22
+      height: 30
+    spriteID: ff8c530506a9e6b4ebffe5f95bcad2fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 633}
+  - name: sd_0002_delta_delta01_Frame_157
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 958
+      width: 17
+      height: 30
+    spriteID: f537c60c5e37f9949a40ccbc7c49861c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 958}
+  - name: sd_0002_delta_delta01_Frame_158
+    originalName: 
+    pivot: {x: 0.47058824, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 358
+      width: 17
+      height: 30
+    spriteID: c5ae641de98190b4fa6110f9ebfe1b76
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 358}
+  - name: sd_0002_delta_delta01_Frame_159
+    originalName: 
+    pivot: {x: 0.4666667, y: -1.1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 103
+      width: 15
+      height: 30
+    spriteID: 989e7c063a4daa74695fc960236a3693
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 103}
+  - name: sd_0002_delta_delta01_Frame_160
+    originalName: 
+    pivot: {x: 0.39999998, y: -1.137931}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 291
+      y: 596
+      width: 20
+      height: 29
+    spriteID: 1004035b4b510cf469d72efd08c884f9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 291, y: 596}
+  - name: sd_0002_delta_delta01_Frame_168
+    originalName: 
+    pivot: {x: 0.38461542, y: -1.423077}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 359
+      width: 39
+      height: 26
+    spriteID: 7fc5950f55cebf548a8415f4e4664a39
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 359}
+  - name: sd_0002_delta_delta01_Frame_169
+    originalName: 
+    pivot: {x: 0.10714284, y: -1.52}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 282
+      width: 28
+      height: 25
+    spriteID: 211e1b76ede99f9418f27d3ddeaa2776
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 282}
+  - name: sd_0002_delta_delta01_Frame_171
+    originalName: 
+    pivot: {x: 0.6666666, y: -1.0303031}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 986
+      width: 54
+      height: 33
+    spriteID: 76fcf67ab25bc504da765fe570348825
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 986}
+  - name: sd_0002_delta_delta01_Frame_172
+    originalName: 
+    pivot: {x: 0.68421054, y: -0.7727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 107
+      width: 57
+      height: 44
+    spriteID: 7dc161cdba6a123468e88f143935d495
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 107}
+  - name: sd_0002_delta_delta01_Frame_173
+    originalName: 
+    pivot: {x: 0.5714286, y: -1.4782609}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 198
+      width: 42
+      height: 23
+    spriteID: 37174f7bdc85b884fb47ab2e4e25b6e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 198}
+  - name: sd_0002_delta_delta01_Frame_174
+    originalName: 
+    pivot: {x: 0.53846157, y: -1.4782609}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 628
+      width: 39
+      height: 23
+    spriteID: 2a7297732443651429f767e5fd81d3fd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 628}
+  - name: sd_0002_delta_delta01_Frame_175
+    originalName: 
+    pivot: {x: 0.46875, y: -1.4166666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 896
+      width: 32
+      height: 24
+    spriteID: 6e3b339d0553f804a9805b063b77878e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 896}
+  - name: sd_0002_delta_delta01_Frame_176
+    originalName: 
+    pivot: {x: 0.32, y: -1.36}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 37
+      width: 25
+      height: 25
+    spriteID: 8961c41b1a444f74ab03b7172972adb7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 37}
+  - name: sd_0002_delta_delta01_Frame_181
+    originalName: 
+    pivot: {x: 0.5081967, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 358
+      width: 61
+      height: 41
+    spriteID: ae36733d443dbca46a1fea530e903314
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 358}
+  - name: sd_0002_delta_delta01_Frame_182
+    originalName: 
+    pivot: {x: 0.5, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 750
+      width: 60
+      height: 41
+    spriteID: 1c4ec3df60e1d40439ac47bc9042c564
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 750}
+  - name: sd_0002_delta_delta01_Frame_190
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.3103448}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 85
+      width: 74
+      height: 29
+    spriteID: b6b257a76a4cb424089c928ad427a0b1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 85}
+  - name: sd_0002_delta_delta01_Frame_191
+    originalName: 
+    pivot: {x: 0.54285717, y: -1.2333333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 122
+      width: 70
+      height: 30
+    spriteID: cb9550d93fa907146ae9147e5c15b258
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 122}
+  - name: sd_0002_delta_delta01_Frame_192
+    originalName: 
+    pivot: {x: 0.59375, y: -1.3703704}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 614
+      width: 64
+      height: 27
+    spriteID: 31b01de6cbeb7a54b874898c9924f0ab
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 614}
+  - name: sd_0002_delta_delta01_Frame_193
+    originalName: 
+    pivot: {x: 0.36363634, y: -1.1785715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 863
+      width: 22
+      height: 28
+    spriteID: c0a062dfbab7a2d4eaaf48ededf5a4c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 863}
+  - name: sd_0002_delta_delta01_Frame_194
+    originalName: 
+    pivot: {x: 0.42857146, y: -1.2692307}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 295
+      width: 21
+      height: 26
+    spriteID: 70cf1951fe2be874380ebe1c86c42cae
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 295}
+  - name: sd_0002_delta_delta01_Frame_195
+    originalName: 
+    pivot: {x: 0.42857146, y: -1.2692307}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 329
+      width: 21
+      height: 26
+    spriteID: 63485a723da44964bb711cff6ad67ccc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 329}
+  - name: sd_0002_delta_delta01_Frame_196
+    originalName: 
+    pivot: {x: 0.42857146, y: -1.2692307}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 363
+      width: 21
+      height: 26
+    spriteID: 0607014b945cae449b51514f1d864aff
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 363}
+  - name: sd_0002_delta_delta01_Frame_197
+    originalName: 
+    pivot: {x: 0.39999998, y: -1.2222222}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 437
+      width: 20
+      height: 27
+    spriteID: d183abb26c18f404694132185abdd045
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 437}
+  - name: sd_0002_delta_delta01_Frame_198
+    originalName: 
+    pivot: {x: 0.4666667, y: -1.137931}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 251
+      width: 15
+      height: 29
+    spriteID: 093cda5dab18b364ba94bfbf7cee55db
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 251}
+  - name: sd_0002_delta_delta01_Frame_199
+    originalName: 
+    pivot: {x: 0.6190476, y: -1.1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 787
+      width: 21
+      height: 30
+    spriteID: 37e8b6f8bbd8d66478e2a345dd48876f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 787}
+  - name: sd_0002_delta_delta01_Frame_200
+    originalName: 
+    pivot: {x: 0.6190476, y: -1.1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 825
+      width: 21
+      height: 30
+    spriteID: 64a6943e3908b6c40ad48fb9509a3af7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 825}
+  - name: sd_0002_delta_delta01_Frame_0
+    originalName: 
+    pivot: {x: 0.5609756, y: -0.73333335}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 478
+      width: 41
+      height: 45
+    spriteID: 633a6d8a24834194c9220aafe829c903
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 478}
+  - name: sd_0002_delta_delta01_Frame_1
+    originalName: 
+    pivot: {x: 0.52941185, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 619
+      width: 17
+      height: 31
+    spriteID: 740bdf4f63fec4348ba55a90212f5d5f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 619}
+  - name: sd_0002_delta_delta01_Frame_2
+    originalName: 
+    pivot: {x: 0.52941185, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 397
+      width: 17
+      height: 32
+    spriteID: bd18f133ede25a747b2db32f1bf5c981
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 397}
+  - name: sd_0002_delta_delta01_Frame_3
+    originalName: 
+    pivot: {x: 0.38095236, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 425
+      width: 21
+      height: 31
+    spriteID: d0d6f6dfb11f1e043a97cba67583a583
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 425}
+  - name: sd_0002_delta_delta01_Frame_4
+    originalName: 
+    pivot: {x: 0.38095236, y: -1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 524
+      width: 21
+      height: 32
+    spriteID: 33d2c348e02a3004d856f09f6ea13d9f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 524}
+  - name: sd_0002_delta_delta01_Frame_9
+    originalName: 
+    pivot: {x: 0.52941185, y: -1.137931}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 581
+      width: 17
+      height: 29
+    spriteID: eb230b2f3d347814da83f054b921dcb4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 581}
+  - name: sd_0002_delta_delta01_Frame_10
+    originalName: 
+    pivot: {x: 0.52941185, y: -1.1034483}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 618
+      width: 17
+      height: 29
+    spriteID: ce17147be60c961418d3ba798321d034
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 618}
+  - name: sd_0002_delta_delta01_Frame_11
+    originalName: 
+    pivot: {x: 0.52941185, y: -1.1785715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 814
+      width: 17
+      height: 28
+    spriteID: 09a1bf6697496f24ba23270945b8ed60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 814}
+  - name: sd_0002_delta_delta01_Frame_12
+    originalName: 
+    pivot: {x: 0.52941185, y: -1.137931}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 655
+      width: 17
+      height: 29
+    spriteID: f2f181628783ccb4ca8615d7c64b9a78
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 655}
+  - name: sd_0002_delta_delta01_Frame_13
+    originalName: 
+    pivot: {x: 0.52941185, y: -1.1034483}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 692
+      width: 17
+      height: 29
+    spriteID: db89856a50837f645bc6f9e065ac3032
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 692}
+  - name: sd_0002_delta_delta01_Frame_14
+    originalName: 
+    pivot: {x: 0.52941185, y: -1.1785715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 850
+      width: 17
+      height: 28
+    spriteID: e5d6b967fe9e87b4cb6b2721447f5a63
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 850}
+  - name: sd_0002_delta_delta01_Frame_15
+    originalName: 
+    pivot: {x: 0.6111111, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 924
+      width: 18
+      height: 31
+    spriteID: 2bdecae55e3528646a3632947a686d4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 924}
+  - name: sd_0002_delta_delta01_Frame_16
+    originalName: 
+    pivot: {x: 0.57894737, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 936
+      width: 19
+      height: 31
+    spriteID: e588bf70a12cae740a9dd0a86de48465
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 936}
+  - name: sd_0002_delta_delta01_Frame_17
+    originalName: 
+    pivot: {x: 0.57894737, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 633
+      width: 19
+      height: 30
+    spriteID: e9959805a15f6a7459112514b573146d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 633}
+  - name: sd_0002_delta_delta01_Frame_18
+    originalName: 
+    pivot: {x: 0.6111111, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 963
+      width: 18
+      height: 31
+    spriteID: b0b2269a951399b48ada0fe1edfd4ffc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 963}
+  - name: sd_0002_delta_delta01_Frame_19
+    originalName: 
+    pivot: {x: 0.57894737, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 975
+      width: 19
+      height: 31
+    spriteID: 04582233e0ddd3f4bae011f5d001c7c7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 975}
+  - name: sd_0002_delta_delta01_Frame_20
+    originalName: 
+    pivot: {x: 0.57894737, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 671
+      width: 19
+      height: 30
+    spriteID: 8de858e5d8a1dfd4898175f3611e5514
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 671}
+  - name: sd_0002_delta_delta01_Frame_33
+    originalName: 
+    pivot: {x: 0.6363637, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 425
+      width: 22
+      height: 31
+    spriteID: 8240ec4a88b78ae49bbb85379896f504
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 425}
+  - name: sd_0002_delta_delta01_Frame_34
+    originalName: 
+    pivot: {x: 0.6000001, y: -0.96875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 572
+      width: 15
+      height: 32
+    spriteID: 48e42ea3f3797cb49b98f91918e10049
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 572}
+  - name: sd_0002_delta_delta01_Frame_36
+    originalName: 
+    pivot: {x: 0.5238095, y: -0.2857143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 144
+      width: 21
+      height: 56
+    spriteID: 5abc8e58e36a8b04196ca6649e276770
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 144}
+  - name: sd_0002_delta_delta01_Frame_37
+    originalName: 
+    pivot: {x: 0.5416666, y: -0.30357143}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 905
+      width: 24
+      height: 56
+    spriteID: d2df6ece8e8147c4ca92f52fcbd7c826
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 905}
+  - name: sd_0002_delta_delta01_Frame_38
+    originalName: 
+    pivot: {x: 0.38095236, y: -0.78048784}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 690
+      width: 21
+      height: 41
+    spriteID: a29f93cfb2343f54fa9880b3ea7985c9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 690}
+  - name: sd_0002_delta_delta01_Frame_64
+    originalName: 
+    pivot: {x: 0.36363634, y: -0.41509435}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 263
+      width: 22
+      height: 53
+    spriteID: aecd65861b6efdd4b98f4970289ff534
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 263}
+  - name: sd_0002_delta_delta01_Frame_65
+    originalName: 
+    pivot: {x: 0.36363634, y: -0.35185185}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 82
+      width: 22
+      height: 54
+    spriteID: 281ad5e1d2598074798877f253f55fb1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 82}
+  - name: sd_0002_delta_delta01_Frame_66
+    originalName: 
+    pivot: {x: 0.52, y: -0.40425533}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 208
+      width: 25
+      height: 47
+    spriteID: eae6937df4510c3468c156ce4ae501d4
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 208}
+  - name: sd_0002_delta_delta01_Frame_73
+    originalName: 
+    pivot: {x: 0.52941185, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 658
+      width: 17
+      height: 31
+    spriteID: 19eb6309865473944a34ac0a8db2a342
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 658}
+  - name: sd_0002_delta_delta01_Frame_74
+    originalName: 
+    pivot: {x: 0.52941185, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 228
+      y: 697
+      width: 17
+      height: 31
+    spriteID: 6a4e782baf95db244b6c7a2eb5afa033
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 228, y: 697}
+  - name: sd_0002_delta_delta01_Frame_75
+    originalName: 
+    pivot: {x: 0.57142854, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 325
+      width: 14
+      height: 31
+    spriteID: ebc8dcd522d484a43a7de9a3d530c90d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 325}
+  - name: sd_0002_delta_delta01_Frame_76
+    originalName: 
+    pivot: {x: 0.631579, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 709
+      width: 19
+      height: 30
+    spriteID: 0940c651f34a77046a97cd85a773c388
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 709}
+  - name: sd_0002_delta_delta01_Frame_84
+    originalName: 
+    pivot: {x: 0.6153847, y: -1.3333333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 324
+      width: 39
+      height: 27
+    spriteID: 19863d598c9230b4ab5c8c9bd934ce97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 324}
+  - name: sd_0002_delta_delta01_Frame_85
+    originalName: 
+    pivot: {x: 0.862069, y: -1.52}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 126
+      width: 29
+      height: 25
+    spriteID: ec611964861128d4f9adc9f4ab414d6c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 126}
+  - name: sd_0002_delta_delta01_Frame_87
+    originalName: 
+    pivot: {x: 0.3333333, y: -1.0303031}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 531
+      width: 54
+      height: 33
+    spriteID: 8a0ada0367c29b6438f8ec0ec049b14e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 531}
+  - name: sd_0002_delta_delta01_Frame_88
+    originalName: 
+    pivot: {x: 0.31578946, y: -0.7727273}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 159
+      width: 57
+      height: 44
+    spriteID: 7500cb10389f1d4449654cdf22a933d5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 159}
+  - name: sd_0002_delta_delta01_Frame_89
+    originalName: 
+    pivot: {x: 0.42857143, y: -1.4782609}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 229
+      width: 42
+      height: 23
+    spriteID: 368db750167b6894d9c07e8d18b81b6b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 229}
+  - name: sd_0002_delta_delta01_Frame_90
+    originalName: 
+    pivot: {x: 0.46153846, y: -1.4782609}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 659
+      width: 39
+      height: 23
+    spriteID: 8f01b083b379cda4597f2b494065d5da
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 659}
+  - name: sd_0002_delta_delta01_Frame_91
+    originalName: 
+    pivot: {x: 0.53125, y: -1.4166666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 928
+      width: 32
+      height: 24
+    spriteID: 383ec78e166838f468ec0e2b430395fb
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 928}
+  - name: sd_0002_delta_delta01_Frame_92
+    originalName: 
+    pivot: {x: 0.68, y: -1.36}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 70
+      width: 25
+      height: 25
+    spriteID: c1dd92f66dfd3a546bb59aadf9a8b988
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 70}
+  - name: sd_0002_delta_delta01_Frame_94
+    originalName: 
+    pivot: {x: 0.4918033, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 407
+      width: 61
+      height: 41
+    spriteID: f80bda0c0df46514bbb8ed3a21eb3083
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 407}
+  - name: sd_0002_delta_delta01_Frame_106
+    originalName: 
+    pivot: {x: 0.49999997, y: -1.21875}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 4
+      width: 74
+      height: 32
+    spriteID: 091c51a19fa69a548b7b4b21d593cf85
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 4}
+  - name: sd_0002_delta_delta01_Frame_107
+    originalName: 
+    pivot: {x: 0.4571429, y: -1.1515151}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 44
+      width: 70
+      height: 33
+    spriteID: 3e3ae6da5491e0743919b7a687fd7af2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 44}
+  - name: sd_0002_delta_delta01_Frame_108
+    originalName: 
+    pivot: {x: 0.40625, y: -1.2}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 344
+      width: 64
+      height: 30
+    spriteID: f9f7a62f2798e7b4287fdf71b19d6c18
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 344}
+  - name: sd_0002_delta_delta01_Frame_109
+    originalName: 
+    pivot: {x: 0.70000005, y: -1.1785715}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 852
+      width: 20
+      height: 28
+    spriteID: c15382088c24679448a82e3645292bcf
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 852}
+  - name: sd_0002_delta_delta01_Frame_110
+    originalName: 
+    pivot: {x: 0.5714286, y: -1.1851852}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 747
+      width: 21
+      height: 27
+    spriteID: 0135b7f79af31e1478e2a5d2a96dae4d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 747}
+  - name: sd_0002_delta_delta01_Frame_111
+    originalName: 
+    pivot: {x: 0.5714286, y: -1.1851852}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 782
+      width: 21
+      height: 27
+    spriteID: 31bbd94a99f92664ab2d269f3d71919d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 782}
+  - name: sd_0002_delta_delta01_Frame_112
+    originalName: 
+    pivot: {x: 0.5714286, y: -1.1851852}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 817
+      width: 21
+      height: 27
+    spriteID: 15bbaae3af0a2c44ba27680c2d99c125
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 817}
+  - name: sd_0002_delta_delta01_Frame_113
+    originalName: 
+    pivot: {x: 0.6, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 290
+      y: 888
+      width: 20
+      height: 28
+    spriteID: 322376e7bd9446140855fbfcbf005d0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 290, y: 888}
+  - name: sd_0002_delta_delta01_Frame_114
+    originalName: 
+    pivot: {x: 0.5333333, y: -1.0666667}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 141
+      width: 15
+      height: 30
+    spriteID: bf311608b74cb8346b45dbe84344d197
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 141}
+  - name: sd_0002_delta_delta01_Frame_115
+    originalName: 
+    pivot: {x: 0.38095236, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 671
+      width: 21
+      height: 31
+    spriteID: 520f6f59306aae04a8888b6712079844
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 671}
+  - name: sd_0002_delta_delta01_Frame_116
+    originalName: 
+    pivot: {x: 0.38095236, y: -1.032258}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 710
+      width: 21
+      height: 31
+    spriteID: 6d865403d348cd24da1217374279a1f8
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 710}
+  - name: sd_0002_delta_delta01_Frame_120
+    originalName: 
+    pivot: {x: 0.47619048, y: -0.7111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 522
+      width: 21
+      height: 45
+    spriteID: 3a7c40d3b007b5a41881a3e3854af558
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 522}
+  - name: sd_0002_delta_delta01_Frame_121
+    originalName: 
+    pivot: {x: 0.54999995, y: -0.7111111}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 575
+      width: 20
+      height: 45
+    spriteID: 72fc7c74a24004f4a8ef5b6e13ee389b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 575}
+  - name: sd_0002_delta_delta01_Frame_122
+    originalName: 
+    pivot: {x: 0.6190476, y: -1.0689656}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 899
+      width: 21
+      height: 29
+    spriteID: 9f9e513d0dd175c4187ddeff301dfc0c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 899}
+  - name: sd_0002_delta_delta01_Frame_126
+    originalName: 
+    pivot: {x: 0.34782606, y: -0.9142858}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 118
+      y: 812
+      width: 23
+      height: 35
+    spriteID: 77574a95405a65844abe02a5b3ffad59
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 118, y: 812}
+  - name: sd_0002_delta_delta01_Frame_127
+    originalName: 
+    pivot: {x: 0.5333333, y: -1.1724138}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 288
+      width: 15
+      height: 29
+    spriteID: 2afaefa9a50f90d4c85960e795a23c34
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 288}
+  - name: sd_0002_delta_delta01_Frame_139
+    originalName: 
+    pivot: {x: 0.5081967, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 456
+      width: 61
+      height: 41
+    spriteID: 68d7e6d3770c5b54b9f8f09ec151a263
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 456}
+  - name: sd_0002_delta_delta01_Frame_148
+    originalName: 
+    pivot: {x: 0.6363637, y: -0.33333334}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 857
+      width: 22
+      height: 57
+    spriteID: 7af091cb2e68c724c942bd0057ae3b71
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 857}
+  - name: sd_0002_delta_delta01_Frame_149
+    originalName: 
+    pivot: {x: 0.6363637, y: -0.36842105}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 115
+      y: 922
+      width: 22
+      height: 57
+    spriteID: 679e1ef90d3b07442aadc72b9d531aea
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 115, y: 922}
+  - name: sd_0002_delta_delta01_Frame_150
+    originalName: 
+    pivot: {x: 0.48000002, y: -0.8139535}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 122
+      y: 478
+      width: 25
+      height: 43
+    spriteID: f39dd13679db0444a80ba3c597a0313e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 122, y: 478}
+  - name: sd_0002_delta_delta01_Frame_151
+    originalName: 
+    pivot: {x: 0.35294113, y: -1.1428572}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 886
+      width: 17
+      height: 28
+    spriteID: e2e0790c8bea7614a99ded00da5a4dad
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 886}
+  - name: sd_0002_delta_delta01_Frame_162
+    originalName: 
+    pivot: {x: 0.6862745, y: -0.97058827}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 572
+      width: 51
+      height: 34
+    spriteID: beecc5d8161bf874fb040d8f90802698
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 572}
+  - name: sd_0002_delta_delta01_Frame_163
+    originalName: 
+    pivot: {x: 0.6923077, y: -1.1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 729
+      width: 52
+      height: 30
+    spriteID: 81c49ba3f1aa92748b588262fb1d782b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 729}
+  - name: sd_0002_delta_delta01_Frame_164
+    originalName: 
+    pivot: {x: 0.30434784, y: -1.1}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 348
+      width: 23
+      height: 30
+    spriteID: af44ae9cedc0c964a941f5acd7b39121
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 348}
+  - name: sd_0002_delta_delta01_Frame_166
+    originalName: 
+    pivot: {x: 0.39999998, y: -1.25}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 66
+      width: 40
+      height: 28
+    spriteID: 769b55f063e98864684d78f4bef45210
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 66}
+  - name: sd_0002_delta_delta01_Frame_178
+    originalName: 
+    pivot: {x: 0.4918033, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 505
+      width: 61
+      height: 41
+    spriteID: 504997c2e1c5e79459fc984474a1ae02
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 505}
+  - name: sd_0002_delta_delta01_Frame_179
+    originalName: 
+    pivot: {x: 0.5, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 799
+      width: 60
+      height: 41
+    spriteID: 008e062819d42be43ac33db308c94055
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 799}
+  - name: sd_0002_delta_delta01_Frame_183
+    originalName: 
+    pivot: {x: 0.5, y: -0.74285716}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 160
+      width: 60
+      height: 35
+    spriteID: ebe26d80cf495c547be0791215a2aa22
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 160}
+  - name: sd_0002_delta_delta01_Frame_184
+    originalName: 
+    pivot: {x: 0.53571427, y: -1.375}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 564
+      width: 28
+      height: 24
+    spriteID: faeb0610aa8e111419431a90547f87f7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 564}
+  - name: sd_0002_delta_delta01_Frame_185
+    originalName: 
+    pivot: {x: 0.4642857, y: -1.32}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 315
+      width: 28
+      height: 25
+    spriteID: 3ea7797cd7824c5418e211ffd1f67cce
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 315}
+  - name: sd_0002_delta_delta01_Frame_186
+    originalName: 
+    pivot: {x: 0.32142863, y: -1.2692307}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 92
+      width: 28
+      height: 26
+    spriteID: 9a5159ecdc0d6f743a26219154523955
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 92}
+  - name: sd_0002_delta_delta01_Frame_187
+    originalName: 
+    pivot: {x: 0.24999999, y: -1.2692307}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 739
+      width: 32
+      height: 26
+    spriteID: 6de108cdd6502da4d97b578846a9e678
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 739}
+  - name: sd_0002_delta_delta01_Frame_188
+    originalName: 
+    pivot: {x: 0.21621619, y: -1.2692307}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 427
+      width: 37
+      height: 26
+    spriteID: e32cd1f3e987fbc44826808c5b011015
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 427}
+  - name: sd_0002_delta_delta01_Frame_140
+    originalName: 
+    pivot: {x: 0.5, y: -0.5853659}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 848
+      width: 60
+      height: 41
+    spriteID: 062fb9a556bccff43b290e66c505af60
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 848}
+  - name: sd_0002_delta_delta01_Frame_141
+    originalName: 
+    pivot: {x: 0.5, y: -0.74285716}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 203
+      width: 60
+      height: 35
+    spriteID: 6e65d38680201f04498c48a67de484b5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 203}
+  - name: sd_0002_delta_delta01_Frame_142
+    originalName: 
+    pivot: {x: 0.57142854, y: -1.1071428}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 617
+      width: 14
+      height: 28
+    spriteID: 22452bf5ea2adbb4fbbcf03f4d355b5d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 617}
+  - name: sd_0002_delta_delta01_Frame_143
+    originalName: 
+    pivot: {x: 0.57142854, y: -1.0714285}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 653
+      width: 14
+      height: 28
+    spriteID: e0458bb6ad1c2fc43a8ebc22b1ebe32e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 653}
+  - name: sd_0002_delta_delta01_Frame_144
+    originalName: 
+    pivot: {x: 0.57142854, y: -0.90000004}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 319
+      y: 364
+      width: 14
+      height: 30
+    spriteID: 7c2212a90bf317448aea1e6384d1dd0e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 319, y: 364}
+  - name: sd_0002_delta_delta01_Frame_145
+    originalName: 
+    pivot: {x: 0.57142854, y: -0.6571429}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 729
+      width: 14
+      height: 35
+    spriteID: 62e886120fa21c84186e5bb8645a1b0b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 729}
+  - name: sd_0002_delta_delta01_Frame_146
+    originalName: 
+    pivot: {x: 0.57142854, y: -0.48717952}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 132
+      y: 246
+      width: 14
+      height: 39
+    spriteID: baf0871b9108c984fa22dbb98d61746b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 132, y: 246}
+  - name: sd_0002_delta_delta01_Frame_35
+    originalName: 
+    pivot: {x: 0.44444445, y: -0.5121951}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 309
+      width: 18
+      height: 41
+    spriteID: 86f2974af8c915f4791cded7168f31a9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 309}
+  - name: sd_0002_delta_delta01_Frame_39
+    originalName: 
+    pivot: {x: 0.5, y: -0.725}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 382
+      width: 48
+      height: 40
+    spriteID: f3c57c3f3741d744dadef05efa7c959d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 382}
+  - name: sd_0002_delta_delta01_Frame_41
+    originalName: 
+    pivot: {x: 0.4054054, y: -0.7567567}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 767
+      width: 37
+      height: 37
+    spriteID: f6b212acd61eed34a8f88b98eee04d2e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 767}
+  - name: sd_0002_delta_delta01_Frame_44
+    originalName: 
+    pivot: {x: 1.3333333, y: -0.49999997}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 188
+      y: 208
+      width: 6
+      height: 42
+    spriteID: 1e3aabe45f605f44993ff0731ed08072
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 188, y: 208}
+  - name: sd_0002_delta_delta01_Frame_51
+    originalName: 
+    pivot: {x: 0.48484847, y: -1.4583333}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 832
+      width: 33
+      height: 24
+    spriteID: f8c10175d13eefa40bce761b10dad7e7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 832}
+  - name: sd_0002_delta_delta01_Frame_54
+    originalName: 
+    pivot: {x: 0.51612896, y: -1.8181819}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 464
+      width: 31
+      height: 22
+    spriteID: 14a4df1df7848da45bb3b4a4bcd50906
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 464}
+  - name: sd_0002_delta_delta01_Frame_63
+    originalName: 
+    pivot: {x: 0.53846157, y: -0.30508474}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 960
+      width: 13
+      height: 59
+    spriteID: 528bea9b289c9cf48b521ef64e0ea59f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 960}
+  - name: sd_0002_delta_delta01_Frame_77
+    originalName: 
+    pivot: {x: 0.41025642, y: -0.99999994}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 4
+      width: 39
+      height: 31
+    spriteID: a6c0a05e8ccc1f64f97725c70574e090
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 4}
+  - name: sd_0002_delta_delta01_Frame_81
+    originalName: 
+    pivot: {x: 0.49019608, y: -2.1578948}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 4
+      width: 51
+      height: 19
+    spriteID: 27c7fff14d5a3bb49bc54ac517a62000
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 4}
+  - name: sd_0002_delta_delta01_Frame_83
+    originalName: 
+    pivot: {x: 0.48000002, y: -1.5652173}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 4
+      width: 50
+      height: 23
+    spriteID: 14c416f9dbd0b40459291e76ba46ea4e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 4}
+  - name: sd_0002_delta_delta01_Frame_86
+    originalName: 
+    pivot: {x: 0.47058827, y: -0.9268293}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 246
+      width: 51
+      height: 41
+    spriteID: 0be60156371cc4e49a7593227f241a29
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 246}
+  - name: sd_0002_delta_delta01_Frame_93
+    originalName: 
+    pivot: {x: 0.41176474, y: -1.5238096}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 191
+      width: 34
+      height: 21
+    spriteID: 722c29a8452b3a84ba8fc05ddd712837
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 191}
+  - name: sd_0002_delta_delta01_Frame_96
+    originalName: 
+    pivot: {x: 0.42424247, y: -1.9411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 353
+      y: 4
+      width: 33
+      height: 17
+    spriteID: 1ae13da97ee40c24d9ccf2f9d65baffd
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 353, y: 4}
+  - name: sd_0002_delta_delta01_Frame_105
+    originalName: 
+    pivot: {x: 0.4, y: -1.7826086}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 136
+      width: 45
+      height: 23
+    spriteID: e32ca610872b24c4c9099530a7d9f470
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 136}
+  - name: sd_0002_delta_delta01_Frame_119
+    originalName: 
+    pivot: {x: 0.5555556, y: -0.76923084}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 129
+      y: 382
+      width: 18
+      height: 39
+    spriteID: fa861fb966b18e04b981c84f53c2afc5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 129, y: 382}
+  - name: sd_0002_delta_delta01_Frame_123
+    originalName: 
+    pivot: {x: 0.5, y: -0.675}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 430
+      width: 48
+      height: 40
+    spriteID: 3f67511e2d804b449a8de86b9a91b13d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 430}
+  - name: sd_0002_delta_delta01_Frame_125
+    originalName: 
+    pivot: {x: 0.5945946, y: -0.83783776}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 812
+      width: 37
+      height: 37
+    spriteID: 21cc96619e2047249870d8e3268c35b7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 812}
+  - name: sd_0002_delta_delta01_Frame_128
+    originalName: 
+    pivot: {x: -0.33333302, y: -0.97435904}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 184
+      y: 690
+      width: 6
+      height: 39
+    spriteID: 773d1d9aaf208d94ab3e4e9a729ffc35
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 184, y: 690}
+  - name: sd_0002_delta_delta01_Frame_135
+    originalName: 
+    pivot: {x: 0.51515156, y: -1.5416666}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 864
+      width: 33
+      height: 24
+    spriteID: 1a201699b8332c74fac1d28713729d25
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 864}
+  - name: sd_0002_delta_delta01_Frame_138
+    originalName: 
+    pivot: {x: 0.48387095, y: -1.5454546}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 494
+      width: 31
+      height: 22
+    spriteID: b3223dea2dd128b4bad52980b08e96e5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 494}
+  - name: sd_0002_delta_delta01_Frame_147
+    originalName: 
+    pivot: {x: 0.4615384, y: -0.3220339}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 176
+      y: 960
+      width: 13
+      height: 59
+    spriteID: 7d8cf0497dad88e42b57a570d982649b
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 176, y: 960}
+  - name: sd_0002_delta_delta01_Frame_161
+    originalName: 
+    pivot: {x: 0.5897436, y: -1.1612903}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 155
+      y: 43
+      width: 39
+      height: 31
+    spriteID: 595535690c690084293873635b732d0f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 155, y: 43}
+  - name: sd_0002_delta_delta01_Frame_165
+    originalName: 
+    pivot: {x: 0.5098039, y: -1.8947369}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 31
+      width: 51
+      height: 19
+    spriteID: 2fb9d6eff1a4d384683e69c7052c8e36
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 31}
+  - name: sd_0002_delta_delta01_Frame_167
+    originalName: 
+    pivot: {x: 0.52, y: -1.6086956}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 35
+      width: 50
+      height: 23
+    spriteID: b7c3cfdd4985fd546bc45532b77bc6e9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 35}
+  - name: sd_0002_delta_delta01_Frame_170
+    originalName: 
+    pivot: {x: 0.5294118, y: -0.9268293}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 73
+      y: 295
+      width: 51
+      height: 41
+    spriteID: 9c647a25bd2e8374d92a7f3c2cd43271
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 73, y: 295}
+  - name: sd_0002_delta_delta01_Frame_177
+    originalName: 
+    pivot: {x: 0.5882353, y: -1.5238096}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 260
+      y: 220
+      width: 34
+      height: 21
+    spriteID: 38496f8f4f9703a459fa574dedcb18b9
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 260, y: 220}
+  - name: sd_0002_delta_delta01_Frame_180
+    originalName: 
+    pivot: {x: 0.5757576, y: -1.9411765}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 353
+      y: 29
+      width: 33
+      height: 17
+    spriteID: 50d9005447dbec6479a45933f0301ce7
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 353, y: 29}
+  - name: sd_0002_delta_delta01_Frame_189
+    originalName: 
+    pivot: {x: 0.6, y: -1.6086956}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 202
+      y: 167
+      width: 45
+      height: 23
+    spriteID: e61857053d018e24fb55dd11daf10017
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 202, y: 167}
+  spriteSheetImportData: []
+  asepriteLayers:
+  - layerIndex: 0
+    guid: -1227937821
+    name: sd_0002_delta_delta01
+    layerFlags: 0
+    layerType: 0
+    blendMode: 0
+    cells:
+    - name: sd_0002_delta_delta01_Frame_5
+      frameIndex: 5
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 30
+      spriteId: 581fe3c3f1d4ed44a986ae1c3ed59dad
+    - name: sd_0002_delta_delta01_Frame_6
+      frameIndex: 6
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 31
+      spriteId: c4b128616f93da042b3690ba5b39fee3
+    - name: sd_0002_delta_delta01_Frame_7
+      frameIndex: 7
+      cellRect:
+        x: 27
+        y: 33
+        width: 21
+        height: 30
+      spriteId: 0c4d8c91f49f1af4c9bb84c5aa8da3e9
+    - name: sd_0002_delta_delta01_Frame_8
+      frameIndex: 8
+      cellRect:
+        x: 27
+        y: 33
+        width: 21
+        height: 31
+      spriteId: a400af60c2a74d245b8ce8d98839ec1d
+    - name: sd_0002_delta_delta01_Frame_21
+      frameIndex: 21
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 30
+      spriteId: 8bf6c02fe2e836f4d9461d57152f66b6
+    - name: sd_0002_delta_delta01_Frame_22
+      frameIndex: 22
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 29
+      spriteId: a7985ccecffc3c149943919b6ae7b697
+    - name: sd_0002_delta_delta01_Frame_23
+      frameIndex: 23
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 29
+      spriteId: cce7a99a57fdc0643bf3d92376a97fc6
+    - name: sd_0002_delta_delta01_Frame_24
+      frameIndex: 24
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 30
+      spriteId: 9b59f9431d8b48a438a5e583882186e2
+    - name: sd_0002_delta_delta01_Frame_25
+      frameIndex: 25
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 29
+      spriteId: ec6cc6395e23b9b4198a8e7cf278976e
+    - name: sd_0002_delta_delta01_Frame_26
+      frameIndex: 26
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 29
+      spriteId: eefc1ae5d21aa024c94c43923ddd7b0c
+    - name: sd_0002_delta_delta01_Frame_27
+      frameIndex: 27
+      cellRect:
+        x: 33
+        y: 34
+        width: 18
+        height: 29
+      spriteId: 61a654aad786004429b8eb708a545ac8
+    - name: sd_0002_delta_delta01_Frame_28
+      frameIndex: 28
+      cellRect:
+        x: 32
+        y: 33
+        width: 19
+        height: 30
+      spriteId: 9a5e109dac2978c47ab818d8967931bb
+    - name: sd_0002_delta_delta01_Frame_29
+      frameIndex: 29
+      cellRect:
+        x: 32
+        y: 34
+        width: 19
+        height: 28
+      spriteId: 6724e5d4d757a4148971bfa9f35ea1df
+    - name: sd_0002_delta_delta01_Frame_30
+      frameIndex: 30
+      cellRect:
+        x: 33
+        y: 34
+        width: 18
+        height: 29
+      spriteId: cd7b37684ef47fc4882a6610db22cac8
+    - name: sd_0002_delta_delta01_Frame_31
+      frameIndex: 31
+      cellRect:
+        x: 32
+        y: 35
+        width: 19
+        height: 28
+      spriteId: eccf1c951d8069048829c3f9f260d3e3
+    - name: sd_0002_delta_delta01_Frame_32
+      frameIndex: 32
+      cellRect:
+        x: 32
+        y: 34
+        width: 19
+        height: 28
+      spriteId: cf8c459502e891a45bb48c50a5856f27
+    - name: sd_0002_delta_delta01_Frame_40
+      frameIndex: 40
+      cellRect:
+        x: 16
+        y: 32
+        width: 34
+        height: 40
+      spriteId: 7ed655acf4e6e4a49a5f188ba9999f8d
+    - name: sd_0002_delta_delta01_Frame_42
+      frameIndex: 42
+      cellRect:
+        x: 25
+        y: 29
+        width: 23
+        height: 37
+      spriteId: 0675759f93ac7af478a56b86b8b7ea62
+    - name: sd_0002_delta_delta01_Frame_43
+      frameIndex: 43
+      cellRect:
+        x: 33
+        y: 39
+        width: 15
+        height: 24
+      spriteId: 062346d11ea738b4c9bce8d2225eeed4
+    - name: sd_0002_delta_delta01_Frame_45
+      frameIndex: 45
+      cellRect:
+        x: 28
+        y: 16
+        width: 18
+        height: 41
+      spriteId: 7a7f9342d8f2ae34ba70b030046bec67
+    - name: sd_0002_delta_delta01_Frame_46
+      frameIndex: 46
+      cellRect:
+        x: 30
+        y: 17
+        width: 16
+        height: 40
+      spriteId: ead4ecac3a3dff947a47b47383a05a98
+    - name: sd_0002_delta_delta01_Frame_47
+      frameIndex: 47
+      cellRect:
+        x: 33
+        y: 24
+        width: 13
+        height: 32
+      spriteId: ba914722bb67be24da0536ddafbc6907
+    - name: sd_0002_delta_delta01_Frame_48
+      frameIndex: 48
+      cellRect:
+        x: 31
+        y: 25
+        width: 15
+        height: 31
+      spriteId: 3bc647559ab19af4bbf94902a705b5a1
+    - name: sd_0002_delta_delta01_Frame_49
+      frameIndex: 49
+      cellRect:
+        x: 26
+        y: 33
+        width: 20
+        height: 24
+      spriteId: a4bc1ca13cf858c478b2787a005afc1d
+    - name: sd_0002_delta_delta01_Frame_50
+      frameIndex: 50
+      cellRect:
+        x: 20
+        y: 33
+        width: 26
+        height: 25
+      spriteId: 59ddf267fc329644cbb2b4bcd74bcfb8
+    - name: sd_0002_delta_delta01_Frame_52
+      frameIndex: 52
+      cellRect:
+        x: 10
+        y: 24
+        width: 61
+        height: 41
+      spriteId: 68e58e2741e5d134887bb4f054c243ab
+    - name: sd_0002_delta_delta01_Frame_53
+      frameIndex: 53
+      cellRect:
+        x: 10
+        y: 24
+        width: 60
+        height: 41
+      spriteId: 85057c4f688d43c4a9a68fd633a55bda
+    - name: sd_0002_delta_delta01_Frame_55
+      frameIndex: 55
+      cellRect:
+        x: 9
+        y: 24
+        width: 61
+        height: 41
+      spriteId: 404ebf5748dba254a8ef90f029e1b432
+    - name: sd_0002_delta_delta01_Frame_56
+      frameIndex: 56
+      cellRect:
+        x: 10
+        y: 24
+        width: 60
+        height: 43
+      spriteId: d2fb7f26a9bf59c4e9a61386410e3ff8
+    - name: sd_0002_delta_delta01_Frame_57
+      frameIndex: 57
+      cellRect:
+        x: 10
+        y: 26
+        width: 60
+        height: 38
+      spriteId: 0b5c81d2919ccb149bc136a7fcdb253f
+    - name: sd_0002_delta_delta01_Frame_58
+      frameIndex: 58
+      cellRect:
+        x: 34
+        y: 32
+        width: 14
+        height: 30
+      spriteId: e3160209158e05f47ae4bb44f9204986
+    - name: sd_0002_delta_delta01_Frame_59
+      frameIndex: 59
+      cellRect:
+        x: 34
+        y: 32
+        width: 14
+        height: 31
+      spriteId: 1482c7d933775784b94bd705eda1ac34
+    - name: sd_0002_delta_delta01_Frame_60
+      frameIndex: 60
+      cellRect:
+        x: 34
+        y: 32
+        width: 14
+        height: 34
+      spriteId: 9e6c795076c67f141a7ce73d90af6959
+    - name: sd_0002_delta_delta01_Frame_61
+      frameIndex: 61
+      cellRect:
+        x: 34
+        y: 32
+        width: 14
+        height: 38
+      spriteId: 143dda360f01a5e4b8366cece3f17a52
+    - name: sd_0002_delta_delta01_Frame_62
+      frameIndex: 62
+      cellRect:
+        x: 34
+        y: 32
+        width: 14
+        height: 42
+      spriteId: 5497d9811048ec1489df03f554f18c2a
+    - name: sd_0002_delta_delta01_Frame_67
+      frameIndex: 67
+      cellRect:
+        x: 29
+        y: 32
+        width: 17
+        height: 29
+      spriteId: c4c7d2b9bfedba8469096c7b8f3e482f
+    - name: sd_0002_delta_delta01_Frame_68
+      frameIndex: 68
+      cellRect:
+        x: 31
+        y: 32
+        width: 15
+        height: 27
+      spriteId: 440a0527dbb200947b91d1336faae30a
+    - name: sd_0002_delta_delta01_Frame_69
+      frameIndex: 69
+      cellRect:
+        x: 31
+        y: 32
+        width: 15
+        height: 27
+      spriteId: ce9536b4e17f2174ca11c95629d94f83
+    - name: sd_0002_delta_delta01_Frame_70
+      frameIndex: 70
+      cellRect:
+        x: 31
+        y: 32
+        width: 15
+        height: 27
+      spriteId: 9c38ac86b231512469188b3f09fe0acf
+    - name: sd_0002_delta_delta01_Frame_71
+      frameIndex: 71
+      cellRect:
+        x: 31
+        y: 32
+        width: 16
+        height: 28
+      spriteId: b9a029c1042dbc44d99da9f85c516038
+    - name: sd_0002_delta_delta01_Frame_72
+      frameIndex: 72
+      cellRect:
+        x: 26
+        y: 32
+        width: 22
+        height: 30
+      spriteId: 455e67fa49b66cc48956b36967fb07c1
+    - name: sd_0002_delta_delta01_Frame_78
+      frameIndex: 78
+      cellRect:
+        x: 24
+        y: 31
+        width: 51
+        height: 32
+      spriteId: 5160672efd5dfe24d9356d0a293effde
+    - name: sd_0002_delta_delta01_Frame_79
+      frameIndex: 79
+      cellRect:
+        x: 24
+        y: 31
+        width: 52
+        height: 32
+      spriteId: 9d0bca08105ab544490c0cd2b2efdcc3
+    - name: sd_0002_delta_delta01_Frame_80
+      frameIndex: 80
+      cellRect:
+        x: 24
+        y: 34
+        width: 23
+        height: 29
+      spriteId: b79e0223f24be204381f654495ec25fe
+    - name: sd_0002_delta_delta01_Frame_82
+      frameIndex: 82
+      cellRect:
+        x: 16
+        y: 37
+        width: 40
+        height: 26
+      spriteId: 05c601e0a9067d5479ddccee519b372e
+    - name: sd_0002_delta_delta01_Frame_95
+      frameIndex: 95
+      cellRect:
+        x: 10
+        y: 24
+        width: 60
+        height: 41
+      spriteId: 718cd408ac9f7e14e92310c4054717ba
+    - name: sd_0002_delta_delta01_Frame_97
+      frameIndex: 97
+      cellRect:
+        x: 9
+        y: 21
+        width: 61
+        height: 44
+      spriteId: 0a3efb354593eef4c914ce131c1f9667
+    - name: sd_0002_delta_delta01_Frame_98
+      frameIndex: 98
+      cellRect:
+        x: 10
+        y: 24
+        width: 60
+        height: 41
+      spriteId: cfec7b3dd88f16b49bbdc21d50943132
+    - name: sd_0002_delta_delta01_Frame_99
+      frameIndex: 99
+      cellRect:
+        x: 10
+        y: 26
+        width: 60
+        height: 35
+      spriteId: c098955de2eb99d478658b51ff7f5b5b
+    - name: sd_0002_delta_delta01_Frame_100
+      frameIndex: 100
+      cellRect:
+        x: 25
+        y: 33
+        width: 30
+        height: 24
+      spriteId: f245250da6194f843980ab260ba33026
+    - name: sd_0002_delta_delta01_Frame_101
+      frameIndex: 101
+      cellRect:
+        x: 25
+        y: 33
+        width: 28
+        height: 25
+      spriteId: 6161f1352b0871343a8d87ccb16a7e76
+    - name: sd_0002_delta_delta01_Frame_102
+      frameIndex: 102
+      cellRect:
+        x: 21
+        y: 33
+        width: 28
+        height: 26
+      spriteId: 8f76f72ddae209e4aa59608fd963611b
+    - name: sd_0002_delta_delta01_Frame_103
+      frameIndex: 103
+      cellRect:
+        x: 16
+        y: 33
+        width: 32
+        height: 26
+      spriteId: dc18260c9bcb0b5468f86c14537f6acb
+    - name: sd_0002_delta_delta01_Frame_104
+      frameIndex: 104
+      cellRect:
+        x: 11
+        y: 33
+        width: 37
+        height: 26
+      spriteId: a30def663da866d46bc20b6c3e04ca83
+    - name: sd_0002_delta_delta01_Frame_117
+      frameIndex: 117
+      cellRect:
+        x: 32
+        y: 31
+        width: 22
+        height: 31
+      spriteId: f4250a7bcbcf6f643a9c9bf68df42036
+    - name: sd_0002_delta_delta01_Frame_118
+      frameIndex: 118
+      cellRect:
+        x: 34
+        y: 30
+        width: 15
+        height: 32
+      spriteId: 21c51ca9296399241bc0d48d7d3a9a13
+    - name: sd_0002_delta_delta01_Frame_124
+      frameIndex: 124
+      cellRect:
+        x: 31
+        y: 25
+        width: 33
+        height: 39
+      spriteId: 39482ce56874d2a4aa6e9739445defe6
+    - name: sd_0002_delta_delta01_Frame_129
+      frameIndex: 129
+      cellRect:
+        x: 34
+        y: 27
+        width: 18
+        height: 53
+      spriteId: d246999a8ccdb2542a7deb29ad89453e
+    - name: sd_0002_delta_delta01_Frame_130
+      frameIndex: 130
+      cellRect:
+        x: 34
+        y: 28
+        width: 16
+        height: 51
+      spriteId: 461cca44959d9b54ca22a76b4daaf89f
+    - name: sd_0002_delta_delta01_Frame_131
+      frameIndex: 131
+      cellRect:
+        x: 34
+        y: 29
+        width: 13
+        height: 38
+      spriteId: 2e661a1fdf619524fa55d7a74c96c628
+    - name: sd_0002_delta_delta01_Frame_132
+      frameIndex: 132
+      cellRect:
+        x: 34
+        y: 30
+        width: 13
+        height: 35
+      spriteId: 276f1a94e5d768043967b954410bd3d6
+    - name: sd_0002_delta_delta01_Frame_133
+      frameIndex: 133
+      cellRect:
+        x: 34
+        y: 30
+        width: 20
+        height: 26
+      spriteId: 618d6b131e95fbc42bc0fa0ada6942ce
+    - name: sd_0002_delta_delta01_Frame_134
+      frameIndex: 134
+      cellRect:
+        x: 34
+        y: 30
+        width: 23
+        height: 27
+      spriteId: 33cb8ddfd7b2cba48b549f4fec82ee03
+    - name: sd_0002_delta_delta01_Frame_136
+      frameIndex: 136
+      cellRect:
+        x: 10
+        y: 24
+        width: 61
+        height: 41
+      spriteId: 07816201448e6d6479babe0d2cef9772
+    - name: sd_0002_delta_delta01_Frame_137
+      frameIndex: 137
+      cellRect:
+        x: 10
+        y: 24
+        width: 60
+        height: 41
+      spriteId: 69ff5c62726a55447aecc49c2ae0ad45
+    - name: sd_0002_delta_delta01_Frame_152
+      frameIndex: 152
+      cellRect:
+        x: 34
+        y: 32
+        width: 15
+        height: 26
+      spriteId: 9b971b2f7291e294cb9df13ab95effed
+    - name: sd_0002_delta_delta01_Frame_153
+      frameIndex: 153
+      cellRect:
+        x: 34
+        y: 31
+        width: 15
+        height: 27
+      spriteId: 51c00b4a710f0954bbe5ec7f76c85e3e
+    - name: sd_0002_delta_delta01_Frame_154
+      frameIndex: 154
+      cellRect:
+        x: 34
+        y: 31
+        width: 15
+        height: 27
+      spriteId: 5eb01687580dce04587fd291f9473d49
+    - name: sd_0002_delta_delta01_Frame_155
+      frameIndex: 155
+      cellRect:
+        x: 33
+        y: 31
+        width: 16
+        height: 28
+      spriteId: a607cedd802d3694896393739cead5d8
+    - name: sd_0002_delta_delta01_Frame_156
+      frameIndex: 156
+      cellRect:
+        x: 32
+        y: 31
+        width: 22
+        height: 30
+      spriteId: ff8c530506a9e6b4ebffe5f95bcad2fb
+    - name: sd_0002_delta_delta01_Frame_157
+      frameIndex: 157
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 30
+      spriteId: f537c60c5e37f9949a40ccbc7c49861c
+    - name: sd_0002_delta_delta01_Frame_158
+      frameIndex: 158
+      cellRect:
+        x: 32
+        y: 32
+        width: 17
+        height: 30
+      spriteId: c5ae641de98190b4fa6110f9ebfe1b76
+    - name: sd_0002_delta_delta01_Frame_159
+      frameIndex: 159
+      cellRect:
+        x: 33
+        y: 33
+        width: 15
+        height: 30
+      spriteId: 989e7c063a4daa74695fc960236a3693
+    - name: sd_0002_delta_delta01_Frame_160
+      frameIndex: 160
+      cellRect:
+        x: 32
+        y: 33
+        width: 20
+        height: 29
+      spriteId: 1004035b4b510cf469d72efd08c884f9
+    - name: sd_0002_delta_delta01_Frame_168
+      frameIndex: 168
+      cellRect:
+        x: 25
+        y: 37
+        width: 39
+        height: 26
+      spriteId: 7fc5950f55cebf548a8415f4e4664a39
+    - name: sd_0002_delta_delta01_Frame_169
+      frameIndex: 169
+      cellRect:
+        x: 37
+        y: 38
+        width: 28
+        height: 25
+      spriteId: 211e1b76ede99f9418f27d3ddeaa2776
+    - name: sd_0002_delta_delta01_Frame_171
+      frameIndex: 171
+      cellRect:
+        x: 4
+        y: 34
+        width: 54
+        height: 33
+      spriteId: 76fcf67ab25bc504da765fe570348825
+    - name: sd_0002_delta_delta01_Frame_172
+      frameIndex: 172
+      cellRect:
+        x: 1
+        y: 34
+        width: 57
+        height: 44
+      spriteId: 7dc161cdba6a123468e88f143935d495
+    - name: sd_0002_delta_delta01_Frame_173
+      frameIndex: 173
+      cellRect:
+        x: 16
+        y: 34
+        width: 42
+        height: 23
+      spriteId: 37174f7bdc85b884fb47ab2e4e25b6e7
+    - name: sd_0002_delta_delta01_Frame_174
+      frameIndex: 174
+      cellRect:
+        x: 19
+        y: 34
+        width: 39
+        height: 23
+      spriteId: 2a7297732443651429f767e5fd81d3fd
+    - name: sd_0002_delta_delta01_Frame_175
+      frameIndex: 175
+      cellRect:
+        x: 25
+        y: 34
+        width: 32
+        height: 24
+      spriteId: 6e3b339d0553f804a9805b063b77878e
+    - name: sd_0002_delta_delta01_Frame_176
+      frameIndex: 176
+      cellRect:
+        x: 32
+        y: 34
+        width: 25
+        height: 25
+      spriteId: 8961c41b1a444f74ab03b7172972adb7
+    - name: sd_0002_delta_delta01_Frame_181
+      frameIndex: 181
+      cellRect:
+        x: 9
+        y: 24
+        width: 61
+        height: 41
+      spriteId: ae36733d443dbca46a1fea530e903314
+    - name: sd_0002_delta_delta01_Frame_182
+      frameIndex: 182
+      cellRect:
+        x: 10
+        y: 24
+        width: 60
+        height: 41
+      spriteId: 1c4ec3df60e1d40439ac47bc9042c564
+    - name: sd_0002_delta_delta01_Frame_190
+      frameIndex: 190
+      cellRect:
+        x: 3
+        y: 38
+        width: 74
+        height: 29
+      spriteId: b6b257a76a4cb424089c928ad427a0b1
+    - name: sd_0002_delta_delta01_Frame_191
+      frameIndex: 191
+      cellRect:
+        x: 2
+        y: 37
+        width: 70
+        height: 30
+      spriteId: cb9550d93fa907146ae9147e5c15b258
+    - name: sd_0002_delta_delta01_Frame_192
+      frameIndex: 192
+      cellRect:
+        x: 2
+        y: 37
+        width: 64
+        height: 27
+      spriteId: 31b01de6cbeb7a54b874898c9924f0ab
+    - name: sd_0002_delta_delta01_Frame_193
+      frameIndex: 193
+      cellRect:
+        x: 32
+        y: 33
+        width: 22
+        height: 28
+      spriteId: c0a062dfbab7a2d4eaaf48ededf5a4c9
+    - name: sd_0002_delta_delta01_Frame_194
+      frameIndex: 194
+      cellRect:
+        x: 31
+        y: 33
+        width: 21
+        height: 26
+      spriteId: 70cf1951fe2be874380ebe1c86c42cae
+    - name: sd_0002_delta_delta01_Frame_195
+      frameIndex: 195
+      cellRect:
+        x: 31
+        y: 33
+        width: 21
+        height: 26
+      spriteId: 63485a723da44964bb711cff6ad67ccc
+    - name: sd_0002_delta_delta01_Frame_196
+      frameIndex: 196
+      cellRect:
+        x: 31
+        y: 33
+        width: 21
+        height: 26
+      spriteId: 0607014b945cae449b51514f1d864aff
+    - name: sd_0002_delta_delta01_Frame_197
+      frameIndex: 197
+      cellRect:
+        x: 32
+        y: 33
+        width: 20
+        height: 27
+      spriteId: d183abb26c18f404694132185abdd045
+    - name: sd_0002_delta_delta01_Frame_198
+      frameIndex: 198
+      cellRect:
+        x: 33
+        y: 33
+        width: 15
+        height: 29
+      spriteId: 093cda5dab18b364ba94bfbf7cee55db
+    - name: sd_0002_delta_delta01_Frame_199
+      frameIndex: 199
+      cellRect:
+        x: 27
+        y: 33
+        width: 21
+        height: 30
+      spriteId: 37e8b6f8bbd8d66478e2a345dd48876f
+    - name: sd_0002_delta_delta01_Frame_200
+      frameIndex: 200
+      cellRect:
+        x: 27
+        y: 33
+        width: 21
+        height: 30
+      spriteId: 64a6943e3908b6c40ad48fb9509a3af7
+    - name: sd_0002_delta_delta01_Frame_0
+      frameIndex: 0
+      cellRect:
+        x: 17
+        y: 33
+        width: 41
+        height: 45
+      spriteId: 633a6d8a24834194c9220aafe829c903
+    - name: sd_0002_delta_delta01_Frame_1
+      frameIndex: 1
+      cellRect:
+        x: 31
+        y: 32
+        width: 17
+        height: 31
+      spriteId: 740bdf4f63fec4348ba55a90212f5d5f
+    - name: sd_0002_delta_delta01_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 31
+        y: 32
+        width: 17
+        height: 32
+      spriteId: bd18f133ede25a747b2db32f1bf5c981
+    - name: sd_0002_delta_delta01_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 32
+        y: 32
+        width: 21
+        height: 31
+      spriteId: d0d6f6dfb11f1e043a97cba67583a583
+    - name: sd_0002_delta_delta01_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 32
+        y: 32
+        width: 21
+        height: 32
+      spriteId: 33d2c348e02a3004d856f09f6ea13d9f
+    - name: sd_0002_delta_delta01_Frame_9
+      frameIndex: 9
+      cellRect:
+        x: 31
+        y: 33
+        width: 17
+        height: 29
+      spriteId: eb230b2f3d347814da83f054b921dcb4
+    - name: sd_0002_delta_delta01_Frame_10
+      frameIndex: 10
+      cellRect:
+        x: 31
+        y: 32
+        width: 17
+        height: 29
+      spriteId: ce17147be60c961418d3ba798321d034
+    - name: sd_0002_delta_delta01_Frame_11
+      frameIndex: 11
+      cellRect:
+        x: 31
+        y: 33
+        width: 17
+        height: 28
+      spriteId: 09a1bf6697496f24ba23270945b8ed60
+    - name: sd_0002_delta_delta01_Frame_12
+      frameIndex: 12
+      cellRect:
+        x: 31
+        y: 33
+        width: 17
+        height: 29
+      spriteId: f2f181628783ccb4ca8615d7c64b9a78
+    - name: sd_0002_delta_delta01_Frame_13
+      frameIndex: 13
+      cellRect:
+        x: 31
+        y: 32
+        width: 17
+        height: 29
+      spriteId: db89856a50837f645bc6f9e065ac3032
+    - name: sd_0002_delta_delta01_Frame_14
+      frameIndex: 14
+      cellRect:
+        x: 31
+        y: 33
+        width: 17
+        height: 28
+      spriteId: e5d6b967fe9e87b4cb6b2721447f5a63
+    - name: sd_0002_delta_delta01_Frame_15
+      frameIndex: 15
+      cellRect:
+        x: 29
+        y: 32
+        width: 18
+        height: 31
+      spriteId: 2bdecae55e3528646a3632947a686d4e
+    - name: sd_0002_delta_delta01_Frame_16
+      frameIndex: 16
+      cellRect:
+        x: 29
+        y: 32
+        width: 19
+        height: 31
+      spriteId: e588bf70a12cae740a9dd0a86de48465
+    - name: sd_0002_delta_delta01_Frame_17
+      frameIndex: 17
+      cellRect:
+        x: 29
+        y: 32
+        width: 19
+        height: 30
+      spriteId: e9959805a15f6a7459112514b573146d
+    - name: sd_0002_delta_delta01_Frame_18
+      frameIndex: 18
+      cellRect:
+        x: 29
+        y: 32
+        width: 18
+        height: 31
+      spriteId: b0b2269a951399b48ada0fe1edfd4ffc
+    - name: sd_0002_delta_delta01_Frame_19
+      frameIndex: 19
+      cellRect:
+        x: 29
+        y: 32
+        width: 19
+        height: 31
+      spriteId: 04582233e0ddd3f4bae011f5d001c7c7
+    - name: sd_0002_delta_delta01_Frame_20
+      frameIndex: 20
+      cellRect:
+        x: 29
+        y: 32
+        width: 19
+        height: 30
+      spriteId: 8de858e5d8a1dfd4898175f3611e5514
+    - name: sd_0002_delta_delta01_Frame_33
+      frameIndex: 33
+      cellRect:
+        x: 26
+        y: 32
+        width: 22
+        height: 31
+      spriteId: 8240ec4a88b78ae49bbb85379896f504
+    - name: sd_0002_delta_delta01_Frame_34
+      frameIndex: 34
+      cellRect:
+        x: 31
+        y: 31
+        width: 15
+        height: 32
+      spriteId: 48e42ea3f3797cb49b98f91918e10049
+    - name: sd_0002_delta_delta01_Frame_36
+      frameIndex: 36
+      cellRect:
+        x: 29
+        y: 16
+        width: 21
+        height: 56
+      spriteId: 5abc8e58e36a8b04196ca6649e276770
+    - name: sd_0002_delta_delta01_Frame_37
+      frameIndex: 37
+      cellRect:
+        x: 27
+        y: 17
+        width: 24
+        height: 56
+      spriteId: d2df6ece8e8147c4ca92f52fcbd7c826
+    - name: sd_0002_delta_delta01_Frame_38
+      frameIndex: 38
+      cellRect:
+        x: 32
+        y: 32
+        width: 21
+        height: 41
+      spriteId: a29f93cfb2343f54fa9880b3ea7985c9
+    - name: sd_0002_delta_delta01_Frame_64
+      frameIndex: 64
+      cellRect:
+        x: 32
+        y: 22
+        width: 22
+        height: 53
+      spriteId: aecd65861b6efdd4b98f4970289ff534
+    - name: sd_0002_delta_delta01_Frame_65
+      frameIndex: 65
+      cellRect:
+        x: 32
+        y: 19
+        width: 22
+        height: 54
+      spriteId: 281ad5e1d2598074798877f253f55fb1
+    - name: sd_0002_delta_delta01_Frame_66
+      frameIndex: 66
+      cellRect:
+        x: 27
+        y: 19
+        width: 25
+        height: 47
+      spriteId: eae6937df4510c3468c156ce4ae501d4
+    - name: sd_0002_delta_delta01_Frame_73
+      frameIndex: 73
+      cellRect:
+        x: 31
+        y: 32
+        width: 17
+        height: 31
+      spriteId: 19eb6309865473944a34ac0a8db2a342
+    - name: sd_0002_delta_delta01_Frame_74
+      frameIndex: 74
+      cellRect:
+        x: 31
+        y: 32
+        width: 17
+        height: 31
+      spriteId: 6a4e782baf95db244b6c7a2eb5afa033
+    - name: sd_0002_delta_delta01_Frame_75
+      frameIndex: 75
+      cellRect:
+        x: 32
+        y: 32
+        width: 14
+        height: 31
+      spriteId: ebc8dcd522d484a43a7de9a3d530c90d
+    - name: sd_0002_delta_delta01_Frame_76
+      frameIndex: 76
+      cellRect:
+        x: 28
+        y: 32
+        width: 19
+        height: 30
+      spriteId: 0940c651f34a77046a97cd85a773c388
+    - name: sd_0002_delta_delta01_Frame_84
+      frameIndex: 84
+      cellRect:
+        x: 16
+        y: 36
+        width: 39
+        height: 27
+      spriteId: 19863d598c9230b4ab5c8c9bd934ce97
+    - name: sd_0002_delta_delta01_Frame_85
+      frameIndex: 85
+      cellRect:
+        x: 15
+        y: 38
+        width: 29
+        height: 25
+      spriteId: ec611964861128d4f9adc9f4ab414d6c
+    - name: sd_0002_delta_delta01_Frame_87
+      frameIndex: 87
+      cellRect:
+        x: 22
+        y: 34
+        width: 54
+        height: 33
+      spriteId: 8a0ada0367c29b6438f8ec0ec049b14e
+    - name: sd_0002_delta_delta01_Frame_88
+      frameIndex: 88
+      cellRect:
+        x: 22
+        y: 34
+        width: 57
+        height: 44
+      spriteId: 7500cb10389f1d4449654cdf22a933d5
+    - name: sd_0002_delta_delta01_Frame_89
+      frameIndex: 89
+      cellRect:
+        x: 22
+        y: 34
+        width: 42
+        height: 23
+      spriteId: 368db750167b6894d9c07e8d18b81b6b
+    - name: sd_0002_delta_delta01_Frame_90
+      frameIndex: 90
+      cellRect:
+        x: 22
+        y: 34
+        width: 39
+        height: 23
+      spriteId: 8f01b083b379cda4597f2b494065d5da
+    - name: sd_0002_delta_delta01_Frame_91
+      frameIndex: 91
+      cellRect:
+        x: 23
+        y: 34
+        width: 32
+        height: 24
+      spriteId: 383ec78e166838f468ec0e2b430395fb
+    - name: sd_0002_delta_delta01_Frame_92
+      frameIndex: 92
+      cellRect:
+        x: 23
+        y: 34
+        width: 25
+        height: 25
+      spriteId: c1dd92f66dfd3a546bb59aadf9a8b988
+    - name: sd_0002_delta_delta01_Frame_94
+      frameIndex: 94
+      cellRect:
+        x: 10
+        y: 24
+        width: 61
+        height: 41
+      spriteId: f80bda0c0df46514bbb8ed3a21eb3083
+    - name: sd_0002_delta_delta01_Frame_106
+      frameIndex: 106
+      cellRect:
+        x: 3
+        y: 39
+        width: 74
+        height: 32
+      spriteId: 091c51a19fa69a548b7b4b21d593cf85
+    - name: sd_0002_delta_delta01_Frame_107
+      frameIndex: 107
+      cellRect:
+        x: 8
+        y: 38
+        width: 70
+        height: 33
+      spriteId: 3e3ae6da5491e0743919b7a687fd7af2
+    - name: sd_0002_delta_delta01_Frame_108
+      frameIndex: 108
+      cellRect:
+        x: 14
+        y: 36
+        width: 64
+        height: 30
+      spriteId: f9f7a62f2798e7b4287fdf71b19d6c18
+    - name: sd_0002_delta_delta01_Frame_109
+      frameIndex: 109
+      cellRect:
+        x: 26
+        y: 33
+        width: 20
+        height: 28
+      spriteId: c15382088c24679448a82e3645292bcf
+    - name: sd_0002_delta_delta01_Frame_110
+      frameIndex: 110
+      cellRect:
+        x: 28
+        y: 32
+        width: 21
+        height: 27
+      spriteId: 0135b7f79af31e1478e2a5d2a96dae4d
+    - name: sd_0002_delta_delta01_Frame_111
+      frameIndex: 111
+      cellRect:
+        x: 28
+        y: 32
+        width: 21
+        height: 27
+      spriteId: 31bbd94a99f92664ab2d269f3d71919d
+    - name: sd_0002_delta_delta01_Frame_112
+      frameIndex: 112
+      cellRect:
+        x: 28
+        y: 32
+        width: 21
+        height: 27
+      spriteId: 15bbaae3af0a2c44ba27680c2d99c125
+    - name: sd_0002_delta_delta01_Frame_113
+      frameIndex: 113
+      cellRect:
+        x: 28
+        y: 32
+        width: 20
+        height: 28
+      spriteId: 322376e7bd9446140855fbfcbf005d0f
+    - name: sd_0002_delta_delta01_Frame_114
+      frameIndex: 114
+      cellRect:
+        x: 32
+        y: 32
+        width: 15
+        height: 30
+      spriteId: bf311608b74cb8346b45dbe84344d197
+    - name: sd_0002_delta_delta01_Frame_115
+      frameIndex: 115
+      cellRect:
+        x: 32
+        y: 32
+        width: 21
+        height: 31
+      spriteId: 520f6f59306aae04a8888b6712079844
+    - name: sd_0002_delta_delta01_Frame_116
+      frameIndex: 116
+      cellRect:
+        x: 32
+        y: 32
+        width: 21
+        height: 31
+      spriteId: 6d865403d348cd24da1217374279a1f8
+    - name: sd_0002_delta_delta01_Frame_120
+      frameIndex: 120
+      cellRect:
+        x: 30
+        y: 32
+        width: 21
+        height: 45
+      spriteId: 3a7c40d3b007b5a41881a3e3854af558
+    - name: sd_0002_delta_delta01_Frame_121
+      frameIndex: 121
+      cellRect:
+        x: 29
+        y: 32
+        width: 20
+        height: 45
+      spriteId: 72fc7c74a24004f4a8ef5b6e13ee389b
+    - name: sd_0002_delta_delta01_Frame_122
+      frameIndex: 122
+      cellRect:
+        x: 27
+        y: 31
+        width: 21
+        height: 29
+      spriteId: 9f9e513d0dd175c4187ddeff301dfc0c
+    - name: sd_0002_delta_delta01_Frame_126
+      frameIndex: 126
+      cellRect:
+        x: 32
+        y: 32
+        width: 23
+        height: 35
+      spriteId: 77574a95405a65844abe02a5b3ffad59
+    - name: sd_0002_delta_delta01_Frame_127
+      frameIndex: 127
+      cellRect:
+        x: 32
+        y: 34
+        width: 15
+        height: 29
+      spriteId: 2afaefa9a50f90d4c85960e795a23c34
+    - name: sd_0002_delta_delta01_Frame_139
+      frameIndex: 139
+      cellRect:
+        x: 9
+        y: 24
+        width: 61
+        height: 41
+      spriteId: 68d7e6d3770c5b54b9f8f09ec151a263
+    - name: sd_0002_delta_delta01_Frame_148
+      frameIndex: 148
+      cellRect:
+        x: 26
+        y: 19
+        width: 22
+        height: 57
+      spriteId: 7af091cb2e68c724c942bd0057ae3b71
+    - name: sd_0002_delta_delta01_Frame_149
+      frameIndex: 149
+      cellRect:
+        x: 26
+        y: 21
+        width: 22
+        height: 57
+      spriteId: 679e1ef90d3b07442aadc72b9d531aea
+    - name: sd_0002_delta_delta01_Frame_150
+      frameIndex: 150
+      cellRect:
+        x: 28
+        y: 35
+        width: 25
+        height: 43
+      spriteId: f39dd13679db0444a80ba3c597a0313e
+    - name: sd_0002_delta_delta01_Frame_151
+      frameIndex: 151
+      cellRect:
+        x: 34
+        y: 32
+        width: 17
+        height: 28
+      spriteId: e2e0790c8bea7614a99ded00da5a4dad
+    - name: sd_0002_delta_delta01_Frame_162
+      frameIndex: 162
+      cellRect:
+        x: 5
+        y: 33
+        width: 51
+        height: 34
+      spriteId: beecc5d8161bf874fb040d8f90802698
+    - name: sd_0002_delta_delta01_Frame_163
+      frameIndex: 163
+      cellRect:
+        x: 4
+        y: 33
+        width: 52
+        height: 30
+      spriteId: 81c49ba3f1aa92748b588262fb1d782b
+    - name: sd_0002_delta_delta01_Frame_164
+      frameIndex: 164
+      cellRect:
+        x: 33
+        y: 33
+        width: 23
+        height: 30
+      spriteId: af44ae9cedc0c964a941f5acd7b39121
+    - name: sd_0002_delta_delta01_Frame_166
+      frameIndex: 166
+      cellRect:
+        x: 24
+        y: 35
+        width: 40
+        height: 28
+      spriteId: 769b55f063e98864684d78f4bef45210
+    - name: sd_0002_delta_delta01_Frame_178
+      frameIndex: 178
+      cellRect:
+        x: 10
+        y: 24
+        width: 61
+        height: 41
+      spriteId: 504997c2e1c5e79459fc984474a1ae02
+    - name: sd_0002_delta_delta01_Frame_179
+      frameIndex: 179
+      cellRect:
+        x: 10
+        y: 24
+        width: 60
+        height: 41
+      spriteId: 008e062819d42be43ac33db308c94055
+    - name: sd_0002_delta_delta01_Frame_183
+      frameIndex: 183
+      cellRect:
+        x: 10
+        y: 26
+        width: 60
+        height: 35
+      spriteId: ebe26d80cf495c547be0791215a2aa22
+    - name: sd_0002_delta_delta01_Frame_184
+      frameIndex: 184
+      cellRect:
+        x: 25
+        y: 33
+        width: 28
+        height: 24
+      spriteId: faeb0610aa8e111419431a90547f87f7
+    - name: sd_0002_delta_delta01_Frame_185
+      frameIndex: 185
+      cellRect:
+        x: 27
+        y: 33
+        width: 28
+        height: 25
+      spriteId: 3ea7797cd7824c5418e211ffd1f67cce
+    - name: sd_0002_delta_delta01_Frame_186
+      frameIndex: 186
+      cellRect:
+        x: 31
+        y: 33
+        width: 28
+        height: 26
+      spriteId: 9a5159ecdc0d6f743a26219154523955
+    - name: sd_0002_delta_delta01_Frame_187
+      frameIndex: 187
+      cellRect:
+        x: 32
+        y: 33
+        width: 32
+        height: 26
+      spriteId: 6de108cdd6502da4d97b578846a9e678
+    - name: sd_0002_delta_delta01_Frame_188
+      frameIndex: 188
+      cellRect:
+        x: 32
+        y: 33
+        width: 37
+        height: 26
+      spriteId: e32cd1f3e987fbc44826808c5b011015
+    - name: sd_0002_delta_delta01_Frame_140
+      frameIndex: 140
+      cellRect:
+        x: 10
+        y: 24
+        width: 60
+        height: 41
+      spriteId: 062fb9a556bccff43b290e66c505af60
+    - name: sd_0002_delta_delta01_Frame_141
+      frameIndex: 141
+      cellRect:
+        x: 10
+        y: 26
+        width: 60
+        height: 35
+      spriteId: 6e65d38680201f04498c48a67de484b5
+    - name: sd_0002_delta_delta01_Frame_142
+      frameIndex: 142
+      cellRect:
+        x: 32
+        y: 31
+        width: 14
+        height: 28
+      spriteId: 22452bf5ea2adbb4fbbcf03f4d355b5d
+    - name: sd_0002_delta_delta01_Frame_143
+      frameIndex: 143
+      cellRect:
+        x: 32
+        y: 30
+        width: 14
+        height: 28
+      spriteId: e0458bb6ad1c2fc43a8ebc22b1ebe32e
+    - name: sd_0002_delta_delta01_Frame_144
+      frameIndex: 144
+      cellRect:
+        x: 32
+        y: 27
+        width: 14
+        height: 30
+      spriteId: 7c2212a90bf317448aea1e6384d1dd0e
+    - name: sd_0002_delta_delta01_Frame_145
+      frameIndex: 145
+      cellRect:
+        x: 32
+        y: 23
+        width: 14
+        height: 35
+      spriteId: 62e886120fa21c84186e5bb8645a1b0b
+    - name: sd_0002_delta_delta01_Frame_146
+      frameIndex: 146
+      cellRect:
+        x: 32
+        y: 19
+        width: 14
+        height: 39
+      spriteId: baf0871b9108c984fa22dbb98d61746b
+    - name: sd_0002_delta_delta01_Frame_35
+      frameIndex: 35
+      cellRect:
+        x: 32
+        y: 21
+        width: 18
+        height: 41
+      spriteId: 86f2974af8c915f4791cded7168f31a9
+    - name: sd_0002_delta_delta01_Frame_39
+      frameIndex: 39
+      cellRect:
+        x: 16
+        y: 29
+        width: 48
+        height: 40
+      spriteId: f3c57c3f3741d744dadef05efa7c959d
+    - name: sd_0002_delta_delta01_Frame_41
+      frameIndex: 41
+      cellRect:
+        x: 25
+        y: 28
+        width: 37
+        height: 37
+      spriteId: f6b212acd61eed34a8f88b98eee04d2e
+    - name: sd_0002_delta_delta01_Frame_44
+      frameIndex: 44
+      cellRect:
+        x: 32
+        y: 21
+        width: 6
+        height: 42
+      spriteId: 1e3aabe45f605f44993ff0731ed08072
+    - name: sd_0002_delta_delta01_Frame_51
+      frameIndex: 51
+      cellRect:
+        x: 24
+        y: 35
+        width: 33
+        height: 24
+      spriteId: f8c10175d13eefa40bce761b10dad7e7
+    - name: sd_0002_delta_delta01_Frame_54
+      frameIndex: 54
+      cellRect:
+        x: 24
+        y: 40
+        width: 31
+        height: 22
+      spriteId: 14a4df1df7848da45bb3b4a4bcd50906
+    - name: sd_0002_delta_delta01_Frame_63
+      frameIndex: 63
+      cellRect:
+        x: 33
+        y: 18
+        width: 13
+        height: 59
+      spriteId: 528bea9b289c9cf48b521ef64e0ea59f
+    - name: sd_0002_delta_delta01_Frame_77
+      frameIndex: 77
+      cellRect:
+        x: 24
+        y: 31
+        width: 39
+        height: 31
+      spriteId: a6c0a05e8ccc1f64f97725c70574e090
+    - name: sd_0002_delta_delta01_Frame_81
+      frameIndex: 81
+      cellRect:
+        x: 15
+        y: 41
+        width: 51
+        height: 19
+      spriteId: 27c7fff14d5a3bb49bc54ac517a62000
+    - name: sd_0002_delta_delta01_Frame_83
+      frameIndex: 83
+      cellRect:
+        x: 16
+        y: 36
+        width: 50
+        height: 23
+      spriteId: 14c416f9dbd0b40459291e76ba46ea4e
+    - name: sd_0002_delta_delta01_Frame_86
+      frameIndex: 86
+      cellRect:
+        x: 16
+        y: 38
+        width: 51
+        height: 41
+      spriteId: 0be60156371cc4e49a7593227f241a29
+    - name: sd_0002_delta_delta01_Frame_93
+      frameIndex: 93
+      cellRect:
+        x: 26
+        y: 32
+        width: 34
+        height: 21
+      spriteId: 722c29a8452b3a84ba8fc05ddd712837
+    - name: sd_0002_delta_delta01_Frame_96
+      frameIndex: 96
+      cellRect:
+        x: 26
+        y: 33
+        width: 33
+        height: 17
+      spriteId: 1ae13da97ee40c24d9ccf2f9d65baffd
+    - name: sd_0002_delta_delta01_Frame_105
+      frameIndex: 105
+      cellRect:
+        x: 22
+        y: 41
+        width: 45
+        height: 23
+      spriteId: e32ca610872b24c4c9099530a7d9f470
+    - name: sd_0002_delta_delta01_Frame_119
+      frameIndex: 119
+      cellRect:
+        x: 30
+        y: 30
+        width: 18
+        height: 39
+      spriteId: fa861fb966b18e04b981c84f53c2afc5
+    - name: sd_0002_delta_delta01_Frame_123
+      frameIndex: 123
+      cellRect:
+        x: 16
+        y: 27
+        width: 48
+        height: 40
+      spriteId: 3f67511e2d804b449a8de86b9a91b13d
+    - name: sd_0002_delta_delta01_Frame_125
+      frameIndex: 125
+      cellRect:
+        x: 18
+        y: 31
+        width: 37
+        height: 37
+      spriteId: 21cc96619e2047249870d8e3268c35b7
+    - name: sd_0002_delta_delta01_Frame_128
+      frameIndex: 128
+      cellRect:
+        x: 42
+        y: 38
+        width: 6
+        height: 39
+      spriteId: 773d1d9aaf208d94ab3e4e9a729ffc35
+    - name: sd_0002_delta_delta01_Frame_135
+      frameIndex: 135
+      cellRect:
+        x: 23
+        y: 37
+        width: 33
+        height: 24
+      spriteId: 1a201699b8332c74fac1d28713729d25
+    - name: sd_0002_delta_delta01_Frame_138
+      frameIndex: 138
+      cellRect:
+        x: 25
+        y: 34
+        width: 31
+        height: 22
+      spriteId: b3223dea2dd128b4bad52980b08e96e5
+    - name: sd_0002_delta_delta01_Frame_147
+      frameIndex: 147
+      cellRect:
+        x: 34
+        y: 19
+        width: 13
+        height: 59
+      spriteId: 7d8cf0497dad88e42b57a570d982649b
+    - name: sd_0002_delta_delta01_Frame_161
+      frameIndex: 161
+      cellRect:
+        x: 17
+        y: 36
+        width: 39
+        height: 31
+      spriteId: 595535690c690084293873635b732d0f
+    - name: sd_0002_delta_delta01_Frame_165
+      frameIndex: 165
+      cellRect:
+        x: 14
+        y: 36
+        width: 51
+        height: 19
+      spriteId: 2fb9d6eff1a4d384683e69c7052c8e36
+    - name: sd_0002_delta_delta01_Frame_167
+      frameIndex: 167
+      cellRect:
+        x: 14
+        y: 37
+        width: 50
+        height: 23
+      spriteId: b7c3cfdd4985fd546bc45532b77bc6e9
+    - name: sd_0002_delta_delta01_Frame_170
+      frameIndex: 170
+      cellRect:
+        x: 13
+        y: 38
+        width: 51
+        height: 41
+      spriteId: 9c647a25bd2e8374d92a7f3c2cd43271
+    - name: sd_0002_delta_delta01_Frame_177
+      frameIndex: 177
+      cellRect:
+        x: 20
+        y: 32
+        width: 34
+        height: 21
+      spriteId: 38496f8f4f9703a459fa574dedcb18b9
+    - name: sd_0002_delta_delta01_Frame_180
+      frameIndex: 180
+      cellRect:
+        x: 21
+        y: 33
+        width: 33
+        height: 17
+      spriteId: 50d9005447dbec6479a45933f0301ce7
+    - name: sd_0002_delta_delta01_Frame_189
+      frameIndex: 189
+      cellRect:
+        x: 13
+        y: 37
+        width: 45
+        height: 23
+      spriteId: e61857053d018e24fb55dd11daf10017
+    linkedCells: []
+    parentIndex: -1
+  platformSettings: []
+  generatePhysicsShape: 0
+  secondarySpriteTextures: []
+  spritePackingTag: 
+  canvasSize: {x: 80, y: 80}
