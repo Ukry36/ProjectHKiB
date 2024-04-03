@@ -26,7 +26,6 @@ public class MoveSprite : MonoBehaviour
     [HideInInspector] public Animator animator; // animator
     protected SpriteRenderer spriteRenderer; // spriteRenderer
     [SerializeField] protected SpriteLibrary spriteLibrary;
-    
 
 
 // walk by order

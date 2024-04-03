@@ -6,6 +6,7 @@ public class Player_R : MoveViaInput
 {
     private float lastedTime;
     private bool skill01ing = false;
+    private bool skill02ing = false;
     private bool startAtCombo4;
     private bool keepSkill01;
     [SerializeField] private int repeatSkill03;
@@ -28,10 +29,10 @@ public class Player_R : MoveViaInput
 
 
         AttackArray = new Attack[] {
-            new Attack(75, 0, 10, 1, false),
-            new Attack(50, 1, 10, 1, true),
-            new Attack(50, 1, 10, 1, false),
-            new Attack(175, 0, 10, 1, true)
+            new Attack(75, 0, 10, false),
+            new Attack(50, 1, 10, true),
+            new Attack(50, 1, 10, false),
+            new Attack(175, 0, 10, true)
         };
 
         SAPrefab.GetComponent<AttackCollision>().
@@ -129,6 +130,7 @@ public class Player_R : MoveViaInput
     {
         if (_skillNum == 0)
         {
+            skill01ing = true;
             lastedTime = 0;
             StartCoroutine(Skill01Coroutine(GS.skillList[0]));
         }
@@ -136,6 +138,8 @@ public class Player_R : MoveViaInput
         {
             if (skill01ing)
             {
+                skill02ing = true;
+                skill01ing = false;
                 lastedTime = 0;
                 StartCoroutine(Skill01Coroutine(GS.skillList[1]));
             }
@@ -146,6 +150,11 @@ public class Player_R : MoveViaInput
             if (skill01ing)
             {
                 StartCoroutine(Skill01Coroutine(GS.skillList[0]));
+                StartCoroutine(Skill03p01Coroutine(GS.skillList[2]));
+            }
+            else if (skill02ing)
+            {
+                StartCoroutine(Skill01Coroutine(GS.skillList[1]));
                 StartCoroutine(Skill03p01Coroutine(GS.skillList[2]));
             }
             else
@@ -164,7 +173,6 @@ public class Player_R : MoveViaInput
     {
         AttractorPrefab.SetActive(true);
         attack.SetAttackInfo(_skill.DamageCoefficient, _skill.CriticalRate, _skill.Strong);
-        skill01ing = true;
         defaultSpeed /= 2;
         animator.SetBool("skill", true);
         while (!dodgeInput && lastedTime <= _skill.Cooltime)
@@ -193,7 +201,7 @@ public class Player_R : MoveViaInput
         }
 
         if (!keepSkill01)
-        { skill01ing = false; }
+        { skill01ing = false; skill02ing = false;}
         else
         { keepSkill01 = false; animator.SetBool("skill", true); }
         AttractorPrefab.SetActive(false);
@@ -203,7 +211,7 @@ public class Player_R : MoveViaInput
     private IEnumerator Skill03p01Coroutine(Skill _skill)
     {
         float prevTime = lastedTime;
-        while (skill01ing)
+        while (skill01ing || skill02ing)
         {
             yield return null;
             if (prevTime + _skill.Delay < lastedTime)

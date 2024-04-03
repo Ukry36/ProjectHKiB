@@ -15,10 +15,10 @@ public class Player_L : MoveViaInput
 
 
         AttackArray = new Attack[] {
-            new Attack(75, 0, 10, 1, false),
-            new Attack(50, 1, 10, 1, false),
-            new Attack(25, 0, 10, 1, false),
-            new Attack(150, 1, 10, 1, true)
+            new Attack(75, 0, 10, false),
+            new Attack(50, 1, 10, false),
+            new Attack(25, 0, 10, false),
+            new Attack(150, 1, 10, true)
         };
 
 

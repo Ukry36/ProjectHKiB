@@ -22,16 +22,10 @@ public class Enemy_Rusher : MoveViaAlgorithm
         SkillArray = new Skill[] {
             new Skill(35, 1, 4, 3f, 0.3f, true),
             new Skill(35, 1, 2, 3f, 0.2f, false)
-        }; //upper skill high priority (not nessesory just for easy recognizing)
+            }; //upper skill high priority (not nessesory just for easy recognizing)
 
         theState.SetHitAnimObject();
         StartCoroutine(NormalBehaviourCoroutine());
-    }
-
-
-    private void Update()
-    {
-
     }
 
     IEnumerator AggroBehaviourCoroutine()
@@ -81,7 +75,7 @@ public class Enemy_Rusher : MoveViaAlgorithm
             yield return new WaitForSeconds(AggroMoveDelay);
             walking = true;
             // if there is a wall, wait
-            if(Physics2D.OverlapCircle(targetPos, .4f, wallLayer)) 
+            if(Physics2D.OverlapCircle(targetPos, .4f, wallLayer))
             {
                 yield return wait;
                 walking = false;
@@ -89,7 +83,7 @@ public class Enemy_Rusher : MoveViaAlgorithm
             }
             
             // move destination forward
-            movePoint.position = targetPos; 
+            movePoint.position = targetPos;
             // move toward destination
             // if stopWalkboolean is false, skip sequencial movement
             animator.SetBool("walk", true);
@@ -206,12 +200,12 @@ public class Enemy_Rusher : MoveViaAlgorithm
         yield return null;
         for (int i = 0; i < 3; i++) //Rush until wall
         {
-            if(Physics2D.OverlapCircle(Mover.position + new Vector3(applyVector.x, applyVector.y, 0), .4f, wallLayer)) 
+            if(Physics2D.OverlapCircle(Mover.position + (Vector3)applyVector, .4f, wallLayer)) 
                 continue;
             movePoint.position += new Vector3(applyVector.x, applyVector.y, 0);
             Mover.position = movePoint.position;
         }
-        
+
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f);
         backStep = true;

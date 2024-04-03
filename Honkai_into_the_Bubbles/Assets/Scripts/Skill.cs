@@ -15,6 +15,8 @@ public class Skill
     public float Delay;
     public List<Vector2> skillCommand;
 
+    public int GP = 0;
+
     public Skill(int _DmgCoeff, int _TrackRad = 0, float _DetectRad = 1f, float _Cooldown = 0, float _Delay = 0, bool _Strong = false, int _CritRate = 10, bool _Can = true)
     {
         DamageCoefficient = _DmgCoeff;

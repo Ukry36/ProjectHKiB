@@ -31,12 +31,7 @@ public class State : MonoBehaviour
         else
             trueDmg = 1;
 
-        currentHP -= trueDmg;
-
-        if (currentHP <= 0)
-        {
-            ForAnim.Die();
-        }
+        HPControl(-trueDmg);
 
 /*
         Vector3 vector = this.transform.position;
@@ -78,8 +73,11 @@ public class State : MonoBehaviour
         currentHP += _o;
         if (currentHP > maxHP)
             currentHP = maxHP;
-        if (currentGP < 0)
+        if (currentHP < 0)
+        {
             currentHP = 0;
+            ForAnim.Die();
+        }
     }
 
     public void GPControl(int _o)

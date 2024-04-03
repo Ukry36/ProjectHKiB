@@ -5,14 +5,16 @@ using UnityEngine;
 public class AttackCollision : MonoBehaviour
 {
     public LayerMask damageLayer;
-    [HideInInspector] public int DMG;
-    [HideInInspector] public bool Strong;
-    [HideInInspector] public bool Crit;
+    private int DMG;
+    private int GP;
+    private bool Strong;
+    private bool Crit;
     private Vector3 GrrogyDir;
     [HideInInspector] public bool Override;
-    [HideInInspector] public int dmgCoeffOverride;
-    [HideInInspector] public int critRateOverride;
-    [HideInInspector] public bool strongOverride;
+    [HideInInspector] public int dmgCoeffOverride = 0;
+    [HideInInspector] public int critRateOverride = 0;
+    [HideInInspector] public int GPOverride = 0;
+    [HideInInspector] public bool strongOverride = false;
     public State theState;
 
     protected BoxCollider2D boxCollider2D;
@@ -24,7 +26,7 @@ public class AttackCollision : MonoBehaviour
         prevPos = this.transform.position;
     }
 
-    public void SetAttackInfo(int _DmgCoeff, int _CritRate, bool _Strong)
+    public void SetAttackInfo(int _DmgCoeff, int _CritRate, bool _Strong, int _GP = 0)
     {
         DMG = theState.ATK * _DmgCoeff / 100;
         Crit = false;
@@ -33,6 +35,7 @@ public class AttackCollision : MonoBehaviour
             DMG += DMG * theState.CritDMG / 100;
             Crit = true;
         }
+        GP = _GP;
         Strong = _Strong;
     }
 
@@ -78,17 +81,17 @@ public class AttackCollision : MonoBehaviour
 
                 GrrogyDir = new Vector3(x, y, 0);
             }
-            else 
+            else
             {
                 GrrogyDir = Vector3.zero;
             }
 
             if (Override)
             {
-                SetAttackInfo(dmgCoeffOverride, critRateOverride, strongOverride);
+                SetAttackInfo(dmgCoeffOverride, critRateOverride, strongOverride, GPOverride);
                 Override = false;
             }
-                
+            theState.GPControl(GP);
             other.gameObject.GetComponent<State>().Hit(DMG, Crit, Strong, GrrogyDir);
         }
     } 

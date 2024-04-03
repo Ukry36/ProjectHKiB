@@ -181,7 +181,7 @@ public abstract class MoveViaInput : MoveSprite
     protected IEnumerator AttackCoroutine(Attack _attack)
     {  
         attacking = true;
-        attack.SetAttackInfo(_attack.DamageCoefficient, _attack.CriticalRate, _attack.Strong);
+        attack.SetAttackInfo(_attack.DamageCoefficient, _attack.CriticalRate, _attack.Strong, _attack.GraffitiPoint);
 
 
         if(moveInput != Vector2.zero)
@@ -264,7 +264,7 @@ public abstract class MoveViaInput : MoveSprite
 
 
         // alter color
-        dodgeSprt.color = dodgeColors[(totalDodgeCount++) % 2];
+        dodgeSprt.color = dodgeColors[totalDodgeCount++ % 2];
 
 
         // activate start dodge animation and wait until it ends
