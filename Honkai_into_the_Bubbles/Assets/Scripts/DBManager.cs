@@ -20,7 +20,7 @@ public class DBManager : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    #endregion Singleton
+    #endregion
 
     public string[] var_name;
     public float[] var;

@@ -8,7 +8,24 @@ using TMPro;
 
 public class EquipmentManager : MonoBehaviour
 {
+   
+    #region Singleton
     public static EquipmentManager instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            theInven = FindObjectOfType<InventoryManager>();
+            theDB = FindObjectOfType<DBManager>();
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    #endregion
 
     private InventoryManager theInven;
     private DBManager theDB;
@@ -38,16 +55,6 @@ public class EquipmentManager : MonoBehaviour
         DARKBLUE = new Color(0.32f, 0.48f, 1f, 1f),
         MINT = new Color(0.65f, 1f, 0.8f, 1f),
         WHITE = new Color(1f, 1f, 1f, 1f);
-
-    private void Awake()
-    {
-        // singleton
-        if (instance == null)
-            instance = this;
-
-        theInven = FindObjectOfType<InventoryManager>();
-        theDB = FindObjectOfType<DBManager>();
-    }
 
 
     private void Start()

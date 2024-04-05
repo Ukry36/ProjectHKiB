@@ -5,7 +5,39 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
+    
+    #region Singleton
+
     public static InputManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            // GetComponent
+            _playerInput = GetComponent<PlayerInput>();
+
+
+            // auto binding
+            move = _playerInput.actions["Move"];
+            sprint = _playerInput.actions["Sprint"];
+            attack = _playerInput.actions["Attack"];
+            dodge = _playerInput.actions["Dodge"];
+            grafitti = _playerInput.actions["GraffitiSystem"];
+
+            confirm = _playerInput.actions["Confirm"];
+            cancel = _playerInput.actions["Cancel"];
+            equipment = _playerInput.actions["OpenEquipment"];
+            inventory = _playerInput.actions["OpenInventory"];
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    #endregion
 
     public Vector2 MoveInput {get; private set;}
     public bool SprintInput {get; private set;}
@@ -25,30 +57,6 @@ public class InputManager : MonoBehaviour
 
     public bool stopPlayer;
     public bool canSprint;
-
-    private void Awake()
-    {
-        // singleton
-        if (instance == null)
-            instance = this;
-
-
-        // GetComponent
-        _playerInput = GetComponent<PlayerInput>();
-
-
-        // auto binding
-        move = _playerInput.actions["Move"];
-        sprint = _playerInput.actions["Sprint"];
-        attack = _playerInput.actions["Attack"];
-        dodge = _playerInput.actions["Dodge"];
-        grafitti = _playerInput.actions["GraffitiSystem"];
-
-        confirm = _playerInput.actions["Confirm"];
-        cancel = _playerInput.actions["Cancel"];
-        equipment = _playerInput.actions["OpenEquipment"];
-        inventory = _playerInput.actions["OpenInventory"];
-    }
 
 
     public void StopPlayerInput(bool _stop)

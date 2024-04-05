@@ -32,7 +32,7 @@ public class GraffitiSystem : MonoBehaviour
         StartCoroutine(TimeScalerCoroutine(true));
         grid.transform.position = new Vector3((int)movePoint.position.x, (int)movePoint.position.y);
         activatedTileList.Clear();
-        CameraManager.instance.Zoom(100f, CameraManager.instance.originalPixelHight / 2);
+        //CameraManager.instance.Zoom(100f, CameraManager.instance.originalPixelHight / 2);
         var clone = Instantiate(NexusPrefab, this.transform.position, quaternion.identity);
         EVC = clone.GetComponent<EffectVanishControl>();
     }
@@ -54,7 +54,7 @@ public class GraffitiSystem : MonoBehaviour
         StartCoroutine(TimeScalerCoroutine(false));
         grid.SetActive(false);
         attractive.EnableAttract();
-        CameraManager.instance.Zoom(1000, CameraManager.instance.originalPixelHight);
+        //CameraManager.instance.Zoom(1000, CameraManager.instance.originalPixelHight);
         EVC.Exit();
         return GetSkillNum();
     }

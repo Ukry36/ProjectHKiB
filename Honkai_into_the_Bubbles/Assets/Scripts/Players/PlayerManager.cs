@@ -6,7 +6,28 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
+    #region Singleton
+
     public static PlayerManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            EveryEffects = GetComponentsInChildren<MoveViaInput>(true);
+            theState = GetComponent<State>();
+            prevEffect = Array.Find(EveryEffects, de => de.ID == 0);
+            theState.SetHitAnimObject();
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    #endregion
+    
     private int[] equippedEffectIDs = {0};
     private MoveViaInput[] EveryEffects;
     private List<MoveViaInput> EquippedEffects = new List<MoveViaInput>{};
@@ -15,21 +36,6 @@ public class PlayerManager : MonoBehaviour
     private int attackActivateState;  // -1: not attack effect, 0~3: EquippedEffects[0~3] is attack effect
 
     private State theState;
-
-
-    private void Awake()
-    {
-        // singleton
-        if (instance == null)
-        {
-            instance = this;
-        }
-
-        EveryEffects = GetComponentsInChildren<MoveViaInput>(true);
-        theState = GetComponent<State>();
-        prevEffect = Array.Find(EveryEffects, de => de.ID == 0);
-        theState.SetHitAnimObject();
-    }
 
 
     public void ActivateEquippedEffect(int[] _effectIDs)
