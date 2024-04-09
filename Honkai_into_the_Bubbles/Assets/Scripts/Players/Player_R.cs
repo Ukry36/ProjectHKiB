@@ -5,6 +5,7 @@ using UnityEngine;
 public class Player_R : MoveViaInput
 {
     private float lastedTime;
+    private float prevTime;
     private bool skill01ing = false;
     private bool skill02ing = false;
     private bool startAtCombo4;
@@ -132,15 +133,17 @@ public class Player_R : MoveViaInput
         {
             skill01ing = true;
             lastedTime = 0;
+            prevTime = 0;
             StartCoroutine(Skill01Coroutine(GS.skillList[0]));
         }
         else if (_skillNum == 1)
         {
-            if (skill01ing)
+            if (skill01ing || skill02ing)
             {
                 skill02ing = true;
                 skill01ing = false;
                 lastedTime = 0;
+                prevTime = 0;
                 StartCoroutine(Skill01Coroutine(GS.skillList[1]));
             }
             theState.GPControl(5);
@@ -210,7 +213,7 @@ public class Player_R : MoveViaInput
 
     private IEnumerator Skill03p01Coroutine(Skill _skill)
     {
-        float prevTime = lastedTime;
+        prevTime = lastedTime;
         while (skill01ing || skill02ing)
         {
             yield return null;

@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
+using Cinemachine;
 using Unity.Mathematics;
 using Unity.VisualScripting;
 using UnityEngine;
 
 public class GraffitiSystem : MonoBehaviour
 {
-    public static GraffitiSystem instance;
     [SerializeField] private GameObject grid;
     [SerializeField] private Transform movePoint;
     [SerializeField] private GameObject NexusPrefab;
@@ -15,15 +15,25 @@ public class GraffitiSystem : MonoBehaviour
     [SerializeField] private State theState;
     private Vector2 LB;
     public List<Skill> skillList = new(); 
+    private GraffitiSystem GS;
     
     private EffectVanishControl EVC;
 
     private void Awake()
     {
-        // singleton
-        if (instance == null)
-            instance = this;
+        GS = GetComponent<GraffitiSystem>();
     }
+
+
+    private void OnEnable()
+    {
+        GT[] GTs = grid.GetComponentsInChildren<GT>();
+        for (int i = 0; i < GTs.Length; i++)
+        {
+            GT.SetGS(GS);
+        }
+    }
+
 
     public void StartGraffiti()
     {
@@ -32,7 +42,7 @@ public class GraffitiSystem : MonoBehaviour
         StartCoroutine(TimeScalerCoroutine(true));
         grid.transform.position = new Vector3((int)movePoint.position.x, (int)movePoint.position.y);
         activatedTileList.Clear();
-        //CameraManager.instance.Zoom(100f, CameraManager.instance.originalPixelHight / 2);
+        CameraManager.instance.ZoomViaOrig(0.707f, 0.5f);
         var clone = Instantiate(NexusPrefab, this.transform.position, quaternion.identity);
         EVC = clone.GetComponent<EffectVanishControl>();
     }
@@ -54,7 +64,7 @@ public class GraffitiSystem : MonoBehaviour
         StartCoroutine(TimeScalerCoroutine(false));
         grid.SetActive(false);
         attractive.EnableAttract();
-        //CameraManager.instance.Zoom(1000, CameraManager.instance.originalPixelHight);
+        CameraManager.instance.ReturntoOrigRes(0.1f);
         EVC.Exit();
         return GetSkillNum();
     }

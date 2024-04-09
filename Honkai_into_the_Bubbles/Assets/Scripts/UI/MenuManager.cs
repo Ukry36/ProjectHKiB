@@ -7,7 +7,27 @@ using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
+    #region Singleton
     public static MenuManager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            theInput = FindObjectOfType<InputManager>();
+            theEquip = FindObjectOfType<EquipmentManager>();
+            theInven = FindObjectOfType<InventoryManager>();    
+            thePlayer = FindObjectsOfType<MoveViaInput>(true);
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    #endregion
+    
 
     private InputManager theInput;
     private EquipmentManager theEquip;
@@ -32,18 +52,6 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private UnityEngine.UI.Image HPbar;
     [SerializeField] private TextMeshProUGUI HPtext;
 
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-
-        theInput = FindObjectOfType<InputManager>();
-        theEquip = FindObjectOfType<EquipmentManager>();
-        theInven = FindObjectOfType<InventoryManager>();
-        thePlayer = FindObjectsOfType<MoveViaInput>(true);
-    }
 
     private void Start()
     {

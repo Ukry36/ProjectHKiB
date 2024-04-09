@@ -92,7 +92,10 @@ public class AttackCollision : MonoBehaviour
                 Override = false;
             }
             theState.GPControl(GP);
-            other.gameObject.GetComponent<State>().Hit(DMG, Crit, Strong, GrrogyDir);
+            if(other.gameObject.TryGetComponent(out State component))
+            {
+                component.Hit(DMG, Crit, Strong, GrrogyDir);
+            }
         }
     } 
 }

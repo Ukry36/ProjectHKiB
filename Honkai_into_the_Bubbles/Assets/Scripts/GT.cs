@@ -6,6 +6,7 @@ public class GT : MonoBehaviour
 {
     [SerializeField] private Vector2 coordinate;
     [SerializeField] private SpriteRenderer spriteRenderer;
+    private static GraffitiSystem GS;
     private int GTPCCI = 0;
     private void Awake() 
     {
@@ -18,12 +19,17 @@ public class GT : MonoBehaviour
         GTPCCI = 0;
     }
 
+    public static void SetGS(GraffitiSystem _GS)
+    {
+        GS = _GS;
+    }
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
             GTPCCI++;
-            GraffitiSystem.instance.AddTile(coordinate);
+            GS.AddTile(coordinate);
             if (GTPCCI%2==0)
                 spriteRenderer.color = other.GetComponentInChildren<MoveSprite>().themeColor1;
             else

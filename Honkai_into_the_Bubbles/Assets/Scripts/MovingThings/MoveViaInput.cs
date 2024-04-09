@@ -392,35 +392,39 @@ public abstract class MoveViaInput : MoveSprite
         grrogying = true;
         GS.StartGraffiti();
         dodgeAnim.SetBool("keepDodge", true);
-        dodgeSprt.color = dodgeColors[(totalDodgeCount++) % 2];
+        dodgeSprt.color = dodgeColors[totalDodgeCount++ % 2];
         dodgeAnim.SetTrigger("startDodge");
         boxCollider.enabled = false;
         yield return null;
         if (dodgeAnim.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.5f)
             boxCollider.enabled = true;
 
-        while(theState.currentGP > 0)
+        while(true)
         {
             yield return null;
             if (InputManager.instance.GraffitiEndInput)
                 break;
-
-            if (moveInput == Vector2.zero)
+            
+            if (theState.currentGP > 0)
+            {
+                if (moveInput == Vector2.zero)
                 applyVector = moveInput;
 
-            if (moveInput != Vector2.zero && applyVector == Vector2.zero)
-                applyVector = moveInput;
-            else
-                continue;
+                if (moveInput != Vector2.zero && applyVector == Vector2.zero)
+                    applyVector = moveInput;
+                else
+                    continue;
 
-            if (applyVector.x != 0)
-                applyVector.y = 0;
+                if (applyVector.x != 0)
+                    applyVector.y = 0;
 
-            if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer)) 
-                continue;
-
-            movePoint.position += (Vector3)applyVector;
-            Mover.position = movePoint.position;
+                if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer)) 
+                    continue;
+            
+                movePoint.position += (Vector3)applyVector;
+                Mover.position = movePoint.position;
+            }
+            
         }
         dodgeAnim.SetTrigger("endDodge");
         dodgeAnim.SetBool("keepDodge", false);

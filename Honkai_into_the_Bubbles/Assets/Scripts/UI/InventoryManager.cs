@@ -7,7 +7,22 @@ using TMPro;
 
 public class InventoryManager : MonoBehaviour
 {
+    #region Singleton
     public static InventoryManager instance;
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            theDB = FindObjectOfType<DBManager>();
+            DontDestroyOnLoad(this.gameObject);
+            instance = this;
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
+    }
+    #endregion
     private DBManager theDB;
 
     [SerializeField] private TextMeshProUGUI description;
@@ -31,14 +46,6 @@ public class InventoryManager : MonoBehaviour
 
     [HideInInspector] public bool equipSequence;
 
-    private void Awake()
-    {
-        // singleton
-        if (instance == null)
-            instance = this;
-
-        theDB = FindObjectOfType<DBManager>();
-    }
     void Start()
     {
         InventoryItemList = new List<Item>();
