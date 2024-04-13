@@ -14,8 +14,7 @@ public class State : MonoBehaviour
     public int DEF = 0;
     public int CritRate = 0;
     public int CritDMG = 10;
-
-    private MoveSprite ForAnim;
+    [HideInInspector] public MoveSprite moveSprite;
 
     private void Start()
     {
@@ -24,7 +23,7 @@ public class State : MonoBehaviour
 
     public void Hit(int _dmg, bool _crit, bool _strong, Vector3 _dir)
     {
-        ForAnim.Hit();
+        moveSprite.Hit();
         int trueDmg;
         if (_dmg > DEF)
             trueDmg = _dmg - DEF;
@@ -58,14 +57,14 @@ public class State : MonoBehaviour
         
         if (_strong)
         {
-            ForAnim.Grrogy(_dir);
+            moveSprite.Grrogy(_dir);
         }
             
     }
 
     public void SetHitAnimObject()
     {
-        ForAnim = GetComponentsInChildren<MoveSprite>(false)[0];
+        moveSprite = GetComponentsInChildren<MoveSprite>(false)[0];
     }
 
     public void HPControl(int _o)
@@ -76,7 +75,7 @@ public class State : MonoBehaviour
         if (currentHP < 0)
         {
             currentHP = 0;
-            ForAnim.Die();
+            moveSprite.Die();
         }
     }
 

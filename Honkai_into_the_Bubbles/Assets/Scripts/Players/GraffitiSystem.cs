@@ -15,14 +15,10 @@ public class GraffitiSystem : MonoBehaviour
     [SerializeField] private State theState;
     private Vector2 LB;
     public List<Skill> skillList = new(); 
-    private GraffitiSystem GS;
     
     private EffectVanishControl EVC;
 
-    private void Awake()
-    {
-        GS = GetComponent<GraffitiSystem>();
-    }
+    public LayerMask WallForGraffitiLayer;
 
 
     private void OnEnable()
@@ -30,7 +26,7 @@ public class GraffitiSystem : MonoBehaviour
         GT[] GTs = grid.GetComponentsInChildren<GT>();
         for (int i = 0; i < GTs.Length; i++)
         {
-            GT.SetGS(GS);
+            GT.SetGS(this);
         }
     }
 

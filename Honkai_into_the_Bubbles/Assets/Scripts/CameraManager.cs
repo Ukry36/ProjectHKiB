@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Diagnostics;
-using Cinemachine;
-using Unity.PlasticSCM.Editor.WebApi;
+﻿using Cinemachine;
 using UnityEngine;
-using UnityEngine.Experimental.Rendering.Universal;
+using Debug = UnityEngine.Debug;
 
 public class CameraManager : MonoBehaviour
 {
@@ -25,6 +21,7 @@ public class CameraManager : MonoBehaviour
     #endregion
     
     [SerializeField] private CinemachineVirtualCamera[] Cameras = new CinemachineVirtualCamera[2];
+    private CinemachineConfiner2D[] Confiners = new CinemachineConfiner2D[2];
     [SerializeField] private CinemachineBrain CBrain;
 
     private float OriginalRes = 5;
@@ -33,7 +30,21 @@ public class CameraManager : MonoBehaviour
 
     private void Start()
     {
+        for (int i = 0; i < Cameras.Length; i++)
+        {
+            Confiners[i] = Cameras[i].GetComponent<CinemachineConfiner2D>();
+        }
         Cameras[CurrentCamera].Priority = 11;
+    }
+
+
+    public void StrictMovement(Vector3 _way)
+    {
+        this.transform.position += _way;
+        for (int i = 0; i < Cameras.Length; i ++)
+        {
+            Cameras[i].OnTargetObjectWarped(PlayerManager.instance.transform, _way);
+        }
     }
 
 
@@ -70,5 +81,16 @@ public class CameraManager : MonoBehaviour
     CinemachineBlendDefinition.Style _style = CinemachineBlendDefinition.Style.EaseOut)
     {
         Zoom(OriginalRes, _blendTime, _style);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) 
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("CameraBound"))
+        {
+            for (int i = 0; i < Cameras.Length; i++)
+            {
+                Confiners[i].m_BoundingShape2D = other;
+            }
+        }
     }
 }

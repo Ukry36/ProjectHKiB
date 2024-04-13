@@ -105,12 +105,8 @@ public class Player_Delta : MoveViaInput
 
         if(moveInput != Vector2.zero)
             applyVector = moveInput; 
-        RawVectorSetDirection();
-        
-
-        // start attack sequence of desired combo
-        animator.SetInteger("attack", combo);
-
+        GetRawVector();
+    
 
         // move until moveLimit or wall
         // in combo3 command, don't move
@@ -118,10 +114,14 @@ public class Player_Delta : MoveViaInput
         {
             for (int i = 0; i < _attack.TrackingRadius; i++)
             {
+                movePoint.position += (Vector3)applyVector; 
+                yield return null;
                 if (DetectWall())
-                break;
+                {
+                    movePoint.position -= (Vector3)applyVector; 
+                    break;
+                }
                 
-                movePoint.position += new Vector3(applyVector.x, applyVector.y, 0f); 
                 Mover.position = movePoint.position;
             }
         }
@@ -129,6 +129,11 @@ public class Player_Delta : MoveViaInput
         {
             startAtCombo3 = false; // if startAtCombo3 == true, startAtCombo3 = false
         }
+
+
+        SetDir();
+        // start attack sequence of desired combo
+        animator.SetInteger("attack", combo);
 
 
         // if there is input at proper timing, get into next attack

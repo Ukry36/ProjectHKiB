@@ -1,21 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class TransferScene : MonoBehaviour
+public class TransferScene : TransferPosition
 {
     [SerializeField] private string destinationSceneName;
 
-
-    private void OnTriggerEnter2D(Collider2D other)
+    protected override IEnumerator TransferCoroutine(State component)
     {
-        if (other.TryGetComponent(out MovePoint component))
-        {
-            if (component.Mover.name == "Player")
-            {
-                SceneManager.LoadScene(destinationSceneName);
-            }
-        }
+        yield return SceneLoadingManager.instance.LoadSceneCoroutine(
+            destinationSceneName, fadeColor, delay, innerDelay, component, destination.position - this.transform.position);
     }
+
 }

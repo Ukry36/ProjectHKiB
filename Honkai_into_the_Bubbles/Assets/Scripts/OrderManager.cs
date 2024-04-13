@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OrderManager : MonoBehaviour
 {
-    private List<MoveSprite> characters; // 배열은 크기를 바꿀 수 없기 때문에 대신하여 리스트를 사용
+    private List<MoveSprite> characters;
     private CameraManager theCamera;
 
     void Start()
@@ -20,7 +20,7 @@ public class OrderManager : MonoBehaviour
     public List<MoveSprite> ToList()
     {
         List<MoveSprite> tempList = new List<MoveSprite>();
-        MoveSprite[] temp = FindObjectsOfType<MoveSprite>(); // s가 붙음!! 이 스크립트가 붙은 모든 객체를 찾아 반환해줌!!
+        MoveSprite[] temp = FindObjectsOfType<MoveSprite>(); 
 
         for(int i=0; i<temp.Length; i++)
         {

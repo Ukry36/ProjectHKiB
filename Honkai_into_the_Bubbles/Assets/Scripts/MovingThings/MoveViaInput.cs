@@ -69,21 +69,35 @@ public abstract class MoveViaInput : MoveSprite
     
     protected void RawVectorSetDirection()
     {
+        GetRawVector();
+        SetDir();
+    }
+
+    protected void GetRawVector()
+    {
         // turn vector(applyVector) from normalized to raw
         if(applyVector.x * applyVector.y != 0) 
             applyVector = new Vector2(applyVector.x / Mathf.Abs(applyVector.x), applyVector.y / Mathf.Abs(applyVector.y));
+    }
 
-        
+    protected void SetDir(bool _byRawInput = false)
+    {
         // determine direction of player in animtion
         if(applyVector.x != 0)
         {
-            animator.SetFloat("dirX", applyVector.x);
+            if (_byRawInput)
+                animator.SetFloat("dirX", moveInput.x);
+            else
+                animator.SetFloat("dirX", applyVector.x);
             animator.SetFloat("dirY", 0);
         } 
         else
         {
             animator.SetFloat("dirX", 0);
-            animator.SetFloat("dirY", applyVector.y);
+            if (_byRawInput)
+                animator.SetFloat("dirY", moveInput.y);
+            else
+                animator.SetFloat("dirY", applyVector.y);
         }
     }
 
@@ -93,27 +107,30 @@ public abstract class MoveViaInput : MoveSprite
     {
         if (applyVector.x == 0 || applyVector.y == 0)
         {
-            if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer))
+            if (Physics2D.OverlapCircle(movePoint.position, .4f, wallLayer))
                 return true;
         }
         else
         {
-            if (Physics2D.OverlapCircle(movePoint.position + new Vector3(applyVector.x, 0, 0), .4f, wallLayer))
+            if (Physics2D.OverlapCircle(movePoint.position - new Vector3(0, applyVector.y, 0), .4f, wallLayer))
             {
+                movePoint.position -= new Vector3(applyVector.x, 0, 0);
                 applyVector.x = 0;
-                animator.SetFloat("dirX", 0);
-                animator.SetFloat("dirY", applyVector.y);
+
             }
                 
-            if (Physics2D.OverlapCircle(movePoint.position + new Vector3(0, applyVector.y, 0), .4f, wallLayer))
+            if (Physics2D.OverlapCircle(movePoint.position - new Vector3(applyVector.x, 0, 0), .4f, wallLayer))
+            {
+                movePoint.position -= new Vector3(0, applyVector.y, 0);
                 applyVector.y = 0;
-            
+            }
+                
             if (applyVector.x == 0 && applyVector.y == 0)
                 return true;
             
             if (applyVector.x != 0 && applyVector.y != 0)
-                if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer))
-                    applyVector.y = 0;
+                if (Physics2D.OverlapCircle(movePoint.position, .4f, wallLayer))
+                    movePoint.position -= new Vector3(0, applyVector.y, 0);
         }
         return false;
     }
@@ -136,17 +153,20 @@ public abstract class MoveViaInput : MoveSprite
 
             // save moveInput in applyVector
             applyVector = moveInput; 
+            GetRawVector();
 
-
-            RawVectorSetDirection();
-
-
-            if (DetectWall())
-                break;
-                
 
             // move destination forward
             movePoint.position += (Vector3)applyVector; 
+            yield return null;
+            if (DetectWall())
+            {
+                movePoint.position -= (Vector3)applyVector; 
+                SetDir(true); // 수정 요망!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                break;
+            }
+            SetDir();
+            
 
             // move toward destination
             // if stopWalkboolean is false, skip sequencial movement
@@ -186,11 +206,7 @@ public abstract class MoveViaInput : MoveSprite
 
         if(moveInput != Vector2.zero)
             applyVector = moveInput; 
-        RawVectorSetDirection();
-        
-
-        // start attack sequence of desired combo
-        animator.SetInteger("attack", combo);
+        GetRawVector();
 
 
         // move until moveLimit or wall
@@ -199,13 +215,22 @@ public abstract class MoveViaInput : MoveSprite
         {
             for (int i = 0; i < _attack.TrackingRadius; i++)
             {
-                if (DetectWall())
-                    break;
-
                 movePoint.position += (Vector3)applyVector; 
+                yield return null;
+                if (DetectWall())
+                {
+                    movePoint.position -= (Vector3)applyVector; 
+                    break;
+                }
+                
                 Mover.position = movePoint.position;
             }
         }
+
+
+        SetDir();
+        // start attack sequence of desired combo
+        animator.SetInteger("attack", combo);
 
     
         // if there is input at proper timing, get into next attack
@@ -388,6 +413,8 @@ public abstract class MoveViaInput : MoveSprite
 
     protected IEnumerator GraffitiCoroutine()
     {
+        if (Physics2D.OverlapCircle(movePoint.position, .4f, wallLayer + GS.WallForGraffitiLayer)) 
+            yield break;
         graffiting = true;
         grrogying = true;
         GS.StartGraffiti();
@@ -418,7 +445,7 @@ public abstract class MoveViaInput : MoveSprite
                 if (applyVector.x != 0)
                     applyVector.y = 0;
 
-                if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer)) 
+                if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer + GS.WallForGraffitiLayer)) 
                     continue;
             
                 movePoint.position += (Vector3)applyVector;

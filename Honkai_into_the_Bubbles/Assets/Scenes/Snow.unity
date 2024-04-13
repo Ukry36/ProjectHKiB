@@ -266,8 +266,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 830611770}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 13, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -621,6 +621,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5def09d6eec8e394990c7151b67074de, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  destination: {fileID: 830611771}
+  canTransferLayer:
+    serializedVersion: 2
+    m_Bits: 640
+  delay: 0.5
+  fadeColor: {r: 0, g: 0, b: 0, a: 1}
   destinationSceneName: Hyperion
 --- !u!4 &1094772532
 Transform:
@@ -1439,7 +1445,7 @@ SpriteRenderer:
   m_Size: {x: 53.125, y: 50}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &2017792782
@@ -1503,5 +1509,5 @@ SceneRoots:
   - {fileID: 1170936257}
   - {fileID: 2111379012}
   - {fileID: 2017792782}
-  - {fileID: 830611771}
   - {fileID: 1094772532}
+  - {fileID: 830611771}
