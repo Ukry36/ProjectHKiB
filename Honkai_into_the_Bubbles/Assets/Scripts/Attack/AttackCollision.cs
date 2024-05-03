@@ -5,6 +5,7 @@ using UnityEngine;
 public class AttackCollision : MonoBehaviour
 {
     public LayerMask damageLayer;
+    [SerializeField] private Attack init;
     private int DMG;
     private int GP;
     private bool Strong;
@@ -24,6 +25,8 @@ public class AttackCollision : MonoBehaviour
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         prevPos = this.transform.position;
+
+        SetAttackInfo(init.DamageCoefficient, init.CriticalRate, init.Strong, init.GraffitiPoint);
     }
 
     public void SetAttackInfo(int _DmgCoeff, int _CritRate, bool _Strong, int _GP = 0)

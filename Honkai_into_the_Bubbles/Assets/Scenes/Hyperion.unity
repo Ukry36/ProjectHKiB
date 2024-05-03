@@ -4656,6 +4656,12 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 256
+  init:
+    DamageCoefficient: 0
+    TrackingRadius: 0
+    CriticalRate: 0
+    GraffitiPoint: 0
+    Strong: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -5758,9 +5764,10 @@ MonoBehaviour:
   movePoint: {fileID: 6043008}
   freeze: 0
   grrogyCoefficient: 3
-  stopAttackboolean: 1
   animator: {fileID: 0}
   spriteLibrary: {fileID: 220232704}
+  explodeWhenDie: 0
+  explosion: {fileID: 0}
   isAttackEffect: 1
   cannotAttackEffect: 0
   spriteOverrideID: 0
@@ -13346,7 +13353,7 @@ Transform:
   m_GameObject: {fileID: 626534173}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13, y: -1, z: 0}
+  m_LocalPosition: {x: 47, y: 16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20104,7 +20111,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 86507263}
+  m_BoundingShape2D: {fileID: 1867991491}
   m_Damping: 0
   m_MaxWindowSize: 0
 --- !u!114 &914218055
@@ -20167,7 +20174,7 @@ Transform:
   m_GameObject: {fileID: 914218053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.563259, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22835,7 +22842,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 3.75
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -22860,7 +22867,7 @@ Transform:
   m_GameObject: {fileID: 1019121078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.436741, y: -1, z: -10}
+  m_LocalPosition: {x: 47, y: 16, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25834,7 +25841,7 @@ Transform:
   m_GameObject: {fileID: 1175886459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 5.563259, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25853,7 +25860,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 86507263}
+  m_BoundingShape2D: {fileID: 1867991491}
   m_Damping: 0
   m_MaxWindowSize: 0
 --- !u!4 &1176714433 stripped
@@ -27220,6 +27227,12 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 256
+  init:
+    DamageCoefficient: 0
+    TrackingRadius: 0
+    CriticalRate: 0
+    GraffitiPoint: 0
+    Strong: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -29056,6 +29069,12 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 256
+  init:
+    DamageCoefficient: 0
+    TrackingRadius: 0
+    CriticalRate: 0
+    GraffitiPoint: 0
+    Strong: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -30547,9 +30566,10 @@ MonoBehaviour:
   movePoint: {fileID: 6043008}
   freeze: 0
   grrogyCoefficient: 3
-  stopAttackboolean: 1
   animator: {fileID: 0}
   spriteLibrary: {fileID: 1415920015}
+  explodeWhenDie: 0
+  explosion: {fileID: 0}
   isAttackEffect: 1
   cannotAttackEffect: 0
   spriteOverrideID: 0
@@ -58079,9 +58099,10 @@ MonoBehaviour:
   movePoint: {fileID: 6043008}
   freeze: 0
   grrogyCoefficient: 3
-  stopAttackboolean: 1
   animator: {fileID: 0}
   spriteLibrary: {fileID: 1600101426}
+  explodeWhenDie: 0
+  explosion: {fileID: 0}
   isAttackEffect: 1
   cannotAttackEffect: 0
   spriteOverrideID: 0
@@ -58764,6 +58785,11 @@ PolygonCollider2D:
       - {x: 9.5, y: -1.5}
       - {x: 10.5, y: -1.5}
   m_UseDelaunayMesh: 0
+--- !u!1 &1627563027 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6124633340371042755, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+  m_PrefabInstance: {fileID: 2010667870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1632017879
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67347,6 +67373,104 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 220232708}
   m_SourcePrefab: {fileID: 100100000, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+--- !u!1001 &2010667870
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1677441244414935587}
+    m_Modifications:
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: DMG
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: Crit
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: Strong
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: lastTime
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: theState
+      value: 
+      objectReference: {fileID: 2761662646948922022}
+    - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: init.Strong
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: init.CriticalRate
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: init.DamageCoefficient
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124633340371042755, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_Name
+      value: Explosion
+      objectReference: {fileID: 0}
+    - target: {fileID: 6124633340371042755, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+--- !u!4 &2010667871 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+  m_PrefabInstance: {fileID: 2010667870}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2010987303
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -70555,6 +70679,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7314141580552525426}
+  - {fileID: 2010667871}
   m_Father: {fileID: 648697902601085780}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &1807130166799274966
@@ -71142,6 +71267,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Move point
       objectReference: {fileID: 0}
+    - target: {fileID: 1837566179521182403, guid: a5452a798b88382488df6874886c0953, type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 3737042194133120777, guid: a5452a798b88382488df6874886c0953, type: 3}
       propertyPath: m_Color.a
       value: 0
@@ -71218,6 +71347,12 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 640
+  init:
+    DamageCoefficient: 0
+    TrackingRadius: 0
+    CriticalRate: 0
+    GraffitiPoint: 0
+    Strong: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -71868,7 +72003,7 @@ GameObject:
   - component: {fileID: 1807130166799274966}
   - component: {fileID: 3257247355318500561}
   - component: {fileID: 8639721375086886154}
-  m_Layer: 9
+  m_Layer: 6
   m_Name: Move point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -72156,14 +72291,15 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 5056
-  defaultSpeed: 4
+  defaultSpeed: 2
   Mover: {fileID: 648697902601085780}
   movePoint: {fileID: 2739297517333208320}
   freeze: 0
   grrogyCoefficient: 3
-  stopAttackboolean: 1
   animator: {fileID: 0}
   spriteLibrary: {fileID: 7691683620509356155}
+  explodeWhenDie: 1
+  explosion: {fileID: 1627563027}
   randomMove: 1
   doAttack: 1
   NormalMoveDelay: 1

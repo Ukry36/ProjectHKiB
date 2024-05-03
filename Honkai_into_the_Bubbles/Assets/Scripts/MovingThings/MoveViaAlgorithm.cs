@@ -58,10 +58,11 @@ public abstract class MoveViaAlgorithm : MoveSprite
         {
             return true;
         }
-        else
+        else 
         {
             if (_deacsth)
             {
+                Debug.Log(_rad);
                 if (Physics2D.OverlapCircle(Mover.position, _rad, stealthPlayerLayer))
                     return true;
                 else
@@ -77,6 +78,13 @@ public abstract class MoveViaAlgorithm : MoveSprite
             
         }
             
+    }
+
+
+    protected bool DetectPlayerLimited(float _dist, float _exceptableErr, bool _deacsth = false)
+    {
+        ///////////////////////////////////// 바라보고 있는 방향만 raycast
+        return false;
     }
 
 
@@ -106,6 +114,11 @@ public abstract class MoveViaAlgorithm : MoveSprite
         }
         animator.SetFloat("dirX", applyVector.x);
         animator.SetFloat("dirY", applyVector.y);
+    }
+
+    protected void SeeTargetPos()
+    {
+        /////////////////////////////////
     }
 
 

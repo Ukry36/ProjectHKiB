@@ -18,8 +18,9 @@ public class Enemy_Spider : MoveViaAlgorithm
         moveSpeed = defaultSpeed;
 
         SkillArray = new Skill[] {
-            new Skill(35, 1, 4, 3f, 0.3f, true)
+            new Skill(35, 1, 3, 3f, 0.3f, true)
         }; //upper skill high priority (not nessesory just for easy recognizing)
+
 
         theState.SetHitAnimObject();
         StartCoroutine(NormalBehaviourCoroutine());
@@ -41,8 +42,6 @@ public class Enemy_Spider : MoveViaAlgorithm
             }
 
 
-            SeePlayer();
-            
             if (SetPath() <= 1)
             {
                 StartCoroutine(NormalBehaviourCoroutine());
@@ -54,6 +53,7 @@ public class Enemy_Spider : MoveViaAlgorithm
                 targetPos.y = ToPlayerList[1].y;
             }
 
+            SeeTargetPos();
 
             if (SkillArray[0].CanSkill && DetectPlayer(SkillArray[0].DetectRadius, true))
             {
@@ -120,9 +120,9 @@ public class Enemy_Spider : MoveViaAlgorithm
                 continue;
             }
 
-                
+
             // move destination forward
-            movePoint.position += new Vector3(applyVector.x, applyVector.y, 0f); 
+            movePoint.position += (Vector3)applyVector; 
             // move toward destination
             // if stopWalkboolean is false, skip sequencial movement
             animator.SetBool("walk", true);
@@ -164,8 +164,6 @@ public class Enemy_Spider : MoveViaAlgorithm
         }
 
 
-        SetPath();
-        Track(SkillArray[0]);
         SeePlayer();
         animator.SetFloat("skill", 1f);
 
@@ -187,7 +185,7 @@ public class Enemy_Spider : MoveViaAlgorithm
         animator.SetTrigger("fire");
         yield return null;
         yield return null;
-        for (int i = 0; i < 3; i++) //Rush until wall
+        for (int i = 0; i < 8; i++) //Rush until wall
         {
             if(Physics2D.OverlapCircle(Mover.position + new Vector3(applyVector.x, applyVector.y, 0), .4f, wallLayer)) 
                 continue;
@@ -195,13 +193,7 @@ public class Enemy_Spider : MoveViaAlgorithm
             Mover.position = movePoint.position;
         }
         
-
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f);
-        StopAttacking();
-
-
-        yield return new WaitForSeconds(SkillArray[0].Cooltime);
-        SkillArray[0].CanSkill = true;
+        Die();
     }
 
 

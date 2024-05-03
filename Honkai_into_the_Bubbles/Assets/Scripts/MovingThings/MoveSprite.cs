@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 
@@ -22,10 +24,14 @@ public class MoveSprite : MonoBehaviour
     public bool freeze = false;
     [SerializeField] private int grrogyCoefficient = 3; // minimum 2
     protected bool stopWalkboolean = true;
-    [SerializeField] protected bool stopAttackboolean = true;
+    protected bool stopAttackboolean = true;
     [HideInInspector] public Animator animator; // animator
     protected SpriteRenderer spriteRenderer; // spriteRenderer
     [SerializeField] protected SpriteLibrary spriteLibrary;
+
+    [SerializeField] protected bool explodeWhenDie = false;
+    [SerializeField] private GameObject explosion;
+
 
 
 // walk by order
@@ -216,7 +222,14 @@ public class MoveSprite : MonoBehaviour
 
     public void Die()
     {
+        if(explodeWhenDie)
+        {
+            var clone = Instantiate(explosion, this.transform.position, quaternion.identity);
+            clone.SetActive(true);
+        }
         Destroy(movePoint.gameObject);
         Destroy(Mover.gameObject);
     }
+
+
 }
