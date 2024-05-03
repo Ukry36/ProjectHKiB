@@ -67,7 +67,7 @@ public class TrackingBullet : AttackCollision
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        base.OnTriggerEnter2D(other);
+        //base.OnTriggerEnter2D(other);
         if(targetPos != null)
         {
             if (other.gameObject == targetPos.gameObject)

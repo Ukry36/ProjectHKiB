@@ -18,7 +18,7 @@ public class Enemy_Spider : MoveViaAlgorithm
         moveSpeed = defaultSpeed;
 
         SkillArray = new Skill[] {
-            new Skill(35, 1, 3, 3f, 0.3f, true)
+            new Skill(0, 1, 3, 3f, 0.3f, true)
         }; //upper skill high priority (not nessesory just for easy recognizing)
 
 
@@ -151,7 +151,6 @@ public class Enemy_Spider : MoveViaAlgorithm
 
     IEnumerator Skill01Coroutine()
     {
-        attack.SetAttackInfo(SkillArray[0].DamageCoefficient, SkillArray[0].CriticalRate, SkillArray[0].Strong);
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
 
 

@@ -4656,12 +4656,10 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 256
-  init:
-    DamageCoefficient: 0
-    TrackingRadius: 0
-    CriticalRate: 0
-    GraffitiPoint: 0
-    Strong: 0
+  initDmgCoeff: 100
+  initCritRate: 10
+  initStrong: 0
+  initGP: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -20174,7 +20172,7 @@ Transform:
   m_GameObject: {fileID: 914218053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.00002670288, y: 0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22842,7 +22840,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 3.75
+  orthographic size: 5.625
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -22867,7 +22865,7 @@ Transform:
   m_GameObject: {fileID: 1019121078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 47, y: 16, z: -10}
+  m_LocalPosition: {x: 46.999973, y: 15.875, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25841,7 +25839,7 @@ Transform:
   m_GameObject: {fileID: 1175886459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.00002670288, y: 0.125, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -27227,12 +27225,10 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 256
-  init:
-    DamageCoefficient: 0
-    TrackingRadius: 0
-    CriticalRate: 0
-    GraffitiPoint: 0
-    Strong: 0
+  initDmgCoeff: 100
+  initCritRate: 10
+  initStrong: 0
+  initGP: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -27633,7 +27629,7 @@ Transform:
   m_GameObject: {fileID: 1282251501}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 17.5, y: 1.5, z: 0}
+  m_LocalPosition: {x: 52.5, y: 16.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -29069,12 +29065,10 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 256
-  init:
-    DamageCoefficient: 0
-    TrackingRadius: 0
-    CriticalRate: 0
-    GraffitiPoint: 0
-    Strong: 0
+  initDmgCoeff: 100
+  initCritRate: 10
+  initStrong: 0
+  initGP: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -67442,6 +67436,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2761662646948922022}
     - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: initStrong
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
       propertyPath: init.Strong
       value: 1
       objectReference: {fileID: 0}
@@ -67452,6 +67450,14 @@ PrefabInstance:
     - target: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
       propertyPath: init.DamageCoefficient
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359980704814806776, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_Size.x
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4359980704814806776, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+      propertyPath: m_Size.y
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6124633340371042755, guid: 891864adca7add241832b5a77adc9c82, type: 3}
       propertyPath: m_Name
@@ -71269,7 +71275,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1837566179521182403, guid: a5452a798b88382488df6874886c0953, type: 3}
       propertyPath: m_Layer
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3737042194133120777, guid: a5452a798b88382488df6874886c0953, type: 3}
       propertyPath: m_Color.a
@@ -71347,12 +71353,10 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 640
-  init:
-    DamageCoefficient: 0
-    TrackingRadius: 0
-    CriticalRate: 0
-    GraffitiPoint: 0
-    Strong: 0
+  initDmgCoeff: 100
+  initCritRate: 10
+  initStrong: 0
+  initGP: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -72316,6 +72320,7 @@ MonoBehaviour:
   stealthPlayerLayer:
     serializedVersion: 2
     m_Bits: 512
+  SkillArray: []
   theState: {fileID: 2761662646948922022}
   TinkerAudioSource: {fileID: 5625328143578934921}
 --- !u!1660057539 &9223372036854775807

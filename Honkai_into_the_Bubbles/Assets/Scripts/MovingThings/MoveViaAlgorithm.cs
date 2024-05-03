@@ -17,7 +17,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
     [SerializeField] protected LayerMask playerLayer; // UWU
     [SerializeField] protected LayerMask stealthPlayerLayer; // UWU
     protected Vector3 targetPos = Vector3.zero;
-    protected Skill[] SkillArray;
+    [SerializeField] protected Skill[] SkillArray;
 
     protected List<Node> ToPlayerList;
     protected Transform Player;
@@ -62,7 +62,6 @@ public abstract class MoveViaAlgorithm : MoveSprite
         {
             if (_deacsth)
             {
-                Debug.Log(_rad);
                 if (Physics2D.OverlapCircle(Mover.position, _rad, stealthPlayerLayer))
                     return true;
                 else

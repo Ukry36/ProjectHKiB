@@ -5,7 +5,10 @@ using UnityEngine;
 public class AttackCollision : MonoBehaviour
 {
     public LayerMask damageLayer;
-    [SerializeField] private Attack init;
+    [SerializeField] private int initDmgCoeff = 100;
+    [SerializeField] private int initCritRate = 10;
+    [SerializeField] private bool initStrong;
+    [SerializeField] private int initGP;
     private int DMG;
     private int GP;
     private bool Strong;
@@ -26,7 +29,7 @@ public class AttackCollision : MonoBehaviour
         boxCollider2D = GetComponent<BoxCollider2D>();
         prevPos = this.transform.position;
 
-        SetAttackInfo(init.DamageCoefficient, init.CriticalRate, init.Strong, init.GraffitiPoint);
+        SetAttackInfo(initDmgCoeff, initCritRate, initStrong, initGP);
     }
 
     public void SetAttackInfo(int _DmgCoeff, int _CritRate, bool _Strong, int _GP = 0)
@@ -47,6 +50,7 @@ public class AttackCollision : MonoBehaviour
         float x, y;
         if ((damageLayer & (1 << other.gameObject.layer)) != 0)
         {
+            Debug.Log(DMG);
             if (Strong)
             {
                 GrrogyDir = other.transform.position - prevPos;

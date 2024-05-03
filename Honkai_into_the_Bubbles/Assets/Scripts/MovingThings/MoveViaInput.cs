@@ -108,10 +108,14 @@ public abstract class MoveViaInput : MoveSprite
 // it corrects the applyVector values by its condition
     protected bool DetectWall()
     {
+        movePoint.gameObject.SetActive(false);
         if (applyVector.x == 0 || applyVector.y == 0)
         {
             if (Physics2D.OverlapCircle(movePoint.position, .4f, wallLayer))
+            {
+                movePoint.gameObject.SetActive(true);
                 return true;
+            }
         }
         else
         {
@@ -129,12 +133,16 @@ public abstract class MoveViaInput : MoveSprite
             }
                 
             if (applyVector.x == 0 && applyVector.y == 0)
+            {
+                movePoint.gameObject.SetActive(true);
                 return true;
+            }
             
             if (applyVector.x != 0 && applyVector.y != 0)
                 if (Physics2D.OverlapCircle(movePoint.position, .4f, wallLayer))
                     movePoint.position -= new Vector3(0, applyVector.y, 0);
         }
+        movePoint.gameObject.SetActive(true);
         return false;
     }
 
