@@ -4,9 +4,7 @@ using UnityEngine;
 
 public class Enemy_Spider : MoveViaAlgorithm
 {
-    private bool backStep;
     private WaitForSeconds wait = new WaitForSeconds(0.5f);
-
 
 
     // Start is called before the first frame update
@@ -20,19 +18,13 @@ public class Enemy_Spider : MoveViaAlgorithm
         moveSpeed = defaultSpeed;
 
         SkillArray = new Skill[] {
-            new Skill(35, 1, 4, 3f, 0.3f, true),
-            new Skill(35, 1, 2, 3f, 0.2f, false)
+            new Skill(35, 1, 4, 3f, 0.3f, true)
         }; //upper skill high priority (not nessesory just for easy recognizing)
 
         theState.SetHitAnimObject();
         StartCoroutine(NormalBehaviourCoroutine());
     }
 
-
-    private void Update()
-    {
-
-    }
 
     IEnumerator AggroBehaviourCoroutine()
     {
@@ -60,10 +52,6 @@ public class Enemy_Spider : MoveViaAlgorithm
             {
                 targetPos.x = ToPlayerList[1].x;
                 targetPos.y = ToPlayerList[1].y;
-                if(backStep)
-                {
-                    targetPos = Mover.position*2 - targetPos;
-                }
             }
 
 
@@ -76,7 +64,7 @@ public class Enemy_Spider : MoveViaAlgorithm
             yield return new WaitForSeconds(AggroMoveDelay);
             walking = true;
             // if there is a wall, wait
-            if(Physics2D.OverlapCircle(targetPos, .4f, wallLayer)) 
+            if(Physics2D.OverlapCircle(targetPos, .4f, wallLayer))
             {
                 yield return wait;
                 walking = false;
@@ -209,12 +197,10 @@ public class Enemy_Spider : MoveViaAlgorithm
         
 
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f);
-        backStep = true;
         StopAttacking();
-            
+
 
         yield return new WaitForSeconds(SkillArray[0].Cooltime);
-        backStep = false;
         SkillArray[0].CanSkill = true;
     }
 

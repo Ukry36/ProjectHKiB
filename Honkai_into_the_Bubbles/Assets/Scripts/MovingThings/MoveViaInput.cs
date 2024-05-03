@@ -80,29 +80,32 @@ public abstract class MoveViaInput : MoveSprite
             applyVector = new Vector2(applyVector.x / Mathf.Abs(applyVector.x), applyVector.y / Mathf.Abs(applyVector.y));
     }
 
+
+// determine direction of player by rawInput or applyInput in animtion
     protected void SetDir(bool _byRawInput = false)
     {
-        // determine direction of player in animtion
-        if(applyVector.x != 0)
-        {
-            if (_byRawInput)
-                animator.SetFloat("dirX", moveInput.x);
+        if(moveInput != Vector2.zero)
+            if(applyVector.x != 0)
+            {
+                if (_byRawInput)
+                    animator.SetFloat("dirX", moveInput.x);
+                else
+                    animator.SetFloat("dirX", applyVector.x);
+                animator.SetFloat("dirY", 0);
+            } 
             else
-                animator.SetFloat("dirX", applyVector.x);
-            animator.SetFloat("dirY", 0);
-        } 
-        else
-        {
-            animator.SetFloat("dirX", 0);
-            if (_byRawInput)
-                animator.SetFloat("dirY", moveInput.y);
-            else
-                animator.SetFloat("dirY", applyVector.y);
-        }
+            {
+                animator.SetFloat("dirX", 0);
+                if (_byRawInput)
+                    animator.SetFloat("dirY", moveInput.y);
+                else
+                    animator.SetFloat("dirY", applyVector.y);
+            }
     }
 
 
 // manage wall detecting including diagonal move
+// it corrects the applyVector values by its condition
     protected bool DetectWall()
     {
         if (applyVector.x == 0 || applyVector.y == 0)
@@ -143,7 +146,6 @@ public abstract class MoveViaInput : MoveSprite
 
         while(moveInput != Vector2.zero && !freeze && stopWalkboolean)
         {
-            // set movespeed default
             // while pressing sprint, movespeed doubles
             if (InputManager.instance.SprintInput)
                 moveSpeed = defaultSpeed * 2;
@@ -157,12 +159,13 @@ public abstract class MoveViaInput : MoveSprite
 
 
             // move destination forward
-            movePoint.position += (Vector3)applyVector; 
+            movePoint.position += (Vector3)applyVector;
             yield return null;
+            // if there is wall, move destination back to player
             if (DetectWall())
             {
-                movePoint.position -= (Vector3)applyVector; 
-                SetDir(true); // 수정 요망!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+                movePoint.position -= (Vector3)applyVector;
+                SetDir(true); // 
                 break;
             }
             SetDir();
