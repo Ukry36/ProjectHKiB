@@ -2,26 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
+using NaughtyAttributes;
 
 public abstract class MoveViaInput : MoveSprite
 {
+    [BoxGroup("Attack")]
+    public bool cannotAttackEffect = false; private bool CAEBoolean() {return !cannotAttackEffect;}
+    [BoxGroup("Attack")][ShowIf("CAEBoolean")] 
     public bool isAttackEffect = false;
-    public bool cannotAttackEffect = false;
+    [BoxGroup("Attack")][ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")] 
+    [SerializeField]protected State theState;
+    [BoxGroup("Attack")][ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")] 
+    [SerializeField] protected Attack[] AttackArray;
+    [BoxGroup("Attack")][ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")] 
+    [SerializeField] protected AttackCollision attack;
+    protected int combo;
+
+
     [HideInInspector] public int spriteOverrideID;
     protected List<Color> dodgeColors = new();
-    [SerializeField] protected State theState;
-
 
     protected Vector2 moveInput; // vector2 from new input sys
     protected bool attackInput;
     protected bool dodgeInput;
     protected bool startGraffitiInput;
 
-
     protected bool attacking = false; // if true, AttackCoroutine is running
     protected bool dodging = false; // if true, DodgeCoroutine is running
     protected bool graffiting = false; // if true, GraffitiCoroutine is running
-
 
     [HideInInspector] public bool canAttackAnim = true; // animation controls this
     [HideInInspector] public bool recieveAttackInput = true; // animation controls this
@@ -29,27 +37,41 @@ public abstract class MoveViaInput : MoveSprite
     [HideInInspector] public bool recieveGraffitiInput = true; // exsists for cooltime
     
 
-    [SerializeField] protected Attack[] AttackArray;
-    [SerializeField] protected AttackCollision attack;
-    protected int combo;
 
-
+    [BoxGroup("Dodge")]
+    [SerializeField] protected bool canDodgeEffect = false;
+    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
     [SerializeField] protected Animator dodgeAnim; // UWU
+    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
     [SerializeField] protected SpriteRenderer dodgeSprt; // to apply theme color
+    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
     [SerializeField] protected int dodgeLength = 1; // max length player can dodge
+    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
     [SerializeField] protected int continuousDodgeLimit = 2; // max count player can continue dodging
+    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
     [SerializeField] protected float dodgeCooltime = 1f; // dodge cooltime
+    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
     [SerializeField] protected bool keepDodge = false;
+    [BoxGroup("Dodge")][ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
     [SerializeField] protected int keepDodgeLimit = 5;
+    [BoxGroup("Dodge")][ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
     [SerializeField] protected float keepDodgeTimeLimit = 3f;
     protected int continuousDodgeCount = 0; // count countinuous dodge
     protected int totalDodgeCount = 0; // how many time did you dodge
 
 
+
+    [BoxGroup("Graffiti")]
+    [SerializeField] protected bool canGraffitiEffect = false;
+    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
     [SerializeField] protected GraffitiSystem GS;
+    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
     [SerializeField] protected float graffitiMaxtime = 1.5f;
+    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
     [SerializeField] protected float graffitiCooltime = 0.3f;
+    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
     [SerializeField] protected bool endAtGraffitiStartPoint = true;
+    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
     [SerializeField] protected Transform GraffitiStartPoint;
     
     

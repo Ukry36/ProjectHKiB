@@ -5766,36 +5766,17 @@ MonoBehaviour:
   spriteLibrary: {fileID: 220232704}
   explodeWhenDie: 0
   explosion: {fileID: 0}
-  isAttackEffect: 1
   cannotAttackEffect: 0
-  spriteOverrideID: 0
+  isAttackEffect: 1
   theState: {fileID: 626534178}
+  AttackArray: []
+  attack: {fileID: 1251733461}
+  spriteOverrideID: 0
   canAttackAnim: 1
   recieveAttackInput: 1
   recieveDodgeInput: 1
   recieveGraffitiInput: 1
-  AttackArray:
-  - DamageCoefficient: 75
-    TrackingRadius: 0
-    CriticalRate: 10
-    GraffitiPoint: 1
-    Strong: 0
-  - DamageCoefficient: 50
-    TrackingRadius: 1
-    CriticalRate: 10
-    GraffitiPoint: 1
-    Strong: 1
-  - DamageCoefficient: 50
-    TrackingRadius: 1
-    CriticalRate: 10
-    GraffitiPoint: 1
-    Strong: 0
-  - DamageCoefficient: 175
-    TrackingRadius: 0
-    CriticalRate: 10
-    GraffitiPoint: 1
-    Strong: 1
-  attack: {fileID: 1251733461}
+  canDodgeEffect: 1
   dodgeAnim: {fileID: 1832963304}
   dodgeSprt: {fileID: 1832963305}
   dodgeLength: 1
@@ -5804,6 +5785,7 @@ MonoBehaviour:
   keepDodge: 0
   keepDodgeLimit: 5
   keepDodgeTimeLimit: 3
+  canGraffitiEffect: 1
   GS: {fileID: 220232708}
   graffitiMaxtime: 1.5
   graffitiCooltime: 0.3
@@ -5855,8 +5837,8 @@ MonoBehaviour:
     Delay: 0.2
     skillCommand:
     - {x: 1, y: 0}
-    - {x: 0, y: 1}
     - {x: 1, y: 1}
+    - {x: 0, y: 1}
     - {x: 2, y: 1}
     - {x: 1, y: 2}
     GP: 0
@@ -7923,8 +7905,16 @@ PrefabInstance:
       value: 0.20784315
       objectReference: {fileID: 0}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+      propertyPath: canDodgeEffect
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: wallLayer.m_Bits
       value: 1344
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+      propertyPath: canGraffitiEffect
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: grrogyCoefficient
@@ -20172,7 +20162,7 @@ Transform:
   m_GameObject: {fileID: 914218053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00002670288, y: 0.125, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22840,7 +22830,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 3.392857
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -22865,7 +22855,7 @@ Transform:
   m_GameObject: {fileID: 1019121078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.999973, y: 15.875, z: -10}
+  m_LocalPosition: {x: 47, y: 16, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25839,7 +25829,7 @@ Transform:
   m_GameObject: {fileID: 1175886459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.00002670288, y: 0.125, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -28054,6 +28044,10 @@ PrefabInstance:
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: wallLayer.m_Bits
       value: 1344
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+      propertyPath: canGraffitiEffect
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: grrogyCoefficient
@@ -30564,16 +30558,17 @@ MonoBehaviour:
   spriteLibrary: {fileID: 1415920015}
   explodeWhenDie: 0
   explosion: {fileID: 0}
-  isAttackEffect: 1
   cannotAttackEffect: 0
-  spriteOverrideID: 0
+  isAttackEffect: 1
   theState: {fileID: 626534178}
+  AttackArray: []
+  attack: {fileID: 180959515}
+  spriteOverrideID: 0
   canAttackAnim: 1
   recieveAttackInput: 1
   recieveDodgeInput: 1
   recieveGraffitiInput: 1
-  AttackArray: []
-  attack: {fileID: 180959515}
+  canDodgeEffect: 1
   dodgeAnim: {fileID: 1832963304}
   dodgeSprt: {fileID: 1832963305}
   dodgeLength: 1
@@ -30582,6 +30577,7 @@ MonoBehaviour:
   keepDodge: 0
   keepDodgeLimit: 5
   keepDodgeTimeLimit: 3
+  canGraffitiEffect: 1
   GS: {fileID: 1415920016}
   graffitiMaxtime: 1.5
   graffitiCooltime: 0.25
@@ -58097,16 +58093,17 @@ MonoBehaviour:
   spriteLibrary: {fileID: 1600101426}
   explodeWhenDie: 0
   explosion: {fileID: 0}
-  isAttackEffect: 1
   cannotAttackEffect: 0
-  spriteOverrideID: 0
+  isAttackEffect: 1
   theState: {fileID: 626534178}
+  AttackArray: []
+  attack: {fileID: 1365820154}
+  spriteOverrideID: 0
   canAttackAnim: 1
   recieveAttackInput: 1
   recieveDodgeInput: 1
   recieveGraffitiInput: 1
-  AttackArray: []
-  attack: {fileID: 1365820154}
+  canDodgeEffect: 1
   dodgeAnim: {fileID: 1832963304}
   dodgeSprt: {fileID: 1832963305}
   dodgeLength: 1
@@ -58115,6 +58112,7 @@ MonoBehaviour:
   keepDodge: 0
   keepDodgeLimit: 5
   keepDodgeTimeLimit: 3
+  canGraffitiEffect: 1
   GS: {fileID: 1600101427}
   graffitiMaxtime: 1.5
   graffitiCooltime: 0.3
@@ -71915,6 +71913,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 626534174}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+      propertyPath: keepDodge
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: movePoint
       value: 
       objectReference: {fileID: 6043008}
@@ -71967,12 +71969,28 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+      propertyPath: canDodgeEffect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+      propertyPath: explodeWhenDie
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+      propertyPath: isAttackEffect
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: wallLayer.m_Bits
       value: 1344
       objectReference: {fileID: 0}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: grrogyCoefficient
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+      propertyPath: cannotAttackEffect
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

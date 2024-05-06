@@ -19,10 +19,12 @@ public class Enemy_Rusher : MoveViaAlgorithm
         pathFinder = GetComponent<PathFindManager>();
         moveSpeed = defaultSpeed;
 
+        /*
         SkillArray = new Skill[] {
             new Skill(35, 1, 4, 3f, 0.3f, true),
             new Skill(35, 1, 2, 3f, 0.2f, false)
             }; //upper skill high priority (not nessesory just for easy recognizing)
+        */
 
         theState.SetHitAnimObject();
         StartCoroutine(NormalBehaviourCoroutine());

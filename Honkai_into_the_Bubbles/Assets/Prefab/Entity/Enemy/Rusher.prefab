@@ -101,6 +101,10 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 640
+  initDmgCoeff: 100
+  initCritRate: 10
+  initStrong: 0
+  initGP: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -323,9 +327,10 @@ MonoBehaviour:
   movePoint: {fileID: 2563409765023122238}
   freeze: 0
   grrogyCoefficient: 2
-  stopAttackboolean: 1
   animator: {fileID: 0}
   spriteLibrary: {fileID: 8011523914647686725}
+  explodeWhenDie: 0
+  explosion: {fileID: 0}
   randomMove: 1
   doAttack: 1
   NormalMoveDelay: 1
@@ -342,6 +347,27 @@ MonoBehaviour:
   stealthPlayerLayer:
     serializedVersion: 2
     m_Bits: 512
+  SkillArray:
+  - DamageCoefficient: 35
+    TrackingRadius: 1
+    DetectRadius: 4
+    CriticalRate: 0
+    Strong: 1
+    Cooltime: 3
+    CanSkill: 0
+    Delay: 0.3
+    skillCommand: []
+    GP: 0
+  - DamageCoefficient: 35
+    TrackingRadius: 1
+    DetectRadius: 2
+    CriticalRate: 0
+    Strong: 0
+    Cooltime: 3
+    CanSkill: 0
+    Delay: 0.2
+    skillCommand: []
+    GP: 0
   theState: {fileID: 2577073312972856472}
   TinkerAudioSource: {fileID: 5440859803028975799}
 --- !u!114 &5990756363727143722
@@ -529,6 +555,7 @@ MonoBehaviour:
   DEF: 0
   CritRate: 0
   CritDMG: 0
+  moveSprite: {fileID: 0}
 --- !u!61 &4404217947297648775
 BoxCollider2D:
   m_ObjectHideFlags: 0

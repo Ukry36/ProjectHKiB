@@ -26,11 +26,13 @@ public class Enemy_Lightning : MoveViaAlgorithm
         pathFinder = GetComponent<PathFindManager>();
         moveSpeed = defaultSpeed;
 
+        /*
         SkillArray = new Skill[] {
             new Skill(15, 0, 4, 3.5f, 0.2f, true),
             new Skill(30, 0, 8, 3f, 0.2f, false)
         }; //upper skill high priority (not nessesory just for easy recognizing)
-
+        */
+        
         bulletPrefab.GetComponent<AttackCollision>().
         SetAttackInfo(SkillArray[0].DamageCoefficient, SkillArray[0].CriticalRate, SkillArray[0].Strong);
         trackingBulletPrefab.GetComponent<AttackCollision>().

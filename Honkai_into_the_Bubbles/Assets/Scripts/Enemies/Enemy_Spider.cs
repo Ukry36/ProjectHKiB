@@ -16,11 +16,12 @@ public class Enemy_Spider : MoveViaAlgorithm
         Player = FindObjectOfType<PlayerManager>().transform;
         pathFinder = GetComponent<PathFindManager>();
         moveSpeed = defaultSpeed;
-
+        
+        /*
         SkillArray = new Skill[] {
             new Skill(0, 1, 3, 3f, 0.3f, true)
         }; //upper skill high priority (not nessesory just for easy recognizing)
-
+        */
 
         theState.SetHitAnimObject();
         StartCoroutine(NormalBehaviourCoroutine());

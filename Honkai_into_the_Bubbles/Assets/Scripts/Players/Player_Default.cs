@@ -28,6 +28,33 @@ public class Player_Default : MoveViaInput
         {
             StartCoroutine(WalkCoroutine());
         }
+
+        // recieve dodge input if its right timing
+        if(canDodgeEffect)
+        {
+            dodgeInput = false;
+            if (recieveDodgeInput) 
+                dodgeInput = InputManager.instance.DodgeInput;
+            if(!dodging && dodgeInput && !freeze && !grrogying && !graffiting)
+            {
+                StopWalk();
+                StartCoroutine(DodgeCoroutine());
+            }
+        }
+
+        // recieve graffiti input if its right timing
+        if(canGraffitiEffect)
+        {
+            startGraffitiInput = false;
+            if (recieveGraffitiInput)
+                startGraffitiInput = InputManager.instance.GraffitiStartInput;
+            if(!graffiting && startGraffitiInput && !freeze && !grrogying && !dodging && theState.currentGP > 0)
+            {
+                StopWalk();
+                StartCoroutine(GraffitiCoroutine());
+            }
+        }
+        
     }
 
 

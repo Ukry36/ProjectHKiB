@@ -1,9 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
+using NaughtyAttributes;
 
 public class MoveSprite : MonoBehaviour
 {
@@ -30,7 +30,7 @@ public class MoveSprite : MonoBehaviour
     [SerializeField] protected SpriteLibrary spriteLibrary;
 
     [SerializeField] protected bool explodeWhenDie = false;
-    [SerializeField] private GameObject explosion;
+    [ShowIf("explodeWhenDie")] [SerializeField] private GameObject explosion;
 
 
 

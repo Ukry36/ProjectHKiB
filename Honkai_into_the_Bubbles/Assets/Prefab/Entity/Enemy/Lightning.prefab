@@ -84,7 +84,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &6087268915650214786
@@ -147,6 +147,10 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 640
+  initDmgCoeff: 100
+  initCritRate: 10
+  initStrong: 0
+  initGP: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -239,6 +243,7 @@ MonoBehaviour:
   DEF: 0
   CritRate: 0
   CritDMG: 10
+  moveSprite: {fileID: 0}
 --- !u!61 &5018965583146154719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -767,9 +772,10 @@ MonoBehaviour:
   movePoint: {fileID: 2551546378565180611}
   freeze: 0
   grrogyCoefficient: 2
-  stopAttackboolean: 1
   animator: {fileID: 0}
   spriteLibrary: {fileID: 4619151856880970515}
+  explodeWhenDie: 0
+  explosion: {fileID: 0}
   randomMove: 1
   doAttack: 1
   NormalMoveDelay: 1
@@ -786,6 +792,27 @@ MonoBehaviour:
   stealthPlayerLayer:
     serializedVersion: 2
     m_Bits: 512
+  SkillArray:
+  - DamageCoefficient: 15
+    TrackingRadius: 0
+    DetectRadius: 4
+    CriticalRate: 0
+    Strong: 1
+    Cooltime: 3.5
+    CanSkill: 0
+    Delay: 0.2
+    skillCommand: []
+    GP: 0
+  - DamageCoefficient: 30
+    TrackingRadius: 0
+    DetectRadius: 8
+    CriticalRate: 0
+    Strong: 0
+    Cooltime: 3
+    CanSkill: 0
+    Delay: 0.2
+    skillCommand: []
+    GP: 0
   theState: {fileID: 8465309907849305440}
   TinkerAudioSource: {fileID: 2708280719462285630}
   trackingBulletPrefab: {fileID: 1246344329169649900}
