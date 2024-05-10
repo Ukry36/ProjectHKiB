@@ -8,23 +8,23 @@ public abstract class MoveViaAlgorithm : MoveSprite
     [SerializeField] protected bool randomMove = true; // toggle either this enemy move through specific route or just randomly
     [SerializeField] protected bool doAttack = true; // this enemy can attack
     [SerializeField] protected float NormalMoveDelay = 1; // delay before move in normal sequence
-    [ShowIf("doAttack")] 
+    [ShowIf("doAttack")]
     [SerializeField] protected float AggroMoveDelay = 0; //delay before move in aggro sequence
     [SerializeField] protected float turnDelay = 0; // delay before seeing player
-    [ShowIf("doAttack")] 
+    [ShowIf("doAttack")]
     [SerializeField] protected float attackAnimDelay = 0.5f; // delay to play attack animation fully (has to longer than attack delay)
-    [ShowIf("doAttack")] 
+    [ShowIf("doAttack")]
     [SerializeField] protected int followRadius = 5;  // if player is in this area, aggro sequence starts
-    [ShowIf("doAttack")] 
+    [ShowIf("doAttack")]
     [SerializeField] protected int endFollowRadius = 7; // if player is out of this area, Normal sequence starts
-    [ShowIf("doAttack")] 
+    [ShowIf("doAttack")]
     [SerializeField] protected AttackCollision attack; // yo
-    [ShowIf("doAttack")] 
+    [ShowIf("doAttack")]
     [SerializeField] protected GameObject beforeAttackEffectPrefab; // twinkle
     [SerializeField] protected LayerMask playerLayer; // UWU
     [SerializeField] protected LayerMask stealthPlayerLayer; // UWU
     protected Vector3 targetPos = Vector3.zero;
-    [ShowIf("doAttack")] 
+    [ShowIf("doAttack")]
     [SerializeField] protected Skill[] SkillArray;
 
     protected List<Node> ToPlayerList;
@@ -32,18 +32,18 @@ public abstract class MoveViaAlgorithm : MoveSprite
     protected PathFindManager pathFinder;
 
     [SerializeField] protected State theState;
-    [ShowIf("doAttack")] 
+    [ShowIf("doAttack")]
     [SerializeField] private AudioSource TinkerAudioSource;
 
 
-// instantly go in front of player before attacking
+    // instantly go in front of player before attacking
     protected void Track(Skill _skill)
     {
-        for (int i = 0; i < ToPlayerList.Count-1 && i < _skill.TrackingRadius; i++)
+        for (int i = 0; i < ToPlayerList.Count - 1 && i < _skill.TrackingRadius; i++)
         {
-            targetPos.x = ToPlayerList[i+1].x;
-            targetPos.y = ToPlayerList[i+1].y;
-            if(Physics2D.OverlapCircle(targetPos, .4f, wallLayer)) 
+            targetPos.x = ToPlayerList[i + 1].x;
+            targetPos.y = ToPlayerList[i + 1].y;
+            if (Physics2D.OverlapCircle(targetPos, .4f, wallLayer))
                 break;
             movePoint.position = targetPos;
             Mover.position = movePoint.position;
@@ -51,7 +51,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
     }
 
 
-// tinker before attack
+    // tinker before attack
     protected void BeforeAttackTinker(Vector3 _offset)
     {
         Instantiate(beforeAttackEffectPrefab, this.transform.position + _offset, Quaternion.identity);
@@ -59,14 +59,14 @@ public abstract class MoveViaAlgorithm : MoveSprite
     }
 
 
-// detect player if player is in specific area
+    // detect player if player is in specific area
     protected bool DetectPlayer(float _rad, bool _deacsth = false)
     {
         if (Physics2D.OverlapCircle(Mover.position, _rad, playerLayer))
         {
             return true;
         }
-        else 
+        else
         {
             if (_deacsth)
             {
@@ -82,20 +82,23 @@ public abstract class MoveViaAlgorithm : MoveSprite
                 else
                     return false;
             }
-            
+
         }
-            
+
     }
 
 
-    protected bool DetectPlayerLimited(float _dist, float _exceptableErr, bool _deacsth = false)
+    protected bool DetectPlayer(float _dist)
     {
-        ///////////////////////////////////// 바라보고 있는 방향만 raycast
+        if (Physics2D.Raycast(Mover.position, applyVector, _dist, playerLayer))
+        {
+            return true;
+        }
         return false;
     }
 
 
-// set direction to where player is 
+    // set direction to where player is 
     protected void SeePlayer(float _turnDelay = 0)
     {
         StartCoroutine(SeePlayerCoroutine(_turnDelay));
@@ -108,7 +111,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
             applyVector.y = 0f;
             if (Mover.position.x < Player.position.x)
                 applyVector.x = 1f;
-            else 
+            else
                 applyVector.x = -1f;
         }
         else
@@ -123,25 +126,42 @@ public abstract class MoveViaAlgorithm : MoveSprite
         animator.SetFloat("dirY", applyVector.y);
     }
 
-    protected void SeeTargetPos()
+    protected void SeeTargetPos(Vector3 _targetPos)
     {
-        /////////////////////////////////
+        if (Mathf.Abs(Mover.position.x - _targetPos.x) >= Mathf.Abs(Mover.position.y - _targetPos.y))
+        {
+            applyVector.y = 0f;
+            if (Mover.position.x < _targetPos.x)
+                applyVector.x = 1f;
+            else
+                applyVector.x = -1f;
+        }
+        else
+        {
+            applyVector.x = 0f;
+            if (Mover.position.y < _targetPos.y)
+                applyVector.y = 1f;
+            else
+                applyVector.y = -1f;
+        }
+        animator.SetFloat("dirX", applyVector.x);
+        animator.SetFloat("dirY", applyVector.y);
     }
 
 
-// set the path to player
-// if player is not in the area, don't
+    // set the path to player
+    // if player is not in the area, don't
     protected int SetPath()
     {
-        if (Player.position.x <= Mover.position.x + endFollowRadius 
-        && Player.position.x >= Mover.position.x - endFollowRadius 
-        && Player.position.y <= Mover.position.y + endFollowRadius 
-        && Player.position.y >= Mover.position.y - endFollowRadius )
+        if (Player.position.x <= Mover.position.x + endFollowRadius
+        && Player.position.x >= Mover.position.x - endFollowRadius
+        && Player.position.y <= Mover.position.y + endFollowRadius
+        && Player.position.y >= Mover.position.y - endFollowRadius)
         {
-            ToPlayerList = pathFinder.PathFinding(Mover.position - new Vector3(endFollowRadius, endFollowRadius, 0), 
-                                                Mover.position + new Vector3(endFollowRadius, endFollowRadius, 0), 
+            ToPlayerList = pathFinder.PathFinding(Mover.position - new Vector3(endFollowRadius, endFollowRadius, 0),
+                                                Mover.position + new Vector3(endFollowRadius, endFollowRadius, 0),
                                                 Mover.position, Player.position);
-            
+
             return ToPlayerList.Count;
         }
         else
@@ -151,7 +171,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
     }
 
 
-// set direction and movePoint randomly
+    // set direction and movePoint randomly
     protected void RandomDirection()
     {
         applyVector.Set(0, 0);

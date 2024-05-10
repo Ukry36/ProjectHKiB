@@ -30,11 +30,11 @@ public class MoveSprite : MonoBehaviour
     [SerializeField] protected SpriteLibrary spriteLibrary;
 
     [SerializeField] protected bool explodeWhenDie = false;
-    [ShowIf("explodeWhenDie")] [SerializeField] private GameObject explosion;
+    [ShowIf("explodeWhenDie")][SerializeField] private GameObject explosion;
 
 
 
-// walk by order
+    // walk by order
     public void Move(string _dir, float _wait = 0, bool _sprint = false)
     {
         queue.Enqueue(_dir);
@@ -53,7 +53,7 @@ public class MoveSprite : MonoBehaviour
                 moveSpeed = defaultSpeed * 2;
             else
                 moveSpeed = defaultSpeed;
-            
+
 
             // wait before movin
             if (_wait > 0)
@@ -86,24 +86,24 @@ public class MoveSprite : MonoBehaviour
 
 
             // if there is a wall on destination, quit moving on current direction
-            if(Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer))
+            if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer))
             {
                 animator.SetBool("walk", false);
                 continue;
             }
-            
+
 
             // move destination forward
-            movePoint.position += (Vector3)applyVector; 
+            movePoint.position += (Vector3)applyVector;
 
-            
+
             // move toward destination
             animator.SetBool("walk", true);
-            while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+            while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
             {
                 if (!stopWalkboolean)
                     break;
-                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime); 
+                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime);
                 yield return null;
             }
             Mover.position = movePoint.position;
@@ -145,21 +145,21 @@ public class MoveSprite : MonoBehaviour
         yield return null;
         yield return null;
         yield return null;
-        if(_dir.x != 0)
+        if (_dir.x != 0)
         {
             animator.SetFloat("dirX", -_dir.x);
             animator.SetFloat("dirY", 0);
-        } 
+        }
         else
         {
             animator.SetFloat("dirX", 0);
             animator.SetFloat("dirY", -_dir.y);
         }
 
-        for (int i = 0; i < grrogyCoefficient-1; i++)
+        for (int i = 0; i < grrogyCoefficient - 1; i++)
         {
             Mover.position = movePoint.position;
-            
+
 
             if (_dir.x == 0 || _dir.y == 0)
             {
@@ -186,9 +186,9 @@ public class MoveSprite : MonoBehaviour
 
             movePoint.position += _dir;
         }
-        
 
-        while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+
+        while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
         {
             Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, 4 * Time.deltaTime);
             yield return null;
@@ -217,12 +217,12 @@ public class MoveSprite : MonoBehaviour
         color.g = 225;
         color.b = 225;
         spriteRenderer.color = color;
-        
+
     }
 
     public void Die()
     {
-        if(explodeWhenDie)
+        if (explodeWhenDie)
         {
             var clone = Instantiate(explosion, this.transform.position, quaternion.identity);
             clone.SetActive(true);

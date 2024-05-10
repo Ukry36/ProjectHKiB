@@ -16,12 +16,12 @@ public class Enemy_Spider : MoveViaAlgorithm
         Player = FindObjectOfType<PlayerManager>().transform;
         pathFinder = GetComponent<PathFindManager>();
         moveSpeed = defaultSpeed;
-        
-        /*
+
+
         SkillArray = new Skill[] {
             new Skill(0, 1, 3, 3f, 0.3f, true)
         }; //upper skill high priority (not nessesory just for easy recognizing)
-        */
+
 
         theState.SetHitAnimObject();
         StartCoroutine(NormalBehaviourCoroutine());
@@ -30,11 +30,11 @@ public class Enemy_Spider : MoveViaAlgorithm
 
     IEnumerator AggroBehaviourCoroutine()
     {
-        while(true)
+        while (true)
         {
-            while(grrogying)
+            while (grrogying)
                 yield return wait;
-            
+
 
             if (!DetectPlayer(endFollowRadius))
             {
@@ -54,9 +54,9 @@ public class Enemy_Spider : MoveViaAlgorithm
                 targetPos.y = ToPlayerList[1].y;
             }
 
-            SeeTargetPos();
+            SeeTargetPos(targetPos);
 
-            if (SkillArray[0].CanSkill && DetectPlayer(SkillArray[0].DetectRadius, true))
+            if (SkillArray[0].CanSkill && DetectPlayer(SkillArray[0].DetectRadius))
             {
                 StartCoroutine(Skill01Coroutine());
                 break;
@@ -65,23 +65,23 @@ public class Enemy_Spider : MoveViaAlgorithm
             yield return new WaitForSeconds(AggroMoveDelay);
             walking = true;
             // if there is a wall, wait
-            if(Physics2D.OverlapCircle(targetPos, .4f, wallLayer))
+            if (Physics2D.OverlapCircle(targetPos, .4f, wallLayer))
             {
                 yield return wait;
                 walking = false;
                 continue;
             }
-            
+
             // move destination forward
-            movePoint.position = targetPos; 
+            movePoint.position = targetPos;
             // move toward destination
             // if stopWalkboolean is false, skip sequencial movement
             animator.SetBool("walk", true);
-            while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+            while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
             {
                 if (!stopWalkboolean)
                     break;
-                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime); 
+                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime);
                 yield return null;
             }
             Mover.position = movePoint.position;
@@ -94,11 +94,16 @@ public class Enemy_Spider : MoveViaAlgorithm
 
     IEnumerator NormalBehaviourCoroutine()
     {
-        while(true)
+        while (true)
         {
-            while(grrogying)
+            while (grrogying)
                 yield return wait;
-            
+
+
+            Debug.Log(DetectPlayer(followRadius));
+            Debug.Log(applyVector);
+            Debug.Log(Mover.position);
+            Debug.Log(followRadius);
 
             if (doAttack && DetectPlayer(followRadius) && SetPath() > 1)
             {
@@ -115,7 +120,7 @@ public class Enemy_Spider : MoveViaAlgorithm
 
             walking = true;
             // if there is a wall, wait
-            if(Physics2D.OverlapCircle(movePoint.position + new Vector3(applyVector.x, applyVector.y, 0f), .4f, wallLayer)) 
+            if (Physics2D.OverlapCircle(movePoint.position + new Vector3(applyVector.x, applyVector.y, 0f), .4f, wallLayer))
             {
                 yield return wait;
                 continue;
@@ -123,15 +128,15 @@ public class Enemy_Spider : MoveViaAlgorithm
 
 
             // move destination forward
-            movePoint.position += (Vector3)applyVector; 
+            movePoint.position += (Vector3)applyVector;
             // move toward destination
             // if stopWalkboolean is false, skip sequencial movement
             animator.SetBool("walk", true);
-            while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+            while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
             {
                 if (!stopWalkboolean)
                     break;
-                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime); 
+                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime);
                 yield return null;
             }
             Mover.position = movePoint.position;
@@ -143,7 +148,7 @@ public class Enemy_Spider : MoveViaAlgorithm
 
 
     private void StopAttacking()
-    {   
+    {
         animator.SetFloat("skill", 0);
         stopAttackboolean = true;
         StartCoroutine(AggroBehaviourCoroutine());
@@ -187,12 +192,12 @@ public class Enemy_Spider : MoveViaAlgorithm
         yield return null;
         for (int i = 0; i < 8; i++) //Rush until wall
         {
-            if(Physics2D.OverlapCircle(Mover.position + new Vector3(applyVector.x, applyVector.y, 0), .4f, wallLayer)) 
+            if (Physics2D.OverlapCircle(Mover.position + new Vector3(applyVector.x, applyVector.y, 0), .4f, wallLayer))
                 continue;
             movePoint.position += new Vector3(applyVector.x, applyVector.y, 0);
             Mover.position = movePoint.position;
         }
-        
+
         Die();
     }
 
