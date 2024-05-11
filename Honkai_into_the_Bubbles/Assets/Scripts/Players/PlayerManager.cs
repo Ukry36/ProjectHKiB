@@ -27,10 +27,10 @@ public class PlayerManager : MonoBehaviour
         }
     }
     #endregion
-    
-    private int[] equippedEffectIDs = {0};
+
+    private int[] equippedEffectIDs = { 0 };
     private MoveViaInput[] EveryEffects;
-    private List<MoveViaInput> EquippedEffects = new List<MoveViaInput>{};
+    private List<MoveViaInput> EquippedEffects = new List<MoveViaInput> { };
     private MoveViaInput prevEffect;
 
     private int attackActivateState;  // -1: not attack effect, 0~3: EquippedEffects[0~3] is attack effect
@@ -57,7 +57,7 @@ public class PlayerManager : MonoBehaviour
 
 
         // if there is attack effect, first attack effect will be activated
-        attackActivateState = -1;     
+        attackActivateState = -1;
         for (int i = 0; i < EquippedEffects.Count; i++)
         {
             if (EquippedEffects[i].isAttackEffect)
@@ -127,7 +127,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (i == 1)
                 primeC = false;
-            switch(EquippedEffects[i].ID)
+            switch (EquippedEffects[i].ID)
             {
                 case 10000:
                     Activate10000Potion(_activate, primeC);
@@ -146,7 +146,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (_activate)
         {
-            if(_isPrime)
+            if (_isPrime)
             {
                 Debug.Log("canGrafitti");
             }
@@ -164,7 +164,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (_isPrime)
             {
-                this.gameObject.layer = 9; //CannotDetectPlayer
+                theState.isStealth = true;
             }
             else
             {
@@ -173,7 +173,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            this.gameObject.layer = 7; //Player
+            theState.isStealth = false;
         }
     }
 

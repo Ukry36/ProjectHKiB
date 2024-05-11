@@ -22,13 +22,13 @@ public abstract class MoveViaAlgorithm : MoveSprite
     [ShowIf("doAttack")]
     [SerializeField] protected GameObject beforeAttackEffectPrefab; // twinkle
     [SerializeField] protected LayerMask playerLayer; // UWU
-    [SerializeField] protected LayerMask stealthPlayerLayer; // UWU
     protected Vector3 targetPos = Vector3.zero;
     [ShowIf("doAttack")]
     [SerializeField] protected Skill[] SkillArray;
 
     protected List<Node> ToPlayerList;
     protected Transform Player;
+    protected State PlayerState;
     protected PathFindManager pathFinder;
 
     [SerializeField] protected State theState;
@@ -62,35 +62,9 @@ public abstract class MoveViaAlgorithm : MoveSprite
     // detect player if player is in specific area
     protected bool DetectPlayer(float _rad, bool _deacsth = false)
     {
-        if (Physics2D.OverlapCircle(Mover.position, _rad, playerLayer))
-        {
-            return true;
-        }
-        else
-        {
-            if (_deacsth)
-            {
-                if (Physics2D.OverlapCircle(Mover.position, _rad, stealthPlayerLayer))
-                    return true;
-                else
-                    return false;
-            }
-            else
-            {
-                if (Physics2D.OverlapCircle(Mover.position, _rad / 4f, stealthPlayerLayer))
-                    return true;
-                else
-                    return false;
-            }
+        float rad = PlayerState.isStealth && !_deacsth ? _rad / 4 : _rad;
 
-        }
-
-    }
-
-
-    protected bool DetectPlayer(float _dist)
-    {
-        if (Physics2D.Raycast(Mover.position, applyVector, _dist, playerLayer))
+        if (Physics2D.OverlapCircle(Mover.position, rad, playerLayer))
         {
             return true;
         }
@@ -98,40 +72,52 @@ public abstract class MoveViaAlgorithm : MoveSprite
     }
 
 
-    // set direction to where player is 
-    protected void SeePlayer(float _turnDelay = 0)
+    protected bool DetectPlayer(float _dist, int _maxErr, bool _deacsth = false)
     {
-        StartCoroutine(SeePlayerCoroutine(_turnDelay));
-    }
-    IEnumerator SeePlayerCoroutine(float _turnDelay)
-    {
-        yield return new WaitForSeconds(_turnDelay);
-        if (Mathf.Abs(Mover.position.x - Player.position.x) >= Mathf.Abs(Mover.position.y - Player.position.y))
-        {
-            applyVector.y = 0f;
-            if (Mover.position.x < Player.position.x)
-                applyVector.x = 1f;
-            else
-                applyVector.x = -1f;
-        }
+        Vector3 v;
+        if (applyVector.x == 0)
+            v = new Vector3(1, 0);
         else
+            v = new Vector3(0, 1);
+
+        float dist = PlayerState.isStealth && !_deacsth ? _dist / 4 : _dist;
+
+        //Debug.DrawRay(Mover.position + (Vector3)applyVector, (Vector3)applyVector * _dist, Color.red, 0.2f);
+        RaycastHit2D hit = Physics2D.Raycast(Mover.position + (Vector3)applyVector, applyVector, dist, ~(1 << LayerMask.NameToLayer("Ignore Raycast")));
+        if (hit.collider != null && (playerLayer & (1 << hit.collider.gameObject.layer)) != 0)
         {
-            applyVector.x = 0f;
-            if (Mover.position.y < Player.position.y)
-                applyVector.y = 1f;
-            else
-                applyVector.y = -1f;
+            return true;
         }
-        animator.SetFloat("dirX", applyVector.x);
-        animator.SetFloat("dirY", applyVector.y);
+
+        for (int i = 1; i < _maxErr + 1; i++)
+        {
+            for (int j = -1; j <= 1; j += 2)
+            {
+                //Debug.DrawRay(Mover.position + i * j * v, (Vector3)applyVector * _dist, Color.red, 0.2f);
+                hit = Physics2D.Raycast(Mover.position + i * j * v, applyVector, dist, ~(1 << LayerMask.NameToLayer("Ignore Raycast")));
+                if (hit.collider != null && (playerLayer & (1 << hit.collider.gameObject.layer)) != 0)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
-    protected void SeeTargetPos(Vector3 _targetPos)
+
+    // set direction to where player is 
+    protected void SeeTarget(Vector3 _target, float _turnDelay = 0)
     {
-        if (Mathf.Abs(Mover.position.x - _targetPos.x) >= Mathf.Abs(Mover.position.y - _targetPos.y))
+        StartCoroutine(SeeTargetCoroutine(_target, _turnDelay));
+    }
+    IEnumerator SeeTargetCoroutine(Vector3 _target, float _turnDelay)
+    {
+        //Debug.Log(_target);
+        yield return new WaitForSeconds(_turnDelay);
+        if (Mathf.Abs(Mover.position.x - _target.x) >= Mathf.Abs(Mover.position.y - _target.y))
         {
             applyVector.y = 0f;
-            if (Mover.position.x < _targetPos.x)
+            if (Mover.position.x < _target.x)
                 applyVector.x = 1f;
             else
                 applyVector.x = -1f;
@@ -139,7 +125,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
         else
         {
             applyVector.x = 0f;
-            if (Mover.position.y < _targetPos.y)
+            if (Mover.position.y < _target.y)
                 applyVector.y = 1f;
             else
                 applyVector.y = -1f;
@@ -197,4 +183,11 @@ public abstract class MoveViaAlgorithm : MoveSprite
                 break;
         }
     }
+
+    private void OnDrawGizmos()
+    {
+
+    }
 }
+
+

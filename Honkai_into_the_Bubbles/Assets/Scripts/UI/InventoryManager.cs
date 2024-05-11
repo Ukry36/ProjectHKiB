@@ -130,8 +130,12 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            EquipmentManager.instance.AfterEquipSequence(TabItemList[_selectedItem + page * MAXSLOT]);
-            MenuManager.instance.CloseEquipSequenceInventory();
+            if (TabItemList[_selectedItem].Equipped == 0)
+            {
+                EquipmentManager.instance.AfterEquipSequence(TabItemList[_selectedItem + page * MAXSLOT]);
+                MenuManager.instance.CloseEquipSequenceInventory();
+            }
+            
         }
     }
     public void DeselectItem(int _selectedItem)

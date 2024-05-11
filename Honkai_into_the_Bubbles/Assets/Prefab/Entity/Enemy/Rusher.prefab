@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: -1218885604, guid: 3361e11f1b8c8de4e9f93f3e80f5cd10, type: 3}
-  m_Color: {r: 1, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -321,7 +321,7 @@ MonoBehaviour:
   boxCollider: {fileID: 4404217947297648775}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 1984
+    m_Bits: 10176
   defaultSpeed: 4
   Mover: {fileID: 905324970688511338}
   movePoint: {fileID: 2563409765023122238}
@@ -354,7 +354,7 @@ MonoBehaviour:
     CriticalRate: 0
     Strong: 1
     Cooltime: 3
-    CanSkill: 0
+    CanSkill: 1
     Delay: 0.3
     skillCommand: []
     GP: 0
@@ -364,7 +364,7 @@ MonoBehaviour:
     CriticalRate: 0
     Strong: 0
     Cooltime: 3
-    CanSkill: 0
+    CanSkill: 1
     Delay: 0.2
     skillCommand: []
     GP: 0

@@ -446,8 +446,10 @@ public abstract class MoveViaInput : MoveSprite
 
     protected IEnumerator GraffitiCoroutine()
     {
+        movePoint.gameObject.SetActive(false);
         if (Physics2D.OverlapCircle(movePoint.position, .4f, wallLayer + GS.WallForGraffitiLayer)) 
             yield break;
+        movePoint.gameObject.SetActive(true);
         graffiting = true;
         grrogying = true;
         GS.StartGraffiti();

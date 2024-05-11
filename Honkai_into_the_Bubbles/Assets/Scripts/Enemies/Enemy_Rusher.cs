@@ -8,7 +8,6 @@ public class Enemy_Rusher : MoveViaAlgorithm
     private WaitForSeconds wait = new WaitForSeconds(0.5f);
 
 
-
     // Start is called before the first frame update
     private void Start()
     {
@@ -16,6 +15,7 @@ public class Enemy_Rusher : MoveViaAlgorithm
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         Player = FindObjectOfType<PlayerManager>().transform;
+        PlayerState = Player.GetComponent<State>();
         pathFinder = GetComponent<PathFindManager>();
         moveSpeed = defaultSpeed;
 
@@ -32,11 +32,11 @@ public class Enemy_Rusher : MoveViaAlgorithm
 
     IEnumerator AggroBehaviourCoroutine()
     {
-        while(true)
+        while (true)
         {
-            while(grrogying)
+            while (grrogying)
                 yield return wait;
-            
+
 
             if (!DetectPlayer(endFollowRadius))
             {
@@ -45,10 +45,11 @@ public class Enemy_Rusher : MoveViaAlgorithm
             }
 
 
-            SeePlayer();
-            
-            if (SetPath() <= 1)
+            SeeTarget(Player.position);
+
+            if (SetPath() < 1)
             {
+                Debug.Log("owueg");
                 StartCoroutine(NormalBehaviourCoroutine());
                 break;
             }
@@ -56,44 +57,43 @@ public class Enemy_Rusher : MoveViaAlgorithm
             {
                 targetPos.x = ToPlayerList[1].x;
                 targetPos.y = ToPlayerList[1].y;
-                if(backStep)
+                if (backStep)
                 {
-                    targetPos = Mover.position*2 - targetPos;
+                    targetPos = Mover.position * 2 - targetPos;
                 }
             }
 
-
             if (SkillArray[0].CanSkill && DetectPlayer(SkillArray[0].DetectRadius, true))
             {
-                StartCoroutine(Skill01Coroutine());
+                StartCoroutine(Skill01Coroutine()); Debug.Log("1");
                 break;
             }
             else if (SkillArray[1].CanSkill && DetectPlayer(SkillArray[1].DetectRadius, true))
             {
-                StartCoroutine(Skill02Coroutine());
+                StartCoroutine(Skill02Coroutine()); Debug.Log("2");
                 break;
             }
 
             yield return new WaitForSeconds(AggroMoveDelay);
             walking = true;
             // if there is a wall, wait
-            if(Physics2D.OverlapCircle(targetPos, .4f, wallLayer))
+            if (Physics2D.OverlapCircle(targetPos, .4f, wallLayer))
             {
                 yield return wait;
                 walking = false;
                 continue;
             }
-            
+
             // move destination forward
             movePoint.position = targetPos;
             // move toward destination
             // if stopWalkboolean is false, skip sequencial movement
             animator.SetBool("walk", true);
-            while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+            while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
             {
                 if (!stopWalkboolean)
                     break;
-                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime); 
+                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime);
                 yield return null;
             }
             Mover.position = movePoint.position;
@@ -106,13 +106,13 @@ public class Enemy_Rusher : MoveViaAlgorithm
 
     IEnumerator NormalBehaviourCoroutine()
     {
-        while(true)
+        while (true)
         {
-            while(grrogying)
+            while (grrogying)
                 yield return wait;
-            
 
-            if (doAttack && DetectPlayer(followRadius) && SetPath() > 1)
+
+            if (doAttack && DetectPlayer(followRadius))
             {
                 yield return null;
                 StartCoroutine(AggroBehaviourCoroutine());
@@ -127,23 +127,23 @@ public class Enemy_Rusher : MoveViaAlgorithm
 
             walking = true;
             // if there is a wall, wait
-            if(Physics2D.OverlapCircle(movePoint.position + new Vector3(applyVector.x, applyVector.y, 0f), .4f, wallLayer)) 
+            if (Physics2D.OverlapCircle(movePoint.position + new Vector3(applyVector.x, applyVector.y, 0f), .4f, wallLayer))
             {
                 yield return wait;
                 continue;
             }
 
-                
+
             // move destination forward
-            movePoint.position += new Vector3(applyVector.x, applyVector.y, 0f); 
+            movePoint.position += new Vector3(applyVector.x, applyVector.y, 0f);
             // move toward destination
             // if stopWalkboolean is false, skip sequencial movement
             animator.SetBool("walk", true);
-            while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+            while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
             {
                 if (!stopWalkboolean)
                     break;
-                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime); 
+                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime);
                 yield return null;
             }
             Mover.position = movePoint.position;
@@ -155,7 +155,7 @@ public class Enemy_Rusher : MoveViaAlgorithm
 
 
     private void StopAttacking()
-    {   
+    {
         animator.SetFloat("skill", 0);
         stopAttackboolean = true;
         StartCoroutine(AggroBehaviourCoroutine());
@@ -176,10 +176,10 @@ public class Enemy_Rusher : MoveViaAlgorithm
             yield break;
         }
 
-        
+
         SetPath();
         Track(SkillArray[0]);
-        SeePlayer();
+        SeeTarget(Player.position);
         animator.SetFloat("skill", 1f);
 
 
@@ -202,7 +202,7 @@ public class Enemy_Rusher : MoveViaAlgorithm
         yield return null;
         for (int i = 0; i < 3; i++) //Rush until wall
         {
-            if(Physics2D.OverlapCircle(Mover.position + (Vector3)applyVector, .4f, wallLayer)) 
+            if (Physics2D.OverlapCircle(Mover.position + (Vector3)applyVector, .4f, wallLayer))
                 continue;
             movePoint.position += new Vector3(applyVector.x, applyVector.y, 0);
             Mover.position = movePoint.position;
@@ -234,10 +234,10 @@ public class Enemy_Rusher : MoveViaAlgorithm
             yield break;
         }
 
-        
+
         SetPath();
         Track(SkillArray[1]);
-        SeePlayer();
+        SeeTarget(Player.position);
         animator.SetFloat("skill", 2f);
 
 

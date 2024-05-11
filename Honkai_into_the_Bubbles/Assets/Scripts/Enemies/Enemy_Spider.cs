@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Spider : MoveViaAlgorithm
 {
     private WaitForSeconds wait = new WaitForSeconds(0.5f);
-
+    private int c = 0;
 
     // Start is called before the first frame update
     private void Start()
@@ -14,14 +14,16 @@ public class Enemy_Spider : MoveViaAlgorithm
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         Player = FindObjectOfType<PlayerManager>().transform;
+        PlayerState = Player.GetComponent<State>();
         pathFinder = GetComponent<PathFindManager>();
         moveSpeed = defaultSpeed;
 
 
+        /*
         SkillArray = new Skill[] {
             new Skill(0, 1, 3, 3f, 0.3f, true)
         }; //upper skill high priority (not nessesory just for easy recognizing)
-
+        */
 
         theState.SetHitAnimObject();
         StartCoroutine(NormalBehaviourCoroutine());
@@ -43,8 +45,9 @@ public class Enemy_Spider : MoveViaAlgorithm
             }
 
 
-            if (SetPath() <= 1)
+            if (SetPath() < 1)
             {
+                Debug.Log(c++);
                 StartCoroutine(NormalBehaviourCoroutine());
                 break;
             }
@@ -54,9 +57,9 @@ public class Enemy_Spider : MoveViaAlgorithm
                 targetPos.y = ToPlayerList[1].y;
             }
 
-            SeeTargetPos(targetPos);
+            SeeTarget(targetPos);
 
-            if (SkillArray[0].CanSkill && DetectPlayer(SkillArray[0].DetectRadius))
+            if (SkillArray[0].CanSkill && DetectPlayer(SkillArray[0].DetectRadius, 1))
             {
                 StartCoroutine(Skill01Coroutine());
                 break;
@@ -100,12 +103,7 @@ public class Enemy_Spider : MoveViaAlgorithm
                 yield return wait;
 
 
-            Debug.Log(DetectPlayer(followRadius));
-            Debug.Log(applyVector);
-            Debug.Log(Mover.position);
-            Debug.Log(followRadius);
-
-            if (doAttack && DetectPlayer(followRadius) && SetPath() > 1)
+            if (doAttack && DetectPlayer(followRadius))
             {
                 yield return null;
                 StartCoroutine(AggroBehaviourCoroutine());
@@ -169,7 +167,7 @@ public class Enemy_Spider : MoveViaAlgorithm
         }
 
 
-        SeePlayer();
+        SeeTarget(Player.position);
         animator.SetFloat("skill", 1f);
 
 

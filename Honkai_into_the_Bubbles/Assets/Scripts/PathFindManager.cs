@@ -19,6 +19,7 @@ public class Node
 
 public class PathFindManager : MonoBehaviour
 {
+    [SerializeField] private State theState;
     private Vector2Int bottomLeft, topRight, startPos, targetPos;
     private List<Node> FinalNodeList;
     [SerializeField] private bool dontCrossCorner;
@@ -28,7 +29,11 @@ public class PathFindManager : MonoBehaviour
     Node[,] NodeArray;
     Node StartNode, TargetNode, CurNode;
     List<Node> OpenList, ClosedList;
-    
+
+    private void Awake()
+    {
+        theState = GetComponentInParent<State>();
+    }
 
     public List<Node> PathFinding(Vector3 _BL, Vector3 _TR, Vector3 _start, Vector3 _target)
     {
@@ -48,12 +53,14 @@ public class PathFindManager : MonoBehaviour
             {
                 bool isWall = false;
                 foreach (Collider2D col in Physics2D.OverlapCircleAll(new Vector2(i + bottomLeft.x, j + bottomLeft.y), 0.4f))
-                    if (col.gameObject.layer == wallLayer) isWall = true;
+                    if (col.gameObject != theState.gameObject)
+                        if ((wallLayer & (1 << col.gameObject.layer)) != 0) isWall = true;
+
 
                 NodeArray[i, j] = new Node(isWall, i + bottomLeft.x, j + bottomLeft.y);
             }
         }
-        
+
 
         // 시작과 끝 노드, 열린리스트와 닫힌리스트, 마지막리스트 초기화
         StartNode = NodeArray[startPos.x - bottomLeft.x, startPos.y - bottomLeft.y];
@@ -75,7 +82,7 @@ public class PathFindManager : MonoBehaviour
 
 
             // 마지막
-            
+
             if (CurNode == TargetNode)
             {
                 Node TargetCurNode = TargetNode;
@@ -106,7 +113,7 @@ public class PathFindManager : MonoBehaviour
             // 코너를 가로질러 가지 않을시, 이동 중에 수직수평 장애물이 있으면 안됨
             if (dontCrossCorner) if (NodeArray[CurNode.x - bottomLeft.x, checkY - bottomLeft.y].isWall || NodeArray[checkX - bottomLeft.x, CurNode.y - bottomLeft.y].isWall) return;
 
-            
+
             // 이웃노드에 넣고, 직선은 10, 대각선은 14비용
             Node NeighborNode = NodeArray[checkX - bottomLeft.x, checkY - bottomLeft.y];
             int MoveCost = CurNode.G + 10;
@@ -124,11 +131,12 @@ public class PathFindManager : MonoBehaviour
         }
     }
 
-    //private void OnDrawGizmosSelected()
-    //{
-    //    if(FinalNodeList.Count != 0) for (int i = 0; i < FinalNodeList.Count - 1; i++)
-    //        Gizmos.DrawLine(new Vector2(FinalNodeList[i].x, FinalNodeList[i].y), new Vector2(FinalNodeList[i + 1].x, FinalNodeList[i + 1].y));
-    //}
+    private void OnDrawGizmos()
+    {
+        if (FinalNodeList != null)
+            if (FinalNodeList.Count != 0) for (int i = 0; i < FinalNodeList.Count - 1; i++)
+                    Gizmos.DrawLine(new Vector2(FinalNodeList[i].x, FinalNodeList[i].y), new Vector2(FinalNodeList[i + 1].x, FinalNodeList[i + 1].y));
+    }
 
 }
 

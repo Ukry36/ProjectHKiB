@@ -50,7 +50,6 @@ public class AttackCollision : MonoBehaviour
         float x, y;
         if ((damageLayer & (1 << other.gameObject.layer)) != 0)
         {
-            Debug.Log(DMG);
             if (Strong)
             {
                 GrrogyDir = other.transform.position - prevPos;

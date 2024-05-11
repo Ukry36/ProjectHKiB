@@ -5,6 +5,7 @@ using UnityEngine;
 public class State : MonoBehaviour
 {
     public bool isPlayer = false;
+    public bool isStealth = false;
     public int maxHP = 100;
     public int currentHP;
     public int maxGP = 20;
@@ -32,34 +33,34 @@ public class State : MonoBehaviour
 
         HPControl(-trueDmg);
 
-/*
-        Vector3 vector = this.transform.position;
-        vector.y += Random.Range(-1f, 1f);
-        vector.x += Random.Range(-1f, 1f);
+        /*
+                Vector3 vector = this.transform.position;
+                vector.y += Random.Range(-1f, 1f);
+                vector.x += Random.Range(-1f, 1f);
 
-        var clone = Instantiate(FloatingText_PreFab, vector, Quaternion.Euler(Vector3.zero));
-        clone.GetComponent<FloatingText>().text.text = "-" + trueDmg;
+                var clone = Instantiate(FloatingText_PreFab, vector, Quaternion.Euler(Vector3.zero));
+                clone.GetComponent<FloatingText>().text.text = "-" + trueDmg;
 
-        Color color = clone.GetComponent<FloatingText>().text.color;
-        color = new Color(0.8f, 0.2f, 0.3f, 1f);
-        if (_crit)
-        {
-            color.b -= 0.3f;
-            clone.GetComponent<FloatingText>().text.fontSize += 2;
-        }
-        clone.GetComponent<FloatingText>().text.color = color;
+                Color color = clone.GetComponent<FloatingText>().text.color;
+                color = new Color(0.8f, 0.2f, 0.3f, 1f);
+                if (_crit)
+                {
+                    color.b -= 0.3f;
+                    clone.GetComponent<FloatingText>().text.fontSize += 2;
+                }
+                clone.GetComponent<FloatingText>().text.color = color;
 
 
-        clone.GetComponent<FloatingText>().moveSpeed = 0.1f;
-        clone.GetComponent<FloatingText>().destroyTime = 0.5f;
-        clone.transform.SetParent(parent.transform);
-*/
-        
+                clone.GetComponent<FloatingText>().moveSpeed = 0.1f;
+                clone.GetComponent<FloatingText>().destroyTime = 0.5f;
+                clone.transform.SetParent(parent.transform);
+        */
+
         if (_strong)
         {
             moveSprite.Grrogy(_dir);
         }
-            
+
     }
 
     public void SetHitAnimObject()

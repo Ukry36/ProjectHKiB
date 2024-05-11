@@ -19,10 +19,12 @@ public class Enemy_Lightning : MoveViaAlgorithm
     // Start is called before the first frame update
     private void Start()
     {
+
         movePoint.parent = null;
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         Player = FindObjectOfType<PlayerManager>().transform;
+        PlayerState = Player.GetComponent<State>();
         pathFinder = GetComponent<PathFindManager>();
         moveSpeed = defaultSpeed;
 
@@ -32,7 +34,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
             new Skill(30, 0, 8, 3f, 0.2f, false)
         }; //upper skill high priority (not nessesory just for easy recognizing)
         */
-        
+
         bulletPrefab.GetComponent<AttackCollision>().
         SetAttackInfo(SkillArray[0].DamageCoefficient, SkillArray[0].CriticalRate, SkillArray[0].Strong);
         trackingBulletPrefab.GetComponent<AttackCollision>().
@@ -45,11 +47,11 @@ public class Enemy_Lightning : MoveViaAlgorithm
 
     IEnumerator AggroBehaviourCoroutine()
     {
-        while(true)
+        while (true)
         {
-            while(grrogying)
+            while (grrogying)
                 yield return wait;
-            
+
 
             if (!DetectPlayer(endFollowRadius))
             {
@@ -58,7 +60,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
             }
 
 
-            SeePlayer(turnDelay);
+            SeeTarget(Player.position, turnDelay);
             yield return new WaitForSeconds(turnDelay);
 
 
@@ -77,9 +79,9 @@ public class Enemy_Lightning : MoveViaAlgorithm
             yield return new WaitForSeconds(AggroMoveDelay);
             if (DetectPlayer(followRadius / 2f))
             {
-                 walking = true;
+                walking = true;
                 // if there is a wall, wait
-                if(Physics2D.OverlapCircle(movePoint.position - new Vector3(applyVector.x, applyVector.y, 0f)*1.5f, .4f, wallLayer)) 
+                if (Physics2D.OverlapCircle(movePoint.position - new Vector3(applyVector.x, applyVector.y, 0f) * 1.5f, .4f, wallLayer))
                 {
                     yield return wait;
                     walking = false;
@@ -87,15 +89,15 @@ public class Enemy_Lightning : MoveViaAlgorithm
                 }
 
                 // move destination forward
-                movePoint.position -= new Vector3(applyVector.x, applyVector.y, 0); 
+                movePoint.position -= new Vector3(applyVector.x, applyVector.y, 0);
                 // move toward destination
                 // if stopWalkboolean is false, skip sequencial movement
                 animator.SetBool("walk", true);
-                while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+                while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
                 {
                     if (!stopWalkboolean)
                         break;
-                    Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime); 
+                    Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime);
                     yield return null;
                 }
                 Mover.position = movePoint.position;
@@ -103,18 +105,18 @@ public class Enemy_Lightning : MoveViaAlgorithm
                 animator.SetBool("walk", false);
                 stopWalkboolean = true;
             }
-           
+
         }
     }
 
 
     IEnumerator NormalBehaviourCoroutine()
     {
-        while(true)
+        while (true)
         {
-            while(grrogying)
+            while (grrogying)
                 yield return wait;
-            
+
 
             if (doAttack && DetectPlayer(followRadius))
             {
@@ -132,7 +134,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
 
             walking = true;
             // if there is a wall, wait
-            if(Physics2D.OverlapCircle(movePoint.position + new Vector3(applyVector.x, applyVector.y, 0f)*1.5f, .4f, wallLayer)) 
+            if (Physics2D.OverlapCircle(movePoint.position + new Vector3(applyVector.x, applyVector.y, 0f) * 1.5f, .4f, wallLayer))
             {
                 yield return wait;
                 continue;
@@ -140,15 +142,15 @@ public class Enemy_Lightning : MoveViaAlgorithm
 
 
             // move destination forward
-            movePoint.position += new Vector3(applyVector.x, applyVector.y, 0f); 
+            movePoint.position += new Vector3(applyVector.x, applyVector.y, 0f);
             // move toward destination
             // if stopWalkboolean is false, skip sequencial movement
             animator.SetBool("walk", true);
-            while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+            while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
             {
                 if (!stopWalkboolean)
                     break;
-                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime); 
+                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime);
                 yield return null;
             }
             Mover.position = movePoint.position;
@@ -168,20 +170,20 @@ public class Enemy_Lightning : MoveViaAlgorithm
         if (_isTracking)
         {
             TrackingBullet theTB = clone.GetComponent<TrackingBullet>();
-            theTB.targetPos = Instantiate(targetPrefab, 
-            attackPos + new Vector3((int)Random.Range(-3f,3f), (int)Random.Range(-3f,3f), 0), 
+            theTB.targetPos = Instantiate(targetPrefab,
+            attackPos + new Vector3((int)Random.Range(-3f, 3f), (int)Random.Range(-3f, 3f), 0),
             Quaternion.identity).transform;
         }
-        
+
         clone.SetActive(true);
 
 
         clone = Instantiate(_bullet, this.transform.position + ofs2, dir);
-        if (_isTracking) 
+        if (_isTracking)
         {
             TrackingBullet theTB = clone.GetComponent<TrackingBullet>();
-            theTB.targetPos = Instantiate(targetPrefab, 
-            attackPos + new Vector3((int)Random.Range(-3f,3f), (int)Random.Range(-3f,3f), 0), 
+            theTB.targetPos = Instantiate(targetPrefab,
+            attackPos + new Vector3((int)Random.Range(-3f, 3f), (int)Random.Range(-3f, 3f), 0),
             Quaternion.identity).transform;
         }
 
@@ -193,15 +195,18 @@ public class Enemy_Lightning : MoveViaAlgorithm
     {
         if (applyVector.x == 0 && applyVector.y == -1f) // D
         {
-            dir = Quaternion.Euler(0, 0, 180); 
+            dir = Quaternion.Euler(0, 0, 180);
             switch (_muzzle)
             {
-                case 0: ofs1 = new Vector3(1.2f,0.9f,0);
-                        ofs2 = new Vector3(-1.2f,0.9f,0); break;
-                case 1: ofs1 = new Vector3(0.8f,0.95f,0);
-                        ofs2 = new Vector3(-0.8f,0.95f,0); break;
-                case 2: ofs1 = new Vector3(1f,0.35f,0);
-                        ofs2 = new Vector3(-1f,0.35f,0); break;
+                case 0:
+                    ofs1 = new Vector3(1.2f, 0.9f, 0);
+                    ofs2 = new Vector3(-1.2f, 0.9f, 0); break;
+                case 1:
+                    ofs1 = new Vector3(0.8f, 0.95f, 0);
+                    ofs2 = new Vector3(-0.8f, 0.95f, 0); break;
+                case 2:
+                    ofs1 = new Vector3(1f, 0.35f, 0);
+                    ofs2 = new Vector3(-1f, 0.35f, 0); break;
                 default: break;
             }
         }
@@ -211,26 +216,32 @@ public class Enemy_Lightning : MoveViaAlgorithm
             else dir = Quaternion.Euler(0, 0, -90);
             switch (_muzzle)
             {
-                case 0: ofs1 = new Vector3(0,1.9f,0);
-                        ofs2 = new Vector3(0,-0.1f,0); break;
-                case 1: ofs1 = new Vector3(0,1.6f,0);
-                        ofs2 = new Vector3(0,0.4f,0); break;
-                case 2: ofs1 = new Vector3(0,1.6f,0);
-                        ofs2 = new Vector3(0,-0.2f,0); break;
+                case 0:
+                    ofs1 = new Vector3(0, 1.9f, 0);
+                    ofs2 = new Vector3(0, -0.1f, 0); break;
+                case 1:
+                    ofs1 = new Vector3(0, 1.6f, 0);
+                    ofs2 = new Vector3(0, 0.4f, 0); break;
+                case 2:
+                    ofs1 = new Vector3(0, 1.6f, 0);
+                    ofs2 = new Vector3(0, -0.2f, 0); break;
                 default: break;
             }
         }
         if (applyVector.x == 0 && applyVector.y == 1f) // U
         {
-            dir = Quaternion.identity; 
+            dir = Quaternion.identity;
             switch (_muzzle)
             {
-                case 0: ofs1 = new Vector3(1.2f,1.4f,0);
-                        ofs2 = new Vector3(-1.2f,1.4f,0); break;
-                case 1: ofs1 = new Vector3(0.8f,1.25f,0);
-                        ofs2 = new Vector3(-0.8f,1.25f,0); break;
-                case 2: ofs1 = new Vector3(1f,1f,0);
-                        ofs2 = new Vector3(-1f,1f,0); break;
+                case 0:
+                    ofs1 = new Vector3(1.2f, 1.4f, 0);
+                    ofs2 = new Vector3(-1.2f, 1.4f, 0); break;
+                case 1:
+                    ofs1 = new Vector3(0.8f, 1.25f, 0);
+                    ofs2 = new Vector3(-0.8f, 1.25f, 0); break;
+                case 2:
+                    ofs1 = new Vector3(1f, 1f, 0);
+                    ofs2 = new Vector3(-1f, 1f, 0); break;
                 default: break;
             }
         }
@@ -240,12 +251,15 @@ public class Enemy_Lightning : MoveViaAlgorithm
             else dir = Quaternion.Euler(0, 0, 90);
             switch (_muzzle)
             {
-                case 0: ofs1 = new Vector3(0,1.9f,0);
-                        ofs2 = new Vector3(0,-0.1f,0); break;
-                case 1: ofs1 = new Vector3(0,1.6f,0);
-                        ofs2 = new Vector3(0,0.4f,0); break;
-                case 2: ofs1 = new Vector3(0,1.6f,0);
-                        ofs2 = new Vector3(0,-0.2f,0); break;
+                case 0:
+                    ofs1 = new Vector3(0, 1.9f, 0);
+                    ofs2 = new Vector3(0, -0.1f, 0); break;
+                case 1:
+                    ofs1 = new Vector3(0, 1.6f, 0);
+                    ofs2 = new Vector3(0, 0.4f, 0); break;
+                case 2:
+                    ofs1 = new Vector3(0, 1.6f, 0);
+                    ofs2 = new Vector3(0, -0.2f, 0); break;
                 default: break;
             }
         }
@@ -253,7 +267,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
 
 
     private void StopAttacking()
-    {   
+    {
         animator.SetFloat("skill", 0);
         stopAttackboolean = true;
         StartCoroutine(AggroBehaviourCoroutine());
@@ -269,9 +283,9 @@ public class Enemy_Lightning : MoveViaAlgorithm
             StopAttacking();
             yield break;
         }
-        
-        
-        SeePlayer(turnDelay);
+
+
+        SeeTarget(Player.position, turnDelay);
         yield return new WaitForSeconds(turnDelay);
         animator.SetFloat("skill", 1f);
 
@@ -319,8 +333,8 @@ public class Enemy_Lightning : MoveViaAlgorithm
             yield break;
         }
 
-        
-        SeePlayer(turnDelay);
+
+        SeeTarget(Player.position, turnDelay);
         yield return new WaitForSeconds(turnDelay);
         animator.SetFloat("skill", 2f);
 
@@ -348,7 +362,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
         for (int i = 0; i < 6; i++)
         {
             yield return new WaitForSeconds(0.2f);
-            FireBullet(trackingBulletPrefab, true, i/3);
+            FireBullet(trackingBulletPrefab, true, i / 3);
         }
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f);
         StopAttacking();

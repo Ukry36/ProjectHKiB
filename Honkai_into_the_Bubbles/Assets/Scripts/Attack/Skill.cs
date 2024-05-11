@@ -12,7 +12,7 @@ public class Skill
     public int CriticalRate; // possibility of critical
     public bool Strong; // cause hit motion
     public float Cooltime; // cooldown time
-    [HideInInspector] public bool CanSkill; // is cooltime ended?
+    public bool CanSkill = true; // is cooltime ended?
     public float Delay; // delay before or between atk 
     [HideInInspector] public List<Vector2> skillCommand;
     public int GP = 0;
