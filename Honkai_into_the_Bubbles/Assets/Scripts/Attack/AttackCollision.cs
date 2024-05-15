@@ -9,10 +9,10 @@ public class AttackCollision : MonoBehaviour
     [SerializeField] private int initCritRate = 10;
     [SerializeField] private bool initStrong;
     [SerializeField] private int initGP;
-    private int DMG;
-    private int GP;
-    private bool Strong;
-    private bool Crit;
+    [HideInInspector] public int DMG;
+    [HideInInspector] public int GP;
+    [HideInInspector] public bool Strong;
+    [HideInInspector] public bool Crit;
     private Vector3 GrrogyDir;
     [HideInInspector] public bool Override;
     [HideInInspector] public int dmgCoeffOverride = 0;
@@ -53,23 +53,23 @@ public class AttackCollision : MonoBehaviour
             if (Strong)
             {
                 GrrogyDir = other.transform.position - prevPos;
-                
-                if (GrrogyDir.x != 0) 
+
+                if (GrrogyDir.x != 0)
                     x = GrrogyDir.x / Mathf.Abs(GrrogyDir.x);
-                else 
+                else
                     x = 0;
-                    
+
                 if (GrrogyDir.y != 0)
                     y = GrrogyDir.y / Mathf.Abs(GrrogyDir.y);
                 else
                     y = 0;
-                
+
                 if (x * y != 0)
                 {
-                    if (Mathf.Abs(x) >= Mathf.Abs(y)*2)
+                    if (Mathf.Abs(x) >= Mathf.Abs(y) * 2)
                         y = 0;
-                        
-                    if (Mathf.Abs(y) >= Mathf.Abs(x)*2)
+
+                    if (Mathf.Abs(y) >= Mathf.Abs(x) * 2)
                         x = 0;
                 }
 
@@ -77,11 +77,11 @@ public class AttackCollision : MonoBehaviour
                 {
                     if (Random.value >= 0.5f)
                         x = 1f;
-                    else 
+                    else
                         x = -1f;
                     if (Random.value >= 0.5f)
                         y = 1f;
-                    else 
+                    else
                         y = -1f;
                 }
 
@@ -98,10 +98,10 @@ public class AttackCollision : MonoBehaviour
                 Override = false;
             }
             theState.GPControl(GP);
-            if(other.gameObject.TryGetComponent(out State component))
+            if (other.gameObject.TryGetComponent(out State component))
             {
                 component.Hit(DMG, Crit, Strong, GrrogyDir);
             }
         }
-    } 
+    }
 }

@@ -8,7 +8,7 @@ public class CameraManager : MonoBehaviour
     static public CameraManager instance;
     private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             DontDestroyOnLoad(this.gameObject);
             instance = this;
@@ -19,7 +19,7 @@ public class CameraManager : MonoBehaviour
         }
     }
     #endregion
-    
+
     [SerializeField] private CinemachineVirtualCamera[] Cameras = new CinemachineVirtualCamera[2];
     private CinemachineConfiner2D[] Confiners = new CinemachineConfiner2D[2];
     [SerializeField] private CinemachineBrain CBrain;
@@ -41,22 +41,22 @@ public class CameraManager : MonoBehaviour
     public void StrictMovement(Vector3 _way)
     {
         this.transform.position += _way;
-        for (int i = 0; i < Cameras.Length; i ++)
+        for (int i = 0; i < Cameras.Length; i++)
         {
             Cameras[i].OnTargetObjectWarped(PlayerManager.instance.transform, _way);
         }
     }
 
 
-// 0 to 1, 1 to 0
+    // 0 to 1, 1 to 0
     private int FlipNum(int _i)
     { int i = (_i + 1) % 2; return i; }
 
-// OWO
-    public void Zoom(float _res, float _blendTime, 
+    // OWO
+    public void Zoom(float _res, float _blendTime,
     CinemachineBlendDefinition.Style _style = CinemachineBlendDefinition.Style.EaseOut)
     {
-        CurrentCamera = FlipNum(CurrentCamera); 
+        CurrentCamera = FlipNum(CurrentCamera);
         CBrain.m_DefaultBlend.m_Time = _blendTime;
         CBrain.m_DefaultBlend.m_Style = _style;
         Cameras[CurrentCamera].m_Lens.OrthographicSize = _res;
@@ -71,19 +71,19 @@ public class CameraManager : MonoBehaviour
         Zoom(OriginalRes * _multiplyer, _blendTime, _style);
     }
 
-// Set original resolution
+    // Set original resolution
     public void SetOrigRes(float _res)
     { OriginalRes = _res; }
 
 
-// Set current resolution to original resolution
+    // Set current resolution to original resolution
     public void ReturntoOrigRes(float _blendTime,
     CinemachineBlendDefinition.Style _style = CinemachineBlendDefinition.Style.EaseOut)
     {
         Zoom(OriginalRes, _blendTime, _style);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) 
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("CameraBound"))
         {

@@ -235,6 +235,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
+  isStealth: 0
   maxHP: 200
   currentHP: 200
   maxGP: 20
@@ -789,9 +790,6 @@ MonoBehaviour:
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
-  stealthPlayerLayer:
-    serializedVersion: 2
-    m_Bits: 512
   SkillArray:
   - DamageCoefficient: 15
     TrackingRadius: 0
@@ -799,7 +797,7 @@ MonoBehaviour:
     CriticalRate: 0
     Strong: 1
     Cooltime: 3.5
-    CanSkill: 0
+    CanSkill: 1
     Delay: 0.2
     skillCommand: []
     GP: 0
@@ -809,7 +807,7 @@ MonoBehaviour:
     CriticalRate: 0
     Strong: 0
     Cooltime: 3
-    CanSkill: 0
+    CanSkill: 1
     Delay: 0.2
     skillCommand: []
     GP: 0
@@ -831,6 +829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41837a7c731d414faa6c85b9a9cc864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theState: {fileID: 0}
   dontCrossCorner: 0
   wallLayer:
     serializedVersion: 2
@@ -1165,6 +1164,10 @@ PrefabInstance:
       propertyPath: theState
       value: 
       objectReference: {fileID: 8465309907849305440}
+    - target: {fileID: 3506075942620615350, guid: a648134ecf871ea44934d208876e0c5d, type: 3}
+      propertyPath: initStrong
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6124633340371042755, guid: a648134ecf871ea44934d208876e0c5d, type: 3}
       propertyPath: m_Name
       value: Lightning-Bullet

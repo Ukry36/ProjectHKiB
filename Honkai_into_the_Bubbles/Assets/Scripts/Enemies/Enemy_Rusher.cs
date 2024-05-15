@@ -49,7 +49,6 @@ public class Enemy_Rusher : MoveViaAlgorithm
 
             if (SetPath() < 1)
             {
-                Debug.Log("owueg");
                 StartCoroutine(NormalBehaviourCoroutine());
                 break;
             }

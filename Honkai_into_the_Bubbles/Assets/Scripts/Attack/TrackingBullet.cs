@@ -19,9 +19,9 @@ public class TrackingBullet : AttackCollision
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         prevPos = this.transform.position;
-    } 
+    }
 
-    private void OnEnable() 
+    private void OnEnable()
     {
         if (targetPos != null)
             boxCollider2D.enabled = false;
@@ -42,7 +42,7 @@ public class TrackingBullet : AttackCollision
                     boxCollider2D.enabled = true;
 
                 if (turnSpeed < maxTurnSpeed)
-                turnSpeed += turnAcceleration;
+                    turnSpeed += turnAcceleration;
                 LookAt(turnSpeed);
             }
 
@@ -67,8 +67,8 @@ public class TrackingBullet : AttackCollision
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {
-        //base.OnTriggerEnter2D(other);
-        if(targetPos != null)
+        base.OnTriggerEnter2D(other);
+        if (targetPos != null)
         {
             if (other.gameObject == targetPos.gameObject)
                 Destroy(this.gameObject);
