@@ -30,7 +30,7 @@ public class MoveSprite : MonoBehaviour
     [SerializeField] protected SpriteLibrary spriteLibrary;
 
     [SerializeField] protected bool explodeWhenDie = false;
-    [ShowIf("explodeWhenDie")][SerializeField] private GameObject explosion;
+    [ShowIf("explodeWhenDie")][SerializeField] protected TrackingBullet explosion;
 
 
 
@@ -224,8 +224,8 @@ public class MoveSprite : MonoBehaviour
     {
         if (explodeWhenDie)
         {
-            var clone = Instantiate(explosion, this.transform.position, quaternion.identity);
-            clone.SetActive(true);
+            explosion.transform.parent = null;
+            explosion.gameObject.SetActive(true);
         }
         Destroy(movePoint.gameObject);
         Destroy(Mover.gameObject);

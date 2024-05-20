@@ -73,7 +73,7 @@ public class State : MonoBehaviour
         currentHP += _o;
         if (currentHP > maxHP)
             currentHP = maxHP;
-        if (currentHP < 0)
+        if (currentHP <= 0)
         {
             currentHP = 0;
             moveSprite.Die();

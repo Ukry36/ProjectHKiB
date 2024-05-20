@@ -5,7 +5,7 @@ using UnityEngine;
 public class Enemy_Spider : MoveViaAlgorithm
 {
     private WaitForSeconds wait = new WaitForSeconds(0.5f);
-    private int c = 0;
+
 
     // Start is called before the first frame update
     private void Start()
@@ -17,7 +17,6 @@ public class Enemy_Spider : MoveViaAlgorithm
         PlayerState = Player.GetComponent<State>();
         pathFinder = GetComponent<PathFindManager>();
         moveSpeed = defaultSpeed;
-
 
         /*
         SkillArray = new Skill[] {
@@ -47,7 +46,6 @@ public class Enemy_Spider : MoveViaAlgorithm
 
             if (SetPath() < 1)
             {
-                Debug.Log(c++);
                 StartCoroutine(NormalBehaviourCoroutine());
                 break;
             }
@@ -157,6 +155,7 @@ public class Enemy_Spider : MoveViaAlgorithm
     {
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
 
+        explosion.SetAttackInfo(SkillArray[0].DamageCoefficient, SkillArray[0].CriticalRate, SkillArray[0].Strong);
 
         while (grrogying)
             yield return wait;
@@ -166,8 +165,6 @@ public class Enemy_Spider : MoveViaAlgorithm
             yield break;
         }
 
-
-        SeeTarget(Player.position);
         animator.SetFloat("skill", 1f);
 
 
@@ -188,14 +185,15 @@ public class Enemy_Spider : MoveViaAlgorithm
         animator.SetTrigger("fire");
         yield return null;
         yield return null;
-        for (int i = 0; i < 8; i++) //Rush until wall
+        for (int i = 0; i < 12; i++) //Rush until wall
         {
+            if (i % 2 == 0)
+                yield return null;
             if (Physics2D.OverlapCircle(Mover.position + new Vector3(applyVector.x, applyVector.y, 0), .4f, wallLayer))
                 continue;
             movePoint.position += new Vector3(applyVector.x, applyVector.y, 0);
             Mover.position = movePoint.position;
         }
-
         Die();
     }
 

@@ -5,10 +5,6 @@ using UnityEngine;
 public class AttackCollision : MonoBehaviour
 {
     public LayerMask damageLayer;
-    [SerializeField] private int initDmgCoeff = 100;
-    [SerializeField] private int initCritRate = 10;
-    [SerializeField] private bool initStrong;
-    [SerializeField] private int initGP;
     [HideInInspector] public int DMG;
     [HideInInspector] public int GP;
     [HideInInspector] public bool Strong;
@@ -28,8 +24,6 @@ public class AttackCollision : MonoBehaviour
     {
         boxCollider2D = GetComponent<BoxCollider2D>();
         prevPos = this.transform.position;
-
-        SetAttackInfo(initDmgCoeff, initCritRate, initStrong, initGP);
     }
 
     public void SetAttackInfo(int _DmgCoeff, int _CritRate, bool _Strong, int _GP = 0)
@@ -100,7 +94,7 @@ public class AttackCollision : MonoBehaviour
             theState.GPControl(GP);
             if (other.gameObject.TryGetComponent(out State component))
             {
-                component.Hit(DMG, Crit, Strong, GrrogyDir);
+                component.Hit(DMG, Crit, Strong, GrrogyDir); Debug.Log(DMG);
             }
         }
     }

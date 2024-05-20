@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -1654332857
   m_SortingLayer: 4
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1249679926, guid: f1f44ce8ae61e2049b4012456d3ef6fb, type: 3}
+  m_Sprite: {fileID: 21300000, guid: db550f38ca454774c82a49e649fdc60d, type: 3}
   m_Color: {r: 1, g: 0, b: 0, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!114 &8963865225943438932
@@ -101,10 +101,10 @@ MonoBehaviour:
   damageLayer:
     serializedVersion: 2
     m_Bits: 640
-  initDmgCoeff: 100
-  initCritRate: 10
-  initStrong: 0
-  initGP: 0
+  DMG: 0
+  GP: 0
+  Strong: 0
+  Crit: 0
   Override: 0
   dmgCoeffOverride: 0
   critRateOverride: 0
@@ -454,7 +454,7 @@ Animator:
   m_GameObject: {fileID: 8726325901392311059}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 4b0f2a4c8b09c9d4395a21fdc4304d49, type: 2}
+  m_Controller: {fileID: 9100000, guid: 1de2c613e68a4104bb21c6372ef18f9c, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -506,7 +506,7 @@ SpriteRenderer:
   m_SortingLayerID: -412426293
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1885485038, guid: 2589b57fa8b96d845b2c18010e587477, type: 3}
+  m_Sprite: {fileID: 1593766056, guid: 82b94ff806471e742a94eabf7df1de93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -533,7 +533,7 @@ MonoBehaviour:
   - m_Name: New Category
     m_Hash: 0
     m_CategoryList: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 71e19150e409f414688d0bd28f463f29, type: 3}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: b0f59b2e10e476946aa0216a59f867f6, type: 3}
 --- !u!114 &2548029205717885608
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -546,10 +546,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 7.852745e-38
-  m_labelHash: 0.0000057464376
+  m_CategoryHash: 0.0000013306918
+  m_labelHash: 1.5971899e-14
   m_SpriteKey: 0
-  m_SpriteHash: 920340610
+  m_SpriteHash: 949844836
 --- !u!114 &3978602508737461231
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -564,8 +564,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ID: 30002
   characterName: Spider
-  themeColor1: {r: 0, g: 0, b: 0, a: 0}
-  themeColor2: {r: 0, g: 0, b: 0, a: 0}
+  themeColor1: {r: 0.9960785, g: 0.95294124, b: 0.95294124, a: 0}
+  themeColor2: {r: 0.43529415, g: 0.6, b: 0.9960785, a: 0}
   boxCollider: {fileID: 9128113644672191067}
   wallLayer:
     serializedVersion: 2
@@ -578,7 +578,7 @@ MonoBehaviour:
   animator: {fileID: 0}
   spriteLibrary: {fileID: 3396699944727692339}
   explodeWhenDie: 1
-  explosion: {fileID: 5843026327884913771}
+  explosion: {fileID: 3837521601141706526}
   randomMove: 1
   doAttack: 1
   NormalMoveDelay: 1
@@ -586,21 +586,21 @@ MonoBehaviour:
   turnDelay: 0
   attackAnimDelay: 0.5
   followRadius: 12
-  endFollowRadius: 12
+  endFollowRadius: 14
   attack: {fileID: 8963865225943438932}
   beforeAttackEffectPrefab: {fileID: 5571567845738202018, guid: 5b1c81279139df947b804d6471d5879b, type: 3}
   playerLayer:
     serializedVersion: 2
     m_Bits: 128
   SkillArray:
-  - DamageCoefficient: 0
+  - DamageCoefficient: 100
     TrackingRadius: 0
-    DetectRadius: 12
+    DetectRadius: 10
     CriticalRate: 0
-    Strong: 0
+    Strong: 1
     Cooltime: 1
     CanSkill: 1
-    Delay: 0
+    Delay: 0.3
     skillCommand: []
     GP: 0
   theState: {fileID: 2998789880383365441}
@@ -818,11 +818,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4359980704814806776, guid: 891864adca7add241832b5a77adc9c82, type: 3}
       propertyPath: m_Size.x
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4359980704814806776, guid: 891864adca7add241832b5a77adc9c82, type: 3}
       propertyPath: m_Size.y
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6124633340371042755, guid: 891864adca7add241832b5a77adc9c82, type: 3}
       propertyPath: m_Name
@@ -842,11 +842,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
   m_PrefabInstance: {fileID: 426022195655957928}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5843026327884913771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6124633340371042755, guid: 891864adca7add241832b5a77adc9c82, type: 3}
+--- !u!114 &3837521601141706526 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
   m_PrefabInstance: {fileID: 426022195655957928}
   m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4b234944d104074680e8597ddfa7450, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5909727876360395680
 PrefabInstance:
   m_ObjectHideFlags: 0
