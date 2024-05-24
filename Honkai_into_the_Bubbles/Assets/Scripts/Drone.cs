@@ -1,31 +1,73 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Drone : MoveViaAlgorithm
 {
     private WaitForSeconds wait = new WaitForSeconds(0.5f);
+
+    [SerializeField] private GameObject bulletPrefab;
+
+    private bool isFiring = false;
+
+
     // Start is called before the first frame update
     void Start()
     {
         movePoint.parent = null;
         pathFinder = GetComponentInChildren<PathFindManager>();
-        Debug.Log(pathFinder);
         Player = FindObjectOfType<PlayerManager>().transform;
         PlayerState = Player.GetComponent<State>();
         moveSpeed = defaultSpeed;
 
+        StartCoroutine(DefaultCoroutine());
     }
 
-    private void Update()
+    private IEnumerator DefaultCoroutine()
     {
-        /////////////// 링크의 카메라 움직임 + 플레이어와 거리가 일정 이하면 움직이지 않도록
+        while (true)
+        {
+            Collider2D enemyCollider = Physics2D.OverlapCircle(Mover.position, 5f, enemyLayer);
+            //float TargetDistance = Vector3.Distance(Mover.position, movePoint.position);
+            //bool isChasing = TargetDistance >= 3.00f;
 
-        ////////////// DetectEnemy가 true 따라가는 타겟을 해당 enemy로 바꿈
+            movePoint.position = Player.transform.position;
 
-        ///////////// 타겟이 enemy이면 enemy의 방향으로 총알을 발사
+            if (enemyCollider != null)
+            {
+                var enemyPosition = enemyCollider.transform.position;
+                if (Vector3.Distance(Mover.position, Player.position) < 5f)
+                {
+                    movePoint.position = enemyPosition;
+                }
+                //isChasing = Vector3.Distance(Mover.position, enemyPosition) >= 3f;
+                if (!isFiring)
+                {
+                    StartCoroutine(FiringCoroutine(enemyPosition));
+                }
+            }
 
-        ///////////// 플레이어와 거리가 너무 멀면 enemy를 따라가는 것을 중지
+            Vector3 direction = movePoint.position - Mover.position;
 
+            if (Vector3.Distance(Mover.position, movePoint.position) > 3f)
+                Mover.position = Vector3.Lerp(Mover.position, movePoint.position - direction.normalized * 3, moveSpeed * Time.deltaTime);
+            yield return null;
+        }
+    }
+
+    private IEnumerator FiringCoroutine(Vector3 _targetPos)
+    {
+        isFiring = true;
+        Vector3 direction = _targetPos - transform.position;
+
+        Debug.Log(_targetPos);
+
+        // 방향 벡터를 각도로 변환
+        float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
+
+        var clone = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
+
+        clone.SetActive(true);
+        yield return wait;
+        isFiring = false;
     }
 }
