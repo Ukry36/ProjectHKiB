@@ -8,6 +8,7 @@ public class Drone : MoveViaAlgorithm
     [SerializeField] private GameObject bulletPrefab;
 
     private bool isFiring = false;
+    private bool isChasing = false;
 
 
     // Start is called before the first frame update
@@ -24,27 +25,38 @@ public class Drone : MoveViaAlgorithm
 
     private IEnumerator DefaultCoroutine()
     {
+        float chasingTime = 0f;
+        Transform targetTrasnform = Player.transform;
+
         while (true)
         {
             Collider2D enemyCollider = Physics2D.OverlapCircle(Mover.position, 5f, enemyLayer);
-            //float TargetDistance = Vector3.Distance(Mover.position, movePoint.position);
-            //bool isChasing = TargetDistance >= 3.00f;
 
-            movePoint.position = Player.transform.position;
-
-            if (enemyCollider != null)
+            if (isChasing)
             {
-                var enemyPosition = enemyCollider.transform.position;
-                if (Vector3.Distance(Mover.position, Player.position) < 5f)
+                chasingTime += Time.deltaTime;
+
+                if (chasingTime > 3f) { isChasing = false; chasingTime = 0f; }
+            }
+            else
+            {
+                isChasing = true;
+                targetTrasnform = Player.transform;
+                if (Vector3.Distance(Mover.position, Player.position) < 5f && enemyCollider != null)
                 {
-                    movePoint.position = enemyPosition;
-                }
-                //isChasing = Vector3.Distance(Mover.position, enemyPosition) >= 3f;
-                if (!isFiring)
-                {
-                    StartCoroutine(FiringCoroutine(enemyPosition));
+                    targetTrasnform = enemyCollider.transform;
                 }
             }
+
+            //Firing Area
+            if (enemyCollider != null && !isFiring)
+            {
+                StartCoroutine(FiringCoroutine(enemyCollider.transform.position));
+            }
+
+            //Moving Area
+
+            movePoint.position = targetTrasnform.position;
 
             Vector3 direction = movePoint.position - Mover.position;
 
@@ -59,9 +71,6 @@ public class Drone : MoveViaAlgorithm
         isFiring = true;
         Vector3 direction = _targetPos - transform.position;
 
-        Debug.Log(_targetPos);
-
-        // 방향 벡터를 각도로 변환
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
 
         var clone = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
