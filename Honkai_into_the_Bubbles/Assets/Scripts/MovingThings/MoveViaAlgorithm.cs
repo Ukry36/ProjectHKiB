@@ -22,6 +22,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
     [ShowIf("doAttack")]
     [SerializeField] protected GameObject beforeAttackEffectPrefab; // twinkle
     [SerializeField] protected LayerMask playerLayer; // UWU
+    [SerializeField] protected LayerMask enemyLayer; // UWU
     protected Vector3 targetPos = Vector3.zero;
     [ShowIf("doAttack")]
     [SerializeField] protected Skill[] SkillArray;

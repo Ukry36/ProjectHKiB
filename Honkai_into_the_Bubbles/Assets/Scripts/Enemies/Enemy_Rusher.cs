@@ -64,12 +64,12 @@ public class Enemy_Rusher : MoveViaAlgorithm
 
             if (SkillArray[0].CanSkill && DetectPlayer(SkillArray[0].DetectRadius, true))
             {
-                StartCoroutine(Skill01Coroutine()); Debug.Log("1");
+                StartCoroutine(Skill01Coroutine());
                 break;
             }
             else if (SkillArray[1].CanSkill && DetectPlayer(SkillArray[1].DetectRadius, true))
             {
-                StartCoroutine(Skill02Coroutine()); Debug.Log("2");
+                StartCoroutine(Skill02Coroutine());
                 break;
             }
 

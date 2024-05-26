@@ -94,7 +94,7 @@ public class AttackCollision : MonoBehaviour
             theState.GPControl(GP);
             if (other.gameObject.TryGetComponent(out State component))
             {
-                component.Hit(DMG, Crit, Strong, GrrogyDir); Debug.Log(DMG);
+                component.Hit(DMG, Crit, Strong, GrrogyDir);
             }
         }
     }
