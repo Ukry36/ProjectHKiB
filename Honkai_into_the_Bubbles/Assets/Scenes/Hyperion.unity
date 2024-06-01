@@ -23483,6 +23483,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 47, y: 16, z: -10}
+  m_LocalPosition: {x: 47, y: 16, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -26471,6 +26472,7 @@ Transform:
   m_GameObject: {fileID: 1175886459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -58824,7 +58826,7 @@ PrefabInstance:
     - target: {fileID: 1116059241341943363, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -898310724, guid: 2f22faacc433b5445a64254539077ee4, type: 3}
+      objectReference: {fileID: 1854587517, guid: 1a71c41fc77617f45a11c8d8b28ab8b6, type: 3}
     - target: {fileID: 1116059241341943363, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: m_SortingLayer
       value: 5
@@ -58839,7 +58841,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1901961242532836037, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: m_SpriteHash
-      value: 1055144686
+      value: 1032466970
       objectReference: {fileID: 0}
     - target: {fileID: 2285918100005137025, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: m_LocalPosition.x
@@ -58895,7 +58897,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525644307060344940, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: player
@@ -72464,7 +72466,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525644307060344940, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: Mover
