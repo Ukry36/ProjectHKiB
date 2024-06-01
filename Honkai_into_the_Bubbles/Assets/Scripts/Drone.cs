@@ -15,6 +15,7 @@ public class Drone : MoveViaAlgorithm
     void Start()
     {
         movePoint.parent = null;
+        animator = GetComponent<Animator>();
         pathFinder = GetComponentInChildren<PathFindManager>();
         Player = FindObjectOfType<PlayerManager>().transform;
         PlayerState = Player.GetComponent<State>();
@@ -59,6 +60,7 @@ public class Drone : MoveViaAlgorithm
             movePoint.position = targetTrasnform.position;
 
             Vector3 direction = movePoint.position - Mover.position;
+            SeeTarget(targetTrasnform.position);
 
             if (Vector3.Distance(Mover.position, movePoint.position) > 3f)
                 Mover.position = Vector3.Lerp(Mover.position, movePoint.position - direction.normalized * 3, moveSpeed * Time.deltaTime);
