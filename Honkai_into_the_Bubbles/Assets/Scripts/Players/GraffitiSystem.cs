@@ -12,10 +12,10 @@ public class GraffitiSystem : MonoBehaviour
     [SerializeField] private GameObject NexusPrefab;
     [HideInInspector] public List<Vector2> activatedTileList = new();
     [SerializeField] private Attractive attractive;
-    [SerializeField] private State theState;
+    [SerializeField] private Status theState;
     private Vector2 LB;
-    public List<Skill> skillList = new(); 
-    
+    public List<Skill> skillList = new();
+
     private EffectVanishControl EVC;
 
     public LayerMask WallForGraffitiLayer;
@@ -51,7 +51,7 @@ public class GraffitiSystem : MonoBehaviour
         for (int i = 0; i < 45; i++)
         {
             yield return null;
-            Time.timeScale += 0.02f*c;
+            Time.timeScale += 0.02f * c;
         }
     }
 
@@ -71,7 +71,7 @@ public class GraffitiSystem : MonoBehaviour
         {
             activatedTileList.Add(_co);
             theState.currentGP--;
-        }        
+        }
     }
 
     private void Normalize()

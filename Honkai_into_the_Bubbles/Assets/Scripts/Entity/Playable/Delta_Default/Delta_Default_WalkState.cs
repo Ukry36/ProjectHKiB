@@ -1,0 +1,75 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.Analytics;
+
+public class Delta_Default_WalkState : Delta_Default_State
+{
+    private bool stuckCheck = true;
+    public Delta_Default_WalkState(Delta_Default _player, Delta_Default_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    {
+
+    }
+
+    public override void Enter()
+    {
+        base.Enter();
+    }
+
+    public override void Update()
+    {
+        base.Update();
+
+        if (Vector3.Distance(player.Mover.position, player.MovePoint.transform.position) >= .05f)
+        {
+            if (stuckCheck)
+            {
+                if (Physics2D.OverlapCircle(player.MovePoint.transform.position, 0.1f, player.wallLayer))
+                    player.MovePoint.transform.position = player.MovePoint.prevPos;
+                stuckCheck = false; //Debug.Log("stuckCheck");
+            }
+
+            player.Mover.position = Vector3.MoveTowards
+            (
+                player.Mover.position,
+                player.MovePoint.transform.position,
+                player.MoveSpeed * Time.deltaTime
+            );
+        }
+        else
+        {
+            player.Mover.position = player.MovePoint.transform.position; // make position accurate
+            player.MovePoint.prevPos = player.Mover.position; // used in external movepoint control
+            stuckCheck = true;
+            if (moveInput == Vector2.zero)
+            {
+                player.StateMachine.ChangeState(player.IdleState);
+            }
+            else
+            {
+                // save moveinput
+                savedInput = (Vector3)moveInput;
+
+                // if there is wall, exit walkin
+                // else, adjust savedInput or 
+                SetDir(savedInput);
+                if (MovepointAdjustCheck())
+                {
+                    player.StateMachine.ChangeState(player.IdleState);
+                }
+                else
+                {
+                    player.MovePoint.transform.position += savedInput;
+                    SetDir(savedInput);
+                }
+            }
+        }
+    }
+
+    public override void Exit()
+    {
+        base.Exit();
+        player.Mover.position = player.MovePoint.transform.position;
+        SetDir(savedInput);
+    }
+}

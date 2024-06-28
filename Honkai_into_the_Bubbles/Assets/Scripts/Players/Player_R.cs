@@ -16,9 +16,9 @@ public class Player_R : MoveViaInput
     [SerializeField] private GameObject SAPrefabfor03;
     [SerializeField] private GameObject SAPrefabfor03Diag;
     [SerializeField] private GameObject AttractorPrefab;
-    
+
     private int RSACI = 0;
-    
+
 
     private void Awake()
     {
@@ -55,19 +55,19 @@ public class Player_R : MoveViaInput
         moveInput = InputManager.instance.MoveInput;
 
         // if no WalkCoroutine is running and input exists, start walking
-        if(!walking && moveInput != Vector2.zero && !freeze && !attacking && !dodging && !grrogying && !graffiting) 
+        if (!walking && moveInput != Vector2.zero && !freeze && !attacking && !dodging && !grrogying && !graffiting)
         {
             StartCoroutine(WalkCoroutine());
         }
-    
+
 
         // recieve attack input if its right timing
         attackInput = false;
-        if (recieveAttackInput) 
+        if (recieveAttackInput)
             attackInput = InputManager.instance.AttackInput;
 
         // if no AttackCoroutine is running and input exists, start attacking
-        if(!attacking && attackInput && !freeze && !dodging && !grrogying && !graffiting && !skill01ing)
+        if (!attacking && attackInput && !freeze && !dodging && !grrogying && !graffiting && !skill01ing)
         {
             combo = 1;
             StopWalk();
@@ -77,11 +77,11 @@ public class Player_R : MoveViaInput
 
         // recieve dodge input if its right timing
         dodgeInput = false;
-        if (recieveDodgeInput) 
+        if (recieveDodgeInput)
             dodgeInput = InputManager.instance.DodgeInput;
 
         // if no AttackCoroutine is running and input exists, start attacking
-        if(!dodging && dodgeInput && !freeze && !grrogying && !graffiting)
+        if (!dodging && dodgeInput && !freeze && !grrogying && !graffiting)
         {
             StopWalk();
             StopAttack();
@@ -95,7 +95,7 @@ public class Player_R : MoveViaInput
         startGraffitiInput = false;
         if (recieveGraffitiInput)
             startGraffitiInput = InputManager.instance.GraffitiStartInput;
-        if(!graffiting && startGraffitiInput && !freeze && !grrogying && !dodging && theState.currentGP > 0)
+        if (!graffiting && startGraffitiInput && !freeze && !grrogying && !dodging && theStat.currentGP > 0)
         {
             StopWalk();
             StopAttack();
@@ -146,7 +146,7 @@ public class Player_R : MoveViaInput
                 prevTime = 0;
                 StartCoroutine(Skill01Coroutine(GS.skillList[1]));
             }
-            theState.GPControl(5);
+            theStat.GPControl(5);
         }
         else if (_skillNum == 2)
         {
@@ -167,7 +167,7 @@ public class Player_R : MoveViaInput
         }
         else
         {
-            animator.SetBool("skill", false); 
+            animator.SetBool("skill", false);
             skill01ing = false;
         }
     }
@@ -193,7 +193,7 @@ public class Player_R : MoveViaInput
                 break;
             }
         }
-        animator.SetBool("skill", false); 
+        animator.SetBool("skill", false);
         if (startAtCombo4)
         {
             startAtCombo4 = false;
@@ -204,7 +204,7 @@ public class Player_R : MoveViaInput
         }
 
         if (!keepSkill01)
-        { skill01ing = false; skill02ing = false;}
+        { skill01ing = false; skill02ing = false; }
         else
         { keepSkill01 = false; animator.SetBool("skill", true); }
         AttractorPrefab.SetActive(false);
@@ -227,7 +227,7 @@ public class Player_R : MoveViaInput
 
     private void FireSA03p01()
     {
-        if (RSACI%2 == 0)
+        if (RSACI % 2 == 0)
         {
             var clone = Instantiate(SAPrefab, this.transform.position, Quaternion.identity);
             clone.SetActive(true);
@@ -262,7 +262,7 @@ public class Player_R : MoveViaInput
         StartCoroutine(AttackCoroutine(AttackArray[combo - 1]));
         for (int i = 0; i < repeatSkill03; i++)
         {
-            yield return new WaitForSeconds(0.4f/repeatSkill03);
+            yield return new WaitForSeconds(0.4f / repeatSkill03);
             FireSA03();
         }
         yield return new WaitUntil(() => combo != 3);
@@ -271,7 +271,7 @@ public class Player_R : MoveViaInput
 
     private void FireSA03()
     {
-        if (RSACI%2 == 0)
+        if (RSACI % 2 == 0)
         {
             //Vector3 quaternionToTarget = Quaternion.Euler(0, 0, this.transform.rotation.z) * applyVector;
             var clone = Instantiate(SAPrefabfor03, this.transform.position, Quaternion.LookRotation(forward: Vector3.forward, upwards: applyVector));

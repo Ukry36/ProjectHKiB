@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class State : MonoBehaviour
+public class Status : MonoBehaviour
 {
     public bool isPlayer = false;
     public bool isStealth = false;
+    public bool superArmor = false; // no knockback
+    public bool invincible = false; // no damage
     public int maxHP = 100;
     public int currentHP;
     public int maxGP = 20;
@@ -15,23 +17,23 @@ public class State : MonoBehaviour
     public int DEF = 0;
     public int CritRate = 0;
     public int CritDMG = 10;
-    [HideInInspector] public MoveSprite moveSprite;
+    [HideInInspector] public Entity entity;
 
-    private void Start()
-    {
-
-    }
 
     public void Hit(int _dmg, bool _crit, bool _strong, Vector3 _dir)
     {
-        moveSprite.Hit();
         int trueDmg;
         if (_dmg > DEF)
             trueDmg = _dmg - DEF;
         else
             trueDmg = 1;
 
-        HPControl(-trueDmg);
+        if (!invincible)
+        {
+            StartCoroutine(entity.HitCoroutine());
+            HPControl(-trueDmg);
+        }
+
 
         /*
                 Vector3 vector = this.transform.position;
@@ -58,14 +60,14 @@ public class State : MonoBehaviour
 
         if (_strong)
         {
-            moveSprite.Grrogy(_dir);
+            Debug.Log("이거 고쳐야함!!!!!!!!");
+            entity.Knockback(_dir, 1); /////////// strong을 int형으로!!!!!!!
         }
-
     }
 
     public void SetHitAnimObject()
     {
-        moveSprite = GetComponentsInChildren<MoveSprite>(false)[0];
+        entity = GetComponentsInChildren<Entity>(false)[0];
     }
 
     public void HPControl(int _o)
@@ -76,7 +78,7 @@ public class State : MonoBehaviour
         if (currentHP <= 0)
         {
             currentHP = 0;
-            moveSprite.Die();
+            entity.Die();
         }
     }
 

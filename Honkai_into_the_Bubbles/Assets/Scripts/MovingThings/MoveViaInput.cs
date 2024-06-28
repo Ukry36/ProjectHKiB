@@ -7,14 +7,18 @@ using NaughtyAttributes;
 public abstract class MoveViaInput : MoveSprite
 {
     [BoxGroup("Attack")]
-    public bool cannotAttackEffect = false; private bool CAEBoolean() {return !cannotAttackEffect;}
-    [BoxGroup("Attack")][ShowIf("CAEBoolean")] 
+    public bool cannotAttackEffect = false; private bool CAEBoolean() { return !cannotAttackEffect; }
+    [BoxGroup("Attack")]
+    [ShowIf("CAEBoolean")]
     public bool isAttackEffect = false;
-    [BoxGroup("Attack")][ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")] 
-    [SerializeField]protected State theState;
-    [BoxGroup("Attack")][ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")] 
+    [BoxGroup("Attack")]
+    [ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")]
+    [SerializeField] protected Status theStat;
+    [BoxGroup("Attack")]
+    [ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")]
     [SerializeField] protected Attack[] AttackArray;
-    [BoxGroup("Attack")][ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")] 
+    [BoxGroup("Attack")]
+    [ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")]
     [SerializeField] protected AttackCollision attack;
     protected int combo;
 
@@ -35,26 +39,34 @@ public abstract class MoveViaInput : MoveSprite
     [HideInInspector] public bool recieveAttackInput = true; // animation controls this
     [HideInInspector] public bool recieveDodgeInput = true; // exsists for cooltime
     [HideInInspector] public bool recieveGraffitiInput = true; // exsists for cooltime
-    
+
 
 
     [BoxGroup("Dodge")]
     [SerializeField] protected bool canDodgeEffect = false;
-    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
+    [BoxGroup("Dodge")]
+    [ShowIf("canDodgeEffect")]
     [SerializeField] protected Animator dodgeAnim; // UWU
-    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
+    [BoxGroup("Dodge")]
+    [ShowIf("canDodgeEffect")]
     [SerializeField] protected SpriteRenderer dodgeSprt; // to apply theme color
-    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
+    [BoxGroup("Dodge")]
+    [ShowIf("canDodgeEffect")]
     [SerializeField] protected int dodgeLength = 1; // max length player can dodge
-    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
+    [BoxGroup("Dodge")]
+    [ShowIf("canDodgeEffect")]
     [SerializeField] protected int continuousDodgeLimit = 2; // max count player can continue dodging
-    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
+    [BoxGroup("Dodge")]
+    [ShowIf("canDodgeEffect")]
     [SerializeField] protected float dodgeCooltime = 1f; // dodge cooltime
-    [BoxGroup("Dodge")][ShowIf("canDodgeEffect")]
+    [BoxGroup("Dodge")]
+    [ShowIf("canDodgeEffect")]
     [SerializeField] protected bool keepDodge = false;
-    [BoxGroup("Dodge")][ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
+    [BoxGroup("Dodge")]
+    [ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
     [SerializeField] protected int keepDodgeLimit = 5;
-    [BoxGroup("Dodge")][ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
+    [BoxGroup("Dodge")]
+    [ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
     [SerializeField] protected float keepDodgeTimeLimit = 3f;
     protected int continuousDodgeCount = 0; // count countinuous dodge
     protected int totalDodgeCount = 0; // how many time did you dodge
@@ -63,18 +75,23 @@ public abstract class MoveViaInput : MoveSprite
 
     [BoxGroup("Graffiti")]
     [SerializeField] protected bool canGraffitiEffect = false;
-    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
+    [BoxGroup("Graffiti")]
+    [ShowIf("canGraffitiEffect")]
     [SerializeField] protected GraffitiSystem GS;
-    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
+    [BoxGroup("Graffiti")]
+    [ShowIf("canGraffitiEffect")]
     [SerializeField] protected float graffitiMaxtime = 1.5f;
-    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
+    [BoxGroup("Graffiti")]
+    [ShowIf("canGraffitiEffect")]
     [SerializeField] protected float graffitiCooltime = 0.3f;
-    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
+    [BoxGroup("Graffiti")]
+    [ShowIf("canGraffitiEffect")]
     [SerializeField] protected bool endAtGraffitiStartPoint = true;
-    [BoxGroup("Graffiti")][ShowIf("canGraffitiEffect")]
+    [BoxGroup("Graffiti")]
+    [ShowIf("canGraffitiEffect")]
     [SerializeField] protected Transform GraffitiStartPoint;
-    
-    
+
+
 
     public virtual void ChangeThemeColor(Color _c1, Color _c2)
     {
@@ -87,8 +104,8 @@ public abstract class MoveViaInput : MoveSprite
     {
         spriteLibrary.spriteLibraryAsset = Resources.Load("sdLibrary/" + ID.ToString() + "-" + spriteOverrideID.ToString(), typeof(SpriteLibraryAsset)) as SpriteLibraryAsset;
     }
-    
-    
+
+
     protected void RawVectorSetDirection()
     {
         GetRawVector();
@@ -98,23 +115,23 @@ public abstract class MoveViaInput : MoveSprite
     protected void GetRawVector()
     {
         // turn vector(applyVector) from normalized to raw
-        if(applyVector.x * applyVector.y != 0) 
+        if (applyVector.x * applyVector.y != 0)
             applyVector = new Vector2(applyVector.x / Mathf.Abs(applyVector.x), applyVector.y / Mathf.Abs(applyVector.y));
     }
 
 
-// determine direction of player by rawInput or applyInput in animtion
+    // determine direction of player by rawInput or applyInput in animtion
     protected void SetDir(bool _byRawInput = false)
     {
-        if(moveInput != Vector2.zero)
-            if(applyVector.x != 0)
+        if (moveInput != Vector2.zero)
+            if (applyVector.x != 0)
             {
                 if (_byRawInput)
                     animator.SetFloat("dirX", moveInput.x);
                 else
                     animator.SetFloat("dirX", applyVector.x);
                 animator.SetFloat("dirY", 0);
-            } 
+            }
             else
             {
                 animator.SetFloat("dirX", 0);
@@ -126,8 +143,8 @@ public abstract class MoveViaInput : MoveSprite
     }
 
 
-// manage wall detecting including diagonal move
-// it corrects the applyVector values by its condition
+    // manage wall detecting including diagonal move
+    // it corrects the applyVector values by its condition
     protected bool DetectWall()
     {
         movePoint.gameObject.SetActive(false);
@@ -147,19 +164,19 @@ public abstract class MoveViaInput : MoveSprite
                 applyVector.x = 0;
 
             }
-                
+
             if (Physics2D.OverlapCircle(movePoint.position - new Vector3(applyVector.x, 0, 0), .4f, wallLayer))
             {
                 movePoint.position -= new Vector3(0, applyVector.y, 0);
                 applyVector.y = 0;
             }
-                
+
             if (applyVector.x == 0 && applyVector.y == 0)
             {
                 movePoint.gameObject.SetActive(true);
                 return true;
             }
-            
+
             if (applyVector.x != 0 && applyVector.y != 0)
                 if (Physics2D.OverlapCircle(movePoint.position, .4f, wallLayer))
                     movePoint.position -= new Vector3(0, applyVector.y, 0);
@@ -169,12 +186,12 @@ public abstract class MoveViaInput : MoveSprite
     }
 
 
-// walks until there is no input
+    // walks until there is no input
     protected IEnumerator WalkCoroutine()
     {
         walking = true;
 
-        while(moveInput != Vector2.zero && !freeze && stopWalkboolean)
+        while (moveInput != Vector2.zero && !freeze && stopWalkboolean)
         {
             // while pressing sprint, movespeed doubles
             if (InputManager.instance.SprintInput)
@@ -184,7 +201,7 @@ public abstract class MoveViaInput : MoveSprite
 
 
             // save moveInput in applyVector
-            applyVector = moveInput; 
+            applyVector = moveInput;
             GetRawVector();
 
 
@@ -199,17 +216,17 @@ public abstract class MoveViaInput : MoveSprite
                 break;
             }
             SetDir();
-            
+
 
             // move toward destination
             // if stopWalkboolean is false, skip sequencial movement
             animator.SetBool("walk", true);
-            while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+            while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
             {
                 yield return null;
                 if (!stopWalkboolean)
                     break;
-                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime); 
+                Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * Time.deltaTime);
             }
             Mover.position = movePoint.position;
         }
@@ -230,32 +247,32 @@ public abstract class MoveViaInput : MoveSprite
         animator.SetInteger("attack", combo);
     }
 
-// attack (ends attack)
+    // attack (ends attack)
     protected IEnumerator AttackCoroutine(Attack _attack)
-    {  
+    {
         attacking = true;
         attack.SetAttackInfo(_attack.DamageCoefficient, _attack.CriticalRate, _attack.Strong, _attack.GraffitiPoint);
 
 
-        if(moveInput != Vector2.zero)
-            applyVector = moveInput; 
+        if (moveInput != Vector2.zero)
+            applyVector = moveInput;
         GetRawVector();
 
 
         // move until moveLimit or wall
         // in combo3 command, don't move
-        if(moveInput != Vector2.zero) 
+        if (moveInput != Vector2.zero)
         {
             for (int i = 0; i < _attack.TrackingRadius; i++)
             {
-                movePoint.position += (Vector3)applyVector; 
+                movePoint.position += (Vector3)applyVector;
                 yield return null;
                 if (DetectWall())
                 {
-                    movePoint.position -= (Vector3)applyVector; 
+                    movePoint.position -= (Vector3)applyVector;
                     break;
                 }
-                
+
                 Mover.position = movePoint.position;
             }
         }
@@ -265,28 +282,28 @@ public abstract class MoveViaInput : MoveSprite
         // start attack sequence of desired combo
         animator.SetInteger("attack", combo);
 
-    
+
         // if there is input at proper timing, get into next attack
         // == yield return new WaitUntil(() => recieveAttackInput && !canAttackAnim);
         while (!recieveAttackInput || canAttackAnim)
         {
             yield return null;
-            
+
             if (!stopAttackboolean) // if dodge is reserved, end attacking
             {
                 StopAttacking();
                 yield break;
             }
         }
-        
+
 
         bool flag = false;
-        while(recieveAttackInput) // from recieveAtkInput point to end of animation
+        while (recieveAttackInput) // from recieveAtkInput point to end of animation
         {
             yield return null;
             if (attackInput) // if there is input, next attack is reserved
                 flag = true;
-            
+
             if (!stopAttackboolean) // if dodge is reserved, end attacking
             {
                 StopAttacking();
@@ -339,18 +356,18 @@ public abstract class MoveViaInput : MoveSprite
         boxCollider.enabled = true;
         if (!keepDodge)
         {
-            if(moveInput != Vector2.zero)
-                applyVector = moveInput; 
+            if (moveInput != Vector2.zero)
+                applyVector = moveInput;
             RawVectorSetDirection();
-            
+
 
             // move to where dodgeLength reaches further (if no moveInput, dodge backward) 
             Vector2 apv = applyVector * dodgeLength;
-            if(moveInput != Vector2.zero)
+            if (moveInput != Vector2.zero)
             {
                 for (int i = 0; i < dodgeLength; i++)
                 {
-                    if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(apv.x - i, apv.y - i, 0f), .4f, wallLayer)) 
+                    if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(apv.x - i, apv.y - i, 0f), .4f, wallLayer))
                     {
                         movePoint.position += new Vector3(apv.x - i, apv.y - i, 0f);
                         break;
@@ -361,7 +378,7 @@ public abstract class MoveViaInput : MoveSprite
             {
                 for (int i = 0; i < dodgeLength; i++)
                 {
-                    if(!Physics2D.OverlapCircle(movePoint.position - new Vector3(apv.x - i, apv.y - i, 0f), .4f, wallLayer)) 
+                    if (!Physics2D.OverlapCircle(movePoint.position - new Vector3(apv.x - i, apv.y - i, 0f), .4f, wallLayer))
                     {
                         movePoint.position -= new Vector3(apv.x - i, apv.y - i, 0f);
                         break;
@@ -389,18 +406,18 @@ public abstract class MoveViaInput : MoveSprite
                 if (limitTime > keepDodgeTimeLimit)
                     break;
 
-                if(moveInput != Vector2.zero)
+                if (moveInput != Vector2.zero)
                     applyVector = moveInput;
                 RawVectorSetDirection();
-                if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer)) 
+                if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer))
                 {
                     i--;
                     continue;
                 }
-                movePoint.position += (Vector3)applyVector; 
-                while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+                movePoint.position += (Vector3)applyVector;
+                while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
                 {
-                    Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * 2 * Time.deltaTime); 
+                    Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * 2 * Time.deltaTime);
                     yield return null;
                 }
             }
@@ -426,7 +443,7 @@ public abstract class MoveViaInput : MoveSprite
         canAttackAnim = true;
     }
 
-// dodge cooltime
+    // dodge cooltime
     protected IEnumerator DodgeCooltimeCoroutine()
     {
         continuousDodgeCount = 0;
@@ -435,7 +452,7 @@ public abstract class MoveViaInput : MoveSprite
         recieveDodgeInput = true;
     }
 
-// reset dodge cooltime if player hasn't dodged for a while from first dodge 
+    // reset dodge cooltime if player hasn't dodged for a while from first dodge 
     protected IEnumerator DodgeCooltimeResetCoroutine()
     {
         yield return new WaitForSeconds(dodgeCooltime);
@@ -447,7 +464,7 @@ public abstract class MoveViaInput : MoveSprite
     protected IEnumerator GraffitiCoroutine()
     {
         movePoint.gameObject.SetActive(false);
-        if (Physics2D.OverlapCircle(movePoint.position, .4f, wallLayer + GS.WallForGraffitiLayer)) 
+        if (Physics2D.OverlapCircle(movePoint.position, .4f, wallLayer + GS.WallForGraffitiLayer))
             yield break;
         movePoint.gameObject.SetActive(true);
         graffiting = true;
@@ -461,16 +478,16 @@ public abstract class MoveViaInput : MoveSprite
         if (dodgeAnim.GetCurrentAnimatorStateInfo(0).normalizedTime < 0.5f)
             boxCollider.enabled = true;
 
-        while(true)
+        while (true)
         {
             yield return null;
             if (InputManager.instance.GraffitiEndInput)
                 break;
-            
-            if (theState.currentGP > 0)
+
+            if (theStat.currentGP > 0)
             {
                 if (moveInput == Vector2.zero)
-                applyVector = moveInput;
+                    applyVector = moveInput;
 
                 if (moveInput != Vector2.zero && applyVector == Vector2.zero)
                     applyVector = moveInput;
@@ -480,13 +497,13 @@ public abstract class MoveViaInput : MoveSprite
                 if (applyVector.x != 0)
                     applyVector.y = 0;
 
-                if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer + GS.WallForGraffitiLayer)) 
+                if (Physics2D.OverlapCircle(movePoint.position + (Vector3)applyVector, .4f, wallLayer + GS.WallForGraffitiLayer))
                     continue;
-            
+
                 movePoint.position += (Vector3)applyVector;
                 Mover.position = movePoint.position;
             }
-            
+
         }
         dodgeAnim.SetTrigger("endDodge");
         dodgeAnim.SetBool("keepDodge", false);
@@ -503,7 +520,7 @@ public abstract class MoveViaInput : MoveSprite
     }
 
 
-// graffiti cooltime
+    // graffiti cooltime
     protected IEnumerator GraffitiCooltimeCoroutine()
     {
         recieveGraffitiInput = false;

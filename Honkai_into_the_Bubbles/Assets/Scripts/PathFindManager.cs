@@ -19,7 +19,7 @@ public class Node
 
 public class PathFindManager : MonoBehaviour
 {
-    [SerializeField] private State theState;
+    [SerializeField] private Status theStat;
     private Vector2Int bottomLeft, topRight, startPos, targetPos;
     private List<Node> FinalNodeList;
     [SerializeField] private bool dontCrossCorner;
@@ -32,7 +32,7 @@ public class PathFindManager : MonoBehaviour
 
     private void Awake()
     {
-        theState = GetComponentInParent<State>();
+        theStat = GetComponentInParent<Status>();
     }
 
     public List<Node> PathFinding(Vector3 _BL, Vector3 _TR, Vector3 _start, Vector3 _target)
@@ -53,7 +53,7 @@ public class PathFindManager : MonoBehaviour
             {
                 bool isWall = false;
                 foreach (Collider2D col in Physics2D.OverlapCircleAll(new Vector2(i + bottomLeft.x, j + bottomLeft.y), 0.4f))
-                    if (col.gameObject != theState.gameObject)
+                    if (col.gameObject != theStat.gameObject)
                         if ((wallLayer & (1 << col.gameObject.layer)) != 0) isWall = true;
 
 

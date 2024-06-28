@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class DBManager : MonoBehaviour
-{   
+{
     #region Singleton
 
     public static DBManager instance;
@@ -30,13 +30,13 @@ public class DBManager : MonoBehaviour
 
     public List<Item> itemList = new List<Item>();
 
-    private State thePState;
+    private Status thePStat;
     public GameObject FloatingText_PreFab;
     public GameObject parent;
 
     public void FloatText(string _type, int _num)
     {
-        Vector3 vector = thePState.transform.position;
+        Vector3 vector = thePStat.transform.position;
         vector.y += Random.Range(0, 3f);
         vector.x += Random.Range(0, 3f);
 
@@ -62,59 +62,59 @@ public class DBManager : MonoBehaviour
         switch (_ID)
         {
             case 20000:
-                if (thePState.maxHP >= thePState.currentHP + 1)
-                    thePState.currentHP += 1;
+                if (thePStat.maxHP >= thePStat.currentHP + 1)
+                    thePStat.currentHP += 1;
                 else
-                    thePState.currentHP = thePState.maxHP;
+                    thePStat.currentHP = thePStat.maxHP;
                 FloatText("HEAL", 1);
                 break;
             case 20001:
-                if (thePState.maxHP >= thePState.currentHP + 3)
-                    thePState.currentHP += 3;
+                if (thePStat.maxHP >= thePStat.currentHP + 3)
+                    thePStat.currentHP += 3;
                 else
-                    thePState.currentHP = thePState.maxHP;
+                    thePStat.currentHP = thePStat.maxHP;
                 FloatText("HEAL", 3);
                 break;
             case 20002:
-                if (thePState.maxHP >= thePState.currentHP + 10)
-                    thePState.currentHP += 10;
+                if (thePStat.maxHP >= thePStat.currentHP + 10)
+                    thePStat.currentHP += 10;
                 else
-                    thePState.currentHP = thePState.maxHP;
+                    thePStat.currentHP = thePStat.maxHP;
                 FloatText("HEAL", 10);
                 break;
             case 20003:
-                if (thePState.maxHP >= thePState.currentHP + 30)
-                    thePState.currentHP += 30;
+                if (thePStat.maxHP >= thePStat.currentHP + 30)
+                    thePStat.currentHP += 30;
                 else
-                    thePState.currentHP = thePState.maxHP;
+                    thePStat.currentHP = thePStat.maxHP;
                 FloatText("HEAL", 30);
                 break;
             case 20004:
-                if (thePState.maxGP >= thePState.currentGP + 1)
-                    thePState.currentGP += 1;
+                if (thePStat.maxGP >= thePStat.currentGP + 1)
+                    thePStat.currentGP += 1;
                 else
-                    thePState.currentGP = thePState.maxGP;
+                    thePStat.currentGP = thePStat.maxGP;
                 FloatText("SP", 1);
                 break;
             case 20005:
-                if (thePState.maxGP >= thePState.currentGP + 3)
-                    thePState.currentGP += 3;
+                if (thePStat.maxGP >= thePStat.currentGP + 3)
+                    thePStat.currentGP += 3;
                 else
-                    thePState.currentGP = thePState.maxGP;
+                    thePStat.currentGP = thePStat.maxGP;
                 FloatText("SP", 3);
                 break;
             case 20006:
-                if (thePState.maxGP >= thePState.currentGP + 10)
-                    thePState.currentGP += 10;
+                if (thePStat.maxGP >= thePStat.currentGP + 10)
+                    thePStat.currentGP += 10;
                 else
-                    thePState.currentGP = thePState.maxGP;
+                    thePStat.currentGP = thePStat.maxGP;
                 FloatText("SP", 10);
                 break;
             case 20007:
-                if (thePState.maxGP >= thePState.currentGP + 30)
-                    thePState.currentGP += 30;
+                if (thePStat.maxGP >= thePStat.currentGP + 30)
+                    thePStat.currentGP += 30;
                 else
-                    thePState.currentGP = thePState.maxGP;
+                    thePStat.currentGP = thePStat.maxGP;
                 FloatText("SP", 30);
                 break;
         }
@@ -122,7 +122,7 @@ public class DBManager : MonoBehaviour
 
     void Start()
     {
-        thePState = FindObjectOfType<State>();
+        thePStat = FindObjectOfType<Status>();
 
         itemList.Add(new Item());
 
@@ -166,13 +166,13 @@ public class DBManager : MonoBehaviour
         itemList.Add(new Item(60003, "중장토끼(근거리)", "", Item.ItemType.Effect, 6, 1, 0, new int[] { 60002, 10012 }));
         itemList.Add(new Item(60004, "중장토끼(발키리)", "", Item.ItemType.Effect, 6, 1, 0, new int[] { 60003, 10030 }));
         itemList.Add(new Item(60005, "눈꽃", "", Item.ItemType.Effect, 4, 1, 0, new int[] { 10012, 10016 }));
-        itemList.Add(new Item(60006, "X", "", Item.ItemType.Effect, 6, 1, 0, new int[] { 10005, 10026 , 10011 }));
+        itemList.Add(new Item(60006, "X", "", Item.ItemType.Effect, 6, 1, 0, new int[] { 10005, 10026, 10011 }));
         itemList.Add(new Item(60007, "투사이드업", "", Item.ItemType.Effect, 2, 1, 0, new int[] { 10003, 10021 }));
         itemList.Add(new Item(60008, "실험가운", "", Item.ItemType.Effect, 4, 1, 0, new int[] { 10023, 10030 }));
         itemList.Add(new Item(60009, "칠흑", "", Item.ItemType.Effect, 4, 1, 0, new int[] { 10022, 10024 }));
         itemList.Add(new Item(60010, "좌스터의 꼬리", "", Item.ItemType.Effect, 5, 1, 0, new int[] { 10009, 10030 }));
         itemList.Add(new Item(60011, "최적의 수면조건", "", Item.ItemType.Effect, 6, 1, 0, new int[] { 10002, 10018 }));
-        itemList.Add(new Item(60012, "키라라", "", Item.ItemType.Effect, 4, 1, 0, new int[]  { 10007, 10008 }));
+        itemList.Add(new Item(60012, "키라라", "", Item.ItemType.Effect, 4, 1, 0, new int[] { 10007, 10008 }));
         itemList.Add(new Item(60013, "흑백 드론", "", Item.ItemType.Effect, 5, 1, 0, new int[] { 10005, 10014 }));
         itemList.Add(new Item(60014, "흑백 낡은 키", "", Item.ItemType.Effect, 5, 1, 0, new int[] { 10026, 10014 }));
         itemList.Add(new Item(60015, "흑백 가면", "", Item.ItemType.Effect, 3, 1, 0, new int[] { 10028, 10014 }));

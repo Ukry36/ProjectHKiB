@@ -14,10 +14,10 @@ public class PlayerManager : MonoBehaviour
     {
         if (instance == null)
         {
-            EveryEffects = GetComponentsInChildren<MoveViaInput>(true);
-            theState = GetComponent<State>();
+            EveryEffects = GetComponentsInChildren<Playable>(true);
+            theStat = GetComponent<Status>();
             prevEffect = Array.Find(EveryEffects, de => de.ID == 0);
-            theState.SetHitAnimObject();
+            theStat.SetHitAnimObject();
             DontDestroyOnLoad(this.gameObject);
             instance = this;
         }
@@ -29,13 +29,24 @@ public class PlayerManager : MonoBehaviour
     #endregion
 
     private int[] equippedEffectIDs = { 0 };
-    private MoveViaInput[] EveryEffects;
-    private List<MoveViaInput> EquippedEffects = new List<MoveViaInput> { };
-    private MoveViaInput prevEffect;
+    private Playable[] EveryEffects;
+    private List<Playable> EquippedEffects = new();
+    private Playable prevEffect;
 
     private int attackActivateState;  // -1: not attack effect, 0~3: EquippedEffects[0~3] is attack effect
 
-    private State theState;
+    [HideInInspector] public List<Color> ThemeColors { get; private set; } = new();
+
+    private Status theStat;
+
+    public int invincibleTimeCoeff = 1;
+    public float exSpeedCoeff = 1;
+    public bool forcedCanDodge = false;
+    public bool forcedKeepDodge = false;
+    public int exDodgeLength = 0;
+    public int exContinuousDodgeLimit = 0;
+    public float exKeepDodgeSpeedCoeff = 1;
+
 
 
     public void ActivateEquippedEffect(int[] _effectIDs)
@@ -56,7 +67,8 @@ public class PlayerManager : MonoBehaviour
                     EquippedEffects.Add(EveryEffects[i]);
 
 
-        // if there is attack effect, first attack effect will be activated
+        // if there is attack effect in EquippedEffects, 
+        //first attack effect will be activated
         attackActivateState = -1;
         for (int i = 0; i < EquippedEffects.Count; i++)
         {
@@ -104,16 +116,9 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
+        ThemeColors = EquippedEffects[0].ThemeColors;
 
-        // 
-        if (attackActivateState >= 0)
-        {
-            EquippedEffects[attackActivateState].ChangeThemeColor(EquippedEffects[0].themeColor1, EquippedEffects[0].themeColor2);
-        }
-
-
-        theState.SetHitAnimObject();
-
+        theStat.SetHitAnimObject();
 
         // activate passives
         ActivatePassives(true);
@@ -164,7 +169,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (_isPrime)
             {
-                theState.isStealth = true;
+                theStat.isStealth = true;
             }
             else
             {
@@ -173,7 +178,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            theState.isStealth = false;
+            theStat.isStealth = false;
         }
     }
 

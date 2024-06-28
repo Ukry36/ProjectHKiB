@@ -8,7 +8,7 @@ using TMPro;
 
 public class EquipmentManager : MonoBehaviour
 {
-   
+
     #region Singleton
     public static EquipmentManager instance;
     private void Awake()
@@ -30,15 +30,15 @@ public class EquipmentManager : MonoBehaviour
     private InventoryManager theInven;
     private DBManager theDB;
 
-    [SerializeField]private TextMeshProUGUI description;
-    [SerializeField]private Image displayImg;
+    [SerializeField] private TextMeshProUGUI description;
+    [SerializeField] private Image displayImg;
 
     private const int SLOT1 = 0, SLOT2 = 1, SLOT3 = 2, SLOT4 = 3, STARTOFTDE = 60000;
     private int currentSlot = 0;
 
-    [SerializeField]private Image[] imgSlots;
-    [SerializeField]private Image[] gradeSlots; 
-    [SerializeField]private Image[] transitions;
+    [SerializeField] private Image[] imgSlots;
+    [SerializeField] private Image[] gradeSlots;
+    [SerializeField] private Image[] transitions;
 
     [HideInInspector] public Item[] EquippedEffects;
     [HideInInspector] public int[] RealEquippedEffectIDs;
@@ -60,12 +60,12 @@ public class EquipmentManager : MonoBehaviour
     private void Start()
     {
         TransitedEffectList = theDB.itemList.FindAll(item => item.ID >= STARTOFTDE).ToArray();
-        EquippedEffects = new Item[] {new Item(), new Item(), new Item(), new Item()};
-        RealEquippedEffectIDs = new int[] {0, 0, 0, 0};
+        EquippedEffects = new Item[] { new Item(), new Item(), new Item(), new Item() };
+        RealEquippedEffectIDs = new int[] { 0, 0, 0, 0 };
     }
 
 
-// make every imgs transparent
+    // make every imgs transparent
     private void InitSlots()
     {
         Color color = imgSlots[0].color;
@@ -79,7 +79,7 @@ public class EquipmentManager : MonoBehaviour
     }
 
 
-// show equipped items and transition lines
+    // show equipped items and transition lines
     public void ShowEquip()
     {
         // make every imgs transparent and show only existing sprites
@@ -96,7 +96,7 @@ public class EquipmentManager : MonoBehaviour
         }
 
 
-#region Show Transition and Set Grade
+        #region Show Transition and Set Grade
         // initialize transition lines
         for (int i = 0; i < transitions.Length; i++)
         {
@@ -121,28 +121,28 @@ public class EquipmentManager : MonoBehaviour
                 transitions[0].color = PINK;
                 SLOT12 = true;
                 SetItemGrade(SLOT2, 3);
-            }            
+            }
             if (RealEquippedEffectIDs[SLOT1] == RealEquippedEffectIDs[SLOT3])
             {
                 transitions[4].gameObject.SetActive(true);
                 transitions[4].color = PINK;
                 SLOT13 = true;
                 SetItemGrade(SLOT3, 3);
-            }   
+            }
             if (RealEquippedEffectIDs[SLOT1] == RealEquippedEffectIDs[SLOT4])
             {
                 transitions[3].gameObject.SetActive(true);
                 transitions[3].color = PINK;
                 SLOT14 = true;
                 SetItemGrade(SLOT4, 3);
-            } 
+            }
         }
         if (RealEquippedEffectIDs[SLOT2] != 0)
         {
             if (RealEquippedEffectIDs[SLOT2] == RealEquippedEffectIDs[SLOT3])
             {
                 transitions[1].gameObject.SetActive(true);
-                if(SLOT12 && SLOT13)
+                if (SLOT12 && SLOT13)
                     transitions[1].color = PINK;
                 else
                     transitions[1].color = DARKBLUE;
@@ -164,33 +164,29 @@ public class EquipmentManager : MonoBehaviour
             else
                 transitions[2].color = DARKBLUE;
         }
-#endregion
+        #endregion
 
 
-#region Show ItemGrade
+        #region Show ItemGrade
         // color item slots
         for (int i = 0; i < EquippedEffects.Length; i++)
-            switch (EquippedEffects[i].Equipped)
+            gradeSlots[i].color = EquippedEffects[i].Equipped switch
             {
-                case 3:
-                    gradeSlots[i].color = PINK; break;
-                case 2:
-                    gradeSlots[i].color = DARKBLUE; break;
-                case 1:
-                    gradeSlots[i].color = MINT; break;
-                default:
-                    gradeSlots[i].color = WHITE; break;
-            }
-#endregion
+                3 => PINK,
+                2 => DARKBLUE,
+                1 => MINT,
+                _ => WHITE,
+            };
+        #endregion
     }
 
 
-// if there is pair of effects which can transit into synthesized effects, 
-// change realEqdEffIDs' transformed effect's ID into synthesized one
-    public void SetTransition() 
+    // if there is pair of effects which can transit into synthesized effects, 
+    // change realEqdEffIDs' transformed effect's ID into synthesized one
+    public void SetTransition()
     {
-        RealEquippedEffectIDs = 
-        new int[] {EquippedEffects[SLOT1].ID, EquippedEffects[SLOT2].ID, 
+        RealEquippedEffectIDs =
+        new int[] {EquippedEffects[SLOT1].ID, EquippedEffects[SLOT2].ID,
                    EquippedEffects[SLOT3].ID, EquippedEffects[SLOT4].ID};
 
         for (int i = 0; i < TransitedEffectList.Length; i++) // in all transited effects,
@@ -206,7 +202,7 @@ public class EquipmentManager : MonoBehaviour
             }
 
             // convert those effects' ID (in real eq eff) into transited effect's ID
-            if(exists)
+            if (exists)
             {
                 for (int j = 0; j < transitionPath.Length; j++)
                 {
@@ -226,7 +222,7 @@ public class EquipmentManager : MonoBehaviour
 
 
 
-// change every equipped item's grade(item.Equipped) into 1
+    // change every equipped item's grade(item.Equipped) into 1
     private void DefaultItemGrade()
     {
         for (int i = 0; i < EquippedEffects.Length; i++)
@@ -235,9 +231,9 @@ public class EquipmentManager : MonoBehaviour
                 SetItemGrade(i, 1);
         }
     }
-    
-    
-// change one item's grade in Equipment UI and Inventory UI
+
+
+    // change one item's grade in Equipment UI and Inventory UI
     private void SetItemGrade(int _slot, int _grade)
     {
         EquippedEffects[_slot].Equipped = _grade;
@@ -245,8 +241,8 @@ public class EquipmentManager : MonoBehaviour
     }
 
 
-// from MenuManager
-// show item's info
+    // from MenuManager
+    // show item's info
     public void SelectSlot(int _selectedSlot)
     {
         Item item = theDB.itemList.Find(item => item.ID == RealEquippedEffectIDs[_selectedSlot]);
@@ -255,30 +251,30 @@ public class EquipmentManager : MonoBehaviour
     }
 
 
-// from MenuManager
-// if there is no item, move to inventory for equip sequence, 
-// if there is item, unequip
+    // from MenuManager
+    // if there is no item, move to inventory for equip sequence, 
+    // if there is item, unequip
     public void ClickSlot(int _selectedSlot)
     {
         currentSlot = _selectedSlot;
         Item item = theDB.itemList.Find(item => item.ID == RealEquippedEffectIDs[_selectedSlot]);
 
-        if(EquippedEffects[_selectedSlot].ID == 0)
+        if (EquippedEffects[_selectedSlot].ID == 0)
             EquipEffect();
         else
             UnequipEffect();
     }
 
 
-// get into equipsequene
+    // get into equipsequene
     private void EquipEffect()
     {
         MenuManager.instance.OpenEquipSequenceInventory();
     }
 
 
-// last of equipsequence
-// equip desired item, rearrange transition lines and grade slots
+    // last of equipsequence
+    // equip desired item, rearrange transition lines and grade slots
     public void AfterEquipSequence(Item item)
     {
         EquippedEffects[currentSlot] = item;
@@ -288,7 +284,7 @@ public class EquipmentManager : MonoBehaviour
     }
 
 
-// unequip desired item, rearrange transition lines and grade slots
+    // unequip desired item, rearrange transition lines and grade slots
     private void UnequipEffect()
     {
         SetItemGrade(currentSlot, 0);
@@ -299,7 +295,7 @@ public class EquipmentManager : MonoBehaviour
     }
 
 
-// trriger to change player's form
+    // trriger to change player's form
     public void ApplyEffect()
     {
         PlayerManager.instance.ActivateEquippedEffect(RealEquippedEffectIDs);

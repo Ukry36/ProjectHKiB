@@ -29,10 +29,10 @@ public abstract class MoveViaAlgorithm : MoveSprite
 
     protected List<Node> ToPlayerList;
     protected Transform Player;
-    protected State PlayerState;
+    protected Status PlayerState;
     protected PathFindManager pathFinder;
 
-    [SerializeField] protected State theState;
+    [SerializeField] protected Status theState;
     [ShowIf("doAttack")]
     [SerializeField] private AudioSource TinkerAudioSource;
 

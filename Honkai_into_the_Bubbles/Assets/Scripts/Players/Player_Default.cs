@@ -24,18 +24,18 @@ public class Player_Default : MoveViaInput
 
 
         // if no WalkCoroutine is running and input exists, start walking
-        if(!walking && moveInput != Vector2.zero && !freeze && !grrogying) 
+        if (!walking && moveInput != Vector2.zero && !freeze && !grrogying)
         {
             StartCoroutine(WalkCoroutine());
         }
 
         // recieve dodge input if its right timing
-        if(canDodgeEffect)
+        if (canDodgeEffect)
         {
             dodgeInput = false;
-            if (recieveDodgeInput) 
+            if (recieveDodgeInput)
                 dodgeInput = InputManager.instance.DodgeInput;
-            if(!dodging && dodgeInput && !freeze && !grrogying && !graffiting)
+            if (!dodging && dodgeInput && !freeze && !grrogying && !graffiting)
             {
                 StopWalk();
                 StartCoroutine(DodgeCoroutine());
@@ -43,18 +43,18 @@ public class Player_Default : MoveViaInput
         }
 
         // recieve graffiti input if its right timing
-        if(canGraffitiEffect)
+        if (canGraffitiEffect)
         {
             startGraffitiInput = false;
             if (recieveGraffitiInput)
                 startGraffitiInput = InputManager.instance.GraffitiStartInput;
-            if(!graffiting && startGraffitiInput && !freeze && !grrogying && !dodging && theState.currentGP > 0)
+            if (!graffiting && startGraffitiInput && !freeze && !grrogying && !dodging && theStat.currentGP > 0)
             {
                 StopWalk();
                 StartCoroutine(GraffitiCoroutine());
             }
         }
-        
+
     }
 
 

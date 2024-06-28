@@ -14,11 +14,11 @@ public class TransferPosition : MonoBehaviour
 
     private bool can = true;
 
-    private void OnTriggerStay2D(Collider2D other) 
+    private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.TryGetComponent(out State component))
+        if (other.TryGetComponent(out Status component))
         {
-            if ((canTransferLayer & (1 << component.gameObject.layer)) != 0 )
+            if ((canTransferLayer & (1 << component.gameObject.layer)) != 0)
             {
                 if (can)
                 {
@@ -29,30 +29,30 @@ public class TransferPosition : MonoBehaviour
         }
     }
 
-    protected virtual IEnumerator TransferCoroutine(State component)
-    {   
+    protected virtual IEnumerator TransferCoroutine(Status component)
+    {
         if (component.isPlayer)
         {
             InputManager.instance.StopPlayerInput(true);
             ScreenManager.instance.SetFadeColor(fadeColor);
         }
-            
+
         yield return ScreenManager.instance.FadeCoroutine(1, delay);
-        
+
         component.transform.position += destination.position - this.transform.position;
-        component.moveSprite.movePoint.position += destination.position - this.transform.position;
+        component.entity.MovePoint.transform.position += destination.position - this.transform.position;
         if (component.isPlayer)
             CameraManager.instance.StrictMovement(destination.position - this.transform.position);
         if (dir != Vector2.zero)
         {
-            component.moveSprite.animator.SetFloat("dirX", dir.x);
-            component.moveSprite.animator.SetFloat("dirY", dir.y);
+            component.entity.Animator.SetFloat("dirX", dir.x);
+            component.entity.Animator.SetFloat("dirY", dir.y);
         }
 
         yield return new WaitForSeconds(innerDelay);
-        
+
         if (component.isPlayer)
-        {   
+        {
             yield return ScreenManager.instance.FadeCoroutine(0, delay);
             InputManager.instance.StopPlayerInput(false);
         }

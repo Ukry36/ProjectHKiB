@@ -12,6 +12,7 @@ public class MoveSprite : MonoBehaviour
     public Color themeColor1;
     public Color themeColor2;
     public BoxCollider2D boxCollider;
+    public BoxCollider2D parryCheck;
     public LayerMask wallLayer; // recognz as wall
     public float defaultSpeed = 4f; // orig speed
     protected float moveSpeed; // apply speed
@@ -217,7 +218,6 @@ public class MoveSprite : MonoBehaviour
         color.g = 225;
         color.b = 225;
         spriteRenderer.color = color;
-
     }
 
     public void Die()

@@ -5,7 +5,7 @@ using UnityEngine.InputSystem;
 
 public class InputManager : MonoBehaviour
 {
-    
+
     #region Singleton
 
     public static InputManager instance;
@@ -39,18 +39,18 @@ public class InputManager : MonoBehaviour
     }
     #endregion
 
-    public Vector2 MoveInput {get; private set;}
-    public bool SprintInput {get; private set;}
-    public bool AttackInput {get; private set;}
-    public bool DodgeInput {get; private set;}
-    public bool DodgeProgressInput {get; private set;}
-    public bool GraffitiStartInput {get; private set;}
-    public bool GraffitiEndInput {get; private set;}
+    public Vector2 MoveInput { get; private set; }
+    public bool SprintInput { get; private set; }
+    public bool AttackInput { get; private set; }
+    public bool DodgeInput { get; private set; }
+    public bool DodgeProgressInput { get; private set; }
+    public bool GraffitiStartInput { get; private set; }
+    public bool GraffitiEndInput { get; private set; }
 
-    public bool ConfirmInput {get; private set;}
-    public bool CancelInput {get; private set;}
-    public bool EquipmentOpenCloseInput {get; private set;}
-    public bool InventoryOpenCloseInput {get; private set;}
+    public bool ConfirmInput { get; private set; }
+    public bool CancelInput { get; private set; }
+    public bool EquipmentOpenCloseInput { get; private set; }
+    public bool InventoryOpenCloseInput { get; private set; }
 
     private PlayerInput _playerInput;
     private InputAction move, sprint, attack, dodge, grafitti, confirm, cancel, equipment, inventory;
@@ -88,7 +88,6 @@ public class InputManager : MonoBehaviour
             GraffitiStartInput = grafitti.WasPressedThisFrame();
             GraffitiEndInput = grafitti.WasReleasedThisFrame();
         }
-        
 
         // ui input detect 
         ConfirmInput = confirm.WasPressedThisFrame();

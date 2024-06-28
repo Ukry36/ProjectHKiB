@@ -35,18 +35,18 @@ public class Player_Delta : MoveViaInput
         // read vector2 from input sys
         moveInput = InputManager.instance.MoveInput;
         // if no WalkCoroutine is running and input exists, start walking
-        if(!walking && moveInput != Vector2.zero && !freeze && !attacking && !dodging && !grrogying && !graffiting) 
+        if (!walking && moveInput != Vector2.zero && !freeze && !attacking && !dodging && !grrogying && !graffiting)
         {
             StartCoroutine(WalkCoroutine());
         }
-    
+
 
         // recieve attack input if its right timing
         attackInput = false;
-        if (recieveAttackInput) 
+        if (recieveAttackInput)
             attackInput = InputManager.instance.AttackInput;
         // if no AttackCoroutine is running and input exists, start attacking
-        if(!attacking && attackInput && !freeze && !dodging && !grrogying && !graffiting)
+        if (!attacking && attackInput && !freeze && !dodging && !grrogying && !graffiting)
         {
             combo = 1;
             StopWalk();
@@ -56,9 +56,9 @@ public class Player_Delta : MoveViaInput
 
         // recieve dodge input if its right timing
         dodgeInput = false;
-        if (recieveDodgeInput) 
+        if (recieveDodgeInput)
             dodgeInput = InputManager.instance.DodgeInput;
-        if(!dodging && dodgeInput && !freeze && !grrogying && !graffiting)
+        if (!dodging && dodgeInput && !freeze && !grrogying && !graffiting)
         {
             StopWalk();
             StopAttack();
@@ -73,7 +73,7 @@ public class Player_Delta : MoveViaInput
         startGraffitiInput = false;
         if (recieveGraffitiInput)
             startGraffitiInput = InputManager.instance.GraffitiStartInput;
-        if(!graffiting && startGraffitiInput && !freeze && !grrogying && !dodging && theState.currentGP > 0)
+        if (!graffiting && startGraffitiInput && !freeze && !grrogying && !dodging && theStat.currentGP > 0)
         {
             StopWalk();
             StopAttack();
@@ -96,32 +96,32 @@ public class Player_Delta : MoveViaInput
     }
 
 
-// attack (ends attack)
+    // attack (ends attack)
     private new IEnumerator AttackCoroutine(Attack _attack)
-    {  
+    {
         attacking = true;
         attack.SetAttackInfo(_attack.DamageCoefficient, _attack.CriticalRate, _attack.Strong);
 
 
-        if(moveInput != Vector2.zero)
-            applyVector = moveInput; 
+        if (moveInput != Vector2.zero)
+            applyVector = moveInput;
         GetRawVector();
-    
+
 
         // move until moveLimit or wall
         // in combo3 command, don't move
-        if(moveInput != Vector2.zero && !startAtCombo3) 
+        if (moveInput != Vector2.zero && !startAtCombo3)
         {
             for (int i = 0; i < _attack.TrackingRadius; i++)
             {
-                movePoint.position += (Vector3)applyVector; 
+                movePoint.position += (Vector3)applyVector;
                 yield return null;
                 if (DetectWall())
                 {
-                    movePoint.position -= (Vector3)applyVector; 
+                    movePoint.position -= (Vector3)applyVector;
                     break;
                 }
-                
+
                 Mover.position = movePoint.position;
             }
         }
@@ -141,7 +141,7 @@ public class Player_Delta : MoveViaInput
         while (!recieveAttackInput || canAttackAnim)
         {
             yield return null;
-            
+
             if (!stopAttackboolean) // if dodge is reserved, end attacking
             {
                 if (willDodge && combo == 3 || combo == 4)
@@ -150,15 +150,15 @@ public class Player_Delta : MoveViaInput
                 yield break;
             }
         }
-        
+
 
         bool flag = false;
-        while(recieveAttackInput) // from recieveAtkInput point to end of animation
+        while (recieveAttackInput) // from recieveAtkInput point to end of animation
         {
             yield return null;
             if (attackInput) // if there is input, next attack is reserved
                 flag = true;
-            
+
             if (!stopAttackboolean) // if dodge is reserved, end attacking
             {
                 if (willDodge && combo == 3 || combo == 4)
@@ -187,7 +187,7 @@ public class Player_Delta : MoveViaInput
     }
 
 
-// dodge (ends attck or walk)
+    // dodge (ends attck or walk)
     private new IEnumerator DodgeCoroutine()
     {
         dodgeAnim.SetBool("keepDodge", keepDodge);
@@ -219,17 +219,17 @@ public class Player_Delta : MoveViaInput
         boxCollider.enabled = true;
         if (!keepDodge)
         {
-            if(moveInput != Vector2.zero)
+            if (moveInput != Vector2.zero)
                 applyVector = moveInput;
             RawVectorSetDirection();
 
             // move to where dodgeLength reaches further (if no moveInput, dodge backward) 
             Vector2 apv = applyVector * dodgeLength;
-            if(moveInput != Vector2.zero)
+            if (moveInput != Vector2.zero)
             {
                 for (int i = 0; i < dodgeLength; i++)
                 {
-                    if(!Physics2D.OverlapCircle(movePoint.position + new Vector3(apv.x - i, apv.y - i, 0f), .4f, wallLayer)) 
+                    if (!Physics2D.OverlapCircle(movePoint.position + new Vector3(apv.x - i, apv.y - i, 0f), .4f, wallLayer))
                     {
                         movePoint.position += new Vector3(apv.x - i, apv.y - i, 0f);
                         break;
@@ -241,7 +241,7 @@ public class Player_Delta : MoveViaInput
             {
                 for (int i = 0; i < dodgeLength; i++)
                 {
-                    if(!Physics2D.OverlapCircle(movePoint.position - new Vector3(apv.x - i, apv.y - i, 0f), .4f, wallLayer)) 
+                    if (!Physics2D.OverlapCircle(movePoint.position - new Vector3(apv.x - i, apv.y - i, 0f), .4f, wallLayer))
                     {
                         movePoint.position -= new Vector3(apv.x - i, apv.y - i, 0f);
                         break;
@@ -268,18 +268,18 @@ public class Player_Delta : MoveViaInput
                 if (limitTime > keepDodgeTimeLimit)
                     break;
 
-                if(moveInput != Vector2.zero)
+                if (moveInput != Vector2.zero)
                     applyVector = moveInput;
                 RawVectorSetDirection();
-                if (Physics2D.OverlapCircle(movePoint.position + new Vector3(applyVector.x, applyVector.y, 0f), .4f, wallLayer)) 
+                if (Physics2D.OverlapCircle(movePoint.position + new Vector3(applyVector.x, applyVector.y, 0f), .4f, wallLayer))
                 {
                     i--;
                     continue;
                 }
-                movePoint.position += new Vector3(applyVector.x, applyVector.y, 0f); 
-                while(Vector3.Distance(Mover.position, movePoint.position) >= .05f)
+                movePoint.position += new Vector3(applyVector.x, applyVector.y, 0f);
+                while (Vector3.Distance(Mover.position, movePoint.position) >= .05f)
                 {
-                    Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * 2 * Time.deltaTime); 
+                    Mover.position = Vector3.MoveTowards(Mover.position, movePoint.position, moveSpeed * 2 * Time.deltaTime);
                     yield return null;
                 }
             }

@@ -2,5 +2,10 @@ using UnityEngine;
 
 public class MovePoint : MonoBehaviour
 {
-    public Transform Mover;
+    public Vector3 prevPos;
+
+    private void Awake()
+    {
+        this.transform.parent = null;
+    }
 }

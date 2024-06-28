@@ -15,7 +15,7 @@ public class AttackCollision : MonoBehaviour
     [HideInInspector] public int critRateOverride = 0;
     [HideInInspector] public int GPOverride = 0;
     [HideInInspector] public bool strongOverride = false;
-    public State theState;
+    public Status theStat;
 
     protected BoxCollider2D boxCollider2D;
     protected Vector3 prevPos;
@@ -28,11 +28,11 @@ public class AttackCollision : MonoBehaviour
 
     public void SetAttackInfo(int _DmgCoeff, int _CritRate, bool _Strong, int _GP = 0)
     {
-        DMG = theState.ATK * _DmgCoeff / 100;
+        DMG = theStat.ATK * _DmgCoeff / 100;
         Crit = false;
-        if (Random.Range(1, 101) < _CritRate + theState.CritRate)
+        if (Random.Range(1, 101) < _CritRate + theStat.CritRate)
         {
-            DMG += DMG * theState.CritDMG / 100;
+            DMG += DMG * theStat.CritDMG / 100;
             Crit = true;
         }
         GP = _GP;
@@ -91,8 +91,8 @@ public class AttackCollision : MonoBehaviour
                 SetAttackInfo(dmgCoeffOverride, critRateOverride, strongOverride, GPOverride);
                 Override = false;
             }
-            theState.GPControl(GP);
-            if (other.gameObject.TryGetComponent(out State component))
+            theStat.GPControl(GP);
+            if (other.gameObject.TryGetComponent(out Status component))
             {
                 component.Hit(DMG, Crit, Strong, GrrogyDir);
             }

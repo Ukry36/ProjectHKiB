@@ -15,7 +15,7 @@ public class Enemy_Rusher : MoveViaAlgorithm
         animator = GetComponent<Animator>();
         spriteRenderer = GetComponent<SpriteRenderer>();
         Player = FindObjectOfType<PlayerManager>().transform;
-        PlayerState = Player.GetComponent<State>();
+        PlayerState = Player.GetComponent<Status>();
         pathFinder = GetComponent<PathFindManager>();
         moveSpeed = defaultSpeed;
 

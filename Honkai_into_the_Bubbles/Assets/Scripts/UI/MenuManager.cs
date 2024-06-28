@@ -13,7 +13,7 @@ public class MenuManager : MonoBehaviour
         {
             theInput = FindObjectOfType<InputManager>();
             theEquip = FindObjectOfType<EquipmentManager>();
-            theInven = FindObjectOfType<InventoryManager>();    
+            theInven = FindObjectOfType<InventoryManager>();
             thePlayer = FindObjectsOfType<MoveViaInput>(true);
             DontDestroyOnLoad(this.gameObject);
             instance = this;
@@ -24,13 +24,13 @@ public class MenuManager : MonoBehaviour
         }
     }
     #endregion
-    
+
 
     private InputManager theInput;
     private EquipmentManager theEquip;
     private InventoryManager theInven;
     private MoveViaInput[] thePlayer;
-    [SerializeField] private State theState;
+    [SerializeField] private Status theStat;
 
     [SerializeField] private GameObject _pauseCanvasGO;
     [SerializeField] private GameObject _inventoryCanvasGO;
@@ -39,7 +39,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private GameObject _equipSlotFirst;
     [SerializeField] private GameObject _inventoryFirst;
     [SerializeField] private GameObject _itemListFirst;
-    
+
     private bool isPaused;
     private bool inEquipment;
     private bool inEquipSequenceInventory;
@@ -59,8 +59,8 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        HPtext.text = theState.currentHP+"/"+theState.maxHP;
-        HPbar.transform.localScale = new Vector3((float)theState.currentHP/theState.maxHP, 1, 0);
+        HPtext.text = theStat.currentHP + "/" + theStat.maxHP;
+        HPbar.transform.localScale = new Vector3((float)theStat.currentHP / theStat.maxHP, 1, 0);
         if (isPaused)
         {
             if (theInput.CancelInput)
@@ -119,8 +119,8 @@ public class MenuManager : MonoBehaviour
         theInput.StopPlayerInput(false);
     }
 
-// pause
-#region Pause / Resume Functions
+    // pause
+    #region Pause / Resume Functions
 
     private void Pause()
     {
@@ -138,12 +138,12 @@ public class MenuManager : MonoBehaviour
         theInput.stopPlayer = false;
     }
 
-#endregion
+    #endregion
 
 
 
-// equipment
-#region Open / Close Equipment Functions
+    // equipment
+    #region Open / Close Equipment Functions
     private void OpenEquipment()
     {
         inEquipment = true;
@@ -157,12 +157,12 @@ public class MenuManager : MonoBehaviour
         inEquipment = false;
         _equipmentCanvasGO.SetActive(false);
         ResumePlayerforUI();
-        
+
         theEquip.ApplyEffect();
     }
-#endregion
+    #endregion
 
-#region Select / Click Slot Functions
+    #region Select / Click Slot Functions
 
     public void SelectSlotAction(int _selectedSlot)
     {
@@ -174,9 +174,9 @@ public class MenuManager : MonoBehaviour
         theEquip.ClickSlot(_selectedSlot);
     }
 
-#endregion
+    #endregion
 
-#region Open / Close Equip Sequence Inventory Functions
+    #region Open / Close Equip Sequence Inventory Functions
 
     public void OpenEquipSequenceInventory()
     {
@@ -199,12 +199,12 @@ public class MenuManager : MonoBehaviour
         theInven.equipSequence = false;
         EventSystem.current.SetSelectedGameObject(_equipSlotFirst);
     }
-#endregion
+    #endregion
 
 
 
-// inventory
-#region Open / Close Inventory Functions
+    // inventory
+    #region Open / Close Inventory Functions
 
     private void OpenInventory()
     {
@@ -220,9 +220,9 @@ public class MenuManager : MonoBehaviour
         _inventoryCanvasGO.SetActive(false);
         ResumePlayerforUI();
     }
-#endregion
+    #endregion
 
-#region Open / Close ItemList Functions
+    #region Open / Close ItemList Functions
 
     public void OpenItemList(int _SelectedTab)
     {
@@ -239,28 +239,28 @@ public class MenuManager : MonoBehaviour
         theInven.InitSlots();
     }
 
-#endregion
+    #endregion
 
-#region Select / Click / Deselect Item Function
+    #region Select / Click / Deselect Item Function
 
-public void SelectItemAction(int _selectedItem)
-{
-    theInven.SelectItem(_selectedItem);
-}
+    public void SelectItemAction(int _selectedItem)
+    {
+        theInven.SelectItem(_selectedItem);
+    }
 
-public void ClickItemAction(int _selectedItem)
-{
-    theInven.ClickItem(_selectedItem);
-}
+    public void ClickItemAction(int _selectedItem)
+    {
+        theInven.ClickItem(_selectedItem);
+    }
 
-public void DeselectItemAction(int _selectedItem)
-{
-    theInven.DeselectItem(_selectedItem);
-}
+    public void DeselectItemAction(int _selectedItem)
+    {
+        theInven.DeselectItem(_selectedItem);
+    }
 
-#endregion
+    #endregion
 
-#region Inventory Prev / Next Page Functions
+    #region Inventory Prev / Next Page Functions
 
     public void ToNextPage()
     {
@@ -274,5 +274,5 @@ public void DeselectItemAction(int _selectedItem)
         EventSystem.current.SetSelectedGameObject(_itemListFirst);
     }
 
-#endregion
+    #endregion
 }

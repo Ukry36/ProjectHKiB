@@ -18,7 +18,7 @@ public class Drone : MoveViaAlgorithm
         animator = GetComponent<Animator>();
         pathFinder = GetComponentInChildren<PathFindManager>();
         Player = FindObjectOfType<PlayerManager>().transform;
-        PlayerState = Player.GetComponent<State>();
+        PlayerState = Player.GetComponent<Status>();
         moveSpeed = defaultSpeed;
 
         StartCoroutine(DefaultCoroutine());
