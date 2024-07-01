@@ -10,9 +10,9 @@ public class Entity : MonoBehaviour
     public string Name;
     public List<Color> ThemeColors = new();
 
-    [HideInInspector] public Animator Animator { get; private set; }
+    public Animator Animator { get; private set; }
     protected SpriteRenderer SpriteRenderer { get; private set; }
-    protected SpriteLibrary SpriteLibrary { get; private set; }
+    [SerializeField] protected SpriteLibrary SpriteLibrary;
 
     public Transform Mover;// who moves
     public MovePoint MovePoint; // destination to move
@@ -22,10 +22,10 @@ public class Entity : MonoBehaviour
     [HideInInspector] public float MoveSpeed { get; private set; } // actual speed (movespeed = default * sprint * ex)
     public float SprintCoeff = 2f;
 
-    public Status theStat;
-    public BoxCollider2D BoxCollider;
+    public Status theStat { get; private set; }
+    public BoxCollider2D BoxCollider { get; private set; }
+
     public int InvincibleFrame = 4; // invincible for n frame after hit
-    public int Mass = 0;
     [SerializeField] private bool explodeWhenDie = false;
     [ShowIf("explodeWhenDie")][SerializeField] protected TrackingBullet explosion;
 
@@ -33,10 +33,16 @@ public class Entity : MonoBehaviour
     {
         Animator = GetComponent<Animator>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
-        SpriteLibrary = GetComponent<SpriteLibrary>();
+        theStat = Mover.GetComponent<Status>();
+        BoxCollider = Mover.GetComponent<BoxCollider2D>();
     }
 
     protected virtual void Start()
+    {
+
+    }
+
+    protected virtual void Update()
     {
 
     }
@@ -51,7 +57,10 @@ public class Entity : MonoBehaviour
         MoveSpeed = DefaultSpeed * SprintCoeff * PlayerManager.instance.exSpeedCoeff;
     }
 
-    public virtual void Knockback(Vector2 _dir, int _strong) { }
+    public virtual void Knockback(Vector3 _attackOrigin, int _coeff)
+    {
+        Debug.LogError("ERROR : No Knockback Function");
+    }
 
     public IEnumerator HitCoroutine()
     {

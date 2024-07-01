@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1116059241341943363}
   - component: {fileID: 4112027787512025932}
   - component: {fileID: 1901961242532836037}
-  - component: {fileID: 8272561887982210259}
+  - component: {fileID: 8201451583863567592}
   m_Layer: 0
   m_Name: Effect
   m_TagString: Untagged
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_labelHash: 1.3803409e-37
   m_SpriteKey: 0
   m_SpriteHash: 85343836
---- !u!114 &8272561887982210259
+--- !u!114 &8201451583863567592
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,44 +148,51 @@ MonoBehaviour:
   m_GameObject: {fileID: 4525644307060344940}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d41696eeea6758d4db271044d1116b63, type: 3}
+  m_Script: {fileID: 11500000, guid: 6c3ac2f3deea8d34bbfd77378a9ce25d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 0
-  characterName: Delta
-  themeColor1: {r: 0, g: 0, b: 0, a: 0}
-  themeColor2: {r: 0, g: 0, b: 0, a: 0}
-  boxCollider: {fileID: 0}
+  Name: Delta
+  ThemeColors:
+  - {r: 0, g: 0, b: 0, a: 0}
+  - {r: 0, g: 0, b: 0, a: 0}
+  SpriteLibrary: {fileID: 4112027787512025932}
+  Mover: {fileID: 0}
+  MovePoint: {fileID: 0}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 1344
-  defaultSpeed: 5
-  Mover: {fileID: 0}
-  movePoint: {fileID: 0}
-  freeze: 0
-  grrogyCoefficient: 3
-  stopAttackboolean: 1
-  animator: {fileID: 0}
-  spriteLibrary: {fileID: 4112027787512025932}
-  isAttackEffect: 0
-  cannotAttackEffect: 0
+    m_Bits: 1472
+  DefaultSpeed: 4
+  SprintCoeff: 2
+  theStat: {fileID: 0}
+  BoxCollider: {fileID: 0}
+  InvincibleFrame: 4
+  Mass: 0
+  explodeWhenDie: 0
+  explosion: {fileID: 0}
   spriteOverrideID: 0
-  theState: {fileID: 0}
   canAttackAnim: 1
   recieveAttackInput: 1
   recieveDodgeInput: 1
   recieveGraffitiInput: 1
+  cannotAttackEffect: 0
+  isAttackEffect: 0
   AttackArray: []
-  attack: {fileID: 0}
-  dodgeAnim: {fileID: 0}
-  dodgeSprt: {fileID: 0}
+  attackCheck: {fileID: 0}
+  canDodgeEffect: 0
+  dodgeSprite: {fileID: 0}
   dodgeLength: 1
   continuousDodgeLimit: 2
   dodgeCooltime: 1
   keepDodge: 0
   keepDodgeLimit: 5
   keepDodgeTimeLimit: 3
+  keepDodgeSpeed: 8
+  canGraffitiEffect: 0
   GS: {fileID: 0}
+  graffitiMaxtime: 1
   graffitiCooltime: 0.3
   endAtGraffitiStartPoint: 1
   GraffitiStartPoint: {fileID: 0}
+  moveInput: {x: 0, y: 0}
+  savedInput: {x: 0, y: 0, z: 0}

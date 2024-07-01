@@ -251,7 +251,7 @@ public abstract class MoveViaInput : MoveSprite
     protected IEnumerator AttackCoroutine(Attack _attack)
     {
         attacking = true;
-        attack.SetAttackInfo(_attack.DamageCoefficient, _attack.CriticalRate, _attack.Strong, _attack.GraffitiPoint);
+        //attack.SetAttackInfo(_attack.DamageCoefficient, _attack.CriticalRate, _attack.Strong, _attack.GraffitiPoint);
 
 
         if (moveInput != Vector2.zero)

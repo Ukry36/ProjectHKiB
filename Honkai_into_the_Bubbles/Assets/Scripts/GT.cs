@@ -8,7 +8,7 @@ public class GT : MonoBehaviour
     [SerializeField] private SpriteRenderer spriteRenderer;
     private static GraffitiSystem GS;
     private int GTPCCI = 0;
-    private void Awake() 
+    private void Awake()
     {
         coordinate = new Vector2(this.transform.position.x, this.transform.position.y);
     }
@@ -26,14 +26,11 @@ public class GT : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
-            GTPCCI++;
             GS.AddTile(coordinate);
-            if (GTPCCI%2==0)
-                spriteRenderer.color = other.GetComponentInChildren<MoveSprite>().themeColor1;
-            else
-                spriteRenderer.color = other.GetComponentInChildren<MoveSprite>().themeColor2;
+            List<Color> colors = PlayerManager.instance.ThemeColors;
+            spriteRenderer.color = colors[GTPCCI++ % colors.Count];
         }
     }
 }

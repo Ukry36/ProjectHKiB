@@ -5,6 +5,9 @@ using UnityEngine.UIElements;
 
 public class Delta_Default_DodgeIngState : Delta_Default_State
 {
+    private float speed;
+    private int moveCount;
+    private bool stuckCheck = true;
     public Delta_Default_DodgeIngState(Delta_Default _player, Delta_Default_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 
@@ -15,58 +18,59 @@ public class Delta_Default_DodgeIngState : Delta_Default_State
         base.Enter();
         stateTimer = player.keepDodgeTimeLimit;
         player.theStat.superArmor = true;
-        MoveCoroutine();
+        speed = player.keepDodgeSpeed * PlayerManager.instance.exKeepDodgeSpeedCoeff;
+        moveCount = 0;
     }
 
     public override void Update()
     {
         base.Update();
-        if (stateTimer < 0 || !InputManager.instance.DodgeProgressInput)
+        if (stateTimer < 0
+        || moveCount >= player.keepDodgeLimit + PlayerManager.instance.exDodgeLength
+        || !InputManager.instance.DodgeProgressInput)
         {
             player.StateMachine.ChangeState(player.DodgeExitState);
         }
-    }
 
-    protected IEnumerator MoveCoroutine()
-    {
-        float speed = player.keepDodgeSpeed * PlayerManager.instance.exKeepDodgeSpeedCoeff;
-        int moveCount = 0;
-
-
-        while (true)
+        if (Vector3.Distance(player.Mover.position, player.MovePoint.transform.position) >= .05f)
         {
-            if (moveCount >= player.keepDodgeLimit + PlayerManager.instance.exDodgeLength)
-                break;
-
-            savedInput = (Vector3)moveInput;
-            player.MovePoint.transform.position += savedInput;
-            yield return null;
-
-            if (MovepointAdjustCheck())
+            if (stuckCheck)
             {
-                player.MovePoint.transform.position -= savedInput;
-                continue;
+                if (Physics2D.OverlapCircle(player.MovePoint.transform.position, 0.1f, player.wallLayer))
+                    player.MovePoint.transform.position = player.MovePoint.prevPos;
+                stuckCheck = false; //Debug.Log("stuckCheck");
             }
 
-            moveCount++;
-
-            while (Vector3.Distance(player.Mover.position, player.MovePoint.transform.position) >= .05f)
-            {
-                yield return null;
-                player.Mover.position =
-                Vector3.MoveTowards(player.Mover.position, player.MovePoint.transform.position, speed * Time.deltaTime);
-            }
-            player.Mover.position = player.MovePoint.transform.position;
-            player.MovePoint.prevPos = player.Mover.position; // used for external movepoint control
+            player.Mover.position = Vector3.MoveTowards
+            (
+                player.Mover.position,
+                player.MovePoint.transform.position,
+                player.keepDodgeSpeed * Time.deltaTime
+            );
         }
+        else
+        {
+            player.Mover.position = player.MovePoint.transform.position; // make position accurate
+            player.MovePoint.prevPos = player.Mover.position; // used in external movepoint control
+            stuckCheck = true;
+            if (player.moveInput != Vector2.zero)
+            {
+                // save moveinput
+                player.savedInput = (Vector3)player.moveInput;
 
-        player.StateMachine.ChangeState(player.DodgeExitState);
+                if (!player.MovepointAdjustCheck())
+                {
+                    player.MovePoint.transform.position += player.savedInput;
+                    moveCount++;
+                }
+            }
+        }
     }
 
     public override void Exit()
     {
         base.Exit();
-        SetDir(savedInput);
+        player.SetDir(player.savedInput);
         player.theStat.superArmor = false;
     }
 }

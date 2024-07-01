@@ -29,12 +29,12 @@ public class Player_R : MoveViaInput
         animator.SetFloat("dirY", -1);
 
 
-        AttackArray = new Attack[] {
+        /*AttackArray = new Attack[] {
             new Attack(75, 0, 10, false),
             new Attack(50, 1, 10, true),
             new Attack(50, 1, 10, false),
             new Attack(175, 0, 10, true)
-        };
+        };*/
 
         SAPrefab.GetComponent<AttackCollision>().
         SetAttackInfo(GS.skillList[2].DamageCoefficient, GS.skillList[2].CriticalRate, GS.skillList[2].Strong);

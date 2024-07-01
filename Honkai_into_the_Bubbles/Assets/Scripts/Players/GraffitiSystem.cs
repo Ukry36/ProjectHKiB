@@ -12,7 +12,6 @@ public class GraffitiSystem : MonoBehaviour
     [SerializeField] private GameObject NexusPrefab;
     [HideInInspector] public List<Vector2> activatedTileList = new();
     [SerializeField] private Attractive attractive;
-    [SerializeField] private Status theState;
     private Vector2 LB;
     public List<Skill> skillList = new();
 
@@ -70,7 +69,6 @@ public class GraffitiSystem : MonoBehaviour
         if (!activatedTileList.Exists(co => co == _co))
         {
             activatedTileList.Add(_co);
-            theState.currentGP--;
         }
     }
 

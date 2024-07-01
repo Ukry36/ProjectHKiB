@@ -19,12 +19,12 @@ public class Player_L : MoveViaInput
         animator.SetFloat("dirY", -1);
 
 
-        AttackArray = new Attack[] {
+        /*AttackArray = new Attack[] {
             new Attack(75, 0, 10, false),
             new Attack(50, 1, 10, false),
             new Attack(25, 0, 10, false),
             new Attack(150, 1, 10, true)
-        };
+        };*/
         skill01Maxtime = GS.skillList[0].Delay;
         skill02Maxtime = GS.skillList[1].Delay;
 

@@ -19,10 +19,10 @@ public class Delta_Default_IdleState : Delta_Default_State
         base.Update();
         if (InputManager.instance.MoveInput != Vector2.zero)
         {
-            savedInput = (Vector3)moveInput;
-            if (MovepointAdjustCheck())
+            player.savedInput = (Vector3)player.moveInput;
+            if (player.MovepointAdjustCheck())
             {
-                SetDir(moveInput);
+                player.SetDir(player.moveInput);
             }
             else
             {

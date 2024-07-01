@@ -33,7 +33,7 @@ public class Attractor : MonoBehaviour
                                || Mathf.Abs(hitObjects[i].gameObject.transform.position.y - this.transform.position.y) > minAtt) // if ispoint, check minAtt
                 && hitObjects[i].gameObject.TryGetComponent(out Attractive attractive)) // can only attract attractive objs
             {
-                if ((div + attractive.attractive.Mass) * Time.deltaTime < hitObjects[i].timer)
+                if ((div + attractive.attractive.theStat.Mass) * Time.deltaTime < hitObjects[i].timer)
                 {
                     attractive.Attract(GetDir(attractive), div);
                     hitObjects[i].timer = 0;

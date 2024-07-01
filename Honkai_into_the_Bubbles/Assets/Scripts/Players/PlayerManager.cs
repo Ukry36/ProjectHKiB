@@ -46,8 +46,13 @@ public class PlayerManager : MonoBehaviour
     public int exDodgeLength = 0;
     public int exContinuousDodgeLimit = 0;
     public float exKeepDodgeSpeedCoeff = 1;
+    public float exGraffitimaxtime = 0;
 
 
+    private void Start()
+    {
+        ActivateEquippedEffect(new int[] { 0 });
+    }
 
     public void ActivateEquippedEffect(int[] _effectIDs)
     {

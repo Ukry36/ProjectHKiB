@@ -41,26 +41,26 @@ public class Delta_Default_WalkState : Delta_Default_State
             player.Mover.position = player.MovePoint.transform.position; // make position accurate
             player.MovePoint.prevPos = player.Mover.position; // used in external movepoint control
             stuckCheck = true;
-            if (moveInput == Vector2.zero)
+            if (player.moveInput == Vector2.zero)
             {
                 player.StateMachine.ChangeState(player.IdleState);
             }
             else
             {
                 // save moveinput
-                savedInput = (Vector3)moveInput;
+                player.savedInput = (Vector3)player.moveInput;
 
                 // if there is wall, exit walkin
                 // else, adjust savedInput or 
-                SetDir(savedInput);
-                if (MovepointAdjustCheck())
+                player.SetDir(player.savedInput);
+                if (player.MovepointAdjustCheck())
                 {
                     player.StateMachine.ChangeState(player.IdleState);
                 }
                 else
                 {
-                    player.MovePoint.transform.position += savedInput;
-                    SetDir(savedInput);
+                    player.MovePoint.transform.position += player.savedInput;
+                    player.SetDir(player.savedInput);
                 }
             }
         }
@@ -70,6 +70,6 @@ public class Delta_Default_WalkState : Delta_Default_State
     {
         base.Exit();
         player.Mover.position = player.MovePoint.transform.position;
-        SetDir(savedInput);
+        player.SetDir(player.savedInput);
     }
 }

@@ -16,14 +16,14 @@ public class Player_Delta : MoveViaInput
         animator.SetFloat("dirX", 0);
         animator.SetFloat("dirY", -1);
 
-
-        AttackArray = new Attack[] {
-            new Attack(100, 0, 10, false),
-            new Attack(50, 1, 10, false),
-            new Attack(100, 2, 10, false),
-            new Attack(200, 2, 10, false),
-            new Attack(300, 3, 10, true)
-        };
+        /*
+                AttackArray = new Attack[] {
+                    new Attack(100, 0, 10, false),
+                    new Attack(50, 1, 10, false),
+                    new Attack(100, 2, 10, false),
+                    new Attack(200, 2, 10, false),
+                    new Attack(300, 3, 10, true)
+                };*/
 
 
         spriteOverrideID = ID;
@@ -100,7 +100,7 @@ public class Player_Delta : MoveViaInput
     private new IEnumerator AttackCoroutine(Attack _attack)
     {
         attacking = true;
-        attack.SetAttackInfo(_attack.DamageCoefficient, _attack.CriticalRate, _attack.Strong);
+        //attack.SetAttackInfo(_attack.DamageCoefficient, _attack.CriticalRate, _attack.Strong);
 
 
         if (moveInput != Vector2.zero)

@@ -29,21 +29,26 @@ public class Delta_Default_DodgeEnterState : Delta_Default_State
             {
                 int dodgeLength = player.dodgeLength + PlayerManager.instance.exDodgeLength;
 
-                if (moveInput != Vector2.zero)
-                    savedInput = (Vector3)moveInput;
-                SetDir(savedInput);
-
-                // move to where dodgeLength reaches further (if no moveInput, dodge backward) 
-                Vector2 apv = savedInput * dodgeLength;
-
-                for (int i = 0; i < dodgeLength; i++)
+                // move to where dodgeLength reaches further
+                if (player.moveInput != Vector2.zero)
                 {
-                    if (!Physics2D.OverlapCircle(player.MovePoint.transform.position +
-                        new Vector3(apv.x - i, apv.y - i, 0f), .4f, player.wallLayer))
+                    Vector2 apv = dodgeLength * player.moveInput;
+                    for (int i = 0; i < dodgeLength; i++)
                     {
-                        player.MovePoint.transform.position += new Vector3(apv.x - i, apv.y - i, 0f)
-                            * (moveInput == Vector2.zero ? -1 : 1);
-                        break;
+                        if (!Physics2D.OverlapCircle(player.MovePoint.transform.position +
+                            new Vector3(apv.x - i * Mathf.Sign(apv.x), apv.y - i * Mathf.Sign(apv.y), 0f), .4f, player.wallLayer))
+                        {
+                            player.MovePoint.transform.position +=
+                            new Vector3(apv.x - i * Mathf.Sign(apv.x), apv.y - i * Mathf.Sign(apv.y), 0f);
+                            break;
+                        }
+                    }
+                }
+                else
+                {
+                    if (!Physics2D.OverlapCircle(player.MovePoint.transform.position - player.savedInput, .4f, player.wallLayer))
+                    {
+                        player.MovePoint.transform.position -= player.savedInput;
                     }
                 }
                 player.Mover.position = player.MovePoint.transform.position;

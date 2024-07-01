@@ -43,7 +43,7 @@ public class Attractive : MonoBehaviour
             }
 
             if (!temp)
-                StartCoroutine(AttractCoroutine(attractVector, _div + attractive.Mass));
+                StartCoroutine(AttractCoroutine(attractVector, _div + attractive.theStat.Mass));
         }
 
     }

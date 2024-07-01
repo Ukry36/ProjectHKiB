@@ -18,7 +18,7 @@ public class Delta_Default_KnockbackState : Delta_Default_State
     {
         base.Enter();
 
-        SetDir(-dir);
+        player.SetDir(-dir);
         i = 0;
     }
 

@@ -12,6 +12,7 @@ public class Delta_Default_DodgeExitState : Delta_Default_State
     public override void Enter()
     {
         base.Enter();
+        player.DodgeCooltimeManage();
     }
 
     public override void Update()
