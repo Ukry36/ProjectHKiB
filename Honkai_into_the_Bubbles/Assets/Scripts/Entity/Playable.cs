@@ -9,21 +9,14 @@ public class Playable : Entity
 {
     [HideInInspector] public int spriteOverrideID;
 
-    [HideInInspector] public bool canAttackAnim = true; // animation controls this
-    [HideInInspector] public bool recieveAttackInput = true; // animation controls this
-    [HideInInspector] public bool recieveDodgeInput = true; // exsists for cooltime
-    [HideInInspector] public bool recieveGraffitiInput = true; // exsists for cooltime
-
-
     [BoxGroup("Attack")]
-    public bool cannotAttackEffect = false; private bool CAEBoolean() { return !cannotAttackEffect; }
+    public bool cannotAttackEffect = false; private bool CAEBoolean => !cannotAttackEffect;
     [BoxGroup("Attack")]
     [ShowIf("CAEBoolean")]
     public bool isAttackEffect = false;
     [BoxGroup("Attack")]
     [ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")]
     public Attack[] AttackArray; // insert primer attacks only
-    protected int combo;
 
 
     [BoxGroup("Dodge")]
@@ -72,9 +65,6 @@ public class Playable : Entity
     [BoxGroup("Graffiti")]
     [ShowIf("canGraffitiEffect")]
     [SerializeField] protected bool endAtGraffitiStartPoint = true;
-    [BoxGroup("Graffiti")]
-    [ShowIf("canGraffitiEffect")]
-    [SerializeField] protected Transform GraffitiStartPoint;
     protected bool isGraffitiCooltime;
 
     [HideInInspector] public Vector2 moveInput;
@@ -141,7 +131,7 @@ public class Playable : Entity
         return false;
     }
 
-    public void SetDir(Vector2 _dir)
+    public void SetAnimDir(Vector2 _dir)
     {
         if (_dir.x != 0)
         {

@@ -39,6 +39,8 @@ public class PlayerManager : MonoBehaviour
 
     private Status theStat;
 
+
+    public bool isStealth = false;
     public int invincibleTimeCoeff = 1;
     public float exSpeedCoeff = 1;
     public bool forcedCanDodge = false;
@@ -174,7 +176,7 @@ public class PlayerManager : MonoBehaviour
         {
             if (_isPrime)
             {
-                theStat.isStealth = true;
+                isStealth = true;
             }
             else
             {
@@ -183,7 +185,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            theStat.isStealth = false;
+            isStealth = false;
         }
     }
 

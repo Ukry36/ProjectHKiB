@@ -57,7 +57,7 @@ public class Enemy_Spider : MoveViaAlgorithm
 
             SeeTarget(targetPos);
 
-            if (SkillArray[0].CanSkill && DetectPlayer(SkillArray[0].DetectRadius, 1))
+            if (/*SkillArray[0].CanSkill &&*/ DetectPlayer(SkillArray[0].DetectRadius, 1))
             {
                 StartCoroutine(Skill01Coroutine());
                 break;
@@ -155,7 +155,7 @@ public class Enemy_Spider : MoveViaAlgorithm
     {
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f);
 
-        explosion.SetAttackInfo(SkillArray[0].DamageCoefficient, SkillArray[0].CriticalRate, SkillArray[0].Strong);
+        explosion.SetAttackInfo(SkillArray[0].DamageCoefficient, SkillArray[0].BaseCriticalRate, SkillArray[0].Strong > 0);
 
         while (grrogying)
             yield return wait;
@@ -181,7 +181,7 @@ public class Enemy_Spider : MoveViaAlgorithm
         yield return new WaitForSeconds(SkillArray[0].Delay);
 
 
-        SkillArray[0].CanSkill = false;
+        /*SkillArray[0].CanSkill = false;*/
         animator.SetTrigger("fire");
         yield return null;
         yield return null;

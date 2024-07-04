@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class Enemy_Lightning : MoveViaAlgorithm
 {
     private WaitForSeconds wait = new WaitForSeconds(0.5f);
@@ -34,13 +34,13 @@ public class Enemy_Lightning : MoveViaAlgorithm
             new Skill(15, 0, 4, 3.5f, 0.2f, true),
             new Skill(30, 0, 8, 3f, 0.2f, false)
         }; //upper skill high priority (not nessesory just for easy recognizing)
-        */
+        
 
 
         bulletPrefab.GetComponent<AttackCollision>().
-        SetAttackInfo(SkillArray[0].DamageCoefficient, SkillArray[0].CriticalRate, SkillArray[0].Strong);
+        SetAttackInfo(SkillArray[0].DamageCoefficient, SkillArray[0].BaseCriticalRate, SkillArray[0].Strong > 0);
         trackingBulletPrefab.GetComponent<AttackCollision>().
-        SetAttackInfo(SkillArray[1].DamageCoefficient, SkillArray[1].CriticalRate, SkillArray[1].Strong);
+        SetAttackInfo(SkillArray[1].DamageCoefficient, SkillArray[1].BaseCriticalRate, SkillArray[1].Strong > 0);
 
         theState.SetHitAnimObject();
 
@@ -66,12 +66,12 @@ public class Enemy_Lightning : MoveViaAlgorithm
             yield return new WaitForSeconds(turnDelay);
 
 
-            if (SkillArray[1].CanSkill && DetectPlayer(SkillArray[1].DetectRadius, true))
+            if (DetectPlayer(SkillArray[1].DetectRadius, true))
             {
                 StartCoroutine(Skill02Coroutine());
                 break;
             }
-            else if (SkillArray[0].CanSkill && DetectPlayer(SkillArray[0].DetectRadius, true))
+            else if (DetectPlayer(SkillArray[0].DetectRadius, true))
             {
                 StartCoroutine(Skill01Coroutine());
                 break;
@@ -305,7 +305,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
         yield return new WaitForSeconds(SkillArray[0].Delay);
 
 
-        SkillArray[0].CanSkill = false;
+        //SkillArray[0].CanSkill = false;
         animator.SetTrigger("fire");
         yield return null;
 
@@ -321,7 +321,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
 
 
         yield return new WaitForSeconds(SkillArray[0].Cooltime);
-        SkillArray[0].CanSkill = true;
+        //SkillArray[0].CanSkill = true;
     }
 
 
@@ -356,7 +356,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
         yield return new WaitForSeconds(SkillArray[1].Delay);
 
 
-        SkillArray[1].CanSkill = false;
+        //SkillArray[1].CanSkill = false;
         animator.SetTrigger("fire");
         yield return null;
 
@@ -371,6 +371,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
 
 
         yield return new WaitForSeconds(SkillArray[1].Cooltime);
-        SkillArray[1].CanSkill = true;
+        //SkillArray[1].CanSkill = true;
     }
 }
+*/

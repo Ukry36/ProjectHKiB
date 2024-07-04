@@ -18,7 +18,7 @@ public class Delta_Delta_KnockbackState : Delta_Delta_State
     {
         base.Enter();
 
-        player.SetDir(-dir);
+        player.SetAnimDir(-dir);
         i = 0;
     }
 
@@ -27,7 +27,7 @@ public class Delta_Delta_KnockbackState : Delta_Delta_State
     {
         base.Update();
 
-        if (i < coeff - 1)
+        if (i < coeff)
         {
             player.Mover.position = player.MovePoint.transform.position;
 

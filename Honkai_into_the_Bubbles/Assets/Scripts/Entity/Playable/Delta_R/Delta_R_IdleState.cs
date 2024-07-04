@@ -26,7 +26,7 @@ public class Delta_R_IdleState : Delta_R_State
             player.savedInput = (Vector3)player.moveInput;
             if (player.MovepointAdjustCheck())
             {
-                player.SetDir(player.moveInput);
+                player.SetAnimDir(player.moveInput);
             }
             else
             {

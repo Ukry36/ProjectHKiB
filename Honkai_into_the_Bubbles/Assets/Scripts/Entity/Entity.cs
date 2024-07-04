@@ -16,25 +16,31 @@ public class Entity : MonoBehaviour
 
     public Transform Mover;// who moves
     public MovePoint MovePoint; // destination to move
+    public Transform GazePoint; // point to see
     public LayerMask wallLayer; // cannot walk through
+    public LayerMask NoMovepointWallLayer { get; private set; }
 
     [SerializeField] private float DefaultSpeed = 4f; // default speed
     [HideInInspector] public float MoveSpeed { get; private set; } // actual speed (movespeed = default * sprint * ex)
     public float SprintCoeff = 2f;
 
     public Status theStat { get; private set; }
-    public BoxCollider2D BoxCollider { get; private set; }
+    public PathFindManager PathFinder { get; private set; }
 
     public int InvincibleFrame = 4; // invincible for n frame after hit
     [SerializeField] private bool explodeWhenDie = false;
     [ShowIf("explodeWhenDie")][SerializeField] protected TrackingBullet explosion;
+
+    [HideInInspector] public Transform target;
 
     protected virtual void Awake()
     {
         Animator = GetComponent<Animator>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         theStat = Mover.GetComponent<Status>();
-        BoxCollider = Mover.GetComponent<BoxCollider2D>();
+        PathFinder = GetComponent<PathFindManager>();
+        MoveSpeed = DefaultSpeed;
+        NoMovepointWallLayer = wallLayer & ~(1 << LayerMask.NameToLayer("Movepoint"));
     }
 
     protected virtual void Start()
@@ -57,6 +63,15 @@ public class Entity : MonoBehaviour
         MoveSpeed = DefaultSpeed * SprintCoeff * PlayerManager.instance.exSpeedCoeff;
     }
 
+    public Vector2 SetVectorOne(Vector2 _v)
+    {
+        return new Vector2
+        (
+            _v.x == 0 ? 0 : Mathf.Sign(_v.x),
+            _v.y == 0 ? 0 : Mathf.Sign(_v.y)
+        );
+    }
+
     public virtual void Knockback(Vector3 _attackOrigin, int _coeff)
     {
         Debug.LogError("ERROR : No Knockback Function");
@@ -72,10 +87,10 @@ public class Entity : MonoBehaviour
         {
             color.a = 0;
             SpriteRenderer.color = color;
-            yield return null;
+            yield return new WaitForSeconds(0.036f);
             color.a = 1;
             SpriteRenderer.color = color;
-            yield return null;
+            yield return new WaitForSeconds(0.036f);
         }
 
         theStat.invincible = false;

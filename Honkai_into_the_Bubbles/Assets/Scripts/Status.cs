@@ -5,7 +5,6 @@ using UnityEngine;
 public class Status : MonoBehaviour
 {
     public bool isPlayer = false;
-    public bool isStealth = false;
     public bool superArmor = false; // no knockback
     public bool invincible = false; // no damage
     public int maxHP = 100;
@@ -20,6 +19,10 @@ public class Status : MonoBehaviour
     public int Mass = 0;
     [HideInInspector] public Entity entity;
 
+    private void Awake()
+    {
+        entity = GetComponentInChildren<Entity>();
+    }
 
     public void Hit(int _dmg, bool _crit, int _strong, Vector3 _attackOrigin)
     {

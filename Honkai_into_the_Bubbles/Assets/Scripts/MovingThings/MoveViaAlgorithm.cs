@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
+using Unity.VisualScripting;
 
 public abstract class MoveViaAlgorithm : MoveSprite
 {
@@ -64,7 +65,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
     // detect player if player is in specific area
     protected bool DetectPlayer(float _rad, bool _deacsth = false)
     {
-        float rad = PlayerState.isStealth && !_deacsth ? _rad / 4 : _rad;
+        float rad = PlayerManager.instance.isStealth && !_deacsth ? _rad / 4 : _rad;
 
         if (Physics2D.OverlapCircle(Mover.position, rad, playerLayer))
         {
@@ -82,7 +83,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
         else
             v = new Vector3(0, 1);
 
-        float dist = PlayerState.isStealth && !_deacsth ? _dist / 4 : _dist;
+        float dist = PlayerManager.instance.isStealth && !_deacsth ? _dist / 4 : _dist;
 
         //Debug.DrawRay(Mover.position + (Vector3)applyVector, (Vector3)applyVector * _dist, Color.red, 0.2f);
         RaycastHit2D hit = Physics2D.Raycast(Mover.position + (Vector3)applyVector, applyVector, dist, ~LayerManager.LayertoIgnore);

@@ -27,12 +27,7 @@ public class Delta_R_State
 
     public virtual void Update()
     {
-        player.moveInput = InputManager.instance.MoveInput;
-        player.moveInput = new Vector2
-        (
-            player.moveInput.x == 0 ? 0 : Mathf.Sign(player.moveInput.x),
-            player.moveInput.y == 0 ? 0 : Mathf.Sign(player.moveInput.y)
-        );
+        player.moveInput = player.SetVectorOne(InputManager.instance.MoveInput);
 
         if (InputManager.instance.SprintInput)
             player.SetSpeedSprint();

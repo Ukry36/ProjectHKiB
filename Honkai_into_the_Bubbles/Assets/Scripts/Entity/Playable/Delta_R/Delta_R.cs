@@ -19,6 +19,14 @@ public class Delta_R : Playable
     public Delta_R_Skill01State Skill01State { get; private set; }
     public Delta_R_Skill02State Skill02State { get; private set; }
 
+
+    public int repeatSkill03;
+    public GameObject SAPrefab;
+    public GameObject SAPrefabDiag;
+    public GameObject SAPrefabfor03;
+    public GameObject SAPrefabfor03Diag;
+    public GameObject AttractorPrefab;
+
     protected override void Awake()
     {
         base.Awake();

@@ -29,10 +29,11 @@ public class Delta_L_WalkState : Delta_L_State
         {
             if (stuckCheck)
             {
-                if (Physics2D.OverlapCircle(player.MovePoint.transform.position, 0.1f, player.wallLayer))
-                    player.MovePoint.transform.position = player.MovePoint.prevPos;
-                stuckCheck = false; //Debug.Log("stuckCheck");
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(player.MovePoint.transform.position, 0.1f, player.NoMovepointWallLayer);
+                if (colliders != null && colliders.Length > 0)
+                { player.MovePoint.transform.position = player.MovePoint.prevPos; Debug.Log("stuck"); }
             }
+            stuckCheck = false;
 
             player.Mover.position = Vector3.MoveTowards
             (
@@ -57,7 +58,7 @@ public class Delta_L_WalkState : Delta_L_State
 
                 // if there is wall, exit walkin
                 // else, adjust savedInput or 
-                player.SetDir(player.savedInput);
+                player.SetAnimDir(player.savedInput);
                 if (player.MovepointAdjustCheck())
                 {
                     player.StateMachine.ChangeState(player.IdleState);
@@ -65,7 +66,7 @@ public class Delta_L_WalkState : Delta_L_State
                 else
                 {
                     player.MovePoint.transform.position += player.savedInput;
-                    player.SetDir(player.savedInput);
+                    player.SetAnimDir(player.savedInput);
                 }
             }
         }
@@ -75,6 +76,6 @@ public class Delta_L_WalkState : Delta_L_State
     {
         base.Exit();
         player.Mover.position = player.MovePoint.transform.position;
-        player.SetDir(player.savedInput);
+        player.SetAnimDir(player.savedInput);
     }
 }

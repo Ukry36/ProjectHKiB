@@ -70,7 +70,7 @@ public class Delta_L_DodgeIngState : Delta_L_State
     public override void Exit()
     {
         base.Exit();
-        player.SetDir(player.savedInput);
+        player.SetAnimDir(player.savedInput);
         player.theStat.superArmor = false;
     }
 }

@@ -15,7 +15,7 @@ public class Delta_R_BasicAttackState : Delta_R_State
     {
         base.Enter();
         player.Animator.SetInteger("Combo", combo);
-        player.SetDir(player.savedInput);
+        player.SetAnimDir(player.savedInput);
         if (player.moveInput != Vector2.zero)
         {
             player.savedInput = player.moveInput;

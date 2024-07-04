@@ -7,16 +7,10 @@ public class Attack : MonoBehaviour
     public Status theStat;
     public LayerMask damageLayer;
     public int DamageCoefficient; // Coefficient of atk
-    public int TrackingRadius; // teleport in front of enemy on tracking area
     public int BaseCriticalRate; // possibility of critical
     public int GraffitiPoint; // amount of GraffitiPoint to obtain
     public int Strong; // cause hit motion
-    private BoxCollider2D boxCollider2D;
-
-    private void Awake()
-    {
-        boxCollider2D = GetComponent<BoxCollider2D>();
-    }
+    public int TrackingRadius; // teleport in front of enemy on tracking area
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {

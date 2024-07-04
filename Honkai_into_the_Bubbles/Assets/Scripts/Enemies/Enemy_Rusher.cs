@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class Enemy_Rusher : MoveViaAlgorithm
 {
     private bool backStep;
@@ -24,7 +24,7 @@ public class Enemy_Rusher : MoveViaAlgorithm
             new Skill(35, 1, 4, 3f, 0.3f, true),
             new Skill(35, 1, 2, 3f, 0.2f, false)
             }; //upper skill high priority (not nessesory just for easy recognizing)
-        */
+        
 
         theState.SetHitAnimObject();
         StartCoroutine(NormalBehaviourCoroutine());
@@ -266,3 +266,4 @@ public class Enemy_Rusher : MoveViaAlgorithm
         SkillArray[1].CanSkill = true;
     }
 }
+*/

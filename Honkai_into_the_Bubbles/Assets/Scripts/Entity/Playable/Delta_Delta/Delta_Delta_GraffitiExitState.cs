@@ -28,7 +28,7 @@ public class Delta_Delta_GraffitiExitState : Delta_Delta_State
     public override void Exit()
     {
         base.Exit();
-        player.SetDir(player.moveInput);
+        player.SetAnimDir(player.moveInput);
         player.SkillManage(graffitirResult);
         player.StartCoroutine(player.GraffitiCooltime());
     }

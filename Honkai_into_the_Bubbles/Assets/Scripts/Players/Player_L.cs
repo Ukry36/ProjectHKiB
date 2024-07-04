@@ -110,7 +110,7 @@ public class Player_L : MoveViaInput
 
     private IEnumerator Skill01Coroutine(Skill _skill)
     {
-        attack.SetAttackInfo(_skill.DamageCoefficient, _skill.CriticalRate, _skill.Strong);
+        attack.SetAttackInfo(_skill.DamageCoefficient, _skill.BaseCriticalRate, _skill.Strong > 0);
         float MT = skill01Maxtime;
         defaultSpeed /= 2;
         animator.SetBool("skill01", true);
@@ -131,7 +131,7 @@ public class Player_L : MoveViaInput
 
     private IEnumerator Skill02Coroutine(Skill _skill)
     {
-        attack.SetAttackInfo(_skill.DamageCoefficient, _skill.CriticalRate, _skill.Strong);
+        attack.SetAttackInfo(_skill.DamageCoefficient, _skill.BaseCriticalRate, _skill.Strong > 0);
         animator.SetBool("skill02", true);
         boxCollider.enabled = false;
         attacking = true;
