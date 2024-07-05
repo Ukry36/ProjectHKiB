@@ -72,6 +72,34 @@ public class Entity : MonoBehaviour
         );
     }
 
+    public Vector2 GazePointToDir4() =>
+    Mathf.RoundToInt(Mathf.Atan2(Mover.position.y - GazePoint.position.y, Mover.position.x - GazePoint.position.x) * 2 / Mathf.PI) switch
+    {
+        -2 => new Vector2(1, 0),
+        -1 => new Vector2(0, 1),
+        0 => new Vector2(-1, 0),
+        1 => new Vector2(0, -1),
+        2 => new Vector2(1, 0),
+        _ => Vector2.zero
+    };
+
+
+    public Vector2 GazePointToDir8() =>
+    Mathf.RoundToInt(Mathf.Atan2(Mover.position.y - GazePoint.position.y, Mover.position.x - GazePoint.position.x) * 8 / Mathf.PI) switch
+    {
+        -4 => new Vector2(1, 0),
+        -3 => new Vector2(1, 1),
+        -2 => new Vector2(0, 1),
+        -1 => new Vector2(-1, 1),
+        0 => new Vector2(-1, 0),
+        1 => new Vector2(-1, -1),
+        2 => new Vector2(0, -1),
+        3 => new Vector2(1, -1),
+        4 => new Vector2(1, 0),
+        _ => Vector2.zero
+    };
+
+
     public virtual void Knockback(Vector3 _attackOrigin, int _coeff)
     {
         Debug.LogError("ERROR : No Knockback Function");

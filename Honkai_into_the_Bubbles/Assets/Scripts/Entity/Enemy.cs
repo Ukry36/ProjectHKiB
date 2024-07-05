@@ -24,6 +24,8 @@ public class Enemy : Entity
     [BoxGroup("Move Algorythm")]
     public float followRadius = 8;
     [BoxGroup("Move Algorythm")]
+    public float backstepRadius = 4;
+    [BoxGroup("Move Algorythm")]
     public bool randomMove = true; private bool RMBoolean() => !randomMove;
     [BoxGroup("Move Algorythm")]
     [ShowIf("RMBoolean")]
@@ -37,6 +39,11 @@ public class Enemy : Entity
 
     [HideInInspector] public int strictMoveProcess = 0;
     [HideInInspector] public bool isDetectCooltime;
+    public float detectCooltime = 1f;
+
+    [HideInInspector] public bool isTurnCooltime;
+    public float turnCooltime = 1f;
+
 
     protected override void Awake()
     {
@@ -56,24 +63,6 @@ public class Enemy : Entity
             moveDir.y = Mathf.Sign(Random.Range(-1f, 1f));
     }
 
-    public IEnumerator SeeGazePoint(float _turnDelay = 0)
-    {
-        Vector3 dir = new();
-        yield return new WaitForSeconds(_turnDelay);
-        if (Mathf.Abs(Mover.position.x - GazePoint.position.x) >= Mathf.Abs(Mover.position.y - GazePoint.position.y))
-        {
-            dir.y = 0f;
-            dir.x = Mover.position.x < GazePoint.position.x ? 1f : -1f;
-        }
-        else
-        {
-            dir.x = 0f;
-            dir.y = Mover.position.y < GazePoint.position.y ? 1f : -1f;
-        }
-        SetAnimDir(dir);
-    }
-
-
     // detect player if player is in specific area
     public Collider2D[] AreaDetectTarget(float _rad, bool _ignoreStealth = false)
     {
@@ -83,29 +72,25 @@ public class Enemy : Entity
     }
 
 
-    public Collider2D LineDetectTarget(float _dist, int _maxErr, bool _ignoreStealth = false)
+    public Collider2D LineDetectTarget(Vector2 _dir, float _dist, int _maxErr, bool _ignoreStealth = false)
     {
-        Vector3 v = moveDir.x == 0 ? Vector3.right : Vector3.up;
-        /*if (dir.x == 0)
-            v = new Vector3(1, 0);
-        else
-            v = new Vector3(0, 1);*/
+        Vector3 v = _dir.x == 0 ? Vector3.right : Vector3.up;
 
         float dist = PlayerManager.instance.isStealth && !_ignoreStealth ? _dist / 4 : _dist;
 
-        //Debug.DrawRay(Mover.position + moveDir, moveDir * _dist, Color.red, 0.2f);
-        RaycastHit2D hit = Physics2D.Raycast(Mover.position + moveDir, moveDir, dist, ~LayerManager.LayertoIgnore);
+        Debug.DrawRay(Mover.position + (Vector3)_dir, _dir * _dist, Color.red, 0.2f);
+        RaycastHit2D hit = Physics2D.Raycast(Mover.position + (Vector3)_dir, _dir, dist, ~LayerManager.LayertoIgnore);
         if (hit.collider != null && (targetLayer & (1 << hit.collider.gameObject.layer)) != 0)
         {
             return hit.collider;
         }
 
-        for (int i = 1; i < _maxErr + 1; i++)
+        for (int i = 1; i < _maxErr * 2 + 1; i++)
         {
             for (int j = -1; j <= 1; j += 2)
             {
-                //Debug.DrawRay(Mover.position + i * j * v, moveDir * _dist, Color.red, 0.2f);
-                hit = Physics2D.Raycast(Mover.position + i * j * v, moveDir, dist, ~LayerManager.LayertoIgnore);
+                Debug.DrawRay(Mover.position + i * j * v * 0.5f, _dir * _dist, Color.red, 0.2f);
+                hit = Physics2D.Raycast(Mover.position + i * j * v, _dir, dist, ~LayerManager.LayertoIgnore);
                 if (hit.collider != null && (targetLayer & (1 << hit.collider.gameObject.layer)) != 0)
                 {
                     return hit.collider;
@@ -115,6 +100,13 @@ public class Enemy : Entity
         return null;
     }
 
+    public IEnumerator DetectCooltime()
+    {
+        isDetectCooltime = true;
+        yield return new WaitForSeconds(detectCooltime);
+        isDetectCooltime = false;
+    }
+
     public void SelectNearestTarget(Collider2D[] _colliders)
     {
         target = _colliders[0].transform;
@@ -122,6 +114,19 @@ public class Enemy : Entity
         {
             if (Vector3.Distance(_colliders[i].transform.position, Mover.position)
               < Vector3.Distance(target.position, Mover.position))
+            {
+                target = _colliders[i].transform;
+            }
+        }
+    }
+
+    public void SelectFarthestTarget(Collider2D[] _colliders)
+    {
+        target = _colliders[0].transform;
+        for (int i = 0; i < _colliders.Length; i++)
+        {
+            if (Vector3.Distance(_colliders[i].transform.position, Mover.position)
+              > Vector3.Distance(target.position, Mover.position))
             {
                 target = _colliders[i].transform;
             }
@@ -163,7 +168,7 @@ public class Enemy : Entity
     }
 
     // check wall and adjust position of movepoint
-    public bool MovepointAdjustCheck()
+    public virtual bool MovepointAdjustCheck()
     {
         Vector3 DirX = new(moveDir.x, 0, 0);
         Vector3 DirY = new(0, moveDir.y, 0);
@@ -232,11 +237,11 @@ public class Enemy : Entity
         TinkerAudioSource.Play();
     }
 
-    public IEnumerator DetectCooltime()
+    public IEnumerator TurnCooltime()
     {
-        isDetectCooltime = true;
-        yield return new WaitForSeconds(1);
-        isDetectCooltime = false;
+        isTurnCooltime = true;
+        yield return new WaitForSeconds(turnCooltime);
+        yield return null;
+        isTurnCooltime = false;
     }
-
 }

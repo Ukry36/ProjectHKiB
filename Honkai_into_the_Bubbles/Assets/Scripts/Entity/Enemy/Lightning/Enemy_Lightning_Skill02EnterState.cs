@@ -13,16 +13,6 @@ public class Enemy_Lightning_Skill02EnterState : Enemy_Lightning_State
     public override void Enter()
     {
         base.Enter();
-        if (enemy.SetPath() < 2)
-        {
-            enemy.StateMachine.ChangeState(enemy.IdleState);
-        }
-        enemy.Track(enemy.SkillArray[1]);
-        enemy.GazePoint.position = enemy.target.position;
-        enemy.moveDir = enemy.SetVectorOne(enemy.GazePoint.position - enemy.Mover.position);
-        if (enemy.moveDir.x != 0)
-            enemy.moveDir.y = 0;
-        enemy.SetAnimDir(enemy.moveDir);
         tinkerTimer = enemy.SkillArray[1].animationPlayTime - enemy.SkillArray[1].Delay;
         stateTimer = enemy.SkillArray[1].animationPlayTime;
     }

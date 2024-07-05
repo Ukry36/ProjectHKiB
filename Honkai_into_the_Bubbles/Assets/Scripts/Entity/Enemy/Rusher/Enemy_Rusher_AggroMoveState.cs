@@ -57,7 +57,7 @@ public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
                 }
                 else
                 {
-                    if (enemy.LineDetectTarget(enemy.SkillArray[0].DetectRadius, 1, true) != null && !enemy.SkillArray[0].isCooltime)
+                    if (enemy.LineDetectTarget(enemy.GazePointToDir4(), enemy.SkillArray[0].DetectRadius, 1, true) != null && !enemy.SkillArray[0].isCooltime)
                     {
                         enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
                     }
@@ -72,7 +72,7 @@ public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
                         else
                         {
                             enemy.GazePoint.position = enemy.target.position;
-                            enemy.StartCoroutine(enemy.SeeGazePoint());
+                            enemy.SetAnimDir(enemy.GazePointToDir4());
                             enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
 
                             if (!enemy.MovepointAdjustCheck())

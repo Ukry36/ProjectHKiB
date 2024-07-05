@@ -25,9 +25,9 @@ public class Enemy_Lightning_AggroMoveState : Enemy_Lightning_State
         {
             if (stuckCheck)
             {
-                colliders = Physics2D.OverlapCircleAll(enemy.MovePoint.transform.position, 0.1f, enemy.NoMovepointWallLayer);
-                if (colliders != null && colliders.Length > 0)
-                { enemy.MovePoint.transform.position = enemy.MovePoint.prevPos; Debug.Log("stuck"); }
+                //colliders = Physics2D.OverlapCircleAll(enemy.MovePoint.transform.position, 0.1f, enemy.NoMovepointWallLayer);
+                //if (colliders != null && colliders.Length > 0)
+                //{ enemy.MovePoint.transform.position = enemy.MovePoint.prevPos; Debug.Log("stuck"); }
             }
             stuckCheck = false;
 
@@ -43,45 +43,24 @@ public class Enemy_Lightning_AggroMoveState : Enemy_Lightning_State
             enemy.Mover.position = enemy.MovePoint.transform.position; // make position accurate
             enemy.MovePoint.prevPos = enemy.Mover.position; // used in external movepoint control
             stuckCheck = true;
-            colliders = enemy.AreaDetectTarget(enemy.endFollowRadius);
+            colliders = enemy.AreaDetectTarget(enemy.backstepRadius);
+            enemy.GazePoint.position = enemy.target.position;
+            enemy.moveDir = -enemy.GazePointToDir4();
+            enemy.SetAnimDir(-enemy.moveDir);
             if (colliders == null || colliders.Length <= 0)
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                enemy.StateMachine.ChangeState(enemy.AggroIdleState);
             }
             else
             {
-                enemy.SelectNearestTarget(colliders);
-                if (enemy.SetPath() < 2)
+                colliders = new Collider2D[] { enemy.LineDetectTarget(enemy.GazePointToDir4(), enemy.SkillArray[0].DetectRadius, 1) };
+                if (colliders[0] != null && !enemy.SkillArray[0].isCooltime)
                 {
-                    enemy.StateMachine.ChangeState(enemy.IdleState);
+                    enemy.SelectNearestTarget(colliders);
+                    enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
                 }
-                else
-                {
-                    if (enemy.LineDetectTarget(enemy.SkillArray[0].DetectRadius, 1, true) != null && !enemy.SkillArray[0].isCooltime)
-                    {
-                        enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
-                    }
-                    else
-                    {
-                        colliders = enemy.AreaDetectTarget(enemy.SkillArray[1].DetectRadius, true);
-                        if (colliders != null && colliders.Length > 0 && !enemy.SkillArray[1].isCooltime)
-                        {
-                            enemy.SelectNearestTarget(colliders);
-                            enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
-                        }
-                        else
-                        {
-                            enemy.GazePoint.position = enemy.target.position;
-                            enemy.StartCoroutine(enemy.SeeGazePoint());
-                            enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
-
-                            if (!enemy.MovepointAdjustCheck())
-                            {
-                                enemy.MovePoint.transform.position += enemy.moveDir;
-                            }
-                        }
-                    }
-                }
+                else if (!enemy.MovepointAdjustCheck())
+                    enemy.MovePoint.transform.position += enemy.moveDir;
             }
         }
     }

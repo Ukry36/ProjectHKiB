@@ -18,7 +18,7 @@ public class Enemy_Lightning_PathfindMoveState : Enemy_Lightning_State
     {
         base.Enter();
         SMN = enemy.StrictMoveNodes[enemy.strictMoveProcess % enemy.StrictMoveNodes.Count];
-        enemy.GazePoint = SMN.node;
+        enemy.GazePoint.position = SMN.node.position;
         enemy.target = SMN.node;
     }
 
@@ -29,9 +29,9 @@ public class Enemy_Lightning_PathfindMoveState : Enemy_Lightning_State
         {
             if (stuckCheck)
             {
-                colliders = Physics2D.OverlapCircleAll(enemy.MovePoint.transform.position, 0.1f, enemy.NoMovepointWallLayer);
-                if (colliders != null && colliders.Length > 0)
-                { enemy.MovePoint.transform.position = enemy.MovePoint.prevPos; Debug.Log("stuck"); }
+                //colliders = Physics2D.OverlapCircleAll(enemy.MovePoint.transform.position, 0.1f, enemy.NoMovepointWallLayer);
+                //if (colliders != null && colliders.Length > 0)
+                //{ enemy.MovePoint.transform.position = enemy.MovePoint.prevPos; Debug.Log("stuck"); }
             }
             stuckCheck = false;
 
@@ -51,7 +51,7 @@ public class Enemy_Lightning_PathfindMoveState : Enemy_Lightning_State
 
             if (colliders != null && colliders.Length > 0)
             {
-                enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+                enemy.StateMachine.ChangeState(enemy.AggroIdleState);
             }
             else if (Vector3.Distance(enemy.Mover.position, SMN.node.position) >= .05f)
             {
@@ -63,9 +63,8 @@ public class Enemy_Lightning_PathfindMoveState : Enemy_Lightning_State
                 {
                     enemy.moveDir = enemy.SetVectorOne(new Vector2(enemy.PathList[1].x, enemy.PathList[1].y));
 
-                    if (enemy.MovepointAdjustCheck()) enemy.SetPath();
-
-                    else enemy.MovePoint.transform.position += enemy.moveDir;
+                    if (!enemy.MovepointAdjustCheck())
+                        enemy.MovePoint.transform.position += enemy.moveDir;
                 }
             }
             else

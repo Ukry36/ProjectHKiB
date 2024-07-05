@@ -22,7 +22,7 @@ public class Enemy_Lightning_State
     public virtual void Enter()
     {
         enemy.Animator.SetBool(animBoolName, true);
-        enemy.StopCoroutine(enemy.SeeGazePoint());
+        enemy.isTurnCooltime = false;
         triggerCalled = false;
     }
 

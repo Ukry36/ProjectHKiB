@@ -18,7 +18,7 @@ public class Enemy_Rusher_PathfindMoveState : Enemy_Rusher_State
     {
         base.Enter();
         SMN = enemy.StrictMoveNodes[enemy.strictMoveProcess % enemy.StrictMoveNodes.Count];
-        enemy.GazePoint = SMN.node;
+        enemy.GazePoint.position = SMN.node.position;
         enemy.target = SMN.node;
     }
 
@@ -63,9 +63,8 @@ public class Enemy_Rusher_PathfindMoveState : Enemy_Rusher_State
                 {
                     enemy.moveDir = enemy.SetVectorOne(new Vector2(enemy.PathList[1].x, enemy.PathList[1].y));
 
-                    if (enemy.MovepointAdjustCheck()) enemy.SetPath();
-
-                    else enemy.MovePoint.transform.position += enemy.moveDir;
+                    if (!enemy.MovepointAdjustCheck())
+                        enemy.MovePoint.transform.position += enemy.moveDir;
                 }
             }
             else

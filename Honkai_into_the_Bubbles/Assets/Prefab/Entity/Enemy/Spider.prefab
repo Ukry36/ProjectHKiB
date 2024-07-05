@@ -207,7 +207,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  isStealth: 0
+  superArmor: 0
+  invincible: 0
   maxHP: 200
   currentHP: 200
   maxGP: 20
@@ -216,7 +217,8 @@ MonoBehaviour:
   DEF: 0
   CritRate: 0
   CritDMG: 0
-  moveSprite: {fileID: 0}
+  Mass: 0
+  entity: {fileID: 0}
 --- !u!61 &9128113644672191067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -397,12 +399,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56cd1b95cc835f9489eae78e1d990132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 1984
-  Mover: {fileID: 5788489842607426844}
-  movePoint: {fileID: 0}
-  mass: 0
 --- !u!1 &8726325901392311059
 GameObject:
   m_ObjectHideFlags: 0
@@ -416,7 +412,6 @@ GameObject:
   - component: {fileID: 6769507034136816711}
   - component: {fileID: 3396699944727692339}
   - component: {fileID: 2548029205717885608}
-  - component: {fileID: 3978602508737461231}
   - component: {fileID: 3675722811665815878}
   - component: {fileID: 2539010948495519690}
   - component: {fileID: 4941530918008330189}
@@ -550,61 +545,6 @@ MonoBehaviour:
   m_labelHash: 1.5971899e-14
   m_SpriteKey: 0
   m_SpriteHash: 949844836
---- !u!114 &3978602508737461231
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8726325901392311059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244eecd8557c7914baa1d1f89ee8de7f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ID: 30002
-  characterName: Spider
-  themeColor1: {r: 0.9960785, g: 0.95294124, b: 0.95294124, a: 0}
-  themeColor2: {r: 0.43529415, g: 0.6, b: 0.9960785, a: 0}
-  boxCollider: {fileID: 9128113644672191067}
-  wallLayer:
-    serializedVersion: 2
-    m_Bits: 9152
-  defaultSpeed: 2
-  Mover: {fileID: 5788489842607426844}
-  movePoint: {fileID: 430409143555020799}
-  freeze: 0
-  grrogyCoefficient: 3
-  animator: {fileID: 0}
-  spriteLibrary: {fileID: 3396699944727692339}
-  explodeWhenDie: 1
-  explosion: {fileID: 3837521601141706526}
-  randomMove: 1
-  doAttack: 1
-  NormalMoveDelay: 1
-  AggroMoveDelay: 0
-  turnDelay: 0
-  attackAnimDelay: 0.5
-  followRadius: 12
-  endFollowRadius: 14
-  attack: {fileID: 8963865225943438932}
-  beforeAttackEffectPrefab: {fileID: 5571567845738202018, guid: 5b1c81279139df947b804d6471d5879b, type: 3}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 128
-  SkillArray:
-  - DamageCoefficient: 100
-    TrackingRadius: 0
-    DetectRadius: 10
-    CriticalRate: 0
-    Strong: 1
-    Cooltime: 1
-    CanSkill: 1
-    Delay: 0.3
-    skillCommand: []
-    GP: 0
-  theState: {fileID: 2998789880383365441}
-  TinkerAudioSource: {fileID: 4941530918008330189}
 --- !u!114 &3675722811665815878
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -631,7 +571,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41837a7c731d414faa6c85b9a9cc864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theState: {fileID: 0}
+  theStat: {fileID: 0}
+  allowDiagonal: 0
   dontCrossCorner: 1
   wallLayer:
     serializedVersion: 2
@@ -842,17 +783,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
   m_PrefabInstance: {fileID: 426022195655957928}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &3837521601141706526 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3506075942620615350, guid: 891864adca7add241832b5a77adc9c82, type: 3}
-  m_PrefabInstance: {fileID: 426022195655957928}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b4b234944d104074680e8597ddfa7450, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &5909727876360395680
 PrefabInstance:
   m_ObjectHideFlags: 0

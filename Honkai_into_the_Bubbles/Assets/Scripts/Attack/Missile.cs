@@ -2,59 +2,46 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TrackingBullet : AttackCollision
+public class Missile : Skill
 {
     public LayerMask destroyLayer;
-    [HideInInspector] public Transform targetPos;
+    public Transform targetPos;
+    [SerializeField] private Vector3 moveWay = new(0, 24f, 0); // because its images direction could be wrong
     [SerializeField] private float maxTurnSpeed = 1000f;
     [SerializeField] private float turnAcceleration = 40f;
-    [SerializeField] private Vector3 moveWay = new(0, 24f, 0);
     [SerializeField] private float lastTime = 5f;
     [SerializeField] private float activateColliderLength = 0.5f;
-    private Vector3 vectorToTarget;
+    [SerializeField] private BoxCollider2D boxCollider2D;
     private float time = 0;
+    private Vector3 vectorToTarget;
     private float turnSpeed = 0;
 
-    private void Awake()
-    {
-        boxCollider2D = GetComponent<BoxCollider2D>();
-        prevPos = this.transform.position;
-    }
 
     private void OnEnable()
     {
-        if (targetPos != null)
-            boxCollider2D.enabled = false;
-        StartCoroutine(FireCoroutine());
+        time = lastTime;
+        this.transform.position = Vector3.zero;
     }
 
-    IEnumerator FireCoroutine()
+    private void Update()
     {
-        while (true)
+        if (targetPos != null)
         {
-            yield return null;
+            vectorToTarget = targetPos.position - this.transform.position;
 
-            if (targetPos != null)
-            {
-                vectorToTarget = targetPos.position - this.transform.position;
+            if (Vector3.Distance(this.transform.position, targetPos.position) <= activateColliderLength)
+                boxCollider2D.enabled = true;
 
-                if (Vector3.Distance(this.transform.position, targetPos.position) <= activateColliderLength)
-                    boxCollider2D.enabled = true;
-
-                if (turnSpeed < maxTurnSpeed)
-                    turnSpeed += turnAcceleration;
-                LookAt(turnSpeed);
-            }
-
-            prevPos = this.transform.position;
-            for (int i = 0; i < 3; i++)
-                this.transform.Translate(moveWay * Time.deltaTime / 3);
-
-            if (time > lastTime)
-                Destroy(this.gameObject);
-
-            time += Time.deltaTime;
+            turnSpeed += turnSpeed < maxTurnSpeed ? turnAcceleration : 0;
+            LookAt(turnSpeed);
         }
+
+        this.transform.Translate(moveWay * Time.deltaTime);
+
+        if (time > lastTime)
+            Destroy(this.gameObject);
+
+        time += Time.deltaTime;
     }
 
     private void LookAt(float _speed)

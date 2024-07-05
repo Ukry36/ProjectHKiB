@@ -13,6 +13,7 @@ public class Enemy_Lightning : Enemy
     public Enemy_Lightning_DirMoveState DirMoveState { get; private set; }
     public Enemy_Lightning_PathfindIdleState PFIdleState { get; private set; }
     public Enemy_Lightning_PathfindMoveState PFMoveState { get; private set; }
+    public Enemy_Lightning_AggroIdleState AggroIdleState { get; private set; }
     public Enemy_Lightning_AggroMoveState AggroMoveState { get; private set; }
     public Enemy_Lightning_KnockbackState KnockbackState { get; private set; }
     public Enemy_Lightning_Skill01EnterState Skill01EnterState { get; private set; }
@@ -32,6 +33,7 @@ public class Enemy_Lightning : Enemy
         DirMoveState = new Enemy_Lightning_DirMoveState(this, StateMachine, "Walk");
         PFIdleState = new Enemy_Lightning_PathfindIdleState(this, StateMachine, "Idle");
         PFMoveState = new Enemy_Lightning_PathfindMoveState(this, StateMachine, "Walk");
+        AggroIdleState = new Enemy_Lightning_AggroIdleState(this, StateMachine, "Idle");
         AggroMoveState = new Enemy_Lightning_AggroMoveState(this, StateMachine, "Walk");
         KnockbackState = new Enemy_Lightning_KnockbackState(this, StateMachine, "Knockback");
         Skill01EnterState = new Enemy_Lightning_Skill01EnterState(this, StateMachine, "Skill01Enter");
@@ -78,6 +80,34 @@ public class Enemy_Lightning : Enemy
         KnockbackState.dir = GrrogyDir;
         KnockbackState.coeff = _coeff;
         StateMachine.ChangeState(KnockbackState);
+    }
+
+    public override bool MovepointAdjustCheck()
+    {
+        Vector3 DirX = new(moveDir.x, 0, 0);
+        Vector3 DirY = new(0, moveDir.y, 0);
+
+        if (moveDir.x == 0 || moveDir.y == 0)
+        {
+            if (Physics2D.OverlapCircle(MovePoint.transform.position + moveDir * 1.5f, .4f, wallLayer))
+                return true;
+        }
+        else // moveInput.x != 0 && moveInput.y != 0
+        {
+            if (Physics2D.OverlapCircle(MovePoint.transform.position + DirX * 1.5f, .4f, wallLayer))
+                moveDir.x = 0;
+
+            if (Physics2D.OverlapCircle(MovePoint.transform.position + DirY * 1.5f, .4f, wallLayer))
+                moveDir.y = 0;
+
+            if (moveDir == Vector3.zero)
+                return true;
+
+            if (moveDir.x != 0 && moveDir.y != 0)
+                if (Physics2D.OverlapCircle(MovePoint.transform.position + moveDir * 1.5f, .4f, wallLayer))
+                    MovePoint.transform.position -= DirY;
+        }
+        return false;
     }
 
     public IEnumerator Skill01Cooltime()

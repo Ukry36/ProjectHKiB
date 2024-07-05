@@ -12,13 +12,6 @@ public class Enemy_Lightning_Skill01State : Enemy_Lightning_State
     public override void Enter()
     {
         base.Enter();
-        for (int i = 0; i < 3; i++)
-            if (!enemy.MovepointAdjustCheck())
-            {
-                enemy.MovePoint.transform.position += enemy.moveDir;
-                enemy.Mover.position = enemy.MovePoint.transform.position;
-            }
-            else break;
 
     }
 

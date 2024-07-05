@@ -33,19 +33,19 @@ public class Enemy_Lightning_KnockbackState : Enemy_Lightning_State
 
             if (dir.x == 0 || dir.y == 0)
             {
-                if (Physics2D.OverlapCircle(enemy.MovePoint.transform.position + new Vector3(dir.x, dir.y, 0), .4f, enemy.wallLayer))
+                if (Physics2D.OverlapCircle(enemy.MovePoint.transform.position + new Vector3(dir.x, dir.y, 0) * 1.5f, .4f, enemy.wallLayer))
                     dir = Vector3.zero;
             }
             else
             {
-                if (Physics2D.OverlapCircle(enemy.MovePoint.transform.position + new Vector3(dir.x, 0, 0), .4f, enemy.wallLayer))
+                if (Physics2D.OverlapCircle(enemy.MovePoint.transform.position + new Vector3(dir.x, 0, 0) * 1.5f, .4f, enemy.wallLayer))
                 {
                     dir.x = 0;
                     enemy.Animator.SetFloat("dirX", 0);
                     enemy.Animator.SetFloat("dirY", -dir.y);
                 }
 
-                if (Physics2D.OverlapCircle(enemy.MovePoint.transform.position + new Vector3(0, dir.y, 0), .4f, enemy.wallLayer))
+                if (Physics2D.OverlapCircle(enemy.MovePoint.transform.position + new Vector3(0, dir.y, 0) * 1.5f, .4f, enemy.wallLayer))
                     dir.y = 0;
             }
 

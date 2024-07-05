@@ -26,12 +26,11 @@ public class Enemy_Rusher_RandomIdleState : Enemy_Rusher_State
         {
             colliders = enemy.AreaDetectTarget(enemy.followRadius);
             enemy.StartCoroutine(enemy.DetectCooltime());
-        }
-
-        if (colliders != null && colliders.Length > 0)
-        {
-            colliders = null;
-            enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+            if (colliders != null && colliders.Length > 0)
+            {
+                colliders = null;
+                enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+            }
         }
         else if (stateTimer < 0)
         {

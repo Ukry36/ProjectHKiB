@@ -19,7 +19,7 @@ public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
         base.Enter();
         enemy.SetMoveDirRandom();
         enemy.SetAnimDir(enemy.moveDir);
-        movementMultiplyer = (int)Random.Range(1f, 4.5f);
+        movementMultiplyer = (int)Random.Range(1f, 3f);
     }
 
     public override void Update()
@@ -29,9 +29,9 @@ public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
         {
             if (stuckCheck)
             {
-                colliders = Physics2D.OverlapCircleAll(enemy.MovePoint.transform.position, 0.1f, enemy.NoMovepointWallLayer);
-                if (colliders != null && colliders.Length > 0)
-                { enemy.MovePoint.transform.position = enemy.MovePoint.prevPos; Debug.Log("stuck"); }
+                //colliders = Physics2D.OverlapCircleAll(enemy.MovePoint.transform.position, 0.1f, enemy.NoMovepointWallLayer);
+                //if (colliders != null && colliders.Length > 0)
+                //{ enemy.MovePoint.transform.position = enemy.MovePoint.prevPos; Debug.Log("stuck"); }
             }
             stuckCheck = false;
 
@@ -51,7 +51,7 @@ public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
 
             if (colliders != null && colliders.Length > 0)
             {
-                enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+                enemy.StateMachine.ChangeState(enemy.AggroIdleState);
             }
             else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheck())
             {

@@ -98,6 +98,18 @@ public class Delta_R : Playable
             }
     }
 
+    public override void SkillManage(int _skillNum)
+    {
+        base.SkillManage(_skillNum);
+
+        // change state to skill01state or else acc to _skillnum
+        // 0 : skill01, 1 : skill02 ...  -1 fail
+        // if (StateMachine.currentState == Skill01State) ~~ (X) (idlestate로 돌아오기 때문에 사용할 수 없음)
+        // skill01의 enter에서 skill01ing 
+        // 이전 스크립트 (Player_R.cs)에 있는 걸 각 skill01, 02state에 옮기고
+        // 어떨 때 발동하는지를 여기서 결정 
+    }
+
     public override void Knockback(Vector3 _attackOrigin, int _coeff)
     {
         Vector3 GrrogyDir = this.transform.position - _attackOrigin;
