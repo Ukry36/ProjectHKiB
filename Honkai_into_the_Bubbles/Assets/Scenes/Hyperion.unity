@@ -11294,9 +11294,9 @@ MonoBehaviour:
   activatedTileList: []
   attractive: {fileID: 1551463721}
   skillList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1469339223}
+  - {fileID: 635470372}
+  - {fileID: 515387870}
   WallForGraffitiLayer:
     serializedVersion: 2
     m_Bits: 4096
@@ -11352,11 +11352,6 @@ MonoBehaviour:
   graffitiMaxtime: 1
   graffitiCooltime: 0.3
   endAtGraffitiStartPoint: 1
-  SkillArray:
-  - {fileID: 1469339223}
-  - {fileID: 635470372}
-  - {fileID: 515387870}
-  - {fileID: 2060774048}
   moveInput: {x: 0, y: 0}
   savedInput: {x: 0, y: 0, z: 0}
   repeatSkill03: 0
@@ -11813,7 +11808,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6124633340371042755, guid: 3cac521cf672ca243803268f70eeb252, type: 3}
       propertyPath: m_Name
-      value: R-SADefault
+      value: R-SA0103
       objectReference: {fileID: 0}
     - target: {fileID: 6124633340371042755, guid: 3cac521cf672ca243803268f70eeb252, type: 3}
       propertyPath: m_IsActive
@@ -27520,7 +27515,6 @@ MonoBehaviour:
   graffitiMaxtime: 1
   graffitiCooltime: 0.3
   endAtGraffitiStartPoint: 1
-  SkillArray: []
   moveInput: {x: 0, y: 0}
   savedInput: {x: 0, y: 0, z: 0}
 --- !u!4 &1265181894 stripped
@@ -58681,7 +58675,6 @@ MonoBehaviour:
   graffitiMaxtime: 1
   graffitiCooltime: 0.3
   endAtGraffitiStartPoint: 1
-  SkillArray: []
   moveInput: {x: 0, y: 0}
   savedInput: {x: 0, y: 0, z: 0}
 --- !u!4 &1587943743 stripped
@@ -64122,7 +64115,6 @@ MonoBehaviour:
   graffitiMaxtime: 1.5
   graffitiCooltime: 0.3
   endAtGraffitiStartPoint: 1
-  SkillArray: []
   moveInput: {x: 0, y: 0}
   savedInput: {x: 0, y: 0, z: 0}
 --- !u!4 &1842943008 stripped
@@ -65872,7 +65864,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6124633340371042755, guid: 3cac521cf672ca243803268f70eeb252, type: 3}
       propertyPath: m_Name
-      value: R-SADefaultDIAG
+      value: R-SA0103DIAG
       objectReference: {fileID: 0}
     - target: {fileID: 6124633340371042755, guid: 3cac521cf672ca243803268f70eeb252, type: 3}
       propertyPath: m_IsActive
@@ -69375,7 +69367,6 @@ MonoBehaviour:
   graffitiMaxtime: 1.5
   graffitiCooltime: 0.3
   endAtGraffitiStartPoint: 1
-  SkillArray: []
   moveInput: {x: 0, y: 0}
   savedInput: {x: 0, y: 0, z: 0}
 --- !u!1 &2011219062

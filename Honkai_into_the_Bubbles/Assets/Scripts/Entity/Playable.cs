@@ -67,8 +67,6 @@ public class Playable : Entity
     [SerializeField] protected bool endAtGraffitiStartPoint = true;
     protected bool isGraffitiCooltime;
 
-    public Skill[] SkillArray;
-
     [HideInInspector] public Vector2 moveInput;
     [HideInInspector] public Vector3 savedInput;
 

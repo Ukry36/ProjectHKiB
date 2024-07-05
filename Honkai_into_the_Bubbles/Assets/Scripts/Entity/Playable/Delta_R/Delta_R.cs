@@ -21,10 +21,10 @@ public class Delta_R : Playable
 
 
     public int repeatSkill03;
-    public GameObject SAPrefab;
-    public GameObject SAPrefabDiag;
-    public GameObject SAPrefabfor03;
-    public GameObject SAPrefabfor03Diag;
+    public GameObject SAPrefabfor0301;
+    public GameObject SAPrefabfor0301Diag;
+    public GameObject SAPrefabfor03only;
+    public GameObject SAPrefabfor03onlyDiag;
     public GameObject AttractorPrefab;
 
     protected override void Awake()
@@ -102,12 +102,48 @@ public class Delta_R : Playable
     {
         base.SkillManage(_skillNum);
 
-        // change state to skill01state or else acc to _skillnum
-        // 0 : skill01, 1 : skill02 ...  -1 fail
-        // if (StateMachine.currentState == Skill01State) ~~ (X) (idlestate로 돌아오기 때문에 사용할 수 없음)
-        // skill01의 enter에서 skill01ing 
         // 이전 스크립트 (Player_R.cs)에 있는 걸 각 skill01, 02state에 옮기고
         // 어떨 때 발동하는지를 여기서 결정 
+
+        // _skillnum = 0 : skill01, 1 : skill02 ...  -1 : fail
+
+        // if (StateMachine.currentState == Skill01State) ~~ (X) (graffiti가 끝나면 idlestate로 돌아오기에 사용할 수 없음)
+        // 떄문에 다른 방식으로 (ex: 새로운 bool 변수로 조절) 확인해야함
+
+        // 회의중엔 playable 스크립트에 skillArray를 만들었었는데 그렇게 할 것이 아니라 
+        // GraffitiSystem(GS) 에 있는 skillList를 사용할 것입니다.
+        // skill정보는 GS.skillList[~~] 하는 식으로 받으면 됩니다.
+
+
+
+        // ----- skill 정보 ----- //
+
+        // skill01 : 일반 회오리공격 
+        // animator에서 회오리공격 하는 animation 재생
+        // 해당 애니메이션에서 skill01오브젝트를 activate/deactivate하며 대미지 줌
+        // skill01state에선 statetimer를 지속 시간으로 설정해서 지속시간이 끝나면 (statetimer<0)
+        // player.StateMachine.ChangeState(player.IdleState)
+        // 만약 지속시간이 끝나기 전에 InputManager.instance.AttackInput을 받으면 기본공격 4격으로 이동 
+
+        // skill02 : skill01중 발동시 
+        // theStat.GPControl(GS.skillList[1].GraffitiPoint);
+        // 그리고 skill01 지속시간 초기화 및 지속시간 증가 
+        // skill01이 아닐 땐 GPControl만 일어남
+        // (skill02state로 굳이 전환할 필요 없이 여기서 처리하면 좋을 것 같습니다.)
+        // (결론적으로 skill02State 스크립트는 사용하지 않을 것 같으니 삭제해도 좋을 듯 합니다.)
+
+        // skill03 : 일반적으론 combo3의 일반공격이 나오며 그 마지막에 칼날 프리팹 날리기
+        // (AttackState에서 처리해도 될 것 같습니다)
+        // skill01중 발동시 8방으로 날리는 것이 지속.
+        // (skill01state에서 같이 처리하면 편할 듯 합니다)
+
+
+        // skill마다 커맨드(바닥에 그리는 모양)이 있는데 그건 엑셀 파일 말고 영상을 참고해서 해주세요
+        // 스킬 커맨드 설정은 R오브젝트에 붙어있는 GraffitiSystem에 있습니다.
+
+        // 중요한 건 Player_R.cs에 이미 코루틴으로 구현된 걸 각 스킬의 state나 여기로 옮기는 것!!
+        // 영상에선 어떻게 작동하는지 확인하시고 코드는 Player_R.cs를 참고하시면 될 것 같습니다!
+
     }
 
     public override void Knockback(Vector3 _attackOrigin, int _coeff)
