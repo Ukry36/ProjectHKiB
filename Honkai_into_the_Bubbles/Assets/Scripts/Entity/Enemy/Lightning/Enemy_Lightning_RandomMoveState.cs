@@ -17,7 +17,7 @@ public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
     public override void Enter()
     {
         base.Enter();
-        enemy.SetMoveDirRandom();
+        enemy.SetMoveDirRandom4();
         enemy.SetAnimDir(enemy.moveDir);
         movementMultiplyer = (int)Random.Range(1f, 3f);
     }

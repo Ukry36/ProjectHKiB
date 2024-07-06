@@ -15,7 +15,7 @@ public class Enemy_Rusher_RandomIdleState : Enemy_Rusher_State
         base.Enter();
         enemy.strictMoveProcess++;
         stateTimer = Random.Range(0.5f, 3f);
-        enemy.SetMoveDirRandom();
+        enemy.SetMoveDirRandom8();
         enemy.SetAnimDir(enemy.moveDir);
     }
 

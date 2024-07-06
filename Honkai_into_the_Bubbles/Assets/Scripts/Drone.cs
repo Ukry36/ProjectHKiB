@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class Drone : MoveViaAlgorithm
 {
-    private WaitForSeconds wait = new WaitForSeconds(0.5f);
+    private WaitForSeconds wait = new(0.5f);
 
     [SerializeField] private GameObject bulletPrefab;
 

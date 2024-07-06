@@ -1,11 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
-using UnityEngine.U2D.Animation;
 using System.Collections;
-using Unity.VisualScripting;
-using UnityEditor.ShaderGraph.Internal;
-
 
 public class Enemy : Entity
 {
@@ -51,16 +47,16 @@ public class Enemy : Entity
 
     }
 
-    public void SetMoveDirRandom()
+    public void SetMoveDirRandom4()
     {
-        if (Random.Range(-1f, 1f) > 0)
-            moveDir.x = 0;
-        else
-            moveDir.x = Mathf.Sign(Random.Range(-1f, 1f));
-        if (Random.Range(-1f, 1f) > 0)
-            moveDir.y = 0;
-        else
-            moveDir.y = Mathf.Sign(Random.Range(-1f, 1f));
+        GazePoint.position = new(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+        moveDir = GazePointToDir4();
+    }
+
+    public void SetMoveDirRandom8()
+    {
+        GazePoint.position = new(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+        moveDir = GazePointToDir8();
     }
 
     // detect player if player is in specific area

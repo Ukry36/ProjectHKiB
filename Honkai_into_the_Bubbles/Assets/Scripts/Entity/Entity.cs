@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.U2D.Animation;
 using NaughtyAttributes;
 using System.Collections.Generic;
+using System;
 
 public class Entity : MonoBehaviour
 {
@@ -28,8 +29,6 @@ public class Entity : MonoBehaviour
     public PathFindManager PathFinder { get; private set; }
 
     public int InvincibleFrame = 4; // invincible for n frame after hit
-    [SerializeField] private bool explodeWhenDie = false;
-    [ShowIf("explodeWhenDie")][SerializeField] protected TrackingBullet explosion;
 
     [HideInInspector] public Transform target;
 
@@ -99,6 +98,11 @@ public class Entity : MonoBehaviour
         _ => Vector2.zero
     };
 
+    protected Vector3 GetRandomPos(Vector3 _origin, int _range) => new
+    (
+        Mathf.RoundToInt(_origin.x + UnityEngine.Random.Range(-_range / 2, _range / 2)),
+        Mathf.RoundToInt(_origin.y + UnityEngine.Random.Range(-_range / 2, _range / 2))
+    );
 
     public virtual void Knockback(Vector3 _attackOrigin, int _coeff)
     {
@@ -124,13 +128,8 @@ public class Entity : MonoBehaviour
         theStat.invincible = false;
     }
 
-    public void Die()
+    public virtual void Die()
     {
-        if (explodeWhenDie)
-        {
-            explosion.transform.parent = null;
-            explosion.gameObject.SetActive(true);
-        }
         Destroy(MovePoint.gameObject);
         Destroy(Mover.gameObject);
     }

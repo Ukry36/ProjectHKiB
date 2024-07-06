@@ -28,7 +28,7 @@ public class DBManager : MonoBehaviour
     public string[] switch_name;
     public bool[] switches;
 
-    public List<Item> itemList = new List<Item>();
+    public List<Item> itemList = new();
 
     private Status thePStat;
     public GameObject FloatingText_PreFab;

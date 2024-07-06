@@ -19,7 +19,7 @@ public abstract class MoveViaInput : MoveSprite
     [SerializeField] protected Attack[] AttackArray;
     [BoxGroup("Attack")]
     [ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")]
-    [SerializeField] protected AttackCollision attack;
+    [SerializeField] protected Attack attack;
     protected int combo;
 
 

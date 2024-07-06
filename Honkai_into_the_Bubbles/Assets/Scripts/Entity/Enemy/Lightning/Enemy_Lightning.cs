@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using Unity.Mathematics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Enemy_Lightning : Enemy
@@ -20,6 +21,38 @@ public class Enemy_Lightning : Enemy
     public Enemy_Lightning_Skill01State Skill01State { get; private set; }
     public Enemy_Lightning_Skill02EnterState Skill02EnterState { get; private set; }
     public Enemy_Lightning_Skill02State Skill02State { get; private set; }
+
+    public GameObject[] Bullet01;
+    public Missile Bullet02;
+    public GameObject targetPrefab;
+
+    private readonly Vector3[][] Ofsets = new Vector3[][]
+    {
+        new Vector3[]
+        {
+            new(1.2f, 0.9f, 0), new(-1.2f, 0.9f, 0),
+            new(0.8f, 0.95f, 0), new(-0.8f, 0.95f, 0),
+            new(1f, 0.35f, 0), new(-1f, 0.35f, 0)
+        },
+        new Vector3[]
+        {
+            new(0, 1.9f, 0), new(0, -0.1f, 0),
+            new(0, 1.6f, 0), new(0, 0.4f, 0),
+            new(0, 1.6f, 0), new(0, -0.2f, 0)
+        },
+        new Vector3[]
+        {
+            new(1.2f, 1.4f, 0), new(-1.2f, 1.4f, 0),
+            new(0.8f, 1.25f, 0), new(-0.8f, 1.25f, 0),
+            new(1f, 1f, 0), new(-1f, 1f, 0)
+        },
+        new Vector3[]
+        {
+            new(0, 1.9f, 0), new(0, -0.1f, 0),
+            new(0, 1.6f, 0), new(0, 0.4f, 0),
+            new(0, 1.6f, 0), new(0, -0.2f, 0)
+        }
+    };
 
     protected override void Awake()
     {
@@ -108,6 +141,88 @@ public class Enemy_Lightning : Enemy
                     MovePoint.transform.position -= DirY;
         }
         return false;
+    }
+
+    public void ShootBullet01(Vector2 _dir)
+    {
+        if (_dir.y < 0) // D
+        {
+            var clone = Instantiate(Bullet01[0], transform.position, Quaternion.identity);
+            clone.SetActive(true);
+            clone = Instantiate(Bullet01[1], transform.position, Quaternion.identity);
+            clone.SetActive(true);
+        }
+        else if (_dir.x > 0) // R
+        {
+            var clone = Instantiate(Bullet01[2], transform.position, Quaternion.identity);
+            clone.SetActive(true);
+            clone = Instantiate(Bullet01[3], transform.position, Quaternion.identity);
+            clone.SetActive(true);
+        }
+        else if (_dir.y > 0) // U
+        {
+            var clone = Instantiate(Bullet01[4], transform.position, Quaternion.identity);
+            clone.SetActive(true);
+            clone = Instantiate(Bullet01[5], transform.position, Quaternion.identity);
+            clone.SetActive(true);
+        }
+        else if (_dir.x < 0) // L
+        {
+            var clone = Instantiate(Bullet01[6], transform.position, Quaternion.identity);
+            clone.SetActive(true);
+            clone = Instantiate(Bullet01[7], transform.position, Quaternion.identity);
+            clone.SetActive(true);
+        }
+    }
+
+
+    private void FireMissile(Vector2 _dir, int _muzzle)
+    {
+        quaternion dir = quaternion.identity;
+        Vector3 ofs1 = Vector3.zero;
+        Vector3 ofs2 = Vector3.zero;
+
+        if (_dir.y < 0) // D
+        {
+            dir = Quaternion.Euler(0, 0, 180);
+            ofs1 = Ofsets[0][_muzzle * 2];
+            ofs2 = Ofsets[0][_muzzle * 2 + 1];
+        }
+        else if (_dir.x > 0) // R
+        {
+            dir = Quaternion.Euler(0, 0, -70);
+            ofs1 = Ofsets[1][_muzzle * 2];
+            ofs2 = Ofsets[1][_muzzle * 2 + 1];
+        }
+        else if (_dir.y > 0) // U
+        {
+            dir = Quaternion.identity;
+            ofs1 = Ofsets[2][_muzzle * 2];
+            ofs2 = Ofsets[2][_muzzle * 2 + 1];
+        }
+        else if (_dir.x < 0) // L
+        {
+            dir = Quaternion.Euler(0, 0, 70);
+            ofs1 = Ofsets[3][_muzzle * 2];
+            ofs2 = Ofsets[3][_muzzle * 2 + 1];
+        }
+
+        Bullet02.targetPos = Instantiate(targetPrefab, GetRandomPos(GazePoint.transform.position, 5), Quaternion.identity).transform;
+        var clone = Instantiate(Bullet02.gameObject, Mover.transform.position + ofs1, dir);
+        clone.SetActive(true);
+
+        Bullet02.targetPos = Instantiate(targetPrefab, GetRandomPos(GazePoint.transform.position, 5), Quaternion.identity).transform;
+        clone = Instantiate(Bullet02.gameObject, Mover.transform.position + ofs2, dir);
+        clone.SetActive(true);
+    }
+
+    public IEnumerator ShootBullet02(Vector2 _dir)
+    {
+        for (int i = 0; i < 6; i++)
+        {
+            yield return new WaitForSeconds(0.2f);
+            FireMissile(_dir, i % 3);
+        }
     }
 
     public IEnumerator Skill01Cooltime()

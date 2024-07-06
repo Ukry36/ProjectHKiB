@@ -19,9 +19,7 @@ public class Enemy_Rusher_Skill01EnterState : Enemy_Rusher_State
         }
         enemy.Track(enemy.SkillArray[0]);
         enemy.GazePoint.position = enemy.target.position;
-        enemy.moveDir = enemy.SetVectorOne(enemy.GazePoint.position - enemy.Mover.position);
-        if (enemy.moveDir.x != 0)
-            enemy.moveDir.y = 0;
+        enemy.moveDir = enemy.GazePointToDir4();
         enemy.SetAnimDir(enemy.moveDir);
         tinkerTimer = enemy.SkillArray[0].animationPlayTime - enemy.SkillArray[0].Delay;
         stateTimer = enemy.SkillArray[0].animationPlayTime;

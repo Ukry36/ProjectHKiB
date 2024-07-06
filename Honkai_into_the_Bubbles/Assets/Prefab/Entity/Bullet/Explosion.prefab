@@ -174,7 +174,48 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 2509111255547910230, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
+    - {fileID: 3844136346590863844, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 5840633595945955985, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7161726838403867820}
   m_SourcePrefab: {fileID: 100100000, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
+--- !u!1 &6124633340371042755 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5840633595945955985, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
+  m_PrefabInstance: {fileID: 428133187907400530}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7161726838403867820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6124633340371042755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theStat: {fileID: 0}
+  damageLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  DamageCoefficient: 100
+  BaseCriticalRate: 0
+  GraffitiPoint: 0
+  Strong: 0
+  TrackingRadius: 0
+  DetectRadius: 0
+  Cooltime: 0
+  Delay: 0
+  animationPlayTime: 0
+  skillCommand: []
+  isCooltime: 0
+  destroyLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  moveWay: {x: 0, y: 0, z: 0}
+  lastTime: 0.01

@@ -44,15 +44,15 @@ public class Enemy_Lightning_AggroMoveState : Enemy_Lightning_State
             enemy.MovePoint.prevPos = enemy.Mover.position; // used in external movepoint control
             stuckCheck = true;
             colliders = enemy.AreaDetectTarget(enemy.backstepRadius);
-            enemy.GazePoint.position = enemy.target.position;
-            enemy.moveDir = -enemy.GazePointToDir4();
-            enemy.SetAnimDir(-enemy.moveDir);
             if (colliders == null || colliders.Length <= 0)
             {
                 enemy.StateMachine.ChangeState(enemy.AggroIdleState);
             }
             else
             {
+                enemy.GazePoint.position = enemy.target.position;
+                enemy.moveDir = -enemy.GazePointToDir4();
+                enemy.SetAnimDir(-enemy.moveDir);
                 colliders = new Collider2D[] { enemy.LineDetectTarget(enemy.GazePointToDir4(), enemy.SkillArray[0].DetectRadius, 1) };
                 if (colliders[0] != null && !enemy.SkillArray[0].isCooltime)
                 {

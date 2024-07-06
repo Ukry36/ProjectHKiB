@@ -19,8 +19,8 @@ public class Missile : Skill
 
     private void OnEnable()
     {
+        boxCollider2D.enabled = false;
         time = lastTime;
-        this.transform.position = Vector3.zero;
     }
 
     private void Update()
@@ -38,10 +38,10 @@ public class Missile : Skill
 
         this.transform.Translate(moveWay * Time.deltaTime);
 
-        if (time > lastTime)
+        if (time < 0)
             Destroy(this.gameObject);
 
-        time += Time.deltaTime;
+        time -= Time.deltaTime;
     }
 
     private void LookAt(float _speed)

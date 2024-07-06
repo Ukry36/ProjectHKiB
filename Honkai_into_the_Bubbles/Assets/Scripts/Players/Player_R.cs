@@ -35,16 +35,16 @@ public class Player_R : MoveViaInput
             new Attack(50, 1, 10, false),
             new Attack(175, 0, 10, true)
         };*/
-
-        SAPrefab.GetComponent<AttackCollision>().
-        SetAttackInfo(GS.skillList[2].DamageCoefficient, GS.skillList[2].BaseCriticalRate, GS.skillList[2].Strong > 0);
-        SAPrefabDiag.GetComponent<AttackCollision>().
-        SetAttackInfo(GS.skillList[2].DamageCoefficient, GS.skillList[2].BaseCriticalRate, GS.skillList[2].Strong > 0);
-        SAPrefabfor03.GetComponent<AttackCollision>().
-        SetAttackInfo(GS.skillList[2].DamageCoefficient * 5, GS.skillList[2].BaseCriticalRate, GS.skillList[2].Strong > 0);
-        SAPrefabfor03Diag.GetComponent<AttackCollision>().
-        SetAttackInfo(GS.skillList[2].DamageCoefficient * 5, GS.skillList[2].BaseCriticalRate, GS.skillList[2].Strong > 0);
-
+        /*
+                SAPrefab.GetComponent<AttackCollision>().
+                SetAttackInfo(GS.skillList[2].DamageCoefficient, GS.skillList[2].BaseCriticalRate, GS.skillList[2].Strong > 0);
+                SAPrefabDiag.GetComponent<AttackCollision>().
+                SetAttackInfo(GS.skillList[2].DamageCoefficient, GS.skillList[2].BaseCriticalRate, GS.skillList[2].Strong > 0);
+                SAPrefabfor03.GetComponent<AttackCollision>().
+                SetAttackInfo(GS.skillList[2].DamageCoefficient * 5, GS.skillList[2].BaseCriticalRate, GS.skillList[2].Strong > 0);
+                SAPrefabfor03Diag.GetComponent<AttackCollision>().
+                SetAttackInfo(GS.skillList[2].DamageCoefficient * 5, GS.skillList[2].BaseCriticalRate, GS.skillList[2].Strong > 0);
+        */
         spriteOverrideID = ID;
     }
 
@@ -175,7 +175,7 @@ public class Player_R : MoveViaInput
     private IEnumerator Skill01Coroutine(Skill _skill)
     {
         AttractorPrefab.SetActive(true);
-        attack.SetAttackInfo(_skill.DamageCoefficient, _skill.BaseCriticalRate, _skill.Strong > 0);
+        //attack.SetAttackInfo(_skill.DamageCoefficient, _skill.BaseCriticalRate, _skill.Strong > 0);
         defaultSpeed /= 2;
         animator.SetBool("skill", true);
         while (!dodgeInput && lastedTime <= _skill.Cooltime)

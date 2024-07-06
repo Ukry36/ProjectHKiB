@@ -68,12 +68,12 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField]
     public Sound[] sounds;
-    
+
     void Start()
     {
-        for (int i=0; i<sounds.Length; i++)
+        for (int i = 0; i < sounds.Length; i++)
         {
-            GameObject soundObject = new GameObject("Sound file name : " + i +"=" + sounds[i].name);
+            GameObject soundObject = new("Sound file name : " + i + "=" + sounds[i].name);
             sounds[i].SetSource(soundObject.AddComponent<AudioSource>());
             soundObject.transform.SetParent(this.transform);
         }
@@ -81,9 +81,9 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string _name)
     {
-        for(int i=0; i<sounds.Length; i++)
+        for (int i = 0; i < sounds.Length; i++)
         {
-            if(_name == sounds[i].name)
+            if (_name == sounds[i].name)
             {
                 sounds[i].Play();
                 return;
@@ -93,9 +93,9 @@ public class AudioManager : MonoBehaviour
 
     public void Stop(string _name)
     {
-        for(int i=0; i<sounds.Length; i++)
+        for (int i = 0; i < sounds.Length; i++)
         {
-            if(_name == sounds[i].name)
+            if (_name == sounds[i].name)
             {
                 sounds[i].Stop();
                 return;
@@ -105,9 +105,9 @@ public class AudioManager : MonoBehaviour
 
     public void EnLoop(string _name)
     {
-        for(int i=0; i<sounds.Length; i++)
+        for (int i = 0; i < sounds.Length; i++)
         {
-            if(_name == sounds[i].name)
+            if (_name == sounds[i].name)
             {
                 sounds[i].EnLoop();
                 return;
@@ -117,9 +117,9 @@ public class AudioManager : MonoBehaviour
 
     public void DisLoop(string _name)
     {
-        for(int i=0; i<sounds.Length; i++)
+        for (int i = 0; i < sounds.Length; i++)
         {
-            if(_name == sounds[i].name)
+            if (_name == sounds[i].name)
             {
                 sounds[i].DisLoop();
                 return;
@@ -129,9 +129,9 @@ public class AudioManager : MonoBehaviour
 
     public void SetVolume(string _name, float _Volume)
     {
-        for(int i=0; i<sounds.Length; i++)
+        for (int i = 0; i < sounds.Length; i++)
         {
-            if(_name == sounds[i].name)
+            if (_name == sounds[i].name)
             {
                 sounds[i].volume = _Volume;
                 sounds[i].SetVolume();
@@ -140,5 +140,5 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    
+
 }

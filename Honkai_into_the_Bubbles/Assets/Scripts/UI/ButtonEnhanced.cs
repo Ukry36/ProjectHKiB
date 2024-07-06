@@ -7,29 +7,29 @@ using UnityEngine.Serialization;
 namespace UnityEngine.UI
 {
     [AddComponentMenu("UI/ButtonEnhanced")]
-    public class ButtonEnhanced : 
+    public class ButtonEnhanced :
     Selectable, IPointerEnterHandler, ISelectHandler, IPointerClickHandler, ISubmitHandler, IPointerExitHandler, IDeselectHandler
     {
         [Serializable]
-        public class ButtonSelectedEvent : UnityEvent {}
+        public class ButtonSelectedEvent : UnityEvent { }
         [FormerlySerializedAs("onSelect")]
         [SerializeField]
-        private ButtonSelectedEvent m_onSelect = new ButtonSelectedEvent();
+        private ButtonSelectedEvent m_onSelect = new();
 
         [Serializable]
-        public class ButtonClickedEvent : UnityEvent {}
+        public class ButtonClickedEvent : UnityEvent { }
         [FormerlySerializedAs("onClick")]
         [SerializeField]
-        private ButtonClickedEvent m_OnClick = new ButtonClickedEvent();
+        private ButtonClickedEvent m_OnClick = new();
 
         [Serializable]
-        public class ButtonDeselectedEvent : UnityEvent {}
+        public class ButtonDeselectedEvent : UnityEvent { }
         [FormerlySerializedAs("onDeselect")]
         [SerializeField]
-        private ButtonDeselectedEvent m_onDeselect = new ButtonDeselectedEvent();
+        private ButtonDeselectedEvent m_onDeselect = new();
 
         protected ButtonEnhanced()
-        {}
+        { }
 
         public ButtonSelectedEvent onSelect
         {

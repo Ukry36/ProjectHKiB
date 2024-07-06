@@ -573,8 +573,8 @@ MonoBehaviour:
   strictMoveProcess: 0
   isDetectCooltime: 0
   detectCooltime: 1
-  isTurnDelay: 0
-  turnDelay: 0
+  isTurnCooltime: 0
+  turnCooltime: 1
 --- !u!114 &5990756363727143722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -759,7 +759,7 @@ MonoBehaviour:
   invincible: 0
   maxHP: 200
   currentHP: 200
-  maxGP: 20
+  maxGP: 0
   currentGP: 0
   ATK: 100
   DEF: 0

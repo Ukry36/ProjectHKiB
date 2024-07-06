@@ -17,7 +17,7 @@ public class Enemy_Rusher_RandomMoveState : Enemy_Rusher_State
     public override void Enter()
     {
         base.Enter();
-        enemy.SetMoveDirRandom();
+        enemy.SetMoveDirRandom8();
         enemy.SetAnimDir(enemy.moveDir);
         movementMultiplyer = (int)Random.Range(1f, 4.5f);
     }

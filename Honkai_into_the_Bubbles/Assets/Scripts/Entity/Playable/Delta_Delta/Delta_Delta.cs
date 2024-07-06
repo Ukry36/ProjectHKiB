@@ -19,6 +19,8 @@ public class Delta_Delta : Playable
     public Delta_Delta_Skill01State Skill01State { get; private set; }
     public Delta_Delta_Skill02State Skill02State { get; private set; }
 
+    public bool startAtCombo3;
+
     protected override void Awake()
     {
         base.Awake();
@@ -58,6 +60,11 @@ public class Delta_Delta : Playable
             && StateMachine.currentState != GraffitiEnterState
             && StateMachine.currentState != GraffitiExitState)
             {
+                if (AttackState.combo == 3 || AttackState.combo == 4
+                    || AttackExitState.combo == 3 || AttackExitState.combo == 4)
+                {
+                    startAtCombo3 = true;
+                }
                 dodgeSprite.color = PlayerManager.instance.ThemeColors
                 [
                     totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count

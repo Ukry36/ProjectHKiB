@@ -31,7 +31,7 @@ public class MoveSprite : MonoBehaviour
     [SerializeField] protected SpriteLibrary spriteLibrary;
 
     [SerializeField] protected bool explodeWhenDie = false;
-    [ShowIf("explodeWhenDie")][SerializeField] protected TrackingBullet explosion;
+    [ShowIf("explodeWhenDie")][SerializeField] protected Bullet explosion;
 
 
 

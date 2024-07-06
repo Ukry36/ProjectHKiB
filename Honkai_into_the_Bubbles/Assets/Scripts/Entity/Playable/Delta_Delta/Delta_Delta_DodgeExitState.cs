@@ -18,8 +18,14 @@ public class Delta_Delta_DodgeExitState : Delta_Delta_State
     public override void Update()
     {
         base.Update();
-        if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        if (player.startAtCombo3 && InputManager.instance.AttackInput)
         {
+            player.AttackState.combo = 2;
+            player.StateMachine.ChangeState(player.AttackState);
+        }
+        else if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        {
+            player.startAtCombo3 = false;
             player.StateMachine.ChangeState(player.IdleState);
         }
     }

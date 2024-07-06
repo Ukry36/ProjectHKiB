@@ -13,6 +13,8 @@ public class Enemy_Lightning_Skill02EnterState : Enemy_Lightning_State
     public override void Enter()
     {
         base.Enter();
+        enemy.GazePoint.position = enemy.target.position;
+        enemy.SetAnimDir(enemy.GazePointToDir4());
         tinkerTimer = enemy.SkillArray[1].animationPlayTime - enemy.SkillArray[1].Delay;
         stateTimer = enemy.SkillArray[1].animationPlayTime;
     }

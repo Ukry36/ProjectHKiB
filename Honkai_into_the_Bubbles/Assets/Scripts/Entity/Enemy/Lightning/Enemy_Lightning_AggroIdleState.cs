@@ -25,7 +25,7 @@ public class Enemy_Lightning_AggroIdleState : Enemy_Lightning_State
             enemy.StartCoroutine(enemy.DetectCooltime());
 
             colliders = enemy.AreaDetectTarget(enemy.endFollowRadius);
-            if (colliders == null && colliders.Length <= 0)
+            if (colliders == null || colliders.Length <= 0)
             {
                 enemy.StateMachine.ChangeState(enemy.IdleState);
             }

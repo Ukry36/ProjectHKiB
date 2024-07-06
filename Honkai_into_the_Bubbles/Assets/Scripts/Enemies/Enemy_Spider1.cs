@@ -1,10 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+/*
 public class Enemy_Spider : MoveViaAlgorithm
 {
-    private WaitForSeconds wait = new WaitForSeconds(0.5f);
+    private WaitForSeconds wait = new(0.5f);
 
 
     // Start is called before the first frame update
@@ -22,7 +22,7 @@ public class Enemy_Spider : MoveViaAlgorithm
         SkillArray = new Skill[] {
             new Skill(0, 1, 3, 3f, 0.3f, true)
         }; //upper skill high priority (not nessesory just for easy recognizing)
-        */
+        *//*
 
         theState.SetHitAnimObject();
         StartCoroutine(NormalBehaviourCoroutine());
@@ -57,7 +57,7 @@ public class Enemy_Spider : MoveViaAlgorithm
 
             SeeTarget(targetPos);
 
-            if (/*SkillArray[0].CanSkill &&*/ DetectPlayer(SkillArray[0].DetectRadius, 1))
+            if ( DetectPlayer(SkillArray[0].DetectRadius, 1))
             {
                 StartCoroutine(Skill01Coroutine());
                 break;
@@ -181,7 +181,6 @@ public class Enemy_Spider : MoveViaAlgorithm
         yield return new WaitForSeconds(SkillArray[0].Delay);
 
 
-        /*SkillArray[0].CanSkill = false;*/
         animator.SetTrigger("fire");
         yield return null;
         yield return null;
@@ -199,3 +198,4 @@ public class Enemy_Spider : MoveViaAlgorithm
 
 
 }
+*/

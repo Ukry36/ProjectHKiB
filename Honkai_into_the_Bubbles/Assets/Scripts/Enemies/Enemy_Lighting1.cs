@@ -2,10 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 /*
-public class Enemy_Lightning : MoveViaAlgorithm
+public class Enemy_Lightning1 : MoveViaAlgorithm
 {
-    private WaitForSeconds wait = new WaitForSeconds(0.5f);
-    private Vector3 tinkerOffset = new Vector3(0, .5f, 0);
+    private WaitForSeconds wait = new(0.5f);
+    private Vector3 tinkerOffset = new(0, .5f, 0);
     [SerializeField] private GameObject trackingBulletPrefab;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private GameObject targetPrefab;
@@ -34,7 +34,7 @@ public class Enemy_Lightning : MoveViaAlgorithm
             new Skill(15, 0, 4, 3.5f, 0.2f, true),
             new Skill(30, 0, 8, 3f, 0.2f, false)
         }; //upper skill high priority (not nessesory just for easy recognizing)
-        
+        *//*
 
 
         bulletPrefab.GetComponent<AttackCollision>().

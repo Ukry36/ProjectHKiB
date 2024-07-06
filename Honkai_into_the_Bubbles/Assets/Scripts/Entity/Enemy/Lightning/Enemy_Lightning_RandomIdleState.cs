@@ -15,7 +15,7 @@ public class Enemy_Lightning_RandomIdleState : Enemy_Lightning_State
         base.Enter();
         enemy.strictMoveProcess++;
         stateTimer = Random.Range(0.5f, 3f);
-        enemy.SetMoveDirRandom();
+        enemy.SetMoveDirRandom4();
         enemy.SetAnimDir(enemy.moveDir);
     }
 

@@ -19,7 +19,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
     [ShowIf("doAttack")]
     [SerializeField] protected int endFollowRadius = 7; // if player is out of this area, Normal sequence starts
     [ShowIf("doAttack")]
-    [SerializeField] protected AttackCollision attack; // yo
+    [SerializeField] protected Attack attack; // yo
     [ShowIf("doAttack")]
     [SerializeField] protected GameObject beforeAttackEffectPrefab; // twinkle
     [SerializeField] protected LayerMask playerLayer; // UWU

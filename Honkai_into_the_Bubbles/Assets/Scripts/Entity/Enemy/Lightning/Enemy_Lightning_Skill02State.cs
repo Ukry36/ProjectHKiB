@@ -12,6 +12,7 @@ public class Enemy_Lightning_Skill02State : Enemy_Lightning_State
     public override void Enter()
     {
         base.Enter();
+        enemy.StartCoroutine(enemy.ShootBullet02(enemy.GazePointToDir4()));
     }
 
     public override void Update()

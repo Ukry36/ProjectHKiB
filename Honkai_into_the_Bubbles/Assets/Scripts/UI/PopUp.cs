@@ -21,8 +21,8 @@ public class PopUp : MonoBehaviour
     private bool keyInput;
     private bool result;
 
-    private Color selected = new Color(1, 1, 1, 1);
-    private Color deselected = new Color(1, 1, 1, 0.6f);
+    private Color selected = new(1, 1, 1, 1);
+    private Color deselected = new(1, 1, 1, 0.6f);
     // Start is called before the first frame update
     void Start()
     {
@@ -67,11 +67,11 @@ public class PopUp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(keyInput)
+        if (keyInput)
         {
-            if(Input.GetKeyDown(KeyCode.RightArrow))
+            if (Input.GetKeyDown(KeyCode.RightArrow))
             {
-                result =  true;
+                result = true;
                 Select();
             }
             else if (Input.GetKeyDown(KeyCode.LeftArrow))
@@ -85,7 +85,7 @@ public class PopUp : MonoBehaviour
                 keyInput = false;
                 activated = false;
             }
-            else if(Input.GetKeyDown(KeyCode.X))
+            else if (Input.GetKeyDown(KeyCode.X))
             {
                 theAudio.Play(cancelSound);
                 result = false;
