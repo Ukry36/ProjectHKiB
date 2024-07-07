@@ -425,7 +425,7 @@ GameObject:
   - component: {fileID: 6769507034136816711}
   - component: {fileID: 3396699944727692339}
   - component: {fileID: 2548029205717885608}
-  - component: {fileID: 1632079457135130604}
+  - component: {fileID: 5134759212843709348}
   - component: {fileID: 3675722811665815878}
   - component: {fileID: 2539010948495519690}
   - component: {fileID: 4941530918008330189}
@@ -559,7 +559,7 @@ MonoBehaviour:
   m_labelHash: 1.5971899e-14
   m_SpriteKey: 0
   m_SpriteHash: 949844836
---- !u!114 &1632079457135130604
+--- !u!114 &5134759212843709348
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -568,7 +568,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8726325901392311059}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 244eecd8557c7914baa1d1f89ee8de7f, type: 3}
+  m_Script: {fileID: 11500000, guid: 700a2e340d7f9f5448160e2f48b7d2ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ID: 30002
@@ -581,7 +581,7 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 1984
-  DefaultSpeed: 4
+  DefaultSpeed: 3
   SprintCoeff: 2
   InvincibleFrame: 4
   target: {fileID: 0}
@@ -630,7 +630,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41837a7c731d414faa6c85b9a9cc864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theStat: {fileID: 0}
+  theStat: {fileID: 2998789880383365441}
   allowDiagonal: 0
   dontCrossCorner: 1
   wallLayer:

@@ -49,8 +49,6 @@ public class Delta_Delta : Playable
 
     protected override void Update()
     {
-        base.Update();
-
         StateMachine.currentState.Update();
         if (canDodgeEffect || PlayerManager.instance.forcedCanDodge)
             if (!isDodgeCooltime && InputManager.instance.DodgeInput
@@ -60,8 +58,8 @@ public class Delta_Delta : Playable
             && StateMachine.currentState != GraffitiEnterState
             && StateMachine.currentState != GraffitiExitState)
             {
-                if (AttackState.combo == 3 || AttackState.combo == 4
-                    || AttackExitState.combo == 3 || AttackExitState.combo == 4)
+                if (AttackState.combo == 2 || AttackState.combo == 3
+                    || AttackExitState.combo == 2 || AttackExitState.combo == 3)
                 {
                     startAtCombo3 = true;
                 }

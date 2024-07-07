@@ -14,6 +14,7 @@ public class Delta_Delta_BasicAttackState : Delta_Delta_State
     public override void Enter()
     {
         base.Enter();
+        player.startAtCombo3 = false;
         player.Animator.SetInteger("Combo", combo);
         player.SetAnimDir(player.savedInput);
         if (player.moveInput != Vector2.zero)

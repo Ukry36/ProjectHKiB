@@ -21,15 +21,15 @@ public class Delta_L_GraffitiExitState : Delta_L_State
         base.Update();
         if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            player.StateMachine.ChangeState(player.IdleState);
+            player.savedInput = player.moveInput;
+            player.SetAnimDir(player.savedInput);
+            player.SkillManage(graffitirResult);
+            player.StartCoroutine(player.GraffitiCooltime());
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-        player.SetAnimDir(player.moveInput);
-        player.SkillManage(graffitirResult);
-        player.StartCoroutine(player.GraffitiCooltime());
     }
 }

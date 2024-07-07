@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Delta_R_GraffitiIngState : Delta_R_State
 {
-    private Vector3 savedVector;
+    private Vector3 graffitiSavedInput;
     public Delta_R_GraffitiIngState(Delta_R _player, Delta_R_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 
@@ -28,17 +28,18 @@ public class Delta_R_GraffitiIngState : Delta_R_State
         if (player.theStat.currentGP > 0)
             if (player.moveInput == Vector2.zero)
             {
-                savedVector = player.moveInput;
+                graffitiSavedInput = player.moveInput;
             }
-            else if (savedVector == Vector3.zero)
+            else if (graffitiSavedInput == Vector3.zero)
             {
-                savedVector = player.moveInput;
-                if (savedVector.x != 0)
-                    savedVector.y = 0;
-                if (!Physics2D.OverlapCircle(player.MovePoint.transform.position + savedVector,
+                graffitiSavedInput = player.moveInput;
+                player.savedInput = player.moveInput;
+                if (graffitiSavedInput.x != 0)
+                    graffitiSavedInput.y = 0;
+                if (!Physics2D.OverlapCircle(player.MovePoint.transform.position + graffitiSavedInput,
                     0.4f, player.wallLayer + player.GS.WallForGraffitiLayer))
                 {
-                    player.MovePoint.transform.position += savedVector;
+                    player.MovePoint.transform.position += graffitiSavedInput;
                     player.Mover.position = player.MovePoint.transform.position;
                     player.theStat.GPControl(-1);
                 }

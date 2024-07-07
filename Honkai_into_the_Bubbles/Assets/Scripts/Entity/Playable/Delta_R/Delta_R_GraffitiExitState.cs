@@ -21,7 +21,8 @@ public class Delta_R_GraffitiExitState : Delta_R_State
         base.Update();
         if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            player.SetAnimDir(player.moveInput);
+            player.savedInput = player.moveInput;
+            player.SetAnimDir(player.savedInput);
             player.SkillManage(graffitirResult);
             player.StartCoroutine(player.GraffitiCooltime());
         }

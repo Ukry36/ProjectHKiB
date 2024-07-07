@@ -99,6 +99,9 @@ public class PlayerManager : MonoBehaviour
             EquippedEffects[0].spriteOverrideID = EquippedEffects[0].ID;
 
 
+        ThemeColors = EquippedEffects[0].ThemeColors;
+
+
         // thus, if cannotAttackEffect is in prime slot or there is no attack effect, activate effect in prime slot
         // else, activate attack effect in proper slot
         // while activating effects, sprite will change according to its spriteOverrideID
@@ -122,8 +125,6 @@ public class PlayerManager : MonoBehaviour
                 prevEffect = EquippedEffects[0];
             }
         }
-
-        ThemeColors = EquippedEffects[0].ThemeColors;
 
         theStat.SetHitAnimObject();
 

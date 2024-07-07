@@ -59,8 +59,6 @@ public class Delta_R : Playable
     {
         base.Update();
 
-        Debug.Log(savedInput);
-
         StateMachine.currentState.Update();
         if (canDodgeEffect || PlayerManager.instance.forcedCanDodge)
             if (!isDodgeCooltime && InputManager.instance.DodgeInput
@@ -102,6 +100,16 @@ public class Delta_R : Playable
             }
     }
 
+    public override void ChangeSpriteLibraryAsset()
+    {
+        base.ChangeSpriteLibraryAsset();
+
+        SAPrefabfor0301.GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[0];
+        SAPrefabfor0301Diag.GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[1];
+        SAPrefabfor03only.GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[0];
+        SAPrefabfor03onlyDiag.GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[1];
+    }
+
     public override void SkillManage(int _skillNum)
     {
         base.SkillManage(_skillNum);
@@ -115,6 +123,7 @@ public class Delta_R : Playable
 
                 break;
             case 1:
+                theStat.GPControl(GS.skillList[1].GraffitiPoint);
                 if (skill01ing || skill02ing)
                 {
                     skill02ing = true;
@@ -123,7 +132,6 @@ public class Delta_R : Playable
                     StateMachine.ChangeState(SkillState);
                     break;
                 }
-                theStat.GPControl(5);
                 StateMachine.ChangeState(IdleState);
                 break;
             case 2:

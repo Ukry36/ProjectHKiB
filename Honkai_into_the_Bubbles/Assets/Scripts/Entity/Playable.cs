@@ -76,7 +76,7 @@ public class Playable : Entity
 
     }
 
-    public void ChangeSpriteLibraryAsset()
+    public virtual void ChangeSpriteLibraryAsset()
     {
         SpriteLibrary.spriteLibraryAsset = Resources.Load("sdLibrary/" + ID.ToString() + "-" + spriteOverrideID.ToString(), typeof(SpriteLibraryAsset)) as SpriteLibraryAsset;
     }

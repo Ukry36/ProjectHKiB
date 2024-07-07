@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Delta_R_SkillState : Delta_R_State
 {
-    private float lastedTime;
-    private bool startAtCombo4;
     public Skill skill;
     bool keepSkill = false;
     private bool stuckCheck = true;
@@ -18,9 +16,9 @@ public class Delta_R_SkillState : Delta_R_State
     public override void Enter()
     {
         base.Enter();
+        player.theStat.superArmor = true;
         stuckCheck = true;
-        lastedTime = 0;
-        startAtCombo4 = false;
+        stateTimer = skill.Cooltime;
         keepSkill = false;
         player.AttractorPrefab.SetActive(true);
         player.DefaultSpeed /= 2;
@@ -54,12 +52,8 @@ public class Delta_R_SkillState : Delta_R_State
             stuckCheck = true;
             if (player.moveInput != Vector2.zero)
             {
-
-                // save moveinput
                 player.savedInput = (Vector3)player.moveInput;
 
-                // if there is wall, exit walkin
-                // else, adjust savedInput or 
                 player.SetAnimDir(player.savedInput);
                 if (!player.MovepointAdjustCheck())
                 {
@@ -69,14 +63,18 @@ public class Delta_R_SkillState : Delta_R_State
             }
         }
 
-        if (!InputManager.instance.DodgeInput && lastedTime <= skill.Cooltime)
+        if (!InputManager.instance.DodgeInput && stateTimer > 0)
         {
-            lastedTime += Time.deltaTime;
             if (InputManager.instance.AttackInput)
             {
-                startAtCombo4 = true;
+                player.skill01ing = false;
+                player.skill02ing = false;
+                if (player.moveInput != Vector2.zero)
+                    player.savedInput = player.moveInput;
+                player.AttackState.combo = 3;
+                stateMachine.ChangeState(player.AttackState);
             }
-            if (InputManager.instance.GraffitiStartInput)
+            else if (InputManager.instance.GraffitiStartInput)
             {
                 keepSkill = true;
             }
@@ -88,23 +86,18 @@ public class Delta_R_SkillState : Delta_R_State
                 player.skill01ing = false;
                 player.skill02ing = false;
             }
-            if (startAtCombo4)
-            {
-                player.AttackState.combo = 3;
-                stateMachine.ChangeState(player.AttackState);
-            }
-            else
-            {
-                stateMachine.ChangeState(player.IdleState);
-            }
+            stateMachine.ChangeState(player.IdleState);
         }
 
     }
 
     public override void Exit()
     {
+        base.Exit();
+        player.theStat.superArmor = false;
+        player.Mover.position = player.MovePoint.transform.position;
         player.AttractorPrefab.SetActive(false);
         player.DefaultSpeed *= 2;
-        base.Exit();
+
     }
 }
