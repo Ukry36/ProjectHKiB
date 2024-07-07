@@ -59,6 +59,8 @@ public class Delta_R : Playable
     {
         base.Update();
 
+        Debug.Log(savedInput);
+
         StateMachine.currentState.Update();
         if (canDodgeEffect || PlayerManager.instance.forcedCanDodge)
             if (!isDodgeCooltime && InputManager.instance.DodgeInput
@@ -113,37 +115,41 @@ public class Delta_R : Playable
 
                 break;
             case 1:
-                if (skill01ing)
+                if (skill01ing || skill02ing)
                 {
                     skill02ing = true;
                     skill01ing = false;
                     SkillState.skill = GS.skillList[1];
                     StateMachine.ChangeState(SkillState);
+                    break;
                 }
                 theStat.GPControl(5);
+                StateMachine.ChangeState(IdleState);
                 break;
             case 2:
                 if (skill01ing)
                 {
                     SkillState.skill = GS.skillList[0];
-                    StateMachine.ChangeState(SkillState);
                     StartCoroutine(Skill03p01Coroutine(GS.skillList[2]));
+                    StateMachine.ChangeState(SkillState);
                 }
                 else if (skill02ing)
                 {
                     SkillState.skill = GS.skillList[1];
-                    StateMachine.ChangeState(SkillState);
                     StartCoroutine(Skill03p01Coroutine(GS.skillList[2]));
+                    StateMachine.ChangeState(SkillState);
                 }
                 else
                 {
                     AttackState.combo = 2;
                     StateMachine.ChangeState(AttackState);
+                    StartCoroutine(Skill03Coroutine(GS.skillList[2]));
                 }
                 break;
 
             default:
                 skill01ing = false;
+                StateMachine.ChangeState(IdleState);
                 break;
         }
 
@@ -191,20 +197,20 @@ public class Delta_R : Playable
 
     }
 
-    private float lastedTime;
-    private float prevTime;
     private int RSACI = 0;
 
     private IEnumerator Skill03p01Coroutine(Skill _skill)
     {
-        prevTime = lastedTime;
+        float prevTime = 0;
+        float lastTime = 0;
         while (skill01ing || skill02ing)
         {
+            lastTime += Time.deltaTime;
             yield return null;
-            if (prevTime + _skill.Delay < lastedTime)
+            if (prevTime + _skill.Delay < lastTime)
             {
                 FireSA03p01();
-                prevTime = lastedTime;
+                prevTime = lastTime;
             }
         }
     }
@@ -235,6 +241,34 @@ public class Delta_R : Playable
         }
         RSACI++;
     }
+
+    private IEnumerator Skill03Coroutine(Skill _skill)
+    {
+        for (int i = 0; i < repeatSkill03; i++)
+        {
+            FireSA03();
+            yield return new WaitForSeconds(0.4f / repeatSkill03);
+        }
+    }
+
+
+    private void FireSA03()
+    {
+        if (RSACI % 2 == 0)
+        {
+            //Vector3 quaternionToTarget = Quaternion.Euler(0, 0, this.transform.rotation.z) * applyVector;
+            var clone = Instantiate(SAPrefabfor03only, this.transform.position, Quaternion.LookRotation(forward: Vector3.forward, upwards: savedInput));
+            clone.SetActive(true);
+        }
+        else
+        {
+            var clone = Instantiate(SAPrefabfor03onlyDiag, this.transform.position, Quaternion.LookRotation(forward: Vector3.forward, upwards: savedInput));
+            clone.SetActive(true);
+        }
+        RSACI++;
+    }
+
+
 
     public override void Knockback(Vector3 _attackOrigin, int _coeff)
     {

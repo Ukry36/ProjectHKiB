@@ -2737,6 +2737,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 870869494}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &94666451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3552553588424243169, guid: d3ece4fc905ef46418e68eb2404846e1, type: 3}
+  m_PrefabInstance: {fileID: 1081142873}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &97846490 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8953938609150623996, guid: 1786ee647e35ab3409b91a3ac08492a6, type: 3}
@@ -10951,7 +10956,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525644307060344940, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: player
@@ -10990,6 +10995,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2285918100005137025, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       insertIndex: -1
       addedObject: {fileID: 635470371}
+    - targetCorrespondingSourceObject: {fileID: 2285918100005137025, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1613090789}
     - targetCorrespondingSourceObject: {fileID: 2285918100005137025, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       insertIndex: -1
       addedObject: {fileID: 515387868}
@@ -11051,7 +11059,7 @@ MonoBehaviour:
   skillList:
   - {fileID: 1469339223}
   - {fileID: 635470372}
-  - {fileID: 515387870}
+  - {fileID: 1613090790}
   WallForGraffitiLayer:
     serializedVersion: 2
     m_Bits: 4096
@@ -11107,12 +11115,14 @@ MonoBehaviour:
   endAtGraffitiStartPoint: 1
   moveInput: {x: 0, y: 0}
   savedInput: {x: 0, y: 0, z: 0}
+  skill01ing: 0
+  skill02ing: 0
   repeatSkill03: 0
-  SAPrefabfor0301: {fileID: 0}
-  SAPrefabfor0301Diag: {fileID: 0}
-  SAPrefabfor03only: {fileID: 0}
-  SAPrefabfor03onlyDiag: {fileID: 0}
-  AttractorPrefab: {fileID: 0}
+  SAPrefabfor0301: {fileID: 515387869}
+  SAPrefabfor0301Diag: {fileID: 1903938103}
+  SAPrefabfor03only: {fileID: 2060774047}
+  SAPrefabfor03onlyDiag: {fileID: 1333932705}
+  AttractorPrefab: {fileID: 94666451}
 --- !u!1 &495340303
 GameObject:
   m_ObjectHideFlags: 0
@@ -11615,7 +11625,11 @@ MonoBehaviour:
   Cooltime: 0
   Delay: 0
   animationPlayTime: 0
-  skillCommand: []
+  skillCommand:
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 2}
+  - {x: 1, y: 0}
   isCooltime: 0
   destroyLayer:
     serializedVersion: 2
@@ -13670,10 +13684,13 @@ MonoBehaviour:
   Strong: 0
   TrackingRadius: 0
   DetectRadius: 0
-  Cooltime: 0
-  Delay: 0
+  Cooltime: 3
+  Delay: 0.2
   animationPlayTime: 0
-  skillCommand: []
+  skillCommand:
+  - {x: 0, y: 1}
+  - {x: 0, y: 2}
+  - {x: 0, y: 3}
   isCooltime: 0
 --- !u!4 &642062583 stripped
 Transform:
@@ -20212,7 +20229,7 @@ Transform:
   m_GameObject: {fileID: 914218053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000076293945, y: 0.125, z: 0}
+  m_LocalPosition: {x: -0.0000038146973, y: 0.15625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -22757,7 +22774,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 5.625
+  orthographic size: 5.65625
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -22782,7 +22799,7 @@ Transform:
   m_GameObject: {fileID: 1019121078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.999992, y: 15.875, z: -10}
+  m_LocalPosition: {x: 47.000004, y: 15.84375, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -25551,7 +25568,7 @@ Transform:
   m_GameObject: {fileID: 1175886459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0000076293945, y: 0.125, z: 0}
+  m_LocalPosition: {x: -0.0000038146973, y: 0.15625, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -31914,10 +31931,15 @@ MonoBehaviour:
   Strong: 0
   TrackingRadius: 0
   DetectRadius: 0
-  Cooltime: 0
-  Delay: 0
+  Cooltime: 3
+  Delay: 0.2
   animationPlayTime: 0
-  skillCommand: []
+  skillCommand:
+  - {x: 1, y: 0}
+  - {x: 1, y: 1}
+  - {x: 0, y: 1}
+  - {x: 2, y: 1}
+  - {x: 1, y: 2}
   isCooltime: 0
 --- !u!1 &1469623473
 GameObject:
@@ -59116,6 +59138,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3813326754850079776, guid: 5275d22330cf91c418b8274d9512a40c, type: 3}
   m_PrefabInstance: {fileID: 1611393350}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1613090788
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1613090789}
+  - component: {fileID: 1613090790}
+  m_Layer: 0
+  m_Name: Skill03
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1613090789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613090788}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 489518281}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1613090790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1613090788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 34d48ffc1c203594ab96735a4ed901da, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  theStat: {fileID: 1551463724}
+  damageLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  DamageCoefficient: 0
+  BaseCriticalRate: 0
+  GraffitiPoint: 5
+  Strong: 0
+  TrackingRadius: 0
+  DetectRadius: 0
+  Cooltime: 3
+  Delay: 0.2
+  animationPlayTime: 0
+  skillCommand:
+  - {x: 0, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 2}
+  - {x: 1, y: 0}
+  isCooltime: 0
 --- !u!1 &1622047604
 GameObject:
   m_ObjectHideFlags: 0
@@ -63786,7 +63871,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4525644307060344940, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8272561887982210259, guid: ceeecb737222b394f8e209fccaf6c265, type: 3}
       propertyPath: Mover

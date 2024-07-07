@@ -8,7 +8,7 @@ public class Delta_R_State
     protected Delta_R player;
     protected string animBoolName;
 
-    protected float stateTimer;
+    public float stateTimer;
 
     protected bool triggerCalled;
 
