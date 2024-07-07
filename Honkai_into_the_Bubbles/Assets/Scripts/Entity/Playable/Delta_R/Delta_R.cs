@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -16,9 +17,11 @@ public class Delta_R : Playable
     public Delta_R_KnockbackState KnockbackState { get; private set; }
     public Delta_R_BasicAttackState AttackState { get; private set; }
     public Delta_R_BasicAttackExitState AttackExitState { get; private set; }
-    public Delta_R_Skill01State Skill01State { get; private set; }
-    public Delta_R_Skill02State Skill02State { get; private set; }
+    public Delta_R_SkillState SkillState { get; private set; }
 
+
+    public bool skill01ing = false;
+    public bool skill02ing = false;
 
     public int repeatSkill03;
     public GameObject SAPrefabfor0301;
@@ -43,8 +46,7 @@ public class Delta_R : Playable
         KnockbackState = new Delta_R_KnockbackState(this, StateMachine, "Knockback");
         AttackState = new Delta_R_BasicAttackState(this, StateMachine, "Attack");
         AttackExitState = new Delta_R_BasicAttackExitState(this, StateMachine, "AttackExit");
-        Skill01State = new Delta_R_Skill01State(this, StateMachine, "Skill01");
-        Skill02State = new Delta_R_Skill02State(this, StateMachine, "Skill02");
+        SkillState = new Delta_R_SkillState(this, StateMachine, "Skill01");
     }
 
     protected override void Start()
@@ -102,6 +104,49 @@ public class Delta_R : Playable
     {
         base.SkillManage(_skillNum);
 
+        switch (_skillNum)
+        {
+            case 0:
+                skill01ing = true;
+                SkillState.skill = GS.skillList[0];
+                StateMachine.ChangeState(SkillState);
+
+                break;
+            case 1:
+                if (skill01ing)
+                {
+                    skill02ing = true;
+                    skill01ing = false;
+                    SkillState.skill = GS.skillList[1];
+                    StateMachine.ChangeState(SkillState);
+                }
+                theStat.GPControl(5);
+                break;
+            case 2:
+                if (skill01ing)
+                {
+                    SkillState.skill = GS.skillList[0];
+                    StateMachine.ChangeState(SkillState);
+                    StartCoroutine(Skill03p01Coroutine(GS.skillList[2]));
+                }
+                else if (skill02ing)
+                {
+                    SkillState.skill = GS.skillList[1];
+                    StateMachine.ChangeState(SkillState);
+                    StartCoroutine(Skill03p01Coroutine(GS.skillList[2]));
+                }
+                else
+                {
+                    AttackState.combo = 2;
+                    StateMachine.ChangeState(AttackState);
+                }
+                break;
+
+            default:
+                skill01ing = false;
+                break;
+        }
+
         // 이전 스크립트 (Player_R.cs)에 있는 걸 각 skill01, 02state에 옮기고
         // 어떨 때 발동하는지를 여기서 결정 
 
@@ -144,6 +189,51 @@ public class Delta_R : Playable
         // 중요한 건 Player_R.cs에 이미 코루틴으로 구현된 걸 각 스킬의 state나 여기로 옮기는 것!!
         // 영상에선 어떻게 작동하는지 확인하시고 코드는 Player_R.cs를 참고하시면 될 것 같습니다!
 
+    }
+
+    private float lastedTime;
+    private float prevTime;
+    private int RSACI = 0;
+
+    private IEnumerator Skill03p01Coroutine(Skill _skill)
+    {
+        prevTime = lastedTime;
+        while (skill01ing || skill02ing)
+        {
+            yield return null;
+            if (prevTime + _skill.Delay < lastedTime)
+            {
+                FireSA03p01();
+                prevTime = lastedTime;
+            }
+        }
+    }
+
+    private void FireSA03p01()
+    {
+        if (RSACI % 2 == 0)
+        {
+            var clone = Instantiate(SAPrefabfor0301, this.transform.position, Quaternion.identity);
+            clone.SetActive(true);
+            clone = Instantiate(SAPrefabfor0301, this.transform.position, Quaternion.Euler(0, 0, 90));
+            clone.SetActive(true);
+            clone = Instantiate(SAPrefabfor0301, this.transform.position, Quaternion.Euler(0, 0, 180));
+            clone.SetActive(true);
+            clone = Instantiate(SAPrefabfor0301, this.transform.position, Quaternion.Euler(0, 0, 270));
+            clone.SetActive(true);
+        }
+        else
+        {
+            var clone = Instantiate(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 45));
+            clone.SetActive(true);
+            clone = Instantiate(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 135));
+            clone.SetActive(true);
+            clone = Instantiate(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 225));
+            clone.SetActive(true);
+            clone = Instantiate(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 315));
+            clone.SetActive(true);
+        }
+        RSACI++;
     }
 
     public override void Knockback(Vector3 _attackOrigin, int _coeff)

@@ -21,7 +21,7 @@ public class Entity : MonoBehaviour
     public LayerMask wallLayer; // cannot walk through
     public LayerMask NoMovepointWallLayer { get; private set; }
 
-    [SerializeField] private float DefaultSpeed = 4f; // default speed
+    [SerializeField] public float DefaultSpeed = 4f; // default speed
     [HideInInspector] public float MoveSpeed { get; private set; } // actual speed (movespeed = default * sprint * ex)
     public float SprintCoeff = 2f;
 
