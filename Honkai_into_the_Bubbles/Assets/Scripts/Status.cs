@@ -26,6 +26,8 @@ public class Status : MonoBehaviour
 
     public void Hit(int _dmg, bool _crit, int _strong, Vector3 _attackOrigin)
     {
+        entity.Hit();
+
         int trueDmg = _dmg > DEF ? _dmg - DEF : 0;
 
         if (!invincible)

@@ -7,6 +7,7 @@ using System;
 
 public class Entity : MonoBehaviour
 {
+    public BoxCollider2D boxCollider;
     public int ID;
     public string Name;
     public List<Color> ThemeColors = new();
@@ -107,6 +108,11 @@ public class Entity : MonoBehaviour
     public virtual void Knockback(Vector3 _attackOrigin, int _coeff)
     {
         Debug.LogError("ERROR : No Knockback Function");
+    }
+
+    public virtual void Hit()
+    {
+
     }
 
     public IEnumerator HitCoroutine()

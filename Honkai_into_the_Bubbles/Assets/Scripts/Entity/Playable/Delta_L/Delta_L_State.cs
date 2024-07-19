@@ -25,6 +25,8 @@ public class Delta_L_State
         triggerCalled = false;
     }
 
+    public virtual void Hit() { }
+
     public virtual void Update()
     {
         player.moveInput = InputManager.instance.MoveInput;

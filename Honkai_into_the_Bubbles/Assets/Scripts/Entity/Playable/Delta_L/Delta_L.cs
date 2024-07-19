@@ -19,6 +19,11 @@ public class Delta_L : Playable
     public Delta_L_Skill01State Skill01State { get; private set; }
     public Delta_L_Skill02State Skill02State { get; private set; }
 
+    public override void Hit()
+    {
+        StateMachine.currentState.Hit();
+    }
+
     protected override void Awake()
     {
         base.Awake();
@@ -116,4 +121,27 @@ public class Delta_L : Playable
         StateMachine.ChangeState(KnockbackState);
     }
 
+
+    public override void SkillManage(int _skillNum)
+    {
+        base.SkillManage(_skillNum);
+
+        switch (_skillNum)
+        {
+            case 0:
+                StateMachine.ChangeState(Skill01State);
+
+                break;
+            case 1:
+                StateMachine.ChangeState(Skill02State);
+
+                break;
+
+
+            default:
+                StateMachine.ChangeState(IdleState);
+                break;
+        }
+
+    }
 }

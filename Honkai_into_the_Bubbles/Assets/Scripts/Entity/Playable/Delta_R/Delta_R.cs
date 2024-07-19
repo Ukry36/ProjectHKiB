@@ -254,8 +254,8 @@ public class Delta_R : Playable
     {
         for (int i = 0; i < repeatSkill03; i++)
         {
-            FireSA03();
             yield return new WaitForSeconds(0.4f / repeatSkill03);
+            FireSA03();
         }
     }
 
