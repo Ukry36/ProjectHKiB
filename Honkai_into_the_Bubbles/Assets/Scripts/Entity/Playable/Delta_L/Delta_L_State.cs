@@ -25,8 +25,6 @@ public class Delta_L_State
         triggerCalled = false;
     }
 
-    public virtual void Hit() { }
-
     public virtual void Update()
     {
         player.moveInput = InputManager.instance.MoveInput;
@@ -48,6 +46,8 @@ public class Delta_L_State
     {
         player.Animator.SetBool(animBoolName, false);
     }
+
+    public virtual void Hit() { }
 
     public virtual void AnimationFinishTrigger()
     {

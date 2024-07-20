@@ -14,7 +14,7 @@ public class MenuManager : MonoBehaviour
             theInput = FindObjectOfType<InputManager>();
             theEquip = FindObjectOfType<EquipmentManager>();
             theInven = FindObjectOfType<InventoryManager>();
-            thePlayer = FindObjectsOfType<MoveViaInput>(true);
+            thePlayer = FindObjectsOfType<Playable>(true);
             DontDestroyOnLoad(this.gameObject);
             instance = this;
         }
@@ -29,7 +29,7 @@ public class MenuManager : MonoBehaviour
     private InputManager theInput;
     private EquipmentManager theEquip;
     private InventoryManager theInven;
-    private MoveViaInput[] thePlayer;
+    private Playable[] thePlayer;
     [SerializeField] private Status theStat;
 
     [SerializeField] private GameObject _pauseCanvasGO;
@@ -109,9 +109,9 @@ public class MenuManager : MonoBehaviour
 
     private void StopPlayerforUI()
     {
-        theInput.StopPlayerInput(true);
         for (int i = 0; i < thePlayer.Length; i++)
-            thePlayer[i].StopWalk();
+            thePlayer[i].savedInput = Vector3.zero;
+        theInput.StopPlayerInput(true);
     }
 
     private void ResumePlayerforUI()

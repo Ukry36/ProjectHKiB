@@ -1,0 +1,31 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Event : MonoBehaviour
+{
+    [SerializeField] protected bool reusable;
+    [SerializeField] protected bool saveable;
+
+    [SerializeField] protected GameObject objectToExpire;
+
+    [HideInInspector] public bool expiredLocal;
+
+    public virtual void StartEvent()
+    {
+        expiredLocal = !reusable;
+    }
+
+    public virtual void EndEvent()
+    {
+        if (saveable)
+        {
+            // save this objects info in database
+        }
+        if (expiredLocal)
+        {
+            Destroy(objectToExpire);
+            Destroy(this);
+        }
+    }
+}

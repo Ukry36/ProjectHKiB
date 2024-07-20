@@ -27,7 +27,6 @@ public class Status : MonoBehaviour
     public void Hit(int _dmg, bool _crit, int _strong, Vector3 _attackOrigin)
     {
         entity.Hit();
-
         int trueDmg = _dmg > DEF ? _dmg - DEF : 0;
 
         if (!invincible)
@@ -36,7 +35,7 @@ public class Status : MonoBehaviour
             HPControl(-trueDmg);
         }
 
-        int Coeff = (int)(_strong - Mass);
+        int Coeff = _strong - Mass;
 
         if (!superArmor && Coeff > 0)
         {

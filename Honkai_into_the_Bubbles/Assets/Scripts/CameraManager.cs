@@ -37,7 +37,6 @@ public class CameraManager : MonoBehaviour
         Cameras[CurrentCamera].Priority = 11;
     }
 
-
     public void StrictMovement(Vector3 _way)
     {
         this.transform.position += _way;
@@ -92,5 +91,6 @@ public class CameraManager : MonoBehaviour
                 Confiners[i].m_BoundingShape2D = other;
             }
         }
+
     }
 }

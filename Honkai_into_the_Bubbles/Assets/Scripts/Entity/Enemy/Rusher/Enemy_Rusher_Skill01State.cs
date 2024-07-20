@@ -35,5 +35,6 @@ public class Enemy_Rusher_Skill01State : Enemy_Rusher_State
     public override void Exit()
     {
         base.Exit();
+        enemy.StartCoroutine(enemy.BackStep(3f));
     }
 }

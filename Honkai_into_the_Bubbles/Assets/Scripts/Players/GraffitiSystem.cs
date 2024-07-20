@@ -17,8 +17,6 @@ public class GraffitiSystem : MonoBehaviour
 
     private EffectVanishControl EVC;
 
-    public LayerMask WallForGraffitiLayer;
-
 
     private void OnEnable()
     {

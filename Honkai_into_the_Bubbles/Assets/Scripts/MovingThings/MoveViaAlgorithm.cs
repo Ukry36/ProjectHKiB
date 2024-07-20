@@ -86,7 +86,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
         float dist = PlayerManager.instance.isStealth && !_deacsth ? _dist / 4 : _dist;
 
         //Debug.DrawRay(Mover.position + (Vector3)applyVector, (Vector3)applyVector * _dist, Color.red, 0.2f);
-        RaycastHit2D hit = Physics2D.Raycast(Mover.position + (Vector3)applyVector, applyVector, dist, ~LayerManager.LayertoIgnore);
+        RaycastHit2D hit = Physics2D.Raycast(Mover.position + (Vector3)applyVector, applyVector, dist, ~LayerManager.instance.ignoreRaycast);
         if (hit.collider != null && (playerLayer & (1 << hit.collider.gameObject.layer)) != 0)
         {
             return true;
@@ -97,7 +97,7 @@ public abstract class MoveViaAlgorithm : MoveSprite
             for (int j = -1; j <= 1; j += 2)
             {
                 //Debug.DrawRay(Mover.position + i * j * v, (Vector3)applyVector * _dist, Color.red, 0.2f);
-                hit = Physics2D.Raycast(Mover.position + i * j * v, applyVector, dist, ~LayerManager.LayertoIgnore);
+                hit = Physics2D.Raycast(Mover.position + i * j * v, applyVector, dist, ~LayerManager.instance.ignoreRaycast);
                 if (hit.collider != null && (playerLayer & (1 << hit.collider.gameObject.layer)) != 0)
                 {
                     return true;

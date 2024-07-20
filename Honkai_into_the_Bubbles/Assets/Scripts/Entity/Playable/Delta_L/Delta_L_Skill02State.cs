@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Delta_L_Skill02State : Delta_L_State
 {
-
-
     public Delta_L_Skill02State(Delta_L _player, Delta_L_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 

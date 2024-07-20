@@ -35,7 +35,7 @@ public class Delta_Default_GraffitiIngState : Delta_Default_State
                 if (player.savedInput.x != 0)
                     player.savedInput.y = 0;
                 if (!Physics2D.OverlapCircle(player.MovePoint.transform.position + player.savedInput,
-                    0.4f, player.wallLayer + player.GS.WallForGraffitiLayer))
+                    0.4f, LayerManager.instance.graffitiWallLayer))
                 {
                     player.MovePoint.transform.position += player.savedInput;
                     player.Mover.position = player.MovePoint.transform.position;

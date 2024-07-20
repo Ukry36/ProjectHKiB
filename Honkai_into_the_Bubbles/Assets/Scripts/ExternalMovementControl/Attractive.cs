@@ -5,45 +5,44 @@ public class Attractive : MonoBehaviour
 {
     private bool stopAttractboolean = true;
 
-    public Entity attractive { get; private set; }
+    [HideInInspector] public Status theStat;
+    public Transform movePoint;
+    [SerializeField] private LayerMask wallLayer;
 
     private void Awake()
     {
-        attractive = GetComponent<Entity>();
+        theStat = GetComponent<Status>();
     }
 
     public void Attract(Vector2 _dir, int _div)
     {
         if (stopAttractboolean)
         {
-            float coeff = 1f;
-            if (this.transform.lossyScale.x == 2)
-                coeff = 1.5f;
             bool temp = false;
             Vector2 attractVector = _dir;
             if (attractVector.x == 0 || attractVector.y == 0)
             {
-                if (Physics2D.OverlapCircle(attractive.MovePoint.transform.position + (Vector3)attractVector * coeff, .4f, attractive.wallLayer))
+                if (Physics2D.OverlapCircle(movePoint.position + (Vector3)attractVector, .4f, wallLayer))
                     temp = true;
             }
             else
             {
-                if (Physics2D.OverlapCircle(attractive.MovePoint.transform.position + new Vector3(attractVector.x, 0, 0) * coeff, .4f, attractive.wallLayer))
+                if (Physics2D.OverlapCircle(movePoint.position + new Vector3(attractVector.x, 0, 0), .4f, wallLayer))
                     attractVector.x = 0;
 
-                if (Physics2D.OverlapCircle(attractive.MovePoint.transform.position + new Vector3(0, attractVector.y, 0) * coeff, .4f, attractive.wallLayer))
+                if (Physics2D.OverlapCircle(movePoint.position + new Vector3(0, attractVector.y, 0), .4f, wallLayer))
                     attractVector.y = 0;
 
                 if (attractVector.x == 0 && attractVector.y == 0)
                     temp = true;
 
                 if (attractVector.x != 0 && attractVector.y != 0)
-                    if (Physics2D.OverlapCircle(attractive.MovePoint.transform.position + (Vector3)attractVector * coeff, .5f, attractive.wallLayer))
+                    if (Physics2D.OverlapCircle(movePoint.position + (Vector3)attractVector, .5f, wallLayer))
                         attractVector.y = 0;
             }
 
             if (!temp)
-                StartCoroutine(AttractCoroutine(attractVector, _div + attractive.theStat.Mass));
+                StartCoroutine(AttractCoroutine(attractVector, _div));
         }
 
     }
@@ -57,8 +56,8 @@ public class Attractive : MonoBehaviour
     {
         for (int i = 0; i < _div; i++)
         {
-            attractive.MovePoint.transform.position += (Vector3)_dir / _div;
-            attractive.Mover.position += (Vector3)_dir / _div;
+            movePoint.position += (Vector3)_dir / _div;
+            this.transform.position += (Vector3)_dir / _div;
             if (stopAttractboolean)
                 yield return null;
         }

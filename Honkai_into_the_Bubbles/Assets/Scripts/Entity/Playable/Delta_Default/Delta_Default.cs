@@ -65,7 +65,7 @@ public class Delta_Default : Playable
             && StateMachine.currentState != GraffitiExitState)
             {
                 MovePoint.gameObject.SetActive(false);
-                if (!Physics2D.OverlapCircle(MovePoint.transform.position, .4f, wallLayer + GS.WallForGraffitiLayer))
+                if (!Physics2D.OverlapCircle(MovePoint.transform.position, .4f, LayerManager.instance.graffitiWallLayer))
                 {
                     dodgeSprite.color = PlayerManager.instance.ThemeColors
                     [

@@ -1,13 +1,10 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
-using NaughtyAttributes;
 using System.Collections.Generic;
-using System;
 
 public class Entity : MonoBehaviour
 {
-    public BoxCollider2D boxCollider;
     public int ID;
     public string Name;
     public List<Color> ThemeColors = new();
@@ -16,6 +13,7 @@ public class Entity : MonoBehaviour
     protected SpriteRenderer SpriteRenderer { get; private set; }
     [SerializeField] protected SpriteLibrary SpriteLibrary;
 
+    public BoxCollider2D boxCollider;
     public Transform Mover;// who moves
     public MovePoint MovePoint; // destination to move
     public Transform GazePoint; // point to see
@@ -114,6 +112,7 @@ public class Entity : MonoBehaviour
     {
 
     }
+
 
     public IEnumerator HitCoroutine()
     {

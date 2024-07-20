@@ -74,7 +74,10 @@ public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
                             enemy.GazePoint.position = enemy.target.position;
                             enemy.SetAnimDir(enemy.GazePointToDir4());
                             enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
-
+                            if (enemy.backStep)
+                            {
+                                enemy.moveDir *= -1;
+                            }
                             if (!enemy.MovepointAdjustCheck())
                             {
                                 enemy.MovePoint.transform.position += enemy.moveDir;
@@ -90,5 +93,6 @@ public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
     {
         base.Exit();
         enemy.Mover.position = enemy.MovePoint.transform.position;
+        Debug.Log("Endaggro");
     }
 }

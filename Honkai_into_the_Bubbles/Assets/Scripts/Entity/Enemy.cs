@@ -40,6 +40,8 @@ public class Enemy : Entity
     [HideInInspector] public bool isTurnCooltime;
     public float turnCooltime = 1f;
 
+    [HideInInspector] public bool backStep;
+
 
     protected override void Awake()
     {
@@ -49,13 +51,13 @@ public class Enemy : Entity
 
     public void SetMoveDirRandom4()
     {
-        GazePoint.position = new(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+        GazePoint.position = Mover.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
         moveDir = GazePointToDir4();
     }
 
     public void SetMoveDirRandom8()
     {
-        GazePoint.position = new(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+        GazePoint.position = Mover.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
         moveDir = GazePointToDir8();
     }
 
@@ -75,7 +77,7 @@ public class Enemy : Entity
         float dist = PlayerManager.instance.isStealth && !_ignoreStealth ? _dist / 4 : _dist;
 
         Debug.DrawRay(Mover.position + (Vector3)_dir, _dir * _dist, Color.red, 0.2f);
-        RaycastHit2D hit = Physics2D.Raycast(Mover.position + (Vector3)_dir, _dir, dist, ~LayerManager.LayertoIgnore);
+        RaycastHit2D hit = Physics2D.Raycast(Mover.position + (Vector3)_dir, _dir, dist, ~LayerManager.instance.ignoreRaycast);
         if (hit.collider != null && (targetLayer & (1 << hit.collider.gameObject.layer)) != 0)
         {
             return hit.collider;
@@ -86,7 +88,7 @@ public class Enemy : Entity
             for (int j = -1; j <= 1; j += 2)
             {
                 Debug.DrawRay(Mover.position + i * j * v * 0.5f, _dir * _dist, Color.red, 0.2f);
-                hit = Physics2D.Raycast(Mover.position + i * j * v, _dir, dist, ~LayerManager.LayertoIgnore);
+                hit = Physics2D.Raycast(Mover.position + i * j * v, _dir, dist, ~LayerManager.instance.ignoreRaycast);
                 if (hit.collider != null && (targetLayer & (1 << hit.collider.gameObject.layer)) != 0)
                 {
                     return hit.collider;
@@ -239,5 +241,12 @@ public class Enemy : Entity
         yield return new WaitForSeconds(turnCooltime);
         yield return null;
         isTurnCooltime = false;
+    }
+
+    public IEnumerator BackStep(float _time)
+    {
+        backStep = true;
+        yield return new WaitForSeconds(_time);
+        backStep = false;
     }
 }

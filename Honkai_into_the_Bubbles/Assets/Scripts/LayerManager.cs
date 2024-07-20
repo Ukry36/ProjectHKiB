@@ -22,6 +22,7 @@ public class LayerManager : MonoBehaviour
     }
     #endregion
 
-    public static LayerMask LayertoIgnore =
-    (1 << LayerMask.NameToLayer("Ignore Raycast")) + (1 << LayerMask.NameToLayer("CameraBound"));
+    public LayerMask ignoreRaycast;
+    public LayerMask graffitiWallLayer;
+
 }

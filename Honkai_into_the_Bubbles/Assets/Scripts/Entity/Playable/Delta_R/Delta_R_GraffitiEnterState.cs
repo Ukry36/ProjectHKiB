@@ -14,7 +14,7 @@ public class Delta_R_GraffitiEnterState : Delta_R_State
         base.Enter();
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
-        player.GS.StartGraffiti();
+        player.GS.StartGraffiti(); Debug.Log("sccs");
     }
 
     public override void Update()
@@ -22,9 +22,7 @@ public class Delta_R_GraffitiEnterState : Delta_R_State
         base.Update();
         if (InputManager.instance.GraffitiEndInput)
         {
-
-            player.SkillManage(player.GS.EndGraffiti());
-            player.StateMachine.ChangeState(player.IdleState);
+            player.StateMachine.ChangeState(player.GraffitiExitState);
         }
         if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {

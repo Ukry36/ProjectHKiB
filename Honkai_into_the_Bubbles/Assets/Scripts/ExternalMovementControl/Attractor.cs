@@ -2,14 +2,14 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-class HitObject
+class AttTarget
 {
-    public GameObject gameObject;
+    public Attractive att;
     public float timer;
 
-    public HitObject(GameObject _gameObject, float _timer)
+    public AttTarget(Attractive _att, float _timer)
     {
-        gameObject = _gameObject;
+        att = _att;
         timer = _timer;
     }
 }
@@ -22,23 +22,22 @@ public class Attractor : MonoBehaviour
     [SerializeField] private int div = 100;
     [SerializeField] private LayerMask attractLayer;
 
-    private List<HitObject> hitObjects = new();
+    private List<AttTarget> targets = new();
 
     private void Update()
     {
-        for (int i = 0; i < hitObjects.Count; i++)
+        for (int i = 0; i < targets.Count; i++)
         {
-            if ((attractLayer & (1 << hitObjects[i].gameObject.layer)) != 0 // can only attract specific layer
-                && ((!isPoint) || Mathf.Abs(hitObjects[i].gameObject.transform.position.x - this.transform.position.x) > minAtt
-                               || Mathf.Abs(hitObjects[i].gameObject.transform.position.y - this.transform.position.y) > minAtt) // if ispoint, check minAtt
-                && hitObjects[i].gameObject.TryGetComponent(out Attractive attractive)) // can only attract attractive objs
+            if ((!isPoint) // if ispoint, check minAtt
+                || Mathf.Abs(targets[i].att.transform.position.x - this.transform.position.x) > minAtt
+                || Mathf.Abs(targets[i].att.transform.position.y - this.transform.position.y) > minAtt)
             {
-                if ((div + attractive.attractive.theStat.Mass) * Time.deltaTime < hitObjects[i].timer)
+                if (targets[i].timer < 0)
                 {
-                    attractive.Attract(GetDir(attractive), div);
-                    hitObjects[i].timer = 0;
+                    targets[i].att.Attract(GetDir(targets[i].att), div + targets[i].att.theStat.Mass);
+                    targets[i].timer = (div + targets[i].att.theStat.Mass) * Time.deltaTime;
                 }
-                hitObjects[i].timer += Time.deltaTime;
+                targets[i].timer -= Time.deltaTime;
             }
         }
     }
@@ -83,12 +82,16 @@ public class Attractor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        if ((attractLayer & (1 << other.gameObject.layer)) != 0 // can only attract specific layer
+            && other.gameObject.TryGetComponent(out Attractive attractive))
+        {
+            targets.Add(new AttTarget(attractive, 0));
+        }
 
-        hitObjects.Add(new HitObject(other.gameObject, 0));
     }
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        hitObjects.Remove(hitObjects.Find(hit => hit.gameObject == other.gameObject));
+        targets.Remove(targets.Find(hit => hit.att.gameObject == other.gameObject));
     }
 }

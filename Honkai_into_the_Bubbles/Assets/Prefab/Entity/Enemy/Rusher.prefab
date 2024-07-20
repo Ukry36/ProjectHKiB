@@ -89,7 +89,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1}
@@ -176,7 +176,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1654332857
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: db550f38ca454774c82a49e649fdc60d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -278,7 +278,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: -1}
@@ -365,7 +365,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1707609743
-  m_SortingLayer: 7
+  m_SortingLayer: 10
   m_SortingOrder: 0
   m_Sprite: {fileID: 1175839298, guid: 8950a99cda3f2ea4eb2c1f43e1b7de9a, type: 3}
   m_Color: {r: 1, g: 0.40739924, b: 0, a: 1}
@@ -550,7 +550,7 @@ MonoBehaviour:
     m_Bits: 1984
   DefaultSpeed: 4
   SprintCoeff: 2
-  InvincibleFrame: 4
+  InvincibleFrame: 0
   target: {fileID: 0}
   SkillArray:
   - {fileID: 3204748618508905052}
@@ -572,6 +572,7 @@ MonoBehaviour:
   detectCooltime: 1
   isTurnCooltime: 0
   turnCooltime: 1
+  backStep: 0
 --- !u!114 &5990756363727143722
 MonoBehaviour:
   m_ObjectHideFlags: 0
