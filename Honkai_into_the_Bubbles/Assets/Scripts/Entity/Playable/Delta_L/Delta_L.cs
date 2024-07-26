@@ -16,8 +16,11 @@ public class Delta_L : Playable
     public Delta_L_KnockbackState KnockbackState { get; private set; }
     public Delta_L_BasicAttackState AttackState { get; private set; }
     public Delta_L_BasicAttackExitState AttackExitState { get; private set; }
-    public Delta_L_Skill01State Skill01State { get; private set; }
-    public Delta_L_Skill02State Skill02State { get; private set; }
+    public Delta_L_Skill01BeforeState Skill01BeforeState { get; private set; }
+    public Delta_L_Skill01IngState Skill01IngState { get; private set; }
+    public Delta_L_Skill01AfterState Skill01AfterState { get; private set; }
+    public Delta_L_Skill02BeforeState Skill02BeforeState { get; private set; }
+    public Delta_L_Skill02AfterState Skill02AfterState { get; private set; }
 
     protected override void Awake()
     {
@@ -35,8 +38,11 @@ public class Delta_L : Playable
         KnockbackState = new Delta_L_KnockbackState(this, StateMachine, "Knockback");
         AttackState = new Delta_L_BasicAttackState(this, StateMachine, "Attack");
         AttackExitState = new Delta_L_BasicAttackExitState(this, StateMachine, "AttackExit");
-        Skill01State = new Delta_L_Skill01State(this, StateMachine, "Skill01");
-        Skill02State = new Delta_L_Skill02State(this, StateMachine, "Skill02");
+        Skill01BeforeState = new Delta_L_Skill01BeforeState(this, StateMachine, "Skill01Before");
+        Skill01IngState = new Delta_L_Skill01IngState(this, StateMachine, "Skill01Ing");
+        Skill01AfterState = new Delta_L_Skill01AfterState(this, StateMachine, "Skill01After");
+        Skill02BeforeState = new Delta_L_Skill02BeforeState(this, StateMachine, "Skill02Before");
+        Skill02AfterState = new Delta_L_Skill02AfterState(this, StateMachine, "Skill02After");
     }
 
     protected override void Start()
@@ -97,10 +103,10 @@ public class Delta_L : Playable
         switch (_skillNum)
         {
             case 0:
-                StateMachine.ChangeState(Skill01State);
+                StateMachine.ChangeState(Skill01BeforeState);
                 break;
             case 1:
-                StateMachine.ChangeState(Skill02State);
+                StateMachine.ChangeState(Skill02BeforeState);
                 break;
             default:
                 StateMachine.ChangeState(IdleState);

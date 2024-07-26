@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_L_Skill01State : Delta_L_State
+public class Delta_L_Skill02BeforeState : Delta_L_State
 {
-    public Delta_L_Skill01State(Delta_L _player, Delta_L_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    public Delta_L_Skill02BeforeState(Delta_L _player, Delta_L_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 
     }
@@ -21,7 +21,7 @@ public class Delta_L_Skill01State : Delta_L_State
     {
         base.Update();
 
-        if (stateTimer <= 0)
+        if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
             stateMachine.ChangeState(player.IdleState);
         }
@@ -31,6 +31,7 @@ public class Delta_L_Skill01State : Delta_L_State
     {
         base.Hit();
 
+        stateMachine.ChangeState(player.Skill02AfterState);
         //패링 성공 부분
     }
 

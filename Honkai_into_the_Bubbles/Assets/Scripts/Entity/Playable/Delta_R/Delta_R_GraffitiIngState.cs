@@ -25,6 +25,7 @@ public class Delta_R_GraffitiIngState : Delta_R_State
             player.StateMachine.ChangeState(player.GraffitiExitState);
         }
 
+
         if (player.theStat.currentGP > 0)
             if (player.moveInput == Vector2.zero)
             {
