@@ -47,7 +47,7 @@ public class Delta_L_State
         player.Animator.SetBool(animBoolName, false);
     }
 
-    public virtual void Hit() { }
+    public virtual void Hit(Vector3 _attackOrigin) { }
 
     public virtual void AnimationFinishTrigger()
     {

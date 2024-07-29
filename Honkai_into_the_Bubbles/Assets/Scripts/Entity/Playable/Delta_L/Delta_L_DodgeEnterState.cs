@@ -35,8 +35,8 @@ public class Delta_L_DodgeEnterState : Delta_L_State
                     Vector2 apv = dodgeLength * player.moveInput;
                     for (int i = 0; i < dodgeLength; i++)
                     {
-                        if (!Physics2D.OverlapCircle(player.MovePoint.transform.position +
-                            new Vector3(apv.x - i * Mathf.Sign(apv.x), apv.y - i * Mathf.Sign(apv.y), 0f), .4f, player.wallLayer))
+                        if (!player.PointWallCheck(player.MovePoint.transform.position +
+                            new Vector3(apv.x - i * Mathf.Sign(apv.x), apv.y - i * Mathf.Sign(apv.y), 0f)))
                         {
                             player.MovePoint.transform.position +=
                             new Vector3(apv.x - i * Mathf.Sign(apv.x), apv.y - i * Mathf.Sign(apv.y), 0f);
@@ -46,7 +46,7 @@ public class Delta_L_DodgeEnterState : Delta_L_State
                 }
                 else
                 {
-                    if (!Physics2D.OverlapCircle(player.MovePoint.transform.position - player.savedInput, .4f, player.wallLayer))
+                    if (!player.PointWallCheck(player.MovePoint.transform.position - player.savedInput))
                     {
                         player.MovePoint.transform.position -= player.savedInput;
                     }

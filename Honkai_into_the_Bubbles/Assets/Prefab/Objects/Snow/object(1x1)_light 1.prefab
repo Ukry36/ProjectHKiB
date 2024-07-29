@@ -1,0 +1,96 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &9088898212006815677
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3818874767540121415, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_Name
+      value: object(1x1)_light 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4457797984901259128, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655881866973682470, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_Tiles.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655881866973682470, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_TileAssetArray.Array.data[6].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655881866973682470, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_TileAssetArray.Array.data[7].m_Data
+      value: 
+      objectReference: {fileID: 11400000, guid: e4f5614cf80c65e4291b1302d9474c17, type: 2}
+    - target: {fileID: 7655881866973682470, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[6].m_Data
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655881866973682470, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[7].m_Data
+      value: 
+      objectReference: {fileID: 857468449, guid: 58f387fdba8181843b83d642f7f04c4d, type: 3}
+    - target: {fileID: 7655881866973682470, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_TileAssetArray.Array.data[6].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655881866973682470, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_TileColorArray.Array.data[0].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655881866973682470, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_TileMatrixArray.Array.data[0].m_RefCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7655881866973682470, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+      propertyPath: m_TileSpriteArray.Array.data[6].m_RefCount
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6070429840684725840, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 11fe0adc6f5f3e9468f55f825be118e5, type: 3}

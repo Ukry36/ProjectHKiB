@@ -14,6 +14,7 @@ public class Delta_R_GraffitiIngState : Delta_R_State
     {
         base.Enter();
         stateTimer = player.graffitiMaxtime + PlayerManager.instance.exGraffitimaxtime;
+        MenuManager.instance.GraffitiCountDownEnable(stateTimer);
         player.theStat.superArmor = true;
     }
 
@@ -24,9 +25,8 @@ public class Delta_R_GraffitiIngState : Delta_R_State
         {
             player.StateMachine.ChangeState(player.GraffitiExitState);
         }
-
-
-        if (player.theStat.currentGP > 0)
+        else if (player.theStat.currentGP > 0)
+        {
             if (player.moveInput == Vector2.zero)
             {
                 graffitiSavedInput = player.moveInput;
@@ -45,6 +45,7 @@ public class Delta_R_GraffitiIngState : Delta_R_State
                     player.theStat.GPControl(-1);
                 }
             }
+        }
     }
 
     public override void Exit()

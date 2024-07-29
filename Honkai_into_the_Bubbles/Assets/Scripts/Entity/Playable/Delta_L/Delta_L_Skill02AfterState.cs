@@ -12,13 +12,11 @@ public class Delta_L_Skill02AfterState : Delta_L_State
     public override void Enter()
     {
         base.Enter();
-
     }
 
     public override void Update()
     {
         base.Update();
-
         if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
             stateMachine.ChangeState(player.IdleState);
@@ -28,5 +26,7 @@ public class Delta_L_Skill02AfterState : Delta_L_State
     public override void Exit()
     {
         base.Exit();
+        player.theStat.invincible = false;
+        player.theStat.superArmor = false;
     }
 }

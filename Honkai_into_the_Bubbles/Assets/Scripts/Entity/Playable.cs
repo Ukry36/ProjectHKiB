@@ -4,6 +4,7 @@ using NaughtyAttributes;
 using UnityEngine.U2D.Animation;
 using System.Collections;
 using Unity.VisualScripting;
+using System.Runtime.InteropServices;
 
 public class Playable : Entity
 {
@@ -32,19 +33,19 @@ public class Playable : Entity
     [SerializeField] protected int continuousDodgeLimit = 2; // max count player can continue dodging
     [BoxGroup("Dodge")]
     [ShowIf("canDodgeEffect")]
-    [SerializeField] protected float dodgeCooltime = 1f; // dodge cooltime
+    [SerializeField] protected float dodgeCooltime = 1.5f; // dodge cooltime
     [BoxGroup("Dodge")]
     [ShowIf("canDodgeEffect")]
     public bool keepDodge = false;
     [BoxGroup("Dodge")]
     [ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
-    public int keepDodgeLimit = 5;
+    public int keepDodgeLimit = 6;
     [BoxGroup("Dodge")]
     [ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
     public float keepDodgeTimeLimit = 3f;
     [BoxGroup("Dodge")]
     [ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
-    public float keepDodgeSpeed = 8f;
+    public float keepDodgeSpeed = 12f;
     protected int continuousDodgeCount = 0; // count countinuous dodge
     protected int totalDodgeCount = 0; // how many time did you dodge
     protected bool isDodgeCooltime;
@@ -53,12 +54,10 @@ public class Playable : Entity
 
     [BoxGroup("Graffiti")]
     [SerializeField] protected bool canGraffitiEffect = false;
+    [HideInInspector] public GraffitiSystem GS;
     [BoxGroup("Graffiti")]
     [ShowIf("canGraffitiEffect")]
-    public GraffitiSystem GS;
-    [BoxGroup("Graffiti")]
-    [ShowIf("canGraffitiEffect")]
-    public float graffitiMaxtime = 1;
+    public float graffitiMaxtime = 0.1f;
     [BoxGroup("Graffiti")]
     [ShowIf("canGraffitiEffect")]
     [SerializeField] protected float graffitiCooltime = 0.3f;
@@ -73,7 +72,7 @@ public class Playable : Entity
     protected override void Awake()
     {
         base.Awake();
-
+        GS = GetComponent<GraffitiSystem>();
     }
 
     public virtual void ChangeSpriteLibraryAsset()
@@ -86,69 +85,33 @@ public class Playable : Entity
     {
         Vector3 InputX = new(savedInput.x, 0, 0);
         Vector3 InputY = new(0, savedInput.y, 0);
-
-        if (Physics2D.OverlapCircle(MovePoint.transform.position + savedInput, .4f, 1 << LayerMask.NameToLayer("MovepointAdjust")))
+        if (savedInput.x == 0 || savedInput.y == 0) // non diagonal
         {
-            if (savedInput.x == 0 || savedInput.y == 0)
-            {
-                return false;
-            }
-            else
-            {
-                if (Physics2D.OverlapCircle(MovePoint.transform.position + InputX, .4f, wallLayer))
-                    savedInput.x = 0;
-
-                if (Physics2D.OverlapCircle(MovePoint.transform.position + InputY, .4f, wallLayer))
-                    savedInput.y = 0;
-
-                if (Physics2D.OverlapCircle(MovePoint.transform.position + savedInput, .4f, 1 << LayerMask.NameToLayer("MovepointAdjust")))
-                    return false;
-            }
+            return PointWallCheck(MovePoint.transform.position + savedInput);
         }
-
-        if (savedInput.x == 0 || savedInput.y == 0)
+        else // moveInput.x != 0 && moveInput.y != 0    (diagonal)
         {
-            if (Physics2D.OverlapCircle(MovePoint.transform.position + savedInput, .4f, wallLayer))
-                return true;
-        }
-        else // moveInput.x != 0 && moveInput.y != 0
-        {
-
-
-            if (Physics2D.OverlapCircle(MovePoint.transform.position + InputX, .4f, wallLayer))
+            if (PointWallCheck(MovePoint.transform.position + InputX))
                 savedInput.x = 0;
 
-            if (Physics2D.OverlapCircle(MovePoint.transform.position + InputY, .4f, wallLayer))
+            if (PointWallCheck(MovePoint.transform.position + InputY))
                 savedInput.y = 0;
 
             if (savedInput == Vector3.zero)
                 return true;
 
             if (savedInput.x != 0 && savedInput.y != 0)
-                if (Physics2D.OverlapCircle(MovePoint.transform.position + savedInput, .4f, wallLayer))
+                if (PointWallCheck(MovePoint.transform.position + savedInput))
                     MovePoint.transform.position -= InputY;
         }
         return false;
     }
 
-    public void SetAnimDir(Vector2 _dir)
-    {
-        if (_dir.x != 0)
-        {
-            Animator.SetFloat("dirX", _dir.x);
-            Animator.SetFloat("dirY", 0);
-        }
-        else
-        {
-            Animator.SetFloat("dirX", 0);
-            Animator.SetFloat("dirY", _dir.y);
-        }
-    }
 
     public void DodgeCooltimeManage()
     {
         continuousDodgeCount++;
-        if (continuousDodgeCount >= continuousDodgeLimit)
+        if (continuousDodgeCount >= continuousDodgeLimit + PlayerManager.instance.exContinuousDodgeLimit)
             StartCoroutine(DodgeCooltime());
         else
             StartCoroutine(DodgeCooltimeReset());
@@ -158,14 +121,14 @@ public class Playable : Entity
     {
         continuousDodgeCount = 0;
         isDodgeCooltime = true;
-        yield return new WaitForSeconds(dodgeCooltime);
+        yield return new WaitForSeconds(dodgeCooltime * PlayerManager.instance.dodgeCooltimeCoeff);
         isDodgeCooltime = false;
     }
 
     protected IEnumerator DodgeCooltimeReset()
     {
         int savedDodgeCount = continuousDodgeCount;
-        yield return new WaitForSeconds(dodgeCooltime);
+        yield return new WaitForSeconds(dodgeCooltime * PlayerManager.instance.dodgeCooltimeCoeff);
         if (continuousDodgeCount == savedDodgeCount)
             continuousDodgeCount = 0;
     }

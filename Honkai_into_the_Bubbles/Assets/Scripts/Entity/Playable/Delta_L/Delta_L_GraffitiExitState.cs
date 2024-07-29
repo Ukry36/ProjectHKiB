@@ -14,6 +14,13 @@ public class Delta_L_GraffitiExitState : Delta_L_State
     {
         base.Enter();
         graffitirResult = player.GS.EndGraffiti();
+        if (graffitirResult == 1)
+        {
+            player.savedInput = player.moveInput;
+            player.SetAnimDir(player.savedInput);
+            player.SkillManage(graffitirResult);
+            player.StartCoroutine(player.GraffitiCooltime());
+        }
     }
 
     public override void Update()

@@ -9,7 +9,6 @@ public class ItemSlot : MonoBehaviour
     [SerializeField] private Image Icon;
     [SerializeField] private TextMeshProUGUI Name;
     [SerializeField] private TextMeshProUGUI Count;
-    [SerializeField] private Image Rare;
     [SerializeField] private Image Slot;
 
     private Color RED = new(1f, 0f, 0f, 1f),
@@ -29,23 +28,6 @@ public class ItemSlot : MonoBehaviour
     {
         Name.text = _item.Name;
         Icon.sprite = _item.Icon;
-        switch (_item.Rare)
-        {
-            case 6:
-                Rare.color = RED; break;
-            case 5:
-                Rare.color = YELLOW; break;
-            case 4:
-                Rare.color = PURPLE; break;
-            case 3:
-                Rare.color = BLUE; break;
-            case 2:
-                Rare.color = GREEN; break;
-            case 1:
-                Rare.color = BLACK; break;
-            default:
-                Rare.color = NONE; break;
-        }
 
         if (Item.ItemType.Use == _item.Type)
         {
@@ -73,6 +55,5 @@ public class ItemSlot : MonoBehaviour
         Name.text = "";
         Count.text = "";
         Icon.sprite = null;
-        Rare.color = NONE;
     }
 }

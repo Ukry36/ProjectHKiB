@@ -34,6 +34,7 @@ public class Entity : MonoBehaviour
     protected virtual void Awake()
     {
         Animator = GetComponent<Animator>();
+        SpriteLibrary = GetComponent<SpriteLibrary>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         theStat = Mover.GetComponent<Status>();
         PathFinder = GetComponent<PathFindManager>();
@@ -71,44 +72,82 @@ public class Entity : MonoBehaviour
     }
 
     public Vector2 GazePointToDir4() =>
-    Mathf.RoundToInt(Mathf.Atan2(Mover.position.y - GazePoint.position.y, Mover.position.x - GazePoint.position.x) * 2 / Mathf.PI) switch
+    Mathf.RoundToInt(Mathf.Atan2(GazePoint.localPosition.y, GazePoint.localPosition.x) * 2 / Mathf.PI) switch
     {
-        -2 => new Vector2(1, 0),
-        -1 => new Vector2(0, 1),
-        0 => new Vector2(-1, 0),
-        1 => new Vector2(0, -1),
-        2 => new Vector2(1, 0),
+        -2 => new Vector2(-1, 0),
+        -1 => new Vector2(0, -1),
+        0 => new Vector2(1, 0),
+        1 => new Vector2(0, 1),
+        2 => new Vector2(-1, 0),
         _ => Vector2.zero
     };
 
 
     public Vector2 GazePointToDir8() =>
-    Mathf.RoundToInt(Mathf.Atan2(Mover.position.y - GazePoint.position.y, Mover.position.x - GazePoint.position.x) * 8 / Mathf.PI) switch
+    Mathf.RoundToInt(Mathf.Atan2(GazePoint.localPosition.y, GazePoint.localPosition.x) * 8 / Mathf.PI) switch
     {
-        -4 => new Vector2(1, 0),
-        -3 => new Vector2(1, 1),
-        -2 => new Vector2(0, 1),
-        -1 => new Vector2(-1, 1),
-        0 => new Vector2(-1, 0),
-        1 => new Vector2(-1, -1),
-        2 => new Vector2(0, -1),
-        3 => new Vector2(1, -1),
-        4 => new Vector2(1, 0),
+        -4 => new Vector2(-1, 0),
+        -3 => new Vector2(-1, -1),
+        -2 => new Vector2(0, -1),
+        -1 => new Vector2(1, -1),
+        0 => new Vector2(1, 0),
+        1 => new Vector2(1, 1),
+        2 => new Vector2(0, 1),
+        3 => new Vector2(-1, 1),
+        4 => new Vector2(-1, 0),
         _ => Vector2.zero
     };
 
     protected Vector3 GetRandomPos(Vector3 _origin, int _range) => new
     (
-        Mathf.RoundToInt(_origin.x + UnityEngine.Random.Range(-_range / 2, _range / 2)),
-        Mathf.RoundToInt(_origin.y + UnityEngine.Random.Range(-_range / 2, _range / 2))
+        Mathf.RoundToInt(_origin.x + Random.Range(-_range / 2, _range / 2)),
+        Mathf.RoundToInt(_origin.y + Random.Range(-_range / 2, _range / 2))
     );
+
+    public void SetAnimDir(Vector2 _dir)
+    {
+        if (_dir.x != 0)
+        {
+            Animator.SetFloat("dirX", _dir.x);
+            Animator.SetFloat("dirY", 0);
+        }
+        else
+        {
+            Animator.SetFloat("dirX", 0);
+            Animator.SetFloat("dirY", _dir.y);
+        }
+    }
+
+    public bool PointWallCheck(Vector3 _pos)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(_pos, .4f, wallLayer);
+        if (colliders != null && colliders.Length > 0)
+        {
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.TryGetComponent(out OneSideWall osw))
+                {
+                    if (osw.D && Mover.transform.position.y <= osw.transform.position.y - 0.5f
+                     || osw.R && Mover.transform.position.x >= osw.transform.position.x + 0.5f
+                     || osw.U && Mover.transform.position.y >= osw.transform.position.y + 0.5f
+                     || osw.L && Mover.transform.position.x <= osw.transform.position.x - 0.5f)
+                        return true;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
     public virtual void Knockback(Vector3 _attackOrigin, int _coeff)
     {
         Debug.LogError("ERROR : No Knockback Function");
     }
 
-    public virtual void Hit()
+    public virtual void Hit(Vector3 _attackOrigin)
     {
 
     }

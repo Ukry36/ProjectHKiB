@@ -1,4 +1,6 @@
+using System.Collections;
 using TMPro;
+using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
@@ -48,6 +50,7 @@ public class MenuManager : MonoBehaviour
 
     [SerializeField] private UnityEngine.UI.Image HPbar;
     [SerializeField] private TextMeshProUGUI HPtext;
+    [SerializeField] private TextMeshProUGUI GSTtext;
 
 
     private void Start()
@@ -118,6 +121,34 @@ public class MenuManager : MonoBehaviour
     {
         theInput.StopPlayerInput(false);
     }
+
+    // play
+    #region Graffiti Countdown
+
+    public void GraffitiCountDownEnable(float _time)
+    {
+        GSTtext.gameObject.SetActive(true);
+        GSTtext.text = (Mathf.Floor(_time * 100f * 10000f) / 10000f).ToString();
+        StartCoroutine(GraffitiCountDown(_time));
+    }
+
+    private IEnumerator GraffitiCountDown(float _time)
+    {
+        while (_time > 0)
+        {
+            yield return null;
+            _time = _time < 0 ? 0 : _time - Time.deltaTime;
+            GSTtext.text = (Mathf.Floor(_time * 100f * 10000f) / 10000f).ToString();
+        }
+        GraffitiCountDownDisable();
+    }
+
+    public void GraffitiCountDownDisable()
+    {
+        GSTtext.gameObject.SetActive(false);
+    }
+
+    #endregion
 
     // pause
     #region Pause / Resume Functions

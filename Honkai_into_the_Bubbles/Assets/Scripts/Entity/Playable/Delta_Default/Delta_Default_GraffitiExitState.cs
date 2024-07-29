@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Delta_Default_GraffitiExitState : Delta_Default_State
 {
-    private int graffitirResult;
+    protected int graffitirResult;
     public Delta_Default_GraffitiExitState(Delta_Default _player, Delta_Default_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 
@@ -21,15 +21,15 @@ public class Delta_Default_GraffitiExitState : Delta_Default_State
         base.Update();
         if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {
-            player.StateMachine.ChangeState(player.IdleState);
+            player.savedInput = player.moveInput;
+            player.SetAnimDir(player.moveInput);
+            player.SkillManage(graffitirResult);
+            player.StartCoroutine(player.GraffitiCooltime());
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-        player.SetAnimDir(player.moveInput);
-        player.SkillManage(graffitirResult);
-        player.StartCoroutine(player.GraffitiCooltime());
     }
 }

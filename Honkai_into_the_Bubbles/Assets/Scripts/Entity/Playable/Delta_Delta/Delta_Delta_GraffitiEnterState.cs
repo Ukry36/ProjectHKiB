@@ -22,9 +22,7 @@ public class Delta_Delta_GraffitiEnterState : Delta_Delta_State
         base.Update();
         if (InputManager.instance.GraffitiEndInput)
         {
-
-            player.SkillManage(player.GS.EndGraffiti());
-            player.StateMachine.ChangeState(player.IdleState);
+            player.StateMachine.ChangeState(player.GraffitiExitState);
         }
         if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
         {

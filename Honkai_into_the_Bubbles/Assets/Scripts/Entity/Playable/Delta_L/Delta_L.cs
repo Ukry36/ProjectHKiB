@@ -115,9 +115,9 @@ public class Delta_L : Playable
 
     }
 
-    public override void Hit()
+    public override void Hit(Vector3 _attackOrigin)
     {
-        StateMachine.currentState.Hit();
+        StateMachine.currentState.Hit(_attackOrigin);
     }
 
     public override void Knockback(Vector3 _attackOrigin, int _coeff)

@@ -5,16 +5,16 @@ using UnityEngine;
 
 public class Delta_Default : Playable
 {
-    public Delta_Default_StateMachine StateMachine { get; private set; }
-    public Delta_Default_IdleState IdleState { get; private set; }
-    public Delta_Default_WalkState WalkState { get; private set; }
-    public Delta_Default_DodgeEnterState DodgeEnterState { get; private set; }
-    public Delta_Default_DodgeIngState DodgeState { get; private set; }
-    public Delta_Default_DodgeExitState DodgeExitState { get; private set; }
-    public Delta_Default_GraffitiEnterState GraffitiEnterState { get; private set; }
-    public Delta_Default_GraffitiIngState GraffitiState { get; private set; }
-    public Delta_Default_GraffitiExitState GraffitiExitState { get; private set; }
-    public Delta_Default_KnockbackState KnockbackState { get; private set; }
+    public Delta_Default_StateMachine StateMachine { get; protected set; }
+    public Delta_Default_IdleState IdleState { get; protected set; }
+    public Delta_Default_WalkState WalkState { get; protected set; }
+    public Delta_Default_DodgeEnterState DodgeEnterState { get; protected set; }
+    public Delta_Default_DodgeIngState DodgeState { get; protected set; }
+    public Delta_Default_DodgeExitState DodgeExitState { get; protected set; }
+    public Delta_Default_GraffitiEnterState GraffitiEnterState { get; protected set; }
+    public Delta_Default_GraffitiIngState GraffitiState { get; protected set; }
+    public Delta_Default_GraffitiExitState GraffitiExitState { get; protected set; }
+    public Delta_Default_KnockbackState KnockbackState { get; protected set; }
 
     protected override void Awake()
     {

@@ -9,9 +9,9 @@ public class DialogueManager : MonoBehaviour
 
     public static DialogueManager instance;
 
-    private void awake()
+    private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             DontDestroyOnLoad(this.gameObject);
             instance = this;
@@ -45,7 +45,7 @@ public class DialogueManager : MonoBehaviour
     public Animator animEye;
     public Animator animMouth;
     public Animator animAura;
-    
+
     public bool talking;
     public bool keyActivated;
 
@@ -70,7 +70,7 @@ public class DialogueManager : MonoBehaviour
         talking = true;
         keyActivated = false;
 
-        for(int i=0; i<dialogue.sentences.Length; i++)
+        for (int i = 0; i < dialogue.sentences.Length; i++)
         {
             listSentences.Add(dialogue.sentences[i]);
             listSpeakers.Add(dialogue.speakers[i]);
@@ -88,7 +88,7 @@ public class DialogueManager : MonoBehaviour
         animEyelash.SetBool("Appear", true);
         animEye.SetBool("Appear", true);
         animMouth.SetBool("Appear", true);
-        
+
         StartCoroutine(StartDialogueCoroutine());
 
     }
@@ -114,18 +114,18 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator StartDialogueCoroutine()
     {
-        if(count > 0)
+        if (count > 0)
         {
-            if(listStandings[count] != listStandings[count-1]) // => sprite 등을 바꾸기 위한 조건!!
+            if (listStandings[count] != listStandings[count - 1]) // => sprite 등을 바꾸기 위한 조건!!
             {
-                animSprite.SetBool("Change",true);
+                animSprite.SetBool("Change", true);
 
                 animFace.SetBool("Change", true);
                 animEyebrow.SetBool("Change", true);
                 animEyelash.SetBool("Change", true);
                 animEye.SetBool("Change", true);
                 animMouth.SetBool("Change", true);
-                animAura.SetBool("Appear",false);
+                animAura.SetBool("Appear", false);
 
                 yield return new WaitForSeconds(0.1f);
                 //rendererSprite.GetComponent<SpriteRenderer>().sprite = listStandings[count]; // == rendererSprite.sprite = listSprites[count] 
@@ -133,7 +133,7 @@ public class DialogueManager : MonoBehaviour
                 theSTM.SetStanding(listStandings[count]);
                 theSTM.SetAura(listStandings[count]);
 
-                animSprite.SetBool("Change",false);
+                animSprite.SetBool("Change", false);
 
                 animFace.SetBool("Change", false);
                 animEyebrow.SetBool("Change", false);
@@ -153,36 +153,36 @@ public class DialogueManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             theSTM.SetAura(listStandings[count]);
         }
-        
-        
+
+
         text.text += "     ";
-        for(int i=0; i<listSpeakers[count].Length; i++)
+        for (int i = 0; i < listSpeakers[count].Length; i++)
         {
             text.text += listSpeakers[count][i];
         }
         text.text += "\n";
-        for(int i=0; i<listSentences[count].Length; i++) //Length는 문자열에도 쓸 수 있다 ~> count번째 문장의 i번째 글자를 입력함
+        for (int i = 0; i < listSentences[count].Length; i++) //Length는 문자열에도 쓸 수 있다 ~> count번째 문장의 i번째 글자를 입력함
         {
             text.text += listSentences[count][i];
             yield return new WaitForSeconds(0.01f);
         }
         keyActivated = true;
-        
+
     }
 
-    
+
     void Update()
     {
-        if(talking && keyActivated)
+        if (talking && keyActivated)
         {
-            
-            if(Input.GetKeyDown(KeyCode.Z))
+
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 keyActivated = false;
                 theAudio.Play(enterSound);
                 text.text = ""; // 이번 문장의 로그를 삭제!
                 count++; // 다음 문장으로!
-                if(count == listSentences.Count) // 마지막 문장이면!
+                if (count == listSentences.Count) // 마지막 문장이면!
                 {
                     StopAllCoroutines();
                     ExitDialogue(); // 끝!
@@ -194,7 +194,7 @@ public class DialogueManager : MonoBehaviour
                 }
 
             }
-        
+
         }
     }
 }

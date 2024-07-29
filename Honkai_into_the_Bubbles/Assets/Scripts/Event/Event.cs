@@ -7,11 +7,11 @@ public class Event : MonoBehaviour
     [SerializeField] protected bool reusable;
     [SerializeField] protected bool saveable;
 
-    [SerializeField] protected GameObject objectToExpire;
+    [SerializeField] protected GameObject triggerToExpire;
 
     [HideInInspector] public bool expiredLocal;
 
-    public virtual void StartEvent()
+    public virtual void StartEvent(Status _interactedEntity)
     {
         expiredLocal = !reusable;
     }
@@ -24,7 +24,7 @@ public class Event : MonoBehaviour
         }
         if (expiredLocal)
         {
-            Destroy(objectToExpire);
+            Destroy(triggerToExpire);
             Destroy(this);
         }
     }

@@ -39,7 +39,9 @@ public class PlayerManager : MonoBehaviour
 
     private Status theStat;
 
+    [SerializeField] private GameObject Drone;
 
+    public bool canSprint = false;
     public bool isStealth = false;
     public int invincibleTimeCoeff = 1;
     public float exSpeedCoeff = 1;
@@ -49,6 +51,7 @@ public class PlayerManager : MonoBehaviour
     public int exContinuousDodgeLimit = 0;
     public float exKeepDodgeSpeedCoeff = 1;
     public float exGraffitimaxtime = 0;
+    public float dodgeCooltimeCoeff = 1;
 
 
     private void Start()
@@ -60,11 +63,6 @@ public class PlayerManager : MonoBehaviour
     {
         // distinct realEpdEffIDs from EquipmentManager
         equippedEffectIDs = _effectIDs.Distinct().ToArray();
-
-
-        // deactivate previous passives
-        ActivatePassives(false);
-
 
         // equippedEffectIDs -> EquippedEffects
         EquippedEffects.Clear();
@@ -129,12 +127,13 @@ public class PlayerManager : MonoBehaviour
         theStat.SetHitAnimObject();
 
         // activate passives
-        ActivatePassives(true);
+        ActivatePassives();
     }
 
 
-    private void ActivatePassives(bool _activate)
+    private void ActivatePassives()
     {
+        DeactivatePassives();
         bool primeC = true;
         for (int i = 0; i < EquippedEffects.Count; i++)
         {
@@ -143,10 +142,19 @@ public class PlayerManager : MonoBehaviour
             switch (EquippedEffects[i].ID)
             {
                 case 10000:
-                    Activate10000Potion(_activate, primeC);
+                    Activate10000Potion(primeC);
+                    break;
+                case 10005:
+                    Activate10005Mechanic01(primeC);
                     break;
                 case 10007:
-                    Activate10007Cat(_activate, primeC);
+                    Activate10007Cat(primeC);
+                    break;
+                case 10023:
+                    Activate10023Infinity(primeC);
+                    break;
+                case 10024:
+                    Activate10024Zero(primeC);
                     break;
                 default:
                     break;
@@ -154,40 +162,86 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
-
-    private void Activate10000Potion(bool _activate, bool _isPrime)
+    private void DeactivatePassives()
     {
-        if (_activate)
+        canSprint = false;
+        isStealth = false;
+        invincibleTimeCoeff = 1;
+        exSpeedCoeff = 1;
+        forcedCanDodge = false;
+        forcedKeepDodge = false;
+        exDodgeLength = 0;
+        exContinuousDodgeLimit = 0;
+        exKeepDodgeSpeedCoeff = 1;
+        exGraffitimaxtime = 0;
+        dodgeCooltimeCoeff = 1;
+        if (!Drone.activeSelf)
         {
-            if (_isPrime)
-            {
-                Debug.Log("canGrafitti");
-            }
-            InputManager.instance.canSprint = true;
+            Drone.transform.position = this.transform.position + new Vector3(12, 12);
         }
         else
         {
-            InputManager.instance.canSprint = false;
+            Drone.SetActive(false);
         }
     }
 
-    private void Activate10007Cat(bool _activate, bool _isPrime)
+
+    private void Activate10000Potion(bool _isPrime)
     {
-        if (_activate)
+        if (_isPrime)
         {
-            if (_isPrime)
-            {
-                isStealth = true;
-            }
-            else
-            {
-                Debug.Log("somethin");
-            }
+            Debug.Log("canGrafitti");
+        }
+        canSprint = true;
+    }
+
+    private void Activate10005Mechanic01(bool _isPrime)
+    {
+        if (_isPrime)
+        {
+            Debug.Log("canTransform");
+        }
+
+        Drone.SetActive(true);
+    }
+
+    private void Activate10007Cat(bool _isPrime)
+    {
+        if (_isPrime)
+        {
+            isStealth = true;
         }
         else
         {
-            isStealth = false;
+            Debug.Log("somethin");
         }
+    }
+
+    private void Activate10023Infinity(bool _isPrime)
+    {
+        if (_isPrime)
+        {
+            forcedKeepDodge = true;
+        }
+        else
+        {
+            exContinuousDodgeLimit += 1;
+            Debug.Log(exContinuousDodgeLimit);
+        }
+        forcedCanDodge = true;
+    }
+
+    private void Activate10024Zero(bool _isPrime)
+    {
+        if (_isPrime)
+        {
+            exDodgeLength += 1;
+        }
+        else
+        {
+            dodgeCooltimeCoeff /= 2;
+        }
+        forcedCanDodge = true;
     }
 
 }

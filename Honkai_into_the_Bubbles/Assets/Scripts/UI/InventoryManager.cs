@@ -32,7 +32,7 @@ public class InventoryManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI pageText;
     [SerializeField] private Transform ItemGridLayout;
     public GameObject TabGridLayout;
-    
+
     [SerializeField] private GameObject nextPageButton, prevPageButton;
 
     [HideInInspector] public List<Item> InventoryItemList;
@@ -74,14 +74,14 @@ public class InventoryManager : MonoBehaviour
         SelectedTab = _selectedTab;
         TabItemList.Clear();
 
-        switch(_selectedTab)
+        switch (_selectedTab)
         {
             case 0:
-                for(int i = 0; i < InventoryItemList.Count; i++)
+                for (int i = 0; i < InventoryItemList.Count; i++)
                 {
-                    if(Item.ItemType.Effect == InventoryItemList[i].Type)
+                    if (Item.ItemType.Effect == InventoryItemList[i].Type)
                         TabItemList.Add(InventoryItemList[i]);
-                }   
+                }
                 break;
             case 1:
                 for (int i = 0; i < InventoryItemList.Count; i++)
@@ -104,7 +104,7 @@ public class InventoryManager : MonoBehaviour
                         TabItemList.Add(InventoryItemList[i]);
                 }
                 break;
-        } 
+        }
 
         description.text = tabDiscription[SelectedTab];
         selectedImage.sprite = selectedTabSprites[SelectedTab];
@@ -135,7 +135,7 @@ public class InventoryManager : MonoBehaviour
                 EquipmentManager.instance.AfterEquipSequence(TabItemList[_selectedItem + page * MAXSLOT]);
                 MenuManager.instance.CloseEquipSequenceInventory();
             }
-            
+
         }
     }
     public void DeselectItem(int _selectedItem)
@@ -145,19 +145,19 @@ public class InventoryManager : MonoBehaviour
     }
 
 
-#region Sort
+    #region Sort
     public List<Item> SortItems(List<Item> list)
     {
-        return list.OrderByDescending(item => item.Rare).ThenBy(item => item.Name).ToList();
+        return list.OrderByDescending(item => item.Name).ToList();
     }
 
     public List<Item> SortItemsInEquip(List<Item> list)
     {
-        return list.OrderByDescending(item => item.Equipped).ThenByDescending(item => item.Rare).ThenBy(item => item.Name).ToList();
+        return list.OrderByDescending(item => item.Equipped).ThenBy(item => item.Name).ToList();
     }
-#endregion
+    #endregion
 
-    
+
     public void ShowPage()
     {
         InitSlots();
@@ -168,7 +168,7 @@ public class InventoryManager : MonoBehaviour
             prevPageButton.SetActive(true);
             pageText.gameObject.SetActive(true);
         }
-        
+
         slotCount = -1;
         for (int i = page * MAXSLOT; i < TabItemList.Count; i++)
         {
@@ -198,26 +198,45 @@ public class InventoryManager : MonoBehaviour
         ShowPage();
     }
 
-    
+
     public void GetItem(int _ID, int _count = 1)
     {
-        for(int i = 0; i < theDB.itemList.Count; i++) 
+        if (_count > 0)
         {
-            if (_ID == theDB.itemList[i].ID) 
-            {
-                for(int j = 0; j < InventoryItemList.Count; j++) 
+            foreach (Item itemInDB in theDB.itemList)
+                if (itemInDB.ID == _ID)
                 {
-                    if (_ID == InventoryItemList[j].ID) 
+                    foreach (Item itemInInven in InventoryItemList)
+                        if (itemInInven.ID == _ID)
+                        {
+                            itemInInven.Count += _count;
+                            return;
+                        }
+                    InventoryItemList.Add(itemInDB);
+                    InventoryItemList[^1].Count = _count;
+                    return;
+                }
+            Debug.LogError("ERROR: ItemID not found!");
+        }
+        Debug.LogError("ERROR: Item count is less than 1!");
+
+        /*
+        for (int i = 0; i < theDB.itemList.Count; i++)
+        {
+            if (_ID == theDB.itemList[i].ID)
+            {
+                for (int j = 0; j < InventoryItemList.Count; j++)
+                {
+                    if (_ID == InventoryItemList[j].ID)
                     {
                         InventoryItemList[j].Count += _count;
                         return;
                     }
                 }
-                InventoryItemList.Add(theDB.itemList[i]); 
+                InventoryItemList.Add(theDB.itemList[i]);
                 InventoryItemList[InventoryItemList.Count - 1].Count = _count;
                 return;
             }
-        }
-        Debug.LogError("ERROR: ItemID not found!");
+        }*/
     }
 }

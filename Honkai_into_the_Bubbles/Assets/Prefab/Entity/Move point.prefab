@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7560782084725654153}
   - component: {fileID: 6687121173183311246}
   - component: {fileID: 441080773783874645}
-  m_Layer: 2
+  m_Layer: 9
   m_Name: Move point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -1654332857
-  m_SortingLayer: 4
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: -438445246, guid: 8950a99cda3f2ea4eb2c1f43e1b7de9a, type: 3}
   m_Color: {r: 0, g: 1, b: 0.9308512, a: 0}
@@ -171,4 +171,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d0e37c5ed66558498eb4405bdc00c78, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Mover: {fileID: 0}
+  prevPos: {x: 0, y: 0, z: 0}
+  parent: {fileID: 0}

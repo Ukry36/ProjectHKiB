@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Delta_Default_GraffitiIngState : Delta_Default_State
 {
+    private Vector3 graffitiSavedInput;
     public Delta_Default_GraffitiIngState(Delta_Default _player, Delta_Default_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 
@@ -13,6 +14,7 @@ public class Delta_Default_GraffitiIngState : Delta_Default_State
     {
         base.Enter();
         stateTimer = player.graffitiMaxtime + PlayerManager.instance.exGraffitimaxtime;
+        MenuManager.instance.GraffitiCountDownEnable(stateTimer);
         player.theStat.superArmor = true;
     }
 
@@ -23,25 +25,27 @@ public class Delta_Default_GraffitiIngState : Delta_Default_State
         {
             player.StateMachine.ChangeState(player.GraffitiExitState);
         }
-
-        if (player.theStat.currentGP > 0)
+        else if (player.theStat.currentGP > 0)
+        {
             if (player.moveInput == Vector2.zero)
             {
-                player.savedInput = player.moveInput;
+                graffitiSavedInput = player.moveInput;
             }
-            else if (player.savedInput == Vector3.zero)
+            else if (graffitiSavedInput == Vector3.zero)
             {
+                graffitiSavedInput = player.moveInput;
                 player.savedInput = player.moveInput;
-                if (player.savedInput.x != 0)
-                    player.savedInput.y = 0;
-                if (!Physics2D.OverlapCircle(player.MovePoint.transform.position + player.savedInput,
+                if (graffitiSavedInput.x != 0)
+                    graffitiSavedInput.y = 0;
+                if (!Physics2D.OverlapCircle(player.MovePoint.transform.position + graffitiSavedInput,
                     0.4f, LayerManager.instance.graffitiWallLayer))
                 {
-                    player.MovePoint.transform.position += player.savedInput;
+                    player.MovePoint.transform.position += graffitiSavedInput;
                     player.Mover.position = player.MovePoint.transform.position;
                     player.theStat.GPControl(-1);
                 }
             }
+        }
     }
 
     public override void Exit()

@@ -5,7 +5,6 @@ using UnityEngine.Analytics;
 
 public class Delta_Default_WalkState : Delta_Default_State
 {
-    private bool stuckCheck = true;
     public Delta_Default_WalkState(Delta_Default _player, Delta_Default_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 
@@ -22,14 +21,6 @@ public class Delta_Default_WalkState : Delta_Default_State
 
         if (Vector3.Distance(player.Mover.position, player.MovePoint.transform.position) >= .05f)
         {
-            if (stuckCheck)
-            {
-                Collider2D[] colliders = Physics2D.OverlapCircleAll(player.MovePoint.transform.position, 0.1f, player.NoMovepointWallLayer);
-                if (colliders != null && colliders.Length > 0)
-                { player.MovePoint.transform.position = player.MovePoint.prevPos; Debug.Log("stuck"); }
-            }
-            stuckCheck = false;
-
             player.Mover.position = Vector3.MoveTowards
             (
                 player.Mover.position,
@@ -41,7 +32,6 @@ public class Delta_Default_WalkState : Delta_Default_State
         {
             player.Mover.position = player.MovePoint.transform.position; // make position accurate
             player.MovePoint.prevPos = player.Mover.position; // used in external movepoint control
-            stuckCheck = true;
             if (player.moveInput == Vector2.zero)
             {
                 player.StateMachine.ChangeState(player.IdleState);

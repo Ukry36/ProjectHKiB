@@ -7,7 +7,6 @@ public class Delta_R_DodgeIngState : Delta_R_State
 {
     private float speed;
     private int moveCount;
-    private bool stuckCheck = true;
     public Delta_R_DodgeIngState(Delta_R _player, Delta_R_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 
@@ -31,28 +30,19 @@ public class Delta_R_DodgeIngState : Delta_R_State
         {
             player.StateMachine.ChangeState(player.DodgeExitState);
         }
-
-        if (Vector3.Distance(player.Mover.position, player.MovePoint.transform.position) >= .05f)
+        else if (Vector3.Distance(player.Mover.position, player.MovePoint.transform.position) >= .05f)
         {
-            if (stuckCheck)
-            {
-                if (Physics2D.OverlapCircle(player.MovePoint.transform.position, 0.1f, player.wallLayer))
-                    player.MovePoint.transform.position = player.MovePoint.prevPos;
-                stuckCheck = false; //Debug.Log("stuckCheck");
-            }
-
             player.Mover.position = Vector3.MoveTowards
             (
                 player.Mover.position,
                 player.MovePoint.transform.position,
-                player.keepDodgeSpeed * Time.deltaTime
+                speed * Time.deltaTime
             );
         }
         else
         {
             player.Mover.position = player.MovePoint.transform.position; // make position accurate
             player.MovePoint.prevPos = player.Mover.position; // used in external movepoint control
-            stuckCheck = true;
             if (player.moveInput != Vector2.zero)
             {
                 // save moveinput
@@ -72,5 +62,6 @@ public class Delta_R_DodgeIngState : Delta_R_State
         base.Exit();
         player.SetAnimDir(player.savedInput);
         player.theStat.superArmor = false;
+        player.Mover.position = player.MovePoint.transform.position;
     }
 }

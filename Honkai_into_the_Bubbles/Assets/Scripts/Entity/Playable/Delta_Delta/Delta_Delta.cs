@@ -80,7 +80,6 @@ public class Delta_Delta : Playable
                 MovePoint.gameObject.SetActive(false);
                 if (!Physics2D.OverlapCircle(MovePoint.transform.position, .4f, LayerManager.instance.graffitiWallLayer))
                 {
-                    Debug.Log("sccs");
                     dodgeSprite.color = PlayerManager.instance.ThemeColors
                     [
                         totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count

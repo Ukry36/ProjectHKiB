@@ -14,6 +14,7 @@ public class Delta_L_GraffitiIngState : Delta_L_State
     {
         base.Enter();
         stateTimer = player.graffitiMaxtime + PlayerManager.instance.exGraffitimaxtime;
+        MenuManager.instance.GraffitiCountDownEnable(stateTimer);
         player.theStat.superArmor = true;
     }
 
@@ -24,10 +25,7 @@ public class Delta_L_GraffitiIngState : Delta_L_State
         {
             player.StateMachine.ChangeState(player.GraffitiExitState);
         }
-
-
-
-        if (player.theStat.currentGP > 0)
+        else if (player.theStat.currentGP > 0)
         {
             if (player.moveInput == Vector2.zero)
             {

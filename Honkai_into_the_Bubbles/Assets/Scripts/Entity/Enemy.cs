@@ -89,7 +89,7 @@ public class Enemy : Entity
             {
                 Debug.DrawRay(Mover.position + i * j * v * 0.5f, _dir * _dist, Color.red, 0.2f);
                 hit = Physics2D.Raycast(Mover.position + i * j * v, _dir, dist, ~LayerManager.instance.ignoreRaycast);
-                if (hit.collider != null && (targetLayer & (1 << hit.collider.gameObject.layer)) != 0)
+                if (hit && hit.collider != null && (targetLayer & (1 << hit.collider.gameObject.layer)) != 0)
                 {
                     return hit.collider;
                 }
@@ -170,63 +170,27 @@ public class Enemy : Entity
     {
         Vector3 DirX = new(moveDir.x, 0, 0);
         Vector3 DirY = new(0, moveDir.y, 0);
-
-        if (Physics2D.OverlapCircle(MovePoint.transform.position + moveDir, .4f, 1 << LayerMask.NameToLayer("MovepointAdjust")))
+        if (moveDir.x == 0 || moveDir.y == 0) // non diagonal
         {
-            if (moveDir.x == 0 || moveDir.y == 0)
-            {
-                return false;
-            }
-            else
-            {
-                if (Physics2D.OverlapCircle(MovePoint.transform.position + DirX, .4f, wallLayer))
-                    moveDir.x = 0;
-
-                if (Physics2D.OverlapCircle(MovePoint.transform.position + DirY, .4f, wallLayer))
-                    moveDir.y = 0;
-
-                if (Physics2D.OverlapCircle(MovePoint.transform.position + moveDir, .4f, 1 << LayerMask.NameToLayer("MovepointAdjust")))
-                    return false;
-            }
+            return PointWallCheck(MovePoint.transform.position + moveDir);
         }
-
-        if (moveDir.x == 0 || moveDir.y == 0)
+        else // moveInput.x != 0 && moveInput.y != 0    (diagonal)
         {
-            if (Physics2D.OverlapCircle(MovePoint.transform.position + moveDir, .4f, wallLayer))
-                return true;
-        }
-        else // moveInput.x != 0 && moveInput.y != 0
-        {
-            if (Physics2D.OverlapCircle(MovePoint.transform.position + DirX, .4f, wallLayer))
+            if (PointWallCheck(MovePoint.transform.position + DirX))
                 moveDir.x = 0;
 
-            if (Physics2D.OverlapCircle(MovePoint.transform.position + DirY, .4f, wallLayer))
+            if (PointWallCheck(MovePoint.transform.position + DirY))
                 moveDir.y = 0;
 
             if (moveDir == Vector3.zero)
                 return true;
 
             if (moveDir.x != 0 && moveDir.y != 0)
-                if (Physics2D.OverlapCircle(MovePoint.transform.position + moveDir, .4f, wallLayer))
+                if (PointWallCheck(MovePoint.transform.position + moveDir))
                     MovePoint.transform.position -= DirY;
         }
         return false;
     }
-
-    public void SetAnimDir(Vector2 _dir)
-    {
-        if (_dir.x != 0)
-        {
-            Animator.SetFloat("dirX", _dir.x);
-            Animator.SetFloat("dirY", 0);
-        }
-        else
-        {
-            Animator.SetFloat("dirX", 0);
-            Animator.SetFloat("dirY", _dir.y);
-        }
-    }
-
 
     // tinker before attack
     public void BeforeAttackTinker(Vector3 _offset)

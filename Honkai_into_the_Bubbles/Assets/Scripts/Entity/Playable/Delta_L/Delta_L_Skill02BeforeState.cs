@@ -27,9 +27,11 @@ public class Delta_L_Skill02BeforeState : Delta_L_State
         }
     }
 
-    public override void Hit()
+    public override void Hit(Vector3 _attackOrigin)
     {
-        base.Hit();
+        base.Hit(_attackOrigin);
+        player.GazePoint.position = _attackOrigin;
+        player.SetAnimDir(player.GazePointToDir4());
 
         stateMachine.ChangeState(player.Skill02AfterState);
         //패링 성공 부분
@@ -38,8 +40,5 @@ public class Delta_L_Skill02BeforeState : Delta_L_State
     public override void Exit()
     {
         base.Exit();
-
-        player.theStat.invincible = false;
-        player.theStat.superArmor = false;
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OrderManager : MonoBehaviour
 {
-    private List<MoveSprite> characters;
+    private List<Entity> characters;
     private CameraManager theCamera;
 
     void Start()
@@ -17,10 +17,10 @@ public class OrderManager : MonoBehaviour
         characters = ToList();
     }
 
-    public List<MoveSprite> ToList()
+    public List<Entity> ToList()
     {
-        List<MoveSprite> tempList = new();
-        MoveSprite[] temp = FindObjectsOfType<MoveSprite>();
+        List<Entity> tempList = new();
+        Entity[] temp = FindObjectsOfType<Entity>();
 
         for (int i = 0; i < temp.Length; i++)
         {
@@ -33,67 +33,35 @@ public class OrderManager : MonoBehaviour
     {
         for (int i = 0; i < characters.Count; i++) // 배열: Length 리스트: Count
         {
-            if (_name == characters[i].characterName)
+            if (_name == characters[i].Name)
             {
-                characters[i].Move(_dir);
+                //characters[i].Move(_dir);
             }
         }
-    }
-
-    public void Freeze(string _name)
-    {
-        if (_name != "Camera")
-        {
-            for (int i = 0; i < characters.Count; i++)
-                if (_name == characters[i].characterName)
-                    characters[i].freeze = true;
-        }
-        else theCamera.freeze = true;
-
-
-        if (_name == "ALL")
-            for (int i = 0; i < characters.Count; i++)
-                characters[i].freeze = true;
-    }
-
-    public void UnFreeze(string _name)
-    {
-        if (_name != "Camera")
-        {
-            for (int i = 0; i < characters.Count; i++)
-                if (_name == characters[i].characterName)
-                    characters[i].freeze = false;
-        }
-        else theCamera.freeze = false;
-
-
-        if (_name == "ALL")
-            for (int i = 0; i < characters.Count; i++)
-                characters[i].freeze = false;
     }
 
     public void Turn(string _name, string _dir)
     {
         for (int i = 0; i < characters.Count; i++)
         {
-            if (_name == characters[i].characterName)
+            if (_name == characters[i].Name)
             {
-                characters[i].animator.SetFloat("DirX", 0f);
-                characters[i].animator.SetFloat("DirY", 0f);
+                characters[i].Animator.SetFloat("DirX", 0f);
+                characters[i].Animator.SetFloat("DirY", 0f);
                 switch (_dir)
                 {
 
                     case "UP":
-                        characters[i].animator.SetFloat("DirY", 1f);
+                        characters[i].Animator.SetFloat("DirY", 1f);
                         break;
                     case "DOWN":
-                        characters[i].animator.SetFloat("DirY", -1f);
+                        characters[i].Animator.SetFloat("DirY", -1f);
                         break;
                     case "RIGHT":
-                        characters[i].animator.SetFloat("DirX", 1f);
+                        characters[i].Animator.SetFloat("DirX", 1f);
                         break;
                     case "LEFT":
-                        characters[i].animator.SetFloat("DirX", -1f);
+                        characters[i].Animator.SetFloat("DirX", -1f);
                         break;
                 }
 
@@ -105,7 +73,7 @@ public class OrderManager : MonoBehaviour
     {
         for (int i = 0; i < characters.Count; i++)
         {
-            if (_name == characters[i].characterName)
+            if (_name == characters[i].Name)
             {
                 characters[i].gameObject.SetActive(false);
             }
@@ -116,7 +84,7 @@ public class OrderManager : MonoBehaviour
     {
         for (int i = 0; i < characters.Count; i++)
         {
-            if (_name == characters[i].characterName)
+            if (_name == characters[i].Name)
             {
                 characters[i].gameObject.SetActive(true);
             }
@@ -127,7 +95,7 @@ public class OrderManager : MonoBehaviour
     {
         for (int i = 0; i < characters.Count; i++)
         {
-            if (_name == characters[i].characterName)
+            if (_name == characters[i].Name)
             {
                 characters[i].boxCollider.enabled = false;
             }
@@ -138,7 +106,7 @@ public class OrderManager : MonoBehaviour
     {
         for (int i = 0; i < characters.Count; i++)
         {
-            if (_name == characters[i].characterName)
+            if (_name == characters[i].Name)
             {
                 characters[i].boxCollider.enabled = true;
             }

@@ -20,11 +20,7 @@ public class GraffitiSystem : MonoBehaviour
 
     private void OnEnable()
     {
-        GT[] GTs = grid.GetComponentsInChildren<GT>();
-        for (int i = 0; i < GTs.Length; i++)
-        {
-            GT.SetGS(this);
-        }
+        GraffitiSystemManager.instance.playerGS = this;
     }
 
 

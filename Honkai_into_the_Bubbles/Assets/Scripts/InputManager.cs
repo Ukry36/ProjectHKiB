@@ -24,6 +24,7 @@ public class InputManager : MonoBehaviour
             attack = _playerInput.actions["Attack"];
             dodge = _playerInput.actions["Dodge"];
             grafitti = _playerInput.actions["GraffitiSystem"];
+            skill = _playerInput.actions["Skill"];
 
             confirm = _playerInput.actions["Confirm"];
             cancel = _playerInput.actions["Cancel"];
@@ -46,6 +47,7 @@ public class InputManager : MonoBehaviour
     public bool DodgeProgressInput { get; private set; }
     public bool GraffitiStartInput { get; private set; }
     public bool GraffitiEndInput { get; private set; }
+    public bool SkillInput { get; private set; }
 
     public bool ConfirmInput { get; private set; }
     public bool CancelInput { get; private set; }
@@ -53,11 +55,9 @@ public class InputManager : MonoBehaviour
     public bool InventoryOpenCloseInput { get; private set; }
 
     private PlayerInput _playerInput;
-    private InputAction move, sprint, attack, dodge, grafitti, confirm, cancel, equipment, inventory;
+    private InputAction move, sprint, attack, dodge, grafitti, skill, confirm, cancel, equipment, inventory;
 
     public bool stopPlayer;
-    public bool canSprint;
-
 
     public void StopPlayerInput(bool _stop)
     {
@@ -69,6 +69,7 @@ public class InputManager : MonoBehaviour
         DodgeProgressInput = false;
         GraffitiStartInput = false;
         GraffitiEndInput = false;
+        SkillInput = false;
     }
 
 
@@ -78,7 +79,7 @@ public class InputManager : MonoBehaviour
         if (!stopPlayer)
         {
             MoveInput = move.ReadValue<Vector2>();
-            if (canSprint)
+            if (PlayerManager.instance.canSprint)
             {
                 SprintInput = sprint.inProgress;
             }
@@ -87,6 +88,7 @@ public class InputManager : MonoBehaviour
             DodgeProgressInput = dodge.inProgress;
             GraffitiStartInput = grafitti.WasPressedThisFrame();
             GraffitiEndInput = grafitti.WasReleasedThisFrame();
+            SkillInput = skill.WasPressedThisFrame();
         }
 
         // ui input detect 

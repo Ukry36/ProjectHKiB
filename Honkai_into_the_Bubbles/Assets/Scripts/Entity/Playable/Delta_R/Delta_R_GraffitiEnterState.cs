@@ -14,7 +14,7 @@ public class Delta_R_GraffitiEnterState : Delta_R_State
         base.Enter();
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
-        player.GS.StartGraffiti(); Debug.Log("sccs");
+        player.GS.StartGraffiti();
     }
 
     public override void Update()

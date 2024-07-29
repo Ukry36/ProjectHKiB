@@ -93,6 +93,5 @@ public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
     {
         base.Exit();
         enemy.Mover.position = enemy.MovePoint.transform.position;
-        Debug.Log("Endaggro");
     }
 }

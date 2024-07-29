@@ -542,6 +542,7 @@ MonoBehaviour:
   Name: Rusher
   ThemeColors: []
   SpriteLibrary: {fileID: 8011523914647686725}
+  boxCollider: {fileID: 0}
   Mover: {fileID: 905324970688511338}
   MovePoint: {fileID: 8247933550345511732}
   GazePoint: {fileID: 6517622195520474294}
@@ -945,6 +946,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56cd1b95cc835f9489eae78e1d990132, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  theStat: {fileID: 0}
+  movePoint: {fileID: 2563409765023122238}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 1216
 --- !u!1001 &8388380354418478945
 PrefabInstance:
   m_ObjectHideFlags: 0

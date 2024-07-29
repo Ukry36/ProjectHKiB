@@ -19,11 +19,11 @@ public class StandingManager : MonoBehaviour
 {
     [SerializeField]
     public static StandingManager instance;
-    
 
-    private void awake()
+
+    private void Awake()
     {
-        if(instance == null)
+        if (instance == null)
         {
             DontDestroyOnLoad(this.gameObject);
             instance = this;
@@ -48,12 +48,12 @@ public class StandingManager : MonoBehaviour
 
     public CustomFace[] customFace;
 
-    
+
     public void SetStanding(string _name)
     {
-        for(int i=0; i<customFace.Length; i++) 
+        for (int i = 0; i < customFace.Length; i++)
         {
-            if(_name == customFace[i].name)
+            if (_name == customFace[i].name)
             {
                 rendererSprite.sprite = spriteList[customFace[i].sprite];
                 rendererFace.sprite = customFace[i].face;
@@ -68,15 +68,15 @@ public class StandingManager : MonoBehaviour
 
     public void SetAura(string _name)
     {
-        for(int i=0; i<customFace.Length; i++) 
+        for (int i = 0; i < customFace.Length; i++)
         {
-            if(_name == customFace[i].name)
+            if (_name == customFace[i].name)
             {
                 StopAllCoroutines();
-                if(customFace[i].aura)
+                if (customFace[i].aura)
                 {
                     animAura.SetBool("Appear", true);
-                    
+
                     StartCoroutine(AuraCoroutine());
                 }
                 else
@@ -91,11 +91,11 @@ public class StandingManager : MonoBehaviour
 
     IEnumerator AuraCoroutine()
     {
-        for(int i=0; i< auraList.Length; i++)
+        for (int i = 0; i < auraList.Length; i++)
         {
             rendererAura.sprite = auraList[i];
-            yield return new WaitForSeconds(0.3f); 
-            if(i == auraList.Length - 1)
+            yield return new WaitForSeconds(0.3f);
+            if (i == auraList.Length - 1)
                 i = -1;
         }
 

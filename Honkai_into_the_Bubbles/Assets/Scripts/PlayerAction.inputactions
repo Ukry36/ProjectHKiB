@@ -85,6 +85,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Skill",
+                    "type": "Button",
+                    "id": "64d444f1-fcd5-40a2-8499-e7cf65893ab2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -146,6 +155,17 @@
                 {
                     "name": "",
                     "id": "56630960-e5d4-4b20-a59c-1217daddc051",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ae781840-e157-477a-a7aa-9bdef01446fc",
                     "path": "<Keyboard>/enter",
                     "interactions": "",
                     "processors": "",
@@ -228,6 +248,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "GraffitiSystem",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "acaa6066-76eb-4aad-bd36-47cd1b0c69f4",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Skill",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
