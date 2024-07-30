@@ -7,7 +7,6 @@ using UnityEngine.Analytics;
 public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
 {
     private Collider2D[] colliders;
-    private bool stuckCheck = true;
     public Enemy_Rusher_AggroMoveState(Enemy_Rusher _enemy, Enemy_Rusher_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
     {
 
@@ -23,14 +22,6 @@ public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
         base.Update();
         if (Vector3.Distance(enemy.Mover.position, enemy.MovePoint.transform.position) >= .05f)
         {
-            if (stuckCheck)
-            {
-                colliders = Physics2D.OverlapCircleAll(enemy.MovePoint.transform.position, 0.1f, enemy.NoMovepointWallLayer);
-                if (colliders != null && colliders.Length > 0)
-                { enemy.MovePoint.transform.position = enemy.MovePoint.prevPos; Debug.Log("stuck"); }
-            }
-            stuckCheck = false;
-
             enemy.Mover.position = Vector3.MoveTowards
             (
                 enemy.Mover.position,
@@ -42,9 +33,8 @@ public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
         {
             enemy.Mover.position = enemy.MovePoint.transform.position; // make position accurate
             enemy.MovePoint.prevPos = enemy.Mover.position; // used in external movepoint control
-            stuckCheck = true;
-            colliders = enemy.AreaDetectTarget(enemy.endFollowRadius);
-            if (colliders == null || colliders.Length <= 0)
+
+            if ((colliders = enemy.AreaDetectTarget(enemy.endFollowRadius)).Length <= 0)
             {
                 enemy.StateMachine.ChangeState(enemy.IdleState);
             }
@@ -55,36 +45,30 @@ public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
                 {
                     enemy.StateMachine.ChangeState(enemy.IdleState);
                 }
+                else if (enemy.LineDetectTarget(enemy.GazePointToDir4(), enemy.SkillArray[0].DetectRadius, 1, true) && !enemy.SkillArray[0].isCooltime)
+                {
+                    enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
+                }
+                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[1].DetectRadius, true)).Length > 0 && !enemy.SkillArray[1].isCooltime)
+                {
+                    enemy.SelectNearestTarget(colliders);
+                    enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
+                }
                 else
                 {
-                    if (enemy.LineDetectTarget(enemy.GazePointToDir4(), enemy.SkillArray[0].DetectRadius, 1, true) != null && !enemy.SkillArray[0].isCooltime)
+                    enemy.GazePoint.position = enemy.target.position;
+                    enemy.SetAnimDir(enemy.GazePointToDir4());
+                    enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
+                    if (enemy.backStep)
                     {
-                        enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
+                        enemy.moveDir *= -1;
                     }
-                    else
+                    if (!enemy.MovepointAdjustCheck())
                     {
-                        colliders = enemy.AreaDetectTarget(enemy.SkillArray[1].DetectRadius, true);
-                        if (colliders != null && colliders.Length > 0 && !enemy.SkillArray[1].isCooltime)
-                        {
-                            enemy.SelectNearestTarget(colliders);
-                            enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
-                        }
-                        else
-                        {
-                            enemy.GazePoint.position = enemy.target.position;
-                            enemy.SetAnimDir(enemy.GazePointToDir4());
-                            enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
-                            if (enemy.backStep)
-                            {
-                                enemy.moveDir *= -1;
-                            }
-                            if (!enemy.MovepointAdjustCheck())
-                            {
-                                enemy.MovePoint.transform.position += enemy.moveDir;
-                            }
-                        }
+                        enemy.MovePoint.transform.position += enemy.moveDir;
                     }
                 }
+
             }
         }
     }

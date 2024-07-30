@@ -6,9 +6,6 @@ using UnityEngine.Analytics;
 public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
 {
     private int movementMultiplyer = 1;
-    private StrictMoveNode SMN;
-    private bool stuckCheck = true;
-    private Collider2D[] colliders;
     public Enemy_Lightning_RandomMoveState(Enemy_Lightning _enemy, Enemy_Lightning_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
     {
 
@@ -27,14 +24,6 @@ public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
         base.Update();
         if (Vector3.Distance(enemy.Mover.position, enemy.MovePoint.transform.position) >= .05f)
         {
-            if (stuckCheck)
-            {
-                //colliders = Physics2D.OverlapCircleAll(enemy.MovePoint.transform.position, 0.1f, enemy.NoMovepointWallLayer);
-                //if (colliders != null && colliders.Length > 0)
-                //{ enemy.MovePoint.transform.position = enemy.MovePoint.prevPos; Debug.Log("stuck"); }
-            }
-            stuckCheck = false;
-
             enemy.Mover.position = Vector3.MoveTowards
             (
                 enemy.Mover.position,
@@ -46,10 +35,8 @@ public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
         {
             enemy.Mover.position = enemy.MovePoint.transform.position; // make position accurate
             enemy.MovePoint.prevPos = enemy.Mover.position; // used in external movepoint control
-            stuckCheck = true;
-            colliders = enemy.AreaDetectTarget(enemy.followRadius);
 
-            if (colliders != null && colliders.Length > 0)
+            if (enemy.AreaDetectTarget(enemy.followRadius).Length > 0)
             {
                 enemy.StateMachine.ChangeState(enemy.AggroIdleState);
             }
