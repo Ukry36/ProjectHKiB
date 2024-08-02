@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6300386183150711385}
   - component: {fileID: 1354096776570299807}
-  - component: {fileID: 2451104153510282462}
+  - component: {fileID: 2998059641622003339}
   m_Layer: 0
   m_Name: Attract Point
   m_TagString: Untagged
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3552553588424243169}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -8, y: 7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -47,13 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPoint: 1
   minAtt: 1.5
-  dir: {x: 0, y: 1}
-  div: 100
+  dir: {x: 0, y: 0}
+  div: 50
   attractLayer:
     serializedVersion: 2
-    m_Bits: 128
---- !u!61 &2451104153510282462
-BoxCollider2D:
+    m_Bits: 1408
+--- !u!60 &2998059641622003339
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -87,13 +87,21 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 2.125, y: 2.125}
+    adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9, y: 9}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -1.5, y: 1.5}
+      - {x: -1.5, y: -1.5}
+      - {x: 1.5, y: -1.5}
+      - {x: 1.5, y: 1.5}
+    - - {x: -5.5, y: 5.5}
+      - {x: -5.5, y: -5.5}
+      - {x: 5.5, y: -5.5}
+      - {x: 5.5, y: 5.5}
+  m_UseDelaunayMesh: 0

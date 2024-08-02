@@ -109,11 +109,11 @@ public class Delta_R : Playable
         SAPrefabfor03onlyDiag.GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[1];
     }
 
-    public override void SkillManage(int _skillNum)
+    public override void SkillManage(int[] _result)
     {
-        base.SkillManage(_skillNum);
+        base.SkillManage(_result);
 
-        switch (_skillNum)
+        switch (_result[0])
         {
             case 0:
                 skill01ing = true;
@@ -155,6 +155,7 @@ public class Delta_R : Playable
                 break;
 
             default:
+                GraffitiFailManage(_result[1]);
                 skill01ing = false;
                 StateMachine.ChangeState(IdleState);
                 break;

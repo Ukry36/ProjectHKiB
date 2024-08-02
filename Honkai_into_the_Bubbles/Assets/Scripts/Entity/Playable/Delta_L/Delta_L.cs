@@ -20,7 +20,8 @@ public class Delta_L : Playable
     public Delta_L_Skill01IngState Skill01IngState { get; private set; }
     public Delta_L_Skill01AfterState Skill01AfterState { get; private set; }
     public Delta_L_Skill02BeforeState Skill02BeforeState { get; private set; }
-    public Delta_L_Skill02AfterState Skill02AfterState { get; private set; }
+    public Delta_L_Skill02SuccessState Skill02SuccessState { get; private set; }
+    public Delta_L_Skill02FailState Skill02FailState { get; private set; }
 
     protected override void Awake()
     {
@@ -42,7 +43,8 @@ public class Delta_L : Playable
         Skill01IngState = new Delta_L_Skill01IngState(this, StateMachine, "Skill01Ing");
         Skill01AfterState = new Delta_L_Skill01AfterState(this, StateMachine, "Skill01After");
         Skill02BeforeState = new Delta_L_Skill02BeforeState(this, StateMachine, "Skill02Before");
-        Skill02AfterState = new Delta_L_Skill02AfterState(this, StateMachine, "Skill02After");
+        Skill02SuccessState = new Delta_L_Skill02SuccessState(this, StateMachine, "Skill02Success");
+        Skill02FailState = new Delta_L_Skill02FailState(this, StateMachine, "Skill02Fail");
     }
 
     protected override void Start()
@@ -57,12 +59,7 @@ public class Delta_L : Playable
 
         StateMachine.currentState.Update();
         if (canDodgeEffect || PlayerManager.instance.forcedCanDodge)
-            if (!isDodgeCooltime && InputManager.instance.DodgeInput
-            && StateMachine.currentState != DodgeState
-            && StateMachine.currentState != DodgeEnterState
-            && StateMachine.currentState != GraffitiState
-            && StateMachine.currentState != GraffitiEnterState
-            && StateMachine.currentState != GraffitiExitState)
+            if (!isDodgeCooltime && !cannotDodge && InputManager.instance.DodgeInput)
             {
                 dodgeSprite.color = PlayerManager.instance.ThemeColors
                 [
@@ -72,7 +69,7 @@ public class Delta_L : Playable
             }
 
         if (canGraffitiEffect)
-            if (!isGraffitiCooltime && InputManager.instance.GraffitiStartInput && theStat.currentGP > 0
+            if (!isGraffitiCooltime && !cannotGraffiti && InputManager.instance.GraffitiStartInput && theStat.currentGP > 0
             && StateMachine.currentState != DodgeEnterState
             && StateMachine.currentState != GraffitiState
             && StateMachine.currentState != GraffitiEnterState
@@ -96,19 +93,22 @@ public class Delta_L : Playable
             }
     }
 
-    public override void SkillManage(int _skillNum)
+    public override void SkillManage(int[] _result)
     {
-        base.SkillManage(_skillNum);
+        base.SkillManage(_result);
 
-        switch (_skillNum)
+        switch (_result[0])
         {
             case 0:
+                Skill01IngState.skill = GS.skillList[0];
                 StateMachine.ChangeState(Skill01BeforeState);
                 break;
             case 1:
+                Skill02BeforeState.skill = GS.skillList[1];
                 StateMachine.ChangeState(Skill02BeforeState);
                 break;
             default:
+                GraffitiFailManage(_result[1]);
                 StateMachine.ChangeState(IdleState);
                 break;
         }
@@ -145,5 +145,4 @@ public class Delta_L : Playable
         KnockbackState.coeff = _coeff;
         StateMachine.ChangeState(KnockbackState);
     }
-
 }

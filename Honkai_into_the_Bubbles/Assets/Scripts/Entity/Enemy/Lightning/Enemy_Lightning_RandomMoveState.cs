@@ -40,7 +40,7 @@ public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
             {
                 enemy.StateMachine.ChangeState(enemy.AggroIdleState);
             }
-            else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheck())
+            else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheckFor2x2())
             {
                 enemy.StateMachine.ChangeState(enemy.IdleState);
             }

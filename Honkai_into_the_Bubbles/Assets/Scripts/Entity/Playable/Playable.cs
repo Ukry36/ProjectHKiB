@@ -1,10 +1,7 @@
-using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.U2D.Animation;
 using System.Collections;
-using Unity.VisualScripting;
-using System.Runtime.InteropServices;
 
 public class Playable : Entity
 {
@@ -68,6 +65,9 @@ public class Playable : Entity
 
     [HideInInspector] public Vector2 moveInput;
     [HideInInspector] public Vector3 savedInput;
+
+    [HideInInspector] public bool cannotDodge;
+    [HideInInspector] public bool cannotGraffiti;
 
     protected override void Awake()
     {
@@ -140,8 +140,13 @@ public class Playable : Entity
         isGraffitiCooltime = false;
     }
 
-    public virtual void SkillManage(int _skillNum)
+    public virtual void SkillManage(int[] _result)
     {
-        Debug.Log(_skillNum);
+        Debug.Log(_result[0]);
+    }
+
+    public virtual void GraffitiFailManage(int _usedGP)
+    {
+        theStat.HPControl(_usedGP * 10);
     }
 }

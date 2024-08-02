@@ -192,6 +192,32 @@ public class Enemy : Entity
         return false;
     }
 
+    public virtual bool MovepointAdjustCheckFor2x2()
+    {
+        Vector3 DirX = new(moveDir.x, 0, 0);
+        Vector3 DirY = new(0, moveDir.y, 0);
+        if (moveDir.x == 0 || moveDir.y == 0) // non diagonal
+        {
+            return PointWallCheck(MovePoint.transform.position + moveDir * 1.5f);
+        }
+        else // moveInput.x != 0 && moveInput.y != 0    (diagonal)
+        {
+            if (PointWallCheck(MovePoint.transform.position + DirX * 1.5f))
+                moveDir.x = 0;
+
+            if (PointWallCheck(MovePoint.transform.position + DirY * 1.5f))
+                moveDir.y = 0;
+
+            if (moveDir == Vector3.zero)
+                return true;
+
+            if (moveDir.x != 0 && moveDir.y != 0)
+                if (PointWallCheck(MovePoint.transform.position + moveDir * 1.5f))
+                    MovePoint.transform.position -= DirY;
+        }
+        return false;
+    }
+
     // tinker before attack
     public void BeforeAttackTinker(Vector3 _offset)
     {

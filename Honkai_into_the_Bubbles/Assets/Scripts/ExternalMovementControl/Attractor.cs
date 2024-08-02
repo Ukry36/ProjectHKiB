@@ -28,17 +28,12 @@ public class Attractor : MonoBehaviour
     {
         for (int i = 0; i < targets.Count; i++)
         {
-            if ((!isPoint) // if ispoint, check minAtt
-                || Mathf.Abs(targets[i].att.transform.position.x - this.transform.position.x) > minAtt
-                || Mathf.Abs(targets[i].att.transform.position.y - this.transform.position.y) > minAtt)
+            if (targets[i].timer <= 0)
             {
-                if (targets[i].timer < 0)
-                {
-                    targets[i].att.Attract(GetDir(targets[i].att), div + targets[i].att.theStat.Mass);
-                    targets[i].timer = (div + targets[i].att.theStat.Mass) * Time.deltaTime;
-                }
-                targets[i].timer -= Time.deltaTime;
+                targets[i].att.Attract(GetDir(targets[i].att), div * targets[i].att.theStat.Mass);
+                targets[i].timer = div * targets[i].att.theStat.Mass * Time.deltaTime;
             }
+            targets[i].timer -= Time.deltaTime;
         }
     }
 
@@ -92,6 +87,8 @@ public class Attractor : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        targets.Remove(targets.Find(hit => hit.att.gameObject == other.gameObject));
+        AttTarget exitTarget = targets.Find(hit => hit.att.gameObject == other.gameObject);
+        exitTarget?.att.EndAttract();
+        targets.Remove(exitTarget);
     }
 }

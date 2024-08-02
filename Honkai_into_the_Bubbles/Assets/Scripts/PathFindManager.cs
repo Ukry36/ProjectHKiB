@@ -6,14 +6,22 @@ using UnityEngine;
 [System.Serializable]
 public class Node
 {
-    public Node(bool _isWall, float _x, float _y) { isWall = _isWall; x = _x; y = _y; }
+    public Node(bool _isWall, float _x, float _y, int _pfX, int _pfY)
+    {
+        isWall = _isWall;
+        x = _x;
+        y = _y;
+        pfX = _pfX;
+        pfY = _pfY;
+    }
 
     public bool isWall;
     public Node ParentNode;
 
     // G : 시작으로부터 이동했던 거리, H : |가로|+|세로| 장애물 무시하여 목표까지의 거리, F : G + H
-    public float x, y, G, H;
-    public float F { get { return G + H; } }
+    public float x, y;
+    public int G, H, pfX, pfY;
+    public int F { get { return G + H; } }
 }
 
 
@@ -25,7 +33,7 @@ public class PathFindManager : MonoBehaviour
     [SerializeField] private bool allowDiagonal, dontCrossCorner;
     [SerializeField] private LayerMask wallLayer;
 
-    float sizeX, sizeY;
+    int sizeX, sizeY;
     Node[,] NodeArray;
     Node StartNode, TargetNode, CurNode;
     List<Node> OpenList, ClosedList;
@@ -43,9 +51,9 @@ public class PathFindManager : MonoBehaviour
         targetPos = _target;
 
         // NodeArray의 크기 정해주고, isWall, x, y 대입
-        sizeX = topRight.x - bottomLeft.x + 1;
-        sizeY = topRight.y - bottomLeft.y + 1;
-        NodeArray = new Node[Mathf.FloorToInt(sizeX), Mathf.FloorToInt(sizeY)];
+        sizeX = Mathf.RoundToInt(topRight.x - bottomLeft.x + 1);
+        sizeY = Mathf.RoundToInt(topRight.y - bottomLeft.y + 1);
+        NodeArray = new Node[sizeX, sizeY];
 
         for (int i = 0; i < sizeX; i++)
         {
@@ -57,14 +65,14 @@ public class PathFindManager : MonoBehaviour
                         if ((wallLayer & (1 << col.gameObject.layer)) != 0) isWall = true;
 
 
-                NodeArray[i, j] = new Node(isWall, i + bottomLeft.x, j + bottomLeft.y);
+                NodeArray[i, j] = new Node(isWall, i + bottomLeft.x, j + bottomLeft.y, i, j);
             }
         }
 
 
         // 시작과 끝 노드, 열린리스트와 닫힌리스트, 마지막리스트 초기화
-        StartNode = NodeArray[Mathf.FloorToInt(startPos.x - bottomLeft.x), Mathf.FloorToInt(startPos.y - bottomLeft.y)];
-        TargetNode = NodeArray[Mathf.FloorToInt(targetPos.x - bottomLeft.x), Mathf.FloorToInt(targetPos.y - bottomLeft.y)];
+        StartNode = NodeArray[Mathf.RoundToInt(startPos.x - bottomLeft.x), Mathf.RoundToInt(startPos.y - bottomLeft.y)];
+        TargetNode = NodeArray[Mathf.RoundToInt(targetPos.x - bottomLeft.x), Mathf.RoundToInt(targetPos.y - bottomLeft.y)];
 
         OpenList = new List<Node>() { StartNode };
         ClosedList = new List<Node>();
@@ -99,50 +107,50 @@ public class PathFindManager : MonoBehaviour
             // ↗↖↙↘
             if (allowDiagonal)
             {
-                OpenListAdd(CurNode.x + 1, CurNode.y + 1);
-                OpenListAdd(CurNode.x - 1, CurNode.y + 1);
-                OpenListAdd(CurNode.x - 1, CurNode.y - 1);
-                OpenListAdd(CurNode.x + 1, CurNode.y - 1);
+                OpenListAdd(CurNode.pfX + 1, CurNode.pfY + 1);
+                OpenListAdd(CurNode.pfX - 1, CurNode.pfY + 1);
+                OpenListAdd(CurNode.pfX - 1, CurNode.pfY - 1);
+                OpenListAdd(CurNode.pfX + 1, CurNode.pfY - 1);
             }
 
             // ↑ → ↓ ←
-            OpenListAdd(CurNode.x, CurNode.y + 1);
-            OpenListAdd(CurNode.x + 1, CurNode.y);
-            OpenListAdd(CurNode.x, CurNode.y - 1);
-            OpenListAdd(CurNode.x - 1, CurNode.y);
+            OpenListAdd(CurNode.pfX, CurNode.pfY + 1);
+            OpenListAdd(CurNode.pfX + 1, CurNode.pfY);
+            OpenListAdd(CurNode.pfX, CurNode.pfY - 1);
+            OpenListAdd(CurNode.pfX - 1, CurNode.pfY);
         }
         return FinalNodeList;
     }
 
-    void OpenListAdd(float checkX, float checkY)
+    void OpenListAdd(int checkX, int checkY)
     {
         // 상하좌우 범위를 벗어나지 않고, 벽이 아니면서, 닫힌리스트에 없다면
-        if (checkX >= bottomLeft.x && checkX < topRight.x + 1 && checkY >= bottomLeft.y && checkY < topRight.y + 1
-        && !NodeArray[Mathf.FloorToInt(checkX - bottomLeft.x), Mathf.FloorToInt(checkY - bottomLeft.y)].isWall
-        && !ClosedList.Contains(NodeArray[Mathf.FloorToInt(checkX - bottomLeft.x), Mathf.FloorToInt(checkY - bottomLeft.y)]))
+        if (checkX >= 0 && checkX < sizeX && checkY >= 0 && checkY < sizeY
+        && !NodeArray[checkX, checkY].isWall
+        && !ClosedList.Contains(NodeArray[checkX, checkY]))
         {
             // 대각선 허용시, 벽 사이로 통과 안됨
             if (allowDiagonal)
-                if (NodeArray[Mathf.FloorToInt(CurNode.x - bottomLeft.x), Mathf.FloorToInt(checkY - bottomLeft.y)].isWall
-                && NodeArray[Mathf.FloorToInt(checkX - bottomLeft.x), Mathf.FloorToInt(CurNode.y - bottomLeft.y)].isWall)
+                if (NodeArray[CurNode.pfX, checkY].isWall
+                && NodeArray[checkX, CurNode.pfY].isWall)
                     return;
             // 코너를 가로질러 가지 않을시, 이동 중에 수직수평 장애물이 있으면 안됨
             if (dontCrossCorner)
-                if (NodeArray[Mathf.FloorToInt(CurNode.x - bottomLeft.x), Mathf.FloorToInt(checkY - bottomLeft.y)].isWall
-                || NodeArray[Mathf.FloorToInt(checkX - bottomLeft.x), Mathf.FloorToInt(CurNode.y - bottomLeft.y)].isWall)
+                if (NodeArray[CurNode.pfX, checkY].isWall
+                || NodeArray[checkX, CurNode.pfY].isWall)
                     return;
 
 
             // 이웃노드에 넣고, 직선은 10, 대각선은 14비용
-            Node NeighborNode = NodeArray[Mathf.FloorToInt(checkX - bottomLeft.x), Mathf.FloorToInt(checkY - bottomLeft.y)];
-            int MoveCost = Mathf.FloorToInt(CurNode.G + 10);
+            Node NeighborNode = NodeArray[checkX, checkY];
+            int MoveCost = CurNode.G + 10;
 
 
             // 이동비용이 이웃노드G보다 작거나 또는 열린리스트에 이웃노드가 없다면 G, H, ParentNode를 설정 후 열린리스트에 추가
             if (MoveCost < NeighborNode.G || !OpenList.Contains(NeighborNode))
             {
                 NeighborNode.G = MoveCost;
-                NeighborNode.H = (Mathf.Abs(NeighborNode.x - TargetNode.x) + Mathf.Abs(NeighborNode.y - TargetNode.y)) * 10;
+                NeighborNode.H = (Mathf.Abs(NeighborNode.pfX - TargetNode.pfX) + Mathf.Abs(NeighborNode.pfY - TargetNode.pfY)) * 10;
                 NeighborNode.ParentNode = CurNode;
 
                 OpenList.Add(NeighborNode);

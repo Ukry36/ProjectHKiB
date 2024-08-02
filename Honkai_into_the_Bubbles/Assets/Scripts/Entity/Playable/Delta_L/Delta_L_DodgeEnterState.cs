@@ -12,6 +12,8 @@ public class Delta_L_DodgeEnterState : Delta_L_State
     public override void Enter()
     {
         base.Enter();
+        player.cannotDodge = true;
+        player.cannotGraffiti = true;
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
     }
@@ -61,6 +63,8 @@ public class Delta_L_DodgeEnterState : Delta_L_State
     public override void Exit()
     {
         base.Exit();
+        player.cannotDodge = false;
+        player.cannotGraffiti = false;
         player.theStat.invincible = false;
         player.theStat.superArmor = false;
     }

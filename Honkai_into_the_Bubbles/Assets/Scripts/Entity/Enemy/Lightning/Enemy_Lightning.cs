@@ -115,34 +115,6 @@ public class Enemy_Lightning : Enemy
         StateMachine.ChangeState(KnockbackState);
     }
 
-    public override bool MovepointAdjustCheck()
-    {
-        Vector3 DirX = new(moveDir.x, 0, 0);
-        Vector3 DirY = new(0, moveDir.y, 0);
-
-        if (moveDir.x == 0 || moveDir.y == 0)
-        {
-            if (Physics2D.OverlapCircle(MovePoint.transform.position + moveDir * 1.5f, .4f, wallLayer))
-                return true;
-        }
-        else // moveInput.x != 0 && moveInput.y != 0
-        {
-            if (Physics2D.OverlapCircle(MovePoint.transform.position + DirX * 1.5f, .4f, wallLayer))
-                moveDir.x = 0;
-
-            if (Physics2D.OverlapCircle(MovePoint.transform.position + DirY * 1.5f, .4f, wallLayer))
-                moveDir.y = 0;
-
-            if (moveDir == Vector3.zero)
-                return true;
-
-            if (moveDir.x != 0 && moveDir.y != 0)
-                if (Physics2D.OverlapCircle(MovePoint.transform.position + moveDir * 1.5f, .4f, wallLayer))
-                    MovePoint.transform.position -= DirY;
-        }
-        return false;
-    }
-
     public void ShootBullet01(Vector2 _dir)
     {
         if (_dir.y < 0) // D

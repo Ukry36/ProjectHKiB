@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Delta_Default_GraffitiExitState : Delta_Default_State
 {
-    protected int graffitirResult;
+    protected int[] graffitirResult;
     public Delta_Default_GraffitiExitState(Delta_Default _player, Delta_Default_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 

@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Runtime.Serialization;
 using UnityEngine;
 
 public class Enemy_Lightning_AggroIdleState : Enemy_Lightning_State

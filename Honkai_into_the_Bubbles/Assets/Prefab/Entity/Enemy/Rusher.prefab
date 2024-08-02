@@ -605,7 +605,7 @@ MonoBehaviour:
   dontCrossCorner: 1
   wallLayer:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 1344
 --- !u!82 &5440859803028975799
 AudioSource:
   m_ObjectHideFlags: 0
@@ -764,7 +764,7 @@ MonoBehaviour:
   DEF: 0
   CritRate: 0
   CritDMG: 0
-  Mass: 0
+  Mass: 1
   entity: {fileID: 0}
 --- !u!61 &4404217947297648775
 BoxCollider2D:
@@ -795,7 +795,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -951,6 +951,7 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 1216
+  size: 1
 --- !u!1001 &8388380354418478945
 PrefabInstance:
   m_ObjectHideFlags: 0

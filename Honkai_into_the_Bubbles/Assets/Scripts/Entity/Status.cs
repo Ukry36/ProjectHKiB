@@ -16,7 +16,7 @@ public class Status : MonoBehaviour
     public int DEF = 0;
     public int CritRate = 0;
     public int CritDMG = 10;
-    public int Mass = 0;
+    public int Mass = 1;
     [HideInInspector] public Entity entity;
 
     private void Awake()

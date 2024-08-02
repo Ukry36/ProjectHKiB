@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Delta_L_GraffitiExitState : Delta_L_State
 {
-    private int graffitirResult;
+    private int[] graffitirResult;
     public Delta_L_GraffitiExitState(Delta_L _player, Delta_L_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
     {
 
@@ -13,8 +13,10 @@ public class Delta_L_GraffitiExitState : Delta_L_State
     public override void Enter()
     {
         base.Enter();
+        player.cannotDodge = true;
+        player.cannotGraffiti = true;
         graffitirResult = player.GS.EndGraffiti();
-        if (graffitirResult == 1)
+        if (graffitirResult[0] == 1)
         {
             player.savedInput = player.moveInput;
             player.SetAnimDir(player.savedInput);
@@ -38,5 +40,7 @@ public class Delta_L_GraffitiExitState : Delta_L_State
     public override void Exit()
     {
         base.Exit();
+        player.cannotDodge = false;
+        player.cannotGraffiti = false;
     }
 }

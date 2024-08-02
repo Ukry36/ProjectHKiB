@@ -95,7 +95,7 @@ public class Delta_Delta : Playable
             }
     }
 
-    public override void SkillManage(int _skillNum)
+    public override void SkillManage(int[] _skillNum)
     {
         base.SkillManage(_skillNum);
         StateMachine.ChangeState(IdleState);

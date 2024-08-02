@@ -40,7 +40,7 @@ public class Enemy_Collapse_RandomMoveState : Enemy_Collapse_State
             {
                 enemy.StateMachine.ChangeState(enemy.AggroMoveState);
             }
-            else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheck())
+            else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheckFor2x2())
             {
                 enemy.StateMachine.ChangeState(enemy.IdleState);
             }

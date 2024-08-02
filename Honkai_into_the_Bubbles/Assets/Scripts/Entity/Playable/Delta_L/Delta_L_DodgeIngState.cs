@@ -15,6 +15,7 @@ public class Delta_L_DodgeIngState : Delta_L_State
     public override void Enter()
     {
         base.Enter();
+        player.cannotDodge = true;
         stateTimer = player.keepDodgeTimeLimit;
         player.theStat.superArmor = true;
         speed = player.keepDodgeSpeed * PlayerManager.instance.exKeepDodgeSpeedCoeff;
@@ -60,6 +61,7 @@ public class Delta_L_DodgeIngState : Delta_L_State
     public override void Exit()
     {
         base.Exit();
+        player.cannotDodge = false;
         player.SetAnimDir(player.savedInput);
         player.theStat.superArmor = false;
         player.Mover.position = player.MovePoint.transform.position;

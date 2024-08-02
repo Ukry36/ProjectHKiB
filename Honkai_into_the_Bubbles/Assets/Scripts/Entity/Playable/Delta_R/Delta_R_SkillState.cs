@@ -52,23 +52,7 @@ public class Delta_R_SkillState : Delta_R_State
             }
         }
 
-        if (!InputManager.instance.DodgeInput && stateTimer > 0)
-        {
-            if (InputManager.instance.AttackInput)
-            {
-                player.skill01ing = false;
-                player.skill02ing = false;
-                if (player.moveInput != Vector2.zero)
-                    player.savedInput = player.moveInput;
-                player.AttackState.combo = 3;
-                stateMachine.ChangeState(player.AttackState);
-            }
-            else if (InputManager.instance.GraffitiStartInput)
-            {
-                keepSkill = true;
-            }
-        }
-        else
+        if (InputManager.instance.DodgeInput || stateTimer < 0)
         {
             if (!keepSkill)
             {
@@ -76,6 +60,20 @@ public class Delta_R_SkillState : Delta_R_State
                 player.skill02ing = false;
             }
             stateMachine.ChangeState(player.IdleState);
+
+        }
+        else if (InputManager.instance.AttackInput)
+        {
+            player.skill01ing = false;
+            player.skill02ing = false;
+            if (player.moveInput != Vector2.zero)
+                player.savedInput = player.moveInput;
+            player.AttackState.combo = 3;
+            stateMachine.ChangeState(player.AttackState);
+        }
+        else if (InputManager.instance.GraffitiStartInput)
+        {
+            keepSkill = true;
         }
 
     }

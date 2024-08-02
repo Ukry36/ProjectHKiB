@@ -50,7 +50,7 @@ public class Enemy_Lightning_PathfindMoveState : Enemy_Lightning_State
                 {
                     enemy.moveDir = enemy.SetVectorOne(new Vector2(enemy.PathList[1].x, enemy.PathList[1].y));
 
-                    if (!enemy.MovepointAdjustCheck())
+                    if (!enemy.MovepointAdjustCheckFor2x2())
                         enemy.MovePoint.transform.position += enemy.moveDir;
                 }
             }

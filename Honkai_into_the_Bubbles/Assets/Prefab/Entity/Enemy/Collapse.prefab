@@ -13,13 +13,13 @@ GameObject:
   - component: {fileID: 58413774476941569}
   - component: {fileID: 1215573754102231708}
   - component: {fileID: 8000205272042374334}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Collapse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1042963005847376968
 Transform:
   m_ObjectHideFlags: 0
@@ -53,15 +53,15 @@ MonoBehaviour:
   isPlayer: 0
   superArmor: 0
   invincible: 0
-  maxHP: 100
+  maxHP: 300
   currentHP: 0
-  maxGP: 20
+  maxGP: 0
   currentGP: 0
   ATK: 100
   DEF: 0
   CritRate: 0
   CritDMG: 10
-  Mass: 0
+  Mass: 5
   entity: {fileID: 0}
 --- !u!61 &58413774476941569
 BoxCollider2D:
@@ -92,7 +92,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -106,7 +106,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.9, y: 1.9}
   m_EdgeRadius: 0
 --- !u!50 &1215573754102231708
 Rigidbody2D:
@@ -148,10 +148,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   theStat: {fileID: 0}
-  movePoint: {fileID: 0}
+  movePoint: {fileID: 675716644483179185}
   wallLayer:
     serializedVersion: 2
     m_Bits: 1216
+  size: 2
 --- !u!1 &2741461391815455093
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +162,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8413281844722558768}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gaze point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -200,7 +201,7 @@ GameObject:
   - component: {fileID: 1513914531586419360}
   - component: {fileID: 4347016408010445795}
   - component: {fileID: 4741060758616065175}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: collapse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +343,7 @@ MonoBehaviour:
   dontCrossCorner: 1
   wallLayer:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 1344
 --- !u!114 &1513914531586419360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,7 +367,7 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 1984
-  DefaultSpeed: 4
+  DefaultSpeed: 1.5
   SprintCoeff: 2
   InvincibleFrame: 0
   target: {fileID: 0}
@@ -550,6 +551,14 @@ PrefabInstance:
     - target: {fileID: 6339534339176533087, guid: a5452a798b88382488df6874886c0953, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560782084725654153, guid: a5452a798b88382488df6874886c0953, type: 3}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560782084725654153, guid: a5452a798b88382488df6874886c0953, type: 3}
+      propertyPath: m_Size.y
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

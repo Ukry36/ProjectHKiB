@@ -48,7 +48,7 @@ public class GraffitiSystem : MonoBehaviour
         }
     }
 
-    public int EndGraffiti()
+    public int[] EndGraffiti()
     {
         StartCoroutine(TimeScalerCoroutine(false));
         grid.SetActive(false);
@@ -92,7 +92,7 @@ public class GraffitiSystem : MonoBehaviour
         Normalize();
     }
 
-    private int GetSkillNum()
+    private int[] GetSkillNum()
     {
         Normalize();
 
@@ -103,12 +103,12 @@ public class GraffitiSystem : MonoBehaviour
                 for (int j = 0; j < 4; j++)
                 {
                     if (CheckSameList(skillList[i].skillCommand, activatedTileList))
-                        return i;
+                        return new int[] { i, activatedTileList.Count };
                     Turn90();
                 }
             }
         }
-        return -1;
+        return new int[] { -1, activatedTileList.Count };
     }
 
     private bool CheckSameList(List<Vector2> _l1, List<Vector2> _l2)
