@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_L_Skill02FailState : Delta_L_State
+public class Delta_L_Skill02FailState : Playable_State
 {
-    public Delta_L_Skill02FailState(Delta_L _player, Delta_L_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_L player;
+    public Delta_L_Skill02FailState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_L _player) : base(_player, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
@@ -17,7 +18,7 @@ public class Delta_L_Skill02FailState : Delta_L_State
     public override void Update()
     {
         base.Update();
-        if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        if (finishTriggerCalled)
         {
             stateMachine.ChangeState(player.IdleState);
         }

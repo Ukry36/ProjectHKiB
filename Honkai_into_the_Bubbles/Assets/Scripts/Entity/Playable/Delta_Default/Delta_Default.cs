@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Delta_Default : Playable
 {
-    public Delta_Default_StateMachine StateMachine { get; protected set; }
     public Delta_Default_IdleState IdleState { get; protected set; }
     public Delta_Default_WalkState WalkState { get; protected set; }
     public Delta_Default_DodgeEnterState DodgeEnterState { get; protected set; }
@@ -19,50 +18,49 @@ public class Delta_Default : Playable
     protected override void Awake()
     {
         base.Awake();
-        StateMachine = new Delta_Default_StateMachine();
 
-        IdleState = new Delta_Default_IdleState(this, StateMachine, "Idle");
-        WalkState = new Delta_Default_WalkState(this, StateMachine, "Walk");
-        DodgeEnterState = new Delta_Default_DodgeEnterState(this, StateMachine, "DodgeEnter");
-        DodgeState = new Delta_Default_DodgeIngState(this, StateMachine, "DodgeIng");
-        DodgeExitState = new Delta_Default_DodgeExitState(this, StateMachine, "DodgeExit");
-        GraffitiEnterState = new Delta_Default_GraffitiEnterState(this, StateMachine, "DodgeEnter");
-        GraffitiState = new Delta_Default_GraffitiIngState(this, StateMachine, "DodgeIng");
-        GraffitiExitState = new Delta_Default_GraffitiExitState(this, StateMachine, "DodgeExit");
-        KnockbackState = new Delta_Default_KnockbackState(this, StateMachine, "Knockback");
+        IdleState = new Delta_Default_IdleState(this, stateMachine, "Idle", this);
+        WalkState = new Delta_Default_WalkState(this, stateMachine, "Walk", this);
+        DodgeEnterState = new Delta_Default_DodgeEnterState(this, stateMachine, "DodgeEnter", this);
+        DodgeState = new Delta_Default_DodgeIngState(this, stateMachine, "DodgeIng", this);
+        DodgeExitState = new Delta_Default_DodgeExitState(this, stateMachine, "DodgeExit", this);
+        GraffitiEnterState = new Delta_Default_GraffitiEnterState(this, stateMachine, "DodgeEnter", this);
+        GraffitiState = new Delta_Default_GraffitiIngState(this, stateMachine, "DodgeIng", this);
+        GraffitiExitState = new Delta_Default_GraffitiExitState(this, stateMachine, "DodgeExit", this);
+        KnockbackState = new Delta_Default_KnockbackState(this, stateMachine, "Knockback", this);
     }
 
     protected override void Start()
     {
         base.Start();
-        StateMachine.Initialize(IdleState);
+        stateMachine.Initialize(IdleState);
     }
 
     protected override void Update()
     {
         base.Update();
-        StateMachine.currentState.Update();
+        stateMachine.currentState.Update();
         if (canDodgeEffect || PlayerManager.instance.forcedCanDodge)
             if (!isDodgeCooltime && InputManager.instance.DodgeInput
-            && StateMachine.currentState != DodgeState
-            && StateMachine.currentState != DodgeEnterState
-            && StateMachine.currentState != GraffitiState
-            && StateMachine.currentState != GraffitiEnterState
-            && StateMachine.currentState != GraffitiExitState)
+            && stateMachine.currentState != DodgeState
+            && stateMachine.currentState != DodgeEnterState
+            && stateMachine.currentState != GraffitiState
+            && stateMachine.currentState != GraffitiEnterState
+            && stateMachine.currentState != GraffitiExitState)
             {
                 dodgeSprite.color = PlayerManager.instance.ThemeColors
                 [
                     totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count
                 ];
-                StateMachine.ChangeState(DodgeEnterState);
+                stateMachine.ChangeState(DodgeEnterState);
             }
 
         if (canGraffitiEffect)
             if (!isGraffitiCooltime && InputManager.instance.GraffitiStartInput && theStat.currentGP > 0
-            && StateMachine.currentState != DodgeEnterState
-            && StateMachine.currentState != GraffitiState
-            && StateMachine.currentState != GraffitiEnterState
-            && StateMachine.currentState != GraffitiExitState)
+            && stateMachine.currentState != DodgeEnterState
+            && stateMachine.currentState != GraffitiState
+            && stateMachine.currentState != GraffitiEnterState
+            && stateMachine.currentState != GraffitiExitState)
             {
                 MovePoint.gameObject.SetActive(false);
                 if (!Physics2D.OverlapCircle(MovePoint.transform.position, .4f, LayerManager.instance.graffitiWallLayer))
@@ -71,11 +69,10 @@ public class Delta_Default : Playable
                     [
                         totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count
                     ];
-                    theStat.GPControl(-1);
-                    if (StateMachine.currentState == DodgeState)
-                        StateMachine.ChangeState(GraffitiState);
+                    if (stateMachine.currentState == DodgeState)
+                        stateMachine.ChangeState(GraffitiState);
                     else
-                        StateMachine.ChangeState(GraffitiEnterState);
+                        stateMachine.ChangeState(GraffitiEnterState);
                 }
                 MovePoint.gameObject.SetActive(true);
 
@@ -105,6 +102,11 @@ public class Delta_Default : Playable
 
         KnockbackState.dir = GrrogyDir;
         KnockbackState.coeff = _coeff;
-        StateMachine.ChangeState(KnockbackState);
+        stateMachine.ChangeState(KnockbackState);
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        stateMachine.currentState.AnimationFinishTrigger();
     }
 }

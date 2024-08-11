@@ -1,18 +1,21 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.Analytics;
 
-public class Delta_R_WalkState : Delta_R_State
+public class Delta_R_WalkState : Playable_State
 {
-    public Delta_R_WalkState(Delta_R _player, Delta_R_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_R player;
+    public Delta_R_WalkState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_R _player) : base(_playerBase, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
     {
         base.Enter();
+        player.StationalActivateManage(true);
     }
 
     public override void Update()
@@ -21,7 +24,7 @@ public class Delta_R_WalkState : Delta_R_State
 
         if (InputManager.instance.AttackInput)
         {
-            player.StateMachine.ChangeState(player.AttackState);
+            stateMachine.ChangeState(player.AttackState);
         }
         else if (Vector3.Distance(player.Mover.position, player.MovePoint.transform.position) >= .05f)
         {
@@ -38,7 +41,7 @@ public class Delta_R_WalkState : Delta_R_State
             player.MovePoint.prevPos = player.Mover.position; // used in external movepoint control
             if (player.moveInput == Vector2.zero)
             {
-                player.StateMachine.ChangeState(player.IdleState);
+                stateMachine.ChangeState(player.IdleState);
             }
             else
             {
@@ -50,7 +53,7 @@ public class Delta_R_WalkState : Delta_R_State
                 player.SetAnimDir(player.savedInput);
                 if (player.MovepointAdjustCheck())
                 {
-                    player.StateMachine.ChangeState(player.IdleState);
+                    stateMachine.ChangeState(player.IdleState);
                 }
                 else
                 {
@@ -64,6 +67,7 @@ public class Delta_R_WalkState : Delta_R_State
     public override void Exit()
     {
         base.Exit();
+        player.StationalActivateManage(false);
         player.Mover.position = player.MovePoint.transform.position;
         player.SetAnimDir(player.savedInput);
     }

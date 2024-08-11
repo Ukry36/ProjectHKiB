@@ -30,7 +30,7 @@ public class Drone : Friendly
             }
             else
             {
-                target = Player.transform;
+                target = Player;
             }
 
             targetTimer = 2f;

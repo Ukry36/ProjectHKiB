@@ -33,28 +33,27 @@ public class TransferPosition : MonoBehaviour
     {
         if (component.isPlayer)
         {
+            InputManager.instance.StopUIInput(true);
             InputManager.instance.StopPlayerInput(true);
-            ScreenManager.instance.SetFadeColor(fadeColor);
+            MenuManager.instance.SetFadeColor(fadeColor);
         }
 
-        yield return ScreenManager.instance.FadeCoroutine(1, delay);
+        yield return MenuManager.instance.FadeCoroutine(1, delay);
 
-        component.transform.position += destination.position - this.transform.position;
-        component.entity.MovePoint.transform.position += destination.position - this.transform.position;
+        component.transform.position = destination.position;
+        component.entity.MovePoint.transform.position = destination.position;
         if (component.isPlayer)
             CameraManager.instance.StrictMovement(destination.position - this.transform.position);
         if (dir != Vector2.zero)
-        {
-            component.entity.Animator.SetFloat("dirX", dir.x);
-            component.entity.Animator.SetFloat("dirY", dir.y);
-        }
+            component.entity.SetAnimDir(dir);
 
         yield return new WaitForSeconds(innerDelay);
 
         if (component.isPlayer)
         {
-            yield return ScreenManager.instance.FadeCoroutine(0, delay);
+            yield return MenuManager.instance.FadeCoroutine(0, delay);
             InputManager.instance.StopPlayerInput(false);
+            InputManager.instance.StopUIInput(false);
         }
         can = true;
     }

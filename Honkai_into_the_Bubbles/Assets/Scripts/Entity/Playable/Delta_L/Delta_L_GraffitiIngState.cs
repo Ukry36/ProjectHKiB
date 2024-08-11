@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_L_GraffitiIngState : Delta_L_State
+public class Delta_L_GraffitiIngState : Playable_State
 {
     private Vector3 graffitiSavedInput;
-    public Delta_L_GraffitiIngState(Delta_L _player, Delta_L_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_L player;
+    public Delta_L_GraffitiIngState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_L _player) : base(_player, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
@@ -15,17 +16,17 @@ public class Delta_L_GraffitiIngState : Delta_L_State
         base.Enter();
         player.cannotDodge = true;
         player.cannotGraffiti = true;
-        stateTimer = player.graffitiMaxtime + PlayerManager.instance.exGraffitimaxtime;
-        MenuManager.instance.GraffitiCountDownEnable(stateTimer);
+        unscaledStateTimer = player.graffitiMaxtime + PlayerManager.instance.exGraffitimaxtime;
+        MenuManager.instance.GraffitiCountDownEnable(unscaledStateTimer);
         player.theStat.superArmor = true;
     }
 
     public override void Update()
     {
         base.Update();
-        if (stateTimer < 0 || InputManager.instance.GraffitiEndInput)
+        if (unscaledStateTimer < 0 || InputManager.instance.GraffitiEndInput)
         {
-            player.StateMachine.ChangeState(player.GraffitiExitState);
+            stateMachine.ChangeState(player.GraffitiExitState);
         }
         else if (player.theStat.currentGP > 0)
         {
@@ -44,7 +45,7 @@ public class Delta_L_GraffitiIngState : Delta_L_State
                 {
                     player.MovePoint.transform.position += graffitiSavedInput;
                     player.Mover.position = player.MovePoint.transform.position;
-                    player.theStat.GPControl(-1);
+                    player.theStat.GPControl(-1, _silence: true);
                 }
             }
         }

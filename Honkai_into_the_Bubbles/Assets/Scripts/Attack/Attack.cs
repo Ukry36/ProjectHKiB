@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Attack : MonoBehaviour
 {
+    public Color hitColor;
+    public string hitSFX;
+    public string initialSFX;
     public Status theStat;
     public LayerMask damageLayer;
     public int DamageCoefficient; // Coefficient of atk
@@ -12,22 +15,20 @@ public class Attack : MonoBehaviour
     public int Strong; // cause hit motion
     public int TrackingRadius; // teleport in front of enemy on tracking area
 
+    protected virtual void OnEnable()
+    {
+        AudioManager.instance.PlaySound(initialSFX, this.transform);
+    }
+
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
-        int trueDMG = theStat.ATK * DamageCoefficient / 100;
-        bool critical = Random.Range(1, 101) < BaseCriticalRate + theStat.CritRate;
-
-        if (critical)
-            trueDMG += trueDMG * theStat.CritDMG / 100;
-
-        theStat.GPControl(GraffitiPoint);
-
-
         if ((damageLayer & (1 << other.gameObject.layer)) != 0)
         {
+            theStat.GPControl(GraffitiPoint);
             if (other.gameObject.TryGetComponent(out Status component))
             {
-                component.Hit(trueDMG, critical, Strong, this.transform.position);
+                AudioManager.instance.PlaySound(hitSFX, this.transform);
+                component.Hit(this);
             }
         }
     }

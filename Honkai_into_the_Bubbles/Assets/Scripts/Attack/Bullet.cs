@@ -10,8 +10,9 @@ public class Bullet : Skill
     private float time = 0;
 
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         time = lastTime;
     }
 
@@ -20,7 +21,7 @@ public class Bullet : Skill
         this.transform.Translate(moveWay * Time.deltaTime);
         if (time < 0)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
         time -= Time.deltaTime;
     }
@@ -30,7 +31,7 @@ public class Bullet : Skill
         base.OnTriggerEnter2D(other);
         if ((destroyLayer & (1 << other.gameObject.layer)) != 0)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }

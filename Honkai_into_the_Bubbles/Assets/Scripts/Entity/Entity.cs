@@ -2,14 +2,18 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 using System.Collections.Generic;
+using UnityEngine.Rendering.Universal;
 
 public class Entity : MonoBehaviour
 {
     public int ID;
     public string Name;
     public List<Color> ThemeColors = new();
+    public string[] hitSFX;
+    public string[] deathSFX;
 
     public Animator Animator { get; private set; }
+    public Animator simpleDirControlAnimator;
     protected SpriteRenderer SpriteRenderer { get; private set; }
     [SerializeField] protected SpriteLibrary SpriteLibrary;
 
@@ -20,7 +24,7 @@ public class Entity : MonoBehaviour
     public LayerMask wallLayer; // cannot walk through
     public LayerMask NoMovepointWallLayer { get; private set; }
 
-    [SerializeField] public float DefaultSpeed = 4f; // default speed
+    public float DefaultSpeed = 4f; // default speed
     [HideInInspector] public float MoveSpeed { get; private set; } // actual speed (movespeed = default * sprint * ex)
     public float SprintCoeff = 2f;
 
@@ -28,6 +32,7 @@ public class Entity : MonoBehaviour
     public PathFindManager PathFinder { get; private set; }
 
     public int InvincibleFrame = 4; // invincible for n frame after hit
+    [HideInInspector] public Light2D hitLight;
 
     [HideInInspector] public Transform target;
 
@@ -40,6 +45,8 @@ public class Entity : MonoBehaviour
         PathFinder = GetComponent<PathFindManager>();
         MoveSpeed = DefaultSpeed;
         NoMovepointWallLayer = wallLayer & ~(1 << LayerMask.NameToLayer("Movepoint"));
+        hitLight = GetComponent<Light2D>();
+        hitLight.enabled = false;
     }
 
     protected virtual void Start()
@@ -82,7 +89,6 @@ public class Entity : MonoBehaviour
         _ => Vector2.zero
     };
 
-
     public Vector2 GazePointToDir8() =>
     Mathf.RoundToInt(Mathf.Atan2(GazePoint.localPosition.y, GazePoint.localPosition.x) * 8 / Mathf.PI) switch
     {
@@ -110,11 +116,23 @@ public class Entity : MonoBehaviour
         {
             Animator.SetFloat("dirX", _dir.x);
             Animator.SetFloat("dirY", 0);
+            if (simpleDirControlAnimator != null)
+            {
+                simpleDirControlAnimator.SetFloat("dirX", _dir.x);
+                simpleDirControlAnimator.SetFloat("dirY", 0);
+            }
+
         }
         else
         {
             Animator.SetFloat("dirX", 0);
             Animator.SetFloat("dirY", _dir.y);
+            if (simpleDirControlAnimator != null)
+            {
+                simpleDirControlAnimator.SetFloat("dirX", 0);
+                simpleDirControlAnimator.SetFloat("dirY", _dir.y);
+            }
+
         }
     }
 
@@ -153,7 +171,7 @@ public class Entity : MonoBehaviour
     }
 
 
-    public IEnumerator HitCoroutine()
+    public IEnumerator HitInvincible()
     {
         theStat.invincible = true;
         Color color = SpriteRenderer.color;
@@ -164,17 +182,42 @@ public class Entity : MonoBehaviour
             color.a = 0;
             SpriteRenderer.color = color;
             yield return new WaitForSeconds(0.036f);
-            color.a = 1;
-            SpriteRenderer.color = color;
+            SpriteRenderer.color = Color.white;
             yield return new WaitForSeconds(0.036f);
         }
 
         theStat.invincible = false;
     }
 
+    public IEnumerator HitLightShine(Color _color)
+    {
+        hitLight.color = _color;
+        hitLight.enabled = true;
+        yield return new WaitForSeconds(0.18f);
+        hitLight.enabled = false;
+    }
+
     public virtual void Die()
     {
-        Destroy(MovePoint.gameObject);
-        Destroy(Mover.gameObject);
+        AudioManager.instance.PlaySound(deathSFX, this.transform);
+        MovePoint.gameObject.SetActive(false);
+        Mover.gameObject.SetActive(false);
+    }
+
+    public virtual void AnimationFinishTrigger()
+    {
+        Debug.LogError("ERROR : No AnimationEndTrigger Function");
+    }
+
+    public virtual void StationalActivateManage(bool _Enter)
+    {
+        if (_Enter)
+        {
+
+        }
+        else
+        {
+
+        }
     }
 }

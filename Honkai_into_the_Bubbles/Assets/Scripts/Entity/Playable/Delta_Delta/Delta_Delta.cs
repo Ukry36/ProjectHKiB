@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Delta_Delta : Playable
 {
-    public Delta_Delta_StateMachine StateMachine { get; private set; }
     public Delta_Delta_IdleState IdleState { get; private set; }
     public Delta_Delta_WalkState WalkState { get; private set; }
     public Delta_Delta_DodgeEnterState DodgeEnterState { get; private set; }
@@ -24,39 +23,37 @@ public class Delta_Delta : Playable
     protected override void Awake()
     {
         base.Awake();
-        StateMachine = new Delta_Delta_StateMachine();
-
-        IdleState = new Delta_Delta_IdleState(this, StateMachine, "Idle");
-        WalkState = new Delta_Delta_WalkState(this, StateMachine, "Walk");
-        DodgeEnterState = new Delta_Delta_DodgeEnterState(this, StateMachine, "DodgeEnter");
-        DodgeState = new Delta_Delta_DodgeIngState(this, StateMachine, "DodgeIng");
-        DodgeExitState = new Delta_Delta_DodgeExitState(this, StateMachine, "DodgeExit");
-        GraffitiEnterState = new Delta_Delta_GraffitiEnterState(this, StateMachine, "DodgeEnter");
-        GraffitiState = new Delta_Delta_GraffitiIngState(this, StateMachine, "DodgeIng");
-        GraffitiExitState = new Delta_Delta_GraffitiExitState(this, StateMachine, "DodgeExit");
-        KnockbackState = new Delta_Delta_KnockbackState(this, StateMachine, "Knockback");
-        AttackState = new Delta_Delta_BasicAttackState(this, StateMachine, "Attack");
-        AttackExitState = new Delta_Delta_BasicAttackExitState(this, StateMachine, "AttackExit");
-        Skill01State = new Delta_Delta_Skill01State(this, StateMachine, "Skill01");
-        Skill02State = new Delta_Delta_Skill02State(this, StateMachine, "Skill02");
+        IdleState = new Delta_Delta_IdleState(this, stateMachine, "Idle", this);
+        WalkState = new Delta_Delta_WalkState(this, stateMachine, "Walk", this);
+        DodgeEnterState = new Delta_Delta_DodgeEnterState(this, stateMachine, "DodgeEnter", this);
+        DodgeState = new Delta_Delta_DodgeIngState(this, stateMachine, "DodgeIng", this);
+        DodgeExitState = new Delta_Delta_DodgeExitState(this, stateMachine, "DodgeExit", this);
+        GraffitiEnterState = new Delta_Delta_GraffitiEnterState(this, stateMachine, "DodgeEnter", this);
+        GraffitiState = new Delta_Delta_GraffitiIngState(this, stateMachine, "DodgeIng", this);
+        GraffitiExitState = new Delta_Delta_GraffitiExitState(this, stateMachine, "DodgeExit", this);
+        KnockbackState = new Delta_Delta_KnockbackState(this, stateMachine, "Knockback", this);
+        AttackState = new Delta_Delta_BasicAttackState(this, stateMachine, "Attack", this);
+        AttackExitState = new Delta_Delta_BasicAttackExitState(this, stateMachine, "AttackExit", this);
+        Skill01State = new Delta_Delta_Skill01State(this, stateMachine, "Skill01", this);
+        Skill02State = new Delta_Delta_Skill02State(this, stateMachine, "Skill02", this);
     }
 
     protected override void Start()
     {
         base.Start();
-        StateMachine.Initialize(IdleState);
+        stateMachine.Initialize(IdleState);
     }
 
     protected override void Update()
     {
-        StateMachine.currentState.Update();
+        stateMachine.currentState.Update();
         if (canDodgeEffect || PlayerManager.instance.forcedCanDodge)
             if (!isDodgeCooltime && InputManager.instance.DodgeInput
-            && StateMachine.currentState != DodgeState
-            && StateMachine.currentState != DodgeEnterState
-            && StateMachine.currentState != GraffitiState
-            && StateMachine.currentState != GraffitiEnterState
-            && StateMachine.currentState != GraffitiExitState)
+            && stateMachine.currentState != DodgeState
+            && stateMachine.currentState != DodgeEnterState
+            && stateMachine.currentState != GraffitiState
+            && stateMachine.currentState != GraffitiEnterState
+            && stateMachine.currentState != GraffitiExitState)
             {
                 if (AttackState.combo == 2 || AttackState.combo == 3
                     || AttackExitState.combo == 2 || AttackExitState.combo == 3)
@@ -67,15 +64,15 @@ public class Delta_Delta : Playable
                 [
                     totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count
                 ];
-                StateMachine.ChangeState(DodgeEnterState);
+                stateMachine.ChangeState(DodgeEnterState);
             }
 
         if (canGraffitiEffect)
             if (!isGraffitiCooltime && InputManager.instance.GraffitiStartInput && theStat.currentGP > 0
-            && StateMachine.currentState != DodgeEnterState
-            && StateMachine.currentState != GraffitiState
-            && StateMachine.currentState != GraffitiEnterState
-            && StateMachine.currentState != GraffitiExitState)
+            && stateMachine.currentState != DodgeEnterState
+            && stateMachine.currentState != GraffitiState
+            && stateMachine.currentState != GraffitiEnterState
+            && stateMachine.currentState != GraffitiExitState)
             {
                 MovePoint.gameObject.SetActive(false);
                 if (!Physics2D.OverlapCircle(MovePoint.transform.position, .4f, LayerManager.instance.graffitiWallLayer))
@@ -84,11 +81,10 @@ public class Delta_Delta : Playable
                     [
                         totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count
                     ];
-                    theStat.GPControl(-1);
-                    if (StateMachine.currentState == DodgeState)
-                        StateMachine.ChangeState(GraffitiState);
+                    if (stateMachine.currentState == DodgeState)
+                        stateMachine.ChangeState(GraffitiState);
                     else
-                        StateMachine.ChangeState(GraffitiEnterState);
+                        stateMachine.ChangeState(GraffitiEnterState);
                 }
                 MovePoint.gameObject.SetActive(true);
 
@@ -98,7 +94,7 @@ public class Delta_Delta : Playable
     public override void SkillManage(int[] _skillNum)
     {
         base.SkillManage(_skillNum);
-        StateMachine.ChangeState(IdleState);
+        stateMachine.ChangeState(IdleState);
     }
 
 
@@ -125,7 +121,12 @@ public class Delta_Delta : Playable
 
         KnockbackState.dir = GrrogyDir;
         KnockbackState.coeff = _coeff;
-        StateMachine.ChangeState(KnockbackState);
+        stateMachine.ChangeState(KnockbackState);
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        stateMachine.currentState.AnimationFinishTrigger();
     }
 
 }

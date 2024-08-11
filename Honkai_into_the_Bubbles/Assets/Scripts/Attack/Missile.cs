@@ -17,8 +17,9 @@ public class Missile : Skill
     private float turnSpeed = 0;
 
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
+        base.OnEnable();
         boxCollider2D.enabled = false;
         time = lastTime;
     }
@@ -39,7 +40,7 @@ public class Missile : Skill
         this.transform.Translate(moveWay * Time.deltaTime);
 
         if (time < 0)
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
 
         time -= Time.deltaTime;
     }
@@ -58,11 +59,11 @@ public class Missile : Skill
         if (targetPos != null)
         {
             if (other.gameObject == targetPos.gameObject)
-                Destroy(this.gameObject);
+                this.gameObject.SetActive(false);
         }
         if ((destroyLayer & (1 << other.gameObject.layer)) != 0)
         {
-            Destroy(this.gameObject);
+            this.gameObject.SetActive(false);
         }
     }
 }

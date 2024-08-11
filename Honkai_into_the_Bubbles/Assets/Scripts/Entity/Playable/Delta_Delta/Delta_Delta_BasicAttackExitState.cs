@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_Delta_BasicAttackExitState : Delta_Delta_State
+public class Delta_Delta_BasicAttackExitState : Playable_State
 {
     public int combo = 0;
     public bool attackReserved = false;
-    public Delta_Delta_BasicAttackExitState(Delta_Delta _player, Delta_Delta_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_Delta player;
+    public Delta_Delta_BasicAttackExitState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_Delta _player) : base(_playerBase, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
@@ -25,12 +26,12 @@ public class Delta_Delta_BasicAttackExitState : Delta_Delta_State
             attackReserved = false;
             player.AttackState.combo = combo + 1;
             player.AttackState.combo %= player.AttackArray.Length;
-            player.StateMachine.ChangeState(player.AttackState);
+            stateMachine.ChangeState(player.AttackState);
         }
 
-        if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        if (finishTriggerCalled)
         {
-            player.StateMachine.ChangeState(player.IdleState);
+            stateMachine.ChangeState(player.IdleState);
 
         }
     }

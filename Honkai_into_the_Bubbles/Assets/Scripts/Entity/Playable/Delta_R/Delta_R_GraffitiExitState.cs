@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_R_GraffitiExitState : Delta_R_State
+public class Delta_R_GraffitiExitState : Playable_State
 {
     private int[] graffitirResult;
-    public Delta_R_GraffitiExitState(Delta_R _player, Delta_R_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_R player;
+    public Delta_R_GraffitiExitState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_R _player) : base(_playerBase, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
@@ -19,7 +20,7 @@ public class Delta_R_GraffitiExitState : Delta_R_State
     public override void Update()
     {
         base.Update();
-        if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        if (finishTriggerCalled)
         {
             player.savedInput = player.moveInput;
             player.SetAnimDir(player.savedInput);

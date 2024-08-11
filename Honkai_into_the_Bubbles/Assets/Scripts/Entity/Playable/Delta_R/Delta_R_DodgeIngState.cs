@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Delta_R_DodgeIngState : Delta_R_State
+public class Delta_R_DodgeIngState : Playable_State
 {
     private float speed;
     private int moveCount;
-    public Delta_R_DodgeIngState(Delta_R _player, Delta_R_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_R player;
+    public Delta_R_DodgeIngState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_R _player) : base(_playerBase, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
@@ -28,7 +29,7 @@ public class Delta_R_DodgeIngState : Delta_R_State
         || moveCount >= player.keepDodgeLimit + PlayerManager.instance.exDodgeLength
         || !InputManager.instance.DodgeProgressInput)
         {
-            player.StateMachine.ChangeState(player.DodgeExitState);
+            stateMachine.ChangeState(player.DodgeExitState);
         }
         else if (Vector3.Distance(player.Mover.position, player.MovePoint.transform.position) >= .05f)
         {

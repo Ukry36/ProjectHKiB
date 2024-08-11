@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_Delta_DodgeExitState : Delta_Delta_State
+public class Delta_Delta_DodgeExitState : Playable_State
 {
-    public Delta_Delta_DodgeExitState(Delta_Delta _player, Delta_Delta_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_Delta player;
+    public Delta_Delta_DodgeExitState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_Delta _player) : base(_playerBase, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
@@ -21,12 +22,12 @@ public class Delta_Delta_DodgeExitState : Delta_Delta_State
         if (player.startAtCombo3 && InputManager.instance.AttackInput)
         {
             player.AttackState.combo = 2;
-            player.StateMachine.ChangeState(player.AttackState);
+            stateMachine.ChangeState(player.AttackState);
         }
-        else if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        else if (finishTriggerCalled)
         {
             player.startAtCombo3 = false;
-            player.StateMachine.ChangeState(player.IdleState);
+            stateMachine.ChangeState(player.IdleState);
         }
     }
 

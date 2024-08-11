@@ -11,7 +11,6 @@ public class Enemy : Entity
     [HideInInspector] public Vector3 moveDir;
 
     [SerializeField] private GameObject beforeAttackEffectPrefab;
-    [SerializeField] private AudioSource TinkerAudioSource;
 
     [BoxGroup("Move Algorythm")]
     public LayerMask targetLayer;
@@ -222,7 +221,6 @@ public class Enemy : Entity
     public void BeforeAttackTinker(Vector3 _offset)
     {
         Instantiate(beforeAttackEffectPrefab, this.transform.position + _offset, Quaternion.identity);
-        TinkerAudioSource.Play();
     }
 
     public IEnumerator TurnCooltime()
