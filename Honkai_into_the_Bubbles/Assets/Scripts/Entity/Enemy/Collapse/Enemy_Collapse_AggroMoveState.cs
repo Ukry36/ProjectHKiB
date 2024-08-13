@@ -28,40 +28,59 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
                 enemy.MovePoint.transform.position,
                 enemy.MoveSpeed * Time.deltaTime
             );
+            return;
         }
-        else
+        enemy.Mover.position = enemy.MovePoint.transform.position; // make position accurate
+        enemy.MovePoint.prevPos = enemy.Mover.position; // used in external movepoint control
+        colliders = enemy.AreaDetectTarget(enemy.endFollowRadius);
+        if (colliders.Length <= 0)
         {
-            enemy.Mover.position = enemy.MovePoint.transform.position; // make position accurate
-            enemy.MovePoint.prevPos = enemy.Mover.position; // used in external movepoint control
-            colliders = enemy.AreaDetectTarget(enemy.endFollowRadius);
-            if (colliders.Length <= 0)
+            enemy.StateMachine.ChangeState(enemy.IdleState);
+            return;
+        }
+        enemy.SelectNearestTarget(colliders);
+        if (enemy.SetPath() < 2)
+        {
+            enemy.StateMachine.ChangeState(enemy.IdleState);
+            return;
+        }
+
+        if (enemy.LineDetectTarget(enemy.moveDir, enemy.SkillArray[0].DetectRadius, 1, true))
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(enemy.target.transform.position, new Vector2(2, 2), 0);
+
+            bool isWallLayerPresent = false;
+
+            foreach (Collider2D collider in colliders)
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                if (((1 << collider.gameObject.layer) & enemy.wallLayer & ~(1 << LayerMask.NameToLayer("Player")) & ~(1 << LayerMask.NameToLayer("Movepoint")) & ~(1 << LayerMask.NameToLayer("Enemy"))) != 0)
+                {
+                    isWallLayerPresent = true;
+                    break;
+                }
             }
-            else
+            if (!isWallLayerPresent && ((enemy.theStat.currentHP / enemy.theStat.maxHP) < 0.5 || !enemy.SkillArray[0].isCooltime))
             {
-                enemy.SelectNearestTarget(colliders);
-                if (enemy.SetPath() < 2)
-                {
-                    enemy.StateMachine.ChangeState(enemy.IdleState);
-                }
-                // else if (enemy.LineDetectTarget(enemy.moveDir, enemy.SkillArray[0].DetectRadius, 1, true) && !enemy.SkillArray[0].isCooltime)
-                // {
-                //     enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
-                // }
-                else
-                {
-                    enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
-                    enemy.SetAnimDir(enemy.moveDir);
-
-                    if (!enemy.MovepointAdjustCheckFor2x2())
-                    {
-                        enemy.MovePoint.transform.position += enemy.moveDir;
-                    }
-                }
-
+                enemy.StateMachine.ChangeState(enemy.Skill01BeforeState);
+                return;
             }
         }
+
+        if (enemy.LineDetectTarget(enemy.moveDir, enemy.SkillArray[1].DetectRadius, 1, true) && !enemy.SkillArray[1].isCooltime)
+        {
+            enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
+            return;
+        }
+
+        enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
+        enemy.SetAnimDir(enemy.moveDir);
+
+        if (!enemy.MovepointAdjustCheckFor2x2())
+        {
+            enemy.MovePoint.transform.position += enemy.moveDir;
+        }
+
+
     }
 
     public override void Exit()

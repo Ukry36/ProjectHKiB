@@ -15,6 +15,12 @@ public class Enemy_Collapse : Enemy
     public Enemy_Collapse_PathfindIdleState PFIdleState { get; private set; }
     public Enemy_Collapse_PathfindMoveState PFMoveState { get; private set; }
 
+    public Enemy_Collapse_Skill01Before Skill01BeforeState { get; private set; }
+    public Enemy_Collapse_Skill01Ing Skill01IngState { get; private set; }
+    public Enemy_Collapse_Skill01After Skill01AfterState { get; private set; }
+    public Enemy_Collapse_Skill02Enter Skill02EnterState { get; private set; }
+    public Enemy_Collapse_Skill02 Skill02State { get; private set; }
+
     protected override void Awake()
     {
         base.Awake();
@@ -28,6 +34,11 @@ public class Enemy_Collapse : Enemy
         PFIdleState = new Enemy_Collapse_PathfindIdleState(this, StateMachine, "Idle");
         PFMoveState = new Enemy_Collapse_PathfindMoveState(this, StateMachine, "Walk");
         AggroMoveState = new Enemy_Collapse_AggroMoveState(this, StateMachine, "Walk");
+        Skill01BeforeState = new Enemy_Collapse_Skill01Before(this, StateMachine, "skill01Before");
+        Skill01IngState = new Enemy_Collapse_Skill01Ing(this, StateMachine, "skill01Ing");
+        Skill01AfterState = new Enemy_Collapse_Skill01After(this, StateMachine, "skill01After");
+        Skill02EnterState = new Enemy_Collapse_Skill02Enter(this, StateMachine, "skill02Enter");
+        Skill02State = new Enemy_Collapse_Skill02(this, StateMachine, "skill02");
     }
 
     protected override void Start()
@@ -41,9 +52,13 @@ public class Enemy_Collapse : Enemy
         base.Update();
 
         StateMachine.currentState.Update();
+    }
 
-        Debug.Log(StateMachine.currentState.GetType().Name);
-
+    public IEnumerator SkillCooltime(Skill skill)
+    {
+        skill.isCooltime = true;
+        yield return new WaitForSeconds(skill.Cooltime);
+        skill.isCooltime = false;
     }
 
     /*
