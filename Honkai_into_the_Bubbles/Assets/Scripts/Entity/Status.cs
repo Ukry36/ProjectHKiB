@@ -24,48 +24,132 @@ public class Status : MonoBehaviour
         entity = GetComponentInChildren<Entity>();
     }
 
-    public void Hit(int _dmg, bool _crit, int _strong, Vector3 _attackOrigin)
+    public void Hit(Attack _attackInfo)
     {
-        entity.Hit(_attackOrigin);
-        int trueDmg = _dmg > DEF ? _dmg - DEF : 0;
+        Vector3 attackOrigin = _attackInfo.theStat.transform.position;
+
+        int trueDMG = _attackInfo.theStat.ATK * _attackInfo.DamageCoefficient / 100;
+
+        bool critical = Random.Range(1, 101) < _attackInfo.BaseCriticalRate + _attackInfo.theStat.CritRate;
+
+        trueDMG += critical ? trueDMG * _attackInfo.theStat.CritDMG / 100 : 0;
+
+        trueDMG = trueDMG > DEF ? trueDMG - DEF : 0;
+
+        entity.Hit(attackOrigin);
 
         if (!invincible)
         {
-            StartCoroutine(entity.HitCoroutine());
-            HPControl(-trueDmg);
+            StartCoroutine(entity.HitLightShine(_attackInfo.hitColor));
+            StartCoroutine(entity.HitInvincible());
+            HPControl(-trueDMG);
+            Debug.Log(trueDMG);
         }
 
-        int Coeff = _strong - Mass;
+        int Coeff = _attackInfo.Strong - Mass;
 
         if (!superArmor && Coeff > 0)
         {
-            entity.Knockback(_attackOrigin, Coeff);
+            entity.Knockback(attackOrigin, Coeff);
         }
     }
 
-    public void SetHitAnimObject()
+    public IEnumerator TickDamageCoroutine(TickDamage _damageInfo)
     {
-        entity = GetComponentsInChildren<Entity>(false)[0];
+        for (int i = 0; i < _damageInfo.Coeff; i++)
+        {
+            int trueDMG = _damageInfo.Damage;
+            if (isPlayer)
+            {
+                if (_damageInfo.Type == TickDamage.TickDamageType.Cold)
+                {
+                    if (PlayerManager.instance.halfImuneToColdTick)
+                    {
+                        trueDMG /= 2;
+                    }
+                    else if (PlayerManager.instance.imuneToColdTick)
+                    {
+                        yield break;
+                    }
+                }
+                else
+                {
+                    // onother damagetype imune calc
+                }
+            }
+
+            if (!invincible)
+            {
+                StartCoroutine(entity.HitLightShine(_damageInfo.hitColor));
+                HPControl(-trueDMG, _damageInfo.SFX);
+            }
+
+            if (!superArmor && _damageInfo.Strong)
+            {
+                entity.Knockback(this.transform.position, 1);
+                StartCoroutine(entity.HitInvincible());
+            }
+            yield return new WaitForSeconds(_damageInfo.Delay);
+        }
     }
 
-    public void HPControl(int _o)
+    public void SetHitAnimObject() => entity = GetComponentsInChildren<Entity>(false)[0];
+
+    public void HPControl(int _o, string[] _customSFX = null, bool _silence = false)
     {
         currentHP += _o;
-        if (currentHP > maxHP)
-            currentHP = maxHP;
+        if (currentHP > maxHP) currentHP = maxHP;
+
         if (currentHP <= 0)
         {
             currentHP = 0;
             entity.Die();
         }
+
+        if (!_silence)
+        {
+            if (_customSFX == null)
+            {
+                if (_o < 0)
+                {
+                    AudioManager.instance.PlaySound(entity.hitSFX, this.transform);
+                }
+                else if (_o > 0)
+                {
+                    AudioManager.instance.PlaySound(AudioManager.instance.hpSFX, this.transform);
+                }
+            }
+            else
+            {
+                AudioManager.instance.PlaySound(_customSFX, this.transform);
+            }
+        }
     }
 
-    public void GPControl(int _o)
+    public void GPControl(int _o, string[] _customSFX = null, bool _silence = false)
     {
         currentGP += _o;
-        if (currentGP > maxGP)
-            currentGP = maxGP;
-        if (currentGP < 0)
-            currentGP = 0;
+        if (currentGP > maxGP) currentGP = maxGP;
+
+        if (currentGP < 0) currentGP = 0;
+
+        if (!_silence)
+        {
+            if (_customSFX == null)
+            {
+                if (_o < 0)
+                {
+                    AudioManager.instance.PlaySound(AudioManager.instance.gpDrainSFX, this.transform);
+                }
+                else if (_o > 0)
+                {
+                    AudioManager.instance.PlaySound(AudioManager.instance.gpSFX, this.transform);
+                }
+            }
+            else
+            {
+                AudioManager.instance.PlaySound(_customSFX, this.transform);
+            }
+        }
     }
 }

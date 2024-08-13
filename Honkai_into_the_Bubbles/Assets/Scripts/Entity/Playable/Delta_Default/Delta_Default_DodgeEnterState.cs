@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_Default_DodgeEnterState : Delta_Default_State
+public class Delta_Default_DodgeEnterState : Playable_State
 {
-    public Delta_Default_DodgeEnterState(Delta_Default _player, Delta_Default_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_Default player;
+    public Delta_Default_DodgeEnterState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_Default _player) : base(_player, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
@@ -19,11 +20,11 @@ public class Delta_Default_DodgeEnterState : Delta_Default_State
     public override void Update()
     {
         base.Update();
-        if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        if (finishTriggerCalled)
         {
             if (player.keepDodge || PlayerManager.instance.forcedKeepDodge)
             {
-                player.StateMachine.ChangeState(player.DodgeState);
+                stateMachine.ChangeState(player.DodgeState);
             }
             else
             {
@@ -53,7 +54,7 @@ public class Delta_Default_DodgeEnterState : Delta_Default_State
                 }
                 player.Mover.position = player.MovePoint.transform.position;
 
-                player.StateMachine.ChangeState(player.DodgeExitState);
+                stateMachine.ChangeState(player.DodgeExitState);
             }
         }
     }

@@ -1,8 +1,8 @@
 using System.Collections;
 using TMPro;
-using Unity.Collections.LowLevel.Unsafe;
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class MenuManager : MonoBehaviour
 {
@@ -34,6 +34,9 @@ public class MenuManager : MonoBehaviour
     private Playable[] thePlayer;
     [SerializeField] private Status theStat;
 
+    [SerializeField] private Image fadeImage;
+    private Color tempColor;
+
     [SerializeField] private GameObject _pauseCanvasGO;
     [SerializeField] private GameObject _inventoryCanvasGO;
     [SerializeField] private GameObject _equipmentCanvasGO;
@@ -48,7 +51,7 @@ public class MenuManager : MonoBehaviour
     private bool inInventory;
     private bool inItemList;
 
-    [SerializeField] private UnityEngine.UI.Image HPbar;
+    [SerializeField] private Image HPbar;
     [SerializeField] private TextMeshProUGUI HPtext;
     [SerializeField] private TextMeshProUGUI GSTtext;
 
@@ -112,8 +115,6 @@ public class MenuManager : MonoBehaviour
 
     private void StopPlayerforUI()
     {
-        for (int i = 0; i < thePlayer.Length; i++)
-            thePlayer[i].savedInput = Vector3.zero;
         theInput.StopPlayerInput(true);
     }
 
@@ -122,13 +123,51 @@ public class MenuManager : MonoBehaviour
         theInput.StopPlayerInput(false);
     }
 
+    #region Fadein / Fadeout
+
+    public void SetFadeColor(Color _color)
+    {
+        _color.a = fadeImage.color.a;
+        tempColor = _color;
+    }
+
+    public IEnumerator FadeCoroutine(float _opacity, float _fadeTime)
+    {
+        StopCoroutine(nameof(FadeOutCoroutine));
+        if (tempColor.a < _opacity)
+            yield return FadeOutCoroutine(_opacity, 1f / _fadeTime);
+        else
+            yield return FadeInCoroutine(_opacity, 1f / _fadeTime);
+    }
+    private IEnumerator FadeOutCoroutine(float _opacity, float _speed)
+    {
+        while (tempColor.a < _opacity)
+        {
+            tempColor.a += _speed * Time.deltaTime;
+            fadeImage.color = tempColor;
+            yield return null;
+        }
+        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, _opacity);
+    }
+    private IEnumerator FadeInCoroutine(float _opacity, float _speed)
+    {
+        while (tempColor.a > _opacity)
+        {
+            tempColor.a -= _speed * Time.deltaTime;
+            fadeImage.color = tempColor;
+            yield return null;
+        }
+        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, _opacity);
+    }
+
+    #endregion
+
     // play
     #region Graffiti Countdown
 
     public void GraffitiCountDownEnable(float _time)
     {
         GSTtext.gameObject.SetActive(true);
-        GSTtext.text = (Mathf.Floor(_time * 100f * 10000f) / 10000f).ToString();
         StartCoroutine(GraffitiCountDown(_time));
     }
 
@@ -136,9 +175,9 @@ public class MenuManager : MonoBehaviour
     {
         while (_time > 0)
         {
+            GSTtext.text = (Mathf.Floor(_time * 10000f) / 10000f).ToString();
             yield return null;
-            _time = _time < 0 ? 0 : _time - Time.deltaTime;
-            GSTtext.text = (Mathf.Floor(_time * 100f * 10000f) / 10000f).ToString();
+            _time = _time < 0 ? 0 : _time - Time.unscaledDeltaTime;
         }
         GraffitiCountDownDisable();
     }

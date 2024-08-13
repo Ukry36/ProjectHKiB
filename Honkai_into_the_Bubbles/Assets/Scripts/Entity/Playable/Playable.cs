@@ -20,28 +20,20 @@ public class Playable : Entity
     [BoxGroup("Dodge")]
     [SerializeField] protected bool canDodgeEffect = false;
     [BoxGroup("Dodge")]
-    [ShowIf("canDodgeEffect")]
     [SerializeField] protected SpriteRenderer dodgeSprite; // to apply theme color
     [BoxGroup("Dodge")]
-    [ShowIf("canDodgeEffect")]
     public int dodgeLength = 1; // max length player can dodge
     [BoxGroup("Dodge")]
-    [ShowIf("canDodgeEffect")]
     [SerializeField] protected int continuousDodgeLimit = 2; // max count player can continue dodging
     [BoxGroup("Dodge")]
-    [ShowIf("canDodgeEffect")]
     [SerializeField] protected float dodgeCooltime = 1.5f; // dodge cooltime
     [BoxGroup("Dodge")]
-    [ShowIf("canDodgeEffect")]
     public bool keepDodge = false;
     [BoxGroup("Dodge")]
-    [ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
     public int keepDodgeLimit = 6;
     [BoxGroup("Dodge")]
-    [ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
     public float keepDodgeTimeLimit = 3f;
     [BoxGroup("Dodge")]
-    [ShowIf(EConditionOperator.And, "canDodgeEffect", "keepDodge")]
     public float keepDodgeSpeed = 12f;
     protected int continuousDodgeCount = 0; // count countinuous dodge
     protected int totalDodgeCount = 0; // how many time did you dodge
@@ -53,13 +45,10 @@ public class Playable : Entity
     [SerializeField] protected bool canGraffitiEffect = false;
     [HideInInspector] public GraffitiSystem GS;
     [BoxGroup("Graffiti")]
-    [ShowIf("canGraffitiEffect")]
-    public float graffitiMaxtime = 0.1f;
+    public float graffitiMaxtime = 0.15f;
     [BoxGroup("Graffiti")]
-    [ShowIf("canGraffitiEffect")]
     [SerializeField] protected float graffitiCooltime = 0.3f;
     [BoxGroup("Graffiti")]
-    [ShowIf("canGraffitiEffect")]
     [SerializeField] protected bool endAtGraffitiStartPoint = true;
     protected bool isGraffitiCooltime;
 
@@ -69,10 +58,13 @@ public class Playable : Entity
     [HideInInspector] public bool cannotDodge;
     [HideInInspector] public bool cannotGraffiti;
 
+    public Playable_StateMachine stateMachine;
+
     protected override void Awake()
     {
         base.Awake();
         GS = GetComponent<GraffitiSystem>();
+        stateMachine = new Playable_StateMachine();
     }
 
     public virtual void ChangeSpriteLibraryAsset()
@@ -148,5 +140,23 @@ public class Playable : Entity
     public virtual void GraffitiFailManage(int _usedGP)
     {
         theStat.HPControl(_usedGP * 10);
+    }
+
+    public override void StationalActivateManage(bool _Enter)
+    {
+        if (_Enter)
+        {
+            if (PlayerManager.instance.dotLightOn)
+                PlayerManager.instance.DotLight.SetActive(true);
+            if (PlayerManager.instance.handLightOn)
+                PlayerManager.instance.HandLight.SetActive(true);
+        }
+        else
+        {
+            if (PlayerManager.instance.dotLightOn)
+                PlayerManager.instance.DotLight.SetActive(false);
+            if (PlayerManager.instance.handLightOn)
+                PlayerManager.instance.HandLight.SetActive(false);
+        }
     }
 }

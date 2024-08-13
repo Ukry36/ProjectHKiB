@@ -183,7 +183,6 @@ public class ChoiceManager : MonoBehaviour
             if (Input.GetKey(KeyCode.UpArrow))
             {
                 keyInput = false;
-                theAudio.Play(keySound);
                 if (result > 0)
                     result--;
                 else
@@ -193,7 +192,6 @@ public class ChoiceManager : MonoBehaviour
             else if (Input.GetKey(KeyCode.DownArrow))
             {
                 keyInput = false;
-                theAudio.Play(keySound);
                 if (result < count)
                     result++;
                 else
@@ -203,7 +201,6 @@ public class ChoiceManager : MonoBehaviour
             else if (Input.GetKey(KeyCode.Z))
             {
                 keyInput = false;
-                theAudio.Play(enterSound);
                 ExitChoice();
             }
         }

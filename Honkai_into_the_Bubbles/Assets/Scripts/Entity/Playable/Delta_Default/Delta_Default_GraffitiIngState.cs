@@ -2,28 +2,29 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_Default_GraffitiIngState : Delta_Default_State
+public class Delta_Default_GraffitiIngState : Playable_State
 {
     private Vector3 graffitiSavedInput;
-    public Delta_Default_GraffitiIngState(Delta_Default _player, Delta_Default_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_Default player;
+    public Delta_Default_GraffitiIngState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_Default _player) : base(_player, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
     {
         base.Enter();
-        stateTimer = player.graffitiMaxtime + PlayerManager.instance.exGraffitimaxtime;
-        MenuManager.instance.GraffitiCountDownEnable(stateTimer);
+        unscaledStateTimer = player.graffitiMaxtime + PlayerManager.instance.exGraffitimaxtime;
+        MenuManager.instance.GraffitiCountDownEnable(unscaledStateTimer);
         player.theStat.superArmor = true;
     }
 
     public override void Update()
     {
         base.Update();
-        if (stateTimer < 0 || InputManager.instance.GraffitiEndInput)
+        if (unscaledStateTimer < 0 || InputManager.instance.GraffitiEndInput)
         {
-            player.StateMachine.ChangeState(player.GraffitiExitState);
+            stateMachine.ChangeState(player.GraffitiExitState);
         }
         else if (player.theStat.currentGP > 0)
         {
@@ -42,7 +43,7 @@ public class Delta_Default_GraffitiIngState : Delta_Default_State
                 {
                     player.MovePoint.transform.position += graffitiSavedInput;
                     player.Mover.position = player.MovePoint.transform.position;
-                    player.theStat.GPControl(-1);
+                    player.theStat.GPControl(-1, _silence: true);
                 }
             }
         }

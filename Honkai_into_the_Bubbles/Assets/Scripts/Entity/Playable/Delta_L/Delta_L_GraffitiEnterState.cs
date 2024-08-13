@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_L_GraffitiEnterState : Delta_L_State
+public class Delta_L_GraffitiEnterState : Playable_State
 {
-    public Delta_L_GraffitiEnterState(Delta_L _player, Delta_L_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_L player;
+    public Delta_L_GraffitiEnterState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_L _player) : base(_player, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
@@ -17,6 +18,7 @@ public class Delta_L_GraffitiEnterState : Delta_L_State
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
         player.GS.StartGraffiti();
+        player.theStat.GPControl(-1, _silence: true);
     }
 
     public override void Update()
@@ -24,11 +26,11 @@ public class Delta_L_GraffitiEnterState : Delta_L_State
         base.Update();
         if (InputManager.instance.GraffitiEndInput)
         {
-            player.StateMachine.ChangeState(player.GraffitiExitState);
+            stateMachine.ChangeState(player.GraffitiExitState);
         }
-        if (player.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        else if (finishTriggerCalled)
         {
-            player.StateMachine.ChangeState(player.GraffitiState);
+            stateMachine.ChangeState(player.GraffitiState);
         }
     }
 

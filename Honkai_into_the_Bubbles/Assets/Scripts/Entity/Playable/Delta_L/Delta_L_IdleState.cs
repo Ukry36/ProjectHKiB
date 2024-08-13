@@ -1,17 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 
-public class Delta_L_IdleState : Delta_L_State
+public class Delta_L_IdleState : Playable_State
 {
-    public Delta_L_IdleState(Delta_L _player, Delta_L_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_L player;
+    public Delta_L_IdleState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_L _player) : base(_player, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     public override void Enter()
     {
         base.Enter();
+        player.StationalActivateManage(true);
     }
 
     public override void Update()
@@ -19,7 +22,7 @@ public class Delta_L_IdleState : Delta_L_State
         base.Update();
         if (InputManager.instance.AttackInput)
         {
-            player.StateMachine.ChangeState(player.AttackState);
+            stateMachine.ChangeState(player.AttackState);
         }
         else if (InputManager.instance.MoveInput != Vector2.zero)
         {
@@ -30,7 +33,7 @@ public class Delta_L_IdleState : Delta_L_State
             }
             else
             {
-                player.StateMachine.ChangeState(player.WalkState);
+                stateMachine.ChangeState(player.WalkState);
             }
         }
 
@@ -40,5 +43,6 @@ public class Delta_L_IdleState : Delta_L_State
     public override void Exit()
     {
         base.Exit();
+        player.StationalActivateManage(false);
     }
 }

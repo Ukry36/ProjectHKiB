@@ -58,6 +58,7 @@ public class InputManager : MonoBehaviour
     private InputAction move, sprint, attack, dodge, grafitti, skill, confirm, cancel, equipment, inventory;
 
     public bool stopPlayer;
+    public bool stopUI;
 
     public void StopPlayerInput(bool _stop)
     {
@@ -70,6 +71,14 @@ public class InputManager : MonoBehaviour
         GraffitiStartInput = false;
         GraffitiEndInput = false;
         SkillInput = false;
+    }
+
+    public void StopUIInput(bool _stop)
+    {
+        ConfirmInput = false;
+        CancelInput = false;
+        EquipmentOpenCloseInput = false;
+        InventoryOpenCloseInput = false;
     }
 
 
@@ -92,9 +101,12 @@ public class InputManager : MonoBehaviour
         }
 
         // ui input detect 
-        ConfirmInput = confirm.WasPressedThisFrame();
-        CancelInput = cancel.WasPressedThisFrame();
-        EquipmentOpenCloseInput = equipment.WasPressedThisFrame();
-        InventoryOpenCloseInput = inventory.WasPressedThisFrame();
+        if (!stopUI)
+        {
+            ConfirmInput = confirm.WasPressedThisFrame();
+            CancelInput = cancel.WasPressedThisFrame();
+            EquipmentOpenCloseInput = equipment.WasPressedThisFrame();
+            InventoryOpenCloseInput = inventory.WasPressedThisFrame();
+        }
     }
 }

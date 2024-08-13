@@ -51,7 +51,6 @@ public class PopUp : MonoBehaviour
 
     public void Select()
     {
-        theAudio.Play(keySound);
         if (result)
         {
             NoPanel.color = deselected;
@@ -81,13 +80,11 @@ public class PopUp : MonoBehaviour
             }
             else if (Input.GetKeyDown(KeyCode.Z))
             {
-                theAudio.Play(enterSound);
                 keyInput = false;
                 activated = false;
             }
             else if (Input.GetKeyDown(KeyCode.X))
             {
-                theAudio.Play(cancelSound);
                 result = false;
                 keyInput = false;
                 activated = false;

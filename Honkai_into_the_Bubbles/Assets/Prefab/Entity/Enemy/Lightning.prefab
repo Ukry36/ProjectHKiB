@@ -47,6 +47,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.20784314, b: 0, a: 1}
+  hitSFX: 
+  initialSFX: 
   theStat: {fileID: 8465309907849305440}
   damageLayer:
     serializedVersion: 2
@@ -58,6 +61,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 4
   Cooltime: 2.5
+  Duration: 0
   Delay: 0.2
   animationPlayTime: 0.7
   skillCommand: []
@@ -1021,6 +1025,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.20784314, b: 0, a: 1}
+  hitSFX: 
+  initialSFX: 
   theStat: {fileID: 8465309907849305440}
   damageLayer:
     serializedVersion: 2
@@ -1032,6 +1039,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 4
   Cooltime: 2.5
+  Duration: 0
   Delay: 0.2
   animationPlayTime: 0.7
   skillCommand: []
@@ -1541,6 +1549,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.20784314, b: 0, a: 1}
+  hitSFX: 
+  initialSFX: 
   theStat: {fileID: 8465309907849305440}
   damageLayer:
     serializedVersion: 2
@@ -1552,6 +1563,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 4
   Cooltime: 2.5
+  Duration: 0
   Delay: 0.2
   animationPlayTime: 0.7
   skillCommand: []
@@ -1819,7 +1831,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5748336688515935172}
-  - component: {fileID: 1410181528629325884}
   m_Layer: 8
   m_Name: Gaze point
   m_TagString: Untagged
@@ -1842,58 +1853,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 358721282003547894}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &1410181528629325884
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2293143577975771193}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_StaticShadowCaster: 0
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 1707609743
-  m_SortingLayer: 7
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 1175839298, guid: 8950a99cda3f2ea4eb2c1f43e1b7de9a, type: 3}
-  m_Color: {r: 1, g: 0.40739924, b: 0, a: 1}
-  m_FlipX: 0
-  m_FlipY: 1
-  m_DrawMode: 0
-  m_Size: {x: 0.16, y: 0.16}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
 --- !u!1 &2293572044760860802
 GameObject:
   m_ObjectHideFlags: 0
@@ -3084,6 +3043,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.20784314, b: 0, a: 1}
+  hitSFX: 
+  initialSFX: 
   theStat: {fileID: 8465309907849305440}
   damageLayer:
     serializedVersion: 2
@@ -3095,6 +3057,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 4
   Cooltime: 2.5
+  Duration: 0
   Delay: 0.2
   animationPlayTime: 0.7
   skillCommand: []
@@ -3368,8 +3331,8 @@ GameObject:
   - component: {fileID: 7290848933501590391}
   - component: {fileID: 4223524526499684865}
   - component: {fileID: 5482689072067426367}
-  - component: {fileID: 2708280719462285630}
   - component: {fileID: 7213242411693798973}
+  - component: {fileID: 5904053850380278189}
   m_Layer: 8
   m_Name: lightning
   m_TagString: Untagged
@@ -3514,6 +3477,11 @@ MonoBehaviour:
   ID: 30001
   Name: Lightning
   ThemeColors: []
+  hitSFX:
+  - hit_mechanic
+  - hit_mechanic_with_metal
+  deathSFX:
+  - hit_mechanic_explosion
   SpriteLibrary: {fileID: 4619151856880970515}
   boxCollider: {fileID: 0}
   Mover: {fileID: 358721282003547894}
@@ -3524,7 +3492,8 @@ MonoBehaviour:
     m_Bits: 1984
   DefaultSpeed: 1.5
   SprintCoeff: 2
-  InvincibleFrame: 4
+  InvincibleFrame: 0
+  hitLight: {fileID: 0}
   target: {fileID: 0}
   SkillArray:
   - {fileID: 2227318064447938955}
@@ -3532,7 +3501,6 @@ MonoBehaviour:
   PathList: []
   moveDir: {x: 0, y: 0, z: 0}
   beforeAttackEffectPrefab: {fileID: 5571567845738202018, guid: 5b1c81279139df947b804d6471d5879b, type: 3}
-  TinkerAudioSource: {fileID: 2708280719462285630}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -3570,108 +3538,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41837a7c731d414faa6c85b9a9cc864, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theStat: {fileID: 0}
+  theStat: {fileID: 8465309907849305440}
   allowDiagonal: 0
   dontCrossCorner: 0
   wallLayer:
     serializedVersion: 2
     m_Bits: 320
---- !u!82 &2708280719462285630
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4183397028804520025}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5f436d484c30fdf4183733b7c2825ae3, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.5
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 5
-  Pan2D: 0
-  rolloffMode: 1
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &7213242411693798973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3686,6 +3558,56 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   VanishPrefab:
   - {fileID: 2285794129138269017, guid: 5a1b46003be6b944aa2482bd84becb54, type: 3}
+--- !u!114 &5904053850380278189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4183397028804520025}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ComponentVersion: 1
+  m_LightType: 1
+  m_BlendStyleIndex: 1
+  m_FalloffIntensity: 0.5
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_LightVolumeIntensity: 1
+  m_LightVolumeIntensityEnabled: 0
+  m_ApplyToSortingLayers: cbdf6ae7
+  m_LightCookieSprite: {fileID: 0}
+  m_DeprecatedPointLightCookieSprite: {fileID: 0}
+  m_LightOrder: 0
+  m_AlphaBlendOnOverlap: 0
+  m_OverlapOperation: 0
+  m_NormalMapDistance: 3
+  m_NormalMapQuality: 2
+  m_UseNormalMap: 0
+  m_ShadowIntensityEnabled: 0
+  m_ShadowIntensity: 0.75
+  m_ShadowVolumeIntensityEnabled: 0
+  m_ShadowVolumeIntensity: 0.75
+  m_LocalBounds:
+    m_Center: {x: -0.00024998188, y: 0.49989992, z: 0}
+    m_Extent: {x: 1.50045, y: 1.5009, z: 0}
+  m_PointLightInnerAngle: 360
+  m_PointLightOuterAngle: 360
+  m_PointLightInnerRadius: 0
+  m_PointLightOuterRadius: 1
+  m_ShapeLightParametricSides: 5
+  m_ShapeLightParametricAngleOffset: 0
+  m_ShapeLightParametricRadius: 1
+  m_ShapeLightFalloffSize: 0.5
+  m_ShapeLightFalloffOffset: {x: 0, y: 0}
+  m_ShapePath:
+  - {x: -1, y: -0.5, z: 0}
+  - {x: 1, y: -0.5, z: 0}
+  - {x: 1, y: 1.5, z: 0}
+  - {x: -1, y: 1.5, z: 0}
 --- !u!1 &4296680997689210360
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,6 +4161,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eee14b4271916bb498973f69de066527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.20399357, b: 0, a: 1}
+  hitSFX: 
+  initialSFX: missile_fire
   theStat: {fileID: 8465309907849305440}
   damageLayer:
     serializedVersion: 2
@@ -4250,6 +4175,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 8
   Cooltime: 3
+  Duration: 0
   Delay: 0.2
   animationPlayTime: 1
   skillCommand: []
@@ -4635,6 +4561,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.20784314, b: 0, a: 1}
+  hitSFX: 
+  initialSFX: 
   theStat: {fileID: 8465309907849305440}
   damageLayer:
     serializedVersion: 2
@@ -4646,6 +4575,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 4
   Cooltime: 2.5
+  Duration: 0
   Delay: 0.2
   animationPlayTime: 0.7
   skillCommand: []
@@ -4747,6 +4677,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.20784314, b: 0, a: 1}
+  hitSFX: 
+  initialSFX: 
   theStat: {fileID: 8465309907849305440}
   damageLayer:
     serializedVersion: 2
@@ -4758,6 +4691,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 4
   Cooltime: 2.5
+  Duration: 0
   Delay: 0.2
   animationPlayTime: 0.7
   skillCommand: []
@@ -5063,6 +4997,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.20784314, b: 0, a: 1}
+  hitSFX: 
+  initialSFX: 
   theStat: {fileID: 8465309907849305440}
   damageLayer:
     serializedVersion: 2
@@ -5074,6 +5011,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 4
   Cooltime: 2.5
+  Duration: 0
   Delay: 0.2
   animationPlayTime: 0.7
   skillCommand: []
@@ -5259,6 +5197,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 1, g: 0.20784314, b: 0, a: 1}
+  hitSFX: 
+  initialSFX: 
   theStat: {fileID: 8465309907849305440}
   damageLayer:
     serializedVersion: 2
@@ -5270,6 +5211,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 4
   Cooltime: 2.5
+  Duration: 0
   Delay: 0.2
   animationPlayTime: 0.7
   skillCommand: []
@@ -5392,7 +5334,8 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 2
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3737042194133120777, guid: a5452a798b88382488df6874886c0953, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []

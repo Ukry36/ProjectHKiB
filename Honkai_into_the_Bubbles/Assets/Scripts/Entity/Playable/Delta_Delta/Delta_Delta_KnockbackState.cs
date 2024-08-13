@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Delta_Delta_KnockbackState : Delta_Delta_State
+public class Delta_Delta_KnockbackState : Playable_State
 {
     public Vector2 dir;
     public int coeff;
     private int i;
 
-    public Delta_Delta_KnockbackState(Delta_Delta _player, Delta_Delta_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Delta_Delta player;
+    public Delta_Delta_KnockbackState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_Delta _player) : base(_playerBase, _stateMachine, _animBoolName)
     {
-
+        this.player = _player;
     }
 
     // set initial direction 
@@ -58,7 +59,7 @@ public class Delta_Delta_KnockbackState : Delta_Delta_State
         else
         {
             player.Mover.position = player.MovePoint.transform.position;
-            player.StateMachine.ChangeState(player.IdleState);
+            stateMachine.ChangeState(player.IdleState);
         }
 
         i++;

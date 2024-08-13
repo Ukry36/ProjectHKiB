@@ -8,25 +8,31 @@ public class EffectVanishControl : MonoBehaviour
     [SerializeField] private bool byTime;
     [SerializeField] private float vanishTime = 5f;
     [SerializeField] private bool byOrder;
+    [SerializeField] private string SFX;
     private float time = 0;
+
+    private void OnEnable()
+    {
+        AudioManager.instance.PlaySound(SFX, this.transform, _attachToTarget: false);
+    }
     private void Update()
     {
         if (!byOrder)
         {
             if (byTime)
             {
-                time+=Time.deltaTime;
+                time += Time.deltaTime;
                 if (time >= vanishTime)
-                    Destroy(this.gameObject); 
+                    this.gameObject.SetActive(false);
             }
             else
             {
                 if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f)
-                    Destroy(this.gameObject); 
+                    this.gameObject.SetActive(false);
             }
         }
-        
-        
+
+
     }
 
     public void Exit()
@@ -39,6 +45,6 @@ public class EffectVanishControl : MonoBehaviour
     {
         yield return null;
         yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f);
-        Destroy(this.gameObject); 
+        this.gameObject.SetActive(false);
     }
 }

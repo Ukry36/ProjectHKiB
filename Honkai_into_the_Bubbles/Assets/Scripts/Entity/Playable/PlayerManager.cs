@@ -37,9 +37,11 @@ public class PlayerManager : MonoBehaviour
 
     [HideInInspector] public List<Color> ThemeColors { get; private set; } = new();
 
-    private Status theStat;
+    public Status theStat;
 
     [SerializeField] private GameObject Drone;
+    public GameObject HandLight;
+    public GameObject DotLight;
 
     public bool canSprint = false;
     public bool isStealth = false;
@@ -52,6 +54,12 @@ public class PlayerManager : MonoBehaviour
     public float exKeepDodgeSpeedCoeff = 1;
     public float exGraffitimaxtime = 0;
     public float dodgeCooltimeCoeff = 1;
+
+    public bool imuneToColdTick = false;
+    public bool halfImuneToColdTick = false;
+
+    public bool handLightOn = false;
+    public bool dotLightOn = false;
 
 
     private void Start()
@@ -110,6 +118,9 @@ public class PlayerManager : MonoBehaviour
             {
                 EquippedEffects[attackActivateState].gameObject.SetActive(true);
                 prevEffect.gameObject.SetActive(false);
+
+                EquippedEffects[attackActivateState].SetAnimDir(prevEffect.savedInput);
+
                 prevEffect = EquippedEffects[attackActivateState];
             }
         }
@@ -120,6 +131,9 @@ public class PlayerManager : MonoBehaviour
             {
                 EquippedEffects[0].gameObject.SetActive(true);
                 prevEffect.gameObject.SetActive(false);
+
+                EquippedEffects[0].SetAnimDir(prevEffect.savedInput);
+
                 prevEffect = EquippedEffects[0];
             }
         }
@@ -150,6 +164,15 @@ public class PlayerManager : MonoBehaviour
                 case 10007:
                     Activate10007Cat(primeC);
                     break;
+                case 10016:
+                    Active10016LongPadding(primeC);
+                    break;
+                case 10018:
+                    Active10018Blanket(primeC);
+                    break;
+                case 10019:
+                    Active10019HandLight(primeC);
+                    break;
                 case 10023:
                     Activate10023Infinity(primeC);
                     break;
@@ -175,14 +198,16 @@ public class PlayerManager : MonoBehaviour
         exKeepDodgeSpeedCoeff = 1;
         exGraffitimaxtime = 0;
         dodgeCooltimeCoeff = 1;
-        if (!Drone.activeSelf)
-        {
-            Drone.transform.position = this.transform.position + new Vector3(12, 12);
-        }
-        else
-        {
-            Drone.SetActive(false);
-        }
+        imuneToColdTick = false;
+        halfImuneToColdTick = false;
+        handLightOn = false;
+        dotLightOn = false;
+
+        if (!Drone.activeSelf) Drone.transform.position = this.transform.position + new Vector3(12, 12);
+        else Drone.SetActive(false);
+
+        if (DotLight.activeSelf) DotLight.SetActive(false);
+        if (HandLight.activeSelf) HandLight.SetActive(false);
     }
 
 
@@ -215,6 +240,35 @@ public class PlayerManager : MonoBehaviour
         {
             Debug.Log("somethin");
         }
+    }
+
+    private void Active10016LongPadding(bool _isPrime)
+    {
+        if (_isPrime)
+        {
+            imuneToColdTick = true;
+        }
+        else
+        {
+            halfImuneToColdTick = true;
+        }
+    }
+
+    private void Active10018Blanket(bool _isPrime)
+    {
+        if (_isPrime)
+        {
+            imuneToColdTick = true;
+        }
+    }
+
+    private void Active10019HandLight(bool _isPrime)
+    {
+        if (_isPrime)
+        {
+            handLightOn = true;
+        }
+        dotLightOn = true;
     }
 
     private void Activate10023Infinity(bool _isPrime)

@@ -179,7 +179,6 @@ public class DialogueManager : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Z))
             {
                 keyActivated = false;
-                theAudio.Play(enterSound);
                 text.text = ""; // 이번 문장의 로그를 삭제!
                 count++; // 다음 문장으로!
                 if (count == listSentences.Count) // 마지막 문장이면!

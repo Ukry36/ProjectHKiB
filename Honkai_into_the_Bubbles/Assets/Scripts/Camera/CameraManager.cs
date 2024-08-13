@@ -1,4 +1,5 @@
-﻿using Cinemachine;
+﻿using System.Collections.Generic;
+using Cinemachine;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -26,7 +27,7 @@ public class CameraManager : MonoBehaviour
 
     [SerializeField] private BGRenderer bgrenderer;
 
-    private float OriginalRes = 5;
+    public float OriginalRes = 5;
     private int CurrentCamera = 0; // 0 or 1
     public bool freeze = false;
 
@@ -38,6 +39,7 @@ public class CameraManager : MonoBehaviour
             Confiners[i] = Cameras[i].GetComponent<CinemachineConfiner2D>();
         }
         Cameras[CurrentCamera].Priority = 11;
+        ReturntoOrigRes(0);
     }
 
     public void StrictMovement(Vector3 _way)
@@ -89,13 +91,22 @@ public class CameraManager : MonoBehaviour
     {
         if (other.gameObject.layer == LayerMask.NameToLayer("CameraBound"))
         {
-            for (int i = 0; i < Cameras.Length; i++)
+            if (other.TryGetComponent(out AreaInfo areaInfo))
             {
-                Confiners[i].m_BoundingShape2D = other;
-            }
+                for (int i = 0; i < Cameras.Length; i++)
+                {
+                    Confiners[i].m_BoundingShape2D = areaInfo.cameraBound;
+                }
 
-            if (other.TryGetComponent(out CameraBound bound))
-                bgrenderer.RenderBackGround(bound.backGround);
+
+                bgrenderer.RenderBackGround(areaInfo.backGround);
+
+
+                AudioManager.instance.ChangeAreaBGMs(areaInfo.areaBGMs, areaInfo.fadeTime);
+
+
+                WhetherManager.instance.ChangeAreaWhethers(areaInfo.areaWhetherTypes, true);
+            }
         }
     }
 }
