@@ -65,8 +65,8 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
-        HPtext.text = theStat.currentHP + "/" + theStat.maxHP;
-        HPbar.transform.localScale = new Vector3((float)theStat.currentHP / theStat.maxHP, 1, 0);
+        HPtext.text = theStat.CurrentHP + "/" + theStat.maxHP;
+        HPbar.transform.localScale = new Vector3((float)theStat.CurrentHP / theStat.maxHP, 1, 0);
         if (isPaused)
         {
             if (theInput.CancelInput)

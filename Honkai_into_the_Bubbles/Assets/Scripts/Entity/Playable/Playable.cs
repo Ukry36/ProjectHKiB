@@ -49,11 +49,11 @@ public class Playable : Entity
     [BoxGroup("Graffiti")]
     [SerializeField] protected float graffitiCooltime = 0.3f;
     [BoxGroup("Graffiti")]
-    [SerializeField] protected bool endAtGraffitiStartPoint = true;
+    public bool endAtGraffitiStartPoint = true;
     protected bool isGraffitiCooltime;
 
     [HideInInspector] public Vector2 moveInput;
-    [HideInInspector] public Vector3 savedInput;
+    [HideInInspector] public bool moveInputPressed;
 
     [HideInInspector] public bool cannotDodge;
     [HideInInspector] public bool cannotGraffiti;
@@ -71,34 +71,6 @@ public class Playable : Entity
     {
         SpriteLibrary.spriteLibraryAsset = Resources.Load("sdLibrary/" + ID.ToString() + "-" + spriteOverrideID.ToString(), typeof(SpriteLibraryAsset)) as SpriteLibraryAsset;
     }
-
-    // check wall and adjust position of movepoint
-    public bool MovepointAdjustCheck()
-    {
-        Vector3 InputX = new(savedInput.x, 0, 0);
-        Vector3 InputY = new(0, savedInput.y, 0);
-        if (savedInput.x == 0 || savedInput.y == 0) // non diagonal
-        {
-            return PointWallCheck(MovePoint.transform.position + savedInput);
-        }
-        else // moveInput.x != 0 && moveInput.y != 0    (diagonal)
-        {
-            if (PointWallCheck(MovePoint.transform.position + InputX))
-                savedInput.x = 0;
-
-            if (PointWallCheck(MovePoint.transform.position + InputY))
-                savedInput.y = 0;
-
-            if (savedInput == Vector3.zero)
-                return true;
-
-            if (savedInput.x != 0 && savedInput.y != 0)
-                if (PointWallCheck(MovePoint.transform.position + savedInput))
-                    MovePoint.transform.position -= InputY;
-        }
-        return false;
-    }
-
 
     public void DodgeCooltimeManage()
     {

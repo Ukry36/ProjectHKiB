@@ -6,7 +6,6 @@ public class VanishEffect : MonoBehaviour
     private void OnDisable()
     {
         if (!this.gameObject.scene.isLoaded) return;
-        var clone = Instantiate(VanishPrefab[Random.Range(0, VanishPrefab.Length)], this.transform.position, Quaternion.identity);
-        clone.SetActive(true);
+        PoolManager.instance.ReuseGameObject(VanishPrefab[Random.Range(0, VanishPrefab.Length)], this.transform.position, Quaternion.identity);
     }
 }

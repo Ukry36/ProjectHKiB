@@ -26,7 +26,7 @@ public class Delta_L_IdleState : Playable_State
         }
         else if (InputManager.instance.MoveInput != Vector2.zero)
         {
-            player.savedInput = (Vector3)player.moveInput;
+            player.moveDir = (Vector3)player.moveInput;
             if (player.MovepointAdjustCheck())
             {
                 player.SetAnimDir(player.moveInput);

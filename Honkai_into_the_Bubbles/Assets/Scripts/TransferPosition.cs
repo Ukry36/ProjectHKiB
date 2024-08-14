@@ -48,6 +48,7 @@ public class TransferPosition : MonoBehaviour
             component.entity.SetAnimDir(dir);
 
         yield return new WaitForSeconds(innerDelay);
+        PlayerManager.instance.FriendlyResetWhenTransferposition();
 
         if (component.isPlayer)
         {

@@ -16,12 +16,18 @@ public class Missile : Skill
     private Vector3 vectorToTarget;
     private float turnSpeed = 0;
 
+    private void Awake()
+    {
+        Debug.Log(isCooltime);
+    }
+
 
     protected override void OnEnable()
     {
         base.OnEnable();
         boxCollider2D.enabled = false;
         time = lastTime;
+        turnSpeed = 0;
     }
 
     private void Update()

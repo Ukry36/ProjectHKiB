@@ -60,6 +60,7 @@ public class SceneLoadingManager : MonoBehaviour
 
     private void LoadSceneEnd(Scene scene, LoadSceneMode loadSceneMode)
     {
+        PlayerManager.instance.FriendlyResetWhenTransferposition();
         StartCoroutine(LoadSceneEndCoroutine());
 
         SceneManager.sceneLoaded -= LoadSceneEnd;

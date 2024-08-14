@@ -40,7 +40,7 @@ public class Enemy_Lightning_DirMoveState : Enemy_Lightning_State
             {
                 enemy.StateMachine.ChangeState(enemy.AggroIdleState);
             }
-            else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheckFor2x2())
+            else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheck())
             {
                 enemy.StateMachine.ChangeState(enemy.IdleState);
             }

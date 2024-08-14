@@ -8,7 +8,6 @@ public class Enemy : Entity
     public Skill[] SkillArray;
 
     [HideInInspector] public List<Node> PathList;
-    [HideInInspector] public Vector3 moveDir;
 
     [SerializeField] private GameObject beforeAttackEffectPrefab;
 
@@ -64,7 +63,6 @@ public class Enemy : Entity
     public Collider2D[] AreaDetectTarget(float _rad, bool _ignoreStealth = false)
     {
         float rad = PlayerManager.instance.isStealth && !_ignoreStealth ? _rad / 4 : _rad;
-
         return Physics2D.OverlapCircleAll(Mover.position, rad, targetLayer);
     }
 
@@ -164,63 +162,10 @@ public class Enemy : Entity
         }
     }
 
-    // check wall and adjust position of movepoint
-    public virtual bool MovepointAdjustCheck()
-    {
-        Vector3 DirX = new(moveDir.x, 0, 0);
-        Vector3 DirY = new(0, moveDir.y, 0);
-        if (moveDir.x == 0 || moveDir.y == 0) // non diagonal
-        {
-            return PointWallCheck(MovePoint.transform.position + moveDir);
-        }
-        else // moveInput.x != 0 && moveInput.y != 0    (diagonal)
-        {
-            if (PointWallCheck(MovePoint.transform.position + DirX))
-                moveDir.x = 0;
-
-            if (PointWallCheck(MovePoint.transform.position + DirY))
-                moveDir.y = 0;
-
-            if (moveDir == Vector3.zero)
-                return true;
-
-            if (moveDir.x != 0 && moveDir.y != 0)
-                if (PointWallCheck(MovePoint.transform.position + moveDir))
-                    MovePoint.transform.position -= DirY;
-        }
-        return false;
-    }
-
-    public virtual bool MovepointAdjustCheckFor2x2()
-    {
-        Vector3 DirX = new(moveDir.x, 0, 0);
-        Vector3 DirY = new(0, moveDir.y, 0);
-        if (moveDir.x == 0 || moveDir.y == 0) // non diagonal
-        {
-            return PointWallCheck(MovePoint.transform.position + moveDir * 1.5f);
-        }
-        else // moveInput.x != 0 && moveInput.y != 0    (diagonal)
-        {
-            if (PointWallCheck(MovePoint.transform.position + DirX * 1.5f))
-                moveDir.x = 0;
-
-            if (PointWallCheck(MovePoint.transform.position + DirY * 1.5f))
-                moveDir.y = 0;
-
-            if (moveDir == Vector3.zero)
-                return true;
-
-            if (moveDir.x != 0 && moveDir.y != 0)
-                if (PointWallCheck(MovePoint.transform.position + moveDir * 1.5f))
-                    MovePoint.transform.position -= DirY;
-        }
-        return false;
-    }
-
     // tinker before attack
     public void BeforeAttackTinker(Vector3 _offset)
     {
-        Instantiate(beforeAttackEffectPrefab, this.transform.position + _offset, Quaternion.identity);
+        PoolManager.instance.ReuseGameObject(beforeAttackEffectPrefab, this.transform.position + _offset, Quaternion.identity);
     }
 
     public IEnumerator TurnCooltime()

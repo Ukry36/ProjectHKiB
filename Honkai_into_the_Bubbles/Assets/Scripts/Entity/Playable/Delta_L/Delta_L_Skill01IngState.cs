@@ -39,13 +39,13 @@ public class Delta_L_Skill01IngState : Playable_State
             player.MovePoint.prevPos = player.Mover.position; // used in external movepoint control
             if (player.moveInput != Vector2.zero)
             {
-                player.savedInput = (Vector3)player.moveInput;
+                player.moveDir = (Vector3)player.moveInput;
 
-                player.SetAnimDir(player.savedInput);
+                player.SetAnimDir(player.moveDir);
                 if (!player.MovepointAdjustCheck())
                 {
-                    player.MovePoint.transform.position += player.savedInput;
-                    player.SetAnimDir(player.savedInput);
+                    player.MovePoint.transform.position += player.moveDir;
+                    player.SetAnimDir(player.moveDir);
                 }
             }
         }
@@ -54,7 +54,7 @@ public class Delta_L_Skill01IngState : Playable_State
         if (InputManager.instance.AttackInput || stateTimer < 0)
         {
             if (player.moveInput != Vector2.zero)
-                player.savedInput = player.moveInput;
+                player.moveDir = player.moveInput;
             stateMachine.ChangeState(player.Skill01AfterState);
         }
     }

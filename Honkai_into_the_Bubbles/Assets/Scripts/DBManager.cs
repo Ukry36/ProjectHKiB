@@ -57,69 +57,6 @@ public class DBManager : MonoBehaviour
     }
 
 
-    public void UseItem(int _ID)
-    {
-        switch (_ID)
-        {
-            case 20000:
-                if (thePStat.maxHP >= thePStat.currentHP + 1)
-                    thePStat.currentHP += 1;
-                else
-                    thePStat.currentHP = thePStat.maxHP;
-                FloatText("HEAL", 1);
-                break;
-            case 20001:
-                if (thePStat.maxHP >= thePStat.currentHP + 3)
-                    thePStat.currentHP += 3;
-                else
-                    thePStat.currentHP = thePStat.maxHP;
-                FloatText("HEAL", 3);
-                break;
-            case 20002:
-                if (thePStat.maxHP >= thePStat.currentHP + 10)
-                    thePStat.currentHP += 10;
-                else
-                    thePStat.currentHP = thePStat.maxHP;
-                FloatText("HEAL", 10);
-                break;
-            case 20003:
-                if (thePStat.maxHP >= thePStat.currentHP + 30)
-                    thePStat.currentHP += 30;
-                else
-                    thePStat.currentHP = thePStat.maxHP;
-                FloatText("HEAL", 30);
-                break;
-            case 20004:
-                if (thePStat.maxGP >= thePStat.currentGP + 1)
-                    thePStat.currentGP += 1;
-                else
-                    thePStat.currentGP = thePStat.maxGP;
-                FloatText("SP", 1);
-                break;
-            case 20005:
-                if (thePStat.maxGP >= thePStat.currentGP + 3)
-                    thePStat.currentGP += 3;
-                else
-                    thePStat.currentGP = thePStat.maxGP;
-                FloatText("SP", 3);
-                break;
-            case 20006:
-                if (thePStat.maxGP >= thePStat.currentGP + 10)
-                    thePStat.currentGP += 10;
-                else
-                    thePStat.currentGP = thePStat.maxGP;
-                FloatText("SP", 10);
-                break;
-            case 20007:
-                if (thePStat.maxGP >= thePStat.currentGP + 30)
-                    thePStat.currentGP += 30;
-                else
-                    thePStat.currentGP = thePStat.maxGP;
-                FloatText("SP", 30);
-                break;
-        }
-    }
-
     void Start()
     {
         thePStat = FindObjectOfType<Status>();

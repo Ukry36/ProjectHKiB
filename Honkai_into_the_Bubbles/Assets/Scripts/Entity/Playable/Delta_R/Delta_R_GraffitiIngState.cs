@@ -26,16 +26,16 @@ public class Delta_R_GraffitiIngState : Playable_State
         {
             stateMachine.ChangeState(player.GraffitiExitState);
         }
-        else if (player.theStat.currentGP > 0)
+        else if (player.theStat.CurrentGP > 0)
         {
-            if (player.moveInput == Vector2.zero)
+            /*if (player.moveInput == Vector2.zero)
             {
                 graffitiSavedInput = player.moveInput;
             }
             else if (graffitiSavedInput == Vector3.zero)
             {
                 graffitiSavedInput = player.moveInput;
-                player.savedInput = player.moveInput;
+                player.moveDir = player.moveInput;
                 if (graffitiSavedInput.x != 0)
                     graffitiSavedInput.y = 0;
                 if (!Physics2D.OverlapCircle(player.MovePoint.transform.position + graffitiSavedInput,
@@ -45,6 +45,22 @@ public class Delta_R_GraffitiIngState : Playable_State
                     player.Mover.position = player.MovePoint.transform.position;
                     player.theStat.GPControl(-1, _silence: true);
                 }
+            }*/
+
+            if (player.moveInputPressed)
+            {
+                player.moveDir = DInput ? Vector3.down : RInput ? Vector3.right
+                               : UInput ? Vector3.up : LInput ? Vector3.left : Vector3.zero;
+
+
+                if (!Physics2D.OverlapCircle(player.MovePoint.transform.position + player.moveDir,
+                    0.4f, LayerManager.instance.graffitiWallLayer))
+                {
+                    if (!player.endAtGraffitiStartPoint)
+                        player.MovePoint.transform.position += player.moveDir;
+
+                    player.Mover.position += player.moveDir;
+                }
             }
         }
     }
@@ -53,5 +69,6 @@ public class Delta_R_GraffitiIngState : Playable_State
     {
         base.Exit();
         player.theStat.superArmor = false;
+        player.Mover.position = player.MovePoint.transform.position;
     }
 }

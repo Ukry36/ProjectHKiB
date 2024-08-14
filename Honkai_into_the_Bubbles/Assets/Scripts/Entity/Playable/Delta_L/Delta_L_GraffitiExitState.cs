@@ -19,8 +19,8 @@ public class Delta_L_GraffitiExitState : Playable_State
         graffitirResult = player.GS.EndGraffiti();
         if (graffitirResult[0] == 1)
         {
-            player.savedInput = player.moveInput;
-            player.SetAnimDir(player.savedInput);
+            player.moveDir = player.moveInput;
+            player.SetAnimDir(player.moveDir);
             player.SkillManage(graffitirResult);
             player.StartCoroutine(player.GraffitiCooltime());
         }
@@ -31,8 +31,8 @@ public class Delta_L_GraffitiExitState : Playable_State
         base.Update();
         if (finishTriggerCalled)
         {
-            player.savedInput = player.moveInput;
-            player.SetAnimDir(player.savedInput);
+            player.moveDir = player.moveInput;
+            player.SetAnimDir(player.moveDir);
             player.SkillManage(graffitirResult);
             player.StartCoroutine(player.GraffitiCooltime());
         }

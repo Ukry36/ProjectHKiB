@@ -32,7 +32,7 @@ public class GraffitiSystem : MonoBehaviour
         grid.transform.position = new Vector3((int)movePoint.position.x, (int)movePoint.position.y);
         activatedTileList.Clear();
         CameraManager.instance.ZoomViaOrig(0.707f, 0.5f);
-        var clone = Instantiate(NexusPrefab, this.transform.position, quaternion.identity);
+        var clone = PoolManager.instance.ReuseGameObject(NexusPrefab, this.transform.position, quaternion.identity);
         EVC = clone.GetComponent<EffectVanishControl>();
     }
 
@@ -62,6 +62,7 @@ public class GraffitiSystem : MonoBehaviour
     {
         if (!activatedTileList.Exists(co => co == _co))
         {
+            PlayerManager.instance.theStat.GPControl(-1, _silence: true);
             activatedTileList.Add(_co);
         }
     }

@@ -12,13 +12,30 @@ public class Drone : Friendly
     private bool isFiring = false;
     private float targetTimer;
 
+    private bool onDisableSequence;
+    public Vector3 apearFrom;
+
     protected override void Awake()
     {
         base.Awake();
     }
 
+    private void OnEnable()
+    {
+        onDisableSequence = false;
+        Mover.transform.position += apearFrom;
+    }
+
     protected override void Update()
     {
+        if (onDisableSequence)
+        {
+            if (Vector3.Distance(Mover.position, MovePoint.transform.position) > 3f)
+                Mover.position = Vector3.Lerp(Mover.position, MovePoint.transform.position, MoveSpeed * Time.deltaTime);
+            else
+                Mover.gameObject.SetActive(false);
+            return;
+        }
         Collider2D enemyCollider = Physics2D.OverlapCircle(Mover.position, followRadius, targetLayer);
 
         // Set Target
@@ -39,15 +56,12 @@ public class Drone : Friendly
             target = Player;
         targetTimer -= Time.deltaTime;
 
-        //Firing Area
-        if (target != Player && !isFiring)
-        {
-            StartCoroutine(FiringCoroutine(enemyCollider.transform.position));
-        }
 
-        //Moving Area
         MovePoint.transform.position = target.position;
         GazePoint.position = target.position;
+
+        if (target != Player && !isFiring)
+            StartCoroutine(FiringCoroutine(GazePoint.position));
 
         Vector3 direction = MovePoint.transform.position - Mover.position;
 
@@ -55,10 +69,15 @@ public class Drone : Friendly
 
         if (Vector3.Distance(Mover.position, MovePoint.transform.position) > 3f)
             Mover.position = Vector3.Lerp(Mover.position, MovePoint.transform.position - direction.normalized * 3, MoveSpeed * Time.deltaTime);
-
     }
 
+    public void DisableSequence()
+    {
+        onDisableSequence = true;
+        MovePoint.transform.position += apearFrom;
+    }
 
+    public void CancelDisable() => onDisableSequence = false;
 
     private IEnumerator FiringCoroutine(Vector3 _targetPos)
     {
@@ -68,8 +87,8 @@ public class Drone : Friendly
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         for (int i = 0; i < 5; i++)
         {
-            var clone = Instantiate(bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
-            clone.SetActive(true);
+            var clone = PoolManager.instance.ReuseGameObject(bulletPrefab, transform.position, Quaternion.Euler(new Vector3(0, 0, angle)));
+            clone.GetComponent<Bullet>().theStat = theStat;
             yield return wait005;
         }
 

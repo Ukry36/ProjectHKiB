@@ -4,6 +4,7 @@ using UnityEngine.U2D.Animation;
 using System.Collections.Generic;
 using UnityEngine.Rendering.Universal;
 
+[RequireComponent(typeof(Light2D))]
 public class Entity : MonoBehaviour
 {
     public int ID;
@@ -35,6 +36,7 @@ public class Entity : MonoBehaviour
     [HideInInspector] public Light2D hitLight;
 
     [HideInInspector] public Transform target;
+    [HideInInspector] public Vector3 moveDir;
 
     protected virtual void Awake()
     {
@@ -69,6 +71,7 @@ public class Entity : MonoBehaviour
         MoveSpeed = DefaultSpeed * SprintCoeff * PlayerManager.instance.exSpeedCoeff;
     }
 
+    #region direction
     public Vector2 SetVectorOne(Vector2 _v)
     {
         return new Vector2
@@ -136,6 +139,39 @@ public class Entity : MonoBehaviour
         }
     }
 
+    #endregion
+
+
+    #region wallCheck
+
+    // check wall and adjust position of movepoint
+    public virtual bool MovepointAdjustCheck()
+    {
+        float wallCheckCoeff = theStat.Size switch { 1 => 1, 2 => 1.5f, _ => 1 };
+        Vector3 DirX = new(moveDir.x, 0, 0);
+        Vector3 DirY = new(0, moveDir.y, 0);
+        if (moveDir.x == 0 || moveDir.y == 0) // non diagonal
+        {
+            return PointWallCheck(MovePoint.transform.position + moveDir * wallCheckCoeff);
+        }
+        else // moveInput.x != 0 && moveInput.y != 0    (diagonal)
+        {
+            if (PointWallCheck(MovePoint.transform.position + DirX * wallCheckCoeff))
+                moveDir.x = 0;
+
+            if (PointWallCheck(MovePoint.transform.position + DirY * wallCheckCoeff))
+                moveDir.y = 0;
+
+            if (moveDir == Vector3.zero)
+                return true;
+
+            if (moveDir.x != 0 && moveDir.y != 0)
+                if (PointWallCheck(MovePoint.transform.position + moveDir * wallCheckCoeff))
+                    MovePoint.transform.position -= DirY;
+        }
+        return false;
+    }
+
     public bool PointWallCheck(Vector3 _pos)
     {
         Collider2D[] colliders = Physics2D.OverlapCircleAll(_pos, .4f, wallLayer);
@@ -160,16 +196,19 @@ public class Entity : MonoBehaviour
         return false;
     }
 
-    public virtual void Knockback(Vector3 _attackOrigin, int _coeff)
-    {
-        Debug.LogError("ERROR : No Knockback Function");
-    }
+    #endregion
 
+
+    #region Hit
     public virtual void Hit(Vector3 _attackOrigin)
     {
 
     }
 
+    public virtual void Knockback(Vector3 _attackOrigin, int _coeff)
+    {
+        Debug.LogError("ERROR : No Knockback Function");
+    }
 
     public IEnumerator HitInvincible()
     {
@@ -203,6 +242,9 @@ public class Entity : MonoBehaviour
         MovePoint.gameObject.SetActive(false);
         Mover.gameObject.SetActive(false);
     }
+
+    #endregion
+
 
     public virtual void AnimationFinishTrigger()
     {

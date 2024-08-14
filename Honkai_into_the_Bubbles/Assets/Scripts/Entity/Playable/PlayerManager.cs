@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System;
 using UnityEngine;
+using Unity.Mathematics;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class PlayerManager : MonoBehaviour
     public Status theStat;
 
     [SerializeField] private GameObject Drone;
+    private GameObject currentDrone;
     public GameObject HandLight;
     public GameObject DotLight;
 
@@ -60,6 +62,7 @@ public class PlayerManager : MonoBehaviour
 
     public bool handLightOn = false;
     public bool dotLightOn = false;
+    public bool drone = false;
 
 
     private void Start()
@@ -119,7 +122,7 @@ public class PlayerManager : MonoBehaviour
                 EquippedEffects[attackActivateState].gameObject.SetActive(true);
                 prevEffect.gameObject.SetActive(false);
 
-                EquippedEffects[attackActivateState].SetAnimDir(prevEffect.savedInput);
+                EquippedEffects[attackActivateState].SetAnimDir(prevEffect.moveDir);
 
                 prevEffect = EquippedEffects[attackActivateState];
             }
@@ -132,7 +135,7 @@ public class PlayerManager : MonoBehaviour
                 EquippedEffects[0].gameObject.SetActive(true);
                 prevEffect.gameObject.SetActive(false);
 
-                EquippedEffects[0].SetAnimDir(prevEffect.savedInput);
+                EquippedEffects[0].SetAnimDir(prevEffect.moveDir);
 
                 prevEffect = EquippedEffects[0];
             }
@@ -183,6 +186,27 @@ public class PlayerManager : MonoBehaviour
                     break;
             }
         }
+
+        if (drone)
+        {
+            if (currentDrone == null || !currentDrone.activeSelf)
+            {
+                currentDrone = PoolManager.instance.ReuseGameObject(Drone, this.transform.position + new Vector3(20, 20), quaternion.identity);
+            }
+            else
+            {
+                Debug.Log(currentDrone);
+                currentDrone.GetComponentInChildren<Drone>().CancelDisable();
+            }
+
+        }
+        else
+        {
+            if (currentDrone != null && currentDrone.activeSelf)
+            {
+                currentDrone.GetComponentInChildren<Drone>().DisableSequence();
+            }
+        }
     }
 
     private void DeactivatePassives()
@@ -202,12 +226,20 @@ public class PlayerManager : MonoBehaviour
         halfImuneToColdTick = false;
         handLightOn = false;
         dotLightOn = false;
-
-        if (!Drone.activeSelf) Drone.transform.position = this.transform.position + new Vector3(12, 12);
-        else Drone.SetActive(false);
+        drone = false;
 
         if (DotLight.activeSelf) DotLight.SetActive(false);
         if (HandLight.activeSelf) HandLight.SetActive(false);
+    }
+
+
+    public void FriendlyResetWhenTransferposition()
+    {
+        if (drone)
+        {
+            currentDrone.SetActive(false);
+            currentDrone = PoolManager.instance.ReuseGameObject(Drone, this.transform.position, quaternion.identity);
+        }
     }
 
 
@@ -227,7 +259,7 @@ public class PlayerManager : MonoBehaviour
             Debug.Log("canTransform");
         }
 
-        Drone.SetActive(true);
+        drone = true;
     }
 
     private void Activate10007Cat(bool _isPrime)

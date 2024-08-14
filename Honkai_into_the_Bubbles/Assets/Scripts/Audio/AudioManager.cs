@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -36,6 +37,9 @@ public class AudioManager : MonoBehaviour
     [SerializeField] private AudioClip[] PreloadedClips;
     private List<SoundPlayer> SoundPlayers = new();
     private List<string> CurrentAreaBGMs = new();
+
+    [SerializeField] private GameObject SoundPlayerPrefab;
+    [SerializeField] private GameObject FlatSoundPlayerPrefab;
 
     public string hpSFX;
     public string gpSFX;
@@ -137,39 +141,40 @@ public class AudioManager : MonoBehaviour
     public void PlaySoundFlat(string _clipName, float _delay = 0f, bool _isLoop = false, SoundType _type = SoundType.SFX, float _fadeIn = 0, float _fadeOut = 0)
     {
         if (_clipName == "" || _clipName == null) return;
-
-        GameObject obj = new("FlatSoundPlayer");
+        GameObject obj = PoolManager.instance.ReuseGameObject(FlatSoundPlayerPrefab, this.transform.position, quaternion.identity);
         obj.transform.parent = this.transform;
-        SoundPlayer soundPlayer = obj.AddComponent<SoundPlayer>();
 
-        //루프를 사용하는경우 사운드를 저장한다.
-        if (_isLoop) AddToList(soundPlayer);
+        if (obj.TryGetComponent(out SoundPlayer soundPlayer))
+        {
+            //루프를 사용하는경우 사운드를 저장한다.
+            if (_isLoop) AddToList(soundPlayer);
 
-        soundPlayer.InitSound(GetClip(_clipName));
-        soundPlayer.Play(audioMixer.FindMatchingGroups(_type.ToString())[0], _delay, _isLoop, _fadeIn, _fadeOut);
+            soundPlayer.InitSound(GetClip(_clipName));
+            soundPlayer.Play(audioMixer.FindMatchingGroups(_type.ToString())[0], _delay, _isLoop, _fadeIn, _fadeOut);
+        }
     }
 
     public void PlaySoundFlat(string[] _clipNames, float _delay = 0f, bool _isLoop = false, SoundType _type = SoundType.SFX, float _fadeIn = 0, float _fadeOut = 0)
-    => PlaySoundFlat(_clipNames.Length > 0 ? _clipNames[Random.Range(0, _clipNames.Length)] : "", _delay, _isLoop, _type, _fadeIn, _fadeOut);
+    => PlaySoundFlat(_clipNames.Length > 0 ? _clipNames[UnityEngine.Random.Range(0, _clipNames.Length)] : "", _delay, _isLoop, _type, _fadeIn, _fadeOut);
 
     public void PlaySound(string _clipName, Transform _audioTarget, float _delay = 0f, bool _isLoop = false, SoundType _type = SoundType.SFX, bool _attachToTarget = false, float _minDistance = 0.0f, float _maxDistance = 50.0f, float _fadeIn = 0, float _fadeOut = 0)
     {
         if (_clipName == "" || _clipName == null) return;
-        GameObject obj = new("SoundPlayer");
-        obj.transform.localPosition = _audioTarget.transform.position;
+        GameObject obj = PoolManager.instance.ReuseGameObject(SoundPlayerPrefab, _audioTarget.transform.position, quaternion.identity);
         if (_attachToTarget) obj.transform.parent = _audioTarget;
 
-        SoundPlayer soundPlayer = obj.AddComponent<SoundPlayer>();
+        if (obj.TryGetComponent(out SoundPlayer soundPlayer))
+        {
+            //루프를 사용하는경우 사운드를 저장한다.
+            if (_isLoop) AddToList(soundPlayer);
 
-        //루프를 사용하는경우 사운드를 저장한다.
-        if (_isLoop) AddToList(soundPlayer);
-
-        soundPlayer.InitSound(GetClip(_clipName), _minDistance, _maxDistance);
-        soundPlayer.Play(audioMixer.FindMatchingGroups(_type.ToString())[0], _delay, _isLoop, _fadeIn, _fadeOut);
+            soundPlayer.InitSound(GetClip(_clipName), _minDistance, _maxDistance);
+            soundPlayer.Play(audioMixer.FindMatchingGroups(_type.ToString())[0], _delay, _isLoop, _fadeIn, _fadeOut);
+        }
     }
 
     public void PlaySound(string[] _clipNames, Transform _audioTarget, float _delay = 0f, bool _isLoop = false, SoundType _type = SoundType.SFX, bool _attachToTarget = false, float _minDistance = 0.0f, float _maxDistance = 50.0f, float _fadeIn = 0, float _fadeOut = 0)
-    => PlaySound(_clipNames.Length > 0 ? _clipNames[Random.Range(0, _clipNames.Length)] : "", _audioTarget, _delay, _isLoop, _type, _attachToTarget, _minDistance, _maxDistance, _fadeIn, _fadeOut);
+    => PlaySound(_clipNames.Length > 0 ? _clipNames[UnityEngine.Random.Range(0, _clipNames.Length)] : "", _audioTarget, _delay, _isLoop, _type, _attachToTarget, _minDistance, _maxDistance, _fadeIn, _fadeOut);
 
     // used in option init
     public void InitVolumes(float _bgm, float _sfx, float _amb)

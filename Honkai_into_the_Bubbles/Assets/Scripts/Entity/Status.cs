@@ -8,20 +8,25 @@ public class Status : MonoBehaviour
     public bool superArmor = false; // no knockback
     public bool invincible = false; // no damage
     public int maxHP = 100;
-    public int currentHP;
+    public int CurrentHP { get; private set; }
     public int maxGP = 20;
-    public int currentGP;
+    public int CurrentGP { get; private set; }
+
+    public int playHitSFXDamage = 50;
 
     public int ATK = 100;
     public int DEF = 0;
     public int CritRate = 0;
     public int CritDMG = 10;
     public int Mass = 1;
+    public int Size = 1;
     [HideInInspector] public Entity entity;
 
     private void Awake()
     {
         entity = GetComponentInChildren<Entity>();
+        CurrentHP = maxHP;
+        CurrentGP = maxGP;
     }
 
     public void Hit(Attack _attackInfo)
@@ -97,12 +102,12 @@ public class Status : MonoBehaviour
 
     public void HPControl(int _o, string[] _customSFX = null, bool _silence = false)
     {
-        currentHP += _o;
-        if (currentHP > maxHP) currentHP = maxHP;
+        CurrentHP += _o;
+        if (CurrentHP > maxHP) CurrentHP = maxHP;
 
-        if (currentHP <= 0)
+        if (CurrentHP <= 0)
         {
-            currentHP = 0;
+            CurrentHP = 0;
             entity.Die();
         }
 
@@ -110,7 +115,7 @@ public class Status : MonoBehaviour
         {
             if (_customSFX == null)
             {
-                if (_o < 0)
+                if (_o <= -playHitSFXDamage)
                 {
                     AudioManager.instance.PlaySound(entity.hitSFX, this.transform);
                 }
@@ -128,10 +133,10 @@ public class Status : MonoBehaviour
 
     public void GPControl(int _o, string[] _customSFX = null, bool _silence = false)
     {
-        currentGP += _o;
-        if (currentGP > maxGP) currentGP = maxGP;
+        CurrentGP += _o;
+        if (CurrentGP > maxGP) CurrentGP = maxGP;
 
-        if (currentGP < 0) currentGP = 0;
+        if (CurrentGP < 0) CurrentGP = 0;
 
         if (!_silence)
         {

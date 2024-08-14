@@ -9,11 +9,17 @@ public class EffectVanishControl : MonoBehaviour
     [SerializeField] private float vanishTime = 5f;
     [SerializeField] private bool byOrder;
     [SerializeField] private string SFX;
-    private float time = 0;
+    private float timer = 0;
+
+    private void Awake()
+    {
+        this.gameObject.SetActive(false);
+    }
 
     private void OnEnable()
     {
         AudioManager.instance.PlaySound(SFX, this.transform, _attachToTarget: false);
+        timer = vanishTime;
     }
     private void Update()
     {
@@ -21,8 +27,8 @@ public class EffectVanishControl : MonoBehaviour
         {
             if (byTime)
             {
-                time += Time.deltaTime;
-                if (time >= vanishTime)
+                timer -= Time.deltaTime;
+                if (timer < 0)
                     this.gameObject.SetActive(false);
             }
             else

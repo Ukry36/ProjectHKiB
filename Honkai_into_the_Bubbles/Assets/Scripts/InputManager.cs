@@ -20,6 +20,10 @@ public class InputManager : MonoBehaviour
 
             // auto binding
             move = _playerInput.actions["Move"];
+            movePressedD = _playerInput.actions["MovePressedD"];
+            movePressedR = _playerInput.actions["MovePressedR"];
+            movePressedU = _playerInput.actions["MovePressedU"];
+            movePressedL = _playerInput.actions["MovePressedL"];
             sprint = _playerInput.actions["Sprint"];
             attack = _playerInput.actions["Attack"];
             dodge = _playerInput.actions["Dodge"];
@@ -41,6 +45,11 @@ public class InputManager : MonoBehaviour
     #endregion
 
     public Vector2 MoveInput { get; private set; }
+    public bool MoveInputPressed { get; private set; }
+    public bool DInput { get; private set; }
+    public bool RInput { get; private set; }
+    public bool UInput { get; private set; }
+    public bool LInput { get; private set; }
     public bool SprintInput { get; private set; }
     public bool AttackInput { get; private set; }
     public bool DodgeInput { get; private set; }
@@ -55,7 +64,8 @@ public class InputManager : MonoBehaviour
     public bool InventoryOpenCloseInput { get; private set; }
 
     private PlayerInput _playerInput;
-    private InputAction move, sprint, attack, dodge, grafitti, skill, confirm, cancel, equipment, inventory;
+    private InputAction move, movePressedD, movePressedR, movePressedU, movePressedL,
+            sprint, attack, dodge, grafitti, skill, confirm, cancel, equipment, inventory;
 
     public bool stopPlayer;
     public bool stopUI;
@@ -75,6 +85,7 @@ public class InputManager : MonoBehaviour
 
     public void StopUIInput(bool _stop)
     {
+        stopUI = _stop;
         ConfirmInput = false;
         CancelInput = false;
         EquipmentOpenCloseInput = false;
@@ -88,6 +99,12 @@ public class InputManager : MonoBehaviour
         if (!stopPlayer)
         {
             MoveInput = move.ReadValue<Vector2>();
+            MoveInputPressed = movePressedD.WasPressedThisFrame() || movePressedR.WasPressedThisFrame()
+                            || movePressedU.WasPressedThisFrame() || movePressedL.WasPressedThisFrame();
+            DInput = movePressedD.WasPressedThisFrame();
+            RInput = movePressedR.WasPressedThisFrame();
+            UInput = movePressedU.WasPressedThisFrame();
+            LInput = movePressedL.WasPressedThisFrame();
             if (PlayerManager.instance.canSprint)
             {
                 SprintInput = sprint.inProgress;

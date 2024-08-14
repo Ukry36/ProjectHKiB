@@ -54,7 +54,7 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
                     enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
                     enemy.SetAnimDir(enemy.moveDir);
 
-                    if (!enemy.MovepointAdjustCheckFor2x2())
+                    if (!enemy.MovepointAdjustCheck())
                     {
                         enemy.MovePoint.transform.position += enemy.moveDir;
                     }

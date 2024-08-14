@@ -40,7 +40,7 @@ public class Enemy_Collapse_DirMoveState : Enemy_Collapse_State
             {
                 enemy.StateMachine.ChangeState(enemy.AggroMoveState);
             }
-            else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheckFor2x2())
+            else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheck())
             {
                 enemy.StateMachine.ChangeState(enemy.IdleState);
             }

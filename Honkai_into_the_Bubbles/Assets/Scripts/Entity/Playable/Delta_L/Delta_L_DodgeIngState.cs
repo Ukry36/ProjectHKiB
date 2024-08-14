@@ -48,11 +48,11 @@ public class Delta_L_DodgeIngState : Playable_State
             if (player.moveInput != Vector2.zero)
             {
                 // save moveinput
-                player.savedInput = (Vector3)player.moveInput;
+                player.moveDir = (Vector3)player.moveInput;
 
                 if (!player.MovepointAdjustCheck())
                 {
-                    player.MovePoint.transform.position += player.savedInput;
+                    player.MovePoint.transform.position += player.moveDir;
                     moveCount++;
                 }
             }
@@ -63,7 +63,7 @@ public class Delta_L_DodgeIngState : Playable_State
     {
         base.Exit();
         player.cannotDodge = false;
-        player.SetAnimDir(player.savedInput);
+        player.SetAnimDir(player.moveDir);
         player.theStat.superArmor = false;
         player.Mover.position = player.MovePoint.transform.position;
     }

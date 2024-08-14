@@ -13,6 +13,11 @@ public class Playable_State
 
     protected bool finishTriggerCalled;
 
+    protected bool DInput;
+    protected bool RInput;
+    protected bool UInput;
+    protected bool LInput;
+
     public Playable_State(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName)
     {
         this.playerBase = _playerBase;
@@ -29,6 +34,12 @@ public class Playable_State
     public virtual void Update()
     {
         playerBase.moveInput = playerBase.SetVectorOne(InputManager.instance.MoveInput);
+        playerBase.moveInputPressed = InputManager.instance.MoveInputPressed;
+        DInput = InputManager.instance.DInput;
+        RInput = InputManager.instance.RInput;
+        UInput = InputManager.instance.UInput;
+        LInput = InputManager.instance.LInput;
+
 
         if (InputManager.instance.SprintInput)
             playerBase.SetSpeedSprint();

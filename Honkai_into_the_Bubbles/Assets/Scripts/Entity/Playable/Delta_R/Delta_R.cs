@@ -73,7 +73,7 @@ public class Delta_R : Playable
             }
 
         if (canGraffitiEffect)
-            if (!isGraffitiCooltime && InputManager.instance.GraffitiStartInput && theStat.currentGP > 0
+            if (!isGraffitiCooltime && InputManager.instance.GraffitiStartInput && theStat.CurrentGP > 0
             && stateMachine.currentState != DodgeEnterState
             && stateMachine.currentState != GraffitiState
             && stateMachine.currentState != GraffitiEnterState
@@ -181,25 +181,17 @@ public class Delta_R : Playable
     {
         if (RSACI % 2 == 0)
         {
-            var clone = Instantiate(SAPrefabfor0301, this.transform.position, Quaternion.identity);
-            clone.SetActive(true);
-            clone = Instantiate(SAPrefabfor0301, this.transform.position, Quaternion.Euler(0, 0, 90));
-            clone.SetActive(true);
-            clone = Instantiate(SAPrefabfor0301, this.transform.position, Quaternion.Euler(0, 0, 180));
-            clone.SetActive(true);
-            clone = Instantiate(SAPrefabfor0301, this.transform.position, Quaternion.Euler(0, 0, 270));
-            clone.SetActive(true);
+            PoolManager.instance.ReuseGameObject(SAPrefabfor0301, this.transform.position, Quaternion.identity).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[0];
+            PoolManager.instance.ReuseGameObject(SAPrefabfor0301, this.transform.position, Quaternion.Euler(0, 0, 90)).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[0];
+            PoolManager.instance.ReuseGameObject(SAPrefabfor0301, this.transform.position, Quaternion.Euler(0, 0, 180)).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[0];
+            PoolManager.instance.ReuseGameObject(SAPrefabfor0301, this.transform.position, Quaternion.Euler(0, 0, 270)).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[0];
         }
         else
         {
-            var clone = Instantiate(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 45));
-            clone.SetActive(true);
-            clone = Instantiate(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 135));
-            clone.SetActive(true);
-            clone = Instantiate(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 225));
-            clone.SetActive(true);
-            clone = Instantiate(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 315));
-            clone.SetActive(true);
+            PoolManager.instance.ReuseGameObject(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 45)).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[1];
+            PoolManager.instance.ReuseGameObject(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 135)).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[1];
+            PoolManager.instance.ReuseGameObject(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 225)).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[1];
+            PoolManager.instance.ReuseGameObject(SAPrefabfor0301Diag, this.transform.position, Quaternion.Euler(0, 0, 315)).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[1];
         }
         RSACI++;
     }
@@ -218,14 +210,11 @@ public class Delta_R : Playable
     {
         if (RSACI % 2 == 0)
         {
-            //Vector3 quaternionToTarget = Quaternion.Euler(0, 0, this.transform.rotation.z) * applyVector;
-            var clone = Instantiate(SAPrefabfor03only, this.transform.position, Quaternion.LookRotation(forward: Vector3.forward, upwards: savedInput));
-            clone.SetActive(true);
+            PoolManager.instance.ReuseGameObject(SAPrefabfor03only, this.transform.position, Quaternion.LookRotation(forward: Vector3.forward, upwards: moveDir)).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[0];
         }
         else
         {
-            var clone = Instantiate(SAPrefabfor03onlyDiag, this.transform.position, Quaternion.LookRotation(forward: Vector3.forward, upwards: savedInput));
-            clone.SetActive(true);
+            PoolManager.instance.ReuseGameObject(SAPrefabfor03onlyDiag, this.transform.position, Quaternion.LookRotation(forward: Vector3.forward, upwards: moveDir)).GetComponent<SpriteRenderer>().color = PlayerManager.instance.ThemeColors[1];
         }
         RSACI++;
     }

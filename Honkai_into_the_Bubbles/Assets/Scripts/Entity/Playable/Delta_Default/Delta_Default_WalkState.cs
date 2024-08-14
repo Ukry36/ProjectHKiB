@@ -41,19 +41,19 @@ public class Delta_Default_WalkState : Playable_State
             else
             {
                 // save moveinput
-                player.savedInput = (Vector3)player.moveInput;
+                player.moveDir = (Vector3)player.moveInput;
 
                 // if there is wall, exit walkin
                 // else, adjust savedInput or 
-                player.SetAnimDir(player.savedInput);
+                player.SetAnimDir(player.moveDir);
                 if (player.MovepointAdjustCheck())
                 {
                     stateMachine.ChangeState(player.IdleState);
                 }
                 else
                 {
-                    player.MovePoint.transform.position += player.savedInput;
-                    player.SetAnimDir(player.savedInput);
+                    player.MovePoint.transform.position += player.moveDir;
+                    player.SetAnimDir(player.moveDir);
                 }
             }
         }
@@ -64,6 +64,6 @@ public class Delta_Default_WalkState : Playable_State
         base.Exit();
         player.StationalActivateManage(false);
         player.Mover.position = player.MovePoint.transform.position;
-        player.SetAnimDir(player.savedInput);
+        player.SetAnimDir(player.moveDir);
     }
 }

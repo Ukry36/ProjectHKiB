@@ -10,7 +10,7 @@ public class GPUIControl : MonoBehaviour
     [SerializeField] private Transform guage;
     void Update()
     {
-        guage.localScale = new Vector3(1, (float)theState.currentGP / theState.maxGP);
-        TMPro.text = theState.currentGP.ToString();
+        guage.localScale = new Vector3(1, (float)theState.CurrentGP / theState.maxGP);
+        TMPro.text = theState.CurrentGP.ToString();
     }
 }

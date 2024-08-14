@@ -16,15 +16,15 @@ public class Delta_L_BasicAttackState : Playable_State
     {
         base.Enter();
         player.Animator.SetInteger("Combo", combo);
-        player.SetAnimDir(player.savedInput);
+        player.SetAnimDir(player.moveDir);
         if (player.moveInput != Vector2.zero)
         {
-            player.savedInput = player.moveInput;
+            player.moveDir = player.moveInput;
             for (int i = 0; i < player.AttackArray[combo].TrackingRadius; i++)
             {
                 if (!player.MovepointAdjustCheck())
                 {
-                    player.MovePoint.transform.position += player.savedInput;
+                    player.MovePoint.transform.position += player.moveDir;
                     player.Mover.position = player.MovePoint.transform.position;
                 }
             }
@@ -40,7 +40,7 @@ public class Delta_L_BasicAttackState : Playable_State
                 attackReserved = true;
 
             if (player.moveInput != Vector2.zero)
-                player.savedInput = player.moveInput;
+                player.moveDir = player.moveInput;
         }
         if (finishTriggerCalled)
         {

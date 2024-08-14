@@ -9,22 +9,27 @@ public class Attractive : MonoBehaviour
     [HideInInspector] public Status theStat;
     public Transform movePoint;
     [SerializeField] private LayerMask wallLayer;
-    [SerializeField] private int size = 1;
 
     private void Awake()
     {
         theStat = GetComponent<Status>();
     }
 
+    private void Update()
+    {
+
+    }
+
     public void Attract(Vector3 _dir, int _div)
     {
+        endAttract = false;
         if (!stopAttract)
         {
             Vector3 DirX = new(_dir.x, 0, 0);
             Vector3 DirY = new(0, _dir.y, 0);
 
             bool stop = false;
-            float wallCheckCoeff = size switch { 1 => 1, 2 => 1.5f, _ => 1 };
+            float wallCheckCoeff = theStat.Size switch { 1 => 1, 2 => 1.5f, _ => 1 };
 
             if (_dir.x == 0 || _dir.y == 0)
             {
@@ -74,9 +79,11 @@ public class Attractive : MonoBehaviour
                 this.transform.position += (Vector3)_dir / _div;
                 yield return null;
             }
-
         }
-        endAttract = false;
+        if (endAttract)
+        {
+            movePoint.position = new Vector3(Mathf.RoundToInt(movePoint.position.x), Mathf.RoundToInt(movePoint.position.y));
+        }
     }
 
     private bool PointWallCheck(Vector3 _pos)

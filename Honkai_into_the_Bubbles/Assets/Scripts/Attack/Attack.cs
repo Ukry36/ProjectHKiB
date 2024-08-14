@@ -24,7 +24,9 @@ public class Attack : MonoBehaviour
     {
         if ((damageLayer & (1 << other.gameObject.layer)) != 0)
         {
-            theStat.GPControl(GraffitiPoint);
+
+            if (theStat.isPlayer)
+                theStat.GPControl(GraffitiPoint);
             if (other.gameObject.TryGetComponent(out Status component))
             {
                 AudioManager.instance.PlaySound(hitSFX, this.transform);

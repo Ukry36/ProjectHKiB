@@ -15,6 +15,42 @@
                     "initialStateCheck": true
                 },
                 {
+                    "name": "MovePressedD",
+                    "type": "PassThrough",
+                    "id": "0c54a6f6-43e6-4566-abf2-9218a4cbf605",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MovePressedR",
+                    "type": "PassThrough",
+                    "id": "fc18bde9-9db7-4114-8f1f-02ca7ed275d2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MovePressedU",
+                    "type": "PassThrough",
+                    "id": "fae81133-8a35-4c1e-8e7d-b825150c29ab",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "MovePressedL",
+                    "type": "PassThrough",
+                    "id": "29bfa6e9-f199-41c9-a176-fd81b57d43b4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "Sprint",
                     "type": "Button",
                     "id": "b5c27e6c-250c-4203-930b-7b265948643c",
@@ -259,6 +295,50 @@
                     "processors": "",
                     "groups": "",
                     "action": "Skill",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "80eb2c03-9a7b-48d7-995a-4e1eccc4dd92",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovePressedU",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4de0847e-9d0a-4dfa-8201-7b3725d88d6f",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovePressedD",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0c72195f-7aa0-4980-b841-efa3942502a2",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovePressedR",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "fa4421eb-3735-406f-a65e-a3d6c1176445",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MovePressedL",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

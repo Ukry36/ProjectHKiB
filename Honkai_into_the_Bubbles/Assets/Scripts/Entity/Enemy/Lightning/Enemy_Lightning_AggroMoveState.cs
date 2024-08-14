@@ -45,7 +45,7 @@ public class Enemy_Lightning_AggroMoveState : Enemy_Lightning_State
                 {
                     enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
                 }
-                else if (!enemy.MovepointAdjustCheckFor2x2())
+                else if (!enemy.MovepointAdjustCheck())
                 {
                     enemy.MovePoint.transform.position += enemy.moveDir;
                 }

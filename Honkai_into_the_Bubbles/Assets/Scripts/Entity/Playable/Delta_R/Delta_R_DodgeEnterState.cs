@@ -47,9 +47,9 @@ public class Delta_R_DodgeEnterState : Playable_State
                 }
                 else
                 {
-                    if (!player.PointWallCheck(player.MovePoint.transform.position - player.savedInput))
+                    if (!player.PointWallCheck(player.MovePoint.transform.position - player.moveDir))
                     {
-                        player.MovePoint.transform.position -= player.savedInput;
+                        player.MovePoint.transform.position -= player.moveDir;
                     }
                 }
                 player.Mover.position = player.MovePoint.transform.position;

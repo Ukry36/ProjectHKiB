@@ -35,6 +35,7 @@ public class Enemy_Lightning_AggroIdleState : Enemy_Lightning_State
                 }
                 else
                 {
+                    Debug.Log(enemy.SkillArray[0].isCooltime);
                     colliders = new Collider2D[] { enemy.LineDetectTarget(enemy.GazePointToDir4(), enemy.SkillArray[0].DetectRadius, 1) };
                     if (!enemy.SkillArray[0].isCooltime && colliders[0] != null)
                     {

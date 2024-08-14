@@ -23,7 +23,7 @@ public class Enemy_Lightning : Enemy
     public Enemy_Lightning_Skill02State Skill02State { get; private set; }
 
     public GameObject[] Bullet01;
-    public Missile Bullet02;
+    public GameObject Bullet02;
     public GameObject targetPrefab;
 
     private readonly Vector3[][] Ofsets = new Vector3[][]
@@ -79,6 +79,8 @@ public class Enemy_Lightning : Enemy
     {
         base.Start();
         StateMachine.Initialize(IdleState);
+
+
     }
 
     protected override void Update()
@@ -119,31 +121,32 @@ public class Enemy_Lightning : Enemy
     {
         if (_dir.y < 0) // D
         {
-            var clone = Instantiate(Bullet01[0], transform.position, Quaternion.identity);
-            clone.SetActive(true);
-            clone = Instantiate(Bullet01[1], transform.position, Quaternion.identity);
-            clone.SetActive(true);
+            PoolManager.instance.ReuseGameObject(Bullet01[0], transform.position, Quaternion.identity)
+            .GetComponent<Bullet>().theStat = theStat;
+
+            PoolManager.instance.ReuseGameObject(Bullet01[1], transform.position, Quaternion.identity)
+            .GetComponent<Bullet>().theStat = theStat;
         }
         else if (_dir.x > 0) // R
         {
-            var clone = Instantiate(Bullet01[2], transform.position, Quaternion.identity);
-            clone.SetActive(true);
-            clone = Instantiate(Bullet01[3], transform.position, Quaternion.identity);
-            clone.SetActive(true);
+            PoolManager.instance.ReuseGameObject(Bullet01[2], transform.position, Quaternion.identity)
+            .GetComponent<Bullet>().theStat = theStat;
+            PoolManager.instance.ReuseGameObject(Bullet01[3], transform.position, Quaternion.identity)
+            .GetComponent<Bullet>().theStat = theStat;
         }
         else if (_dir.y > 0) // U
         {
-            var clone = Instantiate(Bullet01[4], transform.position, Quaternion.identity);
-            clone.SetActive(true);
-            clone = Instantiate(Bullet01[5], transform.position, Quaternion.identity);
-            clone.SetActive(true);
+            PoolManager.instance.ReuseGameObject(Bullet01[4], transform.position, Quaternion.identity)
+            .GetComponent<Bullet>().theStat = theStat;
+            PoolManager.instance.ReuseGameObject(Bullet01[5], transform.position, Quaternion.identity)
+            .GetComponent<Bullet>().theStat = theStat;
         }
         else if (_dir.x < 0) // L
         {
-            var clone = Instantiate(Bullet01[6], transform.position, Quaternion.identity);
-            clone.SetActive(true);
-            clone = Instantiate(Bullet01[7], transform.position, Quaternion.identity);
-            clone.SetActive(true);
+            PoolManager.instance.ReuseGameObject(Bullet01[6], transform.position, Quaternion.identity)
+            .GetComponent<Bullet>().theStat = theStat;
+            PoolManager.instance.ReuseGameObject(Bullet01[7], transform.position, Quaternion.identity)
+            .GetComponent<Bullet>().theStat = theStat;
         }
     }
 
@@ -179,13 +182,19 @@ public class Enemy_Lightning : Enemy
             ofs2 = Ofsets[3][_muzzle * 2 + 1];
         }
 
-        Bullet02.targetPos = Instantiate(targetPrefab, GetRandomPos(GazePoint.transform.position, 5), Quaternion.identity).transform;
-        var clone = Instantiate(Bullet02.gameObject, Mover.transform.position + ofs1, dir);
-        clone.SetActive(true);
+        if (PoolManager.instance.ReuseGameObject(Bullet02, Mover.transform.position + ofs1, dir)
+        .TryGetComponent(out Missile missile))
+        {
+            missile.targetPos = PoolManager.instance.ReuseGameObject(targetPrefab, GetRandomPos(GazePoint.transform.position, 5), Quaternion.identity).transform;
+            missile.theStat = theStat;
+        }
 
-        Bullet02.targetPos = Instantiate(targetPrefab, GetRandomPos(GazePoint.transform.position, 5), Quaternion.identity).transform;
-        clone = Instantiate(Bullet02.gameObject, Mover.transform.position + ofs2, dir);
-        clone.SetActive(true);
+        if (PoolManager.instance.ReuseGameObject(Bullet02, Mover.transform.position + ofs2, dir)
+        .TryGetComponent(out Missile missile1))
+        {
+            missile1.targetPos = PoolManager.instance.ReuseGameObject(targetPrefab, GetRandomPos(GazePoint.transform.position, 5), Quaternion.identity).transform;
+            missile1.theStat = theStat;
+        }
     }
 
     public IEnumerator ShootBullet02(Vector2 _dir)

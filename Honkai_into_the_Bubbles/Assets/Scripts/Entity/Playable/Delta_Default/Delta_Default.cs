@@ -56,7 +56,7 @@ public class Delta_Default : Playable
             }
 
         if (canGraffitiEffect)
-            if (!isGraffitiCooltime && InputManager.instance.GraffitiStartInput && theStat.currentGP > 0
+            if (!isGraffitiCooltime && InputManager.instance.GraffitiStartInput && theStat.CurrentGP > 0
             && stateMachine.currentState != DodgeEnterState
             && stateMachine.currentState != GraffitiState
             && stateMachine.currentState != GraffitiEnterState
