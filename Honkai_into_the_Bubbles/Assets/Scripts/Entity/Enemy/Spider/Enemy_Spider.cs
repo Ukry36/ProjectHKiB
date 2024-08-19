@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Enemy_Spider : Enemy
 {
+    [SerializeField] private GameObject ExplosionPrefab;
     public Enemy_Spider_StateMachine StateMachine { get; private set; }
     public Enemy_Spider_IdleState IdleState { get; private set; }
     public Enemy_Spider_RandomIdleState RandomIdleState { get; private set; }
@@ -81,6 +82,12 @@ public class Enemy_Spider : Enemy
         SkillArray[0].isCooltime = true;
         yield return new WaitForSeconds(SkillArray[0].Cooltime);
         SkillArray[0].isCooltime = false;
+    }
+
+    public override void Die()
+    {
+        PoolManager.instance.ReuseGameObject(ExplosionPrefab, this.transform.position, Quaternion.identity).GetComponent<Bullet>().theStat = theStat;
+        base.Die();
     }
 
 }

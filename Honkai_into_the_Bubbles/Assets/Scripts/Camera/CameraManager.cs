@@ -42,12 +42,12 @@ public class CameraManager : MonoBehaviour
         ReturntoOrigRes(0);
     }
 
-    public void StrictMovement(Vector3 _way)
+    public void StrictMovement(Vector3 _pos, Vector3 _prevPos)
     {
-        this.transform.position += _way;
+        this.transform.position = _pos;
         for (int i = 0; i < Cameras.Length; i++)
         {
-            Cameras[i].OnTargetObjectWarped(PlayerManager.instance.transform, _way);
+            Cameras[i].OnTargetObjectWarped(PlayerManager.instance.transform, _pos - _prevPos);
         }
     }
 

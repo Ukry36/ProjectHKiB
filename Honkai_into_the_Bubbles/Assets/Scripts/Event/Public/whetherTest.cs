@@ -5,13 +5,14 @@ using UnityEngine;
 public class whetherTest : Event
 {
     public Whether.WhetherType whetherType;
-    public override void StartEvent(Status _interactedEntity)
+    protected override void StartEvent(Status _interactedEntity)
     {
-        base.StartEvent(_interactedEntity);
+        if (!isCooltime)
+        {
+            if (WhetherManager.instance.CheckWhether(new List<Whether.WhetherType> { whetherType })) WhetherManager.instance.StopWhether(whetherType);
+            else WhetherManager.instance.StartWhether(whetherType);
 
-        if (WhetherManager.instance.CheckWhether(new List<Whether.WhetherType> { whetherType })) WhetherManager.instance.StopWhether(whetherType);
-        else WhetherManager.instance.StartWhether(whetherType);
-
-        EndEvent();
+            EndEvent();
+        }
     }
 }

@@ -21,8 +21,8 @@ TagManager:
   - Object
   - CameraBound
   - WallForGraffiti
-  - PlayerAttack
-  - EnemyAttack
+  - PlayerWall
+  - EnemyWall
   - MovepointAdjust
   - 
   - 
@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: BG
+    uniqueID: 3765681371
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0

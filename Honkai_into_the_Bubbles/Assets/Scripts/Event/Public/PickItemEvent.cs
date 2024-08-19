@@ -16,15 +16,13 @@ public class PickItemEvent : Event
 {
     public List<PickItemInfo> Items = new();
 
-    public override void StartEvent(Status _interactedEntity)
+    protected override void StartEvent(Status _interactedEntity)
     {
-        base.StartEvent(_interactedEntity);
-
         foreach (PickItemInfo item in Items)
             if (item.count > 0)
                 InventoryManager.instance.GetItem(item.ID, item.count);
-
         EndEvent();
+
     }
 
 }
