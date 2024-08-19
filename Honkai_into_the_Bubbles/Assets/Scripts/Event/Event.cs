@@ -23,7 +23,7 @@ public class Event : MonoBehaviour
             isCooltime = true;
             expiredLocal = !reusable;
             AudioManager.instance.PlaySound(initialSFX, this.transform);
-            if (reusable && cooltime > 0)
+            if (reusable)
             {
                 StartCoroutine(Cooltime());
             }
