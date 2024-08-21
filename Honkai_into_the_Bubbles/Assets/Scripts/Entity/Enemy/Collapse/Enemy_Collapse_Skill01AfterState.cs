@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy_Collapse_Skill01After : Enemy_Collapse_State
 {
+    public Vector2 targetPos;
     public Enemy_Collapse_Skill01After(Enemy_Collapse _enemy, Enemy_Collapse_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
     {
 
@@ -26,6 +27,8 @@ public class Enemy_Collapse_Skill01After : Enemy_Collapse_State
 
     public override void Exit()
     {
+        enemy.MovePoint.transform.position = targetPos;
+        enemy.boxCollider.enabled = true;
         base.Exit();
     }
 }

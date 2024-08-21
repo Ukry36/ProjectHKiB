@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Analytics;
 
@@ -20,6 +21,7 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
     public override void Update()
     {
         base.Update();
+
         if (Vector3.Distance(enemy.Mover.position, enemy.MovePoint.transform.position) >= .05f)
         {
             enemy.Mover.position = Vector3.MoveTowards
@@ -28,56 +30,83 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
                 enemy.MovePoint.transform.position,
                 enemy.MoveSpeed * Time.deltaTime
             );
-            return;
         }
-        enemy.Mover.position = enemy.MovePoint.transform.position; // make position accurate
-        enemy.MovePoint.prevPos = enemy.Mover.position; // used in external movepoint control
-        colliders = enemy.AreaDetectTarget(enemy.endFollowRadius);
-        if (colliders.Length <= 0)
+        else
         {
-            enemy.StateMachine.ChangeState(enemy.IdleState);
-            return;
-        }
-        enemy.SelectNearestTarget(colliders);
-        if (enemy.SetPath() < 2)
-        {
-            enemy.StateMachine.ChangeState(enemy.IdleState);
-            return;
-        }
+            enemy.Mover.position = enemy.MovePoint.transform.position; // make position accurate
+            enemy.MovePoint.prevPos = enemy.Mover.position; // used in external movepoint control
 
-        if (enemy.LineDetectTarget(enemy.moveDir, enemy.SkillArray[0].DetectRadius, 1, true))
-        {
-            Collider2D[] colliders = Physics2D.OverlapBoxAll(enemy.target.transform.position, new Vector2(2, 2), 0);
-
-            bool isWallLayerPresent = false;
-
-            foreach (Collider2D collider in colliders)
+            if ((colliders = enemy.AreaDetectTarget(enemy.endFollowRadius)).Length <= 0)
             {
-                if (((1 << collider.gameObject.layer) & enemy.wallLayer & ~(1 << LayerMask.NameToLayer("Player")) & ~(1 << LayerMask.NameToLayer("Movepoint")) & ~(1 << LayerMask.NameToLayer("Enemy"))) != 0)
+                enemy.StateMachine.ChangeState(enemy.IdleState);
+            }
+            else
+            {
+                enemy.SelectNearestTarget(colliders);
+
+                if (enemy.SetPath() < 2)
                 {
-                    isWallLayerPresent = true;
-                    break;
+                    enemy.StateMachine.ChangeState(enemy.IdleState);
+                }
+                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[1].DetectRadius, true)).Length > 0 && ((enemy.theStat.CurrentHP / enemy.theStat.maxHP) < 0.5 || !enemy.SkillArray[0].isCooltime))
+                {
+                    enemy.SelectFarthestTarget(colliders);
+                    Debug.Log("lineDetect success");
+                    List<Vector3> availablePositions = new();
+
+                    Vector3[] offsets = { new(-1, -1), new(1, -1), new(-1, 1), new(1, 1) };
+
+                    foreach (Vector3 offset in offsets)
+                    {
+                        Collider2D[] colliders = Physics2D.OverlapCircleAll(enemy.target.transform.position + offset, 0.8f);
+
+                        bool isWallLayerPresent = false;
+
+
+
+                        foreach (Collider2D collider in colliders)
+                        {
+                            if (((1 << collider.gameObject.layer) & enemy.wallLayer & ~(1 << LayerMask.NameToLayer("Player")) & ~(1 << LayerMask.NameToLayer("Movepoint")) & ~(1 << LayerMask.NameToLayer("Enemy"))) != 0)
+                            {
+                                isWallLayerPresent = true;
+                                break;
+                            }
+                        }
+
+                        if (!isWallLayerPresent)
+                        {
+                            availablePositions.Add(enemy.target.transform.position + offset);
+                        }
+                    }
+
+                    Debug.Log(availablePositions.Count);
+
+                    if (availablePositions.Count > 0)
+                    {
+                        System.Random random = new();
+
+                        Vector3 randomPos = availablePositions[random.Next(availablePositions.Count)];
+
+                        enemy.Skill01IngState.targetPos = randomPos;
+                        enemy.StateMachine.ChangeState(enemy.Skill01BeforeState);
+                    }
+                }
+                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[1].DetectRadius, true)).Length > 0 && !enemy.SkillArray[1].isCooltime)
+                {
+                    enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
+                }
+                else
+                {
+                    enemy.GazePoint.position = enemy.target.position;
+                    enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
+                    enemy.SetAnimDir(enemy.moveDir);
+
+                    if (!enemy.MovepointAdjustCheck())
+                    {
+                        enemy.MovePoint.transform.position += enemy.moveDir;
+                    }
                 }
             }
-            if (!isWallLayerPresent && ((enemy.theStat.CurrentHP / enemy.theStat.maxHP) < 0.5 || !enemy.SkillArray[0].isCooltime))
-            {
-                enemy.StateMachine.ChangeState(enemy.Skill01BeforeState);
-                return;
-            }
-        }
-
-        if (enemy.LineDetectTarget(enemy.moveDir, enemy.SkillArray[1].DetectRadius, 1, true) && !enemy.SkillArray[1].isCooltime)
-        {
-            enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
-            return;
-        }
-
-        enemy.moveDir = new Vector3(enemy.PathList[1].x, enemy.PathList[1].y) - enemy.MovePoint.transform.position;
-        enemy.SetAnimDir(enemy.moveDir);
-
-        if (!enemy.MovepointAdjustCheck())
-        {
-            enemy.MovePoint.transform.position += enemy.moveDir;
         }
     }
 
