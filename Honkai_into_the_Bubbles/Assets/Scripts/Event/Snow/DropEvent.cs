@@ -9,9 +9,8 @@ public class DropEvent : Event
 
     private WaitForSeconds wait01 = new(0.02f);
 
-    public override void StartEvent(Status _interactedEntity)
+    protected override void StartEvent(Status _interactedEntity)
     {
-        base.StartEvent(_interactedEntity);
         StartCoroutine(EventCoroutine());
     }
 

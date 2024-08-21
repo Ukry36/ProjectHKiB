@@ -61,6 +61,18 @@ public class Entity : MonoBehaviour
 
     }
 
+    private void OnEnable()
+    {
+        hitLight.enabled = false;
+        theStat.invincible = false;
+        SpriteRenderer.color = Color.white;
+    }
+
+    private void OnDisable()
+    {
+        StopAllCoroutines();
+    }
+
     public void SetSpeedDefault()
     {
         MoveSpeed = DefaultSpeed * PlayerManager.instance.exSpeedCoeff;

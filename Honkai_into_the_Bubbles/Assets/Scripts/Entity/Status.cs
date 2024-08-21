@@ -48,7 +48,6 @@ public class Status : MonoBehaviour
             StartCoroutine(entity.HitLightShine(_attackInfo.hitColor));
             StartCoroutine(entity.HitInvincible());
             HPControl(-trueDMG);
-            Debug.Log(trueDMG);
         }
 
         int Coeff = _attackInfo.Strong - Mass;

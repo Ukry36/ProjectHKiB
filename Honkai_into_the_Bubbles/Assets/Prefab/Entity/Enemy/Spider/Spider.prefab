@@ -127,7 +127,6 @@ GameObject:
   - component: {fileID: 2998789880383365441}
   - component: {fileID: 9128113644672191067}
   - component: {fileID: 8895712745181400794}
-  - component: {fileID: 3052201680122153347}
   - component: {fileID: 6504106908878645833}
   m_Layer: 8
   m_Name: Spider
@@ -135,7 +134,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5788489842607426844
 Transform:
   m_ObjectHideFlags: 0
@@ -170,14 +169,14 @@ MonoBehaviour:
   superArmor: 0
   invincible: 0
   maxHP: 200
-  currentHP: 200
   maxGP: 20
-  currentGP: 0
+  playHitSFXDamage: 50
   ATK: 100
   DEF: 0
   CritRate: 0
   CritDMG: 0
   Mass: 1
+  Size: 1
   entity: {fileID: 0}
 --- !u!61 &9128113644672191067
 BoxCollider2D:
@@ -251,102 +250,6 @@ Rigidbody2D:
   m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!82 &3052201680122153347
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7058214274266883622}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 0
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!114 &6504106908878645833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +267,6 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 1216
-  size: 1
 --- !u!1 &8726325901392311059
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,7 +281,6 @@ GameObject:
   - component: {fileID: 3396699944727692339}
   - component: {fileID: 2548029205717885608}
   - component: {fileID: 5134759212843709348}
-  - component: {fileID: 3675722811665815878}
   - component: {fileID: 2539010948495519690}
   - component: {fileID: 3016296559874532645}
   m_Layer: 8
@@ -531,6 +432,7 @@ MonoBehaviour:
   - hit_mechanic
   deathSFX:
   - hit_mechanic_explosion_big
+  simpleDirControlAnimator: {fileID: 0}
   SpriteLibrary: {fileID: 3396699944727692339}
   boxCollider: {fileID: 0}
   Mover: {fileID: 5788489842607426844}
@@ -538,16 +440,16 @@ MonoBehaviour:
   GazePoint: {fileID: 2109409989319862209}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 1984
+    m_Bits: 18368
   DefaultSpeed: 3
   SprintCoeff: 2
   InvincibleFrame: 4
   hitLight: {fileID: 0}
   target: {fileID: 0}
+  moveDir: {x: 0, y: 0, z: 0}
   SkillArray:
   - {fileID: 7388745022800197892}
   PathList: []
-  moveDir: {x: 0, y: 0, z: 0}
   beforeAttackEffectPrefab: {fileID: 5571567845738202018, guid: 5b1c81279139df947b804d6471d5879b, type: 3}
   targetLayer:
     serializedVersion: 2
@@ -563,20 +465,7 @@ MonoBehaviour:
   isTurnCooltime: 0
   turnCooltime: 1
   backStep: 0
---- !u!114 &3675722811665815878
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8726325901392311059}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8092ae74465afbc4fb230d36dfdd606d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  VanishPrefab:
-  - {fileID: 5843026327884913771}
+  ExplosionPrefab: {fileID: 986790918841556672, guid: b74fbfd7b43833c44b41d7cdc4bce76d, type: 3}
 --- !u!114 &2539010948495519690
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -594,7 +483,7 @@ MonoBehaviour:
   dontCrossCorner: 1
   wallLayer:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 16704
 --- !u!114 &3016296559874532645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -791,17 +680,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 18599550708107768, guid: 891864adca7add241832b5a77adc9c82, type: 3}
   m_PrefabInstance: {fileID: 426022195655957928}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &5843026327884913771 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6124633340371042755, guid: 891864adca7add241832b5a77adc9c82, type: 3}
-  m_PrefabInstance: {fileID: 426022195655957928}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &7388745022800197892 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7161726838403867820, guid: 891864adca7add241832b5a77adc9c82, type: 3}
   m_PrefabInstance: {fileID: 426022195655957928}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5843026327884913771}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}

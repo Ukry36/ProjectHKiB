@@ -7,12 +7,14 @@ public class Trigger : MonoBehaviour
     [SerializeField] protected LayerMask interactLayer;
     [SerializeField] protected Event targetEvent;
     [SerializeField] protected bool needConfirmInput;
+    [SerializeField] protected string triggerSFX;
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if (!targetEvent.expiredLocal && !needConfirmInput && (interactLayer & (1 << other.gameObject.layer)) != 0)
         {
-            targetEvent.StartEvent(other.TryGetComponent(out Status stat) ? stat : null);
+            PlaySFX();
+            targetEvent.StartEventBase(other.TryGetComponent(out Status stat) ? stat : null);
         }
     }
 
@@ -22,8 +24,14 @@ public class Trigger : MonoBehaviour
         {
             if (InputManager.instance.ConfirmInput && other.TryGetComponent(out Status stat))
             {
-                targetEvent.StartEvent(stat);
+                PlaySFX();
+                targetEvent.StartEventBase(stat);
             }
         }
+    }
+
+    protected virtual void PlaySFX()
+    {
+        AudioManager.instance.PlaySound(triggerSFX, this.gameObject.transform);
     }
 }

@@ -19,7 +19,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &358721282003547894
 Transform:
   m_ObjectHideFlags: 0
@@ -441,7 +441,7 @@ MonoBehaviour:
   GazePoint: {fileID: 5748336688515935172}
   wallLayer:
     serializedVersion: 2
-    m_Bits: 1984
+    m_Bits: 18368
   DefaultSpeed: 1.5
   SprintCoeff: 2
   InvincibleFrame: 0
@@ -495,7 +495,7 @@ MonoBehaviour:
   dontCrossCorner: 0
   wallLayer:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 16704
 --- !u!114 &7213242411693798973
 MonoBehaviour:
   m_ObjectHideFlags: 0

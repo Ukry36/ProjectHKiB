@@ -43,7 +43,7 @@ public class TransferPosition : MonoBehaviour
         component.transform.position = destination.position;
         component.entity.MovePoint.transform.position = destination.position;
         if (component.isPlayer)
-            CameraManager.instance.StrictMovement(destination.position - this.transform.position);
+            CameraManager.instance.StrictMovement(destination.position, this.transform.position);
         if (dir != Vector2.zero)
             component.entity.SetAnimDir(dir);
 

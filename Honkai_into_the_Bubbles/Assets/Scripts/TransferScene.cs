@@ -8,7 +8,7 @@ public class TransferScene : TransferPosition
     protected override IEnumerator TransferCoroutine(Status component)
     {
         yield return SceneLoadingManager.instance.LoadSceneCoroutine(
-            destinationSceneName, fadeColor, delay, innerDelay, component, destination.position - this.transform.position);
+            destinationSceneName, fadeColor, delay, innerDelay, component, destination.position, this.transform.position);
     }
 
 }

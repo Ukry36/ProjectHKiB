@@ -16,7 +16,6 @@ public class Delta_Default_GraffitiEnterState : Playable_State
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
         player.GS.StartGraffiti();
-        player.theStat.GPControl(-1, _silence: true);
     }
 
     public override void Update()
