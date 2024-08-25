@@ -6,7 +6,7 @@ using UnityEngine;
 public class SpawnFieldEvent : Event
 {
     [SerializeField] private GameObject Prefab;
-    private int ID;
+    [SerializeField] private int ID = 30000;
     [SerializeField] private float checkOffset;
     [SerializeField] private Vector3 TR;
     [SerializeField] private Vector3 BL;
@@ -17,10 +17,6 @@ public class SpawnFieldEvent : Event
 
     private List<Vector3> spawnPoints = new();
 
-    private void Awake()
-    {
-        ID = Prefab.GetComponent<Status>().entity.ID;
-    }
     protected override void StartEvent(Status _interactedEntity)
     {
         int fillCount = GetFillCount();
@@ -36,16 +32,17 @@ public class SpawnFieldEvent : Event
     private int GetFillCount()
     {
         List<Collider2D> colliders = new(Physics2D.OverlapAreaAll(TR, BL, spawnLayer));
-        if (colliders.Count > 0)
+        List<Collider2D> outColliders = new();
+        for (int i = 0; i < colliders.Count; i++)
         {
-            foreach (Collider2D collider in colliders)
+
+            if (colliders[i].TryGetComponent(out Status status))
             {
-                if (collider.TryGetComponent(out Status status))
-                    if (status.entity.ID != ID)
-                        colliders.Remove(collider);
+                if (status.entity.ID == ID)
+                    outColliders.Add(colliders[i]);
             }
         }
-        return colliders.Count < countToMaintain ? countToMaintain - colliders.Count : 0;
+        return outColliders.Count < countToMaintain ? countToMaintain - outColliders.Count : 0;
     }
 
     private void GetRandomPos()

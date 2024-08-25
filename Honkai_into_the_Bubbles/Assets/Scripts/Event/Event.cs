@@ -16,7 +16,7 @@ public class Event : MonoBehaviour
 
     [SerializeField] protected string initialSFX;
 
-    public virtual void StartEventBase(Status _interactedEntity)
+    public void StartEventBase(Status _interactedEntity)
     {
         if (!isCooltime)
         {

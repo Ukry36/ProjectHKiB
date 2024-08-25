@@ -54,6 +54,8 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Image HPbar;
     [SerializeField] private TextMeshProUGUI HPtext;
     [SerializeField] private TextMeshProUGUI GSTtext;
+    [SerializeField] private TextMeshProUGUI FPSTtext;
+    float deltaTime;
 
 
     private void Start()
@@ -65,6 +67,8 @@ public class MenuManager : MonoBehaviour
 
     private void Update()
     {
+        deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
+        FPSTtext.text = "fps: " + 1.0f / deltaTime;
         HPtext.text = theStat.CurrentHP + "/" + theStat.maxHP;
         HPbar.transform.localScale = new Vector3((float)theStat.CurrentHP / theStat.maxHP, 1, 0);
         if (isPaused)
