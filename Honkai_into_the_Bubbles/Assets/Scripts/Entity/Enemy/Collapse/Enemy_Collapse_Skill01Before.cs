@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy_Collapse_Skill01Before : Enemy_Collapse_State
 {
+    public Vector3 targetPos;
     public Enemy_Collapse_Skill01Before(Enemy_Collapse _enemy, Enemy_Collapse_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
     {
 
@@ -11,6 +12,8 @@ public class Enemy_Collapse_Skill01Before : Enemy_Collapse_State
 
     public override void Enter()
     {
+        enemy.EnemyWallBoxCollider.transform.position = targetPos;
+        enemy.EnemyWallBoxCollider.enabled = true;
         base.Enter();
     }
 
@@ -25,6 +28,8 @@ public class Enemy_Collapse_Skill01Before : Enemy_Collapse_State
 
     public override void Exit()
     {
+        enemy.EnemyWallBoxCollider.transform.localPosition = Vector3.zero;
+        enemy.EnemyWallBoxCollider.enabled = false;
         base.Exit();
     }
 }

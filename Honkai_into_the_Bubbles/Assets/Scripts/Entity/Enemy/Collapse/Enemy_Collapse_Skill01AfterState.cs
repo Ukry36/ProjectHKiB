@@ -12,6 +12,7 @@ public class Enemy_Collapse_Skill01After : Enemy_Collapse_State
 
     public override void Enter()
     {
+        enemy.EnemyWallBoxCollider.enabled = true;
         base.Enter();
     }
 
@@ -27,8 +28,7 @@ public class Enemy_Collapse_Skill01After : Enemy_Collapse_State
 
     public override void Exit()
     {
-        enemy.MovePoint.transform.position = targetPos;
-        enemy.boxCollider.enabled = true;
+        enemy.EnemyWallBoxCollider.enabled = false;
         base.Exit();
     }
 }

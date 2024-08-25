@@ -48,25 +48,23 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
                 {
                     enemy.StateMachine.ChangeState(enemy.IdleState);
                 }
-                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[1].DetectRadius, true)).Length > 0 && ((enemy.theStat.CurrentHP / enemy.theStat.maxHP) < 0.5 || !enemy.SkillArray[0].isCooltime))
+                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[0].DetectRadius, true)).Length > 0 && ((enemy.theStat.CurrentHP / enemy.theStat.maxHP) < 0.5 || !enemy.SkillArray[0].isCooltime))
                 {
                     enemy.SelectFarthestTarget(colliders);
-                    Debug.Log("lineDetect success");
                     List<Vector3> availablePositions = new();
 
-                    Vector3[] offsets = { new(-1, -1), new(1, -1), new(-1, 1), new(1, 1) };
+                    Vector3[] offsets = { new(-0.5f, -0.5f), new(-0.5f, 0.5f), new(0.5f, -0.5f), new(0.5f, 0.5f) };
 
                     foreach (Vector3 offset in offsets)
                     {
-                        Collider2D[] colliders = Physics2D.OverlapCircleAll(enemy.target.transform.position + offset, 0.8f);
+                        Vector3 position = new Vector3(Mathf.RoundToInt(enemy.target.transform.position.x), Mathf.RoundToInt(enemy.target.transform.position.y)) + offset;
+                        Collider2D[] colliders = Physics2D.OverlapCircleAll(position, 0.8f);
 
                         bool isWallLayerPresent = false;
 
-
-
                         foreach (Collider2D collider in colliders)
                         {
-                            if (((1 << collider.gameObject.layer) & enemy.wallLayer & ~(1 << LayerMask.NameToLayer("Player")) & ~(1 << LayerMask.NameToLayer("Movepoint")) & ~(1 << LayerMask.NameToLayer("Enemy"))) != 0)
+                            if (((1 << collider.gameObject.layer) & enemy.wallLayer & ~(1 << LayerMask.NameToLayer("Player")) & ~(1 << LayerMask.NameToLayer("Movepoint"))) != 0)
                             {
                                 isWallLayerPresent = true;
                                 break;
@@ -75,11 +73,9 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
 
                         if (!isWallLayerPresent)
                         {
-                            availablePositions.Add(enemy.target.transform.position + offset);
+                            availablePositions.Add(position);
                         }
                     }
-
-                    Debug.Log(availablePositions.Count);
 
                     if (availablePositions.Count > 0)
                     {
@@ -87,11 +83,12 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
 
                         Vector3 randomPos = availablePositions[random.Next(availablePositions.Count)];
 
+                        enemy.Skill01BeforeState.targetPos = randomPos;
                         enemy.Skill01IngState.targetPos = randomPos;
                         enemy.StateMachine.ChangeState(enemy.Skill01BeforeState);
                     }
                 }
-                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[1].DetectRadius, true)).Length > 0 && !enemy.SkillArray[1].isCooltime)
+                else if (enemy.LineDetectTarget(new Vector2(enemy.Animator.GetFloat("dirX"), enemy.Animator.GetFloat("dirY")), enemy.SkillArray[1].DetectRadius, 1, true) && !enemy.SkillArray[1].isCooltime)
                 {
                     enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
                 }

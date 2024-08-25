@@ -16,6 +16,10 @@ public class Enemy_Collapse_Skill01Ing : Enemy_Collapse_State
         base.Enter();
         enemy.Skill01AfterState.targetPos = targetPos;
         enemy.Mover.position = targetPos;
+        enemy.MovePoint.transform.position = targetPos;
+
+        enemy.EnemyWallBoxCollider.enabled = true;
+        enemy.MovePoint.boxCollider.enabled = false;
         enemy.boxCollider.enabled = false;
     }
 
@@ -30,6 +34,9 @@ public class Enemy_Collapse_Skill01Ing : Enemy_Collapse_State
 
     public override void Exit()
     {
+        enemy.EnemyWallBoxCollider.enabled = false;
+        enemy.MovePoint.boxCollider.enabled = true;
+        enemy.boxCollider.enabled = true;
         base.Exit();
     }
 }

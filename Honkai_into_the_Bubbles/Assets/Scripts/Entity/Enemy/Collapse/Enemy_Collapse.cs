@@ -20,10 +20,12 @@ public class Enemy_Collapse : Enemy
     public Enemy_Collapse_Skill01After Skill01AfterState { get; private set; }
     public Enemy_Collapse_Skill02Enter Skill02EnterState { get; private set; }
     public Enemy_Collapse_Skill02 Skill02State { get; private set; }
+    public BoxCollider2D EnemyWallBoxCollider;
 
     protected override void Awake()
     {
         base.Awake();
+
         StateMachine = new Enemy_Collapse_StateMachine();
 
         IdleState = new Enemy_Collapse_IdleState(this, StateMachine, "Idle");

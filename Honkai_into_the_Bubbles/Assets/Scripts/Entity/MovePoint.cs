@@ -6,10 +6,11 @@ public class MovePoint : MonoBehaviour
     public Transform mover;
     public LayerMask wallLayer;
     [SerializeField] private Transform parent = null;
-    private BoxCollider2D boxCollider;
+    public BoxCollider2D boxCollider { get; private set; }
 
     private void Start()
     {
+        boxCollider = GetComponent<BoxCollider2D>();
         mover = this.transform.parent;
         this.transform.parent = parent;
     }

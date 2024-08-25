@@ -60,21 +60,22 @@ public class Enemy : Entity
     }
 
     // detect player if player is in specific area
-    public Collider2D[] AreaDetectTarget(float _rad, bool _ignoreStealth = false)
+    public Collider2D[] AreaDetectTarget(float _rad, bool _ignoreStealth = false, Vector3 offset = new Vector3())
     {
         float rad = PlayerManager.instance.isStealth && !_ignoreStealth ? _rad / 4 : _rad;
-        return Physics2D.OverlapCircleAll(Mover.position, rad, targetLayer);
+        return Physics2D.OverlapCircleAll(Mover.position + offset, rad, targetLayer);
     }
 
 
     public Collider2D LineDetectTarget(Vector2 _dir, float _dist, int _maxErr, bool _ignoreStealth = false)
     {
         Vector3 v = _dir.x == 0 ? Vector3.right : Vector3.up;
+        float sizeCoefficient = theStat.Size switch { 1 => 1, 2 => 1.5f, _ => 1 };
 
         float dist = PlayerManager.instance.isStealth && !_ignoreStealth ? _dist / 4 : _dist;
 
-        Debug.DrawRay(Mover.position + (Vector3)_dir, _dir * _dist, Color.red, 0.2f);
-        RaycastHit2D hit = Physics2D.Raycast(Mover.position + (Vector3)_dir, _dir, dist, ~LayerManager.instance.ignoreRaycast);
+        Debug.DrawRay(Mover.position + (Vector3)_dir * sizeCoefficient, _dir * _dist, Color.red, 0.2f);
+        RaycastHit2D hit = Physics2D.Raycast(Mover.position + (Vector3)_dir * sizeCoefficient, _dir, dist, ~LayerManager.instance.ignoreRaycast);
         if (hit.collider != null && (targetLayer & (1 << hit.collider.gameObject.layer)) != 0)
         {
             return hit.collider;
@@ -84,14 +85,16 @@ public class Enemy : Entity
         {
             for (int j = -1; j <= 1; j += 2)
             {
-                Debug.DrawRay(Mover.position + i * j * v * 0.5f, _dir * _dist, Color.red, 0.2f);
-                hit = Physics2D.Raycast(Mover.position + i * j * v, _dir, dist, ~LayerManager.instance.ignoreRaycast);
+                Debug.DrawRay(Mover.position + i * j * v * 0.5f + (Vector3)_dir * sizeCoefficient, _dir * _dist, Color.red, 0.2f);
+                hit = Physics2D.Raycast(Mover.position + i * j * v * 0.5f + (Vector3)_dir * sizeCoefficient, _dir, dist, ~LayerManager.instance.ignoreRaycast);
                 if (hit && hit.collider != null && (targetLayer & (1 << hit.collider.gameObject.layer)) != 0)
                 {
                     return hit.collider;
                 }
             }
         }
+
+        Debug.Log("not detected");
         return null;
     }
 
