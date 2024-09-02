@@ -9,6 +9,7 @@ public class SupplyEvent : Event
 
     protected override void StartEvent(Status _interactedEntity)
     {
+        StartCoroutine(Cooltime());
         if (HP) _interactedEntity.HPControl(amount);
         if (GP) _interactedEntity.GPControl(amount);
         EndEvent();

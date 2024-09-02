@@ -93,8 +93,6 @@ public class Enemy : Entity
                 }
             }
         }
-
-        Debug.Log("not detected");
         return null;
     }
 

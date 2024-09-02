@@ -10,7 +10,7 @@ public class Event : MonoBehaviour
     [SerializeField] protected float cooltime;
     [HideInInspector] public bool isCooltime;
 
-    [SerializeField] protected GameObject triggerToExpire;
+    [SerializeField] protected Trigger triggerToExpire;
 
     [HideInInspector] public bool expiredLocal;
 
@@ -20,13 +20,9 @@ public class Event : MonoBehaviour
     {
         if (!isCooltime)
         {
-            isCooltime = true;
             expiredLocal = !reusable;
             AudioManager.instance.PlaySound(initialSFX, this.transform);
-            if (reusable)
-            {
-                StartCoroutine(Cooltime());
-            }
+
             StartEvent(_interactedEntity);
         }
     }
@@ -44,13 +40,16 @@ public class Event : MonoBehaviour
         }
         if (expiredLocal)
         {
-            triggerToExpire.SetActive(false);
+            triggerToExpire.gameObject.SetActive(false);
         }
     }
 
-    private IEnumerator Cooltime()
+    protected IEnumerator Cooltime()
     {
+        triggerToExpire.triggerCollider.enabled = false;
+        isCooltime = true;
         yield return new WaitForSeconds(cooltime);
         isCooltime = false;
+        triggerToExpire.triggerCollider.enabled = true;
     }
 }

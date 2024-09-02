@@ -191,11 +191,10 @@ public class PlayerManager : MonoBehaviour
         {
             if (currentDrone == null || !currentDrone.activeSelf)
             {
-                currentDrone = PoolManager.instance.ReuseGameObject(Drone, this.transform.position + new Vector3(20, 20), quaternion.identity);
+                currentDrone = PoolManager.instance.ReuseGameObject(Drone, this.transform.position, quaternion.identity);
             }
             else
             {
-                Debug.Log(currentDrone);
                 currentDrone.GetComponentInChildren<Drone>().CancelDisable();
             }
 
@@ -240,6 +239,12 @@ public class PlayerManager : MonoBehaviour
             currentDrone.SetActive(false);
             currentDrone = PoolManager.instance.ReuseGameObject(Drone, this.transform.position, quaternion.identity);
         }
+    }
+
+    public void FriendlyInstantTransfer(Vector3 _way)
+    {
+        if (drone)
+            currentDrone.transform.position += _way;
     }
 
 

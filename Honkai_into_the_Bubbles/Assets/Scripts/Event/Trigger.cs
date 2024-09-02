@@ -8,6 +8,12 @@ public class Trigger : MonoBehaviour
     [SerializeField] protected Event targetEvent;
     [SerializeField] protected bool needConfirmInput;
     [SerializeField] protected string triggerSFX;
+    [HideInInspector] public Collider2D triggerCollider;
+
+    private void Awake()
+    {
+        triggerCollider = GetComponent<Collider2D>();
+    }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {

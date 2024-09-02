@@ -138,30 +138,41 @@ public class MenuManager : MonoBehaviour
     public IEnumerator FadeCoroutine(float _opacity, float _fadeTime)
     {
         StopCoroutine(nameof(FadeOutCoroutine));
+        StopCoroutine(nameof(FadeInCoroutine));
         if (tempColor.a < _opacity)
-            yield return FadeOutCoroutine(_opacity, 1f / _fadeTime);
+            yield return FadeOutCoroutine(_opacity, _fadeTime);
         else
-            yield return FadeInCoroutine(_opacity, 1f / _fadeTime);
+            yield return FadeInCoroutine(_opacity, _fadeTime);
     }
-    private IEnumerator FadeOutCoroutine(float _opacity, float _speed)
+    private IEnumerator FadeOutCoroutine(float _opacity, float _fadeTime)
     {
-        while (tempColor.a < _opacity)
+        float timer = _fadeTime;
+        float speed = _opacity / _fadeTime;
+        while (timer > 0 && tempColor.a < _opacity)
         {
-            tempColor.a += _speed * Time.deltaTime;
+            tempColor.a += speed * Time.unscaledDeltaTime;
             fadeImage.color = tempColor;
+            timer -= Time.deltaTime;
             yield return null;
         }
-        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, _opacity);
+        tempColor.a = _opacity;
+        fadeImage.color = tempColor;
+        if (timer > 0) yield return new WaitForSeconds(timer);
     }
-    private IEnumerator FadeInCoroutine(float _opacity, float _speed)
+    private IEnumerator FadeInCoroutine(float _opacity, float _fadeTime)
     {
-        while (tempColor.a > _opacity)
+        float timer = _fadeTime;
+        float speed = (1 - _opacity) / _fadeTime;
+        while (timer > 0 && tempColor.a > _opacity)
         {
-            tempColor.a -= _speed * Time.deltaTime;
+            tempColor.a -= speed * Time.unscaledDeltaTime;
             fadeImage.color = tempColor;
+            timer -= Time.deltaTime;
             yield return null;
         }
-        fadeImage.color = new Color(fadeImage.color.r, fadeImage.color.g, fadeImage.color.b, _opacity);
+        tempColor.a = _opacity;
+        fadeImage.color = tempColor;
+        if (timer > 0) yield return new WaitForSeconds(timer);
     }
 
     #endregion

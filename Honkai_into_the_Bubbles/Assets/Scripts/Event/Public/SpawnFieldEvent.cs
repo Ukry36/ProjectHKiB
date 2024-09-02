@@ -19,6 +19,7 @@ public class SpawnFieldEvent : Event
 
     protected override void StartEvent(Status _interactedEntity)
     {
+        StartCoroutine(Cooltime());
         int fillCount = GetFillCount();
 
         for (int i = 0; i < fillCount; i++)

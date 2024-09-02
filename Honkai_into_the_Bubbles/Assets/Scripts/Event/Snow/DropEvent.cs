@@ -11,6 +11,7 @@ public class DropEvent : Event
 
     protected override void StartEvent(Status _interactedEntity)
     {
+        StartCoroutine(Cooltime());
         StartCoroutine(EventCoroutine());
     }
 

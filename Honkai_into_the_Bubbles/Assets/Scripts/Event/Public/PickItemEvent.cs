@@ -18,6 +18,7 @@ public class PickItemEvent : Event
 
     protected override void StartEvent(Status _interactedEntity)
     {
+        StartCoroutine(Cooltime());
         foreach (PickItemInfo item in Items)
             if (item.count > 0)
                 InventoryManager.instance.GetItem(item.ID, item.count);

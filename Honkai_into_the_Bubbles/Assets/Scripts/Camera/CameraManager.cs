@@ -42,19 +42,34 @@ public class CameraManager : MonoBehaviour
         ReturntoOrigRes(0);
     }
 
-    public void StrictMovement(Vector3 _pos, Vector3 _prevPos)
+    public void StrictMovement(Vector3 _way, Vector3 _prevPos)
     {
-        this.transform.position = _pos;
         for (int i = 0; i < Cameras.Length; i++)
         {
-            Cameras[i].OnTargetObjectWarped(PlayerManager.instance.transform, _pos - _prevPos);
+            Cameras[i].OnTargetObjectWarped(Cameras[i].Follow, _way);
+        }
+        this.transform.position = _way + _prevPos;
+
+        Collider2D other = Physics2D.OverlapCircle(_way + _prevPos, 0.5f, LayerMask.GetMask("CameraBound"));
+        if (other && other.TryGetComponent(out AreaInfo areaInfo))
+        {
+            for (int i = 0; i < Cameras.Length; i++)
+            {
+                Confiners[i].m_BoundingShape2D = areaInfo.cameraBound;
+            }
+        }
+        else
+        {
+            for (int i = 0; i < Cameras.Length; i++)
+            {
+                Confiners[i].m_BoundingShape2D = null;
+            }
         }
     }
 
 
     // 0 to 1, 1 to 0
-    private int FlipNum(int _i)
-    { int i = (_i + 1) % 2; return i; }
+    private int FlipNum(int _i) => (_i + 1) % 2;
 
     // OWO
     public void Zoom(float _res, float _blendTime,

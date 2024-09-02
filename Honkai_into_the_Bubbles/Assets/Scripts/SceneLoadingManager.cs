@@ -35,7 +35,7 @@ public class SceneLoadingManager : MonoBehaviour
         yield return MenuManager.instance.FadeCoroutine(1, _delay);
         _component.transform.position = _pos;
         _component.entity.MovePoint.transform.position = _pos;
-        CameraManager.instance.StrictMovement(_pos, _prevPos);
+        CameraManager.instance.StrictMovement(_pos - _prevPos, _prevPos);
 
         yield return new WaitForSeconds(_innerDelay);
 

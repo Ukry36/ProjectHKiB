@@ -21,12 +21,30 @@ public class Status : MonoBehaviour
     public int Mass = 1;
     public int Size = 1;
     [HideInInspector] public Entity entity;
+    [HideInInspector] public bool inTransferPosition;
 
     private void Awake()
     {
         entity = GetComponentInChildren<Entity>();
         CurrentHP = maxHP;
         CurrentGP = maxGP;
+    }
+
+    public void TransferPositionInvincible(float _time)
+    {
+        StopCoroutine(nameof(TransferPositionInvincibleCoroutine));
+        StartCoroutine(TransferPositionInvincibleCoroutine(_time));
+    }
+
+    private IEnumerator TransferPositionInvincibleCoroutine(float _time)
+    {
+        inTransferPosition = true;
+        invincible = true;
+        superArmor = true;
+        yield return new WaitForSeconds(_time);
+        inTransferPosition = false;
+        invincible = false;
+        superArmor = false;
     }
 
     public void Hit(Attack _attackInfo)

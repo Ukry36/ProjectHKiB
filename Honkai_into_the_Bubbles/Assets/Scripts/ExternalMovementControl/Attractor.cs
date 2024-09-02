@@ -28,7 +28,7 @@ public class Attractor : MonoBehaviour
     {
         for (int i = 0; i < targets.Count; i++)
         {
-            if (targets[i].timer <= 0)
+            if (targets[i].att.gameObject.activeSelf && targets[i].timer <= 0)
             {
                 targets[i].att.Attract(GetDir(targets[i].att), div * targets[i].att.theStat.Mass);
                 targets[i].timer = div * targets[i].att.theStat.Mass * Time.deltaTime;
