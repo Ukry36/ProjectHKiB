@@ -53,8 +53,7 @@ public class Delta_R_GraffitiIngState : Playable_State
                                : UInput ? Vector3.up : LInput ? Vector3.left : Vector3.zero;
 
 
-                if (!Physics2D.OverlapCircle(player.Mover.position + player.moveDir,
-                    0.4f, LayerManager.instance.graffitiWallLayer))
+                if (!player.PointWallCheckForGraffiti(player.Mover.position + player.moveDir))
                 {
                     if (!player.endAtGraffitiStartPoint)
                         player.MovePoint.transform.position += player.moveDir;

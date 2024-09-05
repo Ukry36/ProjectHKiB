@@ -1,14 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Analytics;
 
-public class Enemy_Spider_RandomMoveState : Enemy_Spider_State
+public class Enemy_Spider_RandomMoveState : Enemy_State
 {
     private int movementMultiplyer = 1;
-    public Enemy_Spider_RandomMoveState(Enemy_Spider _enemy, Enemy_Spider_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Spider enemy;
+    public Enemy_Spider_RandomMoveState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Spider _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -38,11 +39,11 @@ public class Enemy_Spider_RandomMoveState : Enemy_Spider_State
 
             if (enemy.AreaDetectTarget(enemy.followRadius).Length > 0)
             {
-                enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+                enemy.stateMachine.ChangeState(enemy.AggroMoveState);
             }
             else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheck())
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                enemy.stateMachine.ChangeState(enemy.IdleState);
             }
             else
             {

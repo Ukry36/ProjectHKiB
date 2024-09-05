@@ -1,15 +1,13 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Analytics;
 
-public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
+public class Enemy_Rusher_AggroMoveState : Enemy_State
 {
     private Collider2D[] colliders;
-    public Enemy_Rusher_AggroMoveState(Enemy_Rusher _enemy, Enemy_Rusher_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Rusher enemy;
+    public Enemy_Rusher_AggroMoveState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Rusher _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -36,23 +34,23 @@ public class Enemy_Rusher_AggroMoveState : Enemy_Rusher_State
 
             if ((colliders = enemy.AreaDetectTarget(enemy.endFollowRadius)).Length <= 0)
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                enemy.stateMachine.ChangeState(enemy.IdleState);
             }
             else
             {
                 enemy.SelectNearestTarget(colliders);
                 if (enemy.SetPath() < 2)
                 {
-                    enemy.StateMachine.ChangeState(enemy.IdleState);
+                    enemy.stateMachine.ChangeState(enemy.IdleState);
                 }
                 else if (enemy.LineDetectTarget(enemy.GazePointToDir4(), enemy.SkillArray[0].DetectRadius, 1, true) && !enemy.SkillArray[0].isCooltime)
                 {
-                    enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
+                    enemy.stateMachine.ChangeState(enemy.Skill01EnterState);
                 }
                 else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[1].DetectRadius, true)).Length > 0 && !enemy.SkillArray[1].isCooltime)
                 {
                     enemy.SelectNearestTarget(colliders);
-                    enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
+                    enemy.stateMachine.ChangeState(enemy.Skill02EnterState);
                 }
                 else
                 {

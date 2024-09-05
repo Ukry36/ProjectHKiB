@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Spider_Skill01State : Enemy_Spider_State
+public class Enemy_Spider_Skill01State : Enemy_State
 {
     private int i = 0;
-    public Enemy_Spider_Skill01State(Enemy_Spider _player, Enemy_Spider_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Spider enemy;
+    public Enemy_Spider_Skill01State(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Spider _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()

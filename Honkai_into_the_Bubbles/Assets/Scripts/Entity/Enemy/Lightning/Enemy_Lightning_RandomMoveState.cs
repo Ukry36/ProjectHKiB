@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
 
-public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
+public class Enemy_Lightning_RandomMoveState : Enemy_State
 {
     private int movementMultiplyer = 1;
-    public Enemy_Lightning_RandomMoveState(Enemy_Lightning _enemy, Enemy_Lightning_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Lightning enemy;
+    public Enemy_Lightning_RandomMoveState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Lightning _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -38,11 +40,11 @@ public class Enemy_Lightning_RandomMoveState : Enemy_Lightning_State
 
             if (enemy.AreaDetectTarget(enemy.followRadius).Length > 0)
             {
-                enemy.StateMachine.ChangeState(enemy.AggroIdleState);
+                enemy.stateMachine.ChangeState(enemy.AggroIdleState);
             }
             else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheck())
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                enemy.stateMachine.ChangeState(enemy.IdleState);
             }
             else
             {

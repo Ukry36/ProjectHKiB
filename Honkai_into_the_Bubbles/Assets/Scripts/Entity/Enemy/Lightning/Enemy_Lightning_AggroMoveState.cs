@@ -4,11 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Analytics;
 
-public class Enemy_Lightning_AggroMoveState : Enemy_Lightning_State
+public class Enemy_Lightning_AggroMoveState : Enemy_State
 {
-    public Enemy_Lightning_AggroMoveState(Enemy_Lightning _enemy, Enemy_Lightning_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
+    private Enemy_Lightning enemy;
+    public Enemy_Lightning_AggroMoveState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Lightning _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
-
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -34,7 +35,7 @@ public class Enemy_Lightning_AggroMoveState : Enemy_Lightning_State
             enemy.MovePoint.prevPos = enemy.Mover.position; // used in external movepoint control
             if (enemy.AreaDetectTarget(enemy.backstepRadius).Length <= 0)
             {
-                enemy.StateMachine.ChangeState(enemy.AggroIdleState);
+                enemy.stateMachine.ChangeState(enemy.AggroIdleState);
             }
             else
             {
@@ -43,7 +44,7 @@ public class Enemy_Lightning_AggroMoveState : Enemy_Lightning_State
                 enemy.SetAnimDir(-enemy.moveDir);
                 if (enemy.LineDetectTarget(enemy.GazePointToDir4(), enemy.SkillArray[0].DetectRadius, 1) && !enemy.SkillArray[0].isCooltime)
                 {
-                    enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
+                    enemy.stateMachine.ChangeState(enemy.Skill01EnterState);
                 }
                 else if (!enemy.MovepointAdjustCheck())
                 {

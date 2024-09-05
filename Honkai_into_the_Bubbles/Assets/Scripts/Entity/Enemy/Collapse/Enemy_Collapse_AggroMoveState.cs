@@ -1,16 +1,14 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.Analytics;
 
-public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
+public class Enemy_Collapse_AggroMoveState : Enemy_State
 {
     private Collider2D[] colliders;
-    public Enemy_Collapse_AggroMoveState(Enemy_Collapse _enemy, Enemy_Collapse_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Collapse enemy;
+    public Enemy_Collapse_AggroMoveState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Collapse _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -38,7 +36,7 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
 
             if ((colliders = enemy.AreaDetectTarget(enemy.endFollowRadius)).Length <= 0)
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                enemy.stateMachine.ChangeState(enemy.IdleState);
             }
             else
             {
@@ -46,10 +44,12 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
 
                 if (enemy.SetPath() < 2)
                 {
-                    enemy.StateMachine.ChangeState(enemy.IdleState);
+                    enemy.stateMachine.ChangeState(enemy.IdleState);
                 }
-                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[0].DetectRadius, true)).Length > 0 && ((enemy.theStat.CurrentHP / enemy.theStat.maxHP) < 0.5 || !enemy.SkillArray[0].isCooltime))
+                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[0].DetectRadius, true)).Length > 0 && ((enemy.canSkill01Passive && enemy.theStat.CurrentHP / enemy.theStat.maxHP < 0.5) || !enemy.SkillArray[0].isCooltime))
                 {
+                    if (enemy.theStat.CurrentHP / enemy.theStat.maxHP < 0.5)
+                        enemy.canSkill01Passive = false;
                     enemy.SelectFarthestTarget(colliders);
                     List<Vector3> availablePositions = new();
 
@@ -85,12 +85,12 @@ public class Enemy_Collapse_AggroMoveState : Enemy_Collapse_State
 
                         enemy.Skill01BeforeState.targetPos = randomPos;
                         enemy.Skill01IngState.targetPos = randomPos;
-                        enemy.StateMachine.ChangeState(enemy.Skill01BeforeState);
+                        enemy.stateMachine.ChangeState(enemy.Skill01BeforeState);
                     }
                 }
                 else if (enemy.LineDetectTarget(new Vector2(enemy.Animator.GetFloat("dirX"), enemy.Animator.GetFloat("dirY")), enemy.SkillArray[1].DetectRadius, 1, true) && !enemy.SkillArray[1].isCooltime)
                 {
-                    enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
+                    enemy.stateMachine.ChangeState(enemy.Skill02EnterState);
                 }
                 else
                 {

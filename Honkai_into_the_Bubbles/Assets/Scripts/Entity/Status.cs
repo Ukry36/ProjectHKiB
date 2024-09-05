@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class Status : MonoBehaviour
@@ -22,6 +23,14 @@ public class Status : MonoBehaviour
     public int Size = 1;
     [HideInInspector] public Entity entity;
     [HideInInspector] public bool inTransferPosition;
+
+    [SerializeField][MinValue(0)][MaxValue(100)] private int Resistance = 0;
+
+    [SerializeField][MinValue(0)][MaxValue(100)] private int ColdTickResistance = 0;
+    [SerializeField][MinValue(0)][MaxValue(100)] private int FlameTickResistance = 0;
+
+    [HideInInspector] public int ColdTickResistanceExternal = 0;
+    [HideInInspector] public int FlameTickResistanceExternal = 0;
 
     private void Awake()
     {
@@ -56,8 +65,9 @@ public class Status : MonoBehaviour
         bool critical = Random.Range(1, 101) < _attackInfo.BaseCriticalRate + _attackInfo.theStat.CritRate;
 
         trueDMG += critical ? trueDMG * _attackInfo.theStat.CritDMG / 100 : 0;
-
-        trueDMG = trueDMG > DEF ? trueDMG - DEF : 0;
+        trueDMG -= DEF;
+        trueDMG = trueDMG * (100 - Resistance) / 100;
+        trueDMG = trueDMG < 0 ? 0 : trueDMG;
 
         entity.Hit(attackOrigin);
 
@@ -80,27 +90,25 @@ public class Status : MonoBehaviour
     {
         for (int i = 0; i < _damageInfo.Coeff; i++)
         {
-            int trueDMG = _damageInfo.Damage;
-            if (isPlayer)
+            int resistance = 0;
+            switch (_damageInfo.Type)
             {
-                if (_damageInfo.Type == TickDamage.TickDamageType.Cold)
-                {
-                    if (PlayerManager.instance.halfImuneToColdTick)
-                    {
-                        trueDMG /= 2;
-                    }
-                    else if (PlayerManager.instance.imuneToColdTick)
-                    {
-                        yield break;
-                    }
-                }
-                else
-                {
-                    // onother damagetype imune calc
-                }
+                case TickDamage.TickDamageType.Cold:
+                    if (isPlayer) resistance += PlayerManager.instance.exColdTickResistance;
+                    resistance += ColdTickResistance + ColdTickResistanceExternal;
+                    break;
+                case TickDamage.TickDamageType.Flame:
+                    resistance += FlameTickResistance + FlameTickResistanceExternal;
+                    break;
+                default:
+                    break;
             }
 
-            if (!invincible)
+            int trueDMG = _damageInfo.Damage * (100 - resistance) / 100;
+            trueDMG = trueDMG * (100 - Resistance) / 100;
+            trueDMG = trueDMG < 0 ? 0 : trueDMG;
+
+            if (!invincible && trueDMG > 0)
             {
                 StartCoroutine(entity.HitLightShine(_damageInfo.hitColor));
                 HPControl(-trueDMG, _damageInfo.SFX);

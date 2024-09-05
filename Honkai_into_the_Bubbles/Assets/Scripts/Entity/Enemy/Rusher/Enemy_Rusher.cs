@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Enemy_Rusher : Enemy
 {
-    public Enemy_Rusher_StateMachine StateMachine { get; private set; }
     public Enemy_Rusher_IdleState IdleState { get; private set; }
     public Enemy_Rusher_RandomIdleState RandomIdleState { get; private set; }
     public Enemy_Rusher_RandomMoveState RandomMoveState { get; private set; }
@@ -23,40 +22,38 @@ public class Enemy_Rusher : Enemy
     protected override void Awake()
     {
         base.Awake();
-        StateMachine = new Enemy_Rusher_StateMachine();
-
-        IdleState = new Enemy_Rusher_IdleState(this, StateMachine, "Idle");
-        RandomIdleState = new Enemy_Rusher_RandomIdleState(this, StateMachine, "Idle");
-        RandomMoveState = new Enemy_Rusher_RandomMoveState(this, StateMachine, "Walk");
-        DirIdleState = new Enemy_Rusher_DirIdleState(this, StateMachine, "Idle");
-        DirMoveState = new Enemy_Rusher_DirMoveState(this, StateMachine, "Walk");
-        PFIdleState = new Enemy_Rusher_PathfindIdleState(this, StateMachine, "Idle");
-        PFMoveState = new Enemy_Rusher_PathfindMoveState(this, StateMachine, "Walk");
-        AggroMoveState = new Enemy_Rusher_AggroMoveState(this, StateMachine, "Walk");
-        KnockbackState = new Enemy_Rusher_KnockbackState(this, StateMachine, "Knockback");
-        Skill01EnterState = new Enemy_Rusher_Skill01EnterState(this, StateMachine, "Skill01Enter");
-        Skill01State = new Enemy_Rusher_Skill01State(this, StateMachine, "Skill01");
-        Skill02EnterState = new Enemy_Rusher_Skill02EnterState(this, StateMachine, "Skill02Enter");
-        Skill02State = new Enemy_Rusher_Skill02State(this, StateMachine, "Skill02");
+        IdleState = new Enemy_Rusher_IdleState(this, stateMachine, "Idle", this);
+        RandomIdleState = new Enemy_Rusher_RandomIdleState(this, stateMachine, "Idle", this);
+        RandomMoveState = new Enemy_Rusher_RandomMoveState(this, stateMachine, "Walk", this);
+        DirIdleState = new Enemy_Rusher_DirIdleState(this, stateMachine, "Idle", this);
+        DirMoveState = new Enemy_Rusher_DirMoveState(this, stateMachine, "Walk", this);
+        PFIdleState = new Enemy_Rusher_PathfindIdleState(this, stateMachine, "Idle", this);
+        PFMoveState = new Enemy_Rusher_PathfindMoveState(this, stateMachine, "Walk", this);
+        AggroMoveState = new Enemy_Rusher_AggroMoveState(this, stateMachine, "Walk", this);
+        KnockbackState = new Enemy_Rusher_KnockbackState(this, stateMachine, "Knockback", this);
+        Skill01EnterState = new Enemy_Rusher_Skill01EnterState(this, stateMachine, "Skill01Enter", this);
+        Skill01State = new Enemy_Rusher_Skill01State(this, stateMachine, "Skill01", this);
+        Skill02EnterState = new Enemy_Rusher_Skill02EnterState(this, stateMachine, "Skill02Enter", this);
+        Skill02State = new Enemy_Rusher_Skill02State(this, stateMachine, "Skill02", this);
     }
 
     protected override void Start()
     {
         base.Start();
-        StateMachine.Initialize(IdleState);
+        stateMachine.Initialize(IdleState);
     }
 
     protected override void Update()
     {
         base.Update();
 
-        StateMachine.currentState.Update();
+        stateMachine.currentState.Update();
 
     }
 
     public override void Knockback(Vector3 _attackOrigin, int _coeff)
     {
-        Vector3 GrrogyDir = this.transform.position - _attackOrigin;
+        Vector3 GrrogyDir = theStat.transform.position - _attackOrigin;
 
         float x = GrrogyDir.x != 0 ? MathF.Sign(GrrogyDir.x) : 0,
               y = GrrogyDir.y != 0 ? MathF.Sign(GrrogyDir.y) : 0;
@@ -77,7 +74,7 @@ public class Enemy_Rusher : Enemy
 
         KnockbackState.dir = GrrogyDir;
         KnockbackState.coeff = _coeff;
-        StateMachine.ChangeState(KnockbackState);
+        stateMachine.ChangeState(KnockbackState);
     }
 
     public IEnumerator Skill01Cooltime()
@@ -92,6 +89,11 @@ public class Enemy_Rusher : Enemy
         SkillArray[1].isCooltime = true;
         yield return new WaitForSeconds(SkillArray[1].Cooltime);
         SkillArray[1].isCooltime = false;
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        stateMachine.currentState.AnimationFinishTrigger();
     }
 
 }

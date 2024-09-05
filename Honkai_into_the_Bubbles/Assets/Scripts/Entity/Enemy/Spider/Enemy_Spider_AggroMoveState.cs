@@ -1,15 +1,14 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Analytics;
 
-public class Enemy_Spider_AggroMoveState : Enemy_Spider_State
+using UnityEngine;
+
+public class Enemy_Spider_AggroMoveState : Enemy_State
 {
     private Collider2D[] colliders;
-    public Enemy_Spider_AggroMoveState(Enemy_Spider _enemy, Enemy_Spider_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Spider enemy;
+    public Enemy_Spider_AggroMoveState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Spider _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -36,18 +35,18 @@ public class Enemy_Spider_AggroMoveState : Enemy_Spider_State
             colliders = enemy.AreaDetectTarget(enemy.endFollowRadius);
             if (colliders.Length <= 0)
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                enemy.stateMachine.ChangeState(enemy.IdleState);
             }
             else
             {
                 enemy.SelectNearestTarget(colliders);
                 if (enemy.SetPath() < 2)
                 {
-                    enemy.StateMachine.ChangeState(enemy.IdleState);
+                    enemy.stateMachine.ChangeState(enemy.IdleState);
                 }
                 else if (enemy.LineDetectTarget(enemy.moveDir, enemy.SkillArray[0].DetectRadius, 1, true) && !enemy.SkillArray[0].isCooltime)
                 {
-                    enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
+                    enemy.stateMachine.ChangeState(enemy.Skill01EnterState);
                 }
                 else
                 {

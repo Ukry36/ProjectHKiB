@@ -44,7 +44,7 @@ public class Event : MonoBehaviour
         }
     }
 
-    protected IEnumerator Cooltime()
+    protected virtual IEnumerator Cooltime()
     {
         triggerToExpire.triggerCollider.enabled = false;
         isCooltime = true;

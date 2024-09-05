@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using UnityEngine.Analytics;
 
-public class Enemy_Spider_PathfindMoveState : Enemy_Spider_State
+using UnityEngine;
+
+
+public class Enemy_Spider_PathfindMoveState : Enemy_State
 {
     private StrictMoveNode SMN;
-    public Enemy_Spider_PathfindMoveState(Enemy_Spider _enemy, Enemy_Spider_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Spider enemy;
+    public Enemy_Spider_PathfindMoveState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Spider _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -38,13 +39,13 @@ public class Enemy_Spider_PathfindMoveState : Enemy_Spider_State
 
             if (enemy.AreaDetectTarget(enemy.followRadius).Length > 0)
             {
-                enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+                enemy.stateMachine.ChangeState(enemy.AggroMoveState);
             }
             else if (Vector3.Distance(enemy.Mover.position, SMN.node.position) >= .05f)
             {
                 if (enemy.SetPath() < 1) // if there are no path to destination go find other destination
                 {
-                    enemy.StateMachine.ChangeState(enemy.IdleState);
+                    enemy.stateMachine.ChangeState(enemy.IdleState);
                 }
                 else // else, get to next movement
                 {
@@ -56,7 +57,7 @@ public class Enemy_Spider_PathfindMoveState : Enemy_Spider_State
             }
             else
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                enemy.stateMachine.ChangeState(enemy.IdleState);
             }
         }
     }

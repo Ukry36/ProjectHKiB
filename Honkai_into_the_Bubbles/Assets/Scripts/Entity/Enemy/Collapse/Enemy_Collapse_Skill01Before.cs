@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Collapse_Skill01Before : Enemy_Collapse_State
+public class Enemy_Collapse_Skill01Before : Enemy_State
 {
     public Vector3 targetPos;
-    public Enemy_Collapse_Skill01Before(Enemy_Collapse _enemy, Enemy_Collapse_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Collapse enemy;
+    public Enemy_Collapse_Skill01Before(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Collapse _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -20,7 +22,7 @@ public class Enemy_Collapse_Skill01Before : Enemy_Collapse_State
     public override void Update()
     {
         base.Update();
-        if (enemy.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        if (finishTriggerCalled)
         {
             stateMachine.ChangeState(enemy.Skill01IngState);
         }
@@ -30,6 +32,7 @@ public class Enemy_Collapse_Skill01Before : Enemy_Collapse_State
     {
         enemy.EnemyWallBoxCollider.transform.localPosition = Vector3.zero;
         enemy.EnemyWallBoxCollider.enabled = false;
+        enemy.BeforeAttackTinker(Vector3.zero);
         base.Exit();
     }
 }

@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class Enemy_Lightning_Skill01State : Enemy_Lightning_State
+public class Enemy_Lightning_Skill01State : Enemy_State
 {
     Vector2 dir;
-    public Enemy_Lightning_Skill01State(Enemy_Lightning _player, Enemy_Lightning_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Lightning enemy;
+    public Enemy_Lightning_Skill01State(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Lightning _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
+
 
     public override void Enter()
     {
@@ -24,10 +27,10 @@ public class Enemy_Lightning_Skill01State : Enemy_Lightning_State
     public override void Update()
     {
         base.Update();
-        if (enemy.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        if (finishTriggerCalled)
         {
             enemy.StartCoroutine(enemy.Skill01Cooltime());
-            enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+            enemy.stateMachine.ChangeState(enemy.AggroMoveState);
         }
         if (stateTimer < 0)
         {

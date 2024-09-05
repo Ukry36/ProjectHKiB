@@ -1,11 +1,13 @@
 using UnityEngine;
 
-public class Enemy_Lightning_AggroIdleState : Enemy_Lightning_State
+public class Enemy_Lightning_AggroIdleState : Enemy_State
 {
     private Collider2D[] colliders;
-    public Enemy_Lightning_AggroIdleState(Enemy_Lightning _enemy, Enemy_Lightning_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Lightning enemy;
+    public Enemy_Lightning_AggroIdleState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Lightning _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -23,7 +25,7 @@ public class Enemy_Lightning_AggroIdleState : Enemy_Lightning_State
             colliders = enemy.AreaDetectTarget(enemy.endFollowRadius);
             if (colliders == null || colliders.Length <= 0)
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                enemy.stateMachine.ChangeState(enemy.IdleState);
             }
             else
             {
@@ -31,7 +33,7 @@ public class Enemy_Lightning_AggroIdleState : Enemy_Lightning_State
                 colliders = enemy.AreaDetectTarget(enemy.backstepRadius);
                 if (colliders != null && colliders.Length > 0)
                 {
-                    enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+                    enemy.stateMachine.ChangeState(enemy.AggroMoveState);
                 }
                 else
                 {
@@ -39,7 +41,7 @@ public class Enemy_Lightning_AggroIdleState : Enemy_Lightning_State
                     if (!enemy.SkillArray[0].isCooltime && colliders[0] != null)
                     {
                         enemy.SelectNearestTarget(colliders);
-                        enemy.StateMachine.ChangeState(enemy.Skill01EnterState);
+                        enemy.stateMachine.ChangeState(enemy.Skill01EnterState);
                     }
                     else
                     {
@@ -47,7 +49,7 @@ public class Enemy_Lightning_AggroIdleState : Enemy_Lightning_State
                         if (!enemy.SkillArray[1].isCooltime && colliders != null && colliders.Length > 0)
                         {
                             enemy.SelectFarthestTarget(colliders);
-                            enemy.StateMachine.ChangeState(enemy.Skill02EnterState);
+                            enemy.stateMachine.ChangeState(enemy.Skill02EnterState);
                         }
                     }
                 }
@@ -66,7 +68,7 @@ public class Enemy_Lightning_AggroIdleState : Enemy_Lightning_State
                     enemy.StartCoroutine(enemy.TurnCooltime());
                 }
                 else
-                    enemy.StateMachine.ChangeState(enemy.IdleState);
+                    enemy.stateMachine.ChangeState(enemy.IdleState);
 
             }
         }

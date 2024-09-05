@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Collapse_Skill01After : Enemy_Collapse_State
+public class Enemy_Collapse_Skill01After : Enemy_State
 {
     public Vector2 targetPos;
-    public Enemy_Collapse_Skill01After(Enemy_Collapse _enemy, Enemy_Collapse_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Collapse enemy;
+    public Enemy_Collapse_Skill01After(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Collapse _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -19,7 +21,7 @@ public class Enemy_Collapse_Skill01After : Enemy_Collapse_State
     public override void Update()
     {
         base.Update();
-        if (enemy.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        if (finishTriggerCalled)
         {
             enemy.StartCoroutine(enemy.SkillCooltime(enemy.SkillArray[0]));
             stateMachine.ChangeState(enemy.AggroMoveState);

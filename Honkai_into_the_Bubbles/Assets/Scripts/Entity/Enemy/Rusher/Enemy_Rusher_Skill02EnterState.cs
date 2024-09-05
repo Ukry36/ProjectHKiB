@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Rusher_Skill02EnterState : Enemy_Rusher_State
+public class Enemy_Rusher_Skill02EnterState : Enemy_State
 {
     private float tinkerTimer = 0;
-    public Enemy_Rusher_Skill02EnterState(Enemy_Rusher _player, Enemy_Rusher_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Rusher enemy;
+    public Enemy_Rusher_Skill02EnterState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Rusher _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -15,7 +17,7 @@ public class Enemy_Rusher_Skill02EnterState : Enemy_Rusher_State
         base.Enter();
         if (enemy.SetPath() < 2)
         {
-            enemy.StateMachine.ChangeState(enemy.IdleState);
+            enemy.stateMachine.ChangeState(enemy.IdleState);
         }
         enemy.Track(enemy.SkillArray[1]);
         enemy.GazePoint.position = enemy.target.position;
@@ -38,7 +40,7 @@ public class Enemy_Rusher_Skill02EnterState : Enemy_Rusher_State
         }
         if (stateTimer < 0)
         {
-            enemy.StateMachine.ChangeState(enemy.Skill02State);
+            enemy.stateMachine.ChangeState(enemy.Skill02State);
         }
     }
 

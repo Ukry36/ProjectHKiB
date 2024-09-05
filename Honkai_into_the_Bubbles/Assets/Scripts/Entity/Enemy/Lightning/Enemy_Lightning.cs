@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class Enemy_Lightning : Enemy
 {
-    public Enemy_Lightning_StateMachine StateMachine { get; private set; }
     public Enemy_Lightning_IdleState IdleState { get; private set; }
     public Enemy_Lightning_RandomIdleState RandomIdleState { get; private set; }
     public Enemy_Lightning_RandomMoveState RandomMoveState { get; private set; }
@@ -57,28 +56,26 @@ public class Enemy_Lightning : Enemy
     protected override void Awake()
     {
         base.Awake();
-        StateMachine = new Enemy_Lightning_StateMachine();
-
-        IdleState = new Enemy_Lightning_IdleState(this, StateMachine, "Idle");
-        RandomIdleState = new Enemy_Lightning_RandomIdleState(this, StateMachine, "Idle");
-        RandomMoveState = new Enemy_Lightning_RandomMoveState(this, StateMachine, "Walk");
-        DirIdleState = new Enemy_Lightning_DirIdleState(this, StateMachine, "Idle");
-        DirMoveState = new Enemy_Lightning_DirMoveState(this, StateMachine, "Walk");
-        PFIdleState = new Enemy_Lightning_PathfindIdleState(this, StateMachine, "Idle");
-        PFMoveState = new Enemy_Lightning_PathfindMoveState(this, StateMachine, "Walk");
-        AggroIdleState = new Enemy_Lightning_AggroIdleState(this, StateMachine, "Idle");
-        AggroMoveState = new Enemy_Lightning_AggroMoveState(this, StateMachine, "Walk");
-        KnockbackState = new Enemy_Lightning_KnockbackState(this, StateMachine, "Knockback");
-        Skill01EnterState = new Enemy_Lightning_Skill01EnterState(this, StateMachine, "Skill01Enter");
-        Skill01State = new Enemy_Lightning_Skill01State(this, StateMachine, "Skill01");
-        Skill02EnterState = new Enemy_Lightning_Skill02EnterState(this, StateMachine, "Skill02Enter");
-        Skill02State = new Enemy_Lightning_Skill02State(this, StateMachine, "Skill02");
+        IdleState = new Enemy_Lightning_IdleState(this, stateMachine, "Idle", this);
+        RandomIdleState = new Enemy_Lightning_RandomIdleState(this, stateMachine, "Idle", this);
+        RandomMoveState = new Enemy_Lightning_RandomMoveState(this, stateMachine, "Walk", this);
+        DirIdleState = new Enemy_Lightning_DirIdleState(this, stateMachine, "Idle", this);
+        DirMoveState = new Enemy_Lightning_DirMoveState(this, stateMachine, "Walk", this);
+        PFIdleState = new Enemy_Lightning_PathfindIdleState(this, stateMachine, "Idle", this);
+        PFMoveState = new Enemy_Lightning_PathfindMoveState(this, stateMachine, "Walk", this);
+        AggroIdleState = new Enemy_Lightning_AggroIdleState(this, stateMachine, "Idle", this);
+        AggroMoveState = new Enemy_Lightning_AggroMoveState(this, stateMachine, "Walk", this);
+        KnockbackState = new Enemy_Lightning_KnockbackState(this, stateMachine, "Knockback", this);
+        Skill01EnterState = new Enemy_Lightning_Skill01EnterState(this, stateMachine, "Skill01Enter", this);
+        Skill01State = new Enemy_Lightning_Skill01State(this, stateMachine, "Skill01", this);
+        Skill02EnterState = new Enemy_Lightning_Skill02EnterState(this, stateMachine, "Skill02Enter", this);
+        Skill02State = new Enemy_Lightning_Skill02State(this, stateMachine, "Skill02", this);
     }
 
     protected override void Start()
     {
         base.Start();
-        StateMachine.Initialize(IdleState);
+        stateMachine.Initialize(IdleState);
 
 
     }
@@ -87,13 +84,13 @@ public class Enemy_Lightning : Enemy
     {
         base.Update();
 
-        StateMachine.currentState.Update();
+        stateMachine.currentState.Update();
 
     }
 
     public override void Knockback(Vector3 _attackOrigin, int _coeff)
     {
-        Vector3 GrrogyDir = this.transform.position - _attackOrigin;
+        Vector3 GrrogyDir = theStat.transform.position - _attackOrigin;
 
         float x = GrrogyDir.x != 0 ? MathF.Sign(GrrogyDir.x) : 0,
               y = GrrogyDir.y != 0 ? MathF.Sign(GrrogyDir.y) : 0;
@@ -114,7 +111,7 @@ public class Enemy_Lightning : Enemy
 
         KnockbackState.dir = GrrogyDir;
         KnockbackState.coeff = _coeff;
-        StateMachine.ChangeState(KnockbackState);
+        stateMachine.ChangeState(KnockbackState);
     }
 
     public void ShootBullet01(Vector2 _dir)
@@ -218,6 +215,11 @@ public class Enemy_Lightning : Enemy
         SkillArray[1].isCooltime = true;
         yield return new WaitForSeconds(SkillArray[1].Cooltime);
         SkillArray[1].isCooltime = false;
+    }
+
+    public override void AnimationFinishTrigger()
+    {
+        stateMachine.currentState.AnimationFinishTrigger();
     }
 
 }

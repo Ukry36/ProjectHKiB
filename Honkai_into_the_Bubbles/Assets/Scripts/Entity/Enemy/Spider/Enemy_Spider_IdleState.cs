@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Spider_IdleState : Enemy_Spider_State
+public class Enemy_Spider_IdleState : Enemy_State
 {
-    public Enemy_Spider_IdleState(Enemy_Spider _enemy, Enemy_Spider_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
+    private Enemy_Spider enemy;
+    public Enemy_Spider_IdleState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Spider _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
-
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -19,15 +20,15 @@ public class Enemy_Spider_IdleState : Enemy_Spider_State
         base.Update();
         if (enemy.randomMove)
         {
-            enemy.StateMachine.ChangeState(enemy.RandomIdleState);
+            enemy.stateMachine.ChangeState(enemy.RandomIdleState);
         }
         else if (enemy.moveByPathFind)
         {
-            enemy.StateMachine.ChangeState(enemy.PFIdleState);
+            enemy.stateMachine.ChangeState(enemy.PFIdleState);
         }
         else
         {
-            enemy.StateMachine.ChangeState(enemy.DirIdleState);
+            enemy.stateMachine.ChangeState(enemy.DirIdleState);
         }
     }
 

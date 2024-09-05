@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Lightning_Skill02EnterState : Enemy_Lightning_State
+public class Enemy_Lightning_Skill02EnterState : Enemy_State
 {
     private float tinkerTimer = 0;
-    public Enemy_Lightning_Skill02EnterState(Enemy_Lightning _player, Enemy_Lightning_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Lightning enemy;
+    public Enemy_Lightning_Skill02EnterState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Lightning _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -30,7 +32,7 @@ public class Enemy_Lightning_Skill02EnterState : Enemy_Lightning_State
         }
         if (stateTimer < 0)
         {
-            enemy.StateMachine.ChangeState(enemy.Skill02State);
+            enemy.stateMachine.ChangeState(enemy.Skill02State);
         }
     }
 

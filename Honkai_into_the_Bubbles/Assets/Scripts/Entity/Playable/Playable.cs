@@ -69,7 +69,31 @@ public class Playable : Entity
 
     public virtual void ChangeSpriteLibraryAsset()
     {
-        SpriteLibrary.spriteLibraryAsset = Resources.Load("sdLibrary/" + ID.ToString() + "-" + spriteOverrideID.ToString(), typeof(SpriteLibraryAsset)) as SpriteLibraryAsset;
+        SpriteLibrary.spriteLibraryAsset = Resources.Load<SpriteLibraryAsset>("sdLibrary/" + ID.ToString() + "/" + ID.ToString() + "-" + spriteOverrideID.ToString());
+    }
+
+    public bool PointWallCheckForGraffiti(Vector3 _pos)
+    {
+        Collider2D[] colliders = Physics2D.OverlapCircleAll(_pos, .4f, LayerManager.instance.graffitiWallLayer);
+        if (colliders != null && colliders.Length > 0)
+        {
+            foreach (Collider2D collider in colliders)
+            {
+                if (collider.TryGetComponent(out OneSideWall osw))
+                {
+                    if (osw.D && Mover.transform.position.y <= osw.transform.position.y - 0.5f
+                     || osw.R && Mover.transform.position.x >= osw.transform.position.x + 0.5f
+                     || osw.U && Mover.transform.position.y >= osw.transform.position.y + 0.5f
+                     || osw.L && Mover.transform.position.x <= osw.transform.position.x - 0.5f)
+                        return true;
+                }
+                else
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 
     public void DodgeCooltimeManage()

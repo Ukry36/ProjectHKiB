@@ -81,7 +81,7 @@ public class Delta_Default : Playable
 
     public override void Knockback(Vector3 _attackOrigin, int _coeff)
     {
-        Vector3 GrrogyDir = this.transform.position - _attackOrigin;
+        Vector3 GrrogyDir = theStat.transform.position - _attackOrigin;
 
         float x = GrrogyDir.x != 0 ? MathF.Sign(GrrogyDir.x) : 0,
               y = GrrogyDir.y != 0 ? MathF.Sign(GrrogyDir.y) : 0;

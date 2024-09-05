@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Lightning_KnockbackState : Enemy_Lightning_State
+public class Enemy_Lightning_KnockbackState : Enemy_State
 {
     public Vector2 dir;
     public int coeff;
     private int i;
 
-    public Enemy_Lightning_KnockbackState(Enemy_Lightning _enemy, Enemy_Lightning_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
+    private Enemy_Lightning enemy;
+    public Enemy_Lightning_KnockbackState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Lightning _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
-
+        this.enemy = _enemy;
     }
 
     // set initial direction 
@@ -58,7 +59,7 @@ public class Enemy_Lightning_KnockbackState : Enemy_Lightning_State
         else
         {
             enemy.Mover.position = enemy.MovePoint.transform.position;
-            enemy.StateMachine.ChangeState(enemy.IdleState);
+            enemy.stateMachine.ChangeState(enemy.IdleState);
         }
 
         i++;

@@ -41,10 +41,13 @@ public class Enemy : Entity
     [HideInInspector] public bool backStep;
 
 
+    public Enemy_StateMachine stateMachine;
+
+
     protected override void Awake()
     {
         base.Awake();
-
+        stateMachine = new Enemy_StateMachine();
     }
 
     public void SetMoveDirRandom4()
@@ -131,14 +134,29 @@ public class Enemy : Entity
 
     public int SetPath()
     {
+
         if (target.position.x <= Mover.position.x + endFollowRadius
         && target.position.x >= Mover.position.x - endFollowRadius
         && target.position.y <= Mover.position.y + endFollowRadius
         && target.position.y >= Mover.position.y - endFollowRadius)
         {
-            PathList = PathFinder.PathFinding(Mover.position - Vector3.one * endFollowRadius,
-                                                Mover.position + Vector3.one * endFollowRadius,
-                                                Mover.position, target.position);
+            if (theStat.Size == 1)
+            {
+                PathList = PathFinder.PathFinding(Mover.position - Vector3.one * endFollowRadius,
+                Mover.position + Vector3.one * endFollowRadius, Mover.position, target.position);
+            }
+            else
+            {
+
+                PathList = PathFinder.PathFinding(Mover.position - Vector3.one * endFollowRadius,
+                Mover.position + Vector3.one * endFollowRadius, Mover.position, target.position + new Vector3(0.5f, 0.5f));
+
+                if (PathList.Count < 1)
+                    PathList = PathFinder.PathFinding(Mover.position - Vector3.one * endFollowRadius,
+                    Mover.position + Vector3.one * endFollowRadius,
+                    Mover.position, target.position + new Vector3(-0.5f, -0.5f));
+            }
+
 
             return PathList.Count;
         }

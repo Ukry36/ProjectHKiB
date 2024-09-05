@@ -1,10 +1,8 @@
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System;
 using UnityEngine;
 using Unity.Mathematics;
-
 public class PlayerManager : MonoBehaviour
 {
     #region Singleton
@@ -57,13 +55,11 @@ public class PlayerManager : MonoBehaviour
     public float exGraffitimaxtime = 0;
     public float dodgeCooltimeCoeff = 1;
 
-    public bool imuneToColdTick = false;
-    public bool halfImuneToColdTick = false;
+    public int exColdTickResistance = 0;
 
     public bool handLightOn = false;
     public bool dotLightOn = false;
     public bool drone = false;
-
 
     private void Start()
     {
@@ -221,8 +217,7 @@ public class PlayerManager : MonoBehaviour
         exKeepDodgeSpeedCoeff = 1;
         exGraffitimaxtime = 0;
         dodgeCooltimeCoeff = 1;
-        imuneToColdTick = false;
-        halfImuneToColdTick = false;
+        exColdTickResistance = 0;
         handLightOn = false;
         dotLightOn = false;
         drone = false;
@@ -283,11 +278,11 @@ public class PlayerManager : MonoBehaviour
     {
         if (_isPrime)
         {
-            imuneToColdTick = true;
+            exColdTickResistance = 100;
         }
         else
         {
-            halfImuneToColdTick = true;
+            exColdTickResistance = 50;
         }
     }
 
@@ -295,7 +290,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (_isPrime)
         {
-            imuneToColdTick = true;
+            exColdTickResistance = 100;
         }
     }
 

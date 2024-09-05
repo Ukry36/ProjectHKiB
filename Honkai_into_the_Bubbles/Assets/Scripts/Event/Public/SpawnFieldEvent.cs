@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
 using Unity.Mathematics;
@@ -59,5 +60,12 @@ public class SpawnFieldEvent : Event
                 return;
             }
         }
+    }
+
+    protected override IEnumerator Cooltime()
+    {
+        isCooltime = true;
+        yield return new WaitForSeconds(cooltime);
+        isCooltime = false;
     }
 }

@@ -6,6 +6,11 @@ public class WorldTickDamageManager : MonoBehaviour
 {
     public TickDamage DamageInfo;
 
+    private void Start()
+    {
+        DamageInfo.isCooltime = false;
+    }
+
     private void Update()
     {
         if (!DamageInfo.isCooltime)

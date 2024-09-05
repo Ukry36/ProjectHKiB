@@ -1,14 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Analytics;
 
-public class Enemy_Rusher_RandomMoveState : Enemy_Rusher_State
+public class Enemy_Rusher_RandomMoveState : Enemy_State
 {
     private int movementMultiplyer = 1;
-    public Enemy_Rusher_RandomMoveState(Enemy_Rusher _enemy, Enemy_Rusher_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Rusher enemy;
+    public Enemy_Rusher_RandomMoveState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Rusher _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -38,11 +37,11 @@ public class Enemy_Rusher_RandomMoveState : Enemy_Rusher_State
 
             if (enemy.AreaDetectTarget(enemy.followRadius).Length > 0)
             {
-                enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+                enemy.stateMachine.ChangeState(enemy.AggroMoveState);
             }
             else if (movementMultiplyer < 0 || enemy.MovepointAdjustCheck())
             {
-                enemy.StateMachine.ChangeState(enemy.IdleState);
+                enemy.stateMachine.ChangeState(enemy.IdleState);
             }
             else
             {

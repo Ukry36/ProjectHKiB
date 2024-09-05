@@ -1,17 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-/* skill02 상세: rusher의 skill02를 보고 같은 방식으로 만들면 됩니다. 애니메이션에 관해선 똑같이 하시면 되고
-    대신 Track같은 경우는 track radius가 0이기에 필요 없습니다. 그리고 linedetect를 사용하면 공격준비에서
-    이미 플레이어를 바라보는 상태이기 때문에 SetAnimDir도 없어도 됩니다. */
-
-public class Enemy_Collapse_Skill02Enter : Enemy_Collapse_State
+public class Enemy_Collapse_Skill02Enter : Enemy_State
 {
     private float tinkerTimer = 0;
-    public Enemy_Collapse_Skill02Enter(Enemy_Collapse _enemy, Enemy_Collapse_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Collapse enemy;
+    public Enemy_Collapse_Skill02Enter(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Collapse _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -19,7 +15,7 @@ public class Enemy_Collapse_Skill02Enter : Enemy_Collapse_State
         base.Enter();
         if (enemy.SetPath() < 2)
         {
-            enemy.StateMachine.ChangeState(enemy.IdleState);
+            enemy.stateMachine.ChangeState(enemy.IdleState);
         }
         enemy.GazePoint.position = enemy.target.position;
         enemy.moveDir = enemy.SetVectorOne(enemy.GazePoint.position - enemy.Mover.position);
@@ -40,7 +36,7 @@ public class Enemy_Collapse_Skill02Enter : Enemy_Collapse_State
         }
         if (stateTimer < 0)
         {
-            enemy.StateMachine.ChangeState(enemy.Skill02State);
+            enemy.stateMachine.ChangeState(enemy.Skill02State);
         }
     }
 

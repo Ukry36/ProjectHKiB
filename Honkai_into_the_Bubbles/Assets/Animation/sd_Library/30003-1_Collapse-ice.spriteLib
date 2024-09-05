@@ -1,0 +1,1054 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: standD
+    m_Hash: 30786981
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_stand_0
+      m_Hash: 612224855
+      m_Sprite: {fileID: -1787510523, guid: 3f08ab311afabac43875be9b8482c2b4, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1720347154, guid: bc899bce8c232e64f913fd310667f7f3, type: 3}
+    - m_Name: sd_0024_enemy_collapse_stand_1
+      m_Hash: 326827969
+      m_Sprite: {fileID: -1771576096, guid: 3f08ab311afabac43875be9b8482c2b4, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1321113205, guid: bc899bce8c232e64f913fd310667f7f3, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: standR
+    m_Hash: 889286900
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_stand_2
+      m_Hash: 175353467
+      m_Sprite: {fileID: -609129850, guid: 3f08ab311afabac43875be9b8482c2b4, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1089461406, guid: bc899bce8c232e64f913fd310667f7f3, type: 3}
+    - m_Name: sd_0024_enemy_collapse_stand_3
+      m_Hash: 1031053037
+      m_Sprite: {fileID: 1417836260, guid: 3f08ab311afabac43875be9b8482c2b4, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1456543520, guid: bc899bce8c232e64f913fd310667f7f3, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: standU
+    m_Hash: 728098135
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_stand_4
+      m_Hash: 588254030
+      m_Sprite: {fileID: 168905992, guid: 3f08ab311afabac43875be9b8482c2b4, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1258577401, guid: bc899bce8c232e64f913fd310667f7f3, type: 3}
+    - m_Name: sd_0024_enemy_collapse_stand_5
+      m_Hash: 337066968
+      m_Sprite: {fileID: 608763648, guid: 3f08ab311afabac43875be9b8482c2b4, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 311314968, guid: bc899bce8c232e64f913fd310667f7f3, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: standL
+    m_Hash: 252595607
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_stand_6
+      m_Hash: 220097122
+      m_Sprite: {fileID: 2014440801, guid: 3f08ab311afabac43875be9b8482c2b4, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 2106803112, guid: bc899bce8c232e64f913fd310667f7f3, type: 3}
+    - m_Name: sd_0024_enemy_collapse_stand_7
+      m_Hash: 974740212
+      m_Sprite: {fileID: -473089223, guid: 3f08ab311afabac43875be9b8482c2b4, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -678527018, guid: bc899bce8c232e64f913fd310667f7f3, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: walkD
+    m_Hash: 943676933
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_walk_0
+      m_Hash: 99522899
+      m_Sprite: {fileID: 4150974, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 663748739, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_1
+      m_Hash: 854174149
+      m_Sprite: {fileID: 1949072845, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1386200284, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_2
+      m_Hash: 736163967
+      m_Sprite: {fileID: 157676284, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1028396817, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_3
+      m_Hash: 484952297
+      m_Sprite: {fileID: 20095439, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1136513624, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_4
+      m_Hash: 42163530
+      m_Sprite: {fileID: -916932243, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -303520981, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_5
+      m_Hash: 897871324
+      m_Sprite: {fileID: 1729716383, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1914806121, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_6
+      m_Hash: 747453542
+      m_Sprite: {fileID: -606883570, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1838766947, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_7
+      m_Hash: 462032112
+      m_Sprite: {fileID: -985443048, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 443419964, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_8
+      m_Hash: 188027233
+      m_Sprite: {fileID: 2132147402, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1340196910, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_9
+      m_Hash: 1009918455
+      m_Sprite: {fileID: 1721161469, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 2123770201, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_10
+      m_Hash: 522649783
+      m_Sprite: {fileID: 1985020720, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2131340431, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_11
+      m_Hash: 673198113
+      m_Sprite: {fileID: -737804826, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1996465210, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_12
+      m_Hash: 824795547
+      m_Sprite: {fileID: 1218295838, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1869841517, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_13
+      m_Hash: 103698701
+      m_Sprite: {fileID: 254909388, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1221787023, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_14
+      m_Hash: 407553198
+      m_Sprite: {fileID: -619900479, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 158948077, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_15
+      m_Hash: 793637944
+      m_Sprite: {fileID: -344023313, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -89013187, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_16
+      m_Hash: 910468482
+      m_Sprite: {fileID: 2138297747, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1597732282, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_17
+      m_Hash: 21206292
+      m_Sprite: {fileID: -1687062672, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1921056713, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 18
+  - m_Name: walkR
+    m_Hash: 216787796
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_walk_18
+      m_Hash: 301762693
+      m_Sprite: {fileID: 1776674804, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1980400107, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_19
+      m_Hash: 654030867
+      m_Sprite: {fileID: 762565703, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1280214544, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_20
+      m_Hash: 873091956
+      m_Sprite: {fileID: -1402802771, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1369823881, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_21
+      m_Hash: 51209186
+      m_Sprite: {fileID: -32683115, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -624677005, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_22
+      m_Hash: 436482648
+      m_Sprite: {fileID: -1652178811, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 153247676, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_23
+      m_Hash: 755172046
+      m_Sprite: {fileID: -1539441588, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 8849646, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_24
+      m_Hash: 862426989
+      m_Sprite: {fileID: -1664126675, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1403431859, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_25
+      m_Hash: 73443323
+      m_Sprite: {fileID: -1041354277, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2088873552, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_26
+      m_Hash: 493483585
+      m_Sprite: {fileID: 2106457207, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -866273398, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_27
+      m_Hash: 711902935
+      m_Sprite: {fileID: 1170203448, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -925606390, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_28
+      m_Hash: 986831686
+      m_Sprite: {fileID: 638580841, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -248873517, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_29
+      m_Hash: 232188880
+      m_Sprite: {fileID: 1539458806, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -279041851, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_30
+      m_Hash: 756113973
+      m_Sprite: {fileID: -227200263, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1068679840, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_31
+      m_Hash: 437670563
+      m_Sprite: {fileID: 2024669419, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2044706710, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_32
+      m_Hash: 52364057
+      m_Sprite: {fileID: -482607263, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -176358448, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_33
+      m_Hash: 874001295
+      m_Sprite: {fileID: 286995657, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -914784091, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_34
+      m_Hash: 712812076
+      m_Sprite: {fileID: -205889423, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1358058051, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_35
+      m_Hash: 494638778
+      m_Sprite: {fileID: -1334366795, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 909366791, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 18
+  - m_Name: walkU
+    m_Hash: 311394039
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_walk_36
+      m_Hash: 74630912
+      m_Sprite: {fileID: 119711375, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1365146864, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_37
+      m_Hash: 863369110
+      m_Sprite: {fileID: -1595973043, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 491057426, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_38
+      m_Hash: 600500743
+      m_Sprite: {fileID: 1471373559, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1727229018, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_39
+      m_Hash: 349035153
+      m_Sprite: {fileID: -789412915, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1020326720, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_40
+      m_Hash: 575730930
+      m_Sprite: {fileID: -587895418, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -253226465, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_41
+      m_Hash: 358073444
+      m_Sprite: {fileID: -2120752199, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 81386381, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_42
+      m_Hash: 207525342
+      m_Sprite: {fileID: 974951992, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1834618196, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_43
+      m_Hash: 995730760
+      m_Sprite: {fileID: -608651973, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -918945684, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_44
+      m_Hash: 624767211
+      m_Sprite: {fileID: 1063830503, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 835378474, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_45
+      m_Hash: 305791101
+      m_Sprite: {fileID: -1249704684, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1629552329, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_46
+      m_Hash: 187912647
+      m_Sprite: {fileID: 1076019314, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 792277077, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_47
+      m_Hash: 1010065745
+      m_Sprite: {fileID: 484133375, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -878976385, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_48
+      m_Hash: 747338944
+      m_Sprite: {fileID: -1772366746, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -734093531, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_49
+      m_Hash: 462179414
+      m_Sprite: {fileID: 117962987, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1246217891, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_50
+      m_Hash: 994821555
+      m_Sprite: {fileID: 1308566653, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1831300520, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_51
+      m_Hash: 206370085
+      m_Sprite: {fileID: -1171465415, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1539520190, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_52
+      m_Hash: 356885663
+      m_Sprite: {fileID: -1629838954, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 27374860, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_53
+      m_Hash: 574788617
+      m_Sprite: {fileID: 612218562, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1598711532, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 18
+  - m_Name: walkL
+    m_Hash: 920966711
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_walk_54
+      m_Hash: 1009123754
+      m_Sprite: {fileID: 1170359636, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1756350306, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_55
+      m_Hash: 186724668
+      m_Sprite: {fileID: -208571157, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2147175015, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_56
+      m_Hash: 304636038
+      m_Sprite: {fileID: -1580681712, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1243533987, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_57
+      m_Hash: 623857680
+      m_Sprite: {fileID: 2045485570, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1300578567, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_58
+      m_Hash: 898649473
+      m_Sprite: {fileID: 1863556294, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1965356194, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_59
+      m_Hash: 43482391
+      m_Sprite: {fileID: -55759491, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 676896334, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_60
+      m_Hash: 275158640
+      m_Sprite: {fileID: -1920473193, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2066032843, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_61
+      m_Hash: 660711142
+      m_Sprite: {fileID: 1061267000, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1051438203, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_62
+      m_Hash: 1047066460
+      m_Sprite: {fileID: -274790750, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1399076244, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_63
+      m_Hash: 158320586
+      m_Sprite: {fileID: -618259722, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1125630032, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_64
+      m_Hash: 386617961
+      m_Sprite: {fileID: -1984520445, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -531102755, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_65
+      m_Hash: 537682687
+      m_Sprite: {fileID: 1031748849, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1312009604, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_66
+      m_Hash: 956642117
+      m_Sprite: {fileID: 1693502006, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1026359914, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_67
+      m_Hash: 235013075
+      m_Sprite: {fileID: 1436894197, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 2143800468, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_68
+      m_Hash: 515710530
+      m_Sprite: {fileID: 133396599, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1836395030, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_69
+      m_Hash: 700067540
+      m_Sprite: {fileID: -1867778437, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1952129068, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_70
+      m_Hash: 159229745
+      m_Sprite: {fileID: 1379922907, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1717403162, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    - m_Name: sd_0024_enemy_collapse_walk_71
+      m_Hash: 1048221607
+      m_Sprite: {fileID: 883005544, guid: 5b9bc82911d75af479e32195b1aa0f3f, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -167976051, guid: 39171b87279fecc47ab223deb041a43c, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 18
+  - m_Name: skill02D
+    m_Hash: 875555080
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_skill01_0
+      m_Hash: 759814479
+      m_Sprite: {fileID: -966006183, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1973300931, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_1
+      m_Hash: 441379289
+      m_Sprite: {fileID: 1593861558, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -203776558, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_2
+      m_Hash: 55031907
+      m_Sprite: {fileID: -992793221, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -533715378, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_3
+      m_Hash: 876644597
+      m_Sprite: {fileID: 181140630, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 166664450, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_4
+      m_Hash: 707009878
+      m_Sprite: {fileID: -414493996, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1237120189, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_5
+      m_Hash: 488844736
+      m_Sprite: {fileID: -350503841, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1235846068, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_6
+      m_Hash: 69893242
+      m_Sprite: {fileID: -10526903, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1614231092, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_7
+      m_Hash: 858606828
+      m_Sprite: {fileID: -1590648400, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1938961703, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_8
+      m_Hash: 596791677
+      m_Sprite: {fileID: 1183806930, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -650813304, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_9
+      m_Hash: 345334251
+      m_Sprite: {fileID: 1870587630, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -85363259, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_10
+      m_Hash: 193919928
+      m_Sprite: {fileID: -344133220, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 122800132, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_11
+      m_Hash: 1015663406
+      m_Sprite: {fileID: -305385236, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1982682151, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_12
+      m_Hash: 629185172
+      m_Sprite: {fileID: 1678219685, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1278269345, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 13
+  - m_Name: skill02R
+    m_Hash: 16473177
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_skill01_13
+      m_Hash: 310880770
+      m_Sprite: {fileID: -722682672, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1430103722, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_14
+      m_Hash: 216219553
+      m_Sprite: {fileID: -1585705791, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1399632978, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_15
+      m_Hash: 1004801847
+      m_Sprite: {fileID: -861039321, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1766612538, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_16
+      m_Hash: 585981581
+      m_Sprite: {fileID: -1286812320, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1252616953, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_17
+      m_Hash: 367685147
+      m_Sprite: {fileID: 1461548129, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 891110887, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_18
+      m_Hash: 89486218
+      m_Sprite: {fileID: 2029445780, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1895168796, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_19
+      m_Hash: 844251932
+      m_Sprite: {fileID: 118600678, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1549645048, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_20
+      m_Hash: 547596411
+      m_Sprite: {fileID: 215972, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1274539930, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_21
+      m_Hash: 396663021
+      m_Sprite: {fileID: -556466429, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 443517889, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_22
+      m_Hash: 246270295
+      m_Sprite: {fileID: 1405215754, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1030564702, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_23
+      m_Hash: 967506369
+      m_Sprite: {fileID: 1631287613, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 928442102, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_24
+      m_Hash: 667839586
+      m_Sprite: {fileID: -1526611696, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1980305205, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_25
+      m_Hash: 281631988
+      m_Sprite: {fileID: 1002601154, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 2020669188, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 13
+  - m_Name: skill02U
+    m_Hash: 513788410
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_skill01_26
+      m_Hash: 163581262
+      m_Sprite: {fileID: 1242115753, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -48359366, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_27
+      m_Hash: 1053244888
+      m_Sprite: {fileID: -1002221644, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 245031768, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_28
+      m_Hash: 779624521
+      m_Sprite: {fileID: -1576141871, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 12044506, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_29
+      m_Hash: 427757791
+      m_Sprite: {fileID: -897909611, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 51886159, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_30
+      m_Hash: 968399162
+      m_Sprite: {fileID: 225380665, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 675963337, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_31
+      m_Hash: 247441836
+      m_Sprite: {fileID: -719691609, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 314259738, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_32
+      m_Hash: 397867030
+      m_Sprite: {fileID: -1548164109, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1524804480, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_33
+      m_Hash: 548522112
+      m_Sprite: {fileID: -1672218840, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -52588845, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_34
+      m_Hash: 1054170403
+      m_Sprite: {fileID: 208699821, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -148730750, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_35
+      m_Hash: 164785589
+      m_Sprite: {fileID: -1937956425, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -126512566, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_36
+      m_Hash: 282803215
+      m_Sprite: {fileID: 887400146, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -206918320, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_37
+      m_Hash: 668732569
+      m_Sprite: {fileID: 1766845233, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -409670329, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_38
+      m_Hash: 929239304
+      m_Sprite: {fileID: -335850633, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -444661357, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 13
+  - m_Name: skill02L
+    m_Hash: 989094202
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_skill01_39
+      m_Hash: 6562206
+      m_Sprite: {fileID: 28868363, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -988968428, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_40
+      m_Hash: 922292221
+      m_Sprite: {fileID: -560514625, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1406935555, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_41
+      m_Hash: 33439595
+      m_Sprite: {fileID: -1037732448, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 899623477, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_42
+      m_Hash: 418868945
+      m_Sprite: {fileID: -1266961366, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1471318984, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_43
+      m_Hash: 804281927
+      m_Sprite: {fileID: -201050797, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1884396060, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_44
+      m_Hash: 831835108
+      m_Sprite: {fileID: 672123572, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -120917865, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_45
+      m_Hash: 110361458
+      m_Sprite: {fileID: 1212722430, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 984825969, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_46
+      m_Hash: 530229960
+      m_Sprite: {fileID: -1719687573, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -227012711, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_47
+      m_Hash: 681417310
+      m_Sprite: {fileID: 1432270880, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 467745115, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_48
+      m_Hash: 941787087
+      m_Sprite: {fileID: 1432010030, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 384990044, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_49
+      m_Hash: 254130009
+      m_Sprite: {fileID: -1167968875, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 600295895, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_50
+      m_Hash: 803356348
+      m_Sprite: {fileID: 612666041, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -109327417, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill01_51
+      m_Hash: 417664554
+      m_Sprite: {fileID: 1692160365, guid: a1f2a957b712ebf4f889e0fa2555f969, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1746580058, guid: 17d5c6e654ba2fe448e04ade8600d38a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 13
+  - m_Name: skill01D
+    m_Hash: 520272587
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_skill02_0
+      m_Hash: 789538582
+      m_Sprite: {fileID: -1470524237, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1101469269, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_1
+      m_Hash: 403199872
+      m_Sprite: {fileID: -1495786126, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 216269199, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_2
+      m_Hash: 16844346
+      m_Sprite: {fileID: 886259605, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1263282885, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_3
+      m_Hash: 906376876
+      m_Sprite: {fileID: -1293485797, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2022311971, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_4
+      m_Hash: 677552911
+      m_Sprite: {fileID: 922578642, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1593044602, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_5
+      m_Hash: 526750617
+      m_Sprite: {fileID: 326566366, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -935076466, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_6
+      m_Hash: 107790883
+      m_Sprite: {fileID: -262606042, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1393900516, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_7
+      m_Hash: 829158069
+      m_Sprite: {fileID: 337916525, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1459863683, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_8
+      m_Hash: 567602980
+      m_Sprite: {fileID: -1484772348, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1290931187, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_9
+      m_Hash: 382984114
+      m_Sprite: {fileID: -1024126553, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -572416657, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_10
+      m_Hash: 423318614
+      m_Sprite: {fileID: -1578667574, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 447970409, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_11
+      m_Hash: 775709888
+      m_Sprite: {fileID: 988503866, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 291584424, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_12
+      m_Hash: 926233978
+      m_Sprite: {fileID: 508596885, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 436651862, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_13
+      m_Hash: 3278316
+      m_Sprite: {fileID: 571310340, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 379631226, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 14
+  - m_Name: skill01R
+    m_Hash: 735448986
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_skill02_14
+      m_Hash: 508989519
+      m_Sprite: {fileID: -989028198, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -247299865, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_15
+      m_Hash: 693215449
+      m_Sprite: {fileID: 1980560538, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 540894128, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_16
+      m_Hash: 811135331
+      m_Sprite: {fileID: -1577857998, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -941674163, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_17
+      m_Hash: 123716085
+      m_Sprite: {fileID: 136411558, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1560470882, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_18
+      m_Hash: 400612452
+      m_Sprite: {fileID: 1922567977, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -532103713, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_19
+      m_Hash: 552070386
+      m_Sprite: {fileID: -150348898, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -518872697, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_20
+      m_Hash: 840304533
+      m_Sprite: {fileID: 315988594, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1738362152, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_21
+      m_Hash: 85014275
+      m_Sprite: {fileID: 199205761, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -360193992, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_22
+      m_Hash: 471361209
+      m_Sprite: {fileID: 926508082, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 774110070, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_23
+      m_Hash: 723473967
+      m_Sprite: {fileID: -1505807364, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -982584601, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_24
+      m_Hash: 897303436
+      m_Sprite: {fileID: 365907600, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1697321540, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_25
+      m_Hash: 41743130
+      m_Sprite: {fileID: 162781741, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1761854601, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_26
+      m_Hash: 460694176
+      m_Sprite: {fileID: 437390814, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1998978905, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_27
+      m_Hash: 745706038
+      m_Sprite: {fileID: 2045640081, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1935682607, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 14
+  - m_Name: skill01U
+    m_Hash: 900897337
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_skill02_28
+      m_Hash: 1020104615
+      m_Sprite: {fileID: -929634228, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -269067964, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_29
+      m_Hash: 197836593
+      m_Sprite: {fileID: -2059671933, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -328047270, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_30
+      m_Hash: 722286292
+      m_Sprite: {fileID: -559075828, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1612894960, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_31
+      m_Hash: 470419010
+      m_Sprite: {fileID: 1235721688, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -3882992, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_32
+      m_Hash: 84105208
+      m_Sprite: {fileID: 35080960, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1240740635, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_33
+      m_Hash: 839149422
+      m_Sprite: {fileID: -1010462156, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 477737966, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_34
+      m_Hash: 744551117
+      m_Sprite: {fileID: 1625418886, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 641498340, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_35
+      m_Hash: 459784795
+      m_Sprite: {fileID: -431550449, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1764980054, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_36
+      m_Hash: 40801249
+      m_Sprite: {fileID: -1922454511, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2026264020, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_37
+      m_Hash: 896115575
+      m_Sprite: {fileID: 1793375890, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1864999455, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_38
+      m_Hash: 634830566
+      m_Sprite: {fileID: -1552237302, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -726164775, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_39
+      m_Hash: 315723376
+      m_Sprite: {fileID: 1951437908, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1882866112, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_40
+      m_Hash: 609001491
+      m_Sprite: {fileID: -2038854517, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -847274146, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_41
+      m_Hash: 323719301
+      m_Sprite: {fileID: -1623404553, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 908886302, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 14
+  - m_Name: skill01L
+    m_Hash: 299447033
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0024_enemy_collapse_skill02_42
+      m_Hash: 172147007
+      m_Sprite: {fileID: -1218097280, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -778577244, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_43
+      m_Hash: 1027994025
+      m_Sprite: {fileID: 2143635512, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -581813766, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_44
+      m_Hash: 589390858
+      m_Sprite: {fileID: -183414748, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 329461706, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_45
+      m_Hash: 338056348
+      m_Sprite: {fileID: -1120681694, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 614122481, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_46
+      m_Hash: 221185318
+      m_Sprite: {fileID: 387766969, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 571698253, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_47
+      m_Hash: 975713712
+      m_Sprite: {fileID: 1822382538, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 858923878, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_48
+      m_Hash: 714549281
+      m_Sprite: {fileID: -769111458, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1847943876, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_49
+      m_Hash: 495982775
+      m_Sprite: {fileID: -1075099438, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2063202227, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_50
+      m_Hash: 1029149010
+      m_Sprite: {fileID: 1369608069, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 571819056, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_51
+      m_Hash: 173056452
+      m_Sprite: {fileID: -1241368831, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -563400939, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_52
+      m_Hash: 324661374
+      m_Sprite: {fileID: -754055110, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1862274657, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_53
+      m_Hash: 610189544
+      m_Sprite: {fileID: 56694691, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1638901595, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_54
+      m_Hash: 976901451
+      m_Sprite: {fileID: 756560667, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1246423138, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    - m_Name: sd_0024_enemy_collapse_skill02_55
+      m_Hash: 222127581
+      m_Sprite: {fileID: -323820135, guid: 18af69f2c4430ce43849e6341c71fa88, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -992477654, guid: 2e0f939cacdd5c641b39cdb4f93a632d, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 14
+  m_PrimaryLibraryGUID: 6f36b9285d14a4f47a65b916c2aeeee1
+  m_ModificationHash: 638609853754365617
+  m_Version: 1

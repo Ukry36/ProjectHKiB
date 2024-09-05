@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Lightning_PathfindIdleState : Enemy_Lightning_State
+public class Enemy_Lightning_PathfindIdleState : Enemy_State
 {
     private Collider2D[] colliders;
-    public Enemy_Lightning_PathfindIdleState(Enemy_Lightning _enemy, Enemy_Lightning_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
-    {
 
+    private Enemy_Lightning enemy;
+    public Enemy_Lightning_PathfindIdleState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Lightning _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
+    {
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -30,12 +32,12 @@ public class Enemy_Lightning_PathfindIdleState : Enemy_Lightning_State
             if (colliders != null && colliders.Length > 0)
             {
                 colliders = null;
-                enemy.StateMachine.ChangeState(enemy.AggroIdleState);
+                enemy.stateMachine.ChangeState(enemy.AggroIdleState);
             }
         }
         else if (stateTimer < 0)
         {
-            enemy.StateMachine.ChangeState(enemy.PFMoveState);
+            enemy.stateMachine.ChangeState(enemy.PFMoveState);
         }
     }
 

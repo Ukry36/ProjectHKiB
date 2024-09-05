@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Rusher_KnockbackState : Enemy_Rusher_State
+public class Enemy_Rusher_KnockbackState : Enemy_State
 {
     public Vector2 dir;
     public int coeff;
     private int i;
 
-    public Enemy_Rusher_KnockbackState(Enemy_Rusher _enemy, Enemy_Rusher_StateMachine _stateMachine, string _animBoolName) : base(_enemy, _stateMachine, _animBoolName)
+    private Enemy_Rusher enemy;
+    public Enemy_Rusher_KnockbackState(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Rusher _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
-
+        this.enemy = _enemy;
     }
 
     // set initial direction 
@@ -58,7 +59,7 @@ public class Enemy_Rusher_KnockbackState : Enemy_Rusher_State
         else
         {
             enemy.Mover.position = enemy.MovePoint.transform.position;
-            enemy.StateMachine.ChangeState(enemy.IdleState);
+            enemy.stateMachine.ChangeState(enemy.IdleState);
         }
 
         i++;

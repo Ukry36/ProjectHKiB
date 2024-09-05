@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 
-public class Enemy_Rusher_Skill01State : Enemy_Rusher_State
+public class Enemy_Rusher_Skill01State : Enemy_State
 {
-    public Enemy_Rusher_Skill01State(Enemy_Rusher _player, Enemy_Rusher_StateMachine _stateMachine, string _animBoolName) : base(_player, _stateMachine, _animBoolName)
+    private Enemy_Rusher enemy;
+    public Enemy_Rusher_Skill01State(Enemy _enemyBase, Enemy_StateMachine _stateMachine, string _animBoolName, Enemy_Rusher _enemy) : base(_enemyBase, _stateMachine, _animBoolName)
     {
-
+        this.enemy = _enemy;
     }
 
     public override void Enter()
@@ -25,10 +23,10 @@ public class Enemy_Rusher_Skill01State : Enemy_Rusher_State
     public override void Update()
     {
         base.Update();
-        if (enemy.Animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.99f)
+        if (finishTriggerCalled)
         {
             enemy.StartCoroutine(enemy.Skill01Cooltime());
-            enemy.StateMachine.ChangeState(enemy.AggroMoveState);
+            enemy.stateMachine.ChangeState(enemy.AggroMoveState);
         }
     }
 
