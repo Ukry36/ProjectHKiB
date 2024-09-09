@@ -1,8 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using Cinemachine;
 using Unity.Mathematics;
-using Unity.VisualScripting;
 using UnityEngine;
 
 public class GraffitiSystem : MonoBehaviour
@@ -101,12 +99,12 @@ public class GraffitiSystem : MonoBehaviour
         {
             if (skillList[i].skillCommand.Count == activatedTileList.Count)
             {
-                for (int j = 0; j < 4; j++)
-                {
-                    if (CheckSameList(skillList[i].skillCommand, activatedTileList))
-                        return new int[] { i, activatedTileList.Count };
-                    Turn90();
-                }
+                //for (int j = 0; j < 4; j++)
+                //{
+                if (CheckSameList(skillList[i].skillCommand, activatedTileList))
+                    return new int[] { i, activatedTileList.Count };
+                //Turn90();
+                //}
             }
         }
         return new int[] { -1, activatedTileList.Count };

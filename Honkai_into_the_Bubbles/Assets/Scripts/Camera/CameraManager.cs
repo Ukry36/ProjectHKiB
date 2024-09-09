@@ -91,8 +91,7 @@ public class CameraManager : MonoBehaviour
     }
 
     // Set original resolution
-    public void SetOrigRes(float _res)
-    { OriginalRes = _res; }
+    public void SetOrigRes(float _res) => OriginalRes = _res;
 
 
     // Set current resolution to original resolution

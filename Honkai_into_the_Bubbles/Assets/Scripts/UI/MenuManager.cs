@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -57,6 +58,11 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI FPSTtext;
     float deltaTime;
 
+    public AudioMixer MasterMixer;
+    public Slider MasterSlider;
+    public Slider BGMSlider;
+    public Slider SFXSlider;
+    public Slider AMBSlider;
 
     private void Start()
     {
@@ -200,6 +206,7 @@ public class MenuManager : MonoBehaviour
     public void GraffitiCountDownDisable()
     {
         GSTtext.gameObject.SetActive(false);
+        StopCoroutine(nameof(GraffitiCountDown));
     }
 
     #endregion
@@ -222,6 +229,22 @@ public class MenuManager : MonoBehaviour
         _pauseCanvasGO.SetActive(false);
         theInput.stopPlayer = false;
     }
+
+    public void AudioControl(string _type)
+    {
+        float volume = _type switch
+        {
+            "Master" => MasterSlider.value,
+            "BGM" => BGMSlider.value,
+            "SFX" => SFXSlider.value,
+            "AMB" => AMBSlider.value,
+            _ => MasterSlider.value
+        };
+
+        MasterMixer.SetFloat(_type, volume <= -40f ? -80 : volume);
+
+    }
+
 
     #endregion
 
