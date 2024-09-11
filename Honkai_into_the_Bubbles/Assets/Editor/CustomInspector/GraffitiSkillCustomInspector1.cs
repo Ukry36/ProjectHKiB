@@ -7,7 +7,6 @@ public class GraffitiSkillCustomInspector : Editor
 {
 
     Skill skill;
-    bool showPosition = false;
     void OnEnable()
     {
         skill = target as Skill;

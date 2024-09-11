@@ -20,7 +20,7 @@ public class Drone : Friendly
         base.Awake();
     }
 
-    private void OnEnable()
+    protected override void OnEnable()
     {
         onDisableSequence = false;
         Mover.transform.position += apearFrom;
