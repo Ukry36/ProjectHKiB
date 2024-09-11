@@ -1337,6 +1337,7 @@ MonoBehaviour:
   needConfirmInput: 0
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!1 &61271341
 GameObject:
   m_ObjectHideFlags: 0
@@ -4814,6 +4815,10 @@ PrefabInstance:
     - target: {fileID: 5394501579304274170, guid: 8d625bbe2f160d146913f1174a772f69, type: 3}
       propertyPath: m_Name
       value: object(1x1)_crystal 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 8d625bbe2f160d146913f1174a772f69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 3034369534307389933, guid: 8d625bbe2f160d146913f1174a772f69, type: 3}
@@ -13868,6 +13873,7 @@ MonoBehaviour:
   needConfirmInput: 0
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!1001 &445886600
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17413,7 +17419,8 @@ MonoBehaviour:
   isCooltime: 0
   triggerToExpire: {fileID: 604128019}
   expiredLocal: 0
-  initialSFX: 
+  initialSFX: objcustom_scroll
+  removedSFX: objcustom_trash
   OCTest: {fileID: 5516915223620303482}
 --- !u!114 &604128019
 MonoBehaviour:
@@ -17434,6 +17441,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!1 &604222368
 GameObject:
   m_ObjectHideFlags: 0
@@ -21357,6 +21365,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: object(1x1)_crystal 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 51c0e9e5217638b4aa8da9c030170968, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -21938,6 +21950,10 @@ PrefabInstance:
     - target: {fileID: 5394501579304274170, guid: f4ddbb23a8889cf4c98c62d47b1b2d5f, type: 3}
       propertyPath: m_Name
       value: object(2x2)_crystal 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: f4ddbb23a8889cf4c98c62d47b1b2d5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -29362,6 +29378,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: object(1x1)_crystal 1_1
       objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 8d625bbe2f160d146913f1174a772f69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30616,6 +30636,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: object(1x1)_crystal 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 7d1a67eafc9cd2b41910a029770e0472, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -31523,6 +31547,10 @@ PrefabInstance:
     - target: {fileID: 5394501579304274170, guid: 1695cee885f6cd540aebfdc8fa9296cb, type: 3}
       propertyPath: m_Name
       value: object(1x1)_crystal 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 1695cee885f6cd540aebfdc8fa9296cb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -41270,6 +41298,7 @@ MonoBehaviour:
   needConfirmInput: 0
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!1001 &1159280451
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41321,6 +41350,10 @@ PrefabInstance:
     - target: {fileID: 5394501579304274170, guid: 6f33174c6a85e6f48a56f36cda24d1c2, type: 3}
       propertyPath: m_Name
       value: object(1x1)_crystal 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 6f33174c6a85e6f48a56f36cda24d1c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -42269,6 +42302,10 @@ PrefabInstance:
     - target: {fileID: 5394501579304274170, guid: 6f33174c6a85e6f48a56f36cda24d1c2, type: 3}
       propertyPath: m_Name
       value: object(1x1)_crystal 7_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 6f33174c6a85e6f48a56f36cda24d1c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -50266,6 +50303,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: trigger_toggle_on
   triggerCollider: {fileID: 0}
+  activated: 0
   triggerOffSFX: trigger_toggle_off
 --- !u!61 &1364187870
 BoxCollider2D:
@@ -50570,6 +50608,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!61 &1379084738
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -51951,6 +51990,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!61 &1419197167
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -52124,6 +52164,10 @@ PrefabInstance:
     - target: {fileID: 5394501579304274170, guid: 6f33174c6a85e6f48a56f36cda24d1c2, type: 3}
       propertyPath: m_Name
       value: object(1x1)_crystal 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 6f33174c6a85e6f48a56f36cda24d1c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -52492,6 +52536,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: object(1x1)_crystal 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 5c610c0d197a76247a343d06452358fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -52647,6 +52695,10 @@ PrefabInstance:
     - target: {fileID: 5394501579304274170, guid: f4ddbb23a8889cf4c98c62d47b1b2d5f, type: 3}
       propertyPath: m_Name
       value: object(2x2)_crystal 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: f4ddbb23a8889cf4c98c62d47b1b2d5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -53992,15 +54044,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1449428154376223899, guid: 5c610c0d197a76247a343d06452358fb, type: 3}
       propertyPath: m_Color.b
-      value: 0.5042522
-      objectReference: {fileID: 0}
-    - target: {fileID: 1449428154376223899, guid: 5c610c0d197a76247a343d06452358fb, type: 3}
-      propertyPath: m_Color.g
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1449428154376223899, guid: 5c610c0d197a76247a343d06452358fb, type: 3}
-      propertyPath: m_Color.r
+      propertyPath: m_Color.g
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1449428154376223899, guid: 5c610c0d197a76247a343d06452358fb, type: 3}
+      propertyPath: m_Color.r
+      value: 0.5966158
       objectReference: {fileID: 0}
     - target: {fileID: 3034369534307389933, guid: 5c610c0d197a76247a343d06452358fb, type: 3}
       propertyPath: m_Enabled
@@ -54519,6 +54571,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!61 &1513529187
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -75603,6 +75656,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: object(1x1)_crystal 7
       objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 6f33174c6a85e6f48a56f36cda24d1c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -76007,6 +76064,10 @@ PrefabInstance:
     - target: {fileID: 5394501579304274170, guid: 7d1a67eafc9cd2b41910a029770e0472, type: 3}
       propertyPath: m_Name
       value: object(1x1)_crystal 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 7d1a67eafc9cd2b41910a029770e0472, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -76486,6 +76547,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: object(1x1)_crystal 3
       objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 5c610c0d197a76247a343d06452358fb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -76656,6 +76721,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!61 &1547561739
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -76800,6 +76866,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: trigger_toggle_on
   triggerCollider: {fileID: 0}
+  activated: 0
   triggerOffSFX: trigger_toggle_off
 --- !u!61 &1550694273
 BoxCollider2D:
@@ -79256,9 +79323,10 @@ MonoBehaviour:
   - {fileID: 361069311}
   - {fileID: 1831581653}
   - {fileID: 1657139502}
-  placedSFX: 
-  cannotPlaceSFX: 
-  scrollSFX: 
+  placedSFX: objcustom_place
+  DeleteSFX: objcustom_trash
+  cannotPlaceSFX: objcustom_cannotplace
+  scrollSFX: objcustom_scroll
   cannotplaceLayer:
     serializedVersion: 2
     m_Bits: 65600
@@ -82176,7 +82244,7 @@ GameObject:
   - component: {fileID: 1687961451}
   - component: {fileID: 1687961450}
   m_Layer: 16
-  m_Name: ShowText_1
+  m_Name: delete custom objects ShowText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -82290,6 +82358,7 @@ MonoBehaviour:
   needConfirmInput: 0
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
   OffEvent: {fileID: 1687961451}
   triggerOffSFX: 
 --- !u!4 &1687961454
@@ -84113,7 +84182,7 @@ MonoBehaviour:
   m_LightType: 3
   m_BlendStyleIndex: 0
   m_FalloffIntensity: 0.5
-  m_Color: {r: 0, g: 1, b: 0.52114606, a: 1}
+  m_Color: {r: 0.1429615, g: 0, b: 1, a: 1}
   m_Intensity: 2
   m_LightVolumeIntensity: 1
   m_LightVolumeIntensityEnabled: 0
@@ -85454,6 +85523,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: object(1x1)_crystal 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: 8d625bbe2f160d146913f1174a772f69, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -85672,6 +85745,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!61 &1822210421
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -87789,7 +87863,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1887957654
 Transform:
   m_ObjectHideFlags: 0
@@ -87803,6 +87877,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 1777541241}
   - {fileID: 777626357}
   - {fileID: 110029223}
   - {fileID: 1422856119}
@@ -87818,7 +87893,6 @@ Transform:
   - {fileID: 1159280452}
   - {fileID: 1818329201}
   - {fileID: 1441432241}
-  - {fileID: 1777541241}
   - {fileID: 1918902237}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -87836,7 +87910,7 @@ GameObject:
   - component: {fileID: 1888633279}
   - component: {fileID: 1888633278}
   m_Layer: 16
-  m_Name: ShowText
+  m_Name: custom objects ShowText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87950,6 +88024,7 @@ MonoBehaviour:
   needConfirmInput: 0
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
   OffEvent: {fileID: 1888633279}
   triggerOffSFX: 
 --- !u!4 &1888633282
@@ -88800,6 +88875,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: object(2x2)_crystal 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5394501579304274170, guid: f4ddbb23a8889cf4c98c62d47b1b2d5f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -89177,6 +89256,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: trigger_toggle_on
   triggerCollider: {fileID: 0}
+  activated: 0
   triggerOffSFX: trigger_toggle_off
 --- !u!61 &1926047118
 BoxCollider2D:
@@ -90104,6 +90184,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f1022b36650129246864a447d218ab2a, type: 3}
   - {fileID: 8300000, guid: 2eb46cb27d6190a4abec5586e0f9b11e, type: 3}
   - {fileID: 8300000, guid: e2f6a3f41c6645d41b55c617722815c7, type: 3}
+  - {fileID: 8300000, guid: 8856bc5b675106d41a0282e89d8984bb, type: 3}
+  - {fileID: 8300000, guid: e7571d4e8a0070a47bb84ca6f8f6322b, type: 3}
+  - {fileID: 8300000, guid: ea80d03c8c3c79c4cb83eeda40c7289f, type: 3}
+  - {fileID: 8300000, guid: 0d068385bb7e0ff4190e3a2b9c5c5379, type: 3}
   SoundPlayerPrefab: {fileID: 1608141968413602732, guid: 76dcf207324717b4096fcbaf855b4b75, type: 3}
   FlatSoundPlayerPrefab: {fileID: 1608141968413602732, guid: 1faf21bea5109db4ba02688ec121f676, type: 3}
   hpSFX: hp
@@ -92020,6 +92104,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: 
   triggerCollider: {fileID: 0}
+  activated: 0
 --- !u!61 &2009102894
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -93836,6 +93921,7 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: trigger_toggle_on
   triggerCollider: {fileID: 0}
+  activated: 0
   triggerOffSFX: trigger_toggle_off
 --- !u!61 &2083918769
 BoxCollider2D:
@@ -99109,6 +99195,7 @@ MonoBehaviour:
   initialSFX: 
   placedGameObjects: []
   objectPlacer: {fileID: 1574461545}
+  endSFX: trigger_toggle_off
 --- !u!114 &5516915223620303483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -99128,8 +99215,9 @@ MonoBehaviour:
   needConfirmInput: 1
   triggerSFX: trigger_toggle_on
   triggerCollider: {fileID: 0}
+  activated: 0
   OffEvent: {fileID: 0}
-  triggerOffSFX: trigger_toggle_off
+  triggerOffSFX: 
 --- !u!114 &5516915223620303484
 MonoBehaviour:
   m_ObjectHideFlags: 0

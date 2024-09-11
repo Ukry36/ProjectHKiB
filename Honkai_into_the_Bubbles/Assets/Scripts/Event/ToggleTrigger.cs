@@ -5,8 +5,7 @@ using UnityEngine;
 public class ToggleTrigger : Trigger
 {
     [SerializeField] private Event OffEvent;
-    [SerializeField] protected string triggerOffSFX;
-    private bool activated;
+    [SerializeField] protected string triggerOffSFX = "trigger_toggle_off";
 
     protected override void OnTriggerEnter2D(Collider2D other)
     {

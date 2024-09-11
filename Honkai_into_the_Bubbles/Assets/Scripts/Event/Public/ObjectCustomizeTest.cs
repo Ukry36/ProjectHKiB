@@ -11,6 +11,8 @@ public class ObjectCustomizeTest : Event
 
     private bool inProgress;
 
+    [SerializeField] private string endSFX = "trigger_toggle_off";
+
 
     protected override void StartEvent(Status _interactedEntity)
     {
@@ -40,6 +42,8 @@ public class ObjectCustomizeTest : Event
         {
             placedGameObjects[i].GetComponent<BoxCollider2D>().enabled = true;
         }
+        AudioManager.instance.PlaySoundFlat(endSFX);
+        triggerToExpire.activated = false;
         base.EndEvent();
     }
 

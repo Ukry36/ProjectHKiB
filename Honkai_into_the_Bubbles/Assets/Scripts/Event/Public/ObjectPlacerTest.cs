@@ -11,6 +11,7 @@ public class ObjectPlacerTest : MonoBehaviour
     private int select;
 
     [SerializeField] private string placedSFX;
+    [SerializeField] private string DeleteSFX;
     [SerializeField] private string cannotPlaceSFX;
     [SerializeField] private string scrollSFX;
 
@@ -75,7 +76,6 @@ public class ObjectPlacerTest : MonoBehaviour
 
     private void RemoveObject()
     {
-        Debug.Log("dd");
         if (objectCustomizer.placedGameObjects.Exists(a => a.transform.position == this.transform.position))
         {
             List<GameObject> gameObjects = objectCustomizer.placedGameObjects.FindAll(a => a.transform.position == this.transform.position);
@@ -84,6 +84,7 @@ public class ObjectPlacerTest : MonoBehaviour
                 objectCustomizer.placedGameObjects.Remove(gameObjects[i]);
                 Destroy(gameObjects[i]);
             }
+            AudioManager.instance.PlaySoundFlat(DeleteSFX);
         }
     }
 
