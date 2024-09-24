@@ -54,8 +54,11 @@ public class PlayerManager : MonoBehaviour
     public int exDodgeLength = 0;
     public int exContinuousDodgeLimit = 0;
     public float exKeepDodgeSpeedCoeff = 1;
+    public float exKeepDodgeLength = 0;
     public float exGraffitimaxtime = 0;
     public float dodgeCooltimeCoeff = 1;
+
+    public int exHPFromEq = 0;
 
     public int exColdTickResistance = 0;
 
@@ -168,6 +171,7 @@ public class PlayerManager : MonoBehaviour
         bool primeC = true;
         for (int i = 0; i < EquippedEffects.Count; i++)
         {
+            if (EquippedEffects[i].ID != 0) exHPFromEq += 25;
             if (i == 1)
                 primeC = false;
             switch (EquippedEffects[i].ID)
@@ -201,6 +205,8 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
+        theStat.HPCapControl();
+
         if (drone)
         {
             if (currentDrone == null || !currentDrone.activeSelf)
@@ -233,12 +239,14 @@ public class PlayerManager : MonoBehaviour
         exDodgeLength = 0;
         exContinuousDodgeLimit = 0;
         exKeepDodgeSpeedCoeff = 1;
+        exKeepDodgeLength = 0;
         exGraffitimaxtime = 0;
         dodgeCooltimeCoeff = 1;
         exColdTickResistance = 0;
         handLightOn = false;
         dotLightOn = false;
         drone = false;
+        exHPFromEq = 0;
 
         if (DotLight.activeSelf) DotLight.SetActive(false);
         if (HandLight.activeSelf) HandLight.SetActive(false);
@@ -300,7 +308,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            exColdTickResistance = 50;
+            exColdTickResistance += 50;
         }
     }
 
@@ -325,13 +333,11 @@ public class PlayerManager : MonoBehaviour
     {
         if (_isPrime)
         {
-            forcedKeepDodge = true;
+            exKeepDodgeSpeedCoeff *= 2f;
+            exKeepDodgeLength += 2;
+            dodgeCooltimeCoeff *= 1.5f;
         }
-        else
-        {
-            exContinuousDodgeLimit += 1;
-            Debug.Log(exContinuousDodgeLimit);
-        }
+        forcedKeepDodge = true;
         forcedCanDodge = true;
     }
 
@@ -339,12 +345,9 @@ public class PlayerManager : MonoBehaviour
     {
         if (_isPrime)
         {
-            exDodgeLength += 1;
+            exContinuousDodgeLimit += 2;
         }
-        else
-        {
-            dodgeCooltimeCoeff /= 2;
-        }
+        exDodgeLength += 1;
         forcedCanDodge = true;
     }
 

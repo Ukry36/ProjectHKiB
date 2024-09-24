@@ -79,8 +79,8 @@ public class MenuManager : MonoBehaviour
     {
         deltaTime += (Time.unscaledDeltaTime - deltaTime) * 0.1f;
         FPSTtext.text = "fps: " + 1.0f / deltaTime;
-        HPtext.text = theStat.CurrentHP + "/" + theStat.maxHP;
-        HPbar.transform.localScale = new Vector3((float)theStat.CurrentHP / theStat.maxHP, 1, 0);
+        HPtext.text = theStat.CurrentHP + "/" + theStat.currentMaxHP;
+        HPbar.transform.localScale = new Vector3((float)theStat.CurrentHP / theStat.currentMaxHP, 1, 0);
         if (isPaused)
         {
             if (theInput.PauseInput)

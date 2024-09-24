@@ -9,9 +9,11 @@ public class Status : MonoBehaviour
     public bool isPlayer = false;
     public bool superArmor = false; // no knockback
     public bool invincible = false; // no damage
-    public int maxHP = 100;
+    [SerializeField] private int maxHP = 100;
+    [ReadOnly] public int currentMaxHP;
     public int CurrentHP { get; private set; }
-    public int maxGP = 20;
+    [SerializeField] private int maxGP = 20;
+    [ReadOnly] public int currentMaxGP;
     public int CurrentGP { get; private set; }
 
     public int playHitSFXDamage = 50;
@@ -26,6 +28,7 @@ public class Status : MonoBehaviour
     [HideInInspector] public bool inTransferPosition;
 
     [SerializeField][MinValue(0)][MaxValue(100)] private int Resistance = 0;
+    [HideInInspector] public int ResistanceExternal = 0;
 
     [SerializeField][MinValue(0)][MaxValue(100)] private int ColdTickResistance = 0;
     [SerializeField][MinValue(0)][MaxValue(100)] private int FlameTickResistance = 0;
@@ -36,7 +39,9 @@ public class Status : MonoBehaviour
     private void Awake()
     {
         entity = GetComponentInChildren<Entity>();
+        currentMaxHP = maxHP;
         CurrentHP = maxHP;
+        currentMaxGP = maxGP;
         CurrentGP = maxGP;
     }
 
@@ -64,10 +69,11 @@ public class Status : MonoBehaviour
         int trueDMG = _attackInfo.theStat.ATK * _attackInfo.DamageCoefficient / 100;
 
         bool critical = UnityEngine.Random.Range(1, 101) < _attackInfo.BaseCriticalRate + _attackInfo.theStat.CritRate;
+        int resistance = Resistance + ResistanceExternal;
 
         trueDMG += critical ? trueDMG * _attackInfo.theStat.CritDMG / 100 : 0;
         trueDMG -= DEF;
-        trueDMG = trueDMG * (100 - Resistance) / 100;
+        trueDMG = trueDMG * (100 - resistance) / 100;
         trueDMG = trueDMG < 0 ? 0 : trueDMG;
 
         entity.Hit(attackOrigin);
@@ -113,7 +119,6 @@ public class Status : MonoBehaviour
 
             if (!invincible && trueDMG > 0)
             {
-                //StartCoroutine(entity.HitLightShine(_damageInfo.hitColor));
                 ParticleSystem.MainModule pm = PoolManager.instance.ReuseGameObject(PoolManager.instance.hitParticle, this.transform.position + Vector3.up, quaternion.identity).GetComponent<ParticleSystem>().main;
                 pm.startColor = _damageInfo.hitColor;
                 HPControl(-trueDMG, _damageInfo.SFX);
@@ -130,10 +135,18 @@ public class Status : MonoBehaviour
 
     public void SetHitAnimObject() => entity = GetComponentsInChildren<Entity>(false)[0];
 
+    public void HPCapControl()
+    {
+        int newMHP = maxHP + PlayerManager.instance.exHPFromEq;
+        float ratio = (float)CurrentHP / currentMaxHP;
+        currentMaxHP = newMHP;
+        CurrentHP = (int)(currentMaxHP * ratio);
+    }
+
     public void HPControl(int _o, string[] _customSFX = null, bool _silence = false)
     {
         CurrentHP += _o;
-        if (CurrentHP > maxHP) CurrentHP = maxHP;
+        if (CurrentHP > currentMaxHP) CurrentHP = currentMaxHP;
 
         if (CurrentHP <= 0)
         {
@@ -164,7 +177,7 @@ public class Status : MonoBehaviour
     public void GPControl(int _o, string[] _customSFX = null, bool _silence = false)
     {
         CurrentGP += _o;
-        if (CurrentGP > maxGP) CurrentGP = maxGP;
+        if (CurrentGP > currentMaxGP) CurrentGP = currentMaxGP;
 
         if (CurrentGP < 0) CurrentGP = 0;
 

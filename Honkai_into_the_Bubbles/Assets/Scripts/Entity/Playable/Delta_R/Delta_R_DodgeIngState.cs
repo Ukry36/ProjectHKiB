@@ -18,6 +18,7 @@ public class Delta_R_DodgeIngState : Playable_State
         base.Enter();
         stateTimer = player.keepDodgeTimeLimit;
         player.theStat.superArmor = true;
+        player.theStat.ResistanceExternal += 50;
         speed = player.keepDodgeSpeed * PlayerManager.instance.exKeepDodgeSpeedCoeff;
         moveCount = 0;
     }
@@ -26,7 +27,7 @@ public class Delta_R_DodgeIngState : Playable_State
     {
         base.Update();
         if (stateTimer < 0
-        || moveCount >= player.keepDodgeLimit + PlayerManager.instance.exDodgeLength
+        || moveCount >= player.keepDodgeLimit + PlayerManager.instance.exKeepDodgeLength
         || !InputManager.instance.DodgeProgressInput)
         {
             stateMachine.ChangeState(player.DodgeExitState);

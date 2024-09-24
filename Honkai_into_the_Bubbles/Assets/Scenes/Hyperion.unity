@@ -11500,7 +11500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 725a4a36f6f1fbc4ebf40da62a8e7bc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  theState: {fileID: 1551463724}
+  theStat: {fileID: 1551463724}
   TMPro: {fileID: 150906257}
   guage: {fileID: 1069596042}
 --- !u!212 &307851620
@@ -34648,7 +34648,7 @@ Camera:
   far clip plane: 5000
   field of view: 40
   orthographic: 1
-  orthographic size: 3.9375
+  orthographic size: 3.75
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
@@ -79243,6 +79243,7 @@ MonoBehaviour:
   exKeepDodgeSpeedCoeff: 1
   exGraffitimaxtime: 0
   dodgeCooltimeCoeff: 1
+  exHPFromEq: 0
   exColdTickResistance: 0
   handLightOn: 0
   dotLightOn: 0
@@ -79371,8 +79372,10 @@ MonoBehaviour:
   isPlayer: 1
   superArmor: 0
   invincible: 0
-  maxHP: 1000
-  maxGP: 1000
+  maxHP: 100
+  currentMaxHP: 0
+  maxGP: 30
+  currentMaxGP: 0
   playHitSFXDamage: 50
   ATK: 100
   DEF: 0

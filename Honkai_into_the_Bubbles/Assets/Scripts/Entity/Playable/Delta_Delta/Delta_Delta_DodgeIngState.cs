@@ -26,7 +26,7 @@ public class Delta_Delta_DodgeIngState : Playable_State
     {
         base.Update();
         if (stateTimer < 0
-        || moveCount >= player.keepDodgeLimit + PlayerManager.instance.exDodgeLength
+        || moveCount >= player.keepDodgeLimit + PlayerManager.instance.exKeepDodgeLength
         || !InputManager.instance.DodgeProgressInput)
         {
             stateMachine.ChangeState(player.DodgeExitState);

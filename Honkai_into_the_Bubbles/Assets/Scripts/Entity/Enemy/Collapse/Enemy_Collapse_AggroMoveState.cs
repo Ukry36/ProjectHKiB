@@ -46,9 +46,9 @@ public class Enemy_Collapse_AggroMoveState : Enemy_State
                 {
                     enemy.stateMachine.ChangeState(enemy.IdleState);
                 }
-                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[0].DetectRadius, true)).Length > 0 && ((enemy.canSkill01Passive && enemy.theStat.CurrentHP / enemy.theStat.maxHP < 0.5) || !enemy.SkillArray[0].isCooltime))
+                else if ((colliders = enemy.AreaDetectTarget(enemy.SkillArray[0].DetectRadius, true)).Length > 0 && ((enemy.canSkill01Passive && enemy.theStat.CurrentHP / enemy.theStat.currentMaxHP < 0.5) || !enemy.SkillArray[0].isCooltime))
                 {
-                    if (enemy.theStat.CurrentHP / enemy.theStat.maxHP < 0.5)
+                    if (enemy.theStat.CurrentHP / enemy.theStat.currentMaxHP < 0.5)
                         enemy.canSkill01Passive = false;
                     enemy.SelectFarthestTarget(colliders);
                     List<Vector3> availablePositions = new();
