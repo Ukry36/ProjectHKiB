@@ -13,7 +13,6 @@ public class SpawnFieldEvent : Event
     [SerializeField] private Vector3 BL;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private LayerMask spawnLayer;
-    [SerializeField] private bool checkFieldEnemyCount;
     [ShowIf("checkFieldEnemyCount")][SerializeField] private int countToMaintain;
 
     private List<Vector3> spawnPoints = new();

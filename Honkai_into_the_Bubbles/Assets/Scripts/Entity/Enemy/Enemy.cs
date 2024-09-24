@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using NaughtyAttributes;
 using System.Collections;
+using Unity.Mathematics;
 
 public class Enemy : Entity
 {
@@ -52,13 +53,13 @@ public class Enemy : Entity
 
     public void SetMoveDirRandom4()
     {
-        GazePoint.position = Mover.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+        GazePoint.position = Mover.position + new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), 0);
         moveDir = GazePointToDir4();
     }
 
     public void SetMoveDirRandom8()
     {
-        GazePoint.position = Mover.position + new Vector3(Random.Range(-1f, 1f), Random.Range(-1f, 1f), 0);
+        GazePoint.position = Mover.position + new Vector3(UnityEngine.Random.Range(-1f, 1f), UnityEngine.Random.Range(-1f, 1f), 0);
         moveDir = GazePointToDir8();
     }
 
@@ -184,7 +185,7 @@ public class Enemy : Entity
     // tinker before attack
     public void BeforeAttackTinker(Vector3 _offset)
     {
-        PoolManager.instance.ReuseGameObject(beforeAttackEffectPrefab, this.transform.position + _offset, Quaternion.identity);
+        PoolManager.instance.ReuseGameObject(beforeAttackEffectPrefab, this.transform.position + _offset, quaternion.Euler(0, 0, UnityEngine.Random.Range(-1, 1)));
     }
 
     public IEnumerator TurnCooltime()

@@ -115,7 +115,7 @@ public class Delta_R : Playable
                 skill01ing = true;
                 SkillState.skill = GS.skillList[0];
                 stateMachine.ChangeState(SkillState);
-
+                GraffitiFailManage(_result[1]);
                 break;
             case 1:
                 theStat.GPControl(GS.skillList[1].GraffitiPoint);
@@ -128,6 +128,7 @@ public class Delta_R : Playable
                     break;
                 }
                 stateMachine.ChangeState(IdleState);
+                GraffitiFailManage(_result[1]);
                 break;
             case 2:
                 if (skill01ing)
@@ -148,14 +149,16 @@ public class Delta_R : Playable
                     stateMachine.ChangeState(AttackState);
                     StartCoroutine(Skill03Coroutine(GS.skillList[2]));
                 }
+                GraffitiFailManage(_result[1]);
                 break;
 
             default:
-                GraffitiFailManage(_result[1]);
+
                 skill01ing = false;
                 stateMachine.ChangeState(IdleState);
                 break;
         }
+
 
     }
 

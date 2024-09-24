@@ -9,7 +9,6 @@ public class ObjectSetActiveEvent : Event
 
     protected override void StartEvent(Status _interactedEntity)
     {
-        StartCoroutine(Cooltime());
         bool deactivateSelf = false;
         for (int i = 0; i < ObjectsToActivate.Count; i++)
         {

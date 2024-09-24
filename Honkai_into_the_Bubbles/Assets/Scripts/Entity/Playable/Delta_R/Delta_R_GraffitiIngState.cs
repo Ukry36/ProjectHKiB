@@ -69,5 +69,6 @@ public class Delta_R_GraffitiIngState : Playable_State
         base.Exit();
         player.theStat.superArmor = false;
         player.Mover.position = player.MovePoint.transform.position;
+        MenuManager.instance.GraffitiCountDownDisable();
     }
 }
