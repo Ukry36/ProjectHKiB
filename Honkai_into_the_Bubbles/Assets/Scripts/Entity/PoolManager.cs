@@ -29,6 +29,8 @@ public class PoolManager : MonoBehaviour
 
     private Transform objectPoolTransform;
 
+    public GameObject hitParticle;
+
     [System.Serializable]
     public struct Pool
     {

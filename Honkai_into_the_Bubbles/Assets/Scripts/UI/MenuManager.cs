@@ -1,6 +1,7 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
@@ -35,7 +36,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private Status theStat;
 
     [SerializeField] private Image fadeImage;
-    private Color tempColor;
+    private Color disablePlayUIColor;
 
     [SerializeField] private GameObject _pauseCanvasGO;
     [SerializeField] private GameObject _inventoryCanvasGO;
@@ -57,6 +58,15 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI FPSTtext;
     float deltaTime;
 
+    public AudioMixer MasterMixer;
+    public Slider MasterSlider;
+    public Slider BGMSlider;
+    public Slider SFXSlider;
+    public Slider AMBSlider;
+
+    public GameObject GPUI;
+    private bool disablePlayUI = false;
+    private bool disablePostProcessing = true;
 
     private void Start()
     {
@@ -73,7 +83,7 @@ public class MenuManager : MonoBehaviour
         HPbar.transform.localScale = new Vector3((float)theStat.CurrentHP / theStat.maxHP, 1, 0);
         if (isPaused)
         {
-            if (theInput.CancelInput)
+            if (theInput.PauseInput)
                 Resume();
         }
         else if (inEquipment)
@@ -108,7 +118,7 @@ public class MenuManager : MonoBehaviour
         }
         else
         {
-            if (theInput.CancelInput)
+            if (theInput.PauseInput)
                 Pause();
             else if (theInput.EquipmentOpenCloseInput)
                 OpenEquipment();
@@ -132,14 +142,14 @@ public class MenuManager : MonoBehaviour
     public void SetFadeColor(Color _color)
     {
         _color.a = fadeImage.color.a;
-        tempColor = _color;
+        disablePlayUIColor = _color;
     }
 
     public IEnumerator FadeCoroutine(float _opacity, float _fadeTime)
     {
         StopCoroutine(nameof(FadeOutCoroutine));
         StopCoroutine(nameof(FadeInCoroutine));
-        if (tempColor.a < _opacity)
+        if (disablePlayUIColor.a < _opacity)
             yield return FadeOutCoroutine(_opacity, _fadeTime);
         else
             yield return FadeInCoroutine(_opacity, _fadeTime);
@@ -148,30 +158,30 @@ public class MenuManager : MonoBehaviour
     {
         float timer = _fadeTime;
         float speed = _opacity / _fadeTime;
-        while (timer > 0 && tempColor.a < _opacity)
+        while (timer > 0 && disablePlayUIColor.a < _opacity)
         {
-            tempColor.a += speed * Time.unscaledDeltaTime;
-            fadeImage.color = tempColor;
+            disablePlayUIColor.a += speed * Time.unscaledDeltaTime;
+            fadeImage.color = disablePlayUIColor;
             timer -= Time.deltaTime;
             yield return null;
         }
-        tempColor.a = _opacity;
-        fadeImage.color = tempColor;
+        disablePlayUIColor.a = _opacity;
+        fadeImage.color = disablePlayUIColor;
         if (timer > 0) yield return new WaitForSeconds(timer);
     }
     private IEnumerator FadeInCoroutine(float _opacity, float _fadeTime)
     {
         float timer = _fadeTime;
         float speed = (1 - _opacity) / _fadeTime;
-        while (timer > 0 && tempColor.a > _opacity)
+        while (timer > 0 && disablePlayUIColor.a > _opacity)
         {
-            tempColor.a -= speed * Time.unscaledDeltaTime;
-            fadeImage.color = tempColor;
+            disablePlayUIColor.a -= speed * Time.unscaledDeltaTime;
+            fadeImage.color = disablePlayUIColor;
             timer -= Time.deltaTime;
             yield return null;
         }
-        tempColor.a = _opacity;
-        fadeImage.color = tempColor;
+        disablePlayUIColor.a = _opacity;
+        fadeImage.color = disablePlayUIColor;
         if (timer > 0) yield return new WaitForSeconds(timer);
     }
 
@@ -200,6 +210,7 @@ public class MenuManager : MonoBehaviour
     public void GraffitiCountDownDisable()
     {
         GSTtext.gameObject.SetActive(false);
+        StopCoroutine(nameof(GraffitiCountDown));
     }
 
     #endregion
@@ -222,6 +233,45 @@ public class MenuManager : MonoBehaviour
         _pauseCanvasGO.SetActive(false);
         theInput.stopPlayer = false;
     }
+
+    public void AudioControl(string _type)
+    {
+        float volume = _type switch
+        {
+            "Master" => MasterSlider.value,
+            "BGM" => BGMSlider.value,
+            "SFX" => SFXSlider.value,
+            "AMB" => AMBSlider.value,
+            _ => MasterSlider.value
+        };
+
+        MasterMixer.SetFloat(_type, volume <= -40f ? -80 : volume);
+
+    }
+
+    public void PlayUIToggle()
+    {
+        disablePlayUI = !disablePlayUI;
+        if (disablePlayUI)
+        {
+            _playCanvasGO.SetActive(false);
+            GPUI.SetActive(false);
+        }
+        else
+        {
+            _playCanvasGO.SetActive(true);
+            GPUI.SetActive(true);
+        }
+    }
+
+    public void PostProcessingToggle()
+    {
+        disablePostProcessing = !disablePostProcessing;
+
+        CameraManager.instance.TogglePostProcessing(disablePostProcessing);
+
+    }
+
 
     #endregion
 

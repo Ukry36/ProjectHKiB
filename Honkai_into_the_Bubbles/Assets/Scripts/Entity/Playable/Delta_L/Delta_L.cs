@@ -22,6 +22,8 @@ public class Delta_L : Playable
     public Delta_L_Skill02SuccessState Skill02SuccessState { get; private set; }
     public Delta_L_Skill02FailState Skill02FailState { get; private set; }
 
+    public GameObject parryTinker;
+
     protected override void Awake()
     {
         base.Awake();
@@ -99,13 +101,14 @@ public class Delta_L : Playable
             case 0:
                 Skill01IngState.skill = GS.skillList[0];
                 stateMachine.ChangeState(Skill01BeforeState);
+                GraffitiFailManage(_result[1]);
                 break;
             case 1:
                 Skill02BeforeState.skill = GS.skillList[1];
                 stateMachine.ChangeState(Skill02BeforeState);
                 break;
             default:
-                GraffitiFailManage(_result[1]);
+
                 stateMachine.ChangeState(IdleState);
                 break;
         }
