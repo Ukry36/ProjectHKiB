@@ -5,6 +5,7 @@ using UnityEngine;
 public class AutoToggleTrigger : Trigger
 {
     [SerializeField] protected string triggerOffSFX;
+    private bool activated;
     void Update()
     {
         if (activated) targetEvent.StartEventBase(null);

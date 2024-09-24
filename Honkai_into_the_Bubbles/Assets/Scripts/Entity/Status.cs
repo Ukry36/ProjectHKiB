@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using NaughtyAttributes;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class Status : MonoBehaviour
@@ -63,7 +62,7 @@ public class Status : MonoBehaviour
 
         int trueDMG = _attackInfo.theStat.ATK * _attackInfo.DamageCoefficient / 100;
 
-        bool critical = UnityEngine.Random.Range(1, 101) < _attackInfo.BaseCriticalRate + _attackInfo.theStat.CritRate;
+        bool critical = Random.Range(1, 101) < _attackInfo.BaseCriticalRate + _attackInfo.theStat.CritRate;
 
         trueDMG += critical ? trueDMG * _attackInfo.theStat.CritDMG / 100 : 0;
         trueDMG -= DEF;
@@ -72,11 +71,9 @@ public class Status : MonoBehaviour
 
         entity.Hit(attackOrigin);
 
-        if (!invincible && this.gameObject.activeSelf)
+        if (!invincible)
         {
-            //StartCoroutine(entity.HitLightShine(_attackInfo.hitColor));
-            ParticleSystem.MainModule pm = PoolManager.instance.ReuseGameObject(PoolManager.instance.hitParticle, this.transform.position + Vector3.up, quaternion.identity).GetComponent<ParticleSystem>().main;
-            pm.startColor = _attackInfo.hitColor;
+            StartCoroutine(entity.HitLightShine(_attackInfo.hitColor));
             StartCoroutine(entity.HitInvincible());
             HPControl(-trueDMG);
         }
@@ -113,9 +110,7 @@ public class Status : MonoBehaviour
 
             if (!invincible && trueDMG > 0)
             {
-                //StartCoroutine(entity.HitLightShine(_damageInfo.hitColor));
-                ParticleSystem.MainModule pm = PoolManager.instance.ReuseGameObject(PoolManager.instance.hitParticle, this.transform.position + Vector3.up, quaternion.identity).GetComponent<ParticleSystem>().main;
-                pm.startColor = _damageInfo.hitColor;
+                StartCoroutine(entity.HitLightShine(_damageInfo.hitColor));
                 HPControl(-trueDMG, _damageInfo.SFX);
             }
 

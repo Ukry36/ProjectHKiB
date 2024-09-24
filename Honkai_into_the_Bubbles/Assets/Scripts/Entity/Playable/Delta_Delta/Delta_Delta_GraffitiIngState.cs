@@ -68,6 +68,5 @@ public class Delta_Delta_GraffitiIngState : Playable_State
     {
         base.Exit();
         player.theStat.superArmor = false;
-        MenuManager.instance.GraffitiCountDownDisable();
     }
 }

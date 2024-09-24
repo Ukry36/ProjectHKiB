@@ -155,11 +155,4 @@ public class Playable : Entity
                 PlayerManager.instance.HandLight.SetActive(false);
         }
     }
-
-    public override void Die()
-    {
-        AudioManager.instance.PlaySound(deathSFX, this.transform);
-        StartCoroutine(PlayerManager.instance.DieSequence());
-
-    }
 }

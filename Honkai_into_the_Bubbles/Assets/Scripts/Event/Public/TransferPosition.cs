@@ -32,15 +32,59 @@ public class TransferPosition : Event
 
     protected virtual IEnumerator TransferCoroutine(Status _interactedEntity)
     {
+        Vector3 Way = destination.position - _interactedEntity.entity.MovePoint.transform.position;
+
         if (instant)
         {
-            TeleportManager.instance.InstantTransferPos
-            (_interactedEntity, destination.position, keepX, keepY);
+            Way.x = keepX ? 0 : Way.x;
+            Way.y = keepY ? 0 : Way.y;
+            dir = Vector2.zero;
+            if (_interactedEntity.isPlayer)
+            {
+                PlayerManager.instance.FriendlyInstantTransfer(Way);
+                _interactedEntity.TransferPositionInvincible(0.1f);
+            }
+            _interactedEntity.transform.position += Way;
+            _interactedEntity.entity.MovePoint.transform.position += Way;
         }
         else
         {
-            yield return TeleportManager.instance.TransferPosCoroutine
-            (_interactedEntity, dir, destination.position, delay, innerDelay, fadeColor);
+            if (_interactedEntity.isPlayer)
+            {
+                _interactedEntity.TransferPositionInvincible(delay * 2 + innerDelay);
+                InputManager.instance.StopUIInput(true);
+                InputManager.instance.StopPlayerInput(true);
+                MenuManager.instance.SetFadeColor(fadeColor);
+                yield return MenuManager.instance.FadeCoroutine(1, delay);
+            }
+            else
+            {
+                _interactedEntity.TransferPositionInvincible(innerDelay);
+            }
+            _interactedEntity.transform.position = destination.position;
+            _interactedEntity.entity.MovePoint.transform.position = destination.position;
+        }
+
+
+
+        if (_interactedEntity.isPlayer)
+        {
+            CameraManager.instance.StrictMovement(Way, _interactedEntity.entity.MovePoint.transform.position);
+        }
+
+
+        if (dir != Vector2.zero)
+            _interactedEntity.entity.SetAnimDir(dir);
+
+        yield return new WaitForSeconds(innerDelay);
+
+
+        if (_interactedEntity.isPlayer && !instant)
+        {
+            PlayerManager.instance.FriendlyResetWhenTransferposition();
+            yield return MenuManager.instance.FadeCoroutine(0, delay);
+            InputManager.instance.StopPlayerInput(false);
+            InputManager.instance.StopUIInput(false);
         }
         EndEvent();
     }

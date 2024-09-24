@@ -59,20 +59,14 @@ public class InputManager : MonoBehaviour
     public bool SkillInput { get; private set; }
 
     public bool ConfirmInput { get; private set; }
-    public bool UIConfirmInput { get; private set; }
-    public bool PauseInput { get; private set; }
+    public bool CancelInput { get; private set; }
     public bool EquipmentOpenCloseInput { get; private set; }
     public bool InventoryOpenCloseInput { get; private set; }
-
-    public bool NextInput { get; private set; }
-    public bool PrevInput { get; private set; }
-    public bool CancelInput { get; private set; }
 
     private PlayerInput _playerInput;
     private InputAction move, movePressedD, movePressedR, movePressedU, movePressedL,
             sprint, attack, dodge, grafitti, skill, confirm, cancel, equipment, inventory;
 
-    public bool stopPlayerMovement;
     public bool stopPlayer;
     public bool stopUI;
 
@@ -87,64 +81,49 @@ public class InputManager : MonoBehaviour
         GraffitiStartInput = false;
         GraffitiEndInput = false;
         SkillInput = false;
-        ConfirmInput = false;
     }
 
     public void StopUIInput(bool _stop)
     {
         stopUI = _stop;
-        PauseInput = false;
         ConfirmInput = false;
         CancelInput = false;
         EquipmentOpenCloseInput = false;
         InventoryOpenCloseInput = false;
     }
 
-    public void StopPlayerMovementInput(bool _stop)
-    {
-        stopPlayerMovement = _stop;
-        MoveInput = Vector2.zero;
-    }
-
 
     private void Update()
     {
         // player input detect
-
-        if (!stopPlayer || !stopPlayerMovement)
-            if (!stopPlayer)
+        if (!stopPlayer)
+        {
+            MoveInput = move.ReadValue<Vector2>();
+            MoveInputPressed = movePressedD.WasPressedThisFrame() || movePressedR.WasPressedThisFrame()
+                            || movePressedU.WasPressedThisFrame() || movePressedL.WasPressedThisFrame();
+            DInput = movePressedD.WasPressedThisFrame();
+            RInput = movePressedR.WasPressedThisFrame();
+            UInput = movePressedU.WasPressedThisFrame();
+            LInput = movePressedL.WasPressedThisFrame();
+            if (PlayerManager.instance.canSprint)
             {
-                MoveInput = move.ReadValue<Vector2>();
-                MoveInputPressed = movePressedD.WasPressedThisFrame() || movePressedR.WasPressedThisFrame()
-                                || movePressedU.WasPressedThisFrame() || movePressedL.WasPressedThisFrame();
-                DInput = movePressedD.WasPressedThisFrame();
-                RInput = movePressedR.WasPressedThisFrame();
-                UInput = movePressedU.WasPressedThisFrame();
-                LInput = movePressedL.WasPressedThisFrame();
-                if (PlayerManager.instance.canSprint)
-                {
-                    SprintInput = sprint.inProgress;
-                }
-                AttackInput = attack.WasPressedThisFrame();
-                DodgeInput = dodge.WasPressedThisFrame();
-                DodgeProgressInput = dodge.inProgress;
-                GraffitiStartInput = grafitti.WasPressedThisFrame();
-                GraffitiEndInput = grafitti.WasReleasedThisFrame();
-                SkillInput = skill.WasPressedThisFrame();
-                ConfirmInput = confirm.WasPressedThisFrame();
+                SprintInput = sprint.inProgress;
             }
+            AttackInput = attack.WasPressedThisFrame();
+            DodgeInput = dodge.WasPressedThisFrame();
+            DodgeProgressInput = dodge.inProgress;
+            GraffitiStartInput = grafitti.WasPressedThisFrame();
+            GraffitiEndInput = grafitti.WasReleasedThisFrame();
+            SkillInput = skill.WasPressedThisFrame();
+        }
 
         // ui input detect 
         if (!stopUI)
         {
-            PauseInput = cancel.WasPressedThisFrame();
-            UIConfirmInput = confirm.WasPressedThisFrame();
+            ConfirmInput = confirm.WasPressedThisFrame();
+            CancelInput = cancel.WasPressedThisFrame();
             EquipmentOpenCloseInput = equipment.WasPressedThisFrame();
             InventoryOpenCloseInput = inventory.WasPressedThisFrame();
         }
-
-        CancelInput = cancel.WasPressedThisFrame();
-        NextInput = equipment.WasPressedThisFrame();
-        PrevInput = inventory.WasPressedThisFrame();
     }
 }

@@ -3,8 +3,6 @@ using System.Linq;
 using System;
 using UnityEngine;
 using Unity.Mathematics;
-using UnityEngine.SceneManagement;
-using System.Collections;
 public class PlayerManager : MonoBehaviour
 {
     #region Singleton
@@ -66,22 +64,6 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         ActivateEquippedEffect(new int[] { 0 });
-    }
-
-    public IEnumerator DieSequence()
-    {
-        if (SceneManager.GetActiveScene().name != "Hyperion")
-        {
-            yield return TeleportManager.instance.LoadSceneCoroutine
-            ("Hyperion", theStat, Vector2.down, new Vector3(13, -10, 0), 0.5f, 0.1f, Color.black);
-        }
-        else
-        {
-            yield return TeleportManager.instance.TransferPosCoroutine
-            (theStat, Vector2.down, new Vector3(13, -10, 0), 0.5f, 0.1f, Color.black);
-        }
-        theStat.HPControl(1000);
-        theStat.GPControl(1000);
     }
 
     public void ActivateEquippedEffect(int[] _effectIDs)

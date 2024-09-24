@@ -180,10 +180,6 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: ee3458a1cf24ece4bae60ac686f83a00, type: 3}
-    - target: {fileID: 5247611254976669587, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 5840633595945955985, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
       propertyPath: m_Name
       value: R-SA
@@ -217,9 +213,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitColor: {r: 0, g: 0, b: 0, a: 0}
-  hitSFX: 
-  initialSFX: 
   theStat: {fileID: 0}
   damageLayer:
     serializedVersion: 2
@@ -231,7 +224,6 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 0
   Cooltime: 0
-  Duration: 0
   Delay: 0.2
   animationPlayTime: 0
   skillCommand: []

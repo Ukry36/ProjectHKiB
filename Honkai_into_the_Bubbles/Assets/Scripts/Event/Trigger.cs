@@ -7,10 +7,8 @@ public class Trigger : MonoBehaviour
     [SerializeField] protected LayerMask interactLayer;
     [SerializeField] protected Event targetEvent;
     [SerializeField] protected bool needConfirmInput;
-    [SerializeField] protected string triggerSFX = "trigger_toggle_on";
+    [SerializeField] protected string triggerSFX;
     [HideInInspector] public Collider2D triggerCollider;
-
-    public bool activated;
 
     private void Awake()
     {

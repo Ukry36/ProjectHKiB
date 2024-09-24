@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
-using UnityEngine.Rendering.Universal;
+using Debug = UnityEngine.Debug;
 
 public class CameraManager : MonoBehaviour
 {
@@ -24,7 +24,6 @@ public class CameraManager : MonoBehaviour
     [SerializeField] private CinemachineVirtualCamera[] Cameras = new CinemachineVirtualCamera[2];
     private CinemachineConfiner2D[] Confiners = new CinemachineConfiner2D[2];
     [SerializeField] private CinemachineBrain CBrain;
-    private Camera theCamera;
 
     [SerializeField] private BGRenderer bgrenderer;
 
@@ -34,7 +33,6 @@ public class CameraManager : MonoBehaviour
 
     private void Start()
     {
-        theCamera = GetComponent<Camera>();
         this.transform.position = PlayerManager.instance.transform.position;
         for (int i = 0; i < Cameras.Length; i++)
         {
@@ -43,9 +41,6 @@ public class CameraManager : MonoBehaviour
         Cameras[CurrentCamera].Priority = 11;
         ReturntoOrigRes(0);
     }
-
-    public void TogglePostProcessing(bool _enable) =>
-    theCamera.GetUniversalAdditionalCameraData().renderPostProcessing = _enable;
 
     public void StrictMovement(Vector3 _way, Vector3 _prevPos)
     {
@@ -96,7 +91,8 @@ public class CameraManager : MonoBehaviour
     }
 
     // Set original resolution
-    public void SetOrigRes(float _res) => OriginalRes = _res;
+    public void SetOrigRes(float _res)
+    { OriginalRes = _res; }
 
 
     // Set current resolution to original resolution

@@ -61,12 +61,11 @@ public class Entity : MonoBehaviour
 
     }
 
-    protected virtual void OnEnable()
+    private void OnEnable()
     {
         hitLight.enabled = false;
         theStat.invincible = false;
         SpriteRenderer.color = Color.white;
-        MovePoint.transform.position = Mover.position;
     }
 
     private void OnDisable()

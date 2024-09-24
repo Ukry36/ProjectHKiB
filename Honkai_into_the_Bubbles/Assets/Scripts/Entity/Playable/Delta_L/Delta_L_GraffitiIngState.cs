@@ -71,6 +71,5 @@ public class Delta_L_GraffitiIngState : Playable_State
         player.cannotDodge = false;
         player.cannotGraffiti = false;
         player.theStat.superArmor = false;
-        MenuManager.instance.GraffitiCountDownDisable();
     }
 }

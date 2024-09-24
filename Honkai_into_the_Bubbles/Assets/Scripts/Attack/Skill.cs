@@ -9,7 +9,7 @@ public class Skill : Attack
     public float Duration; // skill duration
     public float Delay; // delay before or between atk 
     public float animationPlayTime; // must be larger than Delay 
-    public List<Vector2> skillCommand;
+    [HideInInspector] public List<Vector2> skillCommand;
     public bool isCooltime = false;
 
     protected override void OnEnable()
