@@ -146,7 +146,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8256192448890596640}
   - component: {fileID: 7655881866973682470}
-  - component: {fileID: 63894638293165313}
   - component: {fileID: 4518864927517821614}
   m_Layer: 6
   m_Name: renderer
@@ -178,7 +177,27 @@ Tilemap:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8922207619565430250}
   m_Enabled: 1
-  m_Tiles: {}
+  m_Tiles:
+  - first: {x: 0, y: -1, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 7
+      m_TileSpriteIndex: 7
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
+  - first: {x: 0, y: 0, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 6
+      m_TileSpriteIndex: 6
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
   - m_RefCount: 0
@@ -193,10 +212,10 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 21364943c234d8a499b6f19c7f542a8b, type: 2}
+  - m_RefCount: 1
+    m_Data: {fileID: 11400000, guid: 4507f817793ecae499860694fcb953a4, type: 2}
   m_TileSpriteArray:
   - m_RefCount: 0
     m_Data: {fileID: 0}
@@ -210,32 +229,32 @@ Tilemap:
     m_Data: {fileID: 0}
   - m_RefCount: 0
     m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: -492404001, guid: 2b209b95535695044b2241436c3c776d, type: 3}
+  - m_RefCount: 1
+    m_Data: {fileID: -1052644209, guid: 2b209b95535695044b2241436c3c776d, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 0
+  - m_RefCount: 2
     m_Data:
-      e00: 0
+      e00: 1
       e01: 0
-      e02: 1.3224334e-38
-      e03: 1.3224334e-38
+      e02: 0
+      e03: 0
       e10: 0
-      e11: 0
-      e12: 9.18e-43
-      e13: 9.18e-43
-      e20: 1.1619599e+32
-      e21: -0.00000002143787
-      e22: -1.1766016e-28
-      e23: -0.000021942018
-      e30: 4.5905e-41
-      e31: 9.2e-43
-      e32: 9.18e-43
-      e33: 9.18e-43
+      e11: 1
+      e12: 0
+      e13: 0
+      e20: 0
+      e21: 0
+      e22: 1
+      e23: 0
+      e30: 0
+      e31: 0
+      e32: 0
+      e33: 1
   m_TileColorArray:
-  - m_RefCount: 0
-    m_Data: {r: 4.3662e-41, g: 4.3662e-41, b: 4.3662e-41, a: 4.3662e-41}
+  - m_RefCount: 2
+    m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -260,56 +279,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!60 &63894638293165313
-PolygonCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8922207619565430250}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0, y: 0}
-    oldSize: {x: 0, y: 0}
-    newSize: {x: 0, y: 0}
-    adaptiveTilingThreshold: 0
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0.5, y: 2}
-      - {x: -0.92658484, y: 0.9635255}
-      - {x: -0.38167775, y: -0.71352553}
-      - {x: 1.3816781, y: -0.7135254}
-      - {x: 1.9265847, y: 0.96352565}
-  m_UseDelaunayMesh: 0
 --- !u!483693784 &4518864927517821614
 TilemapRenderer:
   m_ObjectHideFlags: 0
