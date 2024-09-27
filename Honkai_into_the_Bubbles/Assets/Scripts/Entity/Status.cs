@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class Status : MonoBehaviour
 {
+    private WaveManager waveManager;
+
     public bool isPlayer = false;
     public bool superArmor = false; // no knockback
     public bool invincible = false; // no damage
@@ -43,6 +45,15 @@ public class Status : MonoBehaviour
         CurrentHP = maxHP;
         currentMaxGP = maxGP;
         CurrentGP = maxGP;
+    }
+
+    private void Start()
+    {
+        waveManager = FindObjectOfType<WaveManager>();
+        if (entity != null)
+        {
+            entity.OnDeath += OnEntityDeath;
+        }
     }
 
     public void TransferPositionInvincible(float _time)
@@ -152,6 +163,7 @@ public class Status : MonoBehaviour
         {
             CurrentHP = 0;
             entity.Die();
+            OnEntityDeath(entity);
         }
 
         if (!_silence)
@@ -200,4 +212,12 @@ public class Status : MonoBehaviour
             }
         }
     }
+    private void OnEntityDeath(Entity entity)
+    {
+        if (entity != null)
+        {
+            entity.OnDeath -= OnEntityDeath;
+        }
+    }
+
 }

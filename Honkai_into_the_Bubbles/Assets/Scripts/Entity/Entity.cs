@@ -38,6 +38,10 @@ public class Entity : MonoBehaviour
     [HideInInspector] public Transform target;
     [HideInInspector] public Vector3 moveDir;
 
+    public delegate void DeathEventHandler(Entity entity);
+    public event DeathEventHandler OnDeath;
+
+
     protected virtual void Awake()
     {
         Animator = GetComponent<Animator>();
@@ -252,6 +256,7 @@ public class Entity : MonoBehaviour
     public virtual void Die()
     {
         AudioManager.instance.PlaySound(deathSFX, this.transform);
+        OnDeath?.Invoke(this);
         MovePoint.gameObject.SetActive(false);
         Mover.gameObject.SetActive(false);
     }
