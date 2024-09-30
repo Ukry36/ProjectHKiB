@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class EffectVanishControl : MonoBehaviour
 {
+    private enum VanishType { byAnim, byTime, byOrder }
+    [SerializeField] private VanishType vanishType;
     [SerializeField] private Animator animator;
-    [SerializeField] private bool byTime;
     [SerializeField] private float vanishTime = 5f;
-    [SerializeField] private bool byOrder;
     [SerializeField] private string SFX;
     private float timer = 0;
+
 
     private void Awake()
     {
@@ -23,34 +24,18 @@ public class EffectVanishControl : MonoBehaviour
     }
     private void Update()
     {
-        if (!byOrder)
+        if (vanishType == VanishType.byTime)
         {
-            if (byTime)
-            {
-                timer -= Time.deltaTime;
-                if (timer < 0)
-                    this.gameObject.SetActive(false);
-            }
-            else
-            {
-                if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f)
-                    this.gameObject.SetActive(false);
-            }
+            timer -= Time.deltaTime;
+            if (timer < 0)
+                animator.SetTrigger("exit");
         }
-
-
     }
 
-    public void Exit()
-    {
-        animator.SetTrigger("exit");
-        StartCoroutine(ExitCoroutine());
-    }
+    public void AnimationFinishTrigger() => this.gameObject.SetActive(false);
 
-    private IEnumerator ExitCoroutine()
+    public void ExitbyOrder()
     {
-        yield return null;
-        yield return new WaitUntil(() => animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 0.99f);
-        this.gameObject.SetActive(false);
+        if (vanishType == VanishType.byOrder) animator.SetTrigger("exit");
     }
 }

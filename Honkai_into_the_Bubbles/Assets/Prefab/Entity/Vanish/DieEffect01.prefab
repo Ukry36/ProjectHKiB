@@ -62,10 +62,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_CategoryHash: 0
-  m_labelHash: 0
+  m_CategoryHash: 5.741718e-13
+  m_labelHash: 7.1958566e-25
   m_SpriteKey: 0
-  m_SpriteHash: 488436812
+  m_SpriteHash: 752705122
 --- !u!212 &6278158469028810056
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -107,7 +107,7 @@ SpriteRenderer:
   m_SortingLayerID: -681422695
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1021122717, guid: c00ad35fad110d543b934e70d8f9a0af, type: 3}
+  m_Sprite: {fileID: 533004690, guid: c00ad35fad110d543b934e70d8f9a0af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -128,7 +128,7 @@ Animator:
   m_GameObject: {fileID: 5571567845738202018}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bc16c066749c9f34eace706c0424809c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 09164ef4205ebe94db6b817684cbc735, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -151,6 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa042fbee387234bb559f67a22d81cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vanishType: 0
   animator: {fileID: 7513865274944399575}
-  byTime: 0
   vanishTime: 5
+  SFX: 

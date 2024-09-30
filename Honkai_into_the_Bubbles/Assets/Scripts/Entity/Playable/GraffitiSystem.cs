@@ -52,7 +52,7 @@ public class GraffitiSystem : MonoBehaviour
         grid.SetActive(false);
         attractive.EnableAttract();
         CameraManager.instance.ReturntoOrigRes(0.1f);
-        EVC.Exit();
+        EVC.ExitbyOrder();
         return GetSkillNum();
     }
 

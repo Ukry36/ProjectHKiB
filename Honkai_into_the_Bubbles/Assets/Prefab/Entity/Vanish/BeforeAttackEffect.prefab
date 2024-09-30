@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 6278158469028810056}
   - component: {fileID: 7513865274944399575}
   - component: {fileID: 2287381091303874185}
+  - component: {fileID: 2829787860206341642}
+  - component: {fileID: 4967391355273784513}
   m_Layer: 0
   m_Name: BeforeAttackEffect
   m_TagString: Untagged
@@ -54,7 +56,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -75,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: -681422695
   m_SortingLayer: 5
   m_SortingOrder: 0
-  m_Sprite: {fileID: 597727537, guid: c57aa195ca7a5e44cb979bb2c79c6a93, type: 3}
+  m_Sprite: {fileID: -383152768, guid: c57aa195ca7a5e44cb979bb2c79c6a93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -96,7 +98,7 @@ Animator:
   m_GameObject: {fileID: 5571567845738202018}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 6fa7e16438fb0264ea7e449507dcf3ce, type: 2}
+  m_Controller: {fileID: 9100000, guid: 09164ef4205ebe94db6b817684cbc735, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -119,8 +121,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daa042fbee387234bb559f67a22d81cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vanishType: 0
   animator: {fileID: 7513865274944399575}
   byTime: 0
   vanishTime: 5
   byOrder: 0
   SFX: tinker
+--- !u!114 &2829787860206341642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5571567845738202018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: b591f25d33c3f784e9a630bb9bc91238, type: 3}
+--- !u!114 &4967391355273784513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5571567845738202018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0
+  m_SpriteHash: 0
