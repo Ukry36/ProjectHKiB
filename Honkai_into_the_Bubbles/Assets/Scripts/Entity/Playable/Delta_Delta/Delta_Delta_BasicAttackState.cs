@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Mathematics;
 using UnityEngine;
 
 public class Delta_Delta_BasicAttackState : Playable_State
@@ -14,8 +15,8 @@ public class Delta_Delta_BasicAttackState : Playable_State
 
     public override void Enter()
     {
+
         base.Enter();
-        player.startAtCombo3 = false;
         player.Animator.SetInteger("Combo", combo);
         player.SetAnimDir(player.moveDir);
         if (player.moveInput != Vector2.zero)

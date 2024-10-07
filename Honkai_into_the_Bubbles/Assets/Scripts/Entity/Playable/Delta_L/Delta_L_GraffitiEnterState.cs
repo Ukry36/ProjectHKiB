@@ -13,10 +13,10 @@ public class Delta_L_GraffitiEnterState : Playable_State
     public override void Enter()
     {
         base.Enter();
-        player.cannotDodge = true;
-        player.cannotGraffiti = true;
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
+        player.cannotDodgeState = true;
+        player.cannotGraffitiState = true;
         player.GS.StartGraffiti();
     }
 
@@ -36,10 +36,9 @@ public class Delta_L_GraffitiEnterState : Playable_State
     public override void Exit()
     {
         base.Exit();
-        player.cannotDodge = false;
-        player.cannotGraffiti = false;
         player.theStat.invincible = false;
         player.theStat.superArmor = false;
-
+        player.cannotDodgeState = false;
+        player.cannotGraffitiState = false;
     }
 }

@@ -23,7 +23,12 @@ public class Delta_Delta_WalkState : Playable_State
 
         if (InputManager.instance.AttackInput)
         {
-            stateMachine.ChangeState(player.AttackState);
+            if (player.startAtCombo3)
+                player.AttackState.combo = 2;
+            if (player.isBurstMode)
+                stateMachine.ChangeState(player.BurstAttackState);
+            else
+                stateMachine.ChangeState(player.AttackState);
         }
         else if (Vector3.Distance(player.Mover.position, player.MovePoint.transform.position) >= .05f)
         {

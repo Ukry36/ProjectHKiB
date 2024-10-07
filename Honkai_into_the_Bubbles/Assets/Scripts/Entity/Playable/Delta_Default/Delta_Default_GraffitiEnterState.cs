@@ -15,6 +15,8 @@ public class Delta_Default_GraffitiEnterState : Playable_State
         base.Enter();
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
+        player.cannotDodgeState = true;
+        player.cannotGraffitiState = true;
         player.GS.StartGraffiti();
     }
 
@@ -36,6 +38,8 @@ public class Delta_Default_GraffitiEnterState : Playable_State
         base.Exit();
         player.theStat.invincible = false;
         player.theStat.superArmor = false;
+        player.cannotDodgeState = false;
+        player.cannotGraffitiState = false;
 
     }
 }

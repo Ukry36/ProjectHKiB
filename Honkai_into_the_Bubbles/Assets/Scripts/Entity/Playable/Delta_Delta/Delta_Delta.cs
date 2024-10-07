@@ -1,39 +1,68 @@
 using System;
+using System.Collections;
+using NaughtyAttributes;
+using TMPro;
 using Unity.Mathematics;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Delta_Delta : Playable
 {
     public Delta_Delta_IdleState IdleState { get; private set; }
     public Delta_Delta_WalkState WalkState { get; private set; }
-    public Delta_Delta_DodgeEnterState DodgeEnterState { get; private set; }
-    public Delta_Delta_DodgeIngState DodgeState { get; private set; }
-    public Delta_Delta_DodgeExitState DodgeExitState { get; private set; }
+    public Delta_Delta_DodgeState DodgeState { get; private set; }
+    public Delta_Delta_KeepDodgeState KeepDodgeState { get; private set; }
     public Delta_Delta_GraffitiEnterState GraffitiEnterState { get; private set; }
     public Delta_Delta_GraffitiIngState GraffitiState { get; private set; }
     public Delta_Delta_GraffitiExitState GraffitiExitState { get; private set; }
     public Delta_Delta_KnockbackState KnockbackState { get; private set; }
     public Delta_Delta_BasicAttackState AttackState { get; private set; }
     public Delta_Delta_BasicAttackExitState AttackExitState { get; private set; }
+    public Delta_Delta_BurstAttackState BurstAttackState { get; private set; }
+    public Delta_Delta_BurstAttackExitState BurstAttackExitState { get; private set; }
+    public Delta_Delta_ChargeSkillState ChargeSkillState { get; private set; }
     public Delta_Delta_Skill01State Skill01State { get; private set; }
     public Delta_Delta_Skill02State Skill02State { get; private set; }
 
-    public bool startAtCombo3;
+    [HideInInspector] public bool startAtCombo3;
+
+    private int dodgeGuage;
+    private int attackGuage;
+    [HideInInspector] public bool canCharge;
+    [HideInInspector] public bool isBurstMode;
+    private float burstTimer;
+
+    [BoxGroup("Attack")]
+    public Attack[] BurstAttackArray;
+    [BoxGroup("Attack")]
+    public float burstModeMaxTime;
+
+
+    [BoxGroup("UI")]
+    [SerializeField] private GameObject guageUIGameObject;
+    [BoxGroup("UI")]
+    [SerializeField] private Image leftDodgeGuageUI;
+    [BoxGroup("UI")]
+    [SerializeField] private Image rightAttackGuageUI;
+    [BoxGroup("UI")]
+    [SerializeField] private GameObject chargeActivatedUI;
 
     protected override void Awake()
     {
         base.Awake();
         IdleState = new Delta_Delta_IdleState(this, stateMachine, "Idle", this);
         WalkState = new Delta_Delta_WalkState(this, stateMachine, "Walk", this);
-        DodgeEnterState = new Delta_Delta_DodgeEnterState(this, stateMachine, "DodgeEnter", this);
-        DodgeState = new Delta_Delta_DodgeIngState(this, stateMachine, "DodgeIng", this);
-        DodgeExitState = new Delta_Delta_DodgeExitState(this, stateMachine, "DodgeExit", this);
+        DodgeState = new Delta_Delta_DodgeState(this, stateMachine, "DodgeIng", this);
+        KeepDodgeState = new Delta_Delta_KeepDodgeState(this, stateMachine, "DodgeIng", this);
         GraffitiEnterState = new Delta_Delta_GraffitiEnterState(this, stateMachine, "DodgeEnter", this);
         GraffitiState = new Delta_Delta_GraffitiIngState(this, stateMachine, "DodgeIng", this);
         GraffitiExitState = new Delta_Delta_GraffitiExitState(this, stateMachine, "DodgeExit", this);
         KnockbackState = new Delta_Delta_KnockbackState(this, stateMachine, "Knockback", this);
         AttackState = new Delta_Delta_BasicAttackState(this, stateMachine, "Attack", this);
         AttackExitState = new Delta_Delta_BasicAttackExitState(this, stateMachine, "AttackExit", this);
+        BurstAttackState = new Delta_Delta_BurstAttackState(this, stateMachine, "Attack", this);
+        BurstAttackExitState = new Delta_Delta_BurstAttackExitState(this, stateMachine, "AttackExit", this);
+        ChargeSkillState = new Delta_Delta_ChargeSkillState(this, stateMachine, "Charge", this);
         Skill01State = new Delta_Delta_Skill01State(this, stateMachine, "Skill01", this);
         Skill02State = new Delta_Delta_Skill02State(this, stateMachine, "Skill02", this);
     }
@@ -44,43 +73,43 @@ public class Delta_Delta : Playable
         stateMachine.Initialize(IdleState);
     }
 
+    protected override void OnEnable()
+    {
+        base.OnEnable();
+        guageUIGameObject.SetActive(true);
+    }
+
+    protected virtual void OnDisable()
+    {
+        guageUIGameObject.SetActive(false);
+        EndBurstMode();
+    }
+
     protected override void Update()
     {
         stateMachine.currentState.Update();
         if (canDodgeEffect || PlayerManager.instance.forcedCanDodge)
-            if (!isDodgeCooltime && InputManager.instance.DodgeInput
-            && stateMachine.currentState != DodgeState
-            && stateMachine.currentState != DodgeEnterState
-            && stateMachine.currentState != GraffitiState
-            && stateMachine.currentState != GraffitiEnterState
-            && stateMachine.currentState != GraffitiExitState)
+            if (!isDodgeCooltime && !cannotDodgeState && InputManager.instance.DodgeInput)
             {
                 if (AttackState.combo == 2 || AttackState.combo == 3
                     || AttackExitState.combo == 2 || AttackExitState.combo == 3)
                 {
+                    StopCoroutine(nameof(StartAtCombo3Delay));
                     startAtCombo3 = true;
                 }
-                dodgeSprite.color = PlayerManager.instance.ThemeColors
-                [
-                    totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count
-                ];
-                stateMachine.ChangeState(DodgeEnterState);
+
+                if (keepDodge || PlayerManager.instance.forcedKeepDodge)
+                    stateMachine.ChangeState(KeepDodgeState);
+                else
+                    stateMachine.ChangeState(DodgeState);
             }
 
         if (canGraffitiEffect)
-            if (!isGraffitiCooltime && InputManager.instance.GraffitiStartInput && theStat.CurrentGP > 0
-            && stateMachine.currentState != DodgeEnterState
-            && stateMachine.currentState != GraffitiState
-            && stateMachine.currentState != GraffitiEnterState
-            && stateMachine.currentState != GraffitiExitState)
+            if (!isGraffitiCooltime && !cannotGraffitiState && InputManager.instance.GraffitiStartInput && theStat.CurrentGP > 0)
             {
                 MovePoint.gameObject.SetActive(false);
                 if (!Physics2D.OverlapCircle(MovePoint.transform.position, .4f, LayerManager.instance.graffitiWallLayer))
                 {
-                    dodgeSprite.color = PlayerManager.instance.ThemeColors
-                    [
-                        totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count
-                    ];
                     if (stateMachine.currentState == DodgeState)
                         stateMachine.ChangeState(GraffitiState);
                     else
@@ -89,6 +118,82 @@ public class Delta_Delta : Playable
                 MovePoint.gameObject.SetActive(true);
 
             }
+
+        if (isBurstMode && burstTimer >= 0)
+        {
+            burstTimer -= Time.deltaTime;
+            leftDodgeGuageUI.fillAmount = burstTimer / burstModeMaxTime * 0.5f;
+            rightAttackGuageUI.fillAmount = burstTimer / burstModeMaxTime * 0.5f;
+
+            if (burstTimer < 0)
+            {
+                EndBurstMode();
+            }
+        }
+    }
+
+    public void DodgeGuageManage(int _amount)
+    {
+        if (!isBurstMode)
+        {
+            dodgeGuage = _amount > 0 ? (dodgeGuage + _amount > 100 ? 100 : dodgeGuage + _amount) : 0;
+            UpdateGuage();
+        }
+
+    }
+
+    public void AttackGuageManage(int _amount)
+    {
+        if (!isBurstMode)
+        {
+            attackGuage = _amount > 0 ? (attackGuage + _amount > 100 ? 100 : attackGuage + _amount) : 0;
+            UpdateGuage();
+        }
+    }
+
+    public void UpdateGuage()
+    {
+        if (!isBurstMode)
+        {
+            leftDodgeGuageUI.fillAmount = (float)dodgeGuage / 100 * 0.5f;
+            rightAttackGuageUI.fillAmount = (float)attackGuage / 100 * 0.5f;
+            canCharge = dodgeGuage == 100 && attackGuage == 100;
+        }
+        chargeActivatedUI.SetActive(canCharge || isBurstMode);
+    }
+
+    public void StartBurstMode()
+    {
+        isBurstMode = true;
+        burstTimer = burstModeMaxTime;
+        dodgeGuage = 0;
+        attackGuage = 0;
+        canCharge = false;
+        theStat.ATKBuff += 50;
+        Animator.SetBool("Burst", true);
+    }
+
+    public void EndBurstMode()
+    {
+        isBurstMode = false;
+        theStat.ATKBuff -= 50;
+        if (stateMachine.currentState != BurstAttackState && stateMachine.currentState != BurstAttackExitState)
+        {
+            Animator.SetBool("Burst", false);
+            UpdateGuage();
+        }
+    }
+
+    public void StartAtCombo3Manage()
+    {
+        StopCoroutine(nameof(StartAtCombo3Delay));
+        if (startAtCombo3) StartCoroutine(StartAtCombo3Delay());
+    }
+
+    public IEnumerator StartAtCombo3Delay()
+    {
+        yield return new WaitForSeconds(0.2f);
+        startAtCombo3 = false;
     }
 
     public override void SkillManage(int[] _skillNum)
@@ -97,6 +202,10 @@ public class Delta_Delta : Playable
         stateMachine.ChangeState(IdleState);
     }
 
+    public override void Hit(Vector3 _attackOrigin)
+    {
+        stateMachine.currentState.Hit(_attackOrigin);
+    }
 
     public override void Knockback(Vector3 _attackOrigin, int _coeff)
     {

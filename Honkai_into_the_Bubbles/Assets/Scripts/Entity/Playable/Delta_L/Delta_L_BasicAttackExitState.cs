@@ -23,7 +23,6 @@ public class Delta_L_BasicAttackExitState : Playable_State
 
         if (InputManager.instance.AttackInput || attackReserved)
         {
-            attackReserved = false;
             player.AttackState.combo = combo + 1;
             player.AttackState.combo %= player.AttackArray.Length;
             stateMachine.ChangeState(player.AttackState);

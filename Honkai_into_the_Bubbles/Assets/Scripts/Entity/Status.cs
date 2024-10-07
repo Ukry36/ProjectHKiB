@@ -21,7 +21,9 @@ public class Status : MonoBehaviour
     public int playHitSFXDamage = 50;
 
     public int ATK = 100;
+    public int ATKBuff = 0;
     public int DEF = 0;
+    public int DEFBuff = 0;
     public int CritRate = 0;
     public int CritDMG = 10;
     public int Mass = 1;
@@ -31,6 +33,7 @@ public class Status : MonoBehaviour
 
     [SerializeField][MinValue(0)][MaxValue(100)] private int Resistance = 0;
     [HideInInspector] public int ResistanceExternal = 0;
+    [HideInInspector] public int DodgeResistance = 0;
 
     [SerializeField][MinValue(0)][MaxValue(100)] private int ColdTickResistance = 0;
     [SerializeField][MinValue(0)][MaxValue(100)] private int FlameTickResistance = 0;
@@ -77,13 +80,13 @@ public class Status : MonoBehaviour
     {
         Vector3 attackOrigin = _attackInfo.theStat.transform.position;
 
-        int trueDMG = _attackInfo.theStat.ATK * _attackInfo.DamageCoefficient / 100;
+        int trueDMG = _attackInfo.theStat.ATK * (100 + _attackInfo.theStat.ATKBuff) / 100 * _attackInfo.DamageCoefficient / 100;
 
         bool critical = UnityEngine.Random.Range(1, 101) < _attackInfo.BaseCriticalRate + _attackInfo.theStat.CritRate;
-        int resistance = Resistance + ResistanceExternal;
+        int resistance = Resistance + ResistanceExternal + DodgeResistance;
 
         trueDMG += critical ? trueDMG * _attackInfo.theStat.CritDMG / 100 : 0;
-        trueDMG -= DEF;
+        trueDMG -= DEF * (100 + DEFBuff) / 100;
         trueDMG = trueDMG * (100 - resistance) / 100;
         trueDMG = trueDMG < 0 ? 0 : trueDMG;
 
@@ -148,10 +151,12 @@ public class Status : MonoBehaviour
 
     public void HPCapControl()
     {
+        bool max = CurrentHP == currentMaxHP;
+
         int newMHP = maxHP + PlayerManager.instance.exHPFromEq;
-        float ratio = (float)CurrentHP / currentMaxHP;
         currentMaxHP = newMHP;
-        CurrentHP = (int)(currentMaxHP * ratio);
+
+        if (max) CurrentHP = currentMaxHP;
     }
 
     public void HPControl(int _o, string[] _customSFX = null, bool _silence = false)

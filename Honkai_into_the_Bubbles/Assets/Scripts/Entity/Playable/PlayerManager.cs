@@ -61,6 +61,7 @@ public class PlayerManager : MonoBehaviour
     public int exHPFromEq = 0;
 
     public int exColdTickResistance = 0;
+    public int exResistance = 0;
 
     public bool handLightOn = false;
     public bool dotLightOn = false;
@@ -69,6 +70,23 @@ public class PlayerManager : MonoBehaviour
     private void Start()
     {
         ActivateEquippedEffect(new int[] { 0 });
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.layer == LayerMask.NameToLayer("CameraBound"))
+        {
+            if (other.TryGetComponent(out AreaInfo areaInfo))
+            {
+                CameraManager.instance.SetBound(areaInfo);
+
+                CameraManager.instance.SetBG(areaInfo);
+
+                AudioManager.instance.ChangeAreaBGMs(areaInfo.areaBGMs, areaInfo.fadeTime);
+
+                WhetherManager.instance.ChangeAreaWhethers(areaInfo.areaWhetherTypes, true);
+            }
+        }
     }
 
     public IEnumerator DieSequence()
@@ -335,7 +353,7 @@ public class PlayerManager : MonoBehaviour
         {
             exKeepDodgeSpeedCoeff *= 2f;
             exKeepDodgeLength += 2;
-            dodgeCooltimeCoeff *= 1.5f;
+            dodgeCooltimeCoeff *= 1.2f;
         }
         forcedKeepDodge = true;
         forcedCanDodge = true;
@@ -345,7 +363,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (_isPrime)
         {
-            exContinuousDodgeLimit += 2;
+            dodgeCooltimeCoeff *= 0.8f;
         }
         exDodgeLength += 1;
         forcedCanDodge = true;

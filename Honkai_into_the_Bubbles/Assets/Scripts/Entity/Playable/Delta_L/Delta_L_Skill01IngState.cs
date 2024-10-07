@@ -14,8 +14,8 @@ public class Delta_L_Skill01IngState : Playable_State
     public override void Enter()
     {
         base.Enter();
-        player.cannotDodge = true;
-        player.cannotGraffiti = true;
+        player.cannotDodgeState = true;
+        player.cannotGraffitiState = true;
         player.boxCollider.enabled = false;
         stateTimer = skill.Cooltime;
     }
@@ -63,8 +63,8 @@ public class Delta_L_Skill01IngState : Playable_State
     public override void Exit()
     {
         base.Exit();
-        player.cannotDodge = false;
-        player.cannotGraffiti = false;
+        player.cannotDodgeState = false;
+        player.cannotGraffitiState = false;
         player.boxCollider.enabled = true;
         player.Mover.position = player.MovePoint.transform.position;
     }

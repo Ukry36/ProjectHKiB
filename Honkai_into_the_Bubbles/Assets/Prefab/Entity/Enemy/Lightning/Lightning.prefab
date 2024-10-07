@@ -54,7 +54,9 @@ MonoBehaviour:
   superArmor: 0
   invincible: 0
   maxHP: 300
+  currentMaxHP: 0
   maxGP: 0
+  currentMaxGP: 0
   playHitSFXDamage: 50
   ATK: 100
   DEF: 0
@@ -64,6 +66,13 @@ MonoBehaviour:
   Size: 2
   entity: {fileID: 0}
   inTransferPosition: 0
+  Resistance: 0
+  ResistanceExternal: 0
+  DodgeResistance: 0
+  ColdTickResistance: 0
+  FlameTickResistance: 0
+  ColdTickResistanceExternal: 0
+  FlameTickResistanceExternal: 0
 --- !u!61 &5018965583146154719
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -435,7 +444,8 @@ MonoBehaviour:
   deathSFX:
   - hit_mechanic_explosion
   simpleDirControlAnimator: {fileID: 0}
-  SpriteLibrary: {fileID: 4619151856880970515}
+  MainSpriteLibrary: {fileID: 0}
+  GlowSpriteLibrary: {fileID: 0}
   boxCollider: {fileID: 0}
   Mover: {fileID: 358721282003547894}
   MovePoint: {fileID: 8254374283932449993}
@@ -453,7 +463,7 @@ MonoBehaviour:
   - {fileID: 2946354253763158541}
   - {fileID: 7147577848744854794}
   PathList: []
-  beforeAttackEffectPrefab: {fileID: 5571567845738202018, guid: 5b1c81279139df947b804d6471d5879b, type: 3}
+  beforeAttackEffectPrefab: {fileID: 4320316823674572559, guid: 527d79a9a0e97ee44a071be0e2087c8b, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -510,7 +520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   VanishPrefab:
-  - {fileID: 2285794129138269017, guid: 5a1b46003be6b944aa2482bd84becb54, type: 3}
+  - {fileID: 4320316823674572559, guid: ff0e4f532d197714698260018203ab83, type: 3}
 --- !u!114 &5904053850380278189
 MonoBehaviour:
   m_ObjectHideFlags: 0

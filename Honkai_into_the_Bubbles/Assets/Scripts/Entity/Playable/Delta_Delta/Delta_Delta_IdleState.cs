@@ -21,9 +21,23 @@ public class Delta_Delta_IdleState : Playable_State
         base.Update();
         if (InputManager.instance.AttackInput)
         {
-            stateMachine.ChangeState(player.AttackState);
+            if (player.startAtCombo3 && !player.isBurstMode)
+                player.AttackState.combo = 2;
+
+            if (player.isBurstMode)
+                stateMachine.ChangeState(player.BurstAttackState);
+            else
+                stateMachine.ChangeState(player.AttackState);
+            return;
         }
-        else if (InputManager.instance.MoveInput != Vector2.zero)
+
+        if (InputManager.instance.ChargeInput && !player.isBurstMode && player.canCharge)
+        {
+            stateMachine.ChangeState(player.ChargeSkillState);
+            return;
+        }
+
+        if (InputManager.instance.MoveInput != Vector2.zero)
         {
             player.moveDir = (Vector3)player.moveInput;
             if (player.MovepointAdjustCheck())
@@ -34,6 +48,7 @@ public class Delta_Delta_IdleState : Playable_State
             {
                 stateMachine.ChangeState(player.WalkState);
             }
+            return;
         }
 
 

@@ -16,7 +16,7 @@ public class Delta_L_Skill02SuccessState : Playable_State
         base.Enter();
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
-        player.GraffitiFailManage(1);
+        player.GraffitiHPHeal(1);
         PoolManager.instance.ReuseGameObject(player.parryTinker, player.Mover.transform.position + 1f * Vector3.up, quaternion.Euler(0, 0, UnityEngine.Random.Range(-1, 1)));
     }
 

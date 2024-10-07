@@ -349,7 +349,6 @@ GameObject:
   - component: {fileID: 5936531766289300921}
   - component: {fileID: 5990756363727143722}
   - component: {fileID: 2816355597566379839}
-  - component: {fileID: 1069615362767959565}
   m_Layer: 8
   m_Name: rusher
   m_TagString: Untagged
@@ -502,7 +501,8 @@ MonoBehaviour:
   deathSFX:
   - hit_rusher_death
   simpleDirControlAnimator: {fileID: 0}
-  SpriteLibrary: {fileID: 8011523914647686725}
+  MainSpriteLibrary: {fileID: 0}
+  GlowSpriteLibrary: {fileID: 0}
   boxCollider: {fileID: 0}
   Mover: {fileID: 905324970688511338}
   MovePoint: {fileID: 8247933550345511732}
@@ -520,7 +520,7 @@ MonoBehaviour:
   - {fileID: 3204748618508905052}
   - {fileID: 8442186679759831188}
   PathList: []
-  beforeAttackEffectPrefab: {fileID: 5571567845738202018, guid: 5b1c81279139df947b804d6471d5879b, type: 3}
+  beforeAttackEffectPrefab: {fileID: 4320316823674572559, guid: 527d79a9a0e97ee44a071be0e2087c8b, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -567,56 +567,6 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 17728
---- !u!114 &1069615362767959565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8410003107412478657}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ComponentVersion: 1
-  m_LightType: 3
-  m_BlendStyleIndex: 1
-  m_FalloffIntensity: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_LightVolumeIntensity: 1
-  m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: cbdf6ae7
-  m_LightCookieSprite: {fileID: 0}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
-  m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1 &8646351581575236485
 GameObject:
   m_ObjectHideFlags: 0
@@ -671,7 +621,9 @@ MonoBehaviour:
   superArmor: 0
   invincible: 0
   maxHP: 200
+  currentMaxHP: 0
   maxGP: 0
+  currentMaxGP: 0
   playHitSFXDamage: 50
   ATK: 100
   DEF: 0
@@ -680,6 +632,14 @@ MonoBehaviour:
   Mass: 1
   Size: 1
   entity: {fileID: 0}
+  inTransferPosition: 0
+  Resistance: 0
+  ResistanceExternal: 0
+  DodgeResistance: 0
+  ColdTickResistance: 0
+  FlameTickResistance: 0
+  ColdTickResistanceExternal: 0
+  FlameTickResistanceExternal: 0
 --- !u!61 &4404217947297648775
 BoxCollider2D:
   m_ObjectHideFlags: 0

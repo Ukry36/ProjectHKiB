@@ -6,9 +6,8 @@ public class Delta_L : Playable
 {
     public Delta_L_IdleState IdleState { get; private set; }
     public Delta_L_WalkState WalkState { get; private set; }
-    public Delta_L_DodgeEnterState DodgeEnterState { get; private set; }
-    public Delta_L_DodgeIngState DodgeState { get; private set; }
-    public Delta_L_DodgeExitState DodgeExitState { get; private set; }
+    public Delta_L_DodgeState DodgeState { get; private set; }
+    public Delta_L_KeepDodgeState KeepDodgeState { get; private set; }
     public Delta_L_GraffitiEnterState GraffitiEnterState { get; private set; }
     public Delta_L_GraffitiIngState GraffitiState { get; private set; }
     public Delta_L_GraffitiExitState GraffitiExitState { get; private set; }
@@ -30,9 +29,8 @@ public class Delta_L : Playable
 
         IdleState = new Delta_L_IdleState(this, stateMachine, "Idle", this);
         WalkState = new Delta_L_WalkState(this, stateMachine, "Walk", this);
-        DodgeEnterState = new Delta_L_DodgeEnterState(this, stateMachine, "DodgeEnter", this);
-        DodgeState = new Delta_L_DodgeIngState(this, stateMachine, "DodgeIng", this);
-        DodgeExitState = new Delta_L_DodgeExitState(this, stateMachine, "DodgeExit", this);
+        DodgeState = new Delta_L_DodgeState(this, stateMachine, "DodgeIng", this);
+        KeepDodgeState = new Delta_L_KeepDodgeState(this, stateMachine, "DodgeIng", this);
         GraffitiEnterState = new Delta_L_GraffitiEnterState(this, stateMachine, "DodgeEnter", this);
         GraffitiState = new Delta_L_GraffitiIngState(this, stateMachine, "DodgeIng", this);
         GraffitiExitState = new Delta_L_GraffitiExitState(this, stateMachine, "DodgeExit", this);
@@ -59,29 +57,20 @@ public class Delta_L : Playable
 
         stateMachine.currentState.Update();
         if (canDodgeEffect || PlayerManager.instance.forcedCanDodge)
-            if (!isDodgeCooltime && !cannotDodge && InputManager.instance.DodgeInput)
+            if (!isDodgeCooltime && !cannotGraffitiState && InputManager.instance.DodgeInput)
             {
-                dodgeSprite.color = PlayerManager.instance.ThemeColors
-                [
-                    totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count
-                ];
-                stateMachine.ChangeState(DodgeEnterState);
+                if (keepDodge || PlayerManager.instance.forcedKeepDodge)
+                    stateMachine.ChangeState(KeepDodgeState);
+                else
+                    stateMachine.ChangeState(DodgeState);
             }
 
         if (canGraffitiEffect)
-            if (!isGraffitiCooltime && !cannotGraffiti && InputManager.instance.GraffitiStartInput && theStat.CurrentGP > 0
-            && stateMachine.currentState != DodgeEnterState
-            && stateMachine.currentState != GraffitiState
-            && stateMachine.currentState != GraffitiEnterState
-            && stateMachine.currentState != GraffitiExitState)
+            if (!isGraffitiCooltime && !cannotGraffitiState && InputManager.instance.GraffitiStartInput && theStat.CurrentGP > 0)
             {
                 MovePoint.gameObject.SetActive(false);
                 if (!Physics2D.OverlapCircle(MovePoint.transform.position, .4f, LayerManager.instance.graffitiWallLayer))
                 {
-                    dodgeSprite.color = PlayerManager.instance.ThemeColors
-                    [
-                        totalDodgeCount++ % PlayerManager.instance.ThemeColors.Count
-                    ];
                     if (stateMachine.currentState == DodgeState)
                         stateMachine.ChangeState(GraffitiState);
                     else
@@ -101,7 +90,7 @@ public class Delta_L : Playable
             case 0:
                 Skill01IngState.skill = GS.skillList[0];
                 stateMachine.ChangeState(Skill01BeforeState);
-                GraffitiFailManage(_result[1]);
+                GraffitiHPHeal(_result[1]);
                 break;
             case 1:
                 Skill02BeforeState.skill = GS.skillList[1];

@@ -15,6 +15,8 @@ public class Delta_R_GraffitiExitState : Playable_State
     {
         base.Enter();
         graffitirResult = player.GS.EndGraffiti();
+        player.cannotDodgeState = true;
+        player.cannotGraffitiState = true;
     }
 
     public override void Update()
@@ -32,5 +34,7 @@ public class Delta_R_GraffitiExitState : Playable_State
     public override void Exit()
     {
         base.Exit();
+        player.cannotDodgeState = false;
+        player.cannotGraffitiState = false;
     }
 }

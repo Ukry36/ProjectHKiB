@@ -52,6 +52,7 @@ public class InputManager : MonoBehaviour
     public bool LInput { get; private set; }
     public bool SprintInput { get; private set; }
     public bool AttackInput { get; private set; }
+    public bool ChargeInput { get; private set; }
     public bool DodgeInput { get; private set; }
     public bool DodgeProgressInput { get; private set; }
     public bool GraffitiStartInput { get; private set; }
@@ -126,6 +127,7 @@ public class InputManager : MonoBehaviour
                     SprintInput = sprint.inProgress;
                 }
                 AttackInput = attack.WasPressedThisFrame();
+                ChargeInput = attack.inProgress;
                 DodgeInput = dodge.WasPressedThisFrame();
                 DodgeProgressInput = dodge.inProgress;
                 GraffitiStartInput = grafitti.WasPressedThisFrame();

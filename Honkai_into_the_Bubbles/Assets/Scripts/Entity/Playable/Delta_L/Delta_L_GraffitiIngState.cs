@@ -12,8 +12,8 @@ public class Delta_L_GraffitiIngState : Playable_State
     public override void Enter()
     {
         base.Enter();
-        player.cannotDodge = true;
-        player.cannotGraffiti = true;
+        player.cannotDodgeState = true;
+        player.cannotGraffitiState = true;
         unscaledStateTimer = player.graffitiMaxtime + PlayerManager.instance.exGraffitimaxtime;
         MenuManager.instance.GraffitiCountDownEnable(unscaledStateTimer);
         player.theStat.superArmor = true;
@@ -68,8 +68,8 @@ public class Delta_L_GraffitiIngState : Playable_State
     {
         base.Exit();
         player.Mover.position = player.MovePoint.transform.position;
-        player.cannotDodge = false;
-        player.cannotGraffiti = false;
+        player.cannotDodgeState = false;
+        player.cannotGraffitiState = false;
         player.theStat.superArmor = false;
         MenuManager.instance.GraffitiCountDownDisable();
     }

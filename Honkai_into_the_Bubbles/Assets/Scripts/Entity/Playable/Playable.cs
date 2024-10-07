@@ -2,6 +2,7 @@ using UnityEngine;
 using NaughtyAttributes;
 using UnityEngine.U2D.Animation;
 using System.Collections;
+using Unity.Mathematics;
 
 public class Playable : Entity
 {
@@ -16,11 +17,16 @@ public class Playable : Entity
     [ShowIf(EConditionOperator.And, "isAttackEffect", "CAEBoolean")]
     public Attack[] AttackArray; // insert primer attacks only
 
-
+    [BoxGroup("Dodge")]
+    public GameObject dodgeImpactPrefab;
+    [BoxGroup("Dodge")]
+    public GameObject dodgeGroundPrefab;
+    [BoxGroup("Dodge")]
+    public ParticleSystem dodgeIngPS;
+    [BoxGroup("Dodge")]
+    public float dodgeInvincibleTime = 0.15f;
     [BoxGroup("Dodge")]
     [SerializeField] protected bool canDodgeEffect = false;
-    [BoxGroup("Dodge")]
-    [SerializeField] protected SpriteRenderer dodgeSprite; // to apply theme color
     [BoxGroup("Dodge")]
     public int dodgeLength = 1; // max length player can dodge
     [BoxGroup("Dodge")]
@@ -45,7 +51,7 @@ public class Playable : Entity
     [SerializeField] protected bool canGraffitiEffect = false;
     [HideInInspector] public GraffitiSystem GS;
     [BoxGroup("Graffiti")]
-    public float graffitiMaxtime = 0.15f;
+    public float graffitiMaxtime = 1.5f;
     [BoxGroup("Graffiti")]
     [SerializeField] protected float graffitiCooltime = 0.3f;
     [BoxGroup("Graffiti")]
@@ -55,8 +61,8 @@ public class Playable : Entity
     [HideInInspector] public Vector2 moveInput;
     [HideInInspector] public bool moveInputPressed;
 
-    [HideInInspector] public bool cannotDodge;
-    [HideInInspector] public bool cannotGraffiti;
+    [HideInInspector] public bool cannotDodgeState;
+    [HideInInspector] public bool cannotGraffitiState;
 
     public Playable_StateMachine stateMachine;
 
@@ -65,11 +71,13 @@ public class Playable : Entity
         base.Awake();
         GS = GetComponent<GraffitiSystem>();
         stateMachine = new Playable_StateMachine();
+        dodgeIngPS.Stop();
     }
 
     public virtual void ChangeSpriteLibraryAsset()
     {
-        SpriteLibrary.spriteLibraryAsset = Resources.Load<SpriteLibraryAsset>("sdLibrary/" + ID.ToString() + "/" + ID.ToString() + "-" + spriteOverrideID.ToString());
+        MainSpriteLibrary.spriteLibraryAsset = Resources.Load<SpriteLibraryAsset>("sdLibrary/" + ID.ToString() + "/main/" + ID.ToString() + "-" + spriteOverrideID.ToString());
+        GlowSpriteLibrary.spriteLibraryAsset = Resources.Load<SpriteLibraryAsset>("sdLibrary/" + ID.ToString() + "/glow/glow" + ID.ToString() + "-" + spriteOverrideID.ToString());
     }
 
     public bool PointWallCheckForGraffiti(Vector3 _pos)
@@ -98,6 +106,7 @@ public class Playable : Entity
 
     public void DodgeCooltimeManage()
     {
+        totalDodgeCount++;
         continuousDodgeCount++;
         if (continuousDodgeCount >= continuousDodgeLimit + PlayerManager.instance.exContinuousDodgeLimit)
             StartCoroutine(DodgeCooltime());
@@ -121,6 +130,26 @@ public class Playable : Entity
             continuousDodgeCount = 0;
     }
 
+    public void DodgeImpact(int _tilt = 0)
+    {
+        GameObject clone = PoolManager.instance.ReuseGameObject(dodgeImpactPrefab, Mover.position, quaternion.identity);
+        ParticleSystem.MainModule PS = clone.GetComponent<ParticleSystem>().main;
+        PS.startColor = PlayerManager.instance.ThemeColors[(totalDodgeCount + _tilt) % PlayerManager.instance.ThemeColors.Count];
+
+        clone = PoolManager.instance.ReuseGameObject(dodgeGroundPrefab, Mover.position, quaternion.identity);
+        PS = clone.GetComponent<ParticleSystem>().main;
+        PS.startColor = PlayerManager.instance.ThemeColors[(totalDodgeCount + 1 + _tilt) % PlayerManager.instance.ThemeColors.Count];
+    }
+
+    public void StartKeepDodge()
+    {
+        dodgeIngPS.transform.parent = this.gameObject.transform;
+        ParticleSystem.MainModule mainModule = dodgeIngPS.main;
+        mainModule.startColor = PlayerManager.instance.ThemeColors[totalDodgeCount % PlayerManager.instance.ThemeColors.Count];
+        dodgeIngPS.Play();
+    }
+    public void StopKeepDodge() => dodgeIngPS.Stop();
+
     public IEnumerator GraffitiCooltime()
     {
         isGraffitiCooltime = true;
@@ -133,7 +162,7 @@ public class Playable : Entity
         Debug.Log(_result[0]);
     }
 
-    public virtual void GraffitiFailManage(int _usedGP)
+    public virtual void GraffitiHPHeal(int _usedGP)
     {
         theStat.HPControl(_usedGP * 10);
     }

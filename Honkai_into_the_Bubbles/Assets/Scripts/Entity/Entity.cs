@@ -4,7 +4,6 @@ using UnityEngine.U2D.Animation;
 using System.Collections.Generic;
 using UnityEngine.Rendering.Universal;
 
-[RequireComponent(typeof(Light2D))]
 public class Entity : MonoBehaviour
 {
     public int ID;
@@ -16,7 +15,8 @@ public class Entity : MonoBehaviour
     public Animator Animator { get; private set; }
     public Animator simpleDirControlAnimator;
     protected SpriteRenderer SpriteRenderer { get; private set; }
-    [SerializeField] protected SpriteLibrary SpriteLibrary;
+    [SerializeField] protected SpriteLibrary MainSpriteLibrary;
+    [SerializeField] protected SpriteLibrary GlowSpriteLibrary;
 
     public BoxCollider2D boxCollider;
     public Transform Mover;// who moves
@@ -33,7 +33,6 @@ public class Entity : MonoBehaviour
     public PathFindManager PathFinder { get; private set; }
 
     public int InvincibleFrame = 4; // invincible for n frame after hit
-    [HideInInspector] public Light2D hitLight;
 
     [HideInInspector] public Transform target;
     [HideInInspector] public Vector3 moveDir;
@@ -45,14 +44,11 @@ public class Entity : MonoBehaviour
     protected virtual void Awake()
     {
         Animator = GetComponent<Animator>();
-        SpriteLibrary = GetComponent<SpriteLibrary>();
         SpriteRenderer = GetComponent<SpriteRenderer>();
         theStat = Mover.GetComponent<Status>();
         PathFinder = GetComponent<PathFindManager>();
         MoveSpeed = DefaultSpeed;
         NoMovepointWallLayer = wallLayer & ~(1 << LayerMask.NameToLayer("Movepoint"));
-        hitLight = GetComponent<Light2D>();
-        hitLight.enabled = false;
     }
 
     protected virtual void Start()
@@ -67,7 +63,6 @@ public class Entity : MonoBehaviour
 
     protected virtual void OnEnable()
     {
-        hitLight.enabled = false;
         theStat.invincible = false;
         SpriteRenderer.color = Color.white;
         MovePoint.transform.position = Mover.position;
@@ -219,7 +214,7 @@ public class Entity : MonoBehaviour
     #region Hit
     public virtual void Hit(Vector3 _attackOrigin)
     {
-
+        //Debug.LogError("ERROR: No hit function!");
     }
 
     public virtual void Knockback(Vector3 _attackOrigin, int _coeff)
@@ -243,14 +238,6 @@ public class Entity : MonoBehaviour
         }
 
         theStat.invincible = false;
-    }
-
-    public IEnumerator HitLightShine(Color _color)
-    {
-        hitLight.color = _color;
-        hitLight.enabled = true;
-        yield return new WaitForSeconds(0.18f);
-        hitLight.enabled = false;
     }
 
     public virtual void Die()

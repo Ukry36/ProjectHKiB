@@ -95,11 +95,11 @@ PrefabInstance:
     - target: {fileID: 3396618692347860249, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
       propertyPath: VanishPrefab.Array.data[0]
       value: 
-      objectReference: {fileID: 2285794129138269017, guid: 664af7eb363968a4cb51ed8a50a24d11, type: 3}
+      objectReference: {fileID: 4320316823674572559, guid: 29fa66c20052e3e4aab4bc07eece834c, type: 3}
     - target: {fileID: 3396618692347860249, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
       propertyPath: VanishPrefab.Array.data[1]
       value: 
-      objectReference: {fileID: 2285794129138269017, guid: 2aa4b04ac22eb1847b3fbe9f8e338121, type: 3}
+      objectReference: {fileID: 4320316823674572559, guid: ebc0fb73b06401c409e9d6f47d7bbe91, type: 3}
     - target: {fileID: 3844136346590863844, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
       propertyPath: lastTime
       value: 0.1
@@ -200,6 +200,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36e27c77d73bdb24b9f6547730f54ff5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitColor: {r: 0, g: 0, b: 0, a: 0}
+  hitSFX: 
+  initialSFX: 
   theStat: {fileID: 0}
   damageLayer:
     serializedVersion: 2
@@ -211,6 +214,7 @@ MonoBehaviour:
   TrackingRadius: 0
   DetectRadius: 0
   Cooltime: 0
+  Duration: 0
   Delay: 0
   animationPlayTime: 0
   skillCommand: []

@@ -169,7 +169,9 @@ MonoBehaviour:
   superArmor: 0
   invincible: 0
   maxHP: 200
+  currentMaxHP: 0
   maxGP: 20
+  currentMaxGP: 0
   playHitSFXDamage: 50
   ATK: 100
   DEF: 0
@@ -178,6 +180,14 @@ MonoBehaviour:
   Mass: 1
   Size: 1
   entity: {fileID: 0}
+  inTransferPosition: 0
+  Resistance: 0
+  ResistanceExternal: 0
+  DodgeResistance: 0
+  ColdTickResistance: 0
+  FlameTickResistance: 0
+  ColdTickResistanceExternal: 0
+  FlameTickResistanceExternal: 0
 --- !u!61 &9128113644672191067
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -282,7 +292,6 @@ GameObject:
   - component: {fileID: 2548029205717885608}
   - component: {fileID: 5134759212843709348}
   - component: {fileID: 2539010948495519690}
-  - component: {fileID: 3016296559874532645}
   m_Layer: 8
   m_Name: spider
   m_TagString: Untagged
@@ -433,7 +442,8 @@ MonoBehaviour:
   deathSFX:
   - hit_mechanic_explosion_big
   simpleDirControlAnimator: {fileID: 0}
-  SpriteLibrary: {fileID: 3396699944727692339}
+  MainSpriteLibrary: {fileID: 0}
+  GlowSpriteLibrary: {fileID: 0}
   boxCollider: {fileID: 0}
   Mover: {fileID: 5788489842607426844}
   MovePoint: {fileID: 6060889146951153653}
@@ -450,7 +460,7 @@ MonoBehaviour:
   SkillArray:
   - {fileID: 7388745022800197892}
   PathList: []
-  beforeAttackEffectPrefab: {fileID: 5571567845738202018, guid: 5b1c81279139df947b804d6471d5879b, type: 3}
+  beforeAttackEffectPrefab: {fileID: 4320316823674572559, guid: 527d79a9a0e97ee44a071be0e2087c8b, type: 3}
   targetLayer:
     serializedVersion: 2
     m_Bits: 128
@@ -484,56 +494,6 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 16704
---- !u!114 &3016296559874532645
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8726325901392311059}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ComponentVersion: 1
-  m_LightType: 3
-  m_BlendStyleIndex: 1
-  m_FalloffIntensity: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_LightVolumeIntensity: 1
-  m_LightVolumeIntensityEnabled: 0
-  m_ApplyToSortingLayers: cbdf6ae7
-  m_LightCookieSprite: {fileID: 0}
-  m_DeprecatedPointLightCookieSprite: {fileID: 0}
-  m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_OverlapOperation: 0
-  m_NormalMapDistance: 3
-  m_NormalMapQuality: 2
-  m_UseNormalMap: 0
-  m_ShadowIntensityEnabled: 0
-  m_ShadowIntensity: 0.75
-  m_ShadowVolumeIntensityEnabled: 0
-  m_ShadowVolumeIntensity: 0.75
-  m_LocalBounds:
-    m_Center: {x: 0, y: -0.00000011920929, z: 0}
-    m_Extent: {x: 0.9985302, y: 0.99853027, z: 0}
-  m_PointLightInnerAngle: 360
-  m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 1
-  m_ShapeLightParametricSides: 5
-  m_ShapeLightParametricAngleOffset: 0
-  m_ShapeLightParametricRadius: 1
-  m_ShapeLightFalloffSize: 0.5
-  m_ShapeLightFalloffOffset: {x: 0, y: 0}
-  m_ShapePath:
-  - {x: -0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: -0.5, z: 0}
-  - {x: 0.5, y: 0.5, z: 0}
-  - {x: -0.5, y: 0.5, z: 0}
 --- !u!1001 &426022195655957928
 PrefabInstance:
   m_ObjectHideFlags: 0

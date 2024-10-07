@@ -106,26 +106,16 @@ public class CameraManager : MonoBehaviour
         Zoom(OriginalRes, _blendTime, _style);
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    public void SetBound(AreaInfo _areaInfo)
     {
-        if (other.gameObject.layer == LayerMask.NameToLayer("CameraBound"))
+        for (int i = 0; i < Cameras.Length; i++)
         {
-            if (other.TryGetComponent(out AreaInfo areaInfo))
-            {
-                for (int i = 0; i < Cameras.Length; i++)
-                {
-                    Confiners[i].m_BoundingShape2D = areaInfo.cameraBound;
-                }
-
-
-                bgrenderer.RenderBackGround(areaInfo.backGround);
-
-
-                AudioManager.instance.ChangeAreaBGMs(areaInfo.areaBGMs, areaInfo.fadeTime);
-
-
-                WhetherManager.instance.ChangeAreaWhethers(areaInfo.areaWhetherTypes, true);
-            }
+            Confiners[i].m_BoundingShape2D = _areaInfo.cameraBound;
         }
+    }
+
+    public void SetBG(AreaInfo _areaInfo)
+    {
+        bgrenderer.RenderBackGround(_areaInfo.backGround);
     }
 }
