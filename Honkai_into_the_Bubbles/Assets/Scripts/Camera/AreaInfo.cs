@@ -8,5 +8,5 @@ public class AreaInfo : MonoBehaviour
     public Sprite backGround;
     public List<string> areaBGMs;
     public float fadeTime;
-    public List<Whether.WhetherType> areaWhetherTypes;
+    public List<Weather.WeatherType> areaWhetherTypes;
 }

@@ -68,6 +68,7 @@ public class InputManager : MonoBehaviour
     public bool NextInput { get; private set; }
     public bool PrevInput { get; private set; }
     public bool CancelInput { get; private set; }
+    public bool ShiftInput { get; private set; }
 
     private PlayerInput _playerInput;
     private InputAction move, movePressedD, movePressedR, movePressedU, movePressedL,
@@ -145,6 +146,7 @@ public class InputManager : MonoBehaviour
             InventoryOpenCloseInput = inventory.WasPressedThisFrame();
         }
 
+        ShiftInput = sprint.WasPressedThisFrame();
         CancelInput = cancel.WasPressedThisFrame();
         NextInput = equipment.WasPressedThisFrame();
         PrevInput = inventory.WasPressedThisFrame();

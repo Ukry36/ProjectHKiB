@@ -22,7 +22,8 @@ public class Playable : Entity
     [BoxGroup("Dodge")]
     public GameObject dodgeGroundPrefab;
     [BoxGroup("Dodge")]
-    public ParticleSystem dodgeIngPS;
+    public GameObject dodgeIngPrefab;
+    private ParticleSystem dodgeIngPS;
     [BoxGroup("Dodge")]
     public float dodgeInvincibleTime = 0.15f;
     [BoxGroup("Dodge")]
@@ -71,7 +72,6 @@ public class Playable : Entity
         base.Awake();
         GS = GetComponent<GraffitiSystem>();
         stateMachine = new Playable_StateMachine();
-        dodgeIngPS.Stop();
     }
 
     public virtual void ChangeSpriteLibraryAsset()
@@ -143,12 +143,18 @@ public class Playable : Entity
 
     public void StartKeepDodge()
     {
+        GameObject clone = PoolManager.instance.ReuseGameObject(dodgeIngPrefab, Mover.position, quaternion.identity);
+        dodgeIngPS = clone.GetComponent<ParticleSystem>();
         dodgeIngPS.transform.parent = this.gameObject.transform;
         ParticleSystem.MainModule mainModule = dodgeIngPS.main;
         mainModule.startColor = PlayerManager.instance.ThemeColors[totalDodgeCount % PlayerManager.instance.ThemeColors.Count];
         dodgeIngPS.Play();
     }
-    public void StopKeepDodge() => dodgeIngPS.Stop();
+    public void StopKeepDodge()
+    {
+        dodgeIngPS.Stop();
+        dodgeIngPrefab.SetActive(false);
+    }
 
     public IEnumerator GraffitiCooltime()
     {

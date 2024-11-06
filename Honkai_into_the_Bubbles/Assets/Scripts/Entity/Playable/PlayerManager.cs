@@ -72,23 +72,6 @@ public class PlayerManager : MonoBehaviour
         ActivateEquippedEffect(new int[] { 0 });
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.layer == LayerMask.NameToLayer("CameraBound"))
-        {
-            if (other.TryGetComponent(out AreaInfo areaInfo))
-            {
-                CameraManager.instance.SetBound(areaInfo);
-
-                CameraManager.instance.SetBG(areaInfo);
-
-                AudioManager.instance.ChangeAreaBGMs(areaInfo.areaBGMs, areaInfo.fadeTime);
-
-                WhetherManager.instance.ChangeAreaWhethers(areaInfo.areaWhetherTypes, true);
-            }
-        }
-    }
-
     public IEnumerator DieSequence()
     {
         if (SceneManager.GetActiveScene().name != "Hyperion")

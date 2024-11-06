@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class whetherTest : Event
 {
-    public Whether.WhetherType whetherType;
+    public Weather.WeatherType whetherType;
     protected override void StartEvent(Status _interactedEntity)
     {
         StartCoroutine(Cooltime());
-        if (WhetherManager.instance.CheckWhether(new List<Whether.WhetherType> { whetherType })) WhetherManager.instance.StopWhether(whetherType);
-        else WhetherManager.instance.StartWhether(whetherType);
+        if (WeatherManager.instance.CheckWeather(new List<Weather.WeatherType> { whetherType })) WeatherManager.instance.StopWeather(whetherType);
+        else WeatherManager.instance.StartWeather(whetherType);
 
         EndEvent();
     }

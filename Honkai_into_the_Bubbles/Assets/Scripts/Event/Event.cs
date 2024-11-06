@@ -46,10 +46,12 @@ public class Event : MonoBehaviour
 
     protected virtual IEnumerator Cooltime()
     {
-        triggerToExpire.triggerCollider.enabled = false;
+        if (triggerToExpire.needConfirmInput)
+            triggerToExpire.triggerCollider.enabled = false;
         isCooltime = true;
         yield return new WaitForSeconds(cooltime);
         isCooltime = false;
-        triggerToExpire.triggerCollider.enabled = true;
+        if (triggerToExpire.needConfirmInput)
+            triggerToExpire.triggerCollider.enabled = true;
     }
 }
