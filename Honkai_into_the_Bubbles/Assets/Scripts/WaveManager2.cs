@@ -6,16 +6,21 @@ using UnityEngine;
 public class WaveManager2 : MonoBehaviour
 {
     public WaveSequence WaveSequence;
+    public WaveGridManager waveGridManager;
+    public WaveTileManager2 waveTileManager2;
     public List<Wave> currentWaves;
-    [SerializeField]
+    public GameObject Tp;
+    public delegate void WaveEnd();
+    public event WaveEnd OnWaveEnd;
+
     private int currentWaveIndex = 0;
-    [SerializeField]
     private int aliveMonsters = 0;
     private int monsterCount = 0;
     private int rusherCount = 0;
     private int spiderCount = 0;
     private bool waveInProgress = false;
     private bool isFrontWaves = true;
+    private bool isBackWaves = false;
 
     [SerializeField] private GameObject Prefab;
     [SerializeField] private GameObject Prefab2;
@@ -25,22 +30,22 @@ public class WaveManager2 : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private LayerMask spawnLayer;
 
-    public WaveTileManager2 waveTileManager2;
-
     public float waveRes;
     public float afterRes;
 
     private List<Vector3> spawnPoints = new();
     private enum WaveState
     {
+        Init,
         Idle,
         Spawning,
         Cooldown,
         Restoring,
-        Transition
+        Transition,
+        End
     }
 
-    private WaveState currentState = WaveState.Idle;
+    private WaveState currentState = WaveState.Init;
 
     private void Start()
     {
@@ -66,6 +71,11 @@ public class WaveManager2 : MonoBehaviour
     {
         switch (currentState)
         {
+            case WaveState.Init:
+                Tp.SetActive(false);
+                currentState = WaveState.Idle;
+                break;
+
             case WaveState.Idle:
                 if (!waveInProgress && currentWaveIndex < currentWaves.Count)
                 {
@@ -90,41 +100,44 @@ public class WaveManager2 : MonoBehaviour
                     }
 
                     currentWaveIndex++;
-
-                    if (currentWaveIndex >= currentWaves.Count)
-                    {
-                        if (isFrontWaves)
-                        {
-                            currentState = WaveState.Transition;
-                        }
-                        else
-                        {
-                            Debug.Log("All waves completed.");
-                        }
-                    }
                 }
                 break;
 
             case WaveState.Transition:
                 isFrontWaves = false;
+                isBackWaves = true;
                 currentWaveIndex = 0;
                 currentWaves = WaveSequence.backWaves;
-                Debug.Log("transition");
+                waveGridManager.GridChange();
+                currentState = WaveState.Idle;
                 break;
 
             case WaveState.Restoring:
+                break;
+
+            case WaveState.End:
+                Tp.SetActive(true);
+                OnWaveEnd?.Invoke();
                 break;
         }
     }
 
     void OnTileSetCompleted()
     {
-        currentState = WaveState.Idle;
+        if (currentWaveIndex >= currentWaves.Count)
+        {
+            if (isFrontWaves)
+                currentState = WaveState.Transition;
+            else if (isBackWaves)
+                currentState = WaveState.End;
+        }
+        else
+            currentState = WaveState.Idle;
+            
     }
 
     IEnumerator SpawnWave(Wave wave)
     {
-        Debug.Log("wave start");
         rusherCount = wave.rusherCount;
         spiderCount = wave.spiderCount;
         monsterCount = rusherCount + spiderCount;
@@ -160,7 +173,6 @@ public class WaveManager2 : MonoBehaviour
 
     private void GetRandomPos()
     {
-        Debug.Log("pos calculated");
         Vector3 outputPos;
         for (int i = 0; i < 5; i++)
         {
@@ -180,8 +192,8 @@ public class WaveManager2 : MonoBehaviour
 
         if (status.entity != null)
         {
-            status.entity.OnDeath -= OnMonsterDeath; // ���� ��� ����
-            status.entity.OnDeath += OnMonsterDeath; // ���ο� ���
+            status.entity.OnDeath -= OnMonsterDeath;
+            status.entity.OnDeath += OnMonsterDeath;
         }
     }
 
