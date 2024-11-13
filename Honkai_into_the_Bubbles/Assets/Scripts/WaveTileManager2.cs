@@ -24,22 +24,19 @@ public class WaveTileManager2 : MonoBehaviour
 {
     public Tilemap tilemap;
     public WaveSequence waveSequence;
-    private int totalTileCount;
     public delegate void TileSetCompleted();
     public event TileSetCompleted OnTileSetCompleted;
 
-
     private List<FieldElement> TileField;
-    private List<FieldElement> CompletedTileField;
-    private List<FieldElement> AllignedTileField;
+    private List<List<FieldElement>> SlicedTileFields;
 
     [SerializeField] private AnimationCurve XCurve;
     [SerializeField] private AnimationCurve YCurve;
 
-    [SerializeField] private int StepPerWave;
-    [SerializeField] private float delayPerStep;
-    [SerializeField][MaxValue(1), MinValue(0.01f)] private float stepSpeed;
-    [SerializeField][MaxValue(1), MinValue(0.01f)] private float resolution;
+    [SerializeField][MaxValue(1), MinValue(0)] private float shuffle;
+    [SerializeField][MinValue(1)] private int StepPerWave;
+    [SerializeField][MinValue(0)] private float delayPerStep;
+    [SerializeField][MaxValue(1), MinValue(0)] private float stepSpeed;
 
     private const bool RESTORE = true;
     private const bool REMOVE = false;
@@ -52,10 +49,8 @@ public class WaveTileManager2 : MonoBehaviour
     private void InitField()
     {
         TileField = new();
-        CompletedTileField = new();
 
         BoundsInt bounds = tilemap.cellBounds;
-        totalTileCount = 0;
 
         for (int x = bounds.xMin; x < bounds.xMax; x++)
         {
@@ -72,82 +67,68 @@ public class WaveTileManager2 : MonoBehaviour
                         + YCurve.Evaluate((float)(pos.y - bounds.yMin) / (bounds.yMax - bounds.yMin)),
                         tile
                     ));
-                    totalTileCount++;
                 }
             }
         }
 
+        TileField.Sort((a, b) => b.probability.CompareTo(a.probability));
+
+        float max = TileField[0].probability;
+        foreach (var comp in TileField)
+        {
+            comp.probability /= max + 0.0001f;
+        }
+
+        TileField = ProbShuffle(TileField, (int)(TileField.Count * shuffle));
+        TileField.Sort((a, b) => b.probability.CompareTo(a.probability));
+
         tilemap.ClearAllTiles();
     }
 
-    private void RestoreTileField()
+    private List<FieldElement> ProbShuffle(List<FieldElement> _field, int _strength)
     {
-        foreach (var comp in CompletedTileField)
+        for (int i = 0; i < _field.Count; i++)
         {
-            TileField.Add(comp);
+            int pos = i + UnityEngine.Random.Range(-_strength, _strength);
+            pos = pos < 0 ? 0 : pos > _field.Count - 1 ? _field.Count - 1 : pos;
+
+            (_field[i].probability, _field[pos].probability) = (_field[pos].probability, _field[i].probability);
         }
-        CompletedTileField = new();
+        return _field;
     }
 
-    private void SetOneTileRandom()
+    private void InitDiscrete(bool _setOrRemove)
     {
-        for (float corr = 0; corr <= 1; corr += resolution)
-        {
-            FieldElement comp = TileField[UnityEngine.Random.Range(0, TileField.Count)];
-            if (UnityEngine.Random.value < comp.probability + corr)
-            {
-                AllignedTileField.Add(comp);
-                CompletedTileField.Add(comp);
-                TileField.Remove(comp);
-                break;
-            }
-        }
-    }
+        int WaveCount = _setOrRemove ? waveSequence.frontWaves.Count : waveSequence.backWaves.Count;
+        SlicedTileFields = new();
 
-    private IEnumerator AllignAndUpdateStep(bool _setOrRemove)
-    {
-        AllignedTileField.Sort((a, b) => b.probability.CompareTo(a.probability));
-        int div = (int)(AllignedTileField.Count * stepSpeed);
-        div = div < 1 ? 1 : div;
-        // playsound
-        for (int j = 0; j < AllignedTileField.Count; j++)
+        for (int i = 0; i < WaveCount; i++)
         {
-            tilemap.SetTile(AllignedTileField[j].pos, _setOrRemove ? AllignedTileField[j].tile : null);
-            if (j % div == 0)
-                yield return null;
+            SlicedTileFields.Insert(0, TileField.FindAll(a => Mathf.FloorToInt(a.probability * WaveCount) == i));
         }
-        yield return new WaitForSeconds(delayPerStep);
     }
 
     private IEnumerator SetOneWaveTiles(int _waveIndex, bool _setOrRemove)
     {
-        int WaveCount = _setOrRemove ? waveSequence.frontWaves.Count : waveSequence.backWaves.Count;
-        int tilePerWave = Mathf.FloorToInt(totalTileCount / WaveCount);
-        int tilePerStep = tilePerWave / StepPerWave;
+        int tilePerStep = SlicedTileFields[_waveIndex].Count / StepPerWave;
 
         for (int i = 0; i < StepPerWave; i++)
         {
-            AllignedTileField = new();
-
+            int div = (int)(tilePerStep * stepSpeed);
+            div = div < 1 ? 1 : div;
             for (int j = 0; j < tilePerStep; j++)
-                SetOneTileRandom();
-
-            yield return AllignAndUpdateStep(_setOrRemove);
-        }
-
-        if (_waveIndex >= WaveCount - 1 && TileField.Count > 0)
-        {
-            AllignedTileField = new();
-            while (TileField.Count > 0)
-                SetOneTileRandom();
-
-            yield return AllignAndUpdateStep(_setOrRemove);
-        }
-
-        if (TileField.Count == 0)
-        {
-            // playsound
-            RestoreTileField();
+            {
+                tilemap.SetTile(SlicedTileFields[_waveIndex][0].pos, _setOrRemove ? SlicedTileFields[_waveIndex][0].tile : null);
+                SlicedTileFields[_waveIndex].Remove(SlicedTileFields[_waveIndex][0]);
+                if (j % div == 0)
+                    yield return null;
+            }
+            if (i == StepPerWave - 1)
+                foreach (var tile in SlicedTileFields[_waveIndex])
+                {
+                    tilemap.SetTile(tile.pos, _setOrRemove ? tile.tile : null);
+                }
+            yield return new WaitForSeconds(delayPerStep);
         }
 
         OnTileSetCompleted?.Invoke();
@@ -155,11 +136,13 @@ public class WaveTileManager2 : MonoBehaviour
 
     public void FrontWaveCompleted(int waveIndex)
     {
+        InitDiscrete(RESTORE);
         StartCoroutine(SetOneWaveTiles(waveIndex, RESTORE));
     }
 
     public void BackWaveCompleted(int waveIndex)
     {
+        InitDiscrete(REMOVE);
         StartCoroutine(SetOneWaveTiles(waveIndex, REMOVE));
     }
 }

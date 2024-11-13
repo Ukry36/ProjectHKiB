@@ -5,10 +5,12 @@ using UnityEngine.Tilemaps;
 
 public class WaveGridManager : MonoBehaviour
 {
-    public GameObject ChangeGrid;
-    
+    public GameObject AfterGrid;
+    public GameObject BeforeGrid;
+
     public void GridChange()
     {
-        ChangeGrid.SetActive(true);
+        AfterGrid.SetActive(true);
+        BeforeGrid.SetActive(false);
     }
 }
