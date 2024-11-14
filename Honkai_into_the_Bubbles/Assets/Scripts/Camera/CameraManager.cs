@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System.Collections;
+using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
@@ -55,12 +56,18 @@ public class CameraManager : MonoBehaviour
         }
         this.transform.position = _way + _prevPos;
 
-        Collider2D other = Physics2D.OverlapCircle(_way + _prevPos, 0.5f, LayerMask.GetMask("CameraBound"));
+        UpdateConfiner(_way + _prevPos);
+    }
+
+    private void UpdateConfiner(Vector3 _pos)
+    {
+        Collider2D other = Physics2D.OverlapCircle(_pos, 0.5f, LayerMask.GetMask("CameraBound"));
         if (other && other.TryGetComponent(out AreaInfo areaInfo))
         {
             for (int i = 0; i < Cameras.Length; i++)
             {
                 Confiners[i].m_BoundingShape2D = areaInfo.cameraBound;
+                Confiners[i].m_MaxWindowSize = 0;
             }
         }
         else
@@ -68,10 +75,10 @@ public class CameraManager : MonoBehaviour
             for (int i = 0; i < Cameras.Length; i++)
             {
                 Confiners[i].m_BoundingShape2D = null;
+                Confiners[i].m_MaxWindowSize = 0;
             }
         }
     }
-
 
     // 0 to 1, 1 to 0
     private int FlipNum(int _i) => (_i + 1) % 2;
@@ -87,6 +94,7 @@ public class CameraManager : MonoBehaviour
 
         Cameras[CurrentCamera].Priority = 11;
         Cameras[FlipNum(CurrentCamera)].Priority = 10;
+        Confiners[CurrentCamera].m_MaxWindowSize = _res + 0.1f;
     }
 
     public void ZoomViaOrig(float _multiplyer, float _blendTime,

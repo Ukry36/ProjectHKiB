@@ -6,7 +6,7 @@ public class Trigger : MonoBehaviour
 {
     [SerializeField] protected LayerMask interactLayer;
     [SerializeField] protected Event targetEvent;
-    [SerializeField] protected bool needConfirmInput;
+    public bool needConfirmInput;
     [SerializeField] protected string triggerSFX = "trigger_toggle_on";
     [HideInInspector] public Collider2D triggerCollider;
 

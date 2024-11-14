@@ -10,29 +10,26 @@ public class Spawner : MonoBehaviour
 
     private void Start()
     {
-        Debug.Log("Spawner enabled");
+        waveManager.GetComponent<WaveManager2>().OnWaveEnd += OnWaveEnd;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("trgger entered");
         if (collision != null)
         {
             if (collision.CompareTag("Player") && !waveStarted)
             {
-                Debug.Log("player entered");
                 if (waveManager != null)
                 {
                     waveManager.SetActive(true);
                     waveStarted = true;
-                    Debug.Log("manager enabled");
-                }
-                else
-                {
-                    Debug.Log("reference is null");
                 }
             }
         }
     }
 
+    private void OnWaveEnd()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+    }
 }

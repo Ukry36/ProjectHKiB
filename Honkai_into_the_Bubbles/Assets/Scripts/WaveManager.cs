@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
+using static WaveTileManager;
 
 public class WaveManager : MonoBehaviour
 {
@@ -25,8 +26,8 @@ public class WaveManager : MonoBehaviour
     [SerializeField] private Vector3 BL;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private LayerMask spawnLayer;
-    [SerializeField] private bool checkFieldEnemyCount;
-    [ShowIf("checkFieldEnemyCount")][SerializeField] private int countToMaintain;
+
+    public WaveTileManager waveTileManager;
 
     private List<Vector3> spawnPoints = new();
     private enum WaveState
@@ -34,6 +35,7 @@ public class WaveManager : MonoBehaviour
         Idle,
         Spawning,
         Cooldown,
+        Restoring,
         Transition
     }
 
@@ -42,6 +44,8 @@ public class WaveManager : MonoBehaviour
     private void Start()
     {
         currentWaves = WaveSequence.frontWaves;
+
+        waveTileManager.OnTileSetCompleted += OnTileSetCompleted;
     }
 
     private void OnEnable()
@@ -65,7 +69,18 @@ public class WaveManager : MonoBehaviour
             case WaveState.Cooldown:
                 if (!waveInProgress && aliveMonsters == 0)
                 {
+                    currentState = WaveState.Restoring;
+
+                    if (waveTileManager != null)
+                    {
+                        if (currentWaves == WaveSequence.frontWaves)
+                            waveTileManager.FrontWaveCompleted(currentWaveIndex);
+                        else
+                            waveTileManager.BackWaveCompleted(currentWaveIndex);
+                    }
+
                     currentWaveIndex++;
+
                     if (currentWaveIndex >= currentWaves.Count)
                     {
                         if (isFrontWaves)
@@ -77,10 +92,6 @@ public class WaveManager : MonoBehaviour
                             Debug.Log("All waves completed.");
                         }
                     }
-                    else
-                    {
-                        currentState = WaveState.Idle;
-                    }
                 }
                 break;
 
@@ -88,12 +99,19 @@ public class WaveManager : MonoBehaviour
                 isFrontWaves = false;
                 currentWaveIndex = 0;
                 currentWaves = WaveSequence.backWaves;
-                currentState = WaveState.Idle;
+                Debug.Log("transition");
+                break;
+
+            case WaveState.Restoring:
                 break;
         }
-
-
     }
+
+    void OnTileSetCompleted()
+    {
+        currentState = WaveState.Idle;
+    }
+
     IEnumerator SpawnWave(Wave wave)
     {
         Debug.Log("wave start");
@@ -162,5 +180,4 @@ public class WaveManager : MonoBehaviour
         aliveMonsters--;
         entity.OnDeath -= OnMonsterDeath;
     }
-
 }
