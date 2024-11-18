@@ -11,6 +11,7 @@ public class FieldElement
     public Vector3Int pos;
     public float probability;
     public TileBase tile;
+    public float objectProbability = 1f;
 
     public FieldElement(Vector3Int _pos, float _probability, TileBase _tile)
     {
@@ -26,6 +27,7 @@ public class WaveTileManager2 : MonoBehaviour
     public WaveSequence waveSequence;
     public delegate void TileSetCompleted();
     public event TileSetCompleted OnTileSetCompleted;
+    public GameObject objectPrefab;
 
     private List<FieldElement> TileField;
     private List<List<FieldElement>> SlicedTileFields;
@@ -49,7 +51,6 @@ public class WaveTileManager2 : MonoBehaviour
     private void InitField()
     {
         TileField = new();
-
         BoundsInt bounds = tilemap.cellBounds;
 
         for (int x = bounds.xMin; x < bounds.xMax; x++)
@@ -66,7 +67,7 @@ public class WaveTileManager2 : MonoBehaviour
                         XCurve.Evaluate((float)(pos.x - bounds.xMin) / (bounds.xMax - bounds.xMin))
                         + YCurve.Evaluate((float)(pos.y - bounds.yMin) / (bounds.yMax - bounds.yMin)),
                         tile
-                    ));
+                    )); ;
                 }
             }
         }
@@ -118,8 +119,15 @@ public class WaveTileManager2 : MonoBehaviour
             div = div < 1 ? 1 : div;
             for (int j = 0; j < tilePerStep; j++)
             {
-                tilemap.SetTile(SlicedTileFields[_waveIndex][0].pos, _setOrRemove ? SlicedTileFields[_waveIndex][0].tile : null);
+                FieldElement tileElement = SlicedTileFields[_waveIndex][0];
+                tilemap.SetTile(SlicedTileFields[_waveIndex][0].pos, _setOrRemove ? tileElement.tile : null);
+
+                if (UnityEngine.Random.value < tileElement.objectProbability)
+                {
+                    Instantiate(objectPrefab, tilemap.GetCellCenterWorld(tileElement.pos), Quaternion.identity);
+                }
                 SlicedTileFields[_waveIndex].Remove(SlicedTileFields[_waveIndex][0]);
+
                 if (j % div == 0)
                     yield return null;
             }
@@ -127,6 +135,10 @@ public class WaveTileManager2 : MonoBehaviour
                 foreach (var tile in SlicedTileFields[_waveIndex])
                 {
                     tilemap.SetTile(tile.pos, _setOrRemove ? tile.tile : null);
+                    if (UnityEngine.Random.value < tile.objectProbability)
+                    {
+                        Instantiate(objectPrefab, tilemap.GetCellCenterWorld(tile.pos), Quaternion.identity);
+                    }
                 }
             yield return new WaitForSeconds(delayPerStep);
         }
