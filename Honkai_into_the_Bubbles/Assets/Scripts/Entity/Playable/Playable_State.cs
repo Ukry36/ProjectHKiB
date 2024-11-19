@@ -12,6 +12,7 @@ public class Playable_State
     public float unscaledStateTimer;
 
     protected bool finishTriggerCalled;
+    protected bool controlTriggerCalled;
 
     protected bool DInput;
     protected bool RInput;
@@ -29,6 +30,7 @@ public class Playable_State
     {
         playerBase.Animator.SetBool(animBoolName, true);
         finishTriggerCalled = false;
+        controlTriggerCalled = false;
     }
 
     public virtual void Update()
@@ -60,5 +62,10 @@ public class Playable_State
     public virtual void AnimationFinishTrigger()
     {
         finishTriggerCalled = true;
+    }
+
+    public virtual void AnimationControlTrigger()
+    {
+        controlTriggerCalled = true;
     }
 }

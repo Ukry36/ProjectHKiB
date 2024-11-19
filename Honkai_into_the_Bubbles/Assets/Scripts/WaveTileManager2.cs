@@ -11,7 +11,7 @@ public class FieldElement
     public Vector3Int pos;
     public float probability;
     public TileBase tile;
-    public float objectProbability = 1f;
+    public float objectProbability = 0.1f;
 
     public FieldElement(Vector3Int _pos, float _probability, TileBase _tile)
     {
@@ -67,7 +67,7 @@ public class WaveTileManager2 : MonoBehaviour
                         XCurve.Evaluate((float)(pos.x - bounds.xMin) / (bounds.xMax - bounds.xMin))
                         + YCurve.Evaluate((float)(pos.y - bounds.yMin) / (bounds.yMax - bounds.yMin)),
                         tile
-                    )); ;
+                    ));
                 }
             }
         }
@@ -120,13 +120,13 @@ public class WaveTileManager2 : MonoBehaviour
             for (int j = 0; j < tilePerStep; j++)
             {
                 FieldElement tileElement = SlicedTileFields[_waveIndex][0];
-                tilemap.SetTile(SlicedTileFields[_waveIndex][0].pos, _setOrRemove ? tileElement.tile : null);
+                tilemap.SetTile(tileElement.pos, _setOrRemove ? tileElement.tile : null);
 
                 if (UnityEngine.Random.value < tileElement.objectProbability)
                 {
                     Instantiate(objectPrefab, tilemap.GetCellCenterWorld(tileElement.pos), Quaternion.identity);
                 }
-                SlicedTileFields[_waveIndex].Remove(SlicedTileFields[_waveIndex][0]);
+                SlicedTileFields[_waveIndex].Remove(tileElement);
 
                 if (j % div == 0)
                     yield return null;

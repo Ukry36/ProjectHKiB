@@ -24,7 +24,8 @@ public class Delta_Default_GraffitiExitState : Playable_State
         base.Update();
         if (finishTriggerCalled)
         {
-            player.moveDir = player.moveInput;
+            if (player.moveInput != Vector2.zero)
+                player.moveDir = player.moveInput;
             player.SetAnimDir(player.moveInput);
             player.SkillManage(graffitirResult);
             player.StartCoroutine(player.GraffitiCooltime());

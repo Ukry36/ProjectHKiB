@@ -14,6 +14,7 @@ public class Delta_Delta_ChargeSkillState : Playable_State
     public override void Enter()
     {
         base.Enter();
+        attackReserved = false;
         player.theStat.superArmor = true;
         player.theStat.invincible = true;
         player.cannotDodgeState = true;
@@ -30,6 +31,25 @@ public class Delta_Delta_ChargeSkillState : Playable_State
 
             if (player.moveInput != Vector2.zero)
                 player.moveDir = player.moveInput;
+        }
+        if (controlTriggerCalled)
+        {
+            if (player.moveInput != Vector2.zero)
+            {
+                player.SetAnimDir(player.moveInput);
+                
+                player.moveDir = player.moveInput;
+                for (int i = 0; i < player.ChargeSkill.TrackingRadius; i++)
+                {
+                    if (!player.MovepointAdjustCheck())
+                    {
+                        player.MovePoint.transform.position += player.moveDir;
+                        player.Mover.position = player.MovePoint.transform.position;
+                    }
+                }
+            }
+                
+            controlTriggerCalled = false;
         }
         if (finishTriggerCalled)
         {

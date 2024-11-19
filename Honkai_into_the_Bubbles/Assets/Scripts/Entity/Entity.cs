@@ -256,6 +256,11 @@ public class Entity : MonoBehaviour
         Debug.LogError("ERROR : No AnimationEndTrigger Function");
     }
 
+    public virtual void AnimationControlTrigger()
+    {
+        Debug.LogError("ERROR : No AnimationControlTrigger Function");
+    }
+
     public virtual void StationalActivateManage(bool _Enter)
     {
         if (_Enter)

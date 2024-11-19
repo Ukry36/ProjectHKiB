@@ -16,7 +16,6 @@ public class Delta_Delta_BurstAttackState : Playable_State
     public override void Enter()
     {
         base.Enter();
-
         player.Animator.SetInteger("Combo", combo);
         player.SetAnimDir(player.moveDir);
         if (player.moveInput != Vector2.zero)
@@ -43,6 +42,22 @@ public class Delta_Delta_BurstAttackState : Playable_State
 
             if (player.moveInput != Vector2.zero)
                 player.moveDir = player.moveInput;
+        }
+        if (controlTriggerCalled)
+        {
+            if (player.moveInput != Vector2.zero)
+            {Debug.Log("yyy");
+                player.moveDir = player.moveInput;
+                for (int i = 0; i < player.BurstAttackArray[combo].TrackingRadius; i++)
+                {
+                    if (!player.MovepointAdjustCheck())
+                    {
+                        player.MovePoint.transform.position += player.moveDir;
+                        player.Mover.position = player.MovePoint.transform.position;
+                    }
+                }
+            }
+            controlTriggerCalled = false;
         }
         if (finishTriggerCalled)
         {

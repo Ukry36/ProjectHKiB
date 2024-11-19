@@ -31,7 +31,8 @@ public class Delta_Delta : Playable
     [HideInInspector] public bool canCharge;
     [HideInInspector] public bool isBurstMode;
     private float burstTimer;
-
+    [BoxGroup("Attack")]
+    public Attack ChargeSkill;
     [BoxGroup("Attack")]
     public Attack[] BurstAttackArray;
     [BoxGroup("Attack")]
@@ -173,6 +174,11 @@ public class Delta_Delta : Playable
         Animator.SetBool("Burst", true);
     }
 
+    public void MaintainBurstMode()
+    {
+        burstTimer = burstModeMaxTime;
+    }
+
     public void EndBurstMode()
     {
         isBurstMode = false;
@@ -196,10 +202,33 @@ public class Delta_Delta : Playable
         startAtCombo3 = false;
     }
 
-    public override void SkillManage(int[] _skillNum)
+    public override void SkillManage(int[] _result)
     {
-        base.SkillManage(_skillNum);
-        stateMachine.ChangeState(IdleState);
+        base.SkillManage(_result);
+        switch (_result[0])
+        {
+            case 0:
+                Skill01State.skill = GS.skillList[0];
+                stateMachine.ChangeState(Skill01State);
+                GraffitiHPHeal(_result[1]);
+                break;
+            case 1:
+                if (isBurstMode)
+                {
+                    Skill01State.skill = GS.skillList[1];
+                    stateMachine.ChangeState(Skill02State);
+                }
+                else
+                {
+                    stateMachine.ChangeState(IdleState);
+                }
+                GraffitiHPHeal(_result[1]);
+                break;
+
+            default:
+                stateMachine.ChangeState(IdleState);
+                break;
+        }
     }
 
     public override void Hit(Vector3 _attackOrigin)
@@ -236,6 +265,11 @@ public class Delta_Delta : Playable
     public override void AnimationFinishTrigger()
     {
         stateMachine.currentState.AnimationFinishTrigger();
+    }
+
+    public override void AnimationControlTrigger()
+    {
+        stateMachine.currentState.AnimationControlTrigger();
     }
 
 }
