@@ -115,8 +115,7 @@ public class WaveManager : MonoBehaviour
     IEnumerator SpawnWave(Wave wave)
     {
         Debug.Log("wave start");
-        rusherCount = wave.rusherCount;
-        spiderCount = wave.spiderCount;
+        //rusherCount = wave.monsterCount;
         monsterCount = rusherCount + spiderCount;
         waveInProgress = true;
         currentState = WaveState.Spawning;
