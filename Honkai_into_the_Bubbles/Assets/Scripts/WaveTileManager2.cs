@@ -11,13 +11,14 @@ public class FieldElement
     public Vector3Int pos;
     public float probability;
     public TileBase tile;
-    public float objectProbability = 0.1f;
+    public GameObject Object;
 
-    public FieldElement(Vector3Int _pos, float _probability, TileBase _tile)
+    public FieldElement(Vector3Int _pos, float _probability, TileBase _tile, GameObject _Object)
     {
         this.pos = _pos;
         this.probability = _probability;
         this.tile = _tile;
+        this.Object = _Object;
     }
 }
 
@@ -27,8 +28,7 @@ public class WaveTileManager2 : MonoBehaviour
     public WaveSequence waveSequence;
     public delegate void TileSetCompleted();
     public event TileSetCompleted OnTileSetCompleted;
-    public GameObject objectPrefab;
-
+    public LayerMask layerMask;
     private List<FieldElement> TileField;
     private List<List<FieldElement>> SlicedTileFields;
 
@@ -59,6 +59,17 @@ public class WaveTileManager2 : MonoBehaviour
             {
                 Vector3Int pos = new(x, y);
                 TileBase tile = tilemap.GetTile(pos);
+
+                GameObject Object = null;
+
+                Collider2D collider = Physics2D.OverlapBox(tilemap.GetCellCenterWorld(pos), new Vector2(0.5f, 0.5f), 0, layerMask);
+
+                if (collider != null && collider is BoxCollider2D)
+                {
+                    Object = collider.gameObject;
+                    Object.SetActive(false);
+                }
+
                 if (tile != null)
                 {
                     TileField.Add(new FieldElement
@@ -66,7 +77,8 @@ public class WaveTileManager2 : MonoBehaviour
                         pos,
                         XCurve.Evaluate((float)(pos.x - bounds.xMin) / (bounds.xMax - bounds.xMin))
                         + YCurve.Evaluate((float)(pos.y - bounds.yMin) / (bounds.yMax - bounds.yMin)),
-                        tile
+                        tile,
+                        Object
                     ));
                 }
             }
@@ -98,17 +110,6 @@ public class WaveTileManager2 : MonoBehaviour
         return _field;
     }
 
-    private void InitDiscrete(bool _setOrRemove)
-    {
-        int WaveCount = _setOrRemove ? waveSequence.frontWaves.Count : waveSequence.backWaves.Count;
-        SlicedTileFields = new();
-
-        for (int i = 0; i < WaveCount; i++)
-        {
-            SlicedTileFields.Insert(0, TileField.FindAll(a => Mathf.FloorToInt(a.probability * WaveCount) == i));
-        }
-    }
-
     private IEnumerator SetOneWaveTiles(int _waveIndex, bool _setOrRemove)
     {
         int tilePerStep = SlicedTileFields[_waveIndex].Count / StepPerWave;
@@ -122,9 +123,9 @@ public class WaveTileManager2 : MonoBehaviour
                 FieldElement tileElement = SlicedTileFields[_waveIndex][0];
                 tilemap.SetTile(tileElement.pos, _setOrRemove ? tileElement.tile : null);
 
-                if (UnityEngine.Random.value < tileElement.objectProbability)
+                if (tileElement.Object != null)
                 {
-                    Instantiate(objectPrefab, tilemap.GetCellCenterWorld(tileElement.pos), Quaternion.identity);
+                    tileElement.Object.SetActive(_setOrRemove);
                 }
                 SlicedTileFields[_waveIndex].Remove(tileElement);
 
@@ -135,9 +136,9 @@ public class WaveTileManager2 : MonoBehaviour
                 foreach (var tile in SlicedTileFields[_waveIndex])
                 {
                     tilemap.SetTile(tile.pos, _setOrRemove ? tile.tile : null);
-                    if (UnityEngine.Random.value < tile.objectProbability)
+                    if (tile.Object != null)
                     {
-                        Instantiate(objectPrefab, tilemap.GetCellCenterWorld(tile.pos), Quaternion.identity);
+                        tile.Object.SetActive(_setOrRemove);
                     }
                 }
             yield return new WaitForSeconds(delayPerStep);
@@ -156,5 +157,16 @@ public class WaveTileManager2 : MonoBehaviour
     {
         InitDiscrete(REMOVE);
         StartCoroutine(SetOneWaveTiles(waveIndex, REMOVE));
+    }
+
+    private void InitDiscrete(bool _setOrRemove)
+    {
+        int WaveCount = _setOrRemove ? waveSequence.frontWaves.Count : waveSequence.backWaves.Count;
+        SlicedTileFields = new();
+
+        for (int i = 0; i < WaveCount; i++)
+        {
+            SlicedTileFields.Insert(0, TileField.FindAll(a => Mathf.FloorToInt(a.probability * WaveCount) == i));
+        }
     }
 }

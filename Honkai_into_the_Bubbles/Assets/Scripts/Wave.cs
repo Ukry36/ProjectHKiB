@@ -6,8 +6,16 @@ using UnityEngine;
 public class Wave
 {
     public int waveNumber;
-    public int rusherCount;
-    public int spiderCount;
     public float spawnInterval;
     public float waveTimeInterval;
+
+    [System.Serializable]
+    public class MonsterInfo
+    {
+        public GameObject monsterPrefab;
+        public int count;
+    }
+
+    public List<MonsterInfo> monsters = new List<MonsterInfo>();
 }
+

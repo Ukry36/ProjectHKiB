@@ -15,15 +15,10 @@ public class WaveManager2 : MonoBehaviour
 
     private int currentWaveIndex = 0;
     private int aliveMonsters = 0;
-    private int monsterCount = 0;
-    private int rusherCount = 0;
-    private int spiderCount = 0;
     private bool waveInProgress = false;
     private bool isFrontWaves = true;
     private bool isBackWaves = false;
 
-    [SerializeField] private GameObject Prefab;
-    [SerializeField] private GameObject Prefab2;
     [SerializeField] private float checkOffset;
     [SerializeField] private Vector3 TR;
     [SerializeField] private Vector3 BL;
@@ -138,32 +133,24 @@ public class WaveManager2 : MonoBehaviour
 
     IEnumerator SpawnWave(Wave wave)
     {
-        rusherCount = wave.rusherCount;
-        spiderCount = wave.spiderCount;
-        monsterCount = rusherCount + spiderCount;
         waveInProgress = true;
         currentState = WaveState.Spawning;
 
-        for (int i = 0; i < monsterCount; i++)
-            GetRandomPos();
-        for (int i = 0; i < rusherCount; i++)
+        foreach (var monsterInfo in wave.monsters)
         {
-            GameObject monster = PoolManager.instance.ReuseGameObject(Prefab, spawnPoints[i], quaternion.identity);
-            Status status = monster.GetComponent<Status>();
-            if (status != null)
+            for (int i = 0; i < monsterInfo.count; i++)
             {
-                OnMonsterSpawned(status);
+                GetRandomPos();
+                GameObject monster = PoolManager.instance.ReuseGameObject(monsterInfo.monsterPrefab, spawnPoints[i], Quaternion.identity);
+                Status status = monster.GetComponent<Status>();
+                if (status != null)
+                {
+                    OnMonsterSpawned(status);
+                }
+                yield return new WaitForSeconds(wave.spawnInterval);
             }
         }
-        for (int i = 0; i < spiderCount; i++)
-        {
-            GameObject monster2 = PoolManager.instance.ReuseGameObject(Prefab2, spawnPoints[i + rusherCount], quaternion.identity);
-            Status status2 = monster2.GetComponent<Status>();
-            if (status2 != null)
-            {
-                OnMonsterSpawned(status2);
-            }
-        }
+
         spawnPoints = new();
         waveInProgress = false;
         currentState = WaveState.Cooldown;
