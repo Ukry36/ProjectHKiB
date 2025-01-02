@@ -130,7 +130,7 @@ public class InventoryManager : MonoBehaviour
         }
         else
         {
-            Debug.Log(TabItemList[_selectedItem + page * MAXSLOT].Name);
+            //Debug.Log(TabItemList[_selectedItem + page * MAXSLOT].Name);
             if (TabItemList[_selectedItem + page * MAXSLOT].Equipped == 0)
             {
                 EquipmentManager.instance.AfterEquipSequence(TabItemList[_selectedItem + page * MAXSLOT]);

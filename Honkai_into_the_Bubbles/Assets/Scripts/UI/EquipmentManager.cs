@@ -33,7 +33,7 @@ public class EquipmentManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI description;
     [SerializeField] private Image displayImg;
 
-    private const int SLOT1 = 0, SLOT2 = 1, SLOT3 = 2, SLOT4 = 3, STARTOFTDE = 60000;
+    private const int SLOT1 = 0, SLOT2 = 1, SLOT3 = 2, SLOT4 = 3;
     private int currentSlot = 0;
 
     [SerializeField] private Image[] imgSlots;
@@ -42,7 +42,6 @@ public class EquipmentManager : MonoBehaviour
 
     [HideInInspector] public Item[] EquippedEffects;
     [HideInInspector] public int[] RealEquippedEffectIDs;
-    private Item[] TransitedEffectList;
 
     private Color RED = new(1f, 0f, 0f, 1f),
         YELLOW = new(1f, 0.6f, 0, 1f),
@@ -59,7 +58,6 @@ public class EquipmentManager : MonoBehaviour
 
     private void Start()
     {
-        TransitedEffectList = theDB.itemList.FindAll(item => item.ID >= STARTOFTDE).ToArray();
         EquippedEffects = new Item[] { new(), new(), new(), new() };
         RealEquippedEffectIDs = new int[] { 0, 0, 0, 0 };
     }
@@ -189,9 +187,9 @@ public class EquipmentManager : MonoBehaviour
         new int[] {EquippedEffects[SLOT1].ID, EquippedEffects[SLOT2].ID,
                    EquippedEffects[SLOT3].ID, EquippedEffects[SLOT4].ID};
 
-        for (int i = 0; i < TransitedEffectList.Length; i++) // in all transited effects,
+        for (int i = 0; i < theDB.TransitedEffectList.Length; i++) // in all transited effects,
         {
-            int[] transitionPath = TransitedEffectList[i].TransitionPath;
+            int[] transitionPath = theDB.TransitedEffectList[i].TransitionPath;
 
             // if all IDs in transition path exist in RealEquippedEffectIDs (varies through this squence)
             bool exists = true;
@@ -210,7 +208,7 @@ public class EquipmentManager : MonoBehaviour
                     {
                         if (RealEquippedEffectIDs[k] == transitionPath[j])
                         {
-                            RealEquippedEffectIDs[k] = TransitedEffectList[i].ID;
+                            RealEquippedEffectIDs[k] = theDB.TransitedEffectList[i].ID;
                             SetItemGrade(k, 2);
                         }
                     }
