@@ -90,8 +90,10 @@ public class PlayerManager : MonoBehaviour
 
     public void ActivateEquippedEffect(int[] _effectIDs)
     {
+
         // distinct realEpdEffIDs from EquipmentManager
         equippedEffectIDs = _effectIDs.Distinct().ToArray();
+        //Debug.Log(equippedEffectIDs[0] + ", " + ((equippedEffectIDs.Length > 1) ? equippedEffectIDs[1] : "") + ", " + ((equippedEffectIDs.Length > 2) ? equippedEffectIDs[2] : "") + ", " + ((equippedEffectIDs.Length > 3) ? equippedEffectIDs[3] : ""));
 
         // equippedEffectIDs -> EquippedEffects
         EquippedEffects.Clear();
@@ -274,7 +276,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (_isPrime)
         {
-            Debug.Log("canGrafitti");
+            //Debug.Log("canGrafitti");
         }
         canSprint = true;
     }
@@ -283,7 +285,7 @@ public class PlayerManager : MonoBehaviour
     {
         if (_isPrime)
         {
-            Debug.Log("canTransform");
+            //Debug.Log("canTransform");
         }
 
         drone = true;
@@ -297,7 +299,7 @@ public class PlayerManager : MonoBehaviour
         }
         else
         {
-            Debug.Log("somethin");
+            //Debug.Log("somethin");
         }
     }
 

@@ -21,18 +21,22 @@ public class DBManager : MonoBehaviour
         }
     }
     #endregion
+    /*
+        public string[] var_name;
+        public float[] var;
 
-    public string[] var_name;
-    public float[] var;
-
-    public string[] switch_name;
-    public bool[] switches;
-
+        public string[] switch_name;
+        public bool[] switches;
+    */
     public List<Item> itemList = new();
 
     private Status thePStat;
     public GameObject FloatingText_PreFab;
     public GameObject parent;
+
+    [HideInInspector] public Item[] TransitedEffectList;
+
+    private const int EFFECTSID = 10000, TDESID = 60000, ITEMID = 20000;
 
     public void FloatText(string _type, int _num)
     {
@@ -257,7 +261,7 @@ public class DBManager : MonoBehaviour
         itemList.Add(new Item(20006, "GP팩", "GP를 10 회복", Item.ItemType.Use));
         itemList.Add(new Item(20007, "GP팩", "GP를 30 회복", Item.ItemType.Use));
 
-
+        TransitedEffectList = itemList.FindAll(item => item.ID >= TDESID && item.ID < TDESID + 10000).ToArray();
     }
 
 }

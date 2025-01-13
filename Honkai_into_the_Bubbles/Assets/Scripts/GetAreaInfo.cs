@@ -29,9 +29,9 @@ public class GetAreaInfo : MonoBehaviour
     }
 
     private void OnTriggerExit2D(Collider2D other)
-    {
+    {/*
         if (other.gameObject.layer == LayerMask.NameToLayer("CameraBound"))
 
-            Debug.Log(Time.time);
+        Debug.Log(Time.time);*/
     }
 }
