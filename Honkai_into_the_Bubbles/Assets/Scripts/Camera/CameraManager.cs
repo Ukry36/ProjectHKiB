@@ -126,4 +126,9 @@ public class CameraManager : MonoBehaviour
     {
         bgrenderer.RenderBackGround(_areaInfo.backGround);
     }
+
+    public void SetAfterBG(AreaInfo _areaInfo)
+    {
+        bgrenderer.RenderBackGround(_areaInfo.afterBackGround);
+    }
 }

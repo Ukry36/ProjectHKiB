@@ -52,7 +52,7 @@ public class WaveTileManager2 : MonoBehaviour
     {
         TileField = new();
         BoundsInt bounds = tilemap.cellBounds;
-
+        HashSet<Collider2D> processColliders = new HashSet<Collider2D>();
         for (int x = bounds.xMin; x < bounds.xMax; x++)
         {
             for (int y = bounds.yMin; y < bounds.yMax; y++)
@@ -66,6 +66,7 @@ public class WaveTileManager2 : MonoBehaviour
 
                 if (collider != null && collider is BoxCollider2D)
                 {
+                    processColliders.Add(collider);
                     Object = collider.gameObject;
                     Object.SetActive(false);
                 }
