@@ -49,7 +49,7 @@ public class Delta_Delta_Skill02State : Playable_State
         player.cannotDodgeState = false;
         player.cannotGraffitiState = false;
         if (player.isBurstMode)
-            player.MaintainBurstMode();
+            player.MaintainBurstMode(2);
         player.BurstAttackState.combo = 2;
         player.BurstAttackExitState.combo = 1;
     }

@@ -196,7 +196,15 @@ public class Enemy : Entity
         isTurnCooltime = false;
     }
 
-    public IEnumerator BackStep(float _time)
+    public void BackStep(float _time)
+    {
+        if (this.gameObject.activeInHierarchy)
+        {
+            StartCoroutine(BackStepCoroutine(_time));
+        }
+    }
+
+    public IEnumerator BackStepCoroutine(float _time)
     {
         backStep = true;
         yield return new WaitForSeconds(_time);

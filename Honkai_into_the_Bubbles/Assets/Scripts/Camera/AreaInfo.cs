@@ -11,12 +11,9 @@ public class AreaInfo : MonoBehaviour
     public float changeTime;
     public CinemachineBlendDefinition.Style changeStyle;
     public Sprite backGround;
-    public Sprite afterBackGround;
     public List<string> areaBGMs;
     public float fadeTime;
     public List<Weather.WeatherType> areaWhetherTypes;
 
-    public Light2D frontWaveLight;
-    public Light2D middleWaveLight;
-    public Light2D backWaveLight;
+    public Light2D globalLight;
 }

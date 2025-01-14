@@ -176,6 +176,25 @@ public class AudioManager : MonoBehaviour
     public void PlaySound(string[] _clipNames, Transform _audioTarget, float _delay = 0f, bool _isLoop = false, SoundType _type = SoundType.SFX, bool _attachToTarget = false, float _minDistance = 0.0f, float _maxDistance = 50.0f, float _fadeIn = 0, float _fadeOut = 0)
     => PlaySound(_clipNames.Length > 0 ? _clipNames[UnityEngine.Random.Range(0, _clipNames.Length)] : "", _audioTarget, _delay, _isLoop, _type, _attachToTarget, _minDistance, _maxDistance, _fadeIn, _fadeOut);
 
+    public void PlaySound(string _clipName, Vector3 _pos, float _delay = 0f, bool _isLoop = false, SoundType _type = SoundType.SFX, float _minDistance = 0.0f, float _maxDistance = 50.0f, float _fadeIn = 0, float _fadeOut = 0)
+    {
+        if (_clipName == "" || _clipName == null) return;
+        GameObject obj = PoolManager.instance.ReuseGameObject(SoundPlayerPrefab, _pos, quaternion.identity);
+
+        if (obj.TryGetComponent(out SoundPlayer soundPlayer))
+        {
+            //루프를 사용하는경우 사운드를 저장한다.
+            if (_isLoop) AddToList(soundPlayer);
+
+            soundPlayer.InitSound(GetClip(_clipName), _minDistance, _maxDistance);
+            soundPlayer.Play(audioMixer.FindMatchingGroups(_type.ToString())[0], _delay, _isLoop, _fadeIn, _fadeOut);
+        }
+    }
+
+    public void PlaySound(string[] _clipNames, Vector3 _pos, float _delay = 0f, bool _isLoop = false, SoundType _type = SoundType.SFX, float _minDistance = 0.0f, float _maxDistance = 50.0f, float _fadeIn = 0, float _fadeOut = 0)
+    => PlaySound(_clipNames.Length > 0 ? _clipNames[UnityEngine.Random.Range(0, _clipNames.Length)] : "", _pos, _delay, _isLoop, _type, _minDistance, _maxDistance, _fadeIn, _fadeOut);
+
+
     // used in option init
     public void InitVolumes(float _bgm, float _sfx, float _amb)
     {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class Delta_L_Skill02BeforeState : Playable_State
 {
     public Skill skill;
+    private bool failed = false;
     private Delta_L player;
     public Delta_L_Skill02BeforeState(Playable _playerBase, Playable_StateMachine _stateMachine, string _animBoolName, Delta_L _player) : base(_player, _stateMachine, _animBoolName)
     {
@@ -17,12 +18,18 @@ public class Delta_L_Skill02BeforeState : Playable_State
         stateTimer = skill.Delay;
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
+        failed = false;
     }
 
     public override void Update()
     {
         base.Update();
         if (stateTimer < 0)
+        {
+            failed = true;
+            player.theStat.invincible = false;
+        }
+        if (finishTriggerCalled)
         {
             stateMachine.ChangeState(player.Skill02FailState);
         }
@@ -33,9 +40,7 @@ public class Delta_L_Skill02BeforeState : Playable_State
         base.Hit(_attackOrigin);
         player.GazePoint.position = _attackOrigin;
         player.SetAnimDir(player.GazePointToDir4());
-
-        stateMachine.ChangeState(player.Skill02SuccessState);
-        //패링 성공 부분
+        stateMachine.ChangeState(failed ? player.Skill02FailState : player.Skill02SuccessState);
     }
 
     public override void Exit()

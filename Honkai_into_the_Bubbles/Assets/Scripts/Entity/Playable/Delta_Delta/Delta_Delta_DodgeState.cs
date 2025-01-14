@@ -19,12 +19,10 @@ public class Delta_Delta_DodgeState : Playable_State
         player.cannotDodgeState = true;
 
         player.DodgeImpact();
-        //player.DodgeGuageManage(10);
-        player.DodgeGuageManage(100);
-        player.AttackGuageManage(100);
+        player.DodgeGuageManage(10);
         if (!player.isBurstMode)
             player.Animator.SetBool("Burst", false);
-            
+
         stateTimer = player.dodgeInvincibleTime;
     }
 

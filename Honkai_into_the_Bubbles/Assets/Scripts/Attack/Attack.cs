@@ -13,18 +13,22 @@ public class Attack : MonoBehaviour
     public int BaseCriticalRate; // possibility of critical
     public int GraffitiPoint; // amount of GraffitiPoint to obtain
     public int Strong; // cause hit motion
+    public bool CamShake;
     public int TrackingRadius; // teleport in front of enemy on tracking area
 
     protected virtual void OnEnable()
     {
         AudioManager.instance.PlaySound(initialSFX, this.transform);
+        if (CamShake)
+        {
+            CameraManager.instance.Shake();
+        }
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D other)
     {
         if ((damageLayer & (1 << other.gameObject.layer)) != 0)
         {
-
             if (theStat.isPlayer)
                 theStat.GPControl(GraffitiPoint);
             if (other.gameObject.TryGetComponent(out Status component))

@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using Cinemachine;
+﻿using Cinemachine;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
@@ -29,6 +27,7 @@ public class CameraManager : MonoBehaviour
 
     [SerializeField] private BGRenderer bgrenderer;
 
+    private CinemachineImpulseSource impulseSource;
     public float OriginalRes = 5;
     private int CurrentCamera = 0; // 0 or 1
     public bool freeze = false;
@@ -43,6 +42,8 @@ public class CameraManager : MonoBehaviour
         }
         Cameras[CurrentCamera].Priority = 11;
         ReturntoOrigRes(0);
+
+        impulseSource = GetComponent<CinemachineImpulseSource>();
     }
 
     public void TogglePostProcessing(bool _enable) =>
@@ -127,8 +128,8 @@ public class CameraManager : MonoBehaviour
         bgrenderer.RenderBackGround(_areaInfo.backGround);
     }
 
-    public void SetAfterBG(AreaInfo _areaInfo)
+    public void Shake()
     {
-        bgrenderer.RenderBackGround(_areaInfo.afterBackGround);
+        impulseSource.GenerateImpulse();
     }
 }

@@ -37,7 +37,7 @@ public class Delta_Delta_ChargeSkillState : Playable_State
             if (player.moveInput != Vector2.zero)
             {
                 player.SetAnimDir(player.moveInput);
-                
+
                 player.moveDir = player.moveInput;
                 for (int i = 0; i < player.ChargeSkill.TrackingRadius; i++)
                 {
@@ -48,7 +48,7 @@ public class Delta_Delta_ChargeSkillState : Playable_State
                     }
                 }
             }
-                
+
             controlTriggerCalled = false;
         }
         if (finishTriggerCalled)
@@ -67,7 +67,7 @@ public class Delta_Delta_ChargeSkillState : Playable_State
         player.cannotDodgeState = false;
         player.cannotGraffitiState = false;
 
-        player.StartBurstMode();
+        player.StartBurstMode(1);
         player.BurstAttackState.combo = 0;
         player.BurstAttackExitState.combo = -1;
     }
