@@ -32,6 +32,7 @@ public class GraffitiSystem : MonoBehaviour
         CameraManager.instance.ZoomViaOrig(0.707f, 0.5f);
         var clone = PoolManager.instance.ReuseGameObject(NexusPrefab, this.transform.position, quaternion.identity);
         EVC = clone.GetComponent<EffectVanishControl>();
+        PostProcessManager.instance.ChromaticImpact(0, 1);
     }
 
     IEnumerator TimeScalerCoroutine(bool _down)

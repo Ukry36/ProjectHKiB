@@ -46,7 +46,7 @@ public class Delta_Delta_BurstAttackState : Playable_State
         if (controlTriggerCalled)
         {
             if (player.moveInput != Vector2.zero)
-            {Debug.Log("yyy");
+            {
                 player.moveDir = player.moveInput;
                 for (int i = 0; i < player.BurstAttackArray[combo].TrackingRadius; i++)
                 {

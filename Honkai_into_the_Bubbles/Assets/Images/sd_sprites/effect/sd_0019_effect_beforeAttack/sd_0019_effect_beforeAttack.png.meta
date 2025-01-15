@@ -115,8 +115,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 48
-        height: 48
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +134,10 @@ TextureImporter:
       name: sd_0019_effect_beforeAttack_1
       rect:
         serializedVersion: 2
-        x: 48
+        x: 80
         y: 0
-        width: 48
-        height: 48
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +155,10 @@ TextureImporter:
       name: sd_0019_effect_beforeAttack_2
       rect:
         serializedVersion: 2
-        x: 96
+        x: 160
         y: 0
-        width: 48
-        height: 48
+        width: 80
+        height: 80
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,6 +168,27 @@ TextureImporter:
       bones: []
       spriteID: 58ce0b532b17883458155ab944b44f3a
       internalID: 2138777198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sd_0019_effect_beforeAttack_3
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 0
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d4c8d297114914893613c71171cf96
+      internalID: -1815107807
       vertices: []
       indices: 
       edges: []
@@ -186,6 +207,7 @@ TextureImporter:
       sd_0019_effect_beforeAttack_0: 597727537
       sd_0019_effect_beforeAttack_1: -383152768
       sd_0019_effect_beforeAttack_2: 2138777198
+      sd_0019_effect_beforeAttack_3: -1815107807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

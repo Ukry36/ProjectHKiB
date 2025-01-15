@@ -40,7 +40,7 @@ public class Entity : MonoBehaviour
     public delegate void DeathEventHandler(Entity entity);
     public event DeathEventHandler OnDeath;
 
-
+    private List<GameObject> inactiveGameObjects = new();
     protected virtual void Awake()
     {
         Animator = GetComponent<Animator>();
@@ -49,6 +49,13 @@ public class Entity : MonoBehaviour
         PathFinder = GetComponent<PathFindManager>();
         MoveSpeed = DefaultSpeed;
         NoMovepointWallLayer = wallLayer & ~(1 << LayerMask.NameToLayer("Movepoint"));
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (!transform.GetChild(i).gameObject.activeSelf)
+            {
+                inactiveGameObjects.Add(transform.GetChild(i).gameObject);
+            }
+        }
     }
 
     protected virtual void Start()
@@ -66,6 +73,11 @@ public class Entity : MonoBehaviour
         theStat.invincible = false;
         SpriteRenderer.color = Color.white;
         MovePoint.transform.position = Mover.position;
+        for (int i = 0; i < inactiveGameObjects.Count; i++)
+        {
+            inactiveGameObjects[i].SetActive(false);
+        }
+
     }
 
     private void OnDisable()

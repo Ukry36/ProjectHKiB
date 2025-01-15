@@ -21,8 +21,6 @@ public class Delta_L : Playable
     public Delta_L_Skill02SuccessState Skill02SuccessState { get; private set; }
     public Delta_L_Skill02FailState Skill02FailState { get; private set; }
 
-    public GameObject parryTinker;
-
     protected override void Awake()
     {
         base.Awake();
@@ -94,6 +92,7 @@ public class Delta_L : Playable
                 break;
             case 1:
                 Skill02BeforeState.skill = GS.skillList[1];
+                Skill02SuccessState.skill = GS.skillList[1];
                 stateMachine.ChangeState(Skill02BeforeState);
                 break;
             default:
@@ -138,5 +137,10 @@ public class Delta_L : Playable
     public override void AnimationFinishTrigger()
     {
         stateMachine.currentState.AnimationFinishTrigger();
+    }
+
+    public override void AnimationControlTrigger()
+    {
+        stateMachine.currentState.AnimationControlTrigger();
     }
 }

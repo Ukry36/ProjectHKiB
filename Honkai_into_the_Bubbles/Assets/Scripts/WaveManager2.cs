@@ -8,7 +8,7 @@ public class WaveManager2 : MonoBehaviour
     public WaveSequence WaveSequence;
     public WaveGridManager waveGridManager;
     public WaveTileManager2 waveTileManager2;
-    public LightManager lightManager;
+    public WaveAreaInfoManager lightManager;
     public List<Wave> currentWaves;
     public GameObject Tp;
     public delegate void WaveEnd();
@@ -20,17 +20,12 @@ public class WaveManager2 : MonoBehaviour
     private bool isFrontWaves = true;
     private bool isMiddleWaves = false;
     private bool isBackWaves = false;
-    private float transitionDuration = 5f;
+    private float transitionDuration = 1f;
     [SerializeField] private float checkOffset;
     [SerializeField] private Vector3 TR;
     [SerializeField] private Vector3 BL;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private LayerMask spawnLayer;
-    [SerializeField] private AreaInfo currentArea;
-    private string currentWaveType = "frontwave";
-
-    public float waveRes;
-    public float afterRes;
 
     private List<Vector3> spawnPoints = new();
     private enum WaveState
@@ -57,14 +52,12 @@ public class WaveManager2 : MonoBehaviour
     private void OnEnable()
     {
         Debug.Log("manager is enabled");
-        CameraManager.instance.SetOrigRes(waveRes);
-        CameraManager.instance.ReturntoOrigRes(1f);
+        lightManager.BeforeToFrontTransition();
     }
 
     private void OnDisable()
     {
-        CameraManager.instance.SetOrigRes(afterRes);
-        CameraManager.instance.ReturntoOrigRes(1f);
+        lightManager.RearToAfterTransition();
     }
 
     private void Update()
@@ -93,9 +86,9 @@ public class WaveManager2 : MonoBehaviour
 
                     if (waveTileManager2 != null)
                     {
-                        if (currentWaves == WaveSequence.frontWaves)
+                        if (isFrontWaves)
                             waveTileManager2.FrontWaveCompleted(currentWaveIndex);
-                        else if (currentWaves == WaveSequence.backWaves)
+                        else if (isBackWaves)
                             waveTileManager2.BackWaveCompleted(currentWaveIndex);
                     }
 
@@ -135,7 +128,7 @@ public class WaveManager2 : MonoBehaviour
             else if (isBackWaves)
             {
                 Debug.Log("end");
-                currentState = WaveState.End;
+                currentState = WaveState.Transition;
             }
         }
         else
@@ -206,27 +199,25 @@ public class WaveManager2 : MonoBehaviour
     {
         if (isFrontWaves)
         {
-            Debug.Log("middlechange");
             isFrontWaves = false;
             isMiddleWaves = true;
-            currentWaveType = "middleWave";
-            lightManager.ActivateWaveLight(currentArea, currentWaveType, transitionDuration);
+            lightManager.FrontToMiddleTransition(transitionDuration, 20);
             currentWaves = WaveSequence.middleWaves;
             waveGridManager.GridChange();
         }
         else if (isMiddleWaves)
         {
-            Debug.Log("backchange");
             isMiddleWaves = false;
             isBackWaves = true;
-            currentWaveType = "backWave";
             currentWaves = WaveSequence.backWaves;
-            lightManager.ActivateWaveLight(currentArea, currentWaveType, transitionDuration);
+            lightManager.MiddleToRearTransition(transitionDuration, 20);
         }
         else if (isBackWaves)
         {
-            currentWaveType = "frontWave";
-            lightManager.ActivateWaveLight(currentArea, currentWaveType, transitionDuration);
+            isBackWaves = false;
+            lightManager.RearToAfterTransition();
+            currentState = WaveState.End;
+            return;
         }
 
         currentWaveIndex = 0;

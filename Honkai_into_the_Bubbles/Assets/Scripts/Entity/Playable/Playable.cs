@@ -59,6 +59,8 @@ public class Playable : Entity
     public bool endAtGraffitiStartPoint = true;
     protected bool isGraffitiCooltime;
 
+    public GameObject parryTinker;
+
     [HideInInspector] public Vector2 moveInput;
     [HideInInspector] public bool moveInputPressed;
 
@@ -196,5 +198,20 @@ public class Playable : Entity
         AudioManager.instance.PlaySound(deathSFX, this.transform);
         StartCoroutine(PlayerManager.instance.DieSequence());
 
+    }
+
+    public void ParryAnim()
+    {
+        PoolManager.instance.ReuseGameObject(parryTinker, Mover.transform.position + 1f * Vector3.up, quaternion.Euler(0, 0, UnityEngine.Random.Range(-1, 1)));
+        StartCoroutine(ParryCoroutine());
+        PostProcessManager.instance.ChromaticImpact(0, 0.5f);
+        CameraManager.instance.Shake();
+    }
+
+    private IEnumerator ParryCoroutine()
+    {
+        CameraManager.instance.ZoomViaOrig(0.75f, 0, Cinemachine.CinemachineBlendDefinition.Style.Cut);
+        yield return new WaitForSeconds(0.1f);
+        CameraManager.instance.ReturntoOrigRes(0.5f);
     }
 }

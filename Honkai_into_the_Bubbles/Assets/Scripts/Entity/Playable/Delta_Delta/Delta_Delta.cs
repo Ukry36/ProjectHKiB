@@ -21,7 +21,9 @@ public class Delta_Delta : Playable
     public Delta_Delta_BurstAttackState BurstAttackState { get; private set; }
     public Delta_Delta_BurstAttackExitState BurstAttackExitState { get; private set; }
     public Delta_Delta_ChargeSkillState ChargeSkillState { get; private set; }
-    public Delta_Delta_Skill01State Skill01State { get; private set; }
+    public Delta_Delta_Skill01BeforeState Skill01BeforeState { get; private set; }
+    public Delta_Delta_Skill01SuccessState Skill01SuccessState { get; private set; }
+    public Delta_Delta_Skill01FailState Skill01FailState { get; private set; }
     public Delta_Delta_Skill02State Skill02State { get; private set; }
 
     [HideInInspector] public bool startAtCombo3;
@@ -64,7 +66,9 @@ public class Delta_Delta : Playable
         BurstAttackState = new Delta_Delta_BurstAttackState(this, stateMachine, "Attack", this);
         BurstAttackExitState = new Delta_Delta_BurstAttackExitState(this, stateMachine, "AttackExit", this);
         ChargeSkillState = new Delta_Delta_ChargeSkillState(this, stateMachine, "Charge", this);
-        Skill01State = new Delta_Delta_Skill01State(this, stateMachine, "Skill01", this);
+        Skill01BeforeState = new Delta_Delta_Skill01BeforeState(this, stateMachine, "Skill01Before", this);
+        Skill01SuccessState = new Delta_Delta_Skill01SuccessState(this, stateMachine, "Skill01Success", this);
+        Skill01FailState = new Delta_Delta_Skill01FailState(this, stateMachine, "Skill01Success", this);
         Skill02State = new Delta_Delta_Skill02State(this, stateMachine, "Skill02", this);
     }
 
@@ -125,6 +129,8 @@ public class Delta_Delta : Playable
             burstTimer -= Time.deltaTime;
             leftDodgeGuageUI.fillAmount = burstTimer / burstModeMaxTime * 0.5f;
             rightAttackGuageUI.fillAmount = burstTimer / burstModeMaxTime * 0.5f;
+            leftDodgeGuageUI.fillAmount = leftDodgeGuageUI.fillAmount > 50 ? 50 : leftDodgeGuageUI.fillAmount;
+            rightAttackGuageUI.fillAmount = rightAttackGuageUI.fillAmount > 50 ? 50 : rightAttackGuageUI.fillAmount;
 
             if (burstTimer < 0)
             {
@@ -163,10 +169,10 @@ public class Delta_Delta : Playable
         chargeActivatedUI.SetActive(canCharge || isBurstMode);
     }
 
-    public void StartBurstMode()
+    public void StartBurstMode(int _coeff)
     {
         isBurstMode = true;
-        burstTimer = burstModeMaxTime;
+        burstTimer = burstModeMaxTime * _coeff;
         dodgeGuage = 0;
         attackGuage = 0;
         canCharge = false;
@@ -174,9 +180,17 @@ public class Delta_Delta : Playable
         Animator.SetBool("Burst", true);
     }
 
-    public void MaintainBurstMode()
+    public void FillAll()
     {
-        burstTimer = burstModeMaxTime;
+        dodgeGuage = 100;
+        attackGuage = 100;
+        UpdateGuage();
+    }
+
+    public void MaintainBurstMode(int _coeff)
+    {
+        theStat.ATKBuff -= 50;
+        StartBurstMode(_coeff);
     }
 
     public void EndBurstMode()
@@ -208,19 +222,24 @@ public class Delta_Delta : Playable
         switch (_result[0])
         {
             case 0:
-                Skill01State.skill = GS.skillList[0];
-                stateMachine.ChangeState(Skill01State);
+                Skill01BeforeState.skill = GS.skillList[0];
+                Skill01SuccessState.skill = GS.skillList[0];
+                Skill01FailState.skill = GS.skillList[0];
+                stateMachine.ChangeState(Skill01BeforeState);
                 GraffitiHPHeal(_result[1]);
                 break;
             case 1:
                 if (isBurstMode)
                 {
-                    Skill01State.skill = GS.skillList[1];
+                    Skill02State.skill = GS.skillList[1];
                     stateMachine.ChangeState(Skill02State);
                 }
                 else
                 {
                     stateMachine.ChangeState(IdleState);
+                    dodgeGuage = 50;
+                    attackGuage = 50;
+                    UpdateGuage();
                 }
                 GraffitiHPHeal(_result[1]);
                 break;
