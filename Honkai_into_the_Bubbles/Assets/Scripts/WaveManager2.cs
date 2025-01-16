@@ -8,6 +8,7 @@ public class WaveManager2 : MonoBehaviour
     public WaveSequence WaveSequence;
     public WaveGridManager waveGridManager;
     public WaveTileManager2 waveTileManager2;
+    public WaveAreaInfoManager lightManager;
     public List<Wave> currentWaves;
     public GameObject Tp;
     public delegate void WaveEnd();
@@ -17,16 +18,14 @@ public class WaveManager2 : MonoBehaviour
     private int aliveMonsters = 0;
     private bool waveInProgress = false;
     private bool isFrontWaves = true;
+    private bool isMiddleWaves = false;
     private bool isBackWaves = false;
-
+    private float transitionDuration = 1f;
     [SerializeField] private float checkOffset;
     [SerializeField] private Vector3 TR;
     [SerializeField] private Vector3 BL;
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private LayerMask spawnLayer;
-
-    public float waveRes;
-    public float afterRes;
 
     private List<Vector3> spawnPoints = new();
     private enum WaveState
@@ -35,7 +34,7 @@ public class WaveManager2 : MonoBehaviour
         Idle,
         Spawning,
         Cooldown,
-        Restoring,
+        Waiting,
         Transition,
         End
     }
@@ -47,19 +46,18 @@ public class WaveManager2 : MonoBehaviour
         currentWaves = WaveSequence.frontWaves;
 
         waveTileManager2.OnTileSetCompleted += OnTileSetCompleted;
+        lightManager.OnWaveTransition += OnLightTransitionComplete;
     }
 
     private void OnEnable()
     {
         Debug.Log("manager is enabled");
-        CameraManager.instance.SetOrigRes(waveRes);
-        CameraManager.instance.ReturntoOrigRes(1f);
+        lightManager.BeforeToFrontTransition();
     }
 
     private void OnDisable()
     {
-        CameraManager.instance.SetOrigRes(afterRes);
-        CameraManager.instance.ReturntoOrigRes(1f);
+        lightManager.RearToAfterTransition();
     }
 
     private void Update()
@@ -84,30 +82,31 @@ public class WaveManager2 : MonoBehaviour
             case WaveState.Cooldown:
                 if (!waveInProgress && aliveMonsters == 0)
                 {
-                    currentState = WaveState.Restoring;
+                    currentState = WaveState.Waiting;
 
                     if (waveTileManager2 != null)
                     {
-                        if (currentWaves == WaveSequence.frontWaves)
+                        if (isFrontWaves)
                             waveTileManager2.FrontWaveCompleted(currentWaveIndex);
-                        else
+                        else if (isBackWaves)
                             waveTileManager2.BackWaveCompleted(currentWaveIndex);
                     }
 
+                    if (currentWaves == WaveSequence.middleWaves)
+                        currentState = WaveState.Idle;
+
                     currentWaveIndex++;
+
+                    if (currentWaves == WaveSequence.middleWaves && currentWaveIndex >= currentWaves.Count)
+                        currentState = WaveState.Transition;
                 }
                 break;
 
             case WaveState.Transition:
-                isFrontWaves = false;
-                isBackWaves = true;
-                currentWaveIndex = 0;
-                currentWaves = WaveSequence.backWaves;
-                waveGridManager.GridChange();
-                currentState = WaveState.Idle;
+                WaveTransition();
                 break;
 
-            case WaveState.Restoring:
+            case WaveState.Waiting:
                 break;
 
             case WaveState.End:
@@ -122,13 +121,19 @@ public class WaveManager2 : MonoBehaviour
         if (currentWaveIndex >= currentWaves.Count)
         {
             if (isFrontWaves)
+            {
+                Debug.Log("transition");
                 currentState = WaveState.Transition;
+            }
             else if (isBackWaves)
-                currentState = WaveState.End;
+            {
+                Debug.Log("end");
+                currentState = WaveState.Transition;
+            }
         }
         else
             currentState = WaveState.Idle;
-            
+
     }
 
     IEnumerator SpawnWave(Wave wave)
@@ -188,5 +193,39 @@ public class WaveManager2 : MonoBehaviour
     {
         aliveMonsters--;
         entity.OnDeath -= OnMonsterDeath;
+    }
+
+    private void WaveTransition()
+    {
+        if (isFrontWaves)
+        {
+            isFrontWaves = false;
+            isMiddleWaves = true;
+            lightManager.FrontToMiddleTransition(transitionDuration, 20);
+            currentWaves = WaveSequence.middleWaves;
+            waveGridManager.GridChange();
+        }
+        else if (isMiddleWaves)
+        {
+            isMiddleWaves = false;
+            isBackWaves = true;
+            currentWaves = WaveSequence.backWaves;
+            lightManager.MiddleToRearTransition(transitionDuration, 20);
+        }
+        else if (isBackWaves)
+        {
+            isBackWaves = false;
+            lightManager.RearToAfterTransition();
+            currentState = WaveState.End;
+            return;
+        }
+
+        currentWaveIndex = 0;
+        currentState = WaveState.Waiting;
+    }
+
+    private void OnLightTransitionComplete()
+    {
+        currentState = WaveState.Idle;
     }
 }

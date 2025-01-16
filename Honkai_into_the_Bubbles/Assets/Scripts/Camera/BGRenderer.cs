@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class BGRenderer : MonoBehaviour
@@ -8,7 +10,8 @@ public class BGRenderer : MonoBehaviour
     {
         if (instance == null)
         {
-            spriteRenderer = GetComponent<SpriteRenderer>();
+            spriteRenderers = GetComponentsInChildren<SpriteRenderer>();
+
             DontDestroyOnLoad(this.gameObject);
             instance = this;
         }
@@ -19,7 +22,7 @@ public class BGRenderer : MonoBehaviour
     }
     #endregion
 
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer[] spriteRenderers;
 
     private void Update()
     {
@@ -28,6 +31,9 @@ public class BGRenderer : MonoBehaviour
 
     public void RenderBackGround(Sprite _sprite)
     {
-        spriteRenderer.sprite = _sprite;
+        for (int i = 0; i < spriteRenderers.Length; i++)
+        {
+            spriteRenderers[i].sprite = _sprite;
+        }
     }
 }

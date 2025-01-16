@@ -52,7 +52,7 @@ public class WaveTileManager2 : MonoBehaviour
     {
         TileField = new();
         BoundsInt bounds = tilemap.cellBounds;
-
+        HashSet<Collider2D> processColliders = new HashSet<Collider2D>();
         for (int x = bounds.xMin; x < bounds.xMax; x++)
         {
             for (int y = bounds.yMin; y < bounds.yMax; y++)
@@ -66,6 +66,7 @@ public class WaveTileManager2 : MonoBehaviour
 
                 if (collider != null && collider is BoxCollider2D)
                 {
+                    processColliders.Add(collider);
                     Object = collider.gameObject;
                     Object.SetActive(false);
                 }
@@ -113,9 +114,13 @@ public class WaveTileManager2 : MonoBehaviour
     private IEnumerator SetOneWaveTiles(int _waveIndex, bool _setOrRemove)
     {
         int tilePerStep = SlicedTileFields[_waveIndex].Count / StepPerWave;
-
+        // effect per wave
+        AudioManager.instance.PlaySound("nexus", PlayerManager.instance.transform);
+        // //////////////
         for (int i = 0; i < StepPerWave; i++)
         {
+            // effect per step
+            // //////////////
             int div = (int)(tilePerStep * stepSpeed);
             div = div < 1 ? 1 : div;
             for (int j = 0; j < tilePerStep; j++)
@@ -130,7 +135,12 @@ public class WaveTileManager2 : MonoBehaviour
                 SlicedTileFields[_waveIndex].Remove(tileElement);
 
                 if (j % div == 0)
+                {
+                    // effect per tile
+                    AudioManager.instance.PlaySound(new string[] { "tick_damage_ice_1", "tick_damage_ice_2" }, tileElement.pos, _maxDistance: 20f);
+                    // //////////////
                     yield return null;
+                }
             }
             if (i == StepPerWave - 1)
                 foreach (var tile in SlicedTileFields[_waveIndex])

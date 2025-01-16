@@ -513,7 +513,6 @@ MonoBehaviour:
   DefaultSpeed: 4
   SprintCoeff: 2
   InvincibleFrame: 0
-  hitLight: {fileID: 0}
   target: {fileID: 0}
   moveDir: {x: 0, y: 0, z: 0}
   SkillArray:
@@ -626,7 +625,9 @@ MonoBehaviour:
   currentMaxGP: 0
   playHitSFXDamage: 50
   ATK: 100
+  ATKBuff: 0
   DEF: 0
+  DEFBuff: 0
   CritRate: 0
   CritDMG: 0
   Mass: 1

@@ -14,9 +14,16 @@ public class Delta_Delta_GraffitiExitState : Playable_State
     public override void Enter()
     {
         base.Enter();
-        graffitirResult = player.GS.EndGraffiti();
         player.cannotDodgeState = true;
         player.cannotGraffitiState = true;
+        graffitirResult = player.GS.EndGraffiti();
+        if (graffitirResult[0] == 0)
+        {
+            player.moveDir = player.moveInput;
+            player.SetAnimDir(player.moveDir);
+            player.SkillManage(graffitirResult);
+            player.StartCoroutine(player.GraffitiCooltime());
+        }
     }
 
     public override void Update()
@@ -24,8 +31,7 @@ public class Delta_Delta_GraffitiExitState : Playable_State
         base.Update();
         if (finishTriggerCalled)
         {
-            if (player.moveInput != Vector2.zero)
-                player.moveDir = player.moveInput;
+            player.moveDir = player.moveInput;
             player.SetAnimDir(player.moveDir);
             player.SkillManage(graffitirResult);
             player.StartCoroutine(player.GraffitiCooltime());

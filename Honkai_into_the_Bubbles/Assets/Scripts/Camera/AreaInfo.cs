@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Cinemachine;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class AreaInfo : MonoBehaviour
 {
@@ -13,4 +14,6 @@ public class AreaInfo : MonoBehaviour
     public List<string> areaBGMs;
     public float fadeTime;
     public List<Weather.WeatherType> areaWhetherTypes;
+
+    public Light2D globalLight;
 }

@@ -47,7 +47,7 @@ public class Status : MonoBehaviour
         currentMaxHP = maxHP;
         CurrentHP = maxHP;
         currentMaxGP = maxGP;
-        CurrentGP = maxGP;
+        CurrentGP = 0;
     }
 
     private void Start()
@@ -57,6 +57,14 @@ public class Status : MonoBehaviour
         {
             entity.OnDeath += OnEntityDeath;
         }
+    }
+
+    private void OnEnable()
+    {
+        currentMaxHP = maxHP;
+        CurrentHP = maxHP;
+        currentMaxGP = maxGP;
+        CurrentGP = 0;
     }
 
     public void TransferPositionInvincible(float _time)
