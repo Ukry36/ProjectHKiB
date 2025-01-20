@@ -22,6 +22,7 @@ public class Delta_R_KeepDodgeState : Playable_State
         player.theStat.DodgeResistance = 50;
         speed = player.keepDodgeSpeed * PlayerManager.instance.exKeepDodgeSpeedCoeff;
         moveCount = 0;
+        AudioManager.instance.PlaySound(player.dodgeSound, player.transform);
         player.DodgeImpact();
         player.StartKeepDodge();
     }
@@ -77,6 +78,7 @@ public class Delta_R_KeepDodgeState : Playable_State
         player.cannotDodgeState = false;
         player.theStat.DodgeResistance = 0;
         player.Mover.position = player.MovePoint.transform.position;
+        AudioManager.instance.PlaySound(player.dodgeEndSound, player.transform);
         player.DodgeImpact();
         player.StopKeepDodge();
         player.DodgeCooltimeManage();

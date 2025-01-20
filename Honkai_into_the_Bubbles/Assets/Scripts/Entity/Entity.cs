@@ -256,6 +256,7 @@ public class Entity : MonoBehaviour
     {
         AudioManager.instance.PlaySound(deathSFX, this.transform);
         OnDeath?.Invoke(this);
+        MovePoint.transform.parent = this.transform;
         MovePoint.gameObject.SetActive(false);
         Mover.gameObject.SetActive(false);
     }

@@ -34,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -43,12 +43,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
-  spriteMeshType: 1
+  spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -69,10 +69,10 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 1024
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,7 +95,91 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: img_0001_public_quantum_floating_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2882b21163e7a34cb9bc68d623a76b6
+      internalID: 664863076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_0001_public_quantum_floating_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d562dadf47425664a89838df05f76477
+      internalID: -29384873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_0001_public_quantum_floating_4
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 16
+        width: 16
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 510b319a312ec3c4384709d545072cba
+      internalID: -621178479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: img_0001_public_quantum_floating_19
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53d6d41a1a2d29448aaf1b385a9a66a8
+      internalID: -1480196291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -106,7 +190,27 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      img_0001_public_quantum_floating_0: 664863076
+      img_0001_public_quantum_floating_1: -1539382964
+      img_0001_public_quantum_floating_10: 443373521
+      img_0001_public_quantum_floating_11: 843532830
+      img_0001_public_quantum_floating_12: -655478455
+      img_0001_public_quantum_floating_13: -1312407474
+      img_0001_public_quantum_floating_14: 518332736
+      img_0001_public_quantum_floating_15: 755025879
+      img_0001_public_quantum_floating_16: 1963106556
+      img_0001_public_quantum_floating_17: -1542422418
+      img_0001_public_quantum_floating_18: -1584197939
+      img_0001_public_quantum_floating_19: -1480196291
+      img_0001_public_quantum_floating_2: -29384873
+      img_0001_public_quantum_floating_3: -1823768923
+      img_0001_public_quantum_floating_4: -621178479
+      img_0001_public_quantum_floating_5: 2064282728
+      img_0001_public_quantum_floating_6: 1553044347
+      img_0001_public_quantum_floating_7: 1994273457
+      img_0001_public_quantum_floating_8: 1385957871
+      img_0001_public_quantum_floating_9: -1042187917
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

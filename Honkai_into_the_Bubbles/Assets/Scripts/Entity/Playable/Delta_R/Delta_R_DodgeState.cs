@@ -18,6 +18,7 @@ public class Delta_R_DodgeState : Playable_State
         player.theStat.superArmor = true;
         player.cannotDodgeState = true;
 
+        AudioManager.instance.PlaySound(player.dodgeSound, player.transform);
         player.DodgeImpact();
 
         stateTimer = player.dodgeInvincibleTime;

@@ -129,8 +129,8 @@ public class Delta_Delta : Playable
             burstTimer -= Time.deltaTime;
             leftDodgeGuageUI.fillAmount = burstTimer / burstModeMaxTime * 0.5f;
             rightAttackGuageUI.fillAmount = burstTimer / burstModeMaxTime * 0.5f;
-            leftDodgeGuageUI.fillAmount = leftDodgeGuageUI.fillAmount > 50 ? 50 : leftDodgeGuageUI.fillAmount;
-            rightAttackGuageUI.fillAmount = rightAttackGuageUI.fillAmount > 50 ? 50 : rightAttackGuageUI.fillAmount;
+            leftDodgeGuageUI.fillAmount = leftDodgeGuageUI.fillAmount > 0.5f ? 0.5f : leftDodgeGuageUI.fillAmount;
+            rightAttackGuageUI.fillAmount = rightAttackGuageUI.fillAmount > 0.5f ? 0.5f : rightAttackGuageUI.fillAmount;
 
             if (burstTimer < 0)
             {
