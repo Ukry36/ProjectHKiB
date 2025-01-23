@@ -62,7 +62,7 @@ public class WaveTileManager2 : MonoBehaviour
 
                 GameObject Object = null;
 
-                Collider2D collider = Physics2D.OverlapBox(tilemap.GetCellCenterWorld(pos), new Vector2(0.5f, 0.5f), 0, layerMask);
+                Collider2D collider = Physics2D.OverlapBox(tilemap.GetCellCenterWorld(pos), new Vector2(0.1f, 0.1f), 0, layerMask);
 
                 if (collider != null && collider is BoxCollider2D)
                 {

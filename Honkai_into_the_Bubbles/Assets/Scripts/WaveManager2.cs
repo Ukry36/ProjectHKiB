@@ -5,14 +5,13 @@ using UnityEngine;
 
 public class WaveManager2 : MonoBehaviour
 {
+    public List<GameObject> objects = new List<GameObject>();
     public WaveSequence WaveSequence;
     public WaveGridManager waveGridManager;
     public WaveTileManager2 waveTileManager2;
     public WaveAreaInfoManager lightManager;
     public List<Wave> currentWaves;
     public GameObject Tp;
-    public delegate void WaveEnd();
-    public event WaveEnd OnWaveEnd;
 
     private int currentWaveIndex = 0;
     private int aliveMonsters = 0;
@@ -65,7 +64,9 @@ public class WaveManager2 : MonoBehaviour
         switch (currentState)
         {
             case WaveState.Init:
-                Tp.SetActive(false);
+                foreach(var gameObject in objects) {
+                    gameObject.SetActive(false);
+                }
                 currentState = WaveState.Idle;
                 break;
 
@@ -110,8 +111,10 @@ public class WaveManager2 : MonoBehaviour
                 break;
 
             case WaveState.End:
-                Tp.SetActive(true);
-                OnWaveEnd?.Invoke();
+                foreach (var gameObject in objects)
+                {
+                    gameObject.SetActive(true);
+                }
                 break;
         }
     }

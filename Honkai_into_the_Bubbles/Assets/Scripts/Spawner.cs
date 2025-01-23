@@ -8,11 +8,6 @@ public class Spawner : MonoBehaviour
 
     private bool waveStarted = false;
 
-    private void Start()
-    {
-        waveManager.GetComponent<WaveManager2>().OnWaveEnd += OnWaveEnd;
-    }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision != null)
@@ -26,10 +21,5 @@ public class Spawner : MonoBehaviour
                 }
             }
         }
-    }
-
-    private void OnWaveEnd()
-    {
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
     }
 }
