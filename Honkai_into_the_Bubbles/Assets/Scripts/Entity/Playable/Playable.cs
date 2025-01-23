@@ -42,6 +42,11 @@ public class Playable : Entity
     public float keepDodgeTimeLimit = 3f;
     [BoxGroup("Dodge")]
     public float keepDodgeSpeed = 12f;
+    [BoxGroup("Dodge")]
+    public string dodgeSound = "dodge_splash";
+    [BoxGroup("Dodge")]
+    public string dodgeEndSound = "dodge_end_splash";
+
     protected int continuousDodgeCount = 0; // count countinuous dodge
     protected int totalDodgeCount = 0; // how many time did you dodge
     protected bool isDodgeCooltime;

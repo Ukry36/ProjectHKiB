@@ -8,10 +8,13 @@ public class MovePoint : MonoBehaviour
     [SerializeField] private Transform parent = null;
     public BoxCollider2D boxCollider { get; private set; }
 
-    private void Start()
+    private void Awake()
     {
         boxCollider = GetComponent<BoxCollider2D>();
         mover = this.transform.parent;
+    }
+    private void OnEnable()
+    {
         this.transform.parent = parent;
     }
     /*
