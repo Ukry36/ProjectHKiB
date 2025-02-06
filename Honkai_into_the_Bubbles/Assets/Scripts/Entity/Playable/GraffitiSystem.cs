@@ -24,6 +24,7 @@ public class GraffitiSystem : MonoBehaviour
 
     public void StartGraffiti()
     {
+        GraffitiSystemManager.instance.OnGraffitiStart();
         attractive.DisableAttract();
         grid.SetActive(true);
         StartCoroutine(TimeScalerCoroutine(true));
@@ -40,15 +41,17 @@ public class GraffitiSystem : MonoBehaviour
         int c = 1;
         if (_down)
             c = -1;
-        for (int i = 0; i < 45; i++)
+        for (int i = 0; i < 21; i++)
         {
             yield return null;
-            Time.timeScale += 0.02f * c;
+            Time.timeScale += 0.045f * c;
         }
     }
 
     public int[] EndGraffiti()
     {
+        GraffitiSystemManager.instance.OnGraffitiEnd();
+        attractive.DisableAttract();
         StartCoroutine(TimeScalerCoroutine(false));
         grid.SetActive(false);
         attractive.EnableAttract();
