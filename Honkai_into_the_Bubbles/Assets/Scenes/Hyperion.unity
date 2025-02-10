@@ -14797,7 +14797,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerGS: {fileID: 0}
-  GraffitiTilePrefab: {fileID: 0}
+  GraffitiImpactPrefab: {fileID: 4320316823674572559, guid: 0740624155ec1f84cb0c7d8cfdde0ce5, type: 3}
+  GraffitiPathPrefab: {fileID: 4320316823674572559, guid: c94446519e22d2440975b25a0ec75d9f, type: 3}
+  pathIntervalTime: 0.05
+  pathReverse: 1
+  totalGraffitiCount: 0
 --- !u!1 &395736961
 GameObject:
   m_ObjectHideFlags: 0
@@ -37655,7 +37659,7 @@ Transform:
   m_GameObject: {fileID: 914218053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.28825, y: 0, z: 0}
+  m_LocalPosition: {x: 1.933301, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40596,7 +40600,7 @@ Transform:
   m_GameObject: {fileID: 1019121078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.71175, y: -9, z: -10}
+  m_LocalPosition: {x: 11.066699, y: -9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -51198,7 +51202,7 @@ Transform:
   m_GameObject: {fileID: 1175886459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.28825, y: 0, z: 0}
+  m_LocalPosition: {x: 1.933301, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -53536,7 +53540,7 @@ Transform:
   m_GameObject: {fileID: 1289918537}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: 15, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -53580,15 +53584,15 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -412426293
-  m_SortingLayer: 5
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -1742488983, guid: 181bc62a034a8254a88d452b3fd6a6b7, type: 3}
+  m_SortingLayerID: -681422695
+  m_SortingLayer: 6
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 2067084065, guid: 78a10a81ade9e4a408ed5dcc2f1ae4c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 9, y: 9}
+  m_Size: {x: 5, y: 7}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -53609,7 +53613,7 @@ MonoBehaviour:
   m_CategoryHash: 7.852745e-38
   m_labelHash: 0.000000043004476
   m_SpriteKey: 0
-  m_SpriteHash: 873819244
+  m_SpriteHash: 149067644
 --- !u!114 &1289918541
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53623,7 +53627,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: f05d09c3f476f454989ef5482a46ecf1, type: 3}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 35eb7c2c492f48a41ae1a30fd62bcf5c, type: 3}
 --- !u!1 &1292873480
 GameObject:
   m_ObjectHideFlags: 0
@@ -77715,8 +77719,8 @@ MonoBehaviour:
   - {fileID: 463395122}
   burstModeMaxTime: 3.6
   guageUIGameObject: {fileID: 1006397740}
-  leftDodgeGuageUI: {fileID: 515604179}
-  rightAttackGuageUI: {fileID: 821861695}
+  leftDodgeGuageUI: {fileID: 821861695}
+  rightAttackGuageUI: {fileID: 515604179}
   chargeActivatedUI: {fileID: 1628528443}
 --- !u!1 &1587259445
 GameObject:
@@ -87471,7 +87475,7 @@ GameObject:
   - component: {fileID: 1870950079}
   - component: {fileID: 1870950081}
   - component: {fileID: 1870950080}
-  m_Layer: 7
+  m_Layer: 0
   m_Name: GetAreaInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
