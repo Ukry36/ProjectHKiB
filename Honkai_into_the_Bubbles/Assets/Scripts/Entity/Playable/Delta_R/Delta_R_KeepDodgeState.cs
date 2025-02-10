@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Delta_R_KeepDodgeState : Playable_State
 {
+    private LayerMask temp;
     private float speed;
     private int moveCount;
     private Delta_R player;
@@ -16,6 +17,8 @@ public class Delta_R_KeepDodgeState : Playable_State
     public override void Enter()
     {
         base.Enter();
+        temp = player.wallLayer;
+        player.wallLayer = LayerManager.instance.CanGoUnderneathLayer;
         stateTimer = player.keepDodgeTimeLimit;
         player.theStat.superArmor = true;
         player.cannotDodgeState = true;
@@ -73,6 +76,7 @@ public class Delta_R_KeepDodgeState : Playable_State
     public override void Exit()
     {
         base.Exit();
+        player.wallLayer = temp;
         player.SetAnimDir(player.moveDir);
         player.theStat.superArmor = false;
         player.cannotDodgeState = false;

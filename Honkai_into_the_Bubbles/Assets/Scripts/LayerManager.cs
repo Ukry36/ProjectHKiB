@@ -24,5 +24,6 @@ public class LayerManager : MonoBehaviour
 
     public LayerMask ignoreRaycast;
     public LayerMask graffitiWallLayer;
+    public LayerMask CanGoUnderneathLayer;
 
 }

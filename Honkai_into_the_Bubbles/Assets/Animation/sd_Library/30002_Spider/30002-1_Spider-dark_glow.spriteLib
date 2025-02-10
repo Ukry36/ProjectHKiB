@@ -1,0 +1,290 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: standD
+    m_Hash: 30786981
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_stand_0
+      m_Hash: 918606214
+      m_Sprite: {fileID: -1592188711, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1867648420, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_stand_1
+      m_Hash: 29876496
+      m_Sprite: {fileID: 204435171, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2020211022, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: standR
+    m_Hash: 889286900
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_stand_2
+      m_Hash: 416198826
+      m_Sprite: {fileID: -1448464248, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 967225818, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_stand_3
+      m_Hash: 801734716
+      m_Sprite: {fileID: 1473937497, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1852061732, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: standU
+    m_Hash: 728098135
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_stand_4
+      m_Hash: 833426847
+      m_Sprite: {fileID: -986192274, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 659067292, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_stand_5
+      m_Hash: 111813897
+      m_Sprite: {fileID: -1041832981, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1556542501, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: standL
+    m_Hash: 252595607
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_stand_6
+      m_Hash: 530805939
+      m_Sprite: {fileID: 1932545710, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1233170465, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_stand_7
+      m_Hash: 681853989
+      m_Sprite: {fileID: -155929296, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -265431706, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: walkD
+    m_Hash: 943676933
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_walk_0
+      m_Hash: 896906613
+      m_Sprite: {fileID: -762423437, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 2023954219, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_walk_1
+      m_Hash: 41059811
+      m_Sprite: {fileID: 928919729, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 110987042, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0017_enemy_spider_all_1
+      m_Hash: 276739515
+      m_Sprite: {fileID: 204435171, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2020211022, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 3
+  - m_Name: walkR
+    m_Hash: 216787796
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_walk_2
+      m_Hash: 461100121
+      m_Sprite: {fileID: 330350244, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1247743990, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_walk_3
+      m_Hash: 746382543
+      m_Sprite: {fileID: -1960567546, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2003920847, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0017_enemy_spider_all_3
+      m_Hash: 1047581847
+      m_Sprite: {fileID: 1473937497, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1852061732, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 3
+  - m_Name: walkU
+    m_Hash: 311394039
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_walk_4
+      m_Hash: 840462700
+      m_Sprite: {fileID: -49844072, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -502464566, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_walk_5
+      m_Hash: 85934586
+      m_Sprite: {fileID: 2036142243, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1273224926, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0017_enemy_spider_all_5
+      m_Hash: 387150242
+      m_Sprite: {fileID: -1041832981, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1556542501, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 3
+  - m_Name: walkL
+    m_Hash: 920966711
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_walk_6
+      m_Hash: 471208000
+      m_Sprite: {fileID: 1017999, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 661022191, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_walk_7
+      m_Hash: 722542806
+      m_Sprite: {fileID: -627654116, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 557431873, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0017_enemy_spider_all_7
+      m_Hash: 958206094
+      m_Sprite: {fileID: -155929296, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -265431706, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 3
+  - m_Name: skill01D
+    m_Hash: 520272587
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_skill01_0
+      m_Hash: 258327247
+      m_Sprite: {fileID: -1917513695, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -215489790, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_1
+      m_Hash: 946008665
+      m_Sprite: {fileID: 1753894057, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1142319673, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_2
+      m_Hash: 560702435
+      m_Sprite: {fileID: 323355209, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1801318263, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_3
+      m_Hash: 376214389
+      m_Sprite: {fileID: -1956676351, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1770017810, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0017_enemy_spider_all_0
+      m_Hash: 662275373
+      m_Sprite: {fileID: -1592188711, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1867648420, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 5
+  - m_Name: skill01R
+    m_Hash: 735448986
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_skill01_9
+      m_Hash: 918125163
+      m_Sprite: {fileID: 619756090, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1252812186, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_10
+      m_Hash: 643060867
+      m_Sprite: {fileID: -41092189, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -930379527, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_11
+      m_Hash: 290677781
+      m_Sprite: {fileID: 2030265730, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1502917475, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_12
+      m_Hash: 140129711
+      m_Sprite: {fileID: -1291928616, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1932478286, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0017_enemy_spider_all_2
+      m_Hash: 158852097
+      m_Sprite: {fileID: -1448464248, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 967225818, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 5
+  - m_Name: skill01U
+    m_Hash: 900897337
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_skill01_18
+      m_Hash: 680516785
+      m_Sprite: {fileID: 1541130145, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 353031330, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_19
+      m_Hash: 529067047
+      m_Sprite: {fileID: -327501572, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -630502131, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_20
+      m_Hash: 226035520
+      m_Sprite: {fileID: -1076326983, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -411214765, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_21
+      m_Hash: 981350358
+      m_Sprite: {fileID: -93629749, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1913490910, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0017_enemy_spider_all_4
+      m_Hash: 538198324
+      m_Sprite: {fileID: -986192274, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 659067292, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 5
+  - m_Name: skill01L
+    m_Hash: 299447033
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0014_enemy_rusher_skill01_27
+      m_Hash: 320705251
+      m_Sprite: {fileID: 555900293, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 802761229, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_28
+      m_Hash: 60985202
+      m_Sprite: {fileID: -1596954946, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -620009896, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_29
+      m_Hash: 883277796
+      m_Sprite: {fileID: 777172270, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1091889309, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0014_enemy_rusher_skill01_30
+      m_Hash: 341980673
+      m_Sprite: {fileID: 626234684, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1229801922, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    - m_Name: sd_0017_enemy_spider_all_6
+      m_Hash: 236593176
+      m_Sprite: {fileID: 1932545710, guid: a8e7d27843a712c4fabbffc0fff28863, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1233170465, guid: 11ef91258ce2a184fa64ff62fc870f1a, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 5
+  m_PrimaryLibraryGUID: cbf527fa72a79224182a9423e598ab28
+  m_ModificationHash: 638747281971297503
+  m_Version: 1

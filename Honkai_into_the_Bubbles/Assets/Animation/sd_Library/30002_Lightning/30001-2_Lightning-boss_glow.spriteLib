@@ -1,0 +1,654 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: standD
+    m_Hash: 30786981
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_stand_0
+      m_Hash: 996896689
+      m_Sprite: {fileID: -2133863412, guid: 7aec65611e2e3f24db3e321ba00677f3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 996087390, guid: 62f395aa2a3e19541a86f4d0ee72c9b7, type: 3}
+    - m_Name: sd_0016_enemy_lightening_stand_1
+      m_Hash: 208428839
+      m_Sprite: {fileID: -1679114739, guid: 7aec65611e2e3f24db3e321ba00677f3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1331770544, guid: 62f395aa2a3e19541a86f4d0ee72c9b7, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: standR
+    m_Hash: 889286900
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_stand_2
+      m_Hash: 358944413
+      m_Sprite: {fileID: -632814371, guid: 7aec65611e2e3f24db3e321ba00677f3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -382009632, guid: 62f395aa2a3e19541a86f4d0ee72c9b7, type: 3}
+    - m_Name: sd_0016_enemy_lightening_stand_3
+      m_Hash: 576863755
+      m_Sprite: {fileID: -917759549, guid: 7aec65611e2e3f24db3e321ba00677f3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1636907049, guid: 62f395aa2a3e19541a86f4d0ee72c9b7, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: standU
+    m_Hash: 728098135
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_stand_4
+      m_Hash: 1007070120
+      m_Sprite: {fileID: -1594910587, guid: 7aec65611e2e3f24db3e321ba00677f3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -716579670, guid: 62f395aa2a3e19541a86f4d0ee72c9b7, type: 3}
+    - m_Name: sd_0016_enemy_lightening_stand_5
+      m_Hash: 184654654
+      m_Sprite: {fileID: -1782744971, guid: 7aec65611e2e3f24db3e321ba00677f3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1266269852, guid: 62f395aa2a3e19541a86f4d0ee72c9b7, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: standL
+    m_Hash: 252595607
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_stand_6
+      m_Hash: 302566020
+      m_Sprite: {fileID: 1286123099, guid: 7aec65611e2e3f24db3e321ba00677f3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -230546680, guid: 62f395aa2a3e19541a86f4d0ee72c9b7, type: 3}
+    - m_Name: sd_0016_enemy_lightening_stand_7
+      m_Hash: 621804050
+      m_Sprite: {fileID: -200771781, guid: 7aec65611e2e3f24db3e321ba00677f3, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2097150230, guid: 62f395aa2a3e19541a86f4d0ee72c9b7, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 2
+  - m_Name: walkD
+    m_Hash: 943676933
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_walk_0
+      m_Hash: 749394453
+      m_Sprite: {fileID: -187495089, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 575961774, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_1
+      m_Hash: 464382595
+      m_Sprite: {fileID: 981660791, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1036518989, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_2
+      m_Hash: 44350265
+      m_Sprite: {fileID: -1539876926, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -389817580, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_3
+      m_Hash: 899910575
+      m_Sprite: {fileID: 1148534665, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1636368034, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_4
+      m_Hash: 734469644
+      m_Sprite: {fileID: -1469957059, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1909993895, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_5
+      m_Hash: 482356890
+      m_Sprite: {fileID: -316598818, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1960260970, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 6
+  - m_Name: walkR
+    m_Hash: 216787796
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_walk_6
+      m_Hash: 97091360
+      m_Sprite: {fileID: -300705445, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 898245190, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_7
+      m_Hash: 852381622
+      m_Sprite: {fileID: 1890298406, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -351491855, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_8
+      m_Hash: 577851943
+      m_Sprite: {fileID: 1875398714, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1862569181, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_9
+      m_Hash: 360080049
+      m_Sprite: {fileID: 1030452706, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1571211627, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_10
+      m_Hash: 3252305
+      m_Sprite: {fileID: 995984946, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1133813209, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_11
+      m_Hash: 926322887
+      m_Sprite: {fileID: 1478220088, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 505451125, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 6
+  - m_Name: walkU
+    m_Hash: 311394039
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_walk_12
+      m_Hash: 775930237
+      m_Sprite: {fileID: 1726392458, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -680891640, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_13
+      m_Hash: 423162347
+      m_Sprite: {fileID: -617805375, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1236910251, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_14
+      m_Hash: 123495496
+      m_Sprite: {fileID: 618930048, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1446102143, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_15
+      m_Hash: 811291870
+      m_Sprite: {fileID: -1938592243, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1867681082, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_16
+      m_Hash: 693241188
+      m_Sprite: {fileID: -451212856, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -667140172, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_17
+      m_Hash: 508900850
+      m_Sprite: {fileID: 355373370, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1116101267, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 6
+  - m_Name: walkL
+    m_Hash: 920966711
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_walk_18
+      m_Hash: 250226787
+      m_Sprite: {fileID: -1049910151, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1889152941, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_19
+      m_Hash: 971839733
+      m_Sprite: {fileID: -302635602, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1978497085, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_20
+      m_Hash: 723317650
+      m_Sprite: {fileID: 476607650, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2138980004, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_21
+      m_Hash: 471581444
+      m_Sprite: {fileID: 1876335238, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1025294300, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_22
+      m_Hash: 85103294
+      m_Sprite: {fileID: -227578877, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 728986158, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    - m_Name: sd_0016_enemy_lightening_walk_23
+      m_Hash: 840278568
+      m_Sprite: {fileID: 1400757572, guid: e105c1035b5c18f40b69534770b1b880, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 2066109345, guid: 481cda4d446d813428e938c845a2f480, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 6
+  - m_Name: skill01D
+    m_Hash: 520272587
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_skill01before_0
+      m_Hash: 660075637
+      m_Sprite: {fileID: -1083009156, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -581845273, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_1
+      m_Hash: 273728739
+      m_Sprite: {fileID: 1953603348, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -90926441, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_2
+      m_Hash: 156865881
+      m_Sprite: {fileID: -2143512792, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1607149469, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_3
+      m_Hash: 1046390223
+      m_Sprite: {fileID: -1391774295, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1884402865, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_4
+      m_Hash: 540684396
+      m_Sprite: {fileID: 608812422, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1192479774, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_5
+      m_Hash: 389873914
+      m_Sprite: {fileID: 278562798, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1256121147, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_0
+      m_Hash: 100502263
+      m_Sprite: {fileID: -845673264, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 999746562, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_1
+      m_Hash: 855292513
+      m_Sprite: {fileID: 492089834, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1598268429, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_2
+      m_Hash: 737405915
+      m_Sprite: {fileID: 512512723, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 79782535, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_3
+      m_Hash: 485808973
+      m_Sprite: {fileID: -1310673411, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1909615801, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 10
+  - m_Name: skill01R
+    m_Hash: 735448986
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_skill01before_6
+      m_Hash: 238309696
+      m_Sprite: {fileID: 879087623, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2025745091, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_7
+      m_Hash: 959668694
+      m_Sprite: {fileID: 602535014, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -308132436, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_8
+      m_Hash: 697072711
+      m_Sprite: {fileID: 880777395, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1663008588, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_9
+      m_Hash: 512445649
+      m_Sprite: {fileID: 19386632, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 2114832272, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_10
+      m_Hash: 218643495
+      m_Sprite: {fileID: -1045416119, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 325166611, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_11
+      m_Hash: 974064817
+      m_Sprite: {fileID: 654750146, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1537040804, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_4
+      m_Hash: 43011822
+      m_Sprite: {fileID: -310447516, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -331048549, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_5
+      m_Hash: 899120760
+      m_Sprite: {fileID: -1676373279, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -568501666, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_6
+      m_Hash: 748564418
+      m_Sprite: {fileID: -2120525733, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -73092495, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_7
+      m_Hash: 463019860
+      m_Sprite: {fileID: -610990704, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 224529233, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 10
+  - m_Name: skill01U
+    m_Hash: 900897337
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_skill01before_12
+      m_Hash: 587619595
+      m_Sprite: {fileID: -930401669, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1938949252, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_13
+      m_Hash: 335637917
+      m_Sprite: {fileID: -586788733, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -951123866, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_14
+      m_Hash: 174454846
+      m_Sprite: {fileID: 1153367887, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -629964176, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_15
+      m_Hash: 1029884072
+      m_Sprite: {fileID: -952223766, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 610070432, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_16
+      m_Hash: 611031314
+      m_Sprite: {fileID: -753163573, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -839680517, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_17
+      m_Hash: 325888388
+      m_Sprite: {fileID: 1023826620, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -642955204, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_8
+      m_Hash: 187040453
+      m_Sprite: {fileID: -616643328, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1870879704, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_9
+      m_Hash: 1008808531
+      m_Sprite: {fileID: -217903277, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -716205103, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_10
+      m_Hash: 236745813
+      m_Sprite: {fileID: 10624229, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 26972364, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_11
+      m_Hash: 958088387
+      m_Sprite: {fileID: 1716831402, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 18279786, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 10
+  - m_Name: skill01L
+    m_Hash: 299447033
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_skill01before_18
+      m_Hash: 64205845
+      m_Sprite: {fileID: 382695300, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 190468578, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_19
+      m_Hash: 886342787
+      m_Sprite: {fileID: 1097571456, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1301772626, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_20
+      m_Hash: 639987684
+      m_Sprite: {fileID: -1620544747, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -56264531, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_21
+      m_Hash: 287465330
+      m_Sprite: {fileID: 1478867960, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 274211534, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_22
+      m_Hash: 137039560
+      m_Sprite: {fileID: 1690671436, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -569607494, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01before_23
+      m_Hash: 1059864158
+      m_Sprite: {fileID: -1120128203, guid: 9c071c4e40610da40a827a5e0ce2dfd1, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1450125376, guid: 6f69abfcc91ec7444afe99026c3aec1b, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_12
+      m_Hash: 538056057
+      m_Sprite: {fileID: -2008360362, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1638186845, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_13
+      m_Hash: 387261935
+      m_Sprite: {fileID: -477422808, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1716536, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_14
+      m_Hash: 158445644
+      m_Sprite: {fileID: 733166368, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -2040352261, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill01after_15
+      m_Hash: 1047953626
+      m_Sprite: {fileID: 1971316778, guid: f8d644e459df1c541832c2da6e051adc, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1148541705, guid: 4d2bea1ce75192d41a3b8b255925077c, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 10
+  - m_Name: skill02D
+    m_Hash: 875555080
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_skill02_0
+      m_Hash: 838668162
+      m_Sprite: {fileID: -1237972810, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1159602565, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_1
+      m_Hash: 117063444
+      m_Sprite: {fileID: 340782441, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -513263370, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_2
+      m_Hash: 536047278
+      m_Sprite: {fileID: 481713061, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 434953857, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_3
+      m_Hash: 687103544
+      m_Sprite: {fileID: 438408411, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -817402806, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_4
+      m_Hash: 915458971
+      m_Sprite: {fileID: 635603062, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1737782622, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_5
+      m_Hash: 26737421
+      m_Sprite: {fileID: -2750370, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1703932857, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_24
+      m_Hash: 46622393
+      m_Sprite: {fileID: 1135910218, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 142144022, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_25
+      m_Hash: 901797423
+      m_Sprite: {fileID: 1524794284, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1885420680, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_26
+      m_Hash: 751372181
+      m_Sprite: {fileID: 2005907223, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -633964255, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 9
+  - m_Name: skill02R
+    m_Hash: 16473177
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_skill02_6
+      m_Hash: 413051575
+      m_Sprite: {fileID: -111461825, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 82768463, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_7
+      m_Hash: 798595617
+      m_Sprite: {fileID: 780777351, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1375039867, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_8
+      m_Hash: 1059489712
+      m_Sprite: {fileID: 1354366112, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 61222016, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_9
+      m_Hash: 136427302
+      m_Sprite: {fileID: 1020604743, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -172566084, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_10
+      m_Hash: 780661091
+      m_Sprite: {fileID: -1292252520, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -598295746, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_11
+      m_Hash: 427868661
+      m_Sprite: {fileID: -297945193, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 196290168, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_27
+      m_Hash: 466499331
+      m_Sprite: {fileID: -1241332701, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 932931798, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_28
+      m_Hash: 191965842
+      m_Sprite: {fileID: 859959526, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -495096535, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_29
+      m_Hash: 1014372868
+      m_Sprite: {fileID: -256571446, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 836480963, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 9
+  - m_Name: skill02U
+    m_Hash: 513788410
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_skill02_12
+      m_Hash: 9015375
+      m_Sprite: {fileID: -23667741, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 80638490, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_13
+      m_Hash: 932094169
+      m_Sprite: {fileID: 443302129, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1205799377, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_14
+      m_Hash: 703214970
+      m_Sprite: {fileID: -1626027211, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -747554781, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_15
+      m_Hash: 518850028
+      m_Sprite: {fileID: -901278363, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1062255798, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_16
+      m_Hash: 132404310
+      m_Sprite: {fileID: -702633958, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1203476494, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_17
+      m_Hash: 820208832
+      m_Sprite: {fileID: -686240795, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -290833744, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_30
+      m_Hash: 481399777
+      m_Sprite: {fileID: -1817271885, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1619588417, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_31
+      m_Hash: 733389687
+      m_Sprite: {fileID: -453681212, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1010533549, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_32
+      m_Hash: 851440333
+      m_Sprite: {fileID: -1042337860, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1078417332, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 9
+  - m_Name: skill02L
+    m_Hash: 989094202
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: sd_0016_enemy_lightening_skill02_18
+      m_Hash: 542931281
+      m_Sprite: {fileID: -1577821977, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1000406433, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_19
+      m_Hash: 391858631
+      m_Sprite: {fileID: -1221881962, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 554163917, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_20
+      m_Hash: 95068832
+      m_Sprite: {fileID: 215035976, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -1454612737, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_21
+      m_Hash: 850235958
+      m_Sprite: {fileID: 1627252866, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 1711301928, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_22
+      m_Hash: 732218252
+      m_Sprite: {fileID: 1756246505, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 48104665, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_23
+      m_Hash: 480506650
+      m_Sprite: {fileID: 183511911, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 308563973, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_33
+      m_Hash: 95994459
+      m_Sprite: {fileID: -1704159421, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 915635314, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_34
+      m_Hash: 467425272
+      m_Sprite: {fileID: 361249578, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: 564749414, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    - m_Name: sd_0016_enemy_lightening_skill02_35
+      m_Hash: 752576366
+      m_Sprite: {fileID: 2070152948, guid: 02c8b109c917eaa439a7f51c6eecb7ed, type: 3}
+      m_FromMain: 1
+      m_SpriteOverride: {fileID: -306811463, guid: bcb81e2424fce8e4591553eeed8c3ebf, type: 3}
+    m_FromMain: 1
+    m_EntryOverrideCount: 9
+  m_PrimaryLibraryGUID: 3d3316fcb3f065f47b538dc8ce354610
+  m_ModificationHash: 638747278734718336
+  m_Version: 1

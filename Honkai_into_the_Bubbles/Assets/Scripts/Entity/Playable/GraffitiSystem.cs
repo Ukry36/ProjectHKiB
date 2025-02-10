@@ -29,6 +29,7 @@ public class GraffitiSystem : MonoBehaviour
         grid.SetActive(true);
         StartCoroutine(TimeScalerCoroutine(true));
         grid.transform.position = new Vector3((int)movePoint.position.x, (int)movePoint.position.y);
+        movePoint.gameObject.SetActive(false);
         activatedTileList.Clear();
         CameraManager.instance.ZoomViaOrig(0.707f, 0.5f);
         var clone = PoolManager.instance.ReuseGameObject(NexusPrefab, this.transform.position, quaternion.identity);
@@ -50,6 +51,7 @@ public class GraffitiSystem : MonoBehaviour
 
     public int[] EndGraffiti()
     {
+        movePoint.gameObject.SetActive(true);
         GraffitiSystemManager.instance.OnGraffitiEnd();
         attractive.DisableAttract();
         StartCoroutine(TimeScalerCoroutine(false));

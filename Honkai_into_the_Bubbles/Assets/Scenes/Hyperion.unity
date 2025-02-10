@@ -35525,7 +35525,7 @@ Transform:
   m_GameObject: {fileID: 853616717}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 30, y: 15, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -35569,10 +35569,10 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -412426293
-  m_SortingLayer: 5
-  m_SortingOrder: 1
-  m_Sprite: {fileID: -1742488983, guid: 181bc62a034a8254a88d452b3fd6a6b7, type: 3}
+  m_SortingLayerID: -681422695
+  m_SortingLayer: 6
+  m_SortingOrder: 0
+  m_Sprite: {fileID: -1240986737, guid: fb8cf84da49c46c4497269828920aed7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -35612,7 +35612,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Library: []
-  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: f05d09c3f476f454989ef5482a46ecf1, type: 3}
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: 127216dd3aa69a8409acf604a2b0fa93, type: 3}
 --- !u!4 &855356648 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8953938609150623996, guid: 1786ee647e35ab3409b91a3ac08492a6, type: 3}
@@ -37659,7 +37659,7 @@ Transform:
   m_GameObject: {fileID: 914218053}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.933301, y: 0, z: 0}
+  m_LocalPosition: {x: 3.3043842, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -40600,7 +40600,7 @@ Transform:
   m_GameObject: {fileID: 1019121078}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.066699, y: -9, z: -10}
+  m_LocalPosition: {x: 9.695616, y: -9, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -49436,7 +49436,10 @@ MonoBehaviour:
     m_Bits: 2572
   graffitiWallLayer:
     serializedVersion: 2
-    m_Bits: 5440
+    m_Bits: 5696
+  CanGoUnderneathLayer:
+    serializedVersion: 2
+    m_Bits: 1088
 --- !u!4 &1118829021
 Transform:
   m_ObjectHideFlags: 0
@@ -51202,7 +51205,7 @@ Transform:
   m_GameObject: {fileID: 1175886459}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.933301, y: 0, z: 0}
+  m_LocalPosition: {x: 3.3043842, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
