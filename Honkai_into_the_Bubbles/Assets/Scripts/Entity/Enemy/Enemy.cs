@@ -9,7 +9,6 @@ public class Enemy : Entity
     public Skill[] SkillArray;
 
     [HideInInspector] public List<Node> PathList;
-
     [SerializeField] private GameObject beforeAttackEffectPrefab;
 
     [BoxGroup("Move Algorythm")]

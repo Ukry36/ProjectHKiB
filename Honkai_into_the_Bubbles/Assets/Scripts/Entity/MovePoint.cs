@@ -3,7 +3,7 @@ using UnityEngine;
 public class MovePoint : MonoBehaviour
 {
     public Vector3 prevPos;
-    public Transform mover;
+    [HideInInspector] public Transform mover;
     public LayerMask wallLayer;
     [SerializeField] private Transform parent = null;
     public BoxCollider2D boxCollider { get; private set; }

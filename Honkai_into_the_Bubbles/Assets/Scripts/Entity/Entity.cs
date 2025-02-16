@@ -2,7 +2,6 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.U2D.Animation;
 using System.Collections.Generic;
-using UnityEngine.Rendering.Universal;
 
 public class Entity : MonoBehaviour
 {
@@ -73,6 +72,7 @@ public class Entity : MonoBehaviour
         theStat.invincible = false;
         SpriteRenderer.color = Color.white;
         MovePoint.transform.position = Mover.position;
+        MovePoint.gameObject.SetActive(true);
         for (int i = 0; i < inactiveGameObjects.Count; i++)
         {
             inactiveGameObjects[i].SetActive(false);

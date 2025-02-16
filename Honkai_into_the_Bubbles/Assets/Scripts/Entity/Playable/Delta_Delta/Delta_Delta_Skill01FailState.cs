@@ -19,6 +19,7 @@ public class Delta_Delta_Skill01FailState : Playable_State
         skill.DamageCoefficient /= 10;
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
+        player.Animator.SetTrigger("Fail");
     }
 
     public override void Update()
@@ -50,20 +51,13 @@ public class Delta_Delta_Skill01FailState : Playable_State
         }
         if (finishTriggerCalled)
         {
-            stateMachine.ChangeState(player.BurstAttackExitState);
+            stateMachine.ChangeState(player.Skill01FailEndState);
         }
     }
 
     public override void Exit()
     {
         base.Exit();
-        player.BurstAttackState.combo = 0;
-        player.BurstAttackExitState.combo = -1;
-        if (!player.isBurstMode)
-        {
-            player.BurstAttackExitState.exitAnimBurst = true;
-            player.Animator.SetBool("Burst", true);
-        }
 
         skill.DamageCoefficient = origDMG;
         player.theStat.invincible = false;

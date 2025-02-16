@@ -6,8 +6,6 @@ using UnityEngine;
 
 public class Status : MonoBehaviour
 {
-    private WaveManager waveManager;
-
     public bool isPlayer = false;
     public bool superArmor = false; // no knockback
     public bool invincible = false; // no damage
@@ -52,7 +50,6 @@ public class Status : MonoBehaviour
 
     private void Start()
     {
-        waveManager = FindObjectOfType<WaveManager>();
         if (entity != null)
         {
             entity.OnDeath += OnEntityDeath;

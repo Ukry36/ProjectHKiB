@@ -6,7 +6,6 @@ using UnityEngine;
 public class GraffitiSystem : MonoBehaviour
 {
     [SerializeField] private GameObject grid;
-    [SerializeField] private Transform movePoint;
     [SerializeField] private GameObject NexusPrefab;
     [HideInInspector] public List<Vector2> activatedTileList = new();
     [SerializeField] private Attractive attractive;
@@ -28,8 +27,7 @@ public class GraffitiSystem : MonoBehaviour
         attractive.DisableAttract();
         grid.SetActive(true);
         StartCoroutine(TimeScalerCoroutine(true));
-        grid.transform.position = new Vector3((int)movePoint.position.x, (int)movePoint.position.y);
-        movePoint.gameObject.SetActive(false);
+        grid.transform.position = new Vector3((int)transform.position.x, (int)transform.position.y);
         activatedTileList.Clear();
         CameraManager.instance.ZoomViaOrig(0.707f, 0.5f);
         var clone = PoolManager.instance.ReuseGameObject(NexusPrefab, this.transform.position, quaternion.identity);
@@ -51,7 +49,6 @@ public class GraffitiSystem : MonoBehaviour
 
     public int[] EndGraffiti()
     {
-        movePoint.gameObject.SetActive(true);
         GraffitiSystemManager.instance.OnGraffitiEnd();
         attractive.DisableAttract();
         StartCoroutine(TimeScalerCoroutine(false));

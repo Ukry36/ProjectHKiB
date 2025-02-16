@@ -40,11 +40,6 @@ public class Delta_Delta_BurstAttackExitState : Playable_State
 
     public override void Exit()
     {
-        if (exitAnimBurst || (!player.isBurstMode && !attackReserved))
-        {
-            player.Animator.SetBool("Burst", false);
-            player.UpdateGuage();
-        }
         base.Exit();
         attackReserved = false;
         exitAnimBurst = false;

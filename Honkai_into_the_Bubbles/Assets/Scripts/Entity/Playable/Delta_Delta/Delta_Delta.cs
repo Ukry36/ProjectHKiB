@@ -24,6 +24,7 @@ public class Delta_Delta : Playable
     public Delta_Delta_Skill01BeforeState Skill01BeforeState { get; private set; }
     public Delta_Delta_Skill01SuccessState Skill01SuccessState { get; private set; }
     public Delta_Delta_Skill01FailState Skill01FailState { get; private set; }
+    public Delta_Delta_Skill01FailEndState Skill01FailEndState { get; private set; }
     public Delta_Delta_Skill02State Skill02State { get; private set; }
 
     [HideInInspector] public bool startAtCombo3;
@@ -31,7 +32,8 @@ public class Delta_Delta : Playable
     private int dodgeGuage;
     private int attackGuage;
     [HideInInspector] public bool canCharge;
-    [HideInInspector] public bool isBurstMode;
+    /*[HideInInspector]*/
+    public bool isBurstMode;
     private float burstTimer;
     [BoxGroup("Attack")]
     public Attack ChargeSkill;
@@ -69,6 +71,7 @@ public class Delta_Delta : Playable
         Skill01BeforeState = new Delta_Delta_Skill01BeforeState(this, stateMachine, "Skill01Before", this);
         Skill01SuccessState = new Delta_Delta_Skill01SuccessState(this, stateMachine, "Skill01Success", this);
         Skill01FailState = new Delta_Delta_Skill01FailState(this, stateMachine, "Skill01Success", this);
+        Skill01FailEndState = new Delta_Delta_Skill01FailEndState(this, stateMachine, "Skill01Fail", this);
         Skill02State = new Delta_Delta_Skill02State(this, stateMachine, "Skill02", this);
     }
 
@@ -87,7 +90,8 @@ public class Delta_Delta : Playable
     protected virtual void OnDisable()
     {
         guageUIGameObject.SetActive(false);
-        EndBurstMode();
+        if (isBurstMode)
+            EndBurstMode();
     }
 
     protected override void Update()
@@ -193,15 +197,18 @@ public class Delta_Delta : Playable
         StartBurstMode(_coeff);
     }
 
-    public void EndBurstMode()
+    private void EndBurstMode()
     {
         isBurstMode = false;
         theStat.ATKBuff -= 50;
-        if (stateMachine.currentState != BurstAttackState && stateMachine.currentState != BurstAttackExitState)
-        {
-            Animator.SetBool("Burst", false);
-            UpdateGuage();
-        }
+        StartCoroutine(EndBurstReservation());
+    }
+
+    private IEnumerator EndBurstReservation()
+    {
+        yield return new WaitUntil(() => stateMachine.currentState != BurstAttackState && stateMachine.currentState != BurstAttackExitState);
+        Animator.SetBool("Burst", false);
+        UpdateGuage();
     }
 
     public void StartAtCombo3Manage()

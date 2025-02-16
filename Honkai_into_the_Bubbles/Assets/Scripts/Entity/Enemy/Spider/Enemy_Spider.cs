@@ -36,9 +36,9 @@ public class Enemy_Spider : Enemy
         Skill01State = new Enemy_Spider_Skill01State(this, stateMachine, "Skill01", this);
     }
 
-    protected override void Start()
+    protected override void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
         stateMachine.Initialize(IdleState);
     }
 

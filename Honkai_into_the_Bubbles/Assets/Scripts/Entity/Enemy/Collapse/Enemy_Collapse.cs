@@ -40,9 +40,9 @@ public class Enemy_Collapse : Enemy
         Skill02State = new Enemy_Collapse_Skill02(this, stateMachine, "skill02", this);
     }
 
-    protected override void Start()
+    protected override void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
         stateMachine.Initialize(IdleState);
     }
 

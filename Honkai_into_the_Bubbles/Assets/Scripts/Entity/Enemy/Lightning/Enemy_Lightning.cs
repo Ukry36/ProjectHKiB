@@ -72,12 +72,10 @@ public class Enemy_Lightning : Enemy
         Skill02State = new Enemy_Lightning_Skill02State(this, stateMachine, "Skill02", this);
     }
 
-    protected override void Start()
+    protected override void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
         stateMachine.Initialize(IdleState);
-
-
     }
 
     protected override void Update()

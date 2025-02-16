@@ -35,7 +35,6 @@ public class GraffitiSystemManager : MonoBehaviour
         }
     }
     #endregion
-
     [HideInInspector] public GraffitiSystem playerGS;
     [SerializeField] private GameObject GraffitiImpactPrefab;
     [SerializeField] private GameObject GraffitiPathPrefab;

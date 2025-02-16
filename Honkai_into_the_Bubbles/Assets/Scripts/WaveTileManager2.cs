@@ -25,7 +25,7 @@ public class FieldElement
 public class WaveTileManager2 : MonoBehaviour
 {
     public Tilemap tilemap;
-    public WaveSequence waveSequence;
+    [HideInInspector] public WaveSequence waveSequence;
     public delegate void TileSetCompleted();
     public event TileSetCompleted OnTileSetCompleted;
     public LayerMask layerMask;

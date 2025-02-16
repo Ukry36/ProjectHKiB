@@ -165,9 +165,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1927857137, guid: 02a95b4f2dcd38a4ca0c7d032e090bd3, type: 3}
     - target: {fileID: 5247611254976669587, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
+      propertyPath: m_SortingLayer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5247611254976669587, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 5247611254976669587, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
     - target: {fileID: 5840633595945955985, guid: b4040210aaf7fb64faf1ec8a22f9131a, type: 3}
       propertyPath: m_Name
       value: Explosion
@@ -211,6 +219,7 @@ MonoBehaviour:
   BaseCriticalRate: 0
   GraffitiPoint: 0
   Strong: 0
+  CamShake: 0
   TrackingRadius: 0
   DetectRadius: 0
   Cooltime: 0

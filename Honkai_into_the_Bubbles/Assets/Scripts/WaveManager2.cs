@@ -1,24 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
-using Unity.Mathematics;
 using UnityEngine;
 
 public class WaveManager2 : MonoBehaviour
 {
-    public List<GameObject> objects = new List<GameObject>();
+    [SerializeField] private List<GameObject> beforeObjects = new();
+    [SerializeField] private List<GameObject> afterObjects = new();
     public WaveSequence WaveSequence;
-    public WaveGridManager waveGridManager;
     public WaveTileManager2 waveTileManager2;
-    public WaveAreaInfoManager lightManager;
+    public WaveVisualInfoManager waveVisualManager;
     public List<Wave> currentWaves;
-    public GameObject Tp;
 
     private int currentWaveIndex = 0;
     private int aliveMonsters = 0;
-    private bool waveInProgress = false;
-    private bool isFrontWaves = true;
-    private bool isMiddleWaves = false;
-    private bool isBackWaves = false;
+
+    private bool spawnInProgress = false;
+    private bool setTileInProgress = false;
+    private bool transitionInProgress = false;
+
     private float transitionDuration = 1f;
     [SerializeField] private float checkOffset;
     [SerializeField] private Vector3 TR;
@@ -26,14 +26,16 @@ public class WaveManager2 : MonoBehaviour
     [SerializeField] private LayerMask wallLayer;
     [SerializeField] private LayerMask spawnLayer;
 
+    public GameObject AfterGrid;
+    public GameObject BeforeGrid;
+
     private List<Vector3> spawnPoints = new();
     private enum WaveState
     {
         Init,
-        Idle,
         Spawning,
-        Cooldown,
         Waiting,
+        SetTile,
         Transition,
         End
     }
@@ -43,106 +45,99 @@ public class WaveManager2 : MonoBehaviour
     private void Start()
     {
         currentWaves = WaveSequence.frontWaves;
-
+        waveTileManager2.waveSequence = WaveSequence;
         waveTileManager2.OnTileSetCompleted += OnTileSetCompleted;
-        lightManager.OnWaveTransition += OnLightTransitionComplete;
+        waveVisualManager.OnWaveTransition += OnLightTransitionComplete;
+
+        foreach (var gameObject in beforeObjects)
+        {
+            gameObject.SetActive(true);
+        }
+
+        foreach (var gameObject in afterObjects)
+        {
+            gameObject.SetActive(false);
+        }
     }
 
-    private void OnEnable()
-    {
-        Debug.Log("manager is enabled");
-        lightManager.BeforeToFrontTransition();
-    }
+    private void OnEnable() => waveVisualManager.BeforeToFrontTransition();
 
-    private void OnDisable()
+    private void OnDisable() => waveVisualManager.RearToAfterTransition();
+
+    public void GridChange()
     {
-        lightManager.RearToAfterTransition();
+        AfterGrid.SetActive(true);
+        BeforeGrid.SetActive(false);
     }
 
     private void Update()
     {
         switch (currentState)
         {
-            case WaveState.Init:
-                foreach(var gameObject in objects) {
+            case WaveState.Init: // Init
+                foreach (var gameObject in beforeObjects)
                     gameObject.SetActive(false);
-                }
-                currentState = WaveState.Idle;
+                currentState = WaveState.Spawning;
                 break;
 
-            case WaveState.Idle:
-                if (!waveInProgress && currentWaveIndex < currentWaves.Count)
-                {
+
+            case WaveState.Spawning: // Start spawning hostiles
+                if (!spawnInProgress && currentWaveIndex < currentWaves.Count)
                     StartCoroutine(SpawnWave(currentWaves[currentWaveIndex]));
-                }
+
+                currentState = WaveState.Waiting;
                 break;
 
-            case WaveState.Spawning:
+
+            case WaveState.Waiting: // Wait until player kills all hostiles and setTile ends
+                Debug.Log(setTileInProgress);
+                if (!spawnInProgress && !setTileInProgress && aliveMonsters < 1)
+                    currentState = WaveState.SetTile;
                 break;
 
-            case WaveState.Cooldown:
-                if (!waveInProgress && aliveMonsters == 0)
-                {
-                    currentState = WaveState.Waiting;
 
-                    if (waveTileManager2 != null)
-                    {
-                        if (isFrontWaves)
-                            waveTileManager2.FrontWaveCompleted(currentWaveIndex);
-                        else if (isBackWaves)
-                            waveTileManager2.BackWaveCompleted(currentWaveIndex);
-                    }
+            case WaveState.SetTile: // Start setTile and manage an end of wave
+                if (currentWaves != WaveSequence.middleWaves)
+                    SetTile();
 
-                    if (currentWaves == WaveSequence.middleWaves)
-                        currentState = WaveState.Idle;
+                currentWaveIndex++;
 
-                    currentWaveIndex++;
-
-                    if (currentWaves == WaveSequence.middleWaves && currentWaveIndex >= currentWaves.Count)
-                        currentState = WaveState.Transition;
-                }
+                if (currentWaveIndex >= currentWaves.Count)
+                    currentState = WaveState.Transition;
+                else
+                    currentState = WaveState.Spawning;
                 break;
 
-            case WaveState.Transition:
-                WaveTransition();
+
+            case WaveState.Transition: // If wave is entering or exitting middle wave, do transition
+                if (!transitionInProgress)
+                    WaveTransition();
                 break;
 
-            case WaveState.Waiting:
-                break;
 
-            case WaveState.End:
-                foreach (var gameObject in objects)
-                {
+            case WaveState.End: // End waves
+                foreach (var gameObject in afterObjects)
                     gameObject.SetActive(true);
-                }
+                this.gameObject.SetActive(false);
                 break;
         }
     }
 
-    void OnTileSetCompleted()
-    {
-        if (currentWaveIndex >= currentWaves.Count)
-        {
-            if (isFrontWaves)
-            {
-                Debug.Log("transition");
-                currentState = WaveState.Transition;
-            }
-            else if (isBackWaves)
-            {
-                Debug.Log("end");
-                currentState = WaveState.Transition;
-            }
-        }
-        else
-            currentState = WaveState.Idle;
+    void OnTileSetCompleted() => setTileInProgress = false;
 
+    private void SetTile()
+    {
+        setTileInProgress = true;
+
+        if (currentWaves == WaveSequence.frontWaves)
+            waveTileManager2.FrontWaveCompleted(currentWaveIndex);
+        else if (currentWaves == WaveSequence.backWaves)
+            waveTileManager2.BackWaveCompleted(currentWaveIndex);
     }
 
     IEnumerator SpawnWave(Wave wave)
     {
-        waveInProgress = true;
-        currentState = WaveState.Spawning;
+        spawnInProgress = true;
 
         foreach (var monsterInfo in wave.monsters)
         {
@@ -160,8 +155,7 @@ public class WaveManager2 : MonoBehaviour
         }
 
         spawnPoints = new();
-        waveInProgress = false;
-        currentState = WaveState.Cooldown;
+        spawnInProgress = false;
 
         yield return new WaitForSeconds(wave.waveTimeInterval);
     }
@@ -200,35 +194,29 @@ public class WaveManager2 : MonoBehaviour
 
     private void WaveTransition()
     {
-        if (isFrontWaves)
+        transitionInProgress = true;
+        if (currentWaves == WaveSequence.frontWaves)
         {
-            isFrontWaves = false;
-            isMiddleWaves = true;
-            lightManager.FrontToMiddleTransition(transitionDuration, 20);
+            waveVisualManager.FrontToMiddleTransition(transitionDuration, 20);
             currentWaves = WaveSequence.middleWaves;
-            waveGridManager.GridChange();
+            GridChange();
         }
-        else if (isMiddleWaves)
+        else if (currentWaves == WaveSequence.middleWaves)
         {
-            isMiddleWaves = false;
-            isBackWaves = true;
             currentWaves = WaveSequence.backWaves;
-            lightManager.MiddleToRearTransition(transitionDuration, 20);
+            waveVisualManager.MiddleToRearTransition(transitionDuration, 20);
         }
-        else if (isBackWaves)
+        else if (currentWaves == WaveSequence.backWaves)
         {
-            isBackWaves = false;
-            lightManager.RearToAfterTransition();
             currentState = WaveState.End;
-            return;
         }
 
         currentWaveIndex = 0;
-        currentState = WaveState.Waiting;
     }
 
     private void OnLightTransitionComplete()
     {
-        currentState = WaveState.Idle;
+        transitionInProgress = false;
+        currentState = WaveState.Spawning;
     }
 }

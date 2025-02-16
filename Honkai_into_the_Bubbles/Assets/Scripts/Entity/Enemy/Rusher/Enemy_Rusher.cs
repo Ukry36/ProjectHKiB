@@ -36,10 +36,9 @@ public class Enemy_Rusher : Enemy
         Skill02EnterState = new Enemy_Rusher_Skill02EnterState(this, stateMachine, "Skill02Enter", this);
         Skill02State = new Enemy_Rusher_Skill02State(this, stateMachine, "Skill02", this);
     }
-
-    protected override void Start()
+    protected override void OnEnable()
     {
-        base.Start();
+        base.OnEnable();
         stateMachine.Initialize(IdleState);
     }
 
