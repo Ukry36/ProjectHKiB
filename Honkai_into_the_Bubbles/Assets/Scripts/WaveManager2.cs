@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Loading;
 using UnityEngine;
 
 public class WaveManager2 : MonoBehaviour
@@ -19,17 +20,12 @@ public class WaveManager2 : MonoBehaviour
     private bool setTileInProgress = false;
     private bool transitionInProgress = false;
 
-    private float transitionDuration = 1f;
-    [SerializeField] private float checkOffset;
+    private float transitionDuration = 0.36f;
     [SerializeField] private Vector3 TR;
     [SerializeField] private Vector3 BL;
     [SerializeField] private LayerMask wallLayer;
-    [SerializeField] private LayerMask spawnLayer;
 
-    public GameObject AfterGrid;
-    public GameObject BeforeGrid;
-
-    private List<Vector3> spawnPoints = new();
+    private Vector3 spawnPoint;
     private enum WaveState
     {
         Init,
@@ -45,7 +41,7 @@ public class WaveManager2 : MonoBehaviour
     private void Start()
     {
         currentWaves = WaveSequence.frontWaves;
-        waveTileManager2.waveSequence = WaveSequence;
+
         waveTileManager2.OnTileSetCompleted += OnTileSetCompleted;
         waveVisualManager.OnWaveTransition += OnLightTransitionComplete;
 
@@ -60,14 +56,16 @@ public class WaveManager2 : MonoBehaviour
         }
     }
 
-    private void OnEnable() => waveVisualManager.BeforeToFrontTransition();
-
-    private void OnDisable() => waveVisualManager.RearToAfterTransition();
-
-    public void GridChange()
+    private void OnEnable()
     {
-        AfterGrid.SetActive(true);
-        BeforeGrid.SetActive(false);
+        waveTileManager2.waveSequence = WaveSequence;
+        waveVisualManager.BeforeToFrontTransition();
+    }
+
+    private void OnDisable()
+    {
+        if (!this.gameObject.scene.isLoaded) return;
+        waveVisualManager.RearToAfterTransition();
     }
 
     private void Update()
@@ -90,7 +88,6 @@ public class WaveManager2 : MonoBehaviour
 
 
             case WaveState.Waiting: // Wait until player kills all hostiles and setTile ends
-                Debug.Log(setTileInProgress);
                 if (!spawnInProgress && !setTileInProgress && aliveMonsters < 1)
                     currentState = WaveState.SetTile;
                 break;
@@ -110,7 +107,7 @@ public class WaveManager2 : MonoBehaviour
 
 
             case WaveState.Transition: // If wave is entering or exitting middle wave, do transition
-                if (!transitionInProgress)
+                if (!transitionInProgress && !setTileInProgress)
                     WaveTransition();
                 break;
 
@@ -141,38 +138,40 @@ public class WaveManager2 : MonoBehaviour
 
         foreach (var monsterInfo in wave.monsters)
         {
+            int size = monsterInfo.monsterPrefab.GetComponent<Status>().Size;
             for (int i = 0; i < monsterInfo.count; i++)
             {
-                GetRandomPos();
-                GameObject monster = PoolManager.instance.ReuseGameObject(monsterInfo.monsterPrefab, spawnPoints[i], Quaternion.identity);
-                Status status = monster.GetComponent<Status>();
-                if (status != null)
+                if (GetRandomPos(size))
                 {
-                    OnMonsterSpawned(status);
+                    GameObject monster = PoolManager.instance.ReuseGameObject(monsterInfo.monsterPrefab, spawnPoint, Quaternion.identity);
+                    Status status = monster.GetComponent<Status>();
+                    if (status != null)
+                    {
+                        OnMonsterSpawned(status);
+                    }
+                    yield return new WaitForSeconds(wave.spawnInterval);
                 }
-                yield return new WaitForSeconds(wave.spawnInterval);
+
             }
         }
 
-        spawnPoints = new();
+        spawnPoint = new();
         spawnInProgress = false;
 
         yield return new WaitForSeconds(wave.waveTimeInterval);
     }
 
-    private void GetRandomPos()
+    private bool GetRandomPos(int _size)
     {
-        Vector3 outputPos;
+        float checkOffset = (float)_size / 2 - 0.5f;
         for (int i = 0; i < 5; i++)
         {
-            outputPos = Vector3Int.FloorToInt(new Vector3(UnityEngine.Random.Range(BL.x, TR.x), UnityEngine.Random.Range(BL.y, TR.y)));
-            outputPos += new Vector3(checkOffset, checkOffset);
-            if (!Physics2D.OverlapCircle(outputPos, 0.5f, wallLayer) && !spawnPoints.Contains(outputPos))
-            {
-                spawnPoints.Add(outputPos);
-                return;
-            }
+            spawnPoint = Vector3Int.FloorToInt(new Vector3(UnityEngine.Random.Range(BL.x, TR.x), UnityEngine.Random.Range(BL.y, TR.y)));
+            spawnPoint += new Vector3(checkOffset, checkOffset);
+            if (!Physics2D.OverlapCircle(spawnPoint, 0.5f, wallLayer))
+                return true;
         }
+        return false;
     }
 
     public void OnMonsterSpawned(Status status)
@@ -199,7 +198,6 @@ public class WaveManager2 : MonoBehaviour
         {
             waveVisualManager.FrontToMiddleTransition(transitionDuration, 20);
             currentWaves = WaveSequence.middleWaves;
-            GridChange();
         }
         else if (currentWaves == WaveSequence.middleWaves)
         {

@@ -23,6 +23,9 @@ public class WaveVisualInfoManager : MonoBehaviour
     private Coroutine transitionCoroutine;
     private bool isFading = false;
 
+    public GameObject AfterGrid;
+    public GameObject BeforeGrid;
+
     [SerializeField] private GameObject QuaDecoObjects;
 
     private enum waveTransitionType
@@ -34,18 +37,23 @@ public class WaveVisualInfoManager : MonoBehaviour
     private void Start()
     {
         QuaDecoObjects.SetActive(false);
+        fadeLight.enabled = false;
+
+        AfterGrid.SetActive(false);
+        BeforeGrid.SetActive(true);
     }
 
     public void BeforeToFrontTransition()
     {
-        Debug.Log("AreaInfo Before to Front");
-        beforeInfo.areaInfo.gameObject.SetActive(false);
-        frontWaveInfo.areaInfo.gameObject.SetActive(true);
+        if (beforeInfo.areaInfo.gameObject && frontWaveInfo.areaInfo.gameObject)
+        {
+            beforeInfo.areaInfo.gameObject.SetActive(false);
+            frontWaveInfo.areaInfo.gameObject.SetActive(true);
+        }
     }
 
     public void FrontToMiddleTransition(float _duration, float _intensity)
     {
-        Debug.Log("AreaInfo Front to Middle");
         if (isFading) return;
 
         if (transitionCoroutine != null) StopCoroutine(transitionCoroutine);
@@ -55,7 +63,6 @@ public class WaveVisualInfoManager : MonoBehaviour
 
     public void MiddleToRearTransition(float _duration, float _intensity)
     {
-        Debug.Log("AreaInfo Middle to Rear");
         if (isFading) return;
 
         if (transitionCoroutine != null) StopCoroutine(transitionCoroutine);
@@ -65,7 +72,6 @@ public class WaveVisualInfoManager : MonoBehaviour
 
     public void RearToAfterTransition()
     {
-        Debug.Log("AreaInfo Rear to After");
         rearWaveInfo.areaInfo.gameObject.SetActive(false);
         afterInfo.areaInfo.gameObject.SetActive(true);
     }
@@ -73,7 +79,7 @@ public class WaveVisualInfoManager : MonoBehaviour
     private IEnumerator TransitionCoroutine(float _duration, float _intensity, waveTransitionType _type)
     {
         isFading = true;
-        fadeLight.gameObject.SetActive(true);
+        fadeLight.enabled = true;
 
         // fadeOut
         fadeLight.intensity = 0;
@@ -91,18 +97,20 @@ public class WaveVisualInfoManager : MonoBehaviour
         switch (_type)
         {
             case waveTransitionType.FrontToMiddle:
-                frontWaveInfo.light.gameObject.SetActive(false);
+                frontWaveInfo.light.enabled = false;
                 frontWaveInfo.areaInfo.gameObject.SetActive(false);
-                middleWaveInfo.light.gameObject.SetActive(true);
+                middleWaveInfo.light.enabled = true;
                 middleWaveInfo.areaInfo.gameObject.SetActive(true);
                 QuaDecoObjects.SetActive(true);
+                BeforeGrid.SetActive(false);
                 break;
             case waveTransitionType.MiddleToRear:
-                middleWaveInfo.light.gameObject.SetActive(false);
+                middleWaveInfo.light.enabled = false;
                 middleWaveInfo.areaInfo.gameObject.SetActive(false);
-                rearWaveInfo.light.gameObject.SetActive(true);
+                rearWaveInfo.light.enabled = true;
                 rearWaveInfo.areaInfo.gameObject.SetActive(true);
                 QuaDecoObjects.SetActive(false);
+                AfterGrid.SetActive(true);
                 break;
         }
 
@@ -118,7 +126,7 @@ public class WaveVisualInfoManager : MonoBehaviour
         }
 
         isFading = false;
-        fadeLight.gameObject.SetActive(false);
+        fadeLight.enabled = false;
         OnWaveTransition?.Invoke();
     }
 }

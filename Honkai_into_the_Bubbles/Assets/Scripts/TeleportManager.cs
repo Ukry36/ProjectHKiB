@@ -93,6 +93,7 @@ public class TeleportManager : MonoBehaviour
     public IEnumerator LoadSceneCoroutine
     (string _dSN, Status _component, Vector2 _dir, Vector3 _pos, float _delay, float _innerDelay, Color _color)
     {
+        Vector3 Way = _pos - _component.entity.MovePoint.transform.position;
         currentDelay = _delay;
         currentInnerDelay = _innerDelay;
 
@@ -108,7 +109,7 @@ public class TeleportManager : MonoBehaviour
         if (_dir != Vector2.zero)
             _component.entity.SetAnimDir(_dir);
 
-        CameraManager.instance.StrictMovement(_pos - _component.entity.MovePoint.transform.position, _component.entity.MovePoint.transform.position);
+        CameraManager.instance.StrictMovement(Way, _component.entity.MovePoint.transform.position);
 
         yield return new WaitForSeconds(currentInnerDelay / 2);
 
@@ -134,6 +135,7 @@ public class TeleportManager : MonoBehaviour
     private void LoadSceneEnd(Scene scene, LoadSceneMode loadSceneMode)
     {
         PlayerManager.instance.FriendlyResetWhenTransferposition();
+        PoolManager.instance.KillAll();
         StartCoroutine(LoadSceneEndCoroutine());
 
         SceneManager.sceneLoaded -= LoadSceneEnd;

@@ -28,6 +28,7 @@ public class Delta_R : Playable
     public GameObject SAPrefabfor03onlyDiag;
     public GameObject AttractorPrefab;
 
+
     protected override void Awake()
     {
         base.Awake();
@@ -92,7 +93,6 @@ public class Delta_R : Playable
     public override void SkillManage(int[] _result)
     {
         base.SkillManage(_result);
-
         switch (_result[0])
         {
             case 0:
@@ -107,6 +107,7 @@ public class Delta_R : Playable
                 {
                     skill02ing = true;
                     skill01ing = false;
+                    theStat.ATKBuff += 50;
                     SkillState.skill = GS.skillList[1];
                     stateMachine.ChangeState(SkillState);
                     break;
@@ -137,13 +138,10 @@ public class Delta_R : Playable
                 break;
 
             default:
-
                 skill01ing = false;
                 stateMachine.ChangeState(IdleState);
                 break;
         }
-
-
     }
 
     private int RSACI = 0;
@@ -156,7 +154,7 @@ public class Delta_R : Playable
         {
             lastTime += Time.deltaTime;
             yield return null;
-            if (prevTime + _skill.Delay < lastTime)
+            if (prevTime + _skill.Delay * (skill02ing ? 0.5 : 1) < lastTime)
             {
                 FireSA03p01();
                 prevTime = lastTime;

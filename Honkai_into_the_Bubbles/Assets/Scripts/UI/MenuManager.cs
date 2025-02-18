@@ -56,6 +56,7 @@ public class MenuManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI HPtext;
     [SerializeField] private TextMeshProUGUI GSTtext;
     [SerializeField] private TextMeshProUGUI FPSTtext;
+    public TextMeshProUGUI Normaltext;
     float deltaTime;
 
     public AudioMixer MasterMixer;
@@ -270,6 +271,12 @@ public class MenuManager : MonoBehaviour
 
         CameraManager.instance.TogglePostProcessing(disablePostProcessing);
 
+    }
+
+    public void StartEvButton()
+    {
+        Resume();
+        StartTest.instance.PlayEvent();
     }
 
 

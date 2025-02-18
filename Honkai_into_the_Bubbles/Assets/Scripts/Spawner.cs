@@ -8,13 +8,13 @@ public class Spawner : MonoBehaviour
 
     private bool waveStarted = false;
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision != null)
         {
             if (collision.CompareTag("Player") && !waveStarted)
             {
-                if (waveManager != null)
+                if (waveManager != null && InputManager.instance.ConfirmInput)
                 {
                     waveManager.SetActive(true);
                     waveStarted = true;

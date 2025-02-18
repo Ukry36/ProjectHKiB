@@ -19,7 +19,6 @@ public class Delta_Delta_Skill01FailState : Playable_State
         skill.DamageCoefficient /= 10;
         player.theStat.invincible = true;
         player.theStat.superArmor = true;
-        player.Animator.SetTrigger("Fail");
     }
 
     public override void Update()

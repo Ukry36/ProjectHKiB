@@ -8,7 +8,6 @@ public class SpawnFieldEvent : Event
 {
     [SerializeField] private GameObject Prefab;
     [SerializeField] private int ID = 30000;
-    [SerializeField] private float checkOffset;
     [SerializeField] private Vector3 TR;
     [SerializeField] private Vector3 BL;
     [SerializeField] private LayerMask wallLayer;
@@ -16,6 +15,12 @@ public class SpawnFieldEvent : Event
     [SerializeField] private int countToMaintain;
 
     private List<Vector3> spawnPoints = new();
+    private int size;
+
+    protected void Start()
+    {
+        size = Prefab.GetComponent<Status>().Size;
+    }
 
     protected override void StartEvent(Status _interactedEntity)
     {
@@ -48,6 +53,7 @@ public class SpawnFieldEvent : Event
 
     private void GetRandomPos()
     {
+        float checkOffset = (float)size / 2 - 0.5f;
         Vector3 outputPos;
         for (int i = 0; i < 5; i++)
         {

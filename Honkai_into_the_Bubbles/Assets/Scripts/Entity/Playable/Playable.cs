@@ -188,6 +188,8 @@ public class Playable : Entity
                 PlayerManager.instance.DotLight.SetActive(true);
             if (PlayerManager.instance.handLightOn)
                 PlayerManager.instance.HandLight.SetActive(true);
+            if (PlayerManager.instance.handLightOn)
+                PlayerManager.instance.DotLight2.SetActive(true);
         }
         else
         {

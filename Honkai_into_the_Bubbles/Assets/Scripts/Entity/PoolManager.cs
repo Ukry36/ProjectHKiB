@@ -48,6 +48,34 @@ public class PoolManager : MonoBehaviour
         }
     }
 
+    public void KillAll()
+    {
+        Entity[] entities = GetComponentsInChildren<Entity>();
+
+        for (int i = 0; i < entities.Length; i++)
+        {
+            if (entities[i].enabled && !entities[i].CompareTag("Player"))
+            {
+                entities[i].Mover.transform.position += new Vector3(1000, 0, 0);
+                entities[i].Die();
+            }
+        }
+    }
+
+    public int GetEntityNum(int _ID)
+    {
+        Entity[] entities = GetComponentsInChildren<Entity>();
+        int num = 0;
+
+        for (int i = 0; i < entities.Length; i++)
+        {
+            if (entities[i].enabled && _ID == entities[i].ID)
+                num++;
+        }
+
+        return num;
+    }
+
     private void CreatePool(GameObject _prefab, int _poolSize)
     {
         int poolKey = _prefab.GetInstanceID();

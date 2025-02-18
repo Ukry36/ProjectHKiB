@@ -521,7 +521,7 @@ Transform:
   m_GameObject: {fileID: 4248551662380458249}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -0.000001, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -872,6 +872,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e11b44af5b3b0a4d9d79bed2c7c9578, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isPlayer: 0
   ID: 30003
   Name: Collapse
   ThemeColors: []
@@ -899,8 +900,6 @@ MonoBehaviour:
   - {fileID: 5219972098048696527}
   - {fileID: 7530223128793237805}
   PathList: []
-  AttackWarning:
-  - {fileID: 7120614306492916493}
   beforeAttackEffectPrefab: {fileID: 4320316823674572559, guid: 527d79a9a0e97ee44a071be0e2087c8b, type: 3}
   targetLayer:
     serializedVersion: 2

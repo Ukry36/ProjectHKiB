@@ -164,6 +164,8 @@ public class Delta_Delta : Playable
 
     public void UpdateGuage()
     {
+        dodgeGuage = dodgeGuage > 100 ? 100 : dodgeGuage;
+        attackGuage = attackGuage > 100 ? 100 : attackGuage;
         if (!isBurstMode)
         {
             leftDodgeGuageUI.fillAmount = (float)dodgeGuage / 100 * 0.5f;
@@ -244,8 +246,8 @@ public class Delta_Delta : Playable
                 else
                 {
                     stateMachine.ChangeState(IdleState);
-                    dodgeGuage = 50;
-                    attackGuage = 50;
+                    dodgeGuage += 50;
+                    attackGuage += 50;
                     UpdateGuage();
                 }
                 GraffitiHPHeal(_result[1]);

@@ -44,6 +44,7 @@ public class PlayerManager : MonoBehaviour
     private GameObject currentDrone;
     public GameObject HandLight;
     public GameObject DotLight;
+    public GameObject DotLight2;
 
     public bool canSprint = false;
     public bool isStealth = false;
@@ -77,12 +78,12 @@ public class PlayerManager : MonoBehaviour
         if (SceneManager.GetActiveScene().name != "Hyperion")
         {
             yield return TeleportManager.instance.LoadSceneCoroutine
-            ("Hyperion", theStat, Vector2.down, new Vector3(13, -10, 0), 0.5f, 0.1f, Color.black);
+            ("Hyperion", theStat, Vector2.down, new Vector3(7, -5, 0), 0.5f, 0.1f, Color.black);
         }
         else
         {
             yield return TeleportManager.instance.TransferPosCoroutine
-            (theStat, Vector2.down, new Vector3(13, -10, 0), 0.5f, 0.1f, Color.black);
+            (theStat, Vector2.down, new Vector3(7, -5, 0), 0.5f, 0.1f, Color.black);
         }
         theStat.HPControl(1000);
         theStat.GPControl(1000);
@@ -253,6 +254,7 @@ public class PlayerManager : MonoBehaviour
 
         if (DotLight.activeSelf) DotLight.SetActive(false);
         if (HandLight.activeSelf) HandLight.SetActive(false);
+        if (DotLight2.activeSelf) DotLight2.SetActive(false);
     }
 
 

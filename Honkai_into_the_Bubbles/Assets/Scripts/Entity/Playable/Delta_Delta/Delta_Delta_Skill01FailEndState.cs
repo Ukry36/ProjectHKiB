@@ -22,7 +22,6 @@ public class Delta_Delta_Skill01FailEndState : Playable_State
         base.Update();
         if (finishTriggerCalled)
         {
-            Debug.Log("yessssssssssss");
             stateMachine.ChangeState(player.IdleState);
         }
     }

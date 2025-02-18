@@ -77,6 +77,11 @@ public class Drone : Friendly
         MovePoint.transform.position += apearFrom;
     }
 
+    public override void Die()
+    {
+
+    }
+
     public void CancelDisable() => onDisableSequence = false;
 
     private IEnumerator FiringCoroutine(Vector3 _targetPos)

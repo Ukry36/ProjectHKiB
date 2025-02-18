@@ -5,6 +5,7 @@ using System.Collections.Generic;
 
 public class Entity : MonoBehaviour
 {
+    public bool isPlayer;
     public int ID;
     public string Name;
     public List<Color> ThemeColors = new();

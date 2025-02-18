@@ -56,6 +56,8 @@ public class Delta_R_SkillState : Playable_State
         {
             if (!keepSkill)
             {
+                if (player.skill02ing)
+                    player.theStat.ATKBuff -= 50;
                 player.skill01ing = false;
                 player.skill02ing = false;
             }
@@ -64,6 +66,8 @@ public class Delta_R_SkillState : Playable_State
         }
         else if (InputManager.instance.AttackInput)
         {
+            if (player.skill02ing)
+                player.theStat.ATKBuff -= 50;
             player.skill01ing = false;
             player.skill02ing = false;
             if (player.moveInput != Vector2.zero)
@@ -85,6 +89,5 @@ public class Delta_R_SkillState : Playable_State
         player.Mover.position = player.MovePoint.transform.position;
         player.AttractorPrefab.SetActive(false);
         player.DefaultSpeed *= 2;
-
     }
 }
